@@ -1,0 +1,260 @@
+cubes:
+    name: person_address_phone_kccd
+
+    sql_table: odsmgr_cust.person_address_phone_kccd
+
+    joins:
+    -   name: academic_outcome
+        sql: '{CUBE}.person_uid = academic_outcome.person_uid'
+        relationship: one_to_many
+
+    -   name: ir_section
+        sql: '{CUBE}.person_uid = ir_section.instructor_pidm'
+        relationship: zero_to_many
+
+    -   name: ir_session
+        sql: '{CUBE}.person_uid = ir_session.instructor_pidm'
+        relationship: one_to_many
+
+    -   name: pc_cohort
+        sql: '{CUBE}.person_uid = pc_cohort.person_uid'
+        relationship: one_to_many
+
+    -   name: recon_reg_to_gen_stdnt
+        sql: '{CUBE}.person_uid = recon_reg_to_gen_stdnt.person_uid'
+        relationship: one_to_many
+
+    -   name: academic_outcome_a
+        sql: '{CUBE}.person_uid = academic_outcome_a.person_uid'
+        relationship: one_to_many
+
+    -   name: ir_session_ir_section
+        sql: '{CUBE}.person_uid = ir_session_ir_section.instructor_pidm'
+        relationship: one_to_many
+
+    -   name: person_address_phone_kccd_stusta
+        sql: '{CUBE}.tax_id = person_address_phone_kccd_stusta.tax_id'
+        relationship: one_to_one
+
+    -   name: person_detail_ir_shortcut
+        sql: '{CUBE}.person_uid'
+        relationship: one_to_many
+
+    -   name: student_course_shortcut
+        sql: '{CUBE}.person_uid'
+        relationship: one_to_many
+
+    -   name: ir_session_shortcut
+        sql: '{CUBE}.person_uid'
+        relationship: zero_to_many
+
+    dimensions:
+    -   name: cel_phone
+        sql: cel_phone
+        type: string
+
+    -   name: tax_id
+        sql: tax_id
+        type: string
+        primary_key: true
+
+    -   name: res_street2
+        sql: res_street2
+        type: string
+
+    -   name: res_street1
+        sql: res_street1
+        type: string
+
+    -   name: res_state
+        sql: res_state
+        type: string
+
+    -   name: res_postal_code
+        sql: res_postal_code
+        type: string
+
+    -   name: res_nation_desc
+        sql: res_nation_desc
+        type: string
+
+    -   name: res_nation
+        sql: res_nation
+        type: string
+
+    -   name: res_county_desc
+        sql: res_county_desc
+        type: string
+
+    -   name: res_county
+        sql: res_county
+        type: string
+
+    -   name: res_city
+        sql: res_city
+        type: string
+
+    -   name: person_uid
+        sql: person_uid
+        type: string
+        primary_key: true
+
+    -   name: primary_language_desc
+        sql: primary_language_desc
+        type: string
+
+    -   name: primary_language
+        sql: primary_language
+        type: string
+
+    -   name: primary_ethnicity_desc
+        sql: primary_ethnicity_desc
+        type: string
+
+    -   name: primary_ethnicity
+        sql: primary_ethnicity
+        type: string
+
+    -   name: mail_street2
+        sql: mail_street2
+        type: string
+
+    -   name: mail_street1
+        sql: mail_street1
+        type: string
+
+    -   name: mail_state
+        sql: mail_state
+        type: string
+
+    -   name: mail_res_street2
+        sql: mail_res_street2
+        type: string
+
+    -   name: mail_res_street1
+        sql: mail_res_street1
+        type: string
+
+    -   name: mail_res_state
+        sql: mail_res_state
+        type: string
+
+    -   name: mail_res_postal_code
+        sql: mail_res_postal_code
+        type: string
+
+    -   name: mail_res_nation_desc
+        sql: mail_res_nation_desc
+        type: string
+
+    -   name: mail_res_nation
+        sql: mail_res_nation
+        type: string
+
+    -   name: mail_res_county_desc
+        sql: mail_res_county_desc
+        type: string
+
+    -   name: mail_res_county
+        sql: mail_res_county
+        type: string
+
+    -   name: mail_res_city
+        sql: mail_res_city
+        type: string
+
+    -   name: mail_postal_code
+        sql: mail_postal_code
+        type: string
+
+    -   name: mail_nation_desc
+        sql: mail_nation_desc
+        type: string
+
+    -   name: mail_nation
+        sql: mail_nation
+        type: string
+
+    -   name: mail_county_desc
+        sql: mail_county_desc
+        type: string
+
+    -   name: mail_county
+        sql: mail_county
+        type: string
+
+    -   name: mail_city
+        sql: mail_city
+        type: string
+
+    -   name: name_suffix
+        sql: name_suffix
+        type: string
+
+    -   name: last_name
+        sql: last_name
+        type: string
+
+    -   name: middle_name
+        sql: middle_name
+        type: string
+
+    -   name: id
+        sql: id
+        type: string
+
+    -   name: first_name
+        sql: first_name
+        type: string
+
+    -   name: gender_desc
+        sql: gender_desc
+        type: string
+
+    -   name: gender
+        sql: gender
+        type: string
+
+    -   name: eve_phone
+        sql: eve_phone
+        type: string
+
+    -   name: emp_email
+        sql: emp_email
+        type: string
+
+    -   name: day_phone
+        sql: day_phone
+        type: string
+
+    -   name: email_address
+        sql: email_address
+        type: string
+
+    -   name: current_age
+        sql: current_age
+        type: string
+
+    -   name: birth_date
+        sql: birth_date
+        type: time
+
+    -   name: confidentiality_ind
+        sql: confidentiality_ind
+        type: string
+
+    -   name: citizenship_type
+        sql: citizenship_type
+        type: string
+
+    -   name: citizenship_ind
+        sql: citizenship_ind
+        type: string
+
+    -   name: citizenship_desc
+        sql: citizenship_desc
+        type: string
+
+    measures: []
+
+    pre_aggregations: []

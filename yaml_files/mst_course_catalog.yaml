@@ -1,0 +1,307 @@
+cubes:
+    name: mst_course_catalog
+
+    sql_table: odsmgr.mst_course_catalog
+
+    joins: []
+
+    dimensions:
+    -   name: credit_status_code
+        sql: credit_status_code
+        type: string
+
+    -   name: sub_academic_period_desc
+        sql: sub_academic_period_desc
+        type: string
+
+    -   name: sub_academic_period
+        sql: sub_academic_period
+        type: string
+
+    -   name: subject_desc
+        sql: subject_desc
+        type: string
+
+    -   name: title_short_desc
+        sql: title_short_desc
+        type: string
+
+    -   name: title_long_desc
+        sql: title_long_desc
+        type: string
+
+    -   name: zone_value
+        sql: zone_value
+        type: string
+
+    -   name: report_state_credits
+        sql: report_state_credits
+        type: string
+
+    -   name: report_federal_credits
+        sql: report_federal_credits
+        type: string
+
+    -   name: report_county_credits
+        sql: report_county_credits
+        type: string
+
+    -   name: repeat_status_desc
+        sql: repeat_status_desc
+        type: string
+
+    -   name: repeat_status_code
+        sql: repeat_status_code
+        type: string
+
+    -   name: repeatable_course_ind
+        sql: repeatable_course_ind
+        type: string
+
+    -   name: status_desc
+        sql: status_desc
+        type: string
+
+    -   name: status
+        sql: status
+        type: string
+
+    -   name: program_classification_desc
+        sql: program_classification_desc
+        type: string
+
+    -   name: program_classification
+        sql: program_classification
+        type: string
+
+    -   name: other_min
+        sql: other_min
+        type: string
+
+    -   name: other_max
+        sql: other_max
+        type: string
+
+    -   name: other_ind
+        sql: other_ind
+        type: string
+
+    -   name: maximum_repeat_units
+        sql: maximum_repeat_units
+        type: string
+
+    -   name: no_of_repeats_allowed
+        sql: no_of_repeats_allowed
+        type: string
+
+    -   name: non_traditional_ind
+        sql: non_traditional_ind
+        type: string
+
+    -   name: major_desc
+        sql: major_desc
+        type: string
+
+    -   name: major
+        sql: major
+        type: string
+
+    -   name: lecture_min
+        sql: lecture_min
+        type: string
+
+    -   name: lecture_max
+        sql: lecture_max
+        type: string
+
+    -   name: lecture_ind
+        sql: lecture_ind
+        type: string
+
+    -   name: last_dml_date
+        sql: last_dml_date
+        type: time
+
+    -   name: last_activity_dml
+        sql: last_activity_dml
+        type: string
+
+    -   name: last_activity_date
+        sql: last_activity_date
+        type: time
+
+    -   name: lab_min
+        sql: lab_min
+        type: string
+
+    -   name: lab_max
+        sql: lab_max
+        type: string
+
+    -   name: lab_ind
+        sql: lab_ind
+        type: string
+
+    -   name: mif_value
+        sql: mif_value
+        type: string
+
+    -   name: mif_desc
+        sql: mif_desc
+        type: string
+
+    -   name: domain_value
+        sql: domain_value
+        type: string
+
+    -   name: division_desc
+        sql: division_desc
+        type: string
+
+    -   name: division
+        sql: division
+        type: string
+
+    -   name: department_desc
+        sql: department_desc
+        type: string
+
+    -   name: department
+        sql: department
+        type: string
+
+    -   name: duration_unit
+        sql: duration_unit
+        type: string
+
+    -   name: fa_state_credits
+        sql: fa_state_credits
+        type: string
+
+    -   name: fa_federal_credits
+        sql: fa_federal_credits
+        type: string
+
+    -   name: fa_county_credits
+        sql: fa_county_credits
+        type: string
+
+    -   name: credit_min
+        sql: credit_min
+        type: string
+
+    -   name: credit_max
+        sql: credit_max
+        type: string
+
+    -   name: credit_ind
+        sql: credit_ind
+        type: string
+
+    -   name: course_version_no
+        sql: course_version_no
+        type: string
+
+    -   name: course_text_narrative
+        sql: course_text_narrative
+        type: string
+
+    -   name: course_identification
+        sql: course_identification
+        type: string
+
+    -   name: course_duration
+        sql: course_duration
+        type: string
+
+    -   name: course_class_level_desc
+        sql: course_class_level_desc
+        type: string
+
+    -   name: course_class_level
+        sql: course_class_level
+        type: string
+
+    -   name: course_approval_desc
+        sql: course_approval_desc
+        type: string
+
+    -   name: course_approval
+        sql: course_approval
+        type: string
+
+    -   name: continuing_education_ind
+        sql: continuing_education_ind
+        type: string
+
+    -   name: contact_min
+        sql: contact_min
+        type: string
+
+    -   name: contact_max
+        sql: contact_max
+        type: string
+
+    -   name: contact_ind
+        sql: contact_ind
+        type: string
+
+    -   name: billing_min
+        sql: billing_min
+        type: string
+
+    -   name: billing_max
+        sql: billing_max
+        type: string
+
+    -   name: billing_ind
+        sql: billing_ind
+        type: string
+
+    -   name: college_desc
+        sql: college_desc
+        type: string
+
+    -   name: college
+        sql: college
+        type: string
+
+    -   name: active_course_ind
+        sql: active_course_ind
+        type: string
+
+    -   name: academic_year_desc
+        sql: academic_year_desc
+        type: string
+
+    -   name: academic_period_start_desc
+        sql: academic_period_start_desc
+        type: string
+
+    -   name: academic_year
+        sql: academic_year
+        type: string
+
+    -   name: academic_period_end_desc
+        sql: academic_period_end_desc
+        type: string
+
+    -   name: subject
+        sql: subject
+        type: string
+
+    -   name: course_number
+        sql: course_number
+        type: string
+
+    -   name: academic_period_end
+        sql: academic_period_end
+        type: string
+
+    -   name: academic_period_start
+        sql: academic_period_start
+        type: string
+
+    measures: []
+
+    pre_aggregations: []

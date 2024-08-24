@@ -1,0 +1,55 @@
+cubes:
+    name: vendor_type
+
+    sql_table: odsmgr.vendor_type
+
+    joins:
+    -   name: vendor
+        sql: '{CUBE}.vendor_uid = vendor.vendor_uid'
+        relationship: zero_to_many
+
+    dimensions:
+    -   name: vendor_uid
+        sql: vendor_uid
+        type: string
+        primary_key: true
+
+    -   name: vendor_type_desc
+        sql: vendor_type_desc
+        type: string
+
+    -   name: vendor_type
+        sql: vendor_type
+        type: string
+
+    -   name: process_group
+        sql: process_group
+        type: string
+
+    -   name: name
+        sql: name
+        type: string
+
+    -   name: multi_source_desc
+        sql: multi_source_desc
+        type: string
+
+    -   name: multi_source
+        sql: multi_source
+        type: string
+
+    -   name: id
+        sql: id
+        type: string
+
+    -   name: entity_type
+        sql: entity_type
+        type: string
+
+    -   name: administrative_group
+        sql: administrative_group
+        type: string
+
+    measures: []
+
+    pre_aggregations: []

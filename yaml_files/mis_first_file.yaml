@@ -1,0 +1,107 @@
+cubes:
+    name: mis_first_file
+
+    sql_table: odsmgr_cust.mis_first_file
+
+    joins:
+    -   name: ir_student_person
+        sql: '{CUBE}.person_uid = ir_student_person.person_uid'
+        relationship: one_to_many
+
+    -   name: ir_student_term
+        sql: '{CUBE}.person_uid = ir_student_term.person_uid'
+        relationship: zero_to_many
+
+    -   name: sport_alias
+        sql: '{CUBE}.person_uid'
+        relationship: zero_to_many
+
+    dimensions:
+    -   name: first_term_ncr
+        sql: first_term_ncr
+        type: string
+
+    -   name: first_term_cr
+        sql: first_term_cr
+        type: string
+
+    -   name: ban_id
+        sql: ban_id
+        type: string
+
+    -   name: person_uid
+        sql: person_uid
+        type: string
+        primary_key: true
+
+    -   name: college
+        sql: college
+        type: string
+
+    -   name: last_segment_4yr
+        sql: last_segment_4yr
+        type: string
+
+    -   name: last_date_4yr
+        sql: last_date_4yr
+        type: string
+
+    -   name: first_segment_4yr
+        sql: first_segment_4yr
+        type: string
+
+    -   name: first_date_4yr
+        sql: first_date_4yr
+        type: string
+
+    -   name: prepared_year
+        sql: prepared_year
+        type: string
+
+    -   name: directed_year
+        sql: directed_year
+        type: string
+
+    -   name: first_term_ncr_loc_desc
+        sql: first_term_ncr_loc_desc
+        type: string
+
+    -   name: first_term_ncr_loc
+        sql: first_term_ncr_loc
+        type: string
+
+    -   name: first_term_ncr_nsa_value
+        sql: first_term_ncr_nsa_value
+        type: string
+
+    -   name: first_term_ncr_nsa
+        sql: first_term_ncr_nsa
+        type: string
+
+    -   name: first_term_cr_nsa_loc_desc
+        sql: first_term_cr_nsa_loc_desc
+        type: string
+
+    -   name: first_term_cr_nsa_loc
+        sql: first_term_cr_nsa_loc
+        type: string
+
+    -   name: first_term_cr_nsa_value
+        sql: first_term_cr_nsa_value
+        type: string
+
+    -   name: first_term_cr_nsa
+        sql: first_term_cr_nsa
+        type: string
+
+    -   name: student_id
+        sql: student_id
+        type: string
+
+    -   name: college_id
+        sql: college_id
+        type: string
+
+    measures: []
+
+    pre_aggregations: []

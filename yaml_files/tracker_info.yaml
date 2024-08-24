@@ -1,0 +1,171 @@
+cubes:
+    name: tracker_info
+
+    sql_table: odsmgr_cust.tracker_info
+
+    joins:
+    -   name: aacc_cohort
+        sql: '{CUBE}.person_uid = aacc_cohort.person_uid'
+        relationship: zero_to_many
+
+    -   name: aacc_pathways_view
+        sql: '{CUBE}.person_uid = aacc_pathways_view.person_uid'
+        relationship: zero_to_many
+
+    dimensions:
+    -   name: activity_date
+        sql: activity_date
+        type: time
+
+    -   name: id
+        sql: id
+        type: string
+
+    -   name: college_sequence
+        sql: college_sequence
+        type: string
+
+    -   name: degree_cip4
+        sql: degree_cip4
+        type: string
+
+    -   name: degree_major4
+        sql: degree_major4
+        type: string
+
+    -   name: degree_cip3
+        sql: degree_cip3
+        type: string
+
+    -   name: degree_major3
+        sql: degree_major3
+        type: string
+
+    -   name: degree_major2
+        sql: degree_major2
+        type: string
+
+    -   name: degree_cip2
+        sql: degree_cip2
+        type: string
+
+    -   name: degree_cip1
+        sql: degree_cip1
+        type: string
+
+    -   name: degree_major1
+        sql: degree_major1
+        type: string
+
+    -   name: degree_title
+        sql: degree_title
+        type: string
+
+    -   name: cip2
+        sql: cip2
+        type: string
+
+    -   name: major2
+        sql: major2
+        type: string
+
+    -   name: cip1
+        sql: cip1
+        type: string
+
+    -   name: person_uid
+        sql: person_uid
+        type: string
+        primary_key: true
+
+    -   name: grad_date
+        sql: grad_date
+        type: string
+
+    -   name: graduated
+        sql: graduated
+        type: string
+
+    -   name: major
+        sql: major
+        type: string
+
+    -   name: class_level
+        sql: class_level
+        type: string
+
+    -   name: enrollment_status
+        sql: enrollment_status
+        type: string
+
+    -   name: enrollment_end
+        sql: enrollment_end
+        type: string
+
+    -   name: enrollment_begin
+        sql: enrollment_begin
+        type: string
+
+    -   name: public_private
+        sql: public_private
+        type: string
+
+    -   name: 2_4_yr
+        sql: 2_4_yr
+        type: string
+
+    -   name: college_state
+        sql: college_state
+        type: string
+
+    -   name: college_name
+        sql: college_name
+        type: string
+
+    -   name: college_code
+        sql: college_code
+        type: string
+
+    -   name: search_date
+        sql: search_date
+        type: string
+
+    -   name: tracker_id
+        sql: tracker_id
+        type: string
+
+    -   name: suffix
+        sql: suffix
+        type: string
+
+    -   name: last_name
+        sql: last_name
+        type: string
+
+    -   name: middle_name
+        sql: middle_name
+        type: string
+
+    -   name: first_name
+        sql: first_name
+        type: string
+
+    -   name: enrolled_term
+        sql: enrolled_term
+        type: string
+
+    -   name: enrollment_end_date
+        sql: enrollment_end_date
+        type: time
+
+    -   name: enrollment_begin_date
+        sql: enrollment_begin_date
+        type: time
+
+    -   name: record_found
+        sql: record_found
+        type: string
+
+    measures: []
+
+    pre_aggregations: []

@@ -1,0 +1,87 @@
+cubes:
+    name: serdtsr
+
+    sql_table: saturn.serdtsr
+
+    joins:
+    -   name: student_course_stusta
+        sql: '{CUBE}.serdtsr_pidm = student_course_stusta.person_uid'
+        relationship: one_to_many
+
+    dimensions:
+    -   name: serdtsr_vpdi_code
+        sql: serdtsr_vpdi_code
+        type: string
+
+    -   name: serdtsr_data_origin
+        sql: serdtsr_data_origin
+        type: string
+
+    -   name: serdtsr_user_id
+        sql: serdtsr_user_id
+        type: string
+
+    -   name: serdtsr_version
+        sql: serdtsr_version
+        type: string
+
+    -   name: serdtsr_surrogate_id
+        sql: serdtsr_surrogate_id
+        type: string
+
+    -   name: serdtsr_term_code_eff
+        sql: serdtsr_term_code_eff
+        type: string
+
+    -   name: serdtsr_ssst_code
+        sql: serdtsr_ssst_code
+        type: string
+
+    -   name: serdtsr_ssrs_code
+        sql: serdtsr_ssrs_code
+        type: string
+
+    -   name: serdtsr_ssgp_code
+        sql: serdtsr_ssgp_code
+        type: string
+
+    -   name: serdtsr_sser_code
+        sql: serdtsr_sser_code
+        type: string
+
+    -   name: serdtsr_ssep_code
+        sql: serdtsr_ssep_code
+        type: string
+
+    -   name: serdtsr_sprv_code
+        sql: serdtsr_sprv_code
+        type: string
+
+    -   name: serdtsr_sepr_code
+        sql: serdtsr_sepr_code
+        type: string
+
+    -   name: serdtsr_pidm
+        sql: serdtsr_pidm
+        type: string
+        primary_key: true
+
+    -   name: serdtsr_orig_code
+        sql: serdtsr_orig_code
+        type: string
+
+    -   name: serdtsr_end_date
+        sql: serdtsr_end_date
+        type: time
+
+    -   name: serdtsr_begin_date
+        sql: serdtsr_begin_date
+        type: time
+
+    -   name: serdtsr_activity_date
+        sql: serdtsr_activity_date
+        type: time
+
+    measures: []
+
+    pre_aggregations: []

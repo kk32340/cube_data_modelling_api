@@ -1,0 +1,31 @@
+cubes:
+    name: hr_salary_mat
+
+    sql_table: cipe.hr_salary_mat
+
+    joins:
+    -   name: nhrdist
+        sql: '{CUBE}.emp_pidm = nhrdist.nhrdist_pidm'
+        relationship: one_to_one
+
+    dimensions:
+    -   name: fisc_code
+        sql: fisc_code
+        type: string
+
+    -   name: emp_pidm
+        sql: emp_pidm
+        type: string
+        primary_key: true
+
+    -   name: emp_name
+        sql: emp_name
+        type: string
+
+    -   name: emp_id
+        sql: emp_id
+        type: string
+
+    measures: []
+
+    pre_aggregations: []

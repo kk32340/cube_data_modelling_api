@@ -1,0 +1,39 @@
+cubes:
+    name: new_course_prospects
+
+    sql_table: odsmgr_cust.new_course_prospects
+
+    joins: []
+
+    dimensions:
+    -   name: email_address
+        sql: email_address
+        type: string
+
+    -   name: cell_phone
+        sql: cell_phone
+        type: string
+
+    -   name: day_phone
+        sql: day_phone
+        type: string
+
+    -   name: first_name
+        sql: first_name
+        type: string
+
+    -   name: last_name
+        sql: last_name
+        type: string
+
+    -   name: id
+        sql: id
+        type: string
+
+    -   name: pidm_key
+        sql: pidm_key
+        type: string
+
+    measures: []
+
+    pre_aggregations: []

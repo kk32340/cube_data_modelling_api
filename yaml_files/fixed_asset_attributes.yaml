@@ -1,0 +1,75 @@
+cubes:
+    name: fixed_asset_attributes
+
+    sql_table: odsmgr.fixed_asset_attributes
+
+    joins:
+    -   name: fixed_asset_item
+        sql: '{CUBE}.origination_tag_number = fixed_asset_item.origination_tag_number'
+        relationship: one_to_many
+
+    dimensions:
+    -   name: permanent_tag_number
+        sql: permanent_tag_number
+        type: string
+
+    -   name: process_group
+        sql: process_group
+        type: string
+
+    -   name: origination_tag_number
+        sql: origination_tag_number
+        type: string
+        primary_key: true
+
+    -   name: multi_source_desc
+        sql: multi_source_desc
+        type: string
+
+    -   name: multi_source
+        sql: multi_source
+        type: string
+
+    -   name: chart_of_accounts_desc
+        sql: chart_of_accounts_desc
+        type: string
+
+    -   name: chart_of_accounts
+        sql: chart_of_accounts
+        type: string
+
+    -   name: attribute_table_value
+        sql: attribute_table_value
+        type: string
+
+    -   name: chart_of_accounts_status
+        sql: chart_of_accounts_status
+        type: string
+
+    -   name: attribute_table
+        sql: attribute_table
+        type: string
+
+    -   name: attribute_short_desc
+        sql: attribute_short_desc
+        type: string
+
+    -   name: attribute_desc
+        sql: attribute_desc
+        type: string
+
+    -   name: attribute_data
+        sql: attribute_data
+        type: string
+
+    -   name: asset_desc
+        sql: asset_desc
+        type: string
+
+    -   name: administrative_group
+        sql: administrative_group
+        type: string
+
+    measures: []
+
+    pre_aggregations: []

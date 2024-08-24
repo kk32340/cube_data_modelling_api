@@ -1,0 +1,39 @@
+cubes:
+    name: fv_exclude_1099
+
+    sql_table: odsmgr_cust.fv_exclude_1099
+
+    joins: []
+
+    dimensions:
+    -   name: name
+        sql: name
+        type: string
+
+    -   name: id
+        sql: id
+        type: string
+
+    -   name: farinva_acct_code
+        sql: farinva_acct_code
+        type: string
+
+    -   name: fab1099_rpt_yr
+        sql: fab1099_rpt_yr
+        type: string
+
+    -   name: fab1099_rpt_id
+        sql: fab1099_rpt_id
+        type: string
+
+    -   name: fab1099_invh_code
+        sql: fab1099_invh_code
+        type: string
+
+    -   name: amt
+        sql: amt
+        type: string
+
+    measures: []
+
+    pre_aggregations: []

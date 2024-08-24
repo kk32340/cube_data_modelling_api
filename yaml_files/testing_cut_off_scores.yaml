@@ -1,0 +1,63 @@
+cubes:
+    name: testing_cut_off_scores
+
+    sql_table: odsmgr_cust.testing_cut_off_scores
+
+    joins:
+    -   name: testing_category
+        sql: '{CUBE}.test_code = testing_category.test_code'
+        relationship: one_to_many
+
+    dimensions:
+    -   name: prior_to_transfer
+        sql: prior_to_transfer
+        type: string
+
+    -   name: college_level_code
+        sql: college_level_code
+        type: string
+
+    -   name: college_level
+        sql: college_level
+        type: string
+
+    -   name: placement_type
+        sql: placement_type
+        type: string
+
+    -   name: placement_desc
+        sql: placement_desc
+        type: string
+
+    -   name: placement_level
+        sql: placement_level
+        type: string
+
+    -   name: end_score
+        sql: end_score
+        type: string
+
+    -   name: begin_score
+        sql: begin_score
+        type: string
+
+    -   name: end_date
+        sql: end_date
+        type: time
+
+    -   name: begin_date
+        sql: begin_date
+        type: time
+
+    -   name: test_code
+        sql: test_code
+        type: string
+        primary_key: true
+
+    -   name: college
+        sql: college
+        type: string
+
+    measures: []
+
+    pre_aggregations: []

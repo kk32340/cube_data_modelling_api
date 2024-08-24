@@ -1,0 +1,63 @@
+cubes:
+    name: scrfees_v
+
+    sql_table: odsmgr_cust.scrfees_v
+
+    joins:
+    -   name: schedule_offering_stusta
+        sql: '{CUBE}.academic_period = schedule_offering_stusta.academic_period AND
+            {CUBE}.subject = schedule_offering_stusta.subject AND {CUBE}.course_num
+            = schedule_offering_stusta.course_number'
+        relationship: zero_to_many
+
+    -   name: ir_section
+        sql: '{CUBE}.course_num = ir_section.course_number AND {CUBE}.subject = ir_section.subject'
+        relationship: one_to_many
+
+    dimensions:
+    -   name: ftype_code
+        sql: ftype_code
+        type: string
+
+    -   name: detail_code
+        sql: detail_code
+        type: string
+
+    -   name: fee_ind_ind
+        sql: fee_ind_ind
+        type: string
+
+    -   name: fee_ind
+        sql: fee_ind
+        type: string
+
+    -   name: fee_amount
+        sql: fee_amount
+        type: string
+
+    -   name: activity_date
+        sql: activity_date
+        type: time
+
+    -   name: academic_period_start
+        sql: academic_period_start
+        type: string
+
+    -   name: course_num
+        sql: course_num
+        type: string
+        primary_key: true
+
+    -   name: subject
+        sql: subject
+        type: string
+        primary_key: true
+
+    -   name: academic_period
+        sql: academic_period
+        type: string
+        primary_key: true
+
+    measures: []
+
+    pre_aggregations: []

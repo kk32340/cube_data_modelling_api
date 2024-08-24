@@ -1,0 +1,59 @@
+cubes:
+    name: ft_student_no_prior_enroll
+
+    sql_table: odsmgr_cust.ft_student_no_prior_enroll
+
+    joins: []
+
+    dimensions:
+    -   name: personal_email
+        sql: personal_email
+        type: string
+
+    -   name: credits
+        sql: credits
+        type: string
+
+    -   name: high_school
+        sql: high_school
+        type: string
+
+    -   name: home_college
+        sql: home_college
+        type: string
+
+    -   name: academic_period
+        sql: academic_period
+        type: string
+
+    -   name: cell_phone
+        sql: cell_phone
+        type: string
+
+    -   name: day_phone
+        sql: day_phone
+        type: string
+
+    -   name: email_address
+        sql: email_address
+        type: string
+
+    -   name: major
+        sql: major
+        type: string
+
+    -   name: name
+        sql: name
+        type: string
+
+    -   name: id
+        sql: id
+        type: string
+
+    -   name: person_uid
+        sql: person_uid
+        type: string
+
+    measures: []
+
+    pre_aggregations: []

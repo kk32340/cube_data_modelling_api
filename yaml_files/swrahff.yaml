@@ -1,0 +1,519 @@
+cubes:
+    name: swrahff
+
+    sql_table: odsmgr_cust.swrahff
+
+    joins: []
+
+    dimensions:
+    -   name: xfr_plan_desc
+        sql: xfr_plan_desc
+        type: string
+
+    -   name: xfr_plan_code
+        sql: xfr_plan_code
+        type: string
+
+    -   name: withdraw_ind
+        sql: withdraw_ind
+        type: string
+
+    -   name: term_mil_collect
+        sql: term_mil_collect
+        type: string
+
+    -   name: term_first_enrl
+        sql: term_first_enrl
+        type: string
+
+    -   name: tech_prep_ind
+        sql: tech_prep_ind
+        type: string
+
+    -   name: veteran_ind
+        sql: veteran_ind
+        type: string
+
+    -   name: success_ind
+        sql: success_ind
+        type: string
+
+    -   name: subject_desc
+        sql: subject_desc
+        type: string
+
+    -   name: subject_code
+        sql: subject_code
+        type: string
+
+    -   name: transfer_ind
+        sql: transfer_ind
+        type: string
+
+    -   name: student_population_desc
+        sql: student_population_desc
+        type: string
+
+    -   name: student_population
+        sql: student_population
+        type: string
+
+    -   name: street_line3
+        sql: street_line3
+        type: string
+
+    -   name: street_line2
+        sql: street_line2
+        type: string
+
+    -   name: street_line1
+        sql: street_line1
+        type: string
+
+    -   name: ssn_formatted
+        sql: ssn_formatted
+        type: string
+
+    -   name: ssn
+        sql: ssn
+        type: string
+
+    -   name: retention_ind
+        sql: retention_ind
+        type: string
+
+    -   name: resident_ind
+        sql: resident_ind
+        type: string
+
+    -   name: residency_desc
+        sql: residency_desc
+        type: string
+
+    -   name: residency
+        sql: residency
+        type: string
+
+    -   name: sports_ind
+        sql: sports_ind
+        type: string
+
+    -   name: repeat_course_ind
+        sql: repeat_course_ind
+        type: string
+
+    -   name: single_parent_ind
+        sql: single_parent_ind
+        type: string
+
+    -   name: quality_points
+        sql: quality_points
+        type: string
+
+    -   name: ptrm_desc
+        sql: ptrm_desc
+        type: string
+
+    -   name: ptrm_code
+        sql: ptrm_code
+        type: string
+
+    -   name: section_number
+        sql: section_number
+        type: string
+
+    -   name: secondary_school_grad_date
+        sql: secondary_school_grad_date
+        type: time
+
+    -   name: state_province
+        sql: state_province
+        type: string
+
+    -   name: person_uid
+        sql: person_uid
+        type: string
+
+    -   name: primary_ethnicity_desc
+        sql: primary_ethnicity_desc
+        type: string
+
+    -   name: primary_ethnicity
+        sql: primary_ethnicity
+        type: string
+
+    -   name: postal_code
+        sql: postal_code
+        type: string
+
+    -   name: phone_no_eve
+        sql: phone_no_eve
+        type: string
+
+    -   name: phone_no_day
+        sql: phone_no_day
+        type: string
+
+    -   name: matric_sep
+        sql: matric_sep
+        type: string
+
+    -   name: matric_orient
+        sql: matric_orient
+        type: string
+
+    -   name: matric_couns
+        sql: matric_couns
+        type: string
+
+    -   name: matric_assessment
+        sql: matric_assessment
+        type: string
+
+    -   name: non_resident_ind
+        sql: non_resident_ind
+        type: string
+
+    -   name: major_desc
+        sql: major_desc
+        type: string
+
+    -   name: major
+        sql: major
+        type: string
+
+    -   name: nation_desc
+        sql: nation_desc
+        type: string
+
+    -   name: nation
+        sql: nation
+        type: string
+
+    -   name: latest_secondary_school_desc
+        sql: latest_secondary_school_desc
+        type: string
+
+    -   name: latest_secondary_school
+        sql: latest_secondary_school
+        type: string
+
+    -   name: last_name
+        sql: last_name
+        type: string
+
+    -   name: multi_measure_reading
+        sql: multi_measure_reading
+        type: string
+
+    -   name: lang_desc
+        sql: lang_desc
+        type: string
+
+    -   name: lang_code
+        sql: lang_code
+        type: string
+
+    -   name: multi_measure_math
+        sql: multi_measure_math
+        type: string
+
+    -   name: multi_measure_esl
+        sql: multi_measure_esl
+        type: string
+
+    -   name: multi_measure_english
+        sql: multi_measure_english
+        type: string
+
+    -   name: mil_spouse
+        sql: mil_spouse
+        type: string
+
+    -   name: mil_self
+        sql: mil_self
+        type: string
+
+    -   name: mil_mother
+        sql: mil_mother
+        type: string
+
+    -   name: mil_guardian
+        sql: mil_guardian
+        type: string
+
+    -   name: mil_father
+        sql: mil_father
+        type: string
+
+    -   name: middle_name
+        sql: middle_name
+        type: string
+
+    -   name: instr_pidm
+        sql: instr_pidm
+        type: string
+
+    -   name: instr_mi
+        sql: instr_mi
+        type: string
+
+    -   name: instr_last
+        sql: instr_last
+        type: string
+
+    -   name: instr_first
+        sql: instr_first
+        type: string
+
+    -   name: id_formatted
+        sql: id_formatted
+        type: string
+
+    -   name: id
+        sql: id
+        type: string
+
+    -   name: foreign_ind
+        sql: foreign_ind
+        type: string
+
+    -   name: first_name
+        sql: first_name
+        type: string
+
+    -   name: goal_desc
+        sql: goal_desc
+        type: string
+
+    -   name: goal_code
+        sql: goal_code
+        type: string
+
+    -   name: final_grade
+        sql: final_grade
+        type: string
+
+    -   name: finaid_ind
+        sql: finaid_ind
+        type: string
+
+    -   name: gender
+        sql: gender
+        type: string
+
+    -   name: divsion_desc
+        sql: divsion_desc
+        type: string
+
+    -   name: divsion_code
+        sql: divsion_code
+        type: string
+
+    -   name: displaced_homemaker_ind
+        sql: displaced_homemaker_ind
+        type: string
+
+    -   name: eops_ind
+        sql: eops_ind
+        type: string
+
+    -   name: department_desc
+        sql: department_desc
+        type: string
+
+    -   name: department_code
+        sql: department_code
+        type: string
+
+    -   name: english_placement
+        sql: english_placement
+        type: string
+
+    -   name: deceased_status
+        sql: deceased_status
+        type: string
+
+    -   name: deceased_date
+        sql: deceased_date
+        type: time
+
+    -   name: day_eve_code
+        sql: day_eve_code
+        type: string
+
+    -   name: emex_desc
+        sql: emex_desc
+        type: string
+
+    -   name: emex_code
+        sql: emex_code
+        type: string
+
+    -   name: education_level_desc
+        sql: education_level_desc
+        type: string
+
+    -   name: education_level
+        sql: education_level
+        type: string
+
+    -   name: dsps_ind
+        sql: dsps_ind
+        type: string
+
+    -   name: credit_hours
+        sql: credit_hours
+        type: string
+
+    -   name: course_title
+        sql: course_title
+        type: string
+
+    -   name: course_number
+        sql: course_number
+        type: string
+
+    -   name: care_ind
+        sql: care_ind
+        type: string
+
+    -   name: course_comment
+        sql: course_comment
+        type: string
+
+    -   name: cal_works_ind
+        sql: cal_works_ind
+        type: string
+
+    -   name: count_pass
+        sql: count_pass
+        type: string
+
+    -   name: count_gpa
+        sql: count_gpa
+        type: string
+
+    -   name: count_earn
+        sql: count_earn
+        type: string
+
+    -   name: count_atpd
+        sql: count_atpd
+        type: string
+
+    -   name: birth_date
+        sql: birth_date
+        type: time
+
+    -   name: confidentiality_ind
+        sql: confidentiality_ind
+        type: string
+
+    -   name: college_desc
+        sql: college_desc
+        type: string
+
+    -   name: college
+        sql: college
+        type: string
+
+    -   name: astd_desc
+        sql: astd_desc
+        type: string
+
+    -   name: astd_code
+        sql: astd_code
+        type: string
+
+    -   name: asset_writing_skill
+        sql: asset_writing_skill
+        type: string
+
+    -   name: asset_trigonometry
+        sql: asset_trigonometry
+        type: string
+
+    -   name: city
+        sql: city
+        type: string
+
+    -   name: citizenship_type
+        sql: citizenship_type
+        type: string
+
+    -   name: citizenship_desc
+        sql: citizenship_desc
+        type: string
+
+    -   name: crn
+        sql: crn
+        type: string
+
+    -   name: area_code_eve
+        sql: area_code_eve
+        type: string
+
+    -   name: area_code_day
+        sql: area_code_day
+        type: string
+
+    -   name: asset_reading_skill
+        sql: asset_reading_skill
+        type: string
+
+    -   name: asset_numerical_skill
+        sql: asset_numerical_skill
+        type: string
+
+    -   name: asset_int_algebra
+        sql: asset_int_algebra
+        type: string
+
+    -   name: asset_elem_algegra
+        sql: asset_elem_algegra
+        type: string
+
+    -   name: asset_coll_algebra
+        sql: asset_coll_algebra
+        type: string
+
+    -   name: age
+        sql: age
+        type: string
+
+    -   name: age_begin_term
+        sql: age_begin_term
+        type: string
+
+    -   name: active_mil_ind
+        sql: active_mil_ind
+        type: string
+
+    -   name: acad_stnd_progress_desc
+        sql: acad_stnd_progress_desc
+        type: string
+
+    -   name: acad_stnd_progress
+        sql: acad_stnd_progress
+        type: string
+
+    -   name: acad_stnd_lt200_desc
+        sql: acad_stnd_lt200_desc
+        type: string
+
+    -   name: acad_stnd_lt200
+        sql: acad_stnd_lt200
+        type: string
+
+    -   name: academic_period_desc
+        sql: academic_period_desc
+        type: string
+
+    -   name: academic_period
+        sql: academic_period
+        type: string
+
+    measures: []
+
+    pre_aggregations: []

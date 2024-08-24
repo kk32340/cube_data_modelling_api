@@ -1,0 +1,51 @@
+cubes:
+    name: dsps_rpt_main
+
+    sql_table: odsmgr_cust.dsps_rpt_main
+
+    joins: []
+
+    dimensions:
+    -   name: sgrdisa_term_code
+        sql: sgrdisa_term_code
+        type: string
+
+    -   name: sgrdisa_spsr_code
+        sql: sgrdisa_spsr_code
+        type: string
+
+    -   name: sgrdisa_primary_ind
+        sql: sgrdisa_primary_ind
+        type: string
+
+    -   name: sgrdisa_pidm
+        sql: sgrdisa_pidm
+        type: string
+
+    -   name: sgrdisa_medi_code
+        sql: sgrdisa_medi_code
+        type: string
+
+    -   name: sgrdisa_disa_code
+        sql: sgrdisa_disa_code
+        type: string
+
+    -   name: sgrdisa_activity_date
+        sql: sgrdisa_activity_date
+        type: time
+
+    -   name: name
+        sql: name
+        type: string
+
+    -   name: id
+        sql: id
+        type: string
+
+    -   name: college
+        sql: college
+        type: string
+
+    measures: []
+
+    pre_aggregations: []

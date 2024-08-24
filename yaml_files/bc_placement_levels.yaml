@@ -1,0 +1,31 @@
+cubes:
+    name: bc_placement_levels
+
+    sql_table: odsmgr_cust.bc_placement_levels
+
+    joins:
+    -   name: test_stusta_alias
+        sql: '{CUBE}.test_code'
+        relationship: one_to_one
+
+    dimensions:
+    -   name: placement_level
+        sql: placement_level
+        type: string
+
+    -   name: placement_desc
+        sql: placement_desc
+        type: string
+
+    -   name: college
+        sql: college
+        type: string
+
+    -   name: test_code
+        sql: test_code
+        type: string
+        primary_key: true
+
+    measures: []
+
+    pre_aggregations: []

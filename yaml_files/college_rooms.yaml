@@ -1,0 +1,67 @@
+cubes:
+    name: college_rooms
+
+    sql_table: odsmgr_cust.college_rooms
+
+    joins: []
+
+    dimensions:
+    -   name: tops_code_desc
+        sql: tops_code_desc
+        type: string
+
+    -   name: tops_code
+        sql: tops_code
+        type: string
+
+    -   name: room_type_description
+        sql: room_type_description
+        type: string
+
+    -   name: room_type
+        sql: room_type
+        type: string
+
+    -   name: room_number
+        sql: room_number
+        type: string
+
+    -   name: record_status
+        sql: record_status
+        type: string
+
+    -   name: stations
+        sql: stations
+        type: string
+
+    -   name: progr
+        sql: progr
+        type: string
+
+    -   name: location_description
+        sql: location_description
+        type: string
+
+    -   name: loc
+        sql: loc
+        type: string
+
+    -   name: dept
+        sql: dept
+        type: string
+
+    -   name: building_description
+        sql: building_description
+        type: string
+
+    -   name: building
+        sql: building
+        type: string
+
+    -   name: asf
+        sql: asf
+        type: string
+
+    measures: []
+
+    pre_aggregations: []

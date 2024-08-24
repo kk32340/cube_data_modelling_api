@@ -1,0 +1,169 @@
+cubes:
+    name: phone_assignment
+
+    sql_table: odsmgr.phone_assignment
+
+    joins:
+    -   name: student
+        sql: '{CUBE}.person_uid = student.person_uid AND {CUBE}.academic_period =
+            student.academic_period'
+        relationship: zero_to_many
+
+    dimensions:
+    -   name: sub_academic_period_desc
+        sql: sub_academic_period_desc
+        type: string
+
+    -   name: sub_academic_period
+        sql: sub_academic_period
+        type: string
+
+    -   name: phone_ext
+        sql: phone_ext
+        type: string
+
+    -   name: phone_end_date
+        sql: phone_end_date
+        type: time
+
+    -   name: phone_charges_ind
+        sql: phone_charges_ind
+        type: string
+
+    -   name: phone_begin_date
+        sql: phone_begin_date
+        type: time
+
+    -   name: phone_assessment_ind
+        sql: phone_assessment_ind
+        type: string
+
+    -   name: phone_area
+        sql: phone_area
+        type: string
+
+    -   name: phone_application_type_desc
+        sql: phone_application_type_desc
+        type: string
+
+    -   name: phone_application_type
+        sql: phone_application_type
+        type: string
+
+    -   name: phone_application_to_period
+        sql: phone_application_to_period
+        type: string
+
+    -   name: phone_application_status_desc
+        sql: phone_application_status_desc
+        type: string
+
+    -   name: phone_application_status_date
+        sql: phone_application_status_date
+        type: time
+
+    -   name: phone_application_status
+        sql: phone_application_status
+        type: string
+
+    -   name: phone_application_from_period
+        sql: phone_application_from_period
+        type: string
+
+    -   name: phone_application_date_added
+        sql: phone_application_date_added
+        type: time
+
+    -   name: phone_account_number
+        sql: phone_account_number
+        type: string
+
+    -   name: process_group
+        sql: process_group
+        type: string
+
+    -   name: phone_total_periods
+        sql: phone_total_periods
+        type: string
+
+    -   name: phone_total_months
+        sql: phone_total_months
+        type: string
+
+    -   name: phone_total_days
+        sql: phone_total_days
+        type: string
+
+    -   name: phone_rate_status_desc
+        sql: phone_rate_status_desc
+        type: string
+
+    -   name: phone_rate_status_date
+        sql: phone_rate_status_date
+        type: time
+
+    -   name: phone_rate_status
+        sql: phone_rate_status
+        type: string
+
+    -   name: phone_rate_desc
+        sql: phone_rate_desc
+        type: string
+
+    -   name: phone_rate
+        sql: phone_rate
+        type: string
+
+    -   name: phone_number_combined
+        sql: phone_number_combined
+        type: string
+
+    -   name: phone_number
+        sql: phone_number
+        type: string
+
+    -   name: name
+        sql: name
+        type: string
+
+    -   name: multi_source_desc
+        sql: multi_source_desc
+        type: string
+
+    -   name: multi_source
+        sql: multi_source
+        type: string
+
+    -   name: id
+        sql: id
+        type: string
+
+    -   name: administrative_group
+        sql: administrative_group
+        type: string
+
+    -   name: academic_year_desc
+        sql: academic_year_desc
+        type: string
+
+    -   name: academic_year
+        sql: academic_year
+        type: string
+
+    -   name: academic_period_desc
+        sql: academic_period_desc
+        type: string
+
+    -   name: academic_period
+        sql: academic_period
+        type: string
+        primary_key: true
+
+    -   name: person_uid
+        sql: person_uid
+        type: string
+        primary_key: true
+
+    measures: []
+
+    pre_aggregations: []

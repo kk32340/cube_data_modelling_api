@@ -1,0 +1,123 @@
+cubes:
+    name: swbpinv
+
+    sql_table: saturn.swbpinv
+
+    joins: []
+
+    dimensions:
+    -   name: swbpinv_vpdi_code
+        sql: swbpinv_vpdi_code
+        type: string
+
+    -   name: swbpinv_data_origin
+        sql: swbpinv_data_origin
+        type: string
+
+    -   name: swbpinv_user_id
+        sql: swbpinv_user_id
+        type: string
+
+    -   name: swbpinv_version
+        sql: swbpinv_version
+        type: string
+
+    -   name: swbpinv_surrogate_id
+        sql: swbpinv_surrogate_id
+        type: string
+
+    -   name: swbpinv_year_revised
+        sql: swbpinv_year_revised
+        type: string
+
+    -   name: swbpinv_year_proj
+        sql: swbpinv_year_proj
+        type: string
+
+    -   name: swbpinv_year_appl
+        sql: swbpinv_year_appl
+        type: string
+
+    -   name: swbpinv_trans_prgm
+        sql: swbpinv_trans_prgm
+        type: string
+
+    -   name: swbpinv_tops_code
+        sql: swbpinv_tops_code
+        type: string
+
+    -   name: swbpinv_serial_code
+        sql: swbpinv_serial_code
+        type: string
+
+    -   name: swbpinv_prog_code
+        sql: swbpinv_prog_code
+        type: string
+
+    -   name: swbpinv_occ_prog
+        sql: swbpinv_occ_prog
+        type: string
+
+    -   name: swbpinv_majr_code
+        sql: swbpinv_majr_code
+        type: string
+
+    -   name: swbpinv_local_title
+        sql: swbpinv_local_title
+        type: string
+
+    -   name: swbpinv_inactive_ind
+        sql: swbpinv_inactive_ind
+        type: string
+
+    -   name: swbpinv_degr_units
+        sql: swbpinv_degr_units
+        type: string
+
+    -   name: swbpinv_degr_code
+        sql: swbpinv_degr_code
+        type: string
+
+    -   name: swbpinv_crswk_only
+        sql: swbpinv_crswk_only
+        type: string
+
+    -   name: swbpinv_conjoint
+        sql: swbpinv_conjoint
+        type: string
+
+    -   name: swbpinv_cert_units
+        sql: swbpinv_cert_units
+        type: string
+
+    -   name: swbpinv_camp_code
+        sql: swbpinv_camp_code
+        type: string
+
+    -   name: swbpinv_aprv_year
+        sql: swbpinv_aprv_year
+        type: string
+
+    -   name: swbpinv_aprv_mo
+        sql: swbpinv_aprv_mo
+        type: string
+
+    -   name: swbpinv_appl_code
+        sql: swbpinv_appl_code
+        type: string
+
+    -   name: swbpinv_amnesty
+        sql: swbpinv_amnesty
+        type: string
+
+    -   name: swbpinv_add_date
+        sql: swbpinv_add_date
+        type: time
+
+    -   name: swbpinv_activity_date
+        sql: swbpinv_activity_date
+        type: time
+
+    measures: []
+
+    pre_aggregations: []

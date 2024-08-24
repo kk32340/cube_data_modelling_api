@@ -1,0 +1,55 @@
+cubes:
+    name: student_sports_term_view
+
+    sql_table: odsmgr_cust.student_sports_term_view
+
+    joins: []
+
+    dimensions:
+    -   name: sgrsprt_data_origin
+        sql: sgrsprt_data_origin
+        type: string
+
+    -   name: sgrsprt_sael_code
+        sql: sgrsprt_sael_code
+        type: string
+
+    -   name: sgrsprt_user_id
+        sql: sgrsprt_user_id
+        type: string
+
+    -   name: sgrsprt_athl_aid_ind
+        sql: sgrsprt_athl_aid_ind
+        type: string
+
+    -   name: sgrsprt_activity_date
+        sql: sgrsprt_activity_date
+        type: time
+
+    -   name: sgrsprt_elig_code
+        sql: sgrsprt_elig_code
+        type: string
+
+    -   name: sgrsprt_spst_code
+        sql: sgrsprt_spst_code
+        type: string
+
+    -   name: stvactc_desc
+        sql: stvactc_desc
+        type: string
+
+    -   name: sgrsprt_actc_code
+        sql: sgrsprt_actc_code
+        type: string
+
+    -   name: sgrsprt_term_code
+        sql: sgrsprt_term_code
+        type: string
+
+    -   name: sgrsprt_pidm
+        sql: sgrsprt_pidm
+        type: string
+
+    measures: []
+
+    pre_aggregations: []

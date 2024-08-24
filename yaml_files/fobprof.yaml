@@ -1,0 +1,219 @@
+cubes:
+    name: fobprof
+
+    sql_table: fimsmgr.fobprof
+
+    joins: []
+
+    dimensions:
+    -   name: fobprof_web_access_ind
+        sql: fobprof_web_access_ind
+        type: string
+
+    -   name: fobprof_wbud_mstr_orgn_ind
+        sql: fobprof_wbud_mstr_orgn_ind
+        type: string
+
+    -   name: fobprof_wbud_mstr_fund_ind
+        sql: fobprof_wbud_mstr_fund_ind
+        type: string
+
+    -   name: fobprof_wbud_access_ind
+        sql: fobprof_wbud_access_ind
+        type: string
+
+    -   name: fobprof_user_name
+        sql: fobprof_user_name
+        type: string
+
+    -   name: fobprof_user_inv_priv
+        sql: fobprof_user_inv_priv
+        type: string
+
+    -   name: fobprof_user_id
+        sql: fobprof_user_id
+        type: string
+
+    -   name: fobprof_tol_override_ind
+        sql: fobprof_tol_override_ind
+        type: string
+
+    -   name: fobprof_tolerance
+        sql: fobprof_tolerance
+        type: string
+
+    -   name: fobprof_spd_override_ind
+        sql: fobprof_spd_override_ind
+        type: string
+
+    -   name: fobprof_secg_code
+        sql: fobprof_secg_code
+        type: string
+
+    -   name: fobprof_req_match_ovrrd_ind
+        sql: fobprof_req_match_ovrrd_ind
+        type: string
+
+    -   name: fobprof_requestor_ship_code
+        sql: fobprof_requestor_ship_code
+        type: string
+
+    -   name: fobprof_requestor_phone_number
+        sql: fobprof_requestor_phone_number
+        type: string
+
+    -   name: fobprof_requestor_phone_ext
+        sql: fobprof_requestor_phone_ext
+        type: string
+
+    -   name: fobprof_requestor_phone_area
+        sql: fobprof_requestor_phone_area
+        type: string
+
+    -   name: fobprof_requestor_fax_number
+        sql: fobprof_requestor_fax_number
+        type: string
+
+    -   name: fobprof_requestor_fax_ext
+        sql: fobprof_requestor_fax_ext
+        type: string
+
+    -   name: fobprof_requestor_fax_area
+        sql: fobprof_requestor_fax_area
+        type: string
+
+    -   name: fobprof_requestor_email_addr
+        sql: fobprof_requestor_email_addr
+        type: string
+
+    -   name: fobprof_requester_orgn_code
+        sql: fobprof_requester_orgn_code
+        type: string
+
+    -   name: fobprof_rcvd_tolerance_qty
+        sql: fobprof_rcvd_tolerance_qty
+        type: string
+
+    -   name: fobprof_rcvd_tolerance_pct
+        sql: fobprof_rcvd_tolerance_pct
+        type: string
+
+    -   name: fobprof_rcvd_tolerance_amt_pct
+        sql: fobprof_rcvd_tolerance_amt_pct
+        type: string
+
+    -   name: fobprof_rcvd_tolerance_amt
+        sql: fobprof_rcvd_tolerance_amt
+        type: string
+
+    -   name: fobprof_rcvd_override_ind
+        sql: fobprof_rcvd_override_ind
+        type: string
+
+    -   name: fobprof_po_match_ovrrd_ind
+        sql: fobprof_po_match_ovrrd_ind
+        type: string
+
+    -   name: fobprof_pidm
+        sql: fobprof_pidm
+        type: string
+
+    -   name: fobprof_nsf_override
+        sql: fobprof_nsf_override
+        type: string
+
+    -   name: fobprof_max_tolerance_amt
+        sql: fobprof_max_tolerance_amt
+        type: string
+
+    -   name: fobprof_master_orgn_ind
+        sql: fobprof_master_orgn_ind
+        type: string
+
+    -   name: fobprof_master_fund_ind
+        sql: fobprof_master_fund_ind
+        type: string
+
+    -   name: fobprof_inv_match_ovrrd_ind
+        sql: fobprof_inv_match_ovrrd_ind
+        type: string
+
+    -   name: fobprof_int_rate_override_ind
+        sql: fobprof_int_rate_override_ind
+        type: string
+
+    -   name: fobprof_exp_end_post_auth_ind
+        sql: fobprof_exp_end_post_auth_ind
+        type: string
+
+    -   name: fobprof_edi_override_ind
+        sql: fobprof_edi_override_ind
+        type: string
+
+    -   name: fobprof_dst_spd_override_ind
+        sql: fobprof_dst_spd_override_ind
+        type: string
+
+    -   name: fobprof_coas_code
+        sql: fobprof_coas_code
+        type: string
+
+    -   name: fobprof_card_override_ind
+        sql: fobprof_card_override_ind
+        type: string
+
+    -   name: fobprof_bud_id
+        sql: fobprof_bud_id
+        type: string
+
+    -   name: fobprof_activity_date
+        sql: fobprof_activity_date
+        type: time
+
+    -   name: fobprof_ach_override_ind
+        sql: fobprof_ach_override_ind
+        type: string
+
+    -   name: fobprof_accrual_post_auth_ind
+        sql: fobprof_accrual_post_auth_ind
+        type: string
+
+    -   name: fobprof_ctry_code_req_phone
+        sql: fobprof_ctry_code_req_phone
+        type: string
+
+    -   name: fobprof_ctry_code_req_fax
+        sql: fobprof_ctry_code_req_fax
+        type: string
+
+    -   name: fobprof_whrld_access_ind
+        sql: fobprof_whrld_access_ind
+        type: string
+
+    -   name: fobprof_po_hold_ovrd_ind
+        sql: fobprof_po_hold_ovrd_ind
+        type: string
+
+    -   name: fobprof_pmt_hold_ovrd_ind
+        sql: fobprof_pmt_hold_ovrd_ind
+        type: string
+
+    -   name: fobprof_surrogate_id
+        sql: fobprof_surrogate_id
+        type: string
+
+    -   name: fobprof_version
+        sql: fobprof_version
+        type: string
+
+    -   name: fobprof_data_origin
+        sql: fobprof_data_origin
+        type: string
+
+    -   name: fobprof_vpdi_code
+        sql: fobprof_vpdi_code
+        type: string
+
+    measures: []
+
+    pre_aggregations: []

@@ -1,0 +1,87 @@
+cubes:
+    name: po_invoice_by_fund_view
+
+    sql_table: odsmgr_cust.po_invoice_by_fund_view
+
+    joins: []
+
+    dimensions:
+    -   name: inv_line_amt
+        sql: inv_line_amt
+        type: string
+
+    -   name: po_line_amt
+        sql: po_line_amt
+        type: string
+
+    -   name: fprpoda_locn_code
+        sql: fprpoda_locn_code
+        type: string
+
+    -   name: fprpoda_actv_code
+        sql: fprpoda_actv_code
+        type: string
+
+    -   name: fprpoda_prog_code
+        sql: fprpoda_prog_code
+        type: string
+
+    -   name: fprpoda_acct_code
+        sql: fprpoda_acct_code
+        type: string
+
+    -   name: fprpoda_orgn_code
+        sql: fprpoda_orgn_code
+        type: string
+
+    -   name: fprpoda_fund_code
+        sql: fprpoda_fund_code
+        type: string
+
+    -   name: fpbpohd_complete_ind
+        sql: fpbpohd_complete_ind
+        type: string
+
+    -   name: fpbpohd_closed_ind
+        sql: fpbpohd_closed_ind
+        type: string
+
+    -   name: fpbpohd_post_date
+        sql: fpbpohd_post_date
+        type: string
+
+    -   name: fabinvh_invoice_date
+        sql: fabinvh_invoice_date
+        type: string
+
+    -   name: farinva_fund_code
+        sql: farinva_fund_code
+        type: string
+
+    -   name: fabinvh_code
+        sql: fabinvh_code
+        type: string
+
+    -   name: fpbpohd_appr_ind
+        sql: fpbpohd_appr_ind
+        type: string
+
+    -   name: ftvvend_1099_rpt_id
+        sql: ftvvend_1099_rpt_id
+        type: string
+
+    -   name: fpbpohd_activity_date
+        sql: fpbpohd_activity_date
+        type: string
+
+    -   name: fpbpohd_code
+        sql: fpbpohd_code
+        type: string
+
+    -   name: fprpoda_item
+        sql: fprpoda_item
+        type: string
+
+    measures: []
+
+    pre_aggregations: []

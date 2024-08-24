@@ -1,0 +1,113 @@
+cubes:
+    name: advisor
+
+    sql_table: odsmgr.advisor
+
+    joins:
+    -   name: academic_study
+        sql: '{CUBE}.person_uid = academic_study.person_uid AND {CUBE}.academic_period
+            = academic_study.academic_period'
+        relationship: one_to_many
+
+    -   name: academic_study_alias
+        sql: '{CUBE}.person_uid = advisor.academic_period'
+        relationship: one_to_many
+
+    -   name: address_stusta
+        sql: '{CUBE}.person_uid = address_stusta.entity_uid'
+        relationship: zero_to_many
+
+    dimensions:
+    -   name: sub_academic_period_desc
+        sql: sub_academic_period_desc
+        type: string
+
+    -   name: sub_academic_period
+        sql: sub_academic_period
+        type: string
+
+    -   name: person_uid
+        sql: person_uid
+        type: string
+        primary_key: true
+
+    -   name: process_group
+        sql: process_group
+        type: string
+
+    -   name: primary_advisor_ind
+        sql: primary_advisor_ind
+        type: string
+
+    -   name: name
+        sql: name
+        type: string
+
+    -   name: multi_source_desc
+        sql: multi_source_desc
+        type: string
+
+    -   name: multi_source
+        sql: multi_source
+        type: string
+
+    -   name: id
+        sql: id
+        type: string
+
+    -   name: advisor_uid
+        sql: advisor_uid
+        type: string
+
+    -   name: advisor_type_desc
+        sql: advisor_type_desc
+        type: string
+
+    -   name: advisor_type
+        sql: advisor_type
+        type: string
+
+    -   name: advisor_name_lfmi
+        sql: advisor_name_lfmi
+        type: string
+
+    -   name: advisor_name_fmil
+        sql: advisor_name_fmil
+        type: string
+
+    -   name: advisor_last_name
+        sql: advisor_last_name
+        type: string
+
+    -   name: advisor_id
+        sql: advisor_id
+        type: string
+
+    -   name: advisor_first_name
+        sql: advisor_first_name
+        type: string
+
+    -   name: administrative_group
+        sql: administrative_group
+        type: string
+
+    -   name: academic_year_desc
+        sql: academic_year_desc
+        type: string
+
+    -   name: academic_year
+        sql: academic_year
+        type: string
+
+    -   name: academic_period
+        sql: academic_period
+        type: string
+        primary_key: true
+
+    -   name: academic_period_desc
+        sql: academic_period_desc
+        type: string
+
+    measures: []
+
+    pre_aggregations: []

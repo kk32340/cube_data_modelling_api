@@ -1,0 +1,167 @@
+cubes:
+    name: npsas_contact_stu_info_budg
+
+    sql_table: odsmgr_cust.npsas_contact_stu_info_budg
+
+    joins: []
+
+    dimensions:
+    -   name: cum_gpa2
+        sql: cum_gpa2
+        type: string
+
+    -   name: residency_for_tuition
+        sql: residency_for_tuition
+        type: string
+
+    -   name: student_residence
+        sql: student_residence
+        type: string
+
+    -   name: marital_status_desc
+        sql: marital_status_desc
+        type: string
+
+    -   name: ssn
+        sql: ssn
+        type: string
+
+    -   name: last_name
+        sql: last_name
+        type: string
+
+    -   name: vet_ind
+        sql: vet_ind
+        type: string
+
+    -   name: citizenship_type_desc
+        sql: citizenship_type_desc
+        type: string
+
+    -   name: pacific_islander
+        sql: pacific_islander
+        type: string
+
+    -   name: amer_indian_alaska
+        sql: amer_indian_alaska
+        type: string
+
+    -   name: asian
+        sql: asian
+        type: string
+
+    -   name: african_black
+        sql: african_black
+        type: string
+
+    -   name: white
+        sql: white
+        type: string
+
+    -   name: ethnicity
+        sql: ethnicity
+        type: string
+
+    -   name: degree_year
+        sql: degree_year
+        type: string
+
+    -   name: high_school_degree
+        sql: high_school_degree
+        type: string
+
+    -   name: marital_status
+        sql: marital_status
+        type: string
+
+    -   name: driver_license_state_province
+        sql: driver_license_state_province
+        type: string
+
+    -   name: driver_license_number
+        sql: driver_license_number
+        type: string
+
+    -   name: gender
+        sql: gender
+        type: string
+
+    -   name: academic_year
+        sql: academic_year
+        type: string
+
+    -   name: aid_year
+        sql: aid_year
+        type: string
+
+    -   name: person_uid
+        sql: person_uid
+        type: string
+
+    -   name: college
+        sql: college
+        type: string
+
+    -   name: acyr
+        sql: acyr
+        type: string
+
+    -   name: full name
+        sql: full name
+        type: string
+
+    -   name: id
+        sql: id
+        type: string
+
+    -   name: student_id
+        sql: student_id
+        type: string
+
+    -   name: study_id
+        sql: study_id
+        type: string
+
+    -   name: budget_period
+        sql: budget_period
+        type: string
+
+    -   name: total_cost_of_attendance
+        sql: total_cost_of_attendance
+        type: string
+
+    -   name: all_other_expenses
+        sql: all_other_expenses
+        type: string
+
+    -   name: tech_cost
+        sql: tech_cost
+        type: string
+
+    -   name: transportation_cost
+        sql: transportation_cost
+        type: string
+
+    -   name: health_ins_cost
+        sql: health_ins_cost
+        type: string
+
+    -   name: room_board
+        sql: room_board
+        type: string
+
+    -   name: local_resident
+        sql: local_resident
+        type: string
+
+    -   name: books_supplies
+        sql: books_supplies
+        type: string
+
+    -   name: tuition_cost
+        sql: tuition_cost
+        type: string
+
+    measures: []
+
+    pre_aggregations: []

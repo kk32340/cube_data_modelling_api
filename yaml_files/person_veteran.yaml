@@ -1,0 +1,103 @@
+cubes:
+    name: person_veteran
+
+    sql_table: odsmgr.person_veteran
+
+    joins: []
+
+    dimensions:
+    -   name: veteran_special_disabled_ind
+        sql: veteran_special_disabled_ind
+        type: string
+
+    -   name: veteran_file_number
+        sql: veteran_file_number
+        type: string
+
+    -   name: veteran_category_desc
+        sql: veteran_category_desc
+        type: string
+
+    -   name: veteran_category
+        sql: veteran_category
+        type: string
+
+    -   name: tax_id
+        sql: tax_id
+        type: string
+
+    -   name: person_uid
+        sql: person_uid
+        type: string
+
+    -   name: process_group
+        sql: process_group
+        type: string
+
+    -   name: multi_source_desc
+        sql: multi_source_desc
+        type: string
+
+    -   name: last_name
+        sql: last_name
+        type: string
+
+    -   name: multi_source
+        sql: multi_source
+        type: string
+
+    -   name: military_separation_date
+        sql: military_separation_date
+        type: time
+
+    -   name: military_branch
+        sql: military_branch
+        type: string
+
+    -   name: middle_name
+        sql: middle_name
+        type: string
+
+    -   name: full_name_lfmi
+        sql: full_name_lfmi
+        type: string
+
+    -   name: foreign_tax_id
+        sql: foreign_tax_id
+        type: string
+
+    -   name: first_name
+        sql: first_name
+        type: string
+
+    -   name: government_id
+        sql: government_id
+        type: string
+
+    -   name: deceased_status
+        sql: deceased_status
+        type: string
+
+    -   name: deceased_date
+        sql: deceased_date
+        type: time
+
+    -   name: birth_date
+        sql: birth_date
+        type: time
+
+    -   name: confidentiality_ind
+        sql: confidentiality_ind
+        type: string
+
+    -   name: confidentiality_comment
+        sql: confidentiality_comment
+        type: string
+
+    -   name: administrative_group
+        sql: administrative_group
+        type: string
+
+    measures: []
+
+    pre_aggregations: []

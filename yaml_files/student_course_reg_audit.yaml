@@ -1,0 +1,207 @@
+cubes:
+    name: student_course_reg_audit
+
+    sql_table: odsmgr.student_course_reg_audit
+
+    joins: []
+
+    dimensions:
+    -   name: block_registration_desc
+        sql: block_registration_desc
+        type: string
+
+    -   name: block_registration
+        sql: block_registration
+        type: string
+
+    -   name: block_reg_sequence_number
+        sql: block_reg_sequence_number
+        type: string
+
+    -   name: sub_academic_period_desc
+        sql: sub_academic_period_desc
+        type: string
+
+    -   name: sub_academic_period
+        sql: sub_academic_period
+        type: string
+
+    -   name: subject_desc
+        sql: subject_desc
+        type: string
+
+    -   name: subject
+        sql: subject
+        type: string
+
+    -   name: registration_user_id
+        sql: registration_user_id
+        type: string
+
+    -   name: registration_status_desc
+        sql: registration_status_desc
+        type: string
+
+    -   name: registration_status_date
+        sql: registration_status_date
+        type: time
+
+    -   name: registration_status
+        sql: registration_status
+        type: string
+
+    -   name: registration_source
+        sql: registration_source
+        type: string
+
+    -   name: registration_error_message
+        sql: registration_error_message
+        type: string
+
+    -   name: registration_error_flag
+        sql: registration_error_flag
+        type: string
+
+    -   name: sequence_number
+        sql: sequence_number
+        type: string
+
+    -   name: section_add_date
+        sql: section_add_date
+        type: time
+
+    -   name: person_uid
+        sql: person_uid
+        type: string
+
+    -   name: process_group
+        sql: process_group
+        type: string
+
+    -   name: name
+        sql: name
+        type: string
+
+    -   name: multi_source_desc
+        sql: multi_source_desc
+        type: string
+
+    -   name: multi_source
+        sql: multi_source
+        type: string
+
+    -   name: last_date_change
+        sql: last_date_change
+        type: time
+
+    -   name: id
+        sql: id
+        type: string
+
+    -   name: grade_type_desc
+        sql: grade_type_desc
+        type: string
+
+    -   name: grade_type
+        sql: grade_type
+        type: string
+
+    -   name: grade_comment_desc
+        sql: grade_comment_desc
+        type: string
+
+    -   name: grade_comment
+        sql: grade_comment
+        type: string
+
+    -   name: division_desc
+        sql: division_desc
+        type: string
+
+    -   name: division
+        sql: division
+        type: string
+
+    -   name: department_desc
+        sql: department_desc
+        type: string
+
+    -   name: department
+        sql: department
+        type: string
+
+    -   name: course_version_number
+        sql: course_version_number
+        type: string
+
+    -   name: course_section_number
+        sql: course_section_number
+        type: string
+
+    -   name: course_reference_number
+        sql: course_reference_number
+        type: string
+
+    -   name: course_number
+        sql: course_number
+        type: string
+
+    -   name: course_level_desc
+        sql: course_level_desc
+        type: string
+
+    -   name: course_level
+        sql: course_level
+        type: string
+
+    -   name: course_identification
+        sql: course_identification
+        type: string
+
+    -   name: course_credits
+        sql: course_credits
+        type: string
+
+    -   name: course_campus_desc
+        sql: course_campus_desc
+        type: string
+
+    -   name: course_campus
+        sql: course_campus
+        type: string
+
+    -   name: course_billing_credits
+        sql: course_billing_credits
+        type: string
+
+    -   name: college_desc
+        sql: college_desc
+        type: string
+
+    -   name: college
+        sql: college
+        type: string
+
+    -   name: administrative_group
+        sql: administrative_group
+        type: string
+
+    -   name: academic_year_desc
+        sql: academic_year_desc
+        type: string
+
+    -   name: academic_year
+        sql: academic_year
+        type: string
+
+    -   name: academic_period_desc
+        sql: academic_period_desc
+        type: string
+
+    -   name: academic_period
+        sql: academic_period
+        type: string
+
+    measures: []
+
+    pre_aggregations: []

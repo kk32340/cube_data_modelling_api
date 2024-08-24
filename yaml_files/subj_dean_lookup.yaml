@@ -1,0 +1,80 @@
+cubes:
+    name: subj_dean_lookup
+
+    sql_table: odsmgr_cust.subj_dean_lookup
+
+    joins:
+    -   name: ir_session
+        sql: '{CUBE}.college = ir_session.college AND {CUBE}.subj = ir_session.subject_code'
+        relationship: one_to_many
+
+    -   name: student_course
+        sql: '{CUBE}.college = student_course.college AND {CUBE}.subj = student_course.subject'
+        relationship: zero_to_many
+
+    -   name: swrprod
+        sql: '{CUBE}.college = swrprod.college AND {CUBE}.subj = swrprod.subject'
+        relationship: one_to_many
+
+    -   name: ir_session_ir_section
+        sql: '{CUBE}.college = ir_session_ir_section.college AND {CUBE}.subj = ir_session_ir_section.subject_code'
+        relationship: one_to_many
+
+    dimensions:
+    -   name: div_dept
+        sql: div_dept
+        type: string
+
+    -   name: div_lu
+        sql: div_lu
+        type: string
+
+    -   name: subj_desc
+        sql: subj_desc
+        type: string
+
+    -   name: subj
+        sql: subj
+        type: string
+        primary_key: true
+
+    -   name: dept_lu
+        sql: dept_lu
+        type: string
+
+    -   name: dean_sort
+        sql: dean_sort
+        type: string
+
+    -   name: dept_abbrev_lu
+        sql: dept_abbrev_lu
+        type: string
+
+    -   name: dean_lu
+        sql: dean_lu
+        type: string
+
+    -   name: chair
+        sql: chair
+        type: string
+
+    -   name: college
+        sql: college
+        type: string
+        primary_key: true
+
+    -   name: status
+        sql: status
+        type: string
+
+    -   name: chair_email
+        sql: chair_email
+        type: string
+
+    -   name: dean_email
+        sql: dean_email
+        type: string
+
+    measures: []
+
+    pre_aggregations: []

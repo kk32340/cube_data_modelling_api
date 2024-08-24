@@ -1,0 +1,63 @@
+cubes:
+    name: sssp_student_audit
+
+    sql_table: odsmgr_cust.sssp_student_audit
+
+    joins: []
+
+    dimensions:
+    -   name: career interest
+        sql: career interest
+        type: string
+
+    -   name: academic progress
+        sql: academic progress
+        type: string
+
+    -   name: ed plan
+        sql: ed plan
+        type: string
+
+    -   name: counseling
+        sql: counseling
+        type: string
+
+    -   name: assessment
+        sql: assessment
+        type: string
+
+    -   name: orientation
+        sql: orientation
+        type: string
+
+    -   name: college
+        sql: college
+        type: string
+
+    -   name: term
+        sql: term
+        type: string
+
+    -   name: first_name
+        sql: first_name
+        type: string
+
+    -   name: last_name
+        sql: last_name
+        type: string
+
+    -   name: id
+        sql: id
+        type: string
+
+    -   name: pidm
+        sql: pidm
+        type: string
+
+    -   name: college_dicd
+        sql: college_dicd
+        type: string
+
+    measures: []
+
+    pre_aggregations: []

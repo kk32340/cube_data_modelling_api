@@ -1,0 +1,115 @@
+cubes:
+    name: students_admitted_not_enrolled
+
+    sql_table: odsmgr_cust.students_admitted_not_enrolled
+
+    joins: []
+
+    dimensions:
+    -   name: veteran
+        sql: veteran
+        type: string
+
+    -   name: academic_period
+        sql: academic_period
+        type: string
+
+    -   name: degree_applicable_credits
+        sql: degree_applicable_credits
+        type: string
+
+    -   name: matric_counseling
+        sql: matric_counseling
+        type: string
+
+    -   name: matric_orientation
+        sql: matric_orientation
+        type: string
+
+    -   name: matric_edplan
+        sql: matric_edplan
+        type: string
+
+    -   name: matric_assessment
+        sql: matric_assessment
+        type: string
+
+    -   name: csep
+        sql: csep
+        type: string
+
+    -   name: asep
+        sql: asep
+        type: string
+
+    -   name: student_type
+        sql: student_type
+        type: string
+
+    -   name: ethnicity
+        sql: ethnicity
+        type: string
+
+    -   name: high_school
+        sql: high_school
+        type: string
+
+    -   name: cell_phone
+        sql: cell_phone
+        type: string
+
+    -   name: day_phone
+        sql: day_phone
+        type: string
+
+    -   name: mail_postal_code
+        sql: mail_postal_code
+        type: string
+
+    -   name: mail_state
+        sql: mail_state
+        type: string
+
+    -   name: mail_city
+        sql: mail_city
+        type: string
+
+    -   name: mail_street
+        sql: mail_street
+        type: string
+
+    -   name: email_address
+        sql: email_address
+        type: string
+
+    -   name: gender
+        sql: gender
+        type: string
+
+    -   name: birth_date
+        sql: birth_date
+        type: time
+
+    -   name: name
+        sql: name
+        type: string
+
+    -   name: id
+        sql: id
+        type: string
+
+    -   name: person_uid
+        sql: person_uid
+        type: string
+
+    -   name: college
+        sql: college
+        type: string
+
+    -   name: major
+        sql: major
+        type: string
+
+    measures: []
+
+    pre_aggregations: []

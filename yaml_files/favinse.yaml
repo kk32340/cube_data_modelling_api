@@ -1,0 +1,80 @@
+cubes:
+    name: favinse
+
+    sql_table: 'favinse
+
+        '
+    joins:
+    -   name: fabinvh
+        sql: '{CUBE}.favinse_inv_code = fabinvh.fabinvh_code'
+        relationship: one_to_many
+
+    dimensions:
+    -   name: favinse_vend_id
+        sql: favinse_vend_id
+        type: string
+
+    -   name: favinse_pmt_due_date
+        sql: favinse_pmt_due_date
+        type: time
+
+    -   name: favinse_pidm
+        sql: favinse_pidm
+        type: string
+
+    -   name: favinse_mi
+        sql: favinse_mi
+        type: string
+
+    -   name: favinse_last_name
+        sql: favinse_last_name
+        type: string
+
+    -   name: favinse_inv_date
+        sql: favinse_inv_date
+        type: time
+
+    -   name: favinse_inv_code
+        sql: favinse_inv_code
+        type: string
+        primary_key: true
+
+    -   name: favinse_first_name
+        sql: favinse_first_name
+        type: string
+
+    -   name: favinse_entity_ind
+        sql: favinse_entity_ind
+        type: string
+
+    -   name: favinse_disc_code
+        sql: favinse_disc_code
+        type: string
+
+    -   name: favinse_bank_code
+        sql: favinse_bank_code
+        type: string
+
+    -   name: favinse_atyp_seq_num
+        sql: favinse_atyp_seq_num
+        type: string
+
+    -   name: favinse_atyp_code
+        sql: favinse_atyp_code
+        type: string
+
+    -   name: favinse_addl_chrg_amt
+        sql: favinse_addl_chrg_amt
+        type: string
+
+    -   name: favinse_activity_date
+        sql: favinse_activity_date
+        type: time
+
+    -   name: favinse_ach_override_ind
+        sql: favinse_ach_override_ind
+        type: string
+
+    measures: []
+
+    pre_aggregations: []

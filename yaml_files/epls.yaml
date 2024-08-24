@@ -1,0 +1,51 @@
+cubes:
+    name: epls
+
+    sql_table: odsmgr_cust.epls
+
+    joins: []
+
+    dimensions:
+    -   name: zip
+        sql: zip
+        type: string
+
+    -   name: state
+        sql: state
+        type: string
+
+    -   name: name
+        sql: name
+        type: string
+
+    -   name: city
+        sql: city
+        type: string
+
+    -   name: address1
+        sql: address1
+        type: string
+
+    -   name: keyid
+        sql: keyid
+        type: string
+
+    -   name: first
+        sql: first
+        type: string
+
+    -   name: middle
+        sql: middle
+        type: string
+
+    -   name: last
+        sql: last
+        type: string
+
+    -   name: province
+        sql: province
+        type: string
+
+    measures: []
+
+    pre_aggregations: []

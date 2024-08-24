@@ -1,0 +1,149 @@
+cubes:
+    name: schedule_offering_exp
+
+    sql_table: odsmgr_cust.schedule_offering_exp
+
+    joins:
+    -   name: schedule_offering_stusta
+        sql: '{CUBE}.academic_period = schedule_offering_stusta.academic_period AND
+            {CUBE}.course_reference_number = schedule_offering_stusta.course_reference_number'
+        relationship: one_to_many
+
+    dimensions:
+    -   name: row_num
+        sql: row_num
+        type: string
+
+    -   name: credit_min
+        sql: credit_min
+        type: string
+
+    -   name: credit_ind
+        sql: credit_ind
+        type: string
+
+    -   name: credit_max
+        sql: credit_max
+        type: string
+
+    -   name: contact_max
+        sql: contact_max
+        type: string
+
+    -   name: contact_min
+        sql: contact_min
+        type: string
+
+    -   name: contact_ind
+        sql: contact_ind
+        type: string
+
+    -   name: capp_prereq_test_ind
+        sql: capp_prereq_test_ind
+        type: string
+
+    -   name: drop_cut_off_date
+        sql: drop_cut_off_date
+        type: time
+
+    -   name: acad_cut_off_date
+        sql: acad_cut_off_date
+        type: time
+
+    -   name: instr_method_desc
+        sql: instr_method_desc
+        type: string
+
+    -   name: instr_method
+        sql: instr_method
+        type: string
+
+    -   name: term_length_multiplier
+        sql: term_length_multiplier
+        type: string
+
+    -   name: no_meetings
+        sql: no_meetings
+        type: string
+
+    -   name: workload
+        sql: workload
+        type: string
+
+    -   name: daily_hrs
+        sql: daily_hrs
+        type: string
+
+    -   name: wkly_hrs
+        sql: wkly_hrs
+        type: string
+
+    -   name: census_enr
+        sql: census_enr
+        type: string
+
+    -   name: wexp_ind
+        sql: wexp_ind
+        type: string
+
+    -   name: dsch_ind
+        sql: dsch_ind
+        type: string
+
+    -   name: wsch_ind
+        sql: wsch_ind
+        type: string
+
+    -   name: actual_ind
+        sql: actual_ind
+        type: string
+
+    -   name: wait_list_remain
+        sql: wait_list_remain
+        type: string
+
+    -   name: wait_list_taken
+        sql: wait_list_taken
+        type: string
+
+    -   name: wait_list_max
+        sql: wait_list_max
+        type: string
+
+    -   name: offering_number
+        sql: offering_number
+        type: string
+
+    -   name: course_reference_number
+        sql: course_reference_number
+        type: string
+        primary_key: true
+
+    -   name: course_number
+        sql: course_number
+        type: string
+
+    -   name: subject
+        sql: subject
+        type: string
+
+    -   name: course_identification
+        sql: course_identification
+        type: string
+
+    -   name: academic_period_desc
+        sql: academic_period_desc
+        type: string
+
+    -   name: academic_period
+        sql: academic_period
+        type: string
+        primary_key: true
+
+    -   name: academic_year
+        sql: academic_year
+        type: string
+
+    measures: []
+
+    pre_aggregations: []

@@ -1,0 +1,71 @@
+cubes:
+    name: ir_ss_reporting_view
+
+    sql_table: odsmgr_cust.ir_ss_reporting_view
+
+    joins: []
+
+    dimensions:
+    -   name: academic_progress_probation
+        sql: academic_progress_probation
+        type: string
+
+    -   name: edplan_services
+        sql: edplan_services
+        type: string
+
+    -   name: counseling_advising_service
+        sql: counseling_advising_service
+        type: string
+
+    -   name: init_orientation_services
+        sql: init_orientation_services
+        type: string
+
+    -   name: ed_plan_exempt_status
+        sql: ed_plan_exempt_status
+        type: string
+
+    -   name: init_assessment_exempt_status
+        sql: init_assessment_exempt_status
+        type: string
+
+    -   name: init_orien_exempt_status
+        sql: init_orien_exempt_status
+        type: string
+
+    -   name: course_of_study
+        sql: course_of_study
+        type: string
+
+    -   name: edgoal
+        sql: edgoal
+        type: string
+
+    -   name: college
+        sql: college
+        type: string
+
+    -   name: academic_period
+        sql: academic_period
+        type: string
+
+    -   name: person_uid
+        sql: person_uid
+        type: string
+
+    -   name: id
+        sql: id
+        type: string
+
+    -   name: name
+        sql: name
+        type: string
+
+    -   name: orientation_ssst_code
+        sql: orientation_ssst_code
+        type: string
+
+    measures: []
+
+    pre_aggregations: []

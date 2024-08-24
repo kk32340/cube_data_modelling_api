@@ -1,0 +1,45 @@
+cubes:
+    name: cdc_with_term
+
+    sql_table: odsmgr_cust.cdc_with_term
+
+    joins:
+    -   name: ir_student_person
+        sql: '{CUBE}.person_uid = ir_student_person.person_uid'
+        relationship: one_to_one
+
+    -   name: swratnd_expanded
+        sql: '{CUBE}.person_uid = swratnd_expanded.swratnd_pidm AND {CUBE}.academic_period
+            = swratnd_expanded.swratnd_term_code'
+        relationship: one_to_one
+
+    dimensions:
+    -   name: tax_id
+        sql: tax_id
+        type: string
+
+    -   name: id
+        sql: id
+        type: string
+
+    -   name: name
+        sql: name
+        type: string
+
+    -   name: college
+        sql: college
+        type: string
+
+    -   name: academic_period
+        sql: academic_period
+        type: string
+        primary_key: true
+
+    -   name: person_uid
+        sql: person_uid
+        type: string
+        primary_key: true
+
+    measures: []
+
+    pre_aggregations: []

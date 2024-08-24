@@ -1,0 +1,31 @@
+cubes:
+    name: cc_programs
+
+    sql_table: odsmgr_cust.cc_programs
+
+    joins:
+    -   name: ir_section
+        sql: '{CUBE}.courseid = ir_section.course_identification'
+        relationship: one_to_many
+
+    dimensions:
+    -   name: key_crse
+        sql: key_crse
+        type: string
+
+    -   name: program_desc
+        sql: program_desc
+        type: string
+
+    -   name: program
+        sql: program
+        type: string
+
+    -   name: courseid
+        sql: courseid
+        type: string
+        primary_key: true
+
+    measures: []
+
+    pre_aggregations: []

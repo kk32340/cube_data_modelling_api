@@ -1,0 +1,87 @@
+cubes:
+    name: npsas_contact_info
+
+    sql_table: odsmgr_cust.npsas_contact_info
+
+    joins: []
+
+    dimensions:
+    -   name: email_preferred_address
+        sql: email_preferred_address
+        type: string
+
+    -   name: middle_name
+        sql: middle_name
+        type: string
+
+    -   name: first_name
+        sql: first_name
+        type: string
+
+    -   name: last_name
+        sql: last_name
+        type: string
+
+    -   name: name_suffix
+        sql: name_suffix
+        type: string
+
+    -   name: parent_email_address
+        sql: parent_email_address
+        type: string
+
+    -   name: parent_last_name
+        sql: parent_last_name
+        type: string
+
+    -   name: perm_res_ca
+        sql: perm_res_ca
+        type: string
+
+    -   name: cell_phone
+        sql: cell_phone
+        type: string
+
+    -   name: campus_email
+        sql: campus_email
+        type: string
+
+    -   name: academic_year
+        sql: academic_year
+        type: string
+
+    -   name: aid_year
+        sql: aid_year
+        type: string
+
+    -   name: person_uid
+        sql: person_uid
+        type: string
+
+    -   name: college
+        sql: college
+        type: string
+
+    -   name: acyr
+        sql: acyr
+        type: string
+
+    -   name: full name
+        sql: full name
+        type: string
+
+    -   name: id
+        sql: id
+        type: string
+
+    -   name: student_id
+        sql: student_id
+        type: string
+
+    -   name: study_id
+        sql: study_id
+        type: string
+
+    measures: []
+
+    pre_aggregations: []

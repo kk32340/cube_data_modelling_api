@@ -1,0 +1,59 @@
+cubes:
+    name: person_sensitive_race
+
+    sql_table: odsmgr.person_sensitive_race
+
+    joins:
+    -   name: person_detail_stusta
+        sql: '{CUBE}.person_uid = person_detail_stusta.person_uid'
+        relationship: one_to_many
+
+    dimensions:
+    -   name: race_desc
+        sql: race_desc
+        type: string
+
+    -   name: race_category_desc
+        sql: race_category_desc
+        type: string
+
+    -   name: race_category
+        sql: race_category
+        type: string
+
+    -   name: race
+        sql: race
+        type: string
+
+    -   name: person_uid
+        sql: person_uid
+        type: string
+        primary_key: true
+
+    -   name: process_group
+        sql: process_group
+        type: string
+
+    -   name: name
+        sql: name
+        type: string
+
+    -   name: multi_source_desc
+        sql: multi_source_desc
+        type: string
+
+    -   name: multi_source
+        sql: multi_source
+        type: string
+
+    -   name: id
+        sql: id
+        type: string
+
+    -   name: administrative_group
+        sql: administrative_group
+        type: string
+
+    measures: []
+
+    pre_aggregations: []

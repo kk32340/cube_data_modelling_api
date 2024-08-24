@@ -1,0 +1,111 @@
+cubes:
+    name: medical_information
+
+    sql_table: odsmgr.medical_information
+
+    joins:
+    -   name: person_stusta
+        sql: '{CUBE}.person_uid = person_stusta.person_uid'
+        relationship: zero_to_many
+
+    dimensions:
+    -   name: sub_academic_period_desc
+        sql: sub_academic_period_desc
+        type: string
+
+    -   name: sub_academic_period
+        sql: sub_academic_period
+        type: string
+
+    -   name: person_uid
+        sql: person_uid
+        type: string
+        primary_key: true
+
+    -   name: process_group
+        sql: process_group
+        type: string
+
+    -   name: primary_disability_ind
+        sql: primary_disability_ind
+        type: string
+
+    -   name: medical_type_desc
+        sql: medical_type_desc
+        type: string
+
+    -   name: medical_type
+        sql: medical_type
+        type: string
+
+    -   name: medical_equipment_type_desc
+        sql: medical_equipment_type_desc
+        type: string
+
+    -   name: medical_equipment_type
+        sql: medical_equipment_type
+        type: string
+
+    -   name: medical_comment
+        sql: medical_comment
+        type: string
+
+    -   name: name
+        sql: name
+        type: string
+
+    -   name: multi_source_desc
+        sql: multi_source_desc
+        type: string
+
+    -   name: multi_source
+        sql: multi_source
+        type: string
+
+    -   name: id
+        sql: id
+        type: string
+
+    -   name: disability_services_desc
+        sql: disability_services_desc
+        type: string
+
+    -   name: disability_services
+        sql: disability_services
+        type: string
+
+    -   name: disability_on_set_age
+        sql: disability_on_set_age
+        type: string
+
+    -   name: disability_desc
+        sql: disability_desc
+        type: string
+
+    -   name: disability
+        sql: disability
+        type: string
+
+    -   name: administrative_group
+        sql: administrative_group
+        type: string
+
+    -   name: academic_year_desc
+        sql: academic_year_desc
+        type: string
+
+    -   name: academic_year
+        sql: academic_year
+        type: string
+
+    -   name: academic_period
+        sql: academic_period
+        type: string
+
+    -   name: academic_period_desc
+        sql: academic_period_desc
+        type: string
+
+    measures: []
+
+    pre_aggregations: []

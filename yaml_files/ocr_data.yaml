@@ -1,0 +1,31 @@
+cubes:
+    name: ocr_data
+
+    sql_table: odsmgr_cust.ocr_data
+
+    joins: []
+
+    dimensions:
+    -   name: subject
+        sql: subject
+        type: string
+
+    -   name: section_count
+        sql: section_count
+        type: string
+
+    -   name: id
+        sql: id
+        type: string
+
+    -   name: course_number
+        sql: course_number
+        type: string
+
+    -   name: academic_period
+        sql: academic_period
+        type: string
+
+    measures: []
+
+    pre_aggregations: []

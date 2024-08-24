@@ -1,0 +1,51 @@
+cubes:
+    name: svbmesa
+
+    sql_table: saturn.svbmesa
+
+    joins: []
+
+    dimensions:
+    -   name: svbmesa_vpdi_code
+        sql: svbmesa_vpdi_code
+        type: string
+
+    -   name: svbmesa_version
+        sql: svbmesa_version
+        type: string
+
+    -   name: svbmesa_surrogate_id
+        sql: svbmesa_surrogate_id
+        type: string
+
+    -   name: svbmesa_data_origin
+        sql: svbmesa_data_origin
+        type: string
+
+    -   name: svbmesa_user_id
+        sql: svbmesa_user_id
+        type: string
+
+    -   name: svbmesa_activity_date
+        sql: svbmesa_activity_date
+        type: time
+
+    -   name: svbmesa_mesa_code
+        sql: svbmesa_mesa_code
+        type: string
+
+    -   name: svbmesa_dicd_code
+        sql: svbmesa_dicd_code
+        type: string
+
+    -   name: svbmesa_term_code
+        sql: svbmesa_term_code
+        type: string
+
+    -   name: svbmesa_pidm
+        sql: svbmesa_pidm
+        type: string
+
+    measures: []
+
+    pre_aggregations: []

@@ -1,0 +1,59 @@
+cubes:
+    name: students_acad_prob2_dismissal
+
+    sql_table: odsmgr_cust.students_acad_prob2_dismissal
+
+    joins: []
+
+    dimensions:
+    -   name: cum_gpa
+        sql: cum_gpa
+        type: string
+
+    -   name: term_credit_hours
+        sql: term_credit_hours
+        type: string
+
+    -   name: acad_standing_eot_desc
+        sql: acad_standing_eot_desc
+        type: string
+
+    -   name: email_address
+        sql: email_address
+        type: string
+
+    -   name: cell_phone
+        sql: cell_phone
+        type: string
+
+    -   name: day_phone
+        sql: day_phone
+        type: string
+
+    -   name: acad_standing_eot
+        sql: acad_standing_eot
+        type: string
+
+    -   name: name
+        sql: name
+        type: string
+
+    -   name: id
+        sql: id
+        type: string
+
+    -   name: person_uid
+        sql: person_uid
+        type: string
+
+    -   name: home_college
+        sql: home_college
+        type: string
+
+    -   name: academic_period
+        sql: academic_period
+        type: string
+
+    measures: []
+
+    pre_aggregations: []

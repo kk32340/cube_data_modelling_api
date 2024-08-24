@@ -1,0 +1,131 @@
+cubes:
+    name: building_room_meeting_times
+
+    sql_table: odsmgr_cust.building_room_meeting_times
+
+    joins: []
+
+    dimensions:
+    -   name: wednesday
+        sql: wednesday
+        type: string
+
+    -   name: sunday
+        sql: sunday
+        type: string
+
+    -   name: tuesday
+        sql: tuesday
+        type: string
+
+    -   name: thursday
+        sql: thursday
+        type: string
+
+    -   name: saturday
+        sql: saturday
+        type: string
+
+    -   name: room
+        sql: room
+        type: string
+
+    -   name: monday
+        sql: monday
+        type: string
+
+    -   name: friday
+        sql: friday
+        type: string
+
+    -   name: end_time
+        sql: end_time
+        type: string
+
+    -   name: '2200'
+        sql: '2200'
+        type: string
+
+    -   name: '2100'
+        sql: '2100'
+        type: string
+
+    -   name: '2000'
+        sql: '2000'
+        type: string
+
+    -   name: '1900'
+        sql: '1900'
+        type: string
+
+    -   name: '1800'
+        sql: '1800'
+        type: string
+
+    -   name: '1700'
+        sql: '1700'
+        type: string
+
+    -   name: '1600'
+        sql: '1600'
+        type: string
+
+    -   name: '1500'
+        sql: '1500'
+        type: string
+
+    -   name: '1400'
+        sql: '1400'
+        type: string
+
+    -   name: '1300'
+        sql: '1300'
+        type: string
+
+    -   name: '1200'
+        sql: '1200'
+        type: string
+
+    -   name: '1100'
+        sql: '1100'
+        type: string
+
+    -   name: '1000'
+        sql: '1000'
+        type: string
+
+    -   name: 0900
+        sql: 0900
+        type: string
+
+    -   name: 0800
+        sql: 0800
+        type: string
+
+    -   name: '0700'
+        sql: '0700'
+        type: string
+
+    -   name: course_reference_number
+        sql: course_reference_number
+        type: string
+
+    -   name: building
+        sql: building
+        type: string
+
+    -   name: begin_time
+        sql: begin_time
+        type: string
+
+    -   name: college
+        sql: college
+        type: string
+
+    -   name: academic_period
+        sql: academic_period
+        type: string
+
+    measures: []
+
+    pre_aggregations: []

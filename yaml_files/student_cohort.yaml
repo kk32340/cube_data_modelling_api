@@ -1,0 +1,127 @@
+cubes:
+    name: student_cohort
+
+    sql_table: odsmgr.student_cohort
+
+    joins:
+    -   name: enrollment
+        sql: '{CUBE}.person_uid = enrollment.person_uid AND {CUBE}.academic_period
+            = enrollment.academic_period'
+        relationship: one_to_many
+
+    -   name: student
+        sql: '{CUBE}.person_uid = student.person_uid AND {CUBE}.academic_period =
+            student.academic_period'
+        relationship: zero_to_many
+
+    -   name: student_course_stusta
+        sql: '{CUBE}.person_uid = student_course_stusta.person_uid AND {CUBE}.academic_period
+            = student_course_stusta.academic_period'
+        relationship: one_to_one
+
+    -   name: ir_student_person
+        sql: '{CUBE}.person_uid = ir_student_person.person_uid'
+        relationship: one_to_one
+
+    dimensions:
+    -   name: cohort_activity_date
+        sql: cohort_activity_date
+        type: time
+
+    -   name: cohort_degree_level_desc
+        sql: cohort_degree_level_desc
+        type: string
+
+    -   name: cohort_degree_level
+        sql: cohort_degree_level
+        type: string
+
+    -   name: cohort_end_acad_period_desc
+        sql: cohort_end_acad_period_desc
+        type: string
+
+    -   name: cohort_end_academic_period
+        sql: cohort_end_academic_period
+        type: string
+
+    -   name: cohort_start_acad_period_desc
+        sql: cohort_start_acad_period_desc
+        type: string
+
+    -   name: cohort_start_academic_period
+        sql: cohort_start_academic_period
+        type: string
+
+    -   name: sub_academic_period_desc
+        sql: sub_academic_period_desc
+        type: string
+
+    -   name: sub_academic_period
+        sql: sub_academic_period
+        type: string
+
+    -   name: process_group
+        sql: process_group
+        type: string
+
+    -   name: multi_source_desc
+        sql: multi_source_desc
+        type: string
+
+    -   name: multi_source
+        sql: multi_source
+        type: string
+
+    -   name: fte_cohort_report_ind
+        sql: fte_cohort_report_ind
+        type: string
+
+    -   name: cohort_inactive_reason_desc
+        sql: cohort_inactive_reason_desc
+        type: string
+
+    -   name: cohort_inactive_reason
+        sql: cohort_inactive_reason
+        type: string
+
+    -   name: cohort_desc
+        sql: cohort_desc
+        type: string
+
+    -   name: cohort_active_ind
+        sql: cohort_active_ind
+        type: string
+
+    -   name: cohort
+        sql: cohort
+        type: string
+
+    -   name: administrative_group
+        sql: administrative_group
+        type: string
+
+    -   name: academic_year_desc
+        sql: academic_year_desc
+        type: string
+
+    -   name: academic_year
+        sql: academic_year
+        type: string
+
+    -   name: academic_period_desc
+        sql: academic_period_desc
+        type: string
+
+    -   name: academic_period
+        sql: academic_period
+        type: string
+        primary_key: true
+
+    -   name: person_uid
+        sql: person_uid
+        type: string
+        primary_key: true
+
+    measures: []
+
+    pre_aggregations: []

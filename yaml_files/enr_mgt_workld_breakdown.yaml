@@ -1,0 +1,107 @@
+cubes:
+    name: enr_mgt_workld_breakdown
+
+    sql_table: odsmgr_cust.enr_mgt_workld_breakdown
+
+    joins: []
+
+    dimensions:
+    -   name: workload
+        sql: workload
+        type: string
+
+    -   name: unknown_workload
+        sql: unknown_workload
+        type: string
+
+    -   name: subject_desc
+        sql: subject_desc
+        type: string
+
+    -   name: subject_code
+        sql: subject_code
+        type: string
+
+    -   name: overload_workload
+        sql: overload_workload
+        type: string
+
+    -   name: ftes_est_unknown
+        sql: ftes_est_unknown
+        type: string
+
+    -   name: ftes_est_overload
+        sql: ftes_est_overload
+        type: string
+
+    -   name: ftes_est_contract
+        sql: ftes_est_contract
+        type: string
+
+    -   name: ftes_est_banked_unused
+        sql: ftes_est_banked_unused
+        type: string
+
+    -   name: ftes_est_adjunct
+        sql: ftes_est_adjunct
+        type: string
+
+    -   name: ftes_est
+        sql: ftes_est
+        type: string
+
+    -   name: ftes_act_unknown
+        sql: ftes_act_unknown
+        type: string
+
+    -   name: ftes_act_overload
+        sql: ftes_act_overload
+        type: string
+
+    -   name: ftes_act_contract
+        sql: ftes_act_contract
+        type: string
+
+    -   name: ftes_act_banked_unused
+        sql: ftes_act_banked_unused
+        type: string
+
+    -   name: ftes_act_adjunct
+        sql: ftes_act_adjunct
+        type: string
+
+    -   name: ftes_act
+        sql: ftes_act
+        type: string
+
+    -   name: course_number
+        sql: course_number
+        type: string
+
+    -   name: contract_workload
+        sql: contract_workload
+        type: string
+
+    -   name: banked_unused_workload
+        sql: banked_unused_workload
+        type: string
+
+    -   name: college
+        sql: college
+        type: string
+
+    -   name: crn
+        sql: crn
+        type: string
+
+    -   name: adjunct_worklad
+        sql: adjunct_worklad
+        type: string
+
+    -   name: academic_period
+        sql: academic_period
+        type: string
+
+    measures: []
+
+    pre_aggregations: []

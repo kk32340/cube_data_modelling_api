@@ -1,0 +1,135 @@
+cubes:
+    name: invoice_check
+
+    sql_table: odsmgr.invoice_check
+
+    joins:
+    -   name: invoice 1
+        sql: '{CUBE}.invoice'
+        relationship: one_to_many
+
+    -   name: transaction_history
+        sql: '{CUBE}.invoice = transaction_history.document'
+        relationship: zero_to_many
+
+    dimensions:
+    -   name: pay_type
+        sql: pay_type
+        type: string
+
+    -   name: pay_type_desc
+        sql: pay_type_desc
+        type: string
+
+    -   name: reconciliation_ind
+        sql: reconciliation_ind
+        type: string
+
+    -   name: process_group
+        sql: process_group
+        type: string
+
+    -   name: net_amount
+        sql: net_amount
+        type: string
+
+    -   name: multi_source_desc
+        sql: multi_source_desc
+        type: string
+
+    -   name: reconciliation_ind_desc
+        sql: reconciliation_ind_desc
+        type: string
+
+    -   name: automated_clearing_house_ind
+        sql: automated_clearing_house_ind
+        type: string
+
+    -   name: bank_transaction_date
+        sql: bank_transaction_date
+        type: time
+
+    -   name: bank_reconciliation_ind
+        sql: bank_reconciliation_ind
+        type: string
+
+    -   name: bank_reconciliation_ind_desc
+        sql: bank_reconciliation_ind_desc
+        type: string
+
+    -   name: bank_check_amount
+        sql: bank_check_amount
+        type: string
+
+    -   name: bank_transaction_comment
+        sql: bank_transaction_comment
+        type: string
+
+    -   name: check_activity_date
+        sql: check_activity_date
+        type: time
+
+    -   name: check_user_id
+        sql: check_user_id
+        type: string
+
+    -   name: multi_source
+        sql: multi_source
+        type: string
+
+    -   name: cancel_ind
+        sql: cancel_ind
+        type: string
+
+    -   name: cancel_date
+        sql: cancel_date
+        type: time
+
+    -   name: bank_uid
+        sql: bank_uid
+        type: string
+
+    -   name: bank_name
+        sql: bank_name
+        type: string
+
+    -   name: bank_id
+        sql: bank_id
+        type: string
+
+    -   name: bank_desc
+        sql: bank_desc
+        type: string
+
+    -   name: bank
+        sql: bank
+        type: string
+
+    -   name: check_type
+        sql: check_type
+        type: string
+
+    -   name: check_number
+        sql: check_number
+        type: string
+
+    -   name: check_type_desc
+        sql: check_type_desc
+        type: string
+
+    -   name: check_date
+        sql: check_date
+        type: time
+
+    -   name: administrative_group
+        sql: administrative_group
+        type: string
+
+    -   name: invoice
+        sql: invoice
+        type: string
+        primary_key: true
+
+    measures: []
+
+    pre_aggregations: []

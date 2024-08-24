@@ -1,0 +1,47 @@
+cubes:
+    name: ir_student_dept_tops
+
+    sql_table: odsmgr_cust.ir_student_dept_tops
+
+    joins: []
+
+    dimensions:
+    -   name: top_title
+        sql: top_title
+        type: string
+
+    -   name: top_code
+        sql: top_code
+        type: string
+
+    -   name: top4_title
+        sql: top4_title
+        type: string
+
+    -   name: top4_code
+        sql: top4_code
+        type: string
+
+    -   name: top2_title
+        sql: top2_title
+        type: string
+
+    -   name: top2_code
+        sql: top2_code
+        type: string
+
+    -   name: department_desc
+        sql: department_desc
+        type: string
+
+    -   name: department
+        sql: department
+        type: string
+
+    -   name: college
+        sql: college
+        type: string
+
+    measures: []
+
+    pre_aggregations: []

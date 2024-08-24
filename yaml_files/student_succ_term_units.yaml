@@ -1,0 +1,176 @@
+cubes:
+    name: student_succ_term_units
+
+    sql_table: odsmgr_cust.student_succ_term_units
+
+    joins:
+    -   name: student_success_base
+        sql: '{CUBE}.person_uid = student_success_base.person_uid'
+        relationship: one_to_many
+
+    -   name: student_success_base_shortcut
+        sql: '{CUBE}.base_term = student_succ_term_units.academic_period AND {CUBE}.person_uid'
+        relationship: one_to_many
+
+    dimensions:
+    -   name: base_term
+        sql: base_term
+        type: string
+        primary_key: true
+
+    -   name: pc_trm_trns_qlty_points
+        sql: pc_trm_trns_qlty_points
+        type: string
+
+    -   name: pc_trm_trns_earned_crdts
+        sql: pc_trm_trns_earned_crdts
+        type: string
+
+    -   name: pc_trm_trns_att_crdts
+        sql: pc_trm_trns_att_crdts
+        type: string
+
+    -   name: cc_trm_trns_qlty_points
+        sql: cc_trm_trns_qlty_points
+        type: string
+
+    -   name: cc_trm_trns_earned_crdts
+        sql: cc_trm_trns_earned_crdts
+        type: string
+
+    -   name: cc_trm_trns_att_crdts
+        sql: cc_trm_trns_att_crdts
+        type: string
+
+    -   name: bc_trm_trns_qlty_points
+        sql: bc_trm_trns_qlty_points
+        type: string
+
+    -   name: bc_trm_trns_earned_crdts
+        sql: bc_trm_trns_earned_crdts
+        type: string
+
+    -   name: bc_trm_trns_att_crdts
+        sql: bc_trm_trns_att_crdts
+        type: string
+
+    -   name: dist_trm_trns_qlty_points
+        sql: dist_trm_trns_qlty_points
+        type: string
+
+    -   name: dist_trm_trns_earned_crdts
+        sql: dist_trm_trns_earned_crdts
+        type: string
+
+    -   name: dist_trm_trns_att_crdts
+        sql: dist_trm_trns_att_crdts
+        type: string
+
+    -   name: pc_trm_degr_appl_qulty_points
+        sql: pc_trm_degr_appl_qulty_points
+        type: string
+
+    -   name: pc_trm_degr_appl_earned_crdts
+        sql: pc_trm_degr_appl_earned_crdts
+        type: string
+
+    -   name: pc_trm_degr_appl_att_crdts
+        sql: pc_trm_degr_appl_att_crdts
+        type: string
+
+    -   name: cc_trm_degr_appl_qulty_points
+        sql: cc_trm_degr_appl_qulty_points
+        type: string
+
+    -   name: cc_trm_degr_appl_earned_crdts
+        sql: cc_trm_degr_appl_earned_crdts
+        type: string
+
+    -   name: cc_trm_degr_appl_att_crdts
+        sql: cc_trm_degr_appl_att_crdts
+        type: string
+
+    -   name: bc_trm_degr_appl_qulty_points
+        sql: bc_trm_degr_appl_qulty_points
+        type: string
+
+    -   name: bc_trm_degr_appl_earned_crdts
+        sql: bc_trm_degr_appl_earned_crdts
+        type: string
+
+    -   name: bc_trm_degr_appl_att_crdts
+        sql: bc_trm_degr_appl_att_crdts
+        type: string
+
+    -   name: dist_trm_degr_appl_qulty_pts
+        sql: dist_trm_degr_appl_qulty_pts
+        type: string
+
+    -   name: dist_trm_degr_appl_ernd_crdts
+        sql: dist_trm_degr_appl_ernd_crdts
+        type: string
+
+    -   name: dist_trm_degr_appl_att_crdts
+        sql: dist_trm_degr_appl_att_crdts
+        type: string
+
+    -   name: pc_trm_qlty_points
+        sql: pc_trm_qlty_points
+        type: string
+
+    -   name: pc_trm_earned_crdts
+        sql: pc_trm_earned_crdts
+        type: string
+
+    -   name: pc_trm_att_crdts
+        sql: pc_trm_att_crdts
+        type: string
+
+    -   name: cc_trm_qlty_points
+        sql: cc_trm_qlty_points
+        type: string
+
+    -   name: cc_trm_earned_crdts
+        sql: cc_trm_earned_crdts
+        type: string
+
+    -   name: cc_trm_att_crdts
+        sql: cc_trm_att_crdts
+        type: string
+
+    -   name: bc_trm_qlty_points
+        sql: bc_trm_qlty_points
+        type: string
+
+    -   name: bc_trm_earned_crdts
+        sql: bc_trm_earned_crdts
+        type: string
+
+    -   name: bc_trm_att_crdts
+        sql: bc_trm_att_crdts
+        type: string
+
+    -   name: dist_trm_quality_points
+        sql: dist_trm_quality_points
+        type: string
+
+    -   name: dist_trm_earned_credits
+        sql: dist_trm_earned_credits
+        type: string
+
+    -   name: dist_trm_att_credits
+        sql: dist_trm_att_credits
+        type: string
+
+    -   name: person_uid
+        sql: person_uid
+        type: string
+        primary_key: true
+
+    -   name: academic_period
+        sql: academic_period
+        type: string
+
+    measures: []
+
+    pre_aggregations: []

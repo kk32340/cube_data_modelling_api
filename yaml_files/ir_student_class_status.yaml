@@ -1,0 +1,67 @@
+cubes:
+    name: ir_student_class_status
+
+    sql_table: odsmgr_cust.ir_student_class_status
+
+    joins: []
+
+    dimensions:
+    -   name: class_end_date
+        sql: class_end_date
+        type: time
+
+    -   name: class_start_date
+        sql: class_start_date
+        type: time
+
+    -   name: activity_date
+        sql: activity_date
+        type: time
+
+    -   name: registration
+        sql: registration
+        type: string
+
+    -   name: registration_code
+        sql: registration_code
+        type: string
+
+    -   name: enrollment_credits
+        sql: enrollment_credits
+        type: string
+
+    -   name: course_credits
+        sql: course_credits
+        type: string
+
+    -   name: can_enroll
+        sql: can_enroll
+        type: string
+
+    -   name: late_start
+        sql: late_start
+        type: string
+
+    -   name: course_number
+        sql: course_number
+        type: string
+
+    -   name: subject_code
+        sql: subject_code
+        type: string
+
+    -   name: crn
+        sql: crn
+        type: string
+
+    -   name: term_code
+        sql: term_code
+        type: string
+
+    -   name: student_pidm
+        sql: student_pidm
+        type: string
+
+    measures: []
+
+    pre_aggregations: []

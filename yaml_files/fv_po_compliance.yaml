@@ -1,0 +1,71 @@
+cubes:
+    name: fv_po_compliance
+
+    sql_table: odsmgr_cust.fv_po_compliance
+
+    joins: []
+
+    dimensions:
+    -   name: unit_price
+        sql: unit_price
+        type: string
+
+    -   name: qty
+        sql: qty
+        type: string
+
+    -   name: seq
+        sql: seq
+        type: string
+
+    -   name: prog
+        sql: prog
+        type: string
+
+    -   name: po#
+        sql: po#
+        type: string
+
+    -   name: orgn
+        sql: orgn
+        type: string
+
+    -   name: locn
+        sql: locn
+        type: string
+
+    -   name: fund
+        sql: fund
+        type: string
+
+    -   name: fsyr
+        sql: fsyr
+        type: string
+
+    -   name: da_item
+        sql: da_item
+        type: string
+
+    -   name: dt_item
+        sql: dt_item
+        type: string
+
+    -   name: comm_desc
+        sql: comm_desc
+        type: string
+
+    -   name: amt
+        sql: amt
+        type: string
+
+    -   name: actv
+        sql: actv
+        type: string
+
+    -   name: acct
+        sql: acct
+        type: string
+
+    measures: []
+
+    pre_aggregations: []

@@ -1,0 +1,131 @@
+cubes:
+    name: bc_english_place_b04_only
+
+    sql_table: odsmgr_cust.bc_english_place_b04_only
+
+    joins: []
+
+    dimensions:
+    -   name: id
+        sql: id
+        type: string
+
+    -   name: name
+        sql: name
+        type: string
+
+    -   name: place_level
+        sql: place_level
+        type: string
+
+    -   name: sortest_vpdi_code
+        sql: sortest_vpdi_code
+        type: string
+
+    -   name: sortest_version
+        sql: sortest_version
+        type: string
+
+    -   name: sortest_surrogate_id
+        sql: sortest_surrogate_id
+        type: string
+
+    -   name: sortest_camp_code
+        sql: sortest_camp_code
+        type: string
+
+    -   name: sortest_data_origin
+        sql: sortest_data_origin
+        type: string
+
+    -   name: sortest_user_id
+        sql: sortest_user_id
+        type: string
+
+    -   name: sortest_sat_essay_id
+        sql: sortest_sat_essay_id
+        type: string
+
+    -   name: sortest_equiv_ind
+        sql: sortest_equiv_ind
+        type: string
+
+    -   name: sortest_release_ind
+        sql: sortest_release_ind
+        type: string
+
+    -   name: sortest_instr_id
+        sql: sortest_instr_id
+        type: string
+
+    -   name: sortest_appl_no
+        sql: sortest_appl_no
+        type: string
+
+    -   name: sortest_term_code_entry
+        sql: sortest_term_code_entry
+        type: string
+
+    -   name: sortest_sat_orig_score
+        sql: sortest_sat_orig_score
+        type: string
+
+    -   name: sortest_rcrv_ind
+        sql: sortest_rcrv_ind
+        type: string
+
+    -   name: sortest_tepr_code
+        sql: sortest_tepr_code
+        type: string
+
+    -   name: sortest_teac_code
+        sql: sortest_teac_code
+        type: string
+
+    -   name: sortest_tefr_code
+        sql: sortest_tefr_code
+        type: string
+
+    -   name: sortest_tein_code
+        sql: sortest_tein_code
+        type: string
+
+    -   name: sortest_admr_code
+        sql: sortest_admr_code
+        type: string
+
+    -   name: sortest_activity_date
+        sql: sortest_activity_date
+        type: time
+
+    -   name: sortest_tadm_code
+        sql: sortest_tadm_code
+        type: string
+
+    -   name: sortest_tsrc_code
+        sql: sortest_tsrc_code
+        type: string
+
+    -   name: sortest_test_score
+        sql: sortest_test_score
+        type: string
+
+    -   name: sortest_test_date
+        sql: sortest_test_date
+        type: time
+
+    -   name: sortest_tesc_code
+        sql: sortest_tesc_code
+        type: string
+
+    -   name: sortest_pidm
+        sql: sortest_pidm
+        type: string
+
+    -   name: college
+        sql: college
+        type: string
+
+    measures: []
+
+    pre_aggregations: []

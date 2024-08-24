@@ -1,0 +1,47 @@
+cubes:
+    name: swbsprt
+
+    sql_table: saturn.swbsprt
+
+    joins:
+    -   name: admissions_application
+        sql: '{CUBE}.swbsprt_pidm = admissions_application.person_uid'
+        relationship: one_to_one
+
+    dimensions:
+    -   name: swbsprt_vpdi_code
+        sql: swbsprt_vpdi_code
+        type: string
+
+    -   name: swbsprt_data_origin
+        sql: swbsprt_data_origin
+        type: string
+
+    -   name: swbsprt_user_id
+        sql: swbsprt_user_id
+        type: string
+
+    -   name: swbsprt_version
+        sql: swbsprt_version
+        type: string
+
+    -   name: swbsprt_surrogate_id
+        sql: swbsprt_surrogate_id
+        type: string
+
+    -   name: swbsprt_activity_date
+        sql: swbsprt_activity_date
+        type: time
+
+    -   name: swbsprt_sprt_code
+        sql: swbsprt_sprt_code
+        type: string
+
+    -   name: swbsprt_pidm
+        sql: swbsprt_pidm
+        type: string
+        primary_key: true
+
+    measures: []
+
+    pre_aggregations: []

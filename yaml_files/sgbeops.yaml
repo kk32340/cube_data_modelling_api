@@ -1,0 +1,90 @@
+cubes:
+    name: sgbeops
+
+    sql_table: saturn.sgbeops
+
+    joins:
+    -   name: swrtmff_demo_current
+        sql: '{CUBE}.sgbeops_pidm = swrtmff_demo_current.person_uid AND {CUBE}.sgbeops_term_code_eff
+            = swrtmff_demo_current.academic_period'
+        relationship: one_to_many
+
+    -   name: ir_student_person
+        sql: '{CUBE}.sgbeops_pidm = ir_student_person.person_uid'
+        relationship: one_to_one
+
+    -   name: ir_student_term_shortcut1
+        sql: '{CUBE}.sgbeops_pidm = sgbeops.sgbeops_term_code_eff'
+        relationship: one_to_one
+
+    -   name: ir_student_term_gpa
+        sql: '{CUBE}.sgbeops_pidm = ir_student_term_gpa.person_uid AND {CUBE}.sgbeops_term_code_eff
+            = ir_student_term_gpa.academic_period'
+        relationship: one_to_one
+
+    dimensions:
+    -   name: sgbeops_vpdi_code
+        sql: sgbeops_vpdi_code
+        type: string
+
+    -   name: sgbeops_data_origin
+        sql: sgbeops_data_origin
+        type: string
+
+    -   name: sgbeops_user_id
+        sql: sgbeops_user_id
+        type: string
+
+    -   name: sgbeops_version
+        sql: sgbeops_version
+        type: string
+
+    -   name: sgbeops_surrogate_id
+        sql: sgbeops_surrogate_id
+        type: string
+
+    -   name: sgbeops_accept_term
+        sql: sgbeops_accept_term
+        type: string
+
+    -   name: sgbeops_wthd_code
+        sql: sgbeops_wthd_code
+        type: string
+
+    -   name: sgbeops_trac_code
+        sql: sgbeops_trac_code
+        type: string
+
+    -   name: sgbeops_term_code_eff
+        sql: sgbeops_term_code_eff
+        type: string
+        primary_key: true
+
+    -   name: sgbeops_sfae_code
+        sql: sgbeops_sfae_code
+        type: string
+
+    -   name: sgbeops_planned_credits
+        sql: sgbeops_planned_credits
+        type: string
+
+    -   name: sgbeops_pidm
+        sql: sgbeops_pidm
+        type: string
+        primary_key: true
+
+    -   name: sgbeops_eops_code
+        sql: sgbeops_eops_code
+        type: string
+
+    -   name: sgbeops_activity_date
+        sql: sgbeops_activity_date
+        type: time
+
+    -   name: sgbeops_accept_date
+        sql: sgbeops_accept_date
+        type: time
+
+    measures: []
+
+    pre_aggregations: []

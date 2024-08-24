@@ -1,0 +1,287 @@
+cubes:
+    name: grant_fund_slot
+
+    sql_table: odsmgr.grant_fund_slot
+
+    joins:
+    -   name: grant_view
+        sql: '{CUBE}.grant_id = grant_view.grant_id'
+        relationship: zero_to_many
+
+    dimensions:
+    -   name: short_title
+        sql: short_title
+        type: string
+
+    -   name: process_group
+        sql: process_group
+        type: string
+
+    -   name: long_title
+        sql: long_title
+        type: string
+
+    -   name: multi_source_desc
+        sql: multi_source_desc
+        type: string
+
+    -   name: multi_source
+        sql: multi_source
+        type: string
+
+    -   name: fund_termination_date9
+        sql: fund_termination_date9
+        type: time
+
+    -   name: fund_termination_date8
+        sql: fund_termination_date8
+        type: time
+
+    -   name: fund_termination_date7
+        sql: fund_termination_date7
+        type: time
+
+    -   name: fund_termination_date6
+        sql: fund_termination_date6
+        type: time
+
+    -   name: fund_termination_date5
+        sql: fund_termination_date5
+        type: time
+
+    -   name: fund_termination_date4
+        sql: fund_termination_date4
+        type: time
+
+    -   name: fund_termination_date3
+        sql: fund_termination_date3
+        type: time
+
+    -   name: fund_termination_date2
+        sql: fund_termination_date2
+        type: time
+
+    -   name: fund_termination_date10
+        sql: fund_termination_date10
+        type: time
+
+    -   name: fund_termination_date1
+        sql: fund_termination_date1
+        type: time
+
+    -   name: fund_status9
+        sql: fund_status9
+        type: string
+
+    -   name: fund_status8
+        sql: fund_status8
+        type: string
+
+    -   name: fund_status7
+        sql: fund_status7
+        type: string
+
+    -   name: fund_status6
+        sql: fund_status6
+        type: string
+
+    -   name: fund_status5
+        sql: fund_status5
+        type: string
+
+    -   name: fund_status4
+        sql: fund_status4
+        type: string
+
+    -   name: fund_status3
+        sql: fund_status3
+        type: string
+
+    -   name: fund_status2
+        sql: fund_status2
+        type: string
+
+    -   name: fund_status10
+        sql: fund_status10
+        type: string
+
+    -   name: fund_status1
+        sql: fund_status1
+        type: string
+
+    -   name: fund_desc9
+        sql: fund_desc9
+        type: string
+
+    -   name: fund_desc8
+        sql: fund_desc8
+        type: string
+
+    -   name: fund_desc7
+        sql: fund_desc7
+        type: string
+
+    -   name: fund_desc6
+        sql: fund_desc6
+        type: string
+
+    -   name: fund_desc5
+        sql: fund_desc5
+        type: string
+
+    -   name: fund_desc4
+        sql: fund_desc4
+        type: string
+
+    -   name: fund_desc3
+        sql: fund_desc3
+        type: string
+
+    -   name: fund_desc2
+        sql: fund_desc2
+        type: string
+
+    -   name: fund_desc10
+        sql: fund_desc10
+        type: string
+
+    -   name: fund_desc1
+        sql: fund_desc1
+        type: string
+
+    -   name: fund9
+        sql: fund9
+        type: string
+
+    -   name: fund8
+        sql: fund8
+        type: string
+
+    -   name: fund7
+        sql: fund7
+        type: string
+
+    -   name: fund6
+        sql: fund6
+        type: string
+
+    -   name: fund5
+        sql: fund5
+        type: string
+
+    -   name: fund4
+        sql: fund4
+        type: string
+
+    -   name: fund3
+        sql: fund3
+        type: string
+
+    -   name: fund2
+        sql: fund2
+        type: string
+
+    -   name: fund10
+        sql: fund10
+        type: string
+
+    -   name: fund1
+        sql: fund1
+        type: string
+
+    -   name: grant_id
+        sql: grant_id
+        type: string
+        primary_key: true
+
+    -   name: chart_of_accounts_desc6
+        sql: chart_of_accounts_desc6
+        type: string
+
+    -   name: chart_of_accounts_desc5
+        sql: chart_of_accounts_desc5
+        type: string
+
+    -   name: chart_of_accounts_desc4
+        sql: chart_of_accounts_desc4
+        type: string
+
+    -   name: chart_of_accounts_desc3
+        sql: chart_of_accounts_desc3
+        type: string
+
+    -   name: chart_of_accounts_desc2
+        sql: chart_of_accounts_desc2
+        type: string
+
+    -   name: chart_of_accounts_desc10
+        sql: chart_of_accounts_desc10
+        type: string
+
+    -   name: chart_of_accounts_desc1
+        sql: chart_of_accounts_desc1
+        type: string
+
+    -   name: chart_of_accounts9
+        sql: chart_of_accounts9
+        type: string
+
+    -   name: chart_of_accounts8
+        sql: chart_of_accounts8
+        type: string
+
+    -   name: chart_of_accounts7
+        sql: chart_of_accounts7
+        type: string
+
+    -   name: chart_of_accounts6
+        sql: chart_of_accounts6
+        type: string
+
+    -   name: chart_of_accounts5
+        sql: chart_of_accounts5
+        type: string
+
+    -   name: chart_of_accounts4
+        sql: chart_of_accounts4
+        type: string
+
+    -   name: chart_of_accounts3
+        sql: chart_of_accounts3
+        type: string
+
+    -   name: chart_of_accounts2
+        sql: chart_of_accounts2
+        type: string
+
+    -   name: chart_of_accounts10
+        sql: chart_of_accounts10
+        type: string
+
+    -   name: chart_of_accounts1
+        sql: chart_of_accounts1
+        type: string
+
+    -   name: chart_of_accounts_desc9
+        sql: chart_of_accounts_desc9
+        type: string
+
+    -   name: chart_of_accounts_desc8
+        sql: chart_of_accounts_desc8
+        type: string
+
+    -   name: chart_of_accounts_desc7
+        sql: chart_of_accounts_desc7
+        type: string
+
+    -   name: administrative_group
+        sql: administrative_group
+        type: string
+
+    -   name: activity_date
+        sql: activity_date
+        type: time
+
+    measures: []
+
+    pre_aggregations: []

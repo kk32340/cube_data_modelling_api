@@ -1,0 +1,409 @@
+cubes:
+    name: ir_student_term
+
+    sql_table: odsmgr_cust.ir_student_term
+
+    joins:
+    -   name: arccspar
+        sql: '{CUBE}.person_uid = arccspar.pidm'
+        relationship: one_to_many
+
+    -   name: arccspar_view
+        sql: '{CUBE}.person_uid = arccspar_view.pidm'
+        relationship: one_to_many
+
+    -   name: cust_perkins_table_rev
+        sql: '{CUBE}.academic_year_sfs = cust_perkins_table_rev.academic_year_sfs
+            AND {CUBE}.person_uid = cust_perkins_table_rev.person_uid'
+        relationship: one_to_many
+
+    -   name: ir_placement_initial
+        sql: '{CUBE}.person_uid = ir_placement_initial.person_uid'
+        relationship: one_to_many
+
+    -   name: ir_student_class_status
+        sql: '{CUBE}.person_uid = ir_student_class_status.student_pidm AND {CUBE}.academic_period
+            = ir_student_class_status.term_code'
+        relationship: one_to_many
+
+    -   name: ir_student_defaults
+        sql: '{CUBE}.person_uid = ir_student_defaults.pidm'
+        relationship: one_to_many
+
+    -   name: ir_student_mesa
+        sql: '{CUBE}.person_uid = ir_student_mesa.svbmesa_pidm AND {CUBE}.academic_period
+            = ir_student_mesa.svbmesa_term_code'
+        relationship: zero_to_many
+
+    -   name: lisa_mike_cohort_test
+        sql: '{CUBE}.academic_period = lisa_mike_cohort_test.academic_period AND {CUBE}.person_uid
+            = lisa_mike_cohort_test.person_uid'
+        relationship: zero_to_many
+
+    -   name: sport
+        sql: '{CUBE}.academic_period = sport.academic_period AND {CUBE}.person_uid
+            = sport.person_uid'
+        relationship: one_to_many
+
+    -   name: wssn_id
+        sql: '{CUBE}.person_uid = wssn_id.person_uid'
+        relationship: one_to_many
+
+    -   name: ir_student_term_gpa
+        sql: '{CUBE}.academic_period = ir_student_term_gpa.academic_period AND {CUBE}.person_uid
+            = ir_student_term_gpa.person_uid'
+        relationship: one_to_one
+
+    -   name: ir_student_term_gpa_ir_student_term
+        sql: '{CUBE}.academic_period = ir_student_term_gpa_ir_student_term.academic_period
+            AND {CUBE}.person_uid = ir_student_term_gpa_ir_student_term.person_uid'
+        relationship: one_to_many
+
+    -   name: person_sensitive_race_slot
+        sql: '{CUBE}.person_uid = person_sensitive_race_slot.person_uid'
+        relationship: one_to_one
+
+    -   name: svbsfys
+        sql: '{CUBE}.academic_period = svbsfys.svbsfys_eff_term AND {CUBE}.person_uid
+            = svbsfys.svbsfys_pidm'
+        relationship: one_to_many
+
+    dimensions:
+    -   name: matric_education_plan_detail
+        sql: matric_education_plan_detail
+        type: string
+
+    -   name: veteran_combined_ind
+        sql: veteran_combined_ind
+        type: string
+
+    -   name: acad_standing_eot
+        sql: acad_standing_eot
+        type: string
+
+    -   name: acad_standing_act_bot_desc
+        sql: acad_standing_act_bot_desc
+        type: string
+
+    -   name: acad_standing_act_bot
+        sql: acad_standing_act_bot
+        type: string
+
+    -   name: acad_standing_orig_bot_desc
+        sql: acad_standing_orig_bot_desc
+        type: string
+
+    -   name: acad_standing_orig_bot
+        sql: acad_standing_orig_bot
+        type: string
+
+    -   name: acad_standing_ovr_desc
+        sql: acad_standing_ovr_desc
+        type: string
+
+    -   name: acad_standing_ovr
+        sql: acad_standing_ovr
+        type: string
+
+    -   name: acad_standing_eot_desc
+        sql: acad_standing_eot_desc
+        type: string
+
+    -   name: foster_youth_ind
+        sql: foster_youth_ind
+        type: string
+
+    -   name: guardian_natl_grd_ind
+        sql: guardian_natl_grd_ind
+        type: string
+
+    -   name: student_natl_grd_ind
+        sql: student_natl_grd_ind
+        type: string
+
+    -   name: guardian_reserve_ind
+        sql: guardian_reserve_ind
+        type: string
+
+    -   name: student_reserve_ind
+        sql: student_reserve_ind
+        type: string
+
+    -   name: guardian_veteran_ind
+        sql: guardian_veteran_ind
+        type: string
+
+    -   name: student_veteran_ind
+        sql: student_veteran_ind
+        type: string
+
+    -   name: guardian_active_ind
+        sql: guardian_active_ind
+        type: string
+
+    -   name: student_active_ind
+        sql: student_active_ind
+        type: string
+
+    -   name: foster_youth_cde
+        sql: foster_youth_cde
+        type: string
+
+    -   name: dicd_code
+        sql: dicd_code
+        type: string
+
+    -   name: acad_standing_lt200
+        sql: acad_standing_lt200
+        type: string
+
+    -   name: gedl_guard_2_desc
+        sql: gedl_guard_2_desc
+        type: string
+
+    -   name: gedl_guard_2
+        sql: gedl_guard_2
+        type: string
+
+    -   name: gedl_guard_1
+        sql: gedl_guard_1
+        type: string
+
+    -   name: gedl_guard_1_desc
+        sql: gedl_guard_1_desc
+        type: string
+
+    -   name: first_generation_ind
+        sql: first_generation_ind
+        type: string
+
+    -   name: veteran_verified_ind
+        sql: veteran_verified_ind
+        type: string
+
+    -   name: receive_public_assistance
+        sql: receive_public_assistance
+        type: string
+
+    -   name: veteran_ind
+        sql: veteran_ind
+        type: string
+
+    -   name: student_type_desc
+        sql: student_type_desc
+        type: string
+
+    -   name: student_type
+        sql: student_type
+        type: string
+
+    -   name: residency_desc
+        sql: residency_desc
+        type: string
+
+    -   name: residency
+        sql: residency
+        type: string
+
+    -   name: single_parent_ind
+        sql: single_parent_ind
+        type: string
+
+    -   name: planned_employment_desc
+        sql: planned_employment_desc
+        type: string
+
+    -   name: planned_employment_code
+        sql: planned_employment_code
+        type: string
+
+    -   name: matric_orientation
+        sql: matric_orientation
+        type: string
+
+    -   name: matric_education_plan
+        sql: matric_education_plan
+        type: string
+
+    -   name: matric_counseling
+        sql: matric_counseling
+        type: string
+
+    -   name: matric_assesment
+        sql: matric_assesment
+        type: string
+
+    -   name: major_desc
+        sql: major_desc
+        type: string
+
+    -   name: major
+        sql: major
+        type: string
+
+    -   name: name
+        sql: name
+        type: string
+
+    -   name: id
+        sql: id
+        type: string
+
+    -   name: home_college
+        sql: home_college
+        type: string
+
+    -   name: fist_day_enrolled_pc
+        sql: fist_day_enrolled_pc
+        type: string
+
+    -   name: first_day_enrolled_cc
+        sql: first_day_enrolled_cc
+        type: string
+
+    -   name: first_day_enrolled_bc
+        sql: first_day_enrolled_bc
+        type: string
+
+    -   name: finaid_awarded
+        sql: finaid_awarded
+        type: string
+
+    -   name: displaced_homemaker_ind
+        sql: displaced_homemaker_ind
+        type: string
+
+    -   name: ever_enrolled_pc
+        sql: ever_enrolled_pc
+        type: string
+
+    -   name: ever_enrolled_cc
+        sql: ever_enrolled_cc
+        type: string
+
+    -   name: ever_enrolled_bc
+        sql: ever_enrolled_bc
+        type: string
+
+    -   name: eops_ind
+        sql: eops_ind
+        type: string
+
+    -   name: enrolled_on_census_pc
+        sql: enrolled_on_census_pc
+        type: string
+
+    -   name: enrolled_on_census_cc
+        sql: enrolled_on_census_cc
+        type: string
+
+    -   name: enrolled_on_census_bc
+        sql: enrolled_on_census_bc
+        type: string
+
+    -   name: current_enroll_pc
+        sql: current_enroll_pc
+        type: string
+
+    -   name: current_enroll_cc
+        sql: current_enroll_cc
+        type: string
+
+    -   name: current_enroll_bc
+        sql: current_enroll_bc
+        type: string
+
+    -   name: education_level_desc
+        sql: education_level_desc
+        type: string
+
+    -   name: education_level
+        sql: education_level
+        type: string
+
+    -   name: educational_goal_desc
+        sql: educational_goal_desc
+        type: string
+
+    -   name: educational_goal
+        sql: educational_goal
+        type: string
+
+    -   name: econ_disadv_ind
+        sql: econ_disadv_ind
+        type: string
+
+    -   name: dsps_ind
+        sql: dsps_ind
+        type: string
+
+    -   name: care_ind
+        sql: care_ind
+        type: string
+
+    -   name: calworks_ind
+        sql: calworks_ind
+        type: string
+
+    -   name: combined_acad_standing_desc
+        sql: combined_acad_standing_desc
+        type: string
+
+    -   name: combined_academic_standing
+        sql: combined_academic_standing
+        type: string
+
+    -   name: aid_year
+        sql: aid_year
+        type: string
+
+    -   name: applicant_ind
+        sql: applicant_ind
+        type: string
+
+    -   name: age_at_term
+        sql: age_at_term
+        type: string
+
+    -   name: academic_year_sfs
+        sql: academic_year_sfs
+        type: string
+        primary_key: true
+
+    -   name: academic_year_desc
+        sql: academic_year_desc
+        type: string
+
+    -   name: acad_standing_progress_desc
+        sql: acad_standing_progress_desc
+        type: string
+
+    -   name: acad_standing_progress
+        sql: acad_standing_progress
+        type: string
+
+    -   name: acad_standing_lt200_desc
+        sql: acad_standing_lt200_desc
+        type: string
+
+    -   name: academic_year
+        sql: academic_year
+        type: string
+
+    -   name: academic_period_desc
+        sql: academic_period_desc
+        type: string
+
+    -   name: academic_period
+        sql: academic_period
+        type: string
+        primary_key: true
+
+    -   name: person_uid
+        sql: person_uid
+        type: string
+        primary_key: true
+
+    measures: []
+
+    pre_aggregations: []

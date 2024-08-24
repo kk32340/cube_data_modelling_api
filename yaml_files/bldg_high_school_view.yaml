@@ -1,0 +1,27 @@
+cubes:
+    name: bldg_high_school_view
+
+    sql_table: odsmgr_cust.bldg_high_school_view
+
+    joins: []
+
+    dimensions:
+    -   name: stvbldg_vr_msg_no
+        sql: stvbldg_vr_msg_no
+        type: string
+
+    -   name: stvbldg_activity_date
+        sql: stvbldg_activity_date
+        type: time
+
+    -   name: stvbldg_desc
+        sql: stvbldg_desc
+        type: string
+
+    -   name: stvbldg_code
+        sql: stvbldg_code
+        type: string
+
+    measures: []
+
+    pre_aggregations: []

@@ -1,0 +1,339 @@
+cubes:
+    name: aebg_view
+
+    sql_table: odsmgr_cust.aebg_view
+
+    joins: []
+
+    dimensions:
+    -   name: ged
+        sql: ged
+        type: string
+
+    -   name: high school diploma or alt
+        sql: high school diploma or alt
+        type: string
+
+    -   name: grades 9-12
+        sql: grades 9-12
+        type: string
+
+    -   name: total_spappren_hours_comp
+        sql: total_spappren_hours_comp
+        type: string
+
+    -   name: total_spappren_hours_enr
+        sql: total_spappren_hours_enr
+        type: string
+
+    -   name: total_spadults_hours_comp
+        sql: total_spadults_hours_comp
+        type: string
+
+    -   name: contact_hours
+        sql: contact_hours
+        type: string
+
+    -   name: total_spappren_courses_comp
+        sql: total_spappren_courses_comp
+        type: string
+
+    -   name: total_spappren_courses_enr
+        sql: total_spappren_courses_enr
+        type: string
+
+    -   name: total_spadults_courses_comp
+        sql: total_spadults_courses_comp
+        type: string
+
+    -   name: total_spadults_courses_enr
+        sql: total_spadults_courses_enr
+        type: string
+
+    -   name: total_spawd_courses_comp
+        sql: total_spawd_courses_comp
+        type: string
+
+    -   name: total_spawd_courses_enr
+        sql: total_spawd_courses_enr
+        type: string
+
+    -   name: total_spwf_courses_comp
+        sql: total_spwf_courses_comp
+        type: string
+
+    -   name: total_spwf_courses_enr
+        sql: total_spwf_courses_enr
+        type: string
+
+    -   name: total_cte_courses_comp
+        sql: total_cte_courses_comp
+        type: string
+
+    -   name: total_cte_courses_enr
+        sql: total_cte_courses_enr
+        type: string
+
+    -   name: total_vesl_courses_comp
+        sql: total_vesl_courses_comp
+        type: string
+
+    -   name: total_vesl_courses_enr
+        sql: total_vesl_courses_enr
+        type: string
+
+    -   name: total_elcivics_courses_comp
+        sql: total_elcivics_courses_comp
+        type: string
+
+    -   name: total_elcivics_courses_enr
+        sql: total_elcivics_courses_enr
+        type: string
+
+    -   name: total_esl_courses_comp
+        sql: total_esl_courses_comp
+        type: string
+
+    -   name: total_esl_courses_enr
+        sql: total_esl_courses_enr
+        type: string
+
+    -   name: total_abease_courses_comp
+        sql: total_abease_courses_comp
+        type: string
+
+    -   name: total_abease_courses_enr
+        sql: total_abease_courses_enr
+        type: string
+
+    -   name: total_ase_courses_comp
+        sql: total_ase_courses_comp
+        type: string
+
+    -   name: total_ase_courses_enr
+        sql: total_ase_courses_enr
+        type: string
+
+    -   name: total_abe_courses_comp
+        sql: total_abe_courses_comp
+        type: string
+
+    -   name: total_abe_courses_enr
+        sql: total_abe_courses_enr
+        type: string
+
+    -   name: employment status
+        sql: employment status
+        type: string
+
+    -   name: unspecified
+        sql: unspecified
+        type: string
+
+    -   name: college or professional degree
+        sql: college or professional degree
+        type: string
+
+    -   name: some college
+        sql: some college
+        type: string
+
+    -   name: not a high school grad
+        sql: not a high school grad
+        type: string
+
+    -   name: grades 6-8
+        sql: grades 6-8
+        type: string
+
+    -   name: grades 1-5
+        sql: grades 1-5
+        type: string
+
+    -   name: no schooling
+        sql: no schooling
+        type: string
+
+    -   name: 65 and over
+        sql: 65 and over
+        type: string
+
+    -   name: 55-64
+        sql: 55-64
+        type: string
+
+    -   name: 45-54
+        sql: 45-54
+        type: string
+
+    -   name: 35-44
+        sql: 35-44
+        type: string
+
+    -   name: 22-34
+        sql: 22-34
+        type: string
+
+    -   name: 18-21
+        sql: 18-21
+        type: string
+
+    -   name: age
+        sql: age
+        type: string
+
+    -   name: gender
+        sql: gender
+        type: string
+
+    -   name: race
+        sql: race
+        type: string
+
+    -   name: name
+        sql: name
+        type: string
+
+    -   name: id
+        sql: id
+        type: string
+
+    -   name: person_uid
+        sql: person_uid
+        type: string
+
+    -   name: college
+        sql: college
+        type: string
+
+    -   name: total_spadults_hours_enr
+        sql: total_spadults_hours_enr
+        type: string
+
+    -   name: total_spawd_hours_comp
+        sql: total_spawd_hours_comp
+        type: string
+
+    -   name: total_spawd_hours_enr
+        sql: total_spawd_hours_enr
+        type: string
+
+    -   name: total_spwf_hours_comp
+        sql: total_spwf_hours_comp
+        type: string
+
+    -   name: total_spwf_hours_enr
+        sql: total_spwf_hours_enr
+        type: string
+
+    -   name: total_cte_hours_comp
+        sql: total_cte_hours_comp
+        type: string
+
+    -   name: total_cte_hours_enr
+        sql: total_cte_hours_enr
+        type: string
+
+    -   name: total_vesl_hours_comp
+        sql: total_vesl_hours_comp
+        type: string
+
+    -   name: total_vesl_hours_enr
+        sql: total_vesl_hours_enr
+        type: string
+
+    -   name: total_elcivics_hours_comp
+        sql: total_elcivics_hours_comp
+        type: string
+
+    -   name: total_elcivics_hours_enr
+        sql: total_elcivics_hours_enr
+        type: string
+
+    -   name: total_esl_hours_comp
+        sql: total_esl_hours_comp
+        type: string
+
+    -   name: total_esl_hours_enr
+        sql: total_esl_hours_enr
+        type: string
+
+    -   name: total_abease_hours_comp
+        sql: total_abease_hours_comp
+        type: string
+
+    -   name: total_abease_hours_enr
+        sql: total_abease_hours_enr
+        type: string
+
+    -   name: total_ase_hours_comp
+        sql: total_ase_hours_comp
+        type: string
+
+    -   name: total_ase_hours_enr
+        sql: total_ase_hours_enr
+        type: string
+
+    -   name: total_abe_hours_comp
+        sql: total_abe_hours_comp
+        type: string
+
+    -   name: total_abe_hours_enr
+        sql: total_abe_hours_enr
+        type: string
+
+    -   name: beginterm
+        sql: beginterm
+        type: string
+
+    -   name: exhausting tanf within 2 years
+        sql: exhausting tanf within 2 years
+        type: string
+
+    -   name: long term unemployed
+        sql: long term unemployed
+        type: string
+
+    -   name: veteran
+        sql: veteran
+        type: string
+
+    -   name: adults in foster care
+        sql: adults in foster care
+        type: string
+
+    -   name: migrant or seasonal worker
+        sql: migrant or seasonal worker
+        type: string
+
+    -   name: low-income
+        sql: low-income
+        type: string
+
+    -   name: homeless
+        sql: homeless
+        type: string
+
+    -   name: ex-offender
+        sql: ex-offender
+        type: string
+
+    -   name: english learner
+        sql: english learner
+        type: string
+
+    -   name: displaced homemaker
+        sql: displaced homemaker
+        type: string
+
+    -   name: persons with disabilities
+        sql: persons with disabilities
+        type: string
+
+    -   name: single parent
+        sql: single parent
+        type: string
+
+    measures: []
+
+    pre_aggregations: []

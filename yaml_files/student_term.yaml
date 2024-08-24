@@ -1,0 +1,187 @@
+cubes:
+    name: student_term
+
+    sql_table: odsmgr_cust.student_term
+
+    joins: []
+
+    dimensions:
+    -   name: veteran_category_desc
+        sql: veteran_category_desc
+        type: string
+
+    -   name: veteran_category
+        sql: veteran_category
+        type: string
+
+    -   name: residency_desc
+        sql: residency_desc
+        type: string
+
+    -   name: residency
+        sql: residency
+        type: string
+
+    -   name: single_parent_ind
+        sql: single_parent_ind
+        type: string
+
+    -   name: matric_orientation
+        sql: matric_orientation
+        type: string
+
+    -   name: matric_education_plan
+        sql: matric_education_plan
+        type: string
+
+    -   name: matric_counseling
+        sql: matric_counseling
+        type: string
+
+    -   name: matric_assesment
+        sql: matric_assesment
+        type: string
+
+    -   name: major_desc
+        sql: major_desc
+        type: string
+
+    -   name: major
+        sql: major
+        type: string
+
+    -   name: name
+        sql: name
+        type: string
+
+    -   name: id
+        sql: id
+        type: string
+
+    -   name: fist_day_enrolled_pc
+        sql: fist_day_enrolled_pc
+        type: string
+
+    -   name: first_day_enrolled_cc
+        sql: first_day_enrolled_cc
+        type: string
+
+    -   name: first_day_enrolled_bc
+        sql: first_day_enrolled_bc
+        type: string
+
+    -   name: fin_aid_applicant_ind
+        sql: fin_aid_applicant_ind
+        type: string
+
+    -   name: displaced_homemaker_ind
+        sql: displaced_homemaker_ind
+        type: string
+
+    -   name: ever_enrolled_pc
+        sql: ever_enrolled_pc
+        type: string
+
+    -   name: ever_enrolled_cc
+        sql: ever_enrolled_cc
+        type: string
+
+    -   name: ever_enrolled_bc
+        sql: ever_enrolled_bc
+        type: string
+
+    -   name: eops_ind
+        sql: eops_ind
+        type: string
+
+    -   name: enrolled_on_census_pc
+        sql: enrolled_on_census_pc
+        type: string
+
+    -   name: enrolled_on_census_cc
+        sql: enrolled_on_census_cc
+        type: string
+
+    -   name: enrolled_on_census_bc
+        sql: enrolled_on_census_bc
+        type: string
+
+    -   name: current_time_status_desc
+        sql: current_time_status_desc
+        type: string
+
+    -   name: current_time_status
+        sql: current_time_status
+        type: string
+
+    -   name: education_level_desc
+        sql: education_level_desc
+        type: string
+
+    -   name: education_level
+        sql: education_level
+        type: string
+
+    -   name: educational_goal_desc
+        sql: educational_goal_desc
+        type: string
+
+    -   name: educational_goal
+        sql: educational_goal
+        type: string
+
+    -   name: dsps_ind
+        sql: dsps_ind
+        type: string
+
+    -   name: care_ind
+        sql: care_ind
+        type: string
+
+    -   name: calworks_ind
+        sql: calworks_ind
+        type: string
+
+    -   name: combined_acad_standing_desc
+        sql: combined_acad_standing_desc
+        type: string
+
+    -   name: combined_academic_standing
+        sql: combined_academic_standing
+        type: string
+
+    -   name: applicant_ind
+        sql: applicant_ind
+        type: string
+
+    -   name: age_at_term
+        sql: age_at_term
+        type: string
+
+    -   name: admit_ind
+        sql: admit_ind
+        type: string
+
+    -   name: academic_year_desc
+        sql: academic_year_desc
+        type: string
+
+    -   name: academic_year
+        sql: academic_year
+        type: string
+
+    -   name: academic_period_desc
+        sql: academic_period_desc
+        type: string
+
+    -   name: person_uid
+        sql: person_uid
+        type: string
+
+    -   name: academic_period
+        sql: academic_period
+        type: string
+
+    measures: []
+
+    pre_aggregations: []

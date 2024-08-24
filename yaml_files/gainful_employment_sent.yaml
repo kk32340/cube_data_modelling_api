@@ -1,0 +1,139 @@
+cubes:
+    name: gainful_employment_sent
+
+    sql_table: edi_user.gainful_employment_sent
+
+    joins:
+    -   name: gainful_employment
+        sql: '{CUBE}.pidm = gainful_employment.pidm AND {CUBE}.award_year = gainful_employment.award_year'
+        relationship: one_to_one
+
+    -   name: ir_student_person
+        sql: '{CUBE}.pidm = ir_student_person.person_uid'
+        relationship: one_to_one
+
+    dimensions:
+    -   name: cip_code_fed
+        sql: cip_code_fed
+        type: string
+
+    -   name: inst_name_othr_prog
+        sql: inst_name_othr_prog
+        type: string
+
+    -   name: opeid_othr_prog_inst
+        sql: opeid_othr_prog_inst
+        type: string
+
+    -   name: ge_prog_ind_othr_prog
+        sql: ge_prog_ind_othr_prog
+        type: string
+
+    -   name: prog_name_othr_prog
+        sql: prog_name_othr_prog
+        type: string
+
+    -   name: cred_lvl_othr_prog
+        sql: cred_lvl_othr_prog
+        type: string
+
+    -   name: cip_othr_program
+        sql: cip_othr_program
+        type: string
+
+    -   name: enr_othr_program
+        sql: enr_othr_program
+        type: string
+
+    -   name: tuition_fees_amt
+        sql: tuition_fees_amt
+        type: string
+
+    -   name: inst_finance_amt
+        sql: inst_finance_amt
+        type: string
+
+    -   name: private_loans_amt
+        sql: private_loans_amt
+        type: string
+
+    -   name: prog_atten_end_date
+        sql: prog_atten_end_date
+        type: time
+
+    -   name: program_atten_status
+        sql: program_atten_status
+        type: string
+
+    -   name: prog_begin_date_this_year
+        sql: prog_begin_date_this_year
+        type: time
+
+    -   name: program_atten_begin_date
+        sql: program_atten_begin_date
+        type: time
+
+    -   name: ffel_direct_loan
+        sql: ffel_direct_loan
+        type: string
+
+    -   name: med_dental_intern_res
+        sql: med_dental_intern_res
+        type: string
+
+    -   name: credential_level
+        sql: credential_level
+        type: string
+
+    -   name: cip_code
+        sql: cip_code
+        type: string
+
+    -   name: program_name
+        sql: program_name
+        type: string
+
+    -   name: ge_program_ind
+        sql: ge_program_ind
+        type: string
+
+    -   name: institution_name
+        sql: institution_name
+        type: string
+
+    -   name: institution_code
+        sql: institution_code
+        type: string
+
+    -   name: date_of_birth
+        sql: date_of_birth
+        type: time
+
+    -   name: last_name
+        sql: last_name
+        type: string
+
+    -   name: middle_init
+        sql: middle_init
+        type: string
+
+    -   name: first_name
+        sql: first_name
+        type: string
+
+    -   name: ssn
+        sql: ssn
+        type: string
+
+    -   name: record_type
+        sql: record_type
+        type: string
+
+    -   name: award_year
+        sql: award_year
+        type: string
+        primary_key: true
+
+    measures: []
+
+    pre_aggregations: []

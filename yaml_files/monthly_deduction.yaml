@@ -1,0 +1,99 @@
+cubes:
+    name: monthly_deduction
+
+    sql_table: odsmgr.monthly_deduction
+
+    joins: []
+
+    dimensions:
+    -   name: person_uid
+        sql: person_uid
+        type: string
+
+    -   name: process_group
+        sql: process_group
+        type: string
+
+    -   name: payroll_deduction_year
+        sql: payroll_deduction_year
+        type: string
+
+    -   name: payroll_deduction_month
+        sql: payroll_deduction_month
+        type: string
+
+    -   name: name
+        sql: name
+        type: string
+
+    -   name: multi_source_desc
+        sql: multi_source_desc
+        type: string
+
+    -   name: multi_source
+        sql: multi_source
+        type: string
+
+    -   name: id
+        sql: id
+        type: string
+
+    -   name: gross_compensation_fytd
+        sql: gross_compensation_fytd
+        type: string
+
+    -   name: employer_contribution_fytd
+        sql: employer_contribution_fytd
+        type: string
+
+    -   name: employer_contribution_amount
+        sql: employer_contribution_amount
+        type: string
+
+    -   name: employer
+        sql: employer
+        type: string
+
+    -   name: employee_contribution_fytd
+        sql: employee_contribution_fytd
+        type: string
+
+    -   name: employee_contribution_amount
+        sql: employee_contribution_amount
+        type: string
+
+    -   name: coverage_option_desc
+        sql: coverage_option_desc
+        type: string
+
+    -   name: coverage_option
+        sql: coverage_option
+        type: string
+
+    -   name: carrier_short_desc
+        sql: carrier_short_desc
+        type: string
+
+    -   name: carrier_long_desc
+        sql: carrier_long_desc
+        type: string
+
+    -   name: carrier
+        sql: carrier
+        type: string
+
+    -   name: benefit_group
+        sql: benefit_group
+        type: string
+
+    -   name: applicable_gross_amount
+        sql: applicable_gross_amount
+        type: string
+
+    -   name: administrative_group
+        sql: administrative_group
+        type: string
+
+    measures: []
+
+    pre_aggregations: []

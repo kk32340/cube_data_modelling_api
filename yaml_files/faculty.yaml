@@ -1,0 +1,243 @@
+cubes:
+    name: faculty
+
+    sql_table: odsmgr.faculty
+
+    joins:
+    -   name: ir_session_shortcut
+        sql: '{CUBE}.academic_period = faculty.person_uid'
+        relationship: one_to_one
+
+    dimensions:
+    -   name: years_experience
+        sql: years_experience
+        type: string
+
+    -   name: workload_desc
+        sql: workload_desc
+        type: string
+
+    -   name: workload
+        sql: workload
+        type: string
+
+    -   name: tenure_review_date
+        sql: tenure_review_date
+        type: time
+
+    -   name: tenure_desc
+        sql: tenure_desc
+        type: string
+
+    -   name: tenure_date
+        sql: tenure_date
+        type: time
+
+    -   name: tenure
+        sql: tenure
+        type: string
+
+    -   name: scheduled_this_period_ind
+        sql: scheduled_this_period_ind
+        type: string
+
+    -   name: state_province_of_birth
+        sql: state_province_of_birth
+        type: string
+
+    -   name: person_uid
+        sql: person_uid
+        type: string
+
+    -   name: process_group
+        sql: process_group
+        type: string
+
+    -   name: primary_activity_desc
+        sql: primary_activity_desc
+        type: string
+
+    -   name: primary_activity
+        sql: primary_activity
+        type: string
+
+    -   name: position_title
+        sql: position_title
+        type: string
+
+    -   name: position
+        sql: position
+        type: string
+
+    -   name: noninst_assignment_count
+        sql: noninst_assignment_count
+        type: string
+
+    -   name: next_sabbatical_date
+        sql: next_sabbatical_date
+        type: time
+
+    -   name: name
+        sql: name
+        type: string
+
+    -   name: multi_source_desc
+        sql: multi_source_desc
+        type: string
+
+    -   name: last_sabbatical_date
+        sql: last_sabbatical_date
+        type: time
+
+    -   name: multi_source
+        sql: multi_source
+        type: string
+
+    -   name: job_suffix
+        sql: job_suffix
+        type: string
+
+    -   name: inst_assignment_count
+        sql: inst_assignment_count
+        type: string
+
+    -   name: id
+        sql: id
+        type: string
+
+    -   name: home_percent_responsibility
+        sql: home_percent_responsibility
+        type: string
+
+    -   name: home_department_desc
+        sql: home_department_desc
+        type: string
+
+    -   name: home_department
+        sql: home_department
+        type: string
+
+    -   name: home_college_desc
+        sql: home_college_desc
+        type: string
+
+    -   name: home_college
+        sql: home_college
+        type: string
+
+    -   name: home_admin_coll_dept_ind
+        sql: home_admin_coll_dept_ind
+        type: string
+
+    -   name: faculty_member_status_desc
+        sql: faculty_member_status_desc
+        type: string
+
+    -   name: faculty_member_status_date
+        sql: faculty_member_status_date
+        type: time
+
+    -   name: faculty_member_status
+        sql: faculty_member_status
+        type: string
+
+    -   name: faculty_member_staff_type_desc
+        sql: faculty_member_staff_type_desc
+        type: string
+
+    -   name: faculty_member_staff_type
+        sql: faculty_member_staff_type
+        type: string
+
+    -   name: faculty_member_category_desc
+        sql: faculty_member_category_desc
+        type: string
+
+    -   name: faculty_member_category
+        sql: faculty_member_category
+        type: string
+
+    -   name: default_contract_type_desc
+        sql: default_contract_type_desc
+        type: string
+
+    -   name: default_contract_type
+        sql: default_contract_type
+        type: string
+
+    -   name: eligible_to_be_scheduled_ind
+        sql: eligible_to_be_scheduled_ind
+        type: string
+
+    -   name: eligible_to_advise_ind
+        sql: eligible_to_advise_ind
+        type: string
+
+    -   name: contract_rule_desc
+        sql: contract_rule_desc
+        type: string
+
+    -   name: contract_rule_count
+        sql: contract_rule_count
+        type: string
+
+    -   name: contract_rule
+        sql: contract_rule
+        type: string
+
+    -   name: college_dept_assign_count
+        sql: college_dept_assign_count
+        type: string
+
+    -   name: attribute_count
+        sql: attribute_count
+        type: string
+
+    -   name: appointment_date
+        sql: appointment_date
+        type: time
+
+    -   name: advising_this_period_ind
+        sql: advising_this_period_ind
+        type: string
+
+    -   name: administrative_group
+        sql: administrative_group
+        type: string
+
+    -   name: academic_year_desc
+        sql: academic_year_desc
+        type: string
+
+    -   name: acad_per_eff_coll_dept_desc
+        sql: acad_per_eff_coll_dept_desc
+        type: string
+
+    -   name: acad_per_eff_coll_dept
+        sql: acad_per_eff_coll_dept
+        type: string
+
+    -   name: academic_year
+        sql: academic_year
+        type: string
+
+    -   name: academic_title
+        sql: academic_title
+        type: string
+
+    -   name: academic_period
+        sql: academic_period
+        type: string
+        primary_key: true
+
+    -   name: aaup_member_ind
+        sql: aaup_member_ind
+        type: string
+
+    -   name: academic_period_desc
+        sql: academic_period_desc
+        type: string
+
+    measures: []
+
+    pre_aggregations: []

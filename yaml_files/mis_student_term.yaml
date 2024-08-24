@@ -1,0 +1,167 @@
+cubes:
+    name: mis_student_term
+
+    sql_table: odsmgr_cust.mis_student_term
+
+    joins:
+    -   name: ir_student_term
+        sql: '{CUBE}.term_id = ir_student_term.academic_period'
+        relationship: one_to_many
+
+    dimensions:
+    -   name: u_earned_trn
+        sql: u_earned_trn
+        type: string
+
+    -   name: u_earned_loc
+        sql: u_earned_loc
+        type: string
+
+    -   name: u_attmpt_trn
+        sql: u_attmpt_trn
+        type: string
+
+    -   name: u_attmpt_loc
+        sql: u_attmpt_loc
+        type: string
+
+    -   name: transfer_ctr
+        sql: transfer_ctr
+        type: string
+
+    -   name: zip_detail
+        sql: zip_detail
+        type: string
+
+    -   name: zip
+        sql: zip
+        type: string
+
+    -   name: residency
+        sql: residency
+        type: string
+
+    -   name: person_uid
+        sql: person_uid
+        type: string
+
+    -   name: name_last
+        sql: name_last
+        type: string
+
+    -   name: name_first
+        sql: name_first
+        type: string
+
+    -   name: jtpa_status
+        sql: jtpa_status
+        type: string
+
+    -   name: high_school
+        sql: high_school
+        type: string
+
+    -   name: headcount_status
+        sql: headcount_status
+        type: string
+
+    -   name: g_points_trn
+        sql: g_points_trn
+        type: string
+
+    -   name: g_points_loc
+        sql: g_points_loc
+        type: string
+
+    -   name: goal
+        sql: goal
+        type: string
+
+    -   name: gender
+        sql: gender
+        type: string
+
+    -   name: gain_status
+        sql: gain_status
+        type: string
+
+    -   name: ethnicity
+        sql: ethnicity
+        type: string
+
+    -   name: enrollment
+        sql: enrollment
+        type: string
+
+    -   name: deg_appl_units_earned
+        sql: deg_appl_units_earned
+        type: string
+
+    -   name: day_evening_code2
+        sql: day_evening_code2
+        type: string
+
+    -   name: day_evening_code
+        sql: day_evening_code
+        type: string
+
+    -   name: cumulative_gpa_tot
+        sql: cumulative_gpa_tot
+        type: string
+
+    -   name: cumulative_gpa_loc
+        sql: cumulative_gpa_loc
+        type: string
+
+    -   name: education
+        sql: education
+        type: string
+
+    -   name: census_crload
+        sql: census_crload
+        type: string
+
+    -   name: calworks_status
+        sql: calworks_status
+        type: string
+
+    -   name: college
+        sql: college
+        type: string
+
+    -   name: citizenship
+        sql: citizenship
+        type: string
+
+    -   name: apprentice
+        sql: apprentice
+        type: string
+
+    -   name: age_at_term
+        sql: age_at_term
+        type: string
+
+    -   name: aca_standing
+        sql: aca_standing
+        type: string
+
+    -   name: academic_level
+        sql: academic_level
+        type: string
+
+    -   name: term_id
+        sql: term_id
+        type: string
+        primary_key: true
+
+    -   name: cccco_student_id
+        sql: cccco_student_id
+        type: string
+
+    -   name: college_id
+        sql: college_id
+        type: string
+
+    measures: []
+
+    pre_aggregations: []

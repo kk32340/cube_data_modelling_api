@@ -1,0 +1,187 @@
+cubes:
+    name: svrcald
+
+    sql_table: odsmgr_cust.svrcald
+
+    joins: []
+
+    dimensions:
+    -   name: in_service_ind
+        sql: in_service_ind
+        type: string
+
+    -   name: basic_skill_cde
+        sql: basic_skill_cde
+        type: string
+
+    -   name: wexp_ind
+        sql: wexp_ind
+        type: string
+
+    -   name: dsch_ind
+        sql: dsch_ind
+        type: string
+
+    -   name: wsch_ind
+        sql: wsch_ind
+        type: string
+
+    -   name: actual_ind
+        sql: actual_ind
+        type: string
+
+    -   name: attendedhours
+        sql: attendedhours
+        type: string
+
+    -   name: instate
+        sql: instate
+        type: string
+
+    -   name: reg_include
+        sql: reg_include
+        type: string
+
+    -   name: residency_status
+        sql: residency_status
+        type: string
+
+    -   name: student_type_desc
+        sql: student_type_desc
+        type: string
+
+    -   name: student_type
+        sql: student_type
+        type: string
+
+    -   name: census_code
+        sql: census_code
+        type: string
+
+    -   name: student_name
+        sql: student_name
+        type: string
+
+    -   name: person_id
+        sql: person_id
+        type: string
+
+    -   name: title
+        sql: title
+        type: string
+
+    -   name: enhc_fund
+        sql: enhc_fund
+        type: string
+
+    -   name: phys_ed
+        sql: phys_ed
+        type: string
+
+    -   name: inmate
+        sql: inmate
+        type: string
+
+    -   name: credit_ind
+        sql: credit_ind
+        type: string
+
+    -   name: extended_day_ind
+        sql: extended_day_ind
+        type: string
+
+    -   name: ftes
+        sql: ftes
+        type: string
+
+    -   name: total_ch
+        sql: total_ch
+        type: string
+
+    -   name: standard_ch
+        sql: standard_ch
+        type: string
+
+    -   name: term_length_mult__meet_no
+        sql: term_length_mult__meet_no
+        type: string
+
+    -   name: attend_code
+        sql: attend_code
+        type: string
+
+    -   name: end_date
+        sql: end_date
+        type: time
+
+    -   name: census_2_date
+        sql: census_2_date
+        type: time
+
+    -   name: census_1_date
+        sql: census_1_date
+        type: time
+
+    -   name: start_date
+        sql: start_date
+        type: time
+
+    -   name: instructional_method
+        sql: instructional_method
+        type: string
+
+    -   name: account_code
+        sql: account_code
+        type: string
+
+    -   name: course_number
+        sql: course_number
+        type: string
+
+    -   name: department_desc
+        sql: department_desc
+        type: string
+
+    -   name: department
+        sql: department
+        type: string
+
+    -   name: subject_desc
+        sql: subject_desc
+        type: string
+
+    -   name: subject
+        sql: subject
+        type: string
+
+    -   name: crn
+        sql: crn
+        type: string
+
+    -   name: academic_period
+        sql: academic_period
+        type: string
+
+    -   name: period
+        sql: period
+        type: string
+
+    -   name: campus
+        sql: campus
+        type: string
+
+    -   name: district_college_id
+        sql: district_college_id
+        type: string
+
+    -   name: academic_year
+        sql: academic_year
+        type: string
+
+    -   name: occs_code
+        sql: occs_code
+        type: string
+
+    measures: []
+
+    pre_aggregations: []

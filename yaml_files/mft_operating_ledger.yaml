@@ -1,0 +1,256 @@
+cubes:
+    name: mft_operating_ledger
+
+    sql_table: odsmgr.mft_operating_ledger
+
+    joins:
+    -   name: organization_hierarchy
+        sql: '{CUBE}.organization_code = organization_hierarchy.organization_code'
+        relationship: one_to_one
+
+    -   name: ir_student_dept_tops
+        sql: '{CUBE}.program = ir_student_dept_tops.top_code'
+        relationship: one_to_one
+
+    -   name: top_codes_current
+        sql: '{CUBE}.program = top_codes_current.top_code'
+        relationship: one_to_one
+
+    dimensions:
+    -   name: sum_year_to_date_activity
+        sql: sum_year_to_date_activity
+        type: string
+
+    -   name: sum_temporary_budget
+        sql: sum_temporary_budget
+        type: string
+
+    -   name: sum_remaining_balance
+        sql: sum_remaining_balance
+        type: string
+
+    -   name: sum_grant_activity
+        sql: sum_grant_activity
+        type: string
+
+    -   name: sum_last_year_actual
+        sql: sum_last_year_actual
+        type: string
+
+    -   name: sum_encumbrances
+        sql: sum_encumbrances
+        type: string
+
+    -   name: sum_budget_reservation
+        sql: sum_budget_reservation
+        type: string
+
+    -   name: sum_budget_adjustments
+        sql: sum_budget_adjustments
+        type: string
+
+    -   name: sum_adopted_budget
+        sql: sum_adopted_budget
+        type: string
+
+    -   name: sum_accumulated_budget
+        sql: sum_accumulated_budget
+        type: string
+
+    -   name: zone_value
+        sql: zone_value
+        type: string
+
+    -   name: quarter_4
+        sql: quarter_4
+        type: string
+
+    -   name: quarter_3
+        sql: quarter_3
+        type: string
+
+    -   name: quarter_2
+        sql: quarter_2
+        type: string
+
+    -   name: quarter_1
+        sql: quarter_1
+        type: string
+
+    -   name: program_desc
+        sql: program_desc
+        type: string
+
+    -   name: program
+        sql: program
+        type: string
+        primary_key: true
+
+    -   name: past_year_budget
+        sql: past_year_budget
+        type: string
+
+    -   name: program_status
+        sql: program_status
+        type: string
+
+    -   name: organization_desc
+        sql: organization_desc
+        type: string
+
+    -   name: organization_code
+        sql: organization_code
+        type: string
+        primary_key: true
+
+    -   name: location_status
+        sql: location_status
+        type: string
+
+    -   name: location_desc
+        sql: location_desc
+        type: string
+
+    -   name: location
+        sql: location
+        type: string
+
+    -   name: last_year_actual
+        sql: last_year_actual
+        type: string
+
+    -   name: last_dml_date
+        sql: last_dml_date
+        type: time
+
+    -   name: last_activity_dml
+        sql: last_activity_dml
+        type: string
+
+    -   name: last_activity_date
+        sql: last_activity_date
+        type: time
+
+    -   name: mif_value
+        sql: mif_value
+        type: string
+
+    -   name: organization_status
+        sql: organization_status
+        type: string
+
+    -   name: mif_desc
+        sql: mif_desc
+        type: string
+
+    -   name: fund_status
+        sql: fund_status
+        type: string
+
+    -   name: fund_desc
+        sql: fund_desc
+        type: string
+
+    -   name: fiscal_year
+        sql: fiscal_year
+        type: string
+
+    -   name: fiscal_period
+        sql: fiscal_period
+        type: string
+
+    -   name: future_year_budget
+        sql: future_year_budget
+        type: string
+
+    -   name: domain_value
+        sql: domain_value
+        type: string
+
+    -   name: curr_year_to_date_activity
+        sql: curr_year_to_date_activity
+        type: string
+
+    -   name: curr_temporary_budget
+        sql: curr_temporary_budget
+        type: string
+
+    -   name: curr_remaining_balance
+        sql: curr_remaining_balance
+        type: string
+
+    -   name: curr_grant_activity
+        sql: curr_grant_activity
+        type: string
+
+    -   name: curr_period_last_year_actual
+        sql: curr_period_last_year_actual
+        type: string
+
+    -   name: curr_encumbrances
+        sql: curr_encumbrances
+        type: string
+
+    -   name: curr_budget_reservation
+        sql: curr_budget_reservation
+        type: string
+
+    -   name: curr_budget_adjustments
+        sql: curr_budget_adjustments
+        type: string
+
+    -   name: curr_adopted_budget
+        sql: curr_adopted_budget
+        type: string
+
+    -   name: curr_accumulated_budget
+        sql: curr_accumulated_budget
+        type: string
+
+    -   name: chart_of_accounts_desc
+        sql: chart_of_accounts_desc
+        type: string
+
+    -   name: chart_of_accounts
+        sql: chart_of_accounts
+        type: string
+
+    -   name: commitment_type
+        sql: commitment_type
+        type: string
+
+    -   name: chart_of_accounts_status
+        sql: chart_of_accounts_status
+        type: string
+
+    -   name: activity
+        sql: activity
+        type: string
+
+    -   name: activity_status
+        sql: activity_status
+        type: string
+
+    -   name: activity_desc
+        sql: activity_desc
+        type: string
+
+    -   name: account_desc
+        sql: account_desc
+        type: string
+
+    -   name: account_status
+        sql: account_status
+        type: string
+
+    -   name: fund
+        sql: fund
+        type: string
+
+    -   name: account
+        sql: account
+        type: string
+
+    measures: []
+
+    pre_aggregations: []

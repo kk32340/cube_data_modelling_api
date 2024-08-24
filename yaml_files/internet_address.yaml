@@ -1,0 +1,79 @@
+cubes:
+    name: internet_address
+
+    sql_table: odsmgr.internet_address
+
+    joins: []
+
+    dimensions:
+    -   name: administrative_group
+        sql: administrative_group
+        type: string
+
+    -   name: process_group
+        sql: process_group
+        type: string
+
+    -   name: multi_source_desc
+        sql: multi_source_desc
+        type: string
+
+    -   name: multi_source
+        sql: multi_source
+        type: string
+
+    -   name: internet_address_source
+        sql: internet_address_source
+        type: string
+
+    -   name: internet_address_user_id
+        sql: internet_address_user_id
+        type: string
+
+    -   name: internet_address_activity_date
+        sql: internet_address_activity_date
+        type: time
+
+    -   name: internet_address_disp_web_ind
+        sql: internet_address_disp_web_ind
+        type: string
+
+    -   name: internet_address_comment
+        sql: internet_address_comment
+        type: string
+
+    -   name: internet_address_preferred_ind
+        sql: internet_address_preferred_ind
+        type: string
+
+    -   name: internet_address_status_desc
+        sql: internet_address_status_desc
+        type: string
+
+    -   name: internet_address_status
+        sql: internet_address_status
+        type: string
+
+    -   name: internet_address
+        sql: internet_address
+        type: string
+
+    -   name: url_ind
+        sql: url_ind
+        type: string
+
+    -   name: internet_address_type_desc
+        sql: internet_address_type_desc
+        type: string
+
+    -   name: internet_address_type
+        sql: internet_address_type
+        type: string
+
+    -   name: entity_uid
+        sql: entity_uid
+        type: string
+
+    measures: []
+
+    pre_aggregations: []

@@ -1,0 +1,147 @@
+cubes:
+    name: recon_320
+
+    sql_table: odsmgr_cust.recon_320
+
+    joins: []
+
+    dimensions:
+    -   name: weekly_hours_banner
+        sql: weekly_hours_banner
+        type: string
+
+    -   name: subject_desc
+        sql: subject_desc
+        type: string
+
+    -   name: subject
+        sql: subject
+        type: string
+
+    -   name: start_date_banner
+        sql: start_date_banner
+        type: time
+
+    -   name: reportying_year_atnd
+        sql: reportying_year_atnd
+        type: string
+
+    -   name: reporting_period_atnd
+        sql: reporting_period_atnd
+        type: string
+
+    -   name: status
+        sql: status
+        type: string
+
+    -   name: phys_ed_ind
+        sql: phys_ed_ind
+        type: string
+
+    -   name: number_meetings
+        sql: number_meetings
+        type: string
+
+    -   name: in_service_ind
+        sql: in_service_ind
+        type: string
+
+    -   name: ftes_banner
+        sql: ftes_banner
+        type: string
+
+    -   name: ftes_atnd
+        sql: ftes_atnd
+        type: string
+
+    -   name: enhc_fund_nocr_ind
+        sql: enhc_fund_nocr_ind
+        type: string
+
+    -   name: end_date_banner
+        sql: end_date_banner
+        type: time
+
+    -   name: day_eve_sched
+        sql: day_eve_sched
+        type: string
+
+    -   name: daily_hours_banner
+        sql: daily_hours_banner
+        type: string
+
+    -   name: credit_atnd
+        sql: credit_atnd
+        type: string
+
+    -   name: credits_banner
+        sql: credits_banner
+        type: string
+
+    -   name: census_enr_banner
+        sql: census_enr_banner
+        type: string
+
+    -   name: census_enrl_atnd
+        sql: census_enrl_atnd
+        type: string
+
+    -   name: course_number
+        sql: course_number
+        type: string
+
+    -   name: campus_desc
+        sql: campus_desc
+        type: string
+
+    -   name: campus
+        sql: campus
+        type: string
+
+    -   name: contact_hours_sched_banner
+        sql: contact_hours_sched_banner
+        type: string
+
+    -   name: contact_hours_cat_banner
+        sql: contact_hours_cat_banner
+        type: string
+
+    -   name: contact_hours_atnd
+        sql: contact_hours_atnd
+        type: string
+
+    -   name: basic_skills_ind
+        sql: basic_skills_ind
+        type: string
+
+    -   name: college
+        sql: college
+        type: string
+
+    -   name: crn_atnd
+        sql: crn_atnd
+        type: string
+
+    -   name: crn
+        sql: crn
+        type: string
+
+    -   name: act_enr_banner
+        sql: act_enr_banner
+        type: string
+
+    -   name: accounting_method
+        sql: accounting_method
+        type: string
+
+    -   name: academic_period_atnd
+        sql: academic_period_atnd
+        type: string
+
+    -   name: academic_period
+        sql: academic_period
+        type: string
+
+    measures: []
+
+    pre_aggregations: []

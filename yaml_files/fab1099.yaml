@@ -1,0 +1,92 @@
+cubes:
+    name: fab1099
+
+    sql_table: 'fab1099@prod@source_db
+
+        '
+    joins:
+    -   name: vendor
+        sql: '{CUBE}.fab1099_vend_pidm = vendor.vendor_uid'
+        relationship: one_to_many
+
+    dimensions:
+    -   name: fab1099_user_id
+        sql: fab1099_user_id
+        type: string
+
+    -   name: fab1099_st_whold_amt
+        sql: fab1099_st_whold_amt
+        type: string
+
+    -   name: fab1099_st_paid_over_amt
+        sql: fab1099_st_paid_over_amt
+        type: string
+
+    -   name: fab1099_st_check_num
+        sql: fab1099_st_check_num
+        type: string
+
+    -   name: fab1099_rpt_yr
+        sql: fab1099_rpt_yr
+        type: string
+
+    -   name: fab1099_rpt_id
+        sql: fab1099_rpt_id
+        type: string
+
+    -   name: fab1099_rpt_amt
+        sql: fab1099_rpt_amt
+        type: string
+
+    -   name: fab1099_ityp_seq_code
+        sql: fab1099_ityp_seq_code
+        type: string
+
+    -   name: fab1099_invh_code
+        sql: fab1099_invh_code
+        type: string
+
+    -   name: fab1099_fed_whold_amt
+        sql: fab1099_fed_whold_amt
+        type: string
+
+    -   name: fab1099_fed_paid_over_amt
+        sql: fab1099_fed_paid_over_amt
+        type: string
+
+    -   name: fab1099_fed_check_num
+        sql: fab1099_fed_check_num
+        type: string
+
+    -   name: fab1099_check_num
+        sql: fab1099_check_num
+        type: string
+
+    -   name: fab1099_check_date
+        sql: fab1099_check_date
+        type: time
+
+    -   name: fab1099_cancel_ind
+        sql: fab1099_cancel_ind
+        type: string
+
+    -   name: fab1099_cancel_date
+        sql: fab1099_cancel_date
+        type: time
+
+    -   name: fab1099_bank_code
+        sql: fab1099_bank_code
+        type: string
+
+    -   name: fab1099_activity_date
+        sql: fab1099_activity_date
+        type: time
+
+    -   name: fab1099_vend_pidm
+        sql: fab1099_vend_pidm
+        type: string
+        primary_key: true
+
+    measures: []
+
+    pre_aggregations: []

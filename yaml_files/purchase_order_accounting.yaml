@@ -1,0 +1,691 @@
+cubes:
+    name: purchase_order_accounting
+
+    sql_table: odsmgr.purchase_order_accounting
+
+    joins:
+    -   name: purchase_order_item
+        sql: '{CUBE}.purchase_order = purchase_order_item.purchase_order AND {CUBE}.item
+            = purchase_order_item.item'
+        relationship: one_to_many
+
+    -   name: transaction_history
+        sql: '{CUBE}.sequence_number = transaction_history.sequence_number AND {CUBE}.purchase_order
+            = transaction_history.document AND {CUBE}.item = transaction_history.item'
+        relationship: zero_to_many
+
+    dimensions:
+    -   name: tax_rule_class_desc
+        sql: tax_rule_class_desc
+        type: string
+
+    -   name: tax_rule_class
+        sql: tax_rule_class
+        type: string
+
+    -   name: tax_percent
+        sql: tax_percent
+        type: string
+
+    -   name: tax_amount
+        sql: tax_amount
+        type: string
+
+    -   name: user_id
+        sql: user_id
+        type: string
+
+    -   name: suspense_ind
+        sql: suspense_ind
+        type: string
+
+    -   name: transaction_date
+        sql: transaction_date
+        type: time
+
+    -   name: rule_class_desc
+        sql: rule_class_desc
+        type: string
+
+    -   name: rule_class
+        sql: rule_class
+        type: string
+
+    -   name: purchase_order
+        sql: purchase_order
+        type: string
+        primary_key: true
+
+    -   name: sequence_number
+        sql: sequence_number
+        type: string
+        primary_key: true
+
+    -   name: project_desc
+        sql: project_desc
+        type: string
+
+    -   name: project
+        sql: project
+        type: string
+
+    -   name: program_level_5
+        sql: program_level_5
+        type: string
+
+    -   name: program_level_4
+        sql: program_level_4
+        type: string
+
+    -   name: program_level_3
+        sql: program_level_3
+        type: string
+
+    -   name: program_level_2
+        sql: program_level_2
+        type: string
+
+    -   name: program_level_1
+        sql: program_level_1
+        type: string
+
+    -   name: program_desc_5
+        sql: program_desc_5
+        type: string
+
+    -   name: program_desc_4
+        sql: program_desc_4
+        type: string
+
+    -   name: program_desc_3
+        sql: program_desc_3
+        type: string
+
+    -   name: program_desc_2
+        sql: program_desc_2
+        type: string
+
+    -   name: program_desc_1
+        sql: program_desc_1
+        type: string
+
+    -   name: program_desc
+        sql: program_desc
+        type: string
+
+    -   name: program
+        sql: program
+        type: string
+
+    -   name: process_group
+        sql: process_group
+        type: string
+
+    -   name: orgn_financial_manager_uid
+        sql: orgn_financial_manager_uid
+        type: string
+
+    -   name: orgn_financial_manager_name
+        sql: orgn_financial_manager_name
+        type: string
+
+    -   name: orgn_financial_manager_id
+        sql: orgn_financial_manager_id
+        type: string
+
+    -   name: organization_status_8
+        sql: organization_status_8
+        type: string
+
+    -   name: organization_status_7
+        sql: organization_status_7
+        type: string
+
+    -   name: organization_status_6
+        sql: organization_status_6
+        type: string
+
+    -   name: organization_status_5
+        sql: organization_status_5
+        type: string
+
+    -   name: organization_status_4
+        sql: organization_status_4
+        type: string
+
+    -   name: organization_status_3
+        sql: organization_status_3
+        type: string
+
+    -   name: organization_status_2
+        sql: organization_status_2
+        type: string
+
+    -   name: organization_status_1
+        sql: organization_status_1
+        type: string
+
+    -   name: program_status_5
+        sql: program_status_5
+        type: string
+
+    -   name: program_status_4
+        sql: program_status_4
+        type: string
+
+    -   name: program_status_3
+        sql: program_status_3
+        type: string
+
+    -   name: program_status_2
+        sql: program_status_2
+        type: string
+
+    -   name: program_status_1
+        sql: program_status_1
+        type: string
+
+    -   name: program_status
+        sql: program_status
+        type: string
+
+    -   name: organization_code
+        sql: organization_code
+        type: string
+
+    -   name: nsf_suspense_desc
+        sql: nsf_suspense_desc
+        type: string
+
+    -   name: nsf_suspense
+        sql: nsf_suspense
+        type: string
+
+    -   name: nsf_override_ind
+        sql: nsf_override_ind
+        type: string
+
+    -   name: location_status_5
+        sql: location_status_5
+        type: string
+
+    -   name: location_status_4
+        sql: location_status_4
+        type: string
+
+    -   name: location_status_3
+        sql: location_status_3
+        type: string
+
+    -   name: location_status_2
+        sql: location_status_2
+        type: string
+
+    -   name: location_status_1
+        sql: location_status_1
+        type: string
+
+    -   name: location_status
+        sql: location_status
+        type: string
+
+    -   name: location_level_5
+        sql: location_level_5
+        type: string
+
+    -   name: location_level_4
+        sql: location_level_4
+        type: string
+
+    -   name: location_level_3
+        sql: location_level_3
+        type: string
+
+    -   name: location_level_2
+        sql: location_level_2
+        type: string
+
+    -   name: location_level_1
+        sql: location_level_1
+        type: string
+
+    -   name: location_desc_5
+        sql: location_desc_5
+        type: string
+
+    -   name: location_desc_4
+        sql: location_desc_4
+        type: string
+
+    -   name: location_desc_3
+        sql: location_desc_3
+        type: string
+
+    -   name: location_desc_2
+        sql: location_desc_2
+        type: string
+
+    -   name: location_desc_1
+        sql: location_desc_1
+        type: string
+
+    -   name: location_desc
+        sql: location_desc
+        type: string
+
+    -   name: location
+        sql: location
+        type: string
+
+    -   name: liquidation_rule_class_desc
+        sql: liquidation_rule_class_desc
+        type: string
+
+    -   name: liquidation_rule_class
+        sql: liquidation_rule_class
+        type: string
+
+    -   name: multi_source_desc
+        sql: multi_source_desc
+        type: string
+
+    -   name: multi_source
+        sql: multi_source
+        type: string
+
+    -   name: item
+        sql: item
+        type: string
+        primary_key: true
+
+    -   name: organization_status
+        sql: organization_status
+        type: string
+
+    -   name: organization_level_8
+        sql: organization_level_8
+        type: string
+
+    -   name: organization_level_7
+        sql: organization_level_7
+        type: string
+
+    -   name: organization_level_6
+        sql: organization_level_6
+        type: string
+
+    -   name: organization_level_5
+        sql: organization_level_5
+        type: string
+
+    -   name: organization_level_4
+        sql: organization_level_4
+        type: string
+
+    -   name: organization_level_3
+        sql: organization_level_3
+        type: string
+
+    -   name: organization_level_2
+        sql: organization_level_2
+        type: string
+
+    -   name: organization_level_1
+        sql: organization_level_1
+        type: string
+
+    -   name: organization_desc_8
+        sql: organization_desc_8
+        type: string
+
+    -   name: organization_desc_7
+        sql: organization_desc_7
+        type: string
+
+    -   name: organization_desc_6
+        sql: organization_desc_6
+        type: string
+
+    -   name: organization_desc_5
+        sql: organization_desc_5
+        type: string
+
+    -   name: organization_desc_4
+        sql: organization_desc_4
+        type: string
+
+    -   name: organization_desc_3
+        sql: organization_desc_3
+        type: string
+
+    -   name: organization_desc_2
+        sql: organization_desc_2
+        type: string
+
+    -   name: organization_desc_1
+        sql: organization_desc_1
+        type: string
+
+    -   name: organization_desc
+        sql: organization_desc
+        type: string
+
+    -   name: fund_status_5
+        sql: fund_status_5
+        type: string
+
+    -   name: fund_status_4
+        sql: fund_status_4
+        type: string
+
+    -   name: fund_status_3
+        sql: fund_status_3
+        type: string
+
+    -   name: fund_status_2
+        sql: fund_status_2
+        type: string
+
+    -   name: fund_status_1
+        sql: fund_status_1
+        type: string
+
+    -   name: fund_status
+        sql: fund_status
+        type: string
+
+    -   name: fund_level_5
+        sql: fund_level_5
+        type: string
+
+    -   name: fund_level_4
+        sql: fund_level_4
+        type: string
+
+    -   name: fund_level_3
+        sql: fund_level_3
+        type: string
+
+    -   name: fund_level_2
+        sql: fund_level_2
+        type: string
+
+    -   name: fund_level_1
+        sql: fund_level_1
+        type: string
+
+    -   name: fund_financial_manager_uid
+        sql: fund_financial_manager_uid
+        type: string
+
+    -   name: fund_financial_manager_name
+        sql: fund_financial_manager_name
+        type: string
+
+    -   name: fund_financial_manager_id
+        sql: fund_financial_manager_id
+        type: string
+
+    -   name: fund_desc_5
+        sql: fund_desc_5
+        type: string
+
+    -   name: fund_desc_4
+        sql: fund_desc_4
+        type: string
+
+    -   name: fund_desc_3
+        sql: fund_desc_3
+        type: string
+
+    -   name: fund_desc_2
+        sql: fund_desc_2
+        type: string
+
+    -   name: fund_desc_1
+        sql: fund_desc_1
+        type: string
+
+    -   name: fund_desc
+        sql: fund_desc
+        type: string
+
+    -   name: fund
+        sql: fund
+        type: string
+
+    -   name: fiscal_year
+        sql: fiscal_year
+        type: string
+
+    -   name: fiscal_period
+        sql: fiscal_period
+        type: string
+
+    -   name: fund_type_status_2
+        sql: fund_type_status_2
+        type: string
+
+    -   name: fund_type_status_1
+        sql: fund_type_status_1
+        type: string
+
+    -   name: fund_type_level_2
+        sql: fund_type_level_2
+        type: string
+
+    -   name: fund_type_level_1
+        sql: fund_type_level_1
+        type: string
+
+    -   name: fund_type_desc_2
+        sql: fund_type_desc_2
+        type: string
+
+    -   name: fund_type_desc_1
+        sql: fund_type_desc_1
+        type: string
+
+    -   name: distribution_percent
+        sql: distribution_percent
+        type: string
+
+    -   name: discount_rule_class_desc
+        sql: discount_rule_class_desc
+        type: string
+
+    -   name: discount_rule_class
+        sql: discount_rule_class
+        type: string
+
+    -   name: discount_percent
+        sql: discount_percent
+        type: string
+
+    -   name: discount_amount
+        sql: discount_amount
+        type: string
+
+    -   name: encumbrance_adjustment_amount
+        sql: encumbrance_adjustment_amount
+        type: string
+
+    -   name: chart_of_accounts_desc
+        sql: chart_of_accounts_desc
+        type: string
+
+    -   name: chart_of_accounts
+        sql: chart_of_accounts
+        type: string
+
+    -   name: converted_tax_amount
+        sql: converted_tax_amount
+        type: string
+
+    -   name: converted_discount_amount
+        sql: converted_discount_amount
+        type: string
+
+    -   name: converted_amount
+        sql: converted_amount
+        type: string
+
+    -   name: converted_additional_amount
+        sql: converted_additional_amount
+        type: string
+
+    -   name: closed_ind
+        sql: closed_ind
+        type: string
+
+    -   name: chart_of_accounts_status
+        sql: chart_of_accounts_status
+        type: string
+
+    -   name: approved_charge_amount
+        sql: approved_charge_amount
+        type: string
+
+    -   name: amount
+        sql: amount
+        type: string
+
+    -   name: administrative_group
+        sql: administrative_group
+        type: string
+
+    -   name: additional_amount
+        sql: additional_amount
+        type: string
+
+    -   name: additional_charge_percent
+        sql: additional_charge_percent
+        type: string
+
+    -   name: additional_amt_rule_class_desc
+        sql: additional_amt_rule_class_desc
+        type: string
+
+    -   name: additional_amount_rule_class
+        sql: additional_amount_rule_class
+        type: string
+
+    -   name: activity
+        sql: activity
+        type: string
+
+    -   name: activity_status
+        sql: activity_status
+        type: string
+
+    -   name: activity_desc
+        sql: activity_desc
+        type: string
+
+    -   name: activity_date
+        sql: activity_date
+        type: time
+
+    -   name: account_type_status_2
+        sql: account_type_status_2
+        type: string
+
+    -   name: account_type_status_1
+        sql: account_type_status_1
+        type: string
+
+    -   name: account_type_level_2
+        sql: account_type_level_2
+        type: string
+
+    -   name: account_type_level_1
+        sql: account_type_level_1
+        type: string
+
+    -   name: account_level_2
+        sql: account_level_2
+        type: string
+
+    -   name: account_level_1
+        sql: account_level_1
+        type: string
+
+    -   name: account_index_status
+        sql: account_index_status
+        type: string
+
+    -   name: account_index_desc
+        sql: account_index_desc
+        type: string
+
+    -   name: account_index
+        sql: account_index
+        type: string
+
+    -   name: account_desc_4
+        sql: account_desc_4
+        type: string
+
+    -   name: account_desc_3
+        sql: account_desc_3
+        type: string
+
+    -   name: account_desc_2
+        sql: account_desc_2
+        type: string
+
+    -   name: account_desc_1
+        sql: account_desc_1
+        type: string
+
+    -   name: account_desc
+        sql: account_desc
+        type: string
+
+    -   name: account_type_desc_2
+        sql: account_type_desc_2
+        type: string
+
+    -   name: account_type_desc_1
+        sql: account_type_desc_1
+        type: string
+
+    -   name: account_status_4
+        sql: account_status_4
+        type: string
+
+    -   name: account_status_3
+        sql: account_status_3
+        type: string
+
+    -   name: account_status_2
+        sql: account_status_2
+        type: string
+
+    -   name: account_status_1
+        sql: account_status_1
+        type: string
+
+    -   name: account_status
+        sql: account_status
+        type: string
+
+    -   name: account_level_4
+        sql: account_level_4
+        type: string
+
+    -   name: account_level_3
+        sql: account_level_3
+        type: string
+
+    -   name: accounting_id
+        sql: accounting_id
+        type: string
+
+    -   name: account
+        sql: account
+        type: string
+
+    measures: []
+
+    pre_aggregations: []

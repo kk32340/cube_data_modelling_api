@@ -1,0 +1,75 @@
+cubes:
+    name: npsas_student_finaid_disb
+
+    sql_table: odsmgr_cust.npsas_student_finaid_disb
+
+    joins: []
+
+    dimensions:
+    -   name: calc_amount
+        sql: calc_amount
+        type: string
+
+    -   name: calbr_amount
+        sql: calbr_amount
+        type: string
+
+    -   name: calb_amount
+        sql: calb_amount
+        type: string
+
+    -   name: sap_code
+        sql: sap_code
+        type: string
+
+    -   name: sap_code_desc
+        sql: sap_code_desc
+        type: string
+
+    -   name: inelig_finaid
+        sql: inelig_finaid
+        type: string
+
+    -   name: finaid_probation
+        sql: finaid_probation
+        type: string
+
+    -   name: finaid_warning
+        sql: finaid_warning
+        type: string
+
+    -   name: federal_seog_amount
+        sql: federal_seog_amount
+        type: string
+
+    -   name: pell_amount
+        sql: pell_amount
+        type: string
+
+    -   name: person_uid
+        sql: person_uid
+        type: string
+
+    -   name: full name
+        sql: full name
+        type: string
+
+    -   name: id
+        sql: id
+        type: string
+
+    -   name: study_id
+        sql: study_id
+        type: string
+
+    -   name: college
+        sql: college
+        type: string
+
+    -   name: acyr
+        sql: acyr
+        type: string
+
+    measures: []
+
+    pre_aggregations: []

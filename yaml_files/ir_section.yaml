@@ -1,0 +1,352 @@
+cubes:
+  name: ir_section
+  sql_table: odsmgr_cust.ir_section
+  joins:
+    - name: ccsse_sections
+      sql: ''
+      relationship: one_to_many
+    - name: enr_mgt_workld_breakdown
+      sql: >-
+        {CUBE}.academic_period = enr_mgt_workld_breakdown.academic_period AND
+        {CUBE}.course_reference_number = enr_mgt_workld_breakdown.crn
+      relationship: one_to_many
+    - name: ge_course
+      sql: '{CUBE}.course_identification = ge_course.course_id'
+      relationship: one_to_many
+    - name: recon_instruct_assgn
+      sql: >-
+        {CUBE}.academic_period = recon_instruct_assgn.academic_period AND
+        {CUBE}.course_reference_number =
+        recon_instruct_assgn.course_reference_number
+      relationship: one_to_many
+    - name: swbsect
+      sql: >-
+        {CUBE}.academic_period = swbsect.swbsect_term_code AND
+        {CUBE}.course_reference_number = swbsect.swbsect_crn
+      relationship: one_to_many
+    - name: swratnd_expanded_mat
+      sql: >-
+        {CUBE}.academic_period = swratnd_expanded_mat.swratnd_term_code AND
+        {CUBE}.course_reference_number = swratnd_expanded_mat.swratnd_crn
+      relationship: one_to_many
+    - name: swrprod
+      sql: >-
+        {CUBE}.academic_period = swrprod.academic_period AND
+        {CUBE}.course_reference_number = swrprod.course_reference_number
+      relationship: one_to_many
+    - name: waitlist_history_report
+      sql: >-
+        {CUBE}.academic_period = waitlist_history_report.academic_period AND
+        {CUBE}.course_reference_number = waitlist_history_report.crn
+      relationship: one_to_many
+    - name: wait_list_freeze
+      sql: >-
+        {CUBE}.academic_period = wait_list_freeze.academic_period AND
+        {CUBE}.course_reference_number = wait_list_freeze.crn
+      relationship: one_to_many
+    - name: subj_dean_lookup
+      sql: >-
+        {CUBE}.subject = subj_dean_lookup.subj AND {CUBE}.college =
+        subj_dean_lookup.college
+      relationship: one_to_one
+    - name: student_course
+      sql: >-
+        {CUBE}.academic_period = student_course.academic_period AND
+        {CUBE}.course_reference_number = student_course.course_reference_number
+      relationship: one_to_one
+    - name: subj_dean_lookup_irsection_outer
+      sql: >-
+        {CUBE}.subject = subj_dean_lookup_irsection_outer.subj AND
+        {CUBE}.college = subj_dean_lookup_irsection_outer.college
+      relationship: one_to_many
+    - name: swratnd_expanded
+      sql: >-
+        {CUBE}.academic_period = swratnd_expanded.swratnd_term_code AND
+        {CUBE}.course_reference_number = swratnd_expanded.swratnd_crn
+      relationship: one_to_one
+    - name: ssbsect
+      sql: >-
+        {CUBE}.course_reference_number = ssbsect.ssbsect_crn AND
+        {CUBE}.academic_period = ssbsect.ssbsect_term_code
+      relationship: one_to_one
+  dimensions:
+    - name: xlst_group
+      sql: xlst_group
+      type: string
+    - name: workload
+      sql: workload
+      type: string
+    - name: wkly_hrs
+      sql: wkly_hrs
+      type: string
+    - name: wait_list_taken
+      sql: wait_list_taken
+      type: string
+    - name: wait_list_remain
+      sql: wait_list_remain
+      type: string
+    - name: wait_list_max
+      sql: wait_list_max
+      type: string
+    - name: transfer_status_desc
+      sql: transfer_status_desc
+      type: string
+    - name: transfer_status_code
+      sql: transfer_status_code
+      type: string
+    - name: subject_desc
+      sql: subject_desc
+      type: string
+    - name: top_desc
+      sql: top_desc
+      type: string
+    - name: top_code
+      sql: top_code
+      type: string
+    - name: tlm
+      sql: tlm
+      type: string
+    - name: title_short_desc
+      sql: title_short_desc
+      type: string
+    - name: schedule
+      sql: schedule
+      type: string
+    - name: save_max
+      sql: save_max
+      type: string
+    - name: sam_desc
+      sql: sam_desc
+      type: string
+    - name: sam_code
+      sql: sam_code
+      type: string
+    - name: special_approval_desc
+      sql: special_approval_desc
+      type: string
+    - name: special_approval_code
+      sql: special_approval_code
+      type: string
+    - name: section
+      sql: section
+      type: string
+    - name: seats_available
+      sql: seats_available
+      type: string
+    - name: status_desc
+      sql: status_desc
+      type: string
+    - name: status
+      sql: status
+      type: string
+    - name: sct_seq_no
+      sql: sct_seq_no
+      type: string
+    - name: schedule_desc
+      sql: schedule_desc
+      type: string
+    - name: part_of_term_start_date
+      sql: part_of_term_start_date
+      type: time
+    - name: part_of_term_end_date
+      sql: part_of_term_end_date
+      type: time
+    - name: part_of_term_desc
+      sql: part_of_term_desc
+      type: string
+    - name: part_of_term
+      sql: part_of_term
+      type: string
+    - name: maximum_enrollment
+      sql: maximum_enrollment
+      type: string
+    - name: no_meetings
+      sql: no_meetings
+      type: string
+    - name: instructor_pidm
+      sql: instructor_pidm
+      type: string
+    - name: instructor_name
+      sql: instructor_name
+      type: string
+    - name: instructor_middle_name
+      sql: instructor_middle_name
+      type: string
+    - name: instructor_last_name
+      sql: instructor_last_name
+      type: string
+    - name: instructor_first_name
+      sql: instructor_first_name
+      type: string
+    - name: ftes_est_90pct_res
+      sql: ftes_est_90pct_res
+      type: string
+    - name: ftes_est_90pct
+      sql: ftes_est_90pct
+      type: string
+    - name: ftes_actual_resident
+      sql: ftes_actual_resident
+      type: string
+    - name: ftes_actual_nonresident
+      sql: ftes_actual_nonresident
+      type: string
+    - name: grade_xx
+      sql: grade_xx
+      type: string
+    - name: grade_w
+      sql: grade_w
+      type: string
+    - name: grade_ug
+      sql: grade_ug
+      type: string
+    - name: grade_total
+      sql: grade_total
+      type: string
+    - name: grade_rd
+      sql: grade_rd
+      type: string
+    - name: grade_p
+      sql: grade_p
+      type: string
+    - name: grade_np
+      sql: grade_np
+      type: string
+    - name: grade_nc
+      sql: grade_nc
+      type: string
+    - name: grade_ip
+      sql: grade_ip
+      type: string
+    - name: grade_i
+      sql: grade_i
+      type: string
+    - name: grade_f
+      sql: grade_f
+      type: string
+    - name: grade_dr
+      sql: grade_dr
+      type: string
+    - name: grade_d
+      sql: grade_d
+      type: string
+    - name: grade_cr
+      sql: grade_cr
+      type: string
+    - name: grade_c
+      sql: grade_c
+      type: string
+    - name: grade_b
+      sql: grade_b
+      type: string
+    - name: grade_au
+      sql: grade_au
+      type: string
+    - name: grade_a
+      sql: grade_a
+      type: string
+    - name: first_day_enrollment
+      sql: first_day_enrollment
+      type: string
+    - name: division_desc
+      sql: division_desc
+      type: string
+    - name: division
+      sql: division
+      type: string
+    - name: department_desc
+      sql: department_desc
+      type: string
+    - name: department
+      sql: department
+      type: string
+    - name: daily_hrs
+      sql: daily_hrs
+      type: string
+    - name: current_enrollment_res
+      sql: current_enrollment_res
+      type: string
+    - name: current_enrollment
+      sql: current_enrollment
+      type: string
+    - name: credit_min
+      sql: credit_min
+      type: string
+    - name: credit_max
+      sql: credit_max
+      type: string
+    - name: credits
+      sql: credits
+      type: string
+    - name: census_res_enr
+      sql: census_res_enr
+      type: string
+    - name: census_non_res_enr
+      sql: census_non_res_enr
+      type: string
+    - name: census_enrollment_date1
+      sql: census_enrollment_date1
+      type: time
+    - name: course_reference_number
+      sql: course_reference_number
+      type: string
+      primary_key: true
+    - name: census_enr
+      sql: census_enr
+      type: string
+    - name: course_identification
+      sql: course_identification
+      type: string
+      primary_key: true
+    - name: campus_desc
+      sql: campus_desc
+      type: string
+    - name: campus
+      sql: campus
+      type: string
+    - name: contact_min
+      sql: contact_min
+      type: string
+    - name: contact_max
+      sql: contact_max
+      type: string
+    - name: contact_hours
+      sql: contact_hours
+      type: string
+    - name: basic_skills
+      sql: basic_skills
+      type: string
+    - name: college_desc
+      sql: college_desc
+      type: string
+    - name: college
+      sql: college
+      type: string
+      primary_key: true
+    - name: credit_status_desc
+      sql: credit_status_desc
+      type: string
+    - name: credit_status
+      sql: credit_status
+      type: string
+    - name: accounting_method_desc
+      sql: accounting_method_desc
+      type: string
+    - name: accounting_method
+      sql: accounting_method
+      type: string
+    - name: academic_period_desc
+      sql: academic_period_desc
+      type: string
+    - name: course_number
+      sql: course_number
+      type: string
+    - name: subject
+      sql: subject
+      type: string
+      primary_key: true
+    - name: academic_period
+      sql: academic_period
+      type: string
+      primary_key: true
+  measures: []
+  pre_aggregations: []

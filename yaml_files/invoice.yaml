@@ -1,0 +1,421 @@
+cubes:
+    name: invoice
+
+    sql_table: odsmgr.invoice
+
+    joins:
+    -   name: vendor
+        sql: '{CUBE}.vendor_uid = vendor.vendor_uid'
+        relationship: one_to_many
+
+    -   name: invoice_accounting
+        sql: '{CUBE}.invoice = invoice_accounting.invoice'
+        relationship: one_to_one
+
+    -   name: invoice_check
+        sql: '{CUBE}.invoice = invoice_check.invoice'
+        relationship: one_to_one
+
+    -   name: invoice_tax_rate
+        sql: '{CUBE}.invoice = invoice_tax_rate.invoice'
+        relationship: one_to_one
+
+    -   name: purchase_order
+        sql: '{CUBE}.purchase_order = purchase_order.purchase_order'
+        relationship: one_to_one
+
+    dimensions:
+    -   name: text_exists_ind
+        sql: text_exists_ind
+        type: string
+
+    -   name: vendor_uid
+        sql: vendor_uid
+        type: string
+        primary_key: true
+
+    -   name: vendor_name
+        sql: vendor_name
+        type: string
+
+    -   name: tax_income_type_key
+        sql: tax_income_type_key
+        type: string
+
+    -   name: tax_income_type_desc
+        sql: tax_income_type_desc
+        type: string
+
+    -   name: tax_income_type
+        sql: tax_income_type
+        type: string
+
+    -   name: tax_group_desc
+        sql: tax_group_desc
+        type: string
+
+    -   name: tax_group
+        sql: tax_group
+        type: string
+
+    -   name: vendor_invoice_number
+        sql: vendor_invoice_number
+        type: string
+
+    -   name: vendor_id
+        sql: vendor_id
+        type: string
+
+    -   name: vendor_entity_ind
+        sql: vendor_entity_ind
+        type: string
+
+    -   name: suspense_ind
+        sql: suspense_ind
+        type: string
+
+    -   name: submission_number
+        sql: submission_number
+        type: string
+
+    -   name: submissions_to_date
+        sql: submissions_to_date
+        type: string
+
+    -   name: transaction_date
+        sql: transaction_date
+        type: time
+
+    -   name: total_converted_amount
+        sql: total_converted_amount
+        type: string
+
+    -   name: total_approved_item_amount
+        sql: total_approved_item_amount
+        type: string
+
+    -   name: third_party_uid
+        sql: third_party_uid
+        type: string
+
+    -   name: third_party_name
+        sql: third_party_name
+        type: string
+
+    -   name: third_party_id
+        sql: third_party_id
+        type: string
+
+    -   name: third_party_entity_ind
+        sql: third_party_entity_ind
+        type: string
+
+    -   name: third_party_address_ind
+        sql: third_party_address_ind
+        type: string
+
+    -   name: repeating_invoice_ind
+        sql: repeating_invoice_ind
+        type: string
+
+    -   name: repeating_invoice_frequency
+        sql: repeating_invoice_frequency
+        type: string
+
+    -   name: repeating_frequency_desc
+        sql: repeating_frequency_desc
+        type: string
+
+    -   name: remit_to_street_line4
+        sql: remit_to_street_line4
+        type: string
+
+    -   name: remit_to_street_line3
+        sql: remit_to_street_line3
+        type: string
+
+    -   name: remit_to_street_line2
+        sql: remit_to_street_line2
+        type: string
+
+    -   name: remit_to_street_line1
+        sql: remit_to_street_line1
+        type: string
+
+    -   name: remit_to_state_province_desc
+        sql: remit_to_state_province_desc
+        type: string
+
+    -   name: remit_to_state_province
+        sql: remit_to_state_province
+        type: string
+
+    -   name: remit_to_postal_code
+        sql: remit_to_postal_code
+        type: string
+
+    -   name: remit_to_nation_desc
+        sql: remit_to_nation_desc
+        type: string
+
+    -   name: remit_to_nation
+        sql: remit_to_nation
+        type: string
+
+    -   name: remit_to_delivery_point
+        sql: remit_to_delivery_point
+        type: string
+
+    -   name: remit_to_county_desc
+        sql: remit_to_county_desc
+        type: string
+
+    -   name: remit_to_county
+        sql: remit_to_county
+        type: string
+
+    -   name: remit_to_correction_digit
+        sql: remit_to_correction_digit
+        type: string
+
+    -   name: remit_to_city
+        sql: remit_to_city
+        type: string
+
+    -   name: remit_to_carrier_route
+        sql: remit_to_carrier_route
+        type: string
+
+    -   name: remit_to_address_type_number
+        sql: remit_to_address_type_number
+        type: string
+
+    -   name: remit_to_address_type_desc
+        sql: remit_to_address_type_desc
+        type: string
+
+    -   name: remit_to_address_type
+        sql: remit_to_address_type
+        type: string
+
+    -   name: remaining_submissions
+        sql: remaining_submissions
+        type: string
+
+    -   name: recurring_payable_user_id
+        sql: recurring_payable_user_id
+        type: string
+
+    -   name: receiving_required_desc
+        sql: receiving_required_desc
+        type: string
+
+    -   name: receiving_required
+        sql: receiving_required
+        type: string
+
+    -   name: purchase_order
+        sql: purchase_order
+        type: string
+        primary_key: true
+
+    -   name: phone_country_code
+        sql: phone_country_code
+        type: string
+
+    -   name: process_group
+        sql: process_group
+        type: string
+
+    -   name: payment_due_date
+        sql: payment_due_date
+        type: time
+
+    -   name: open_paid_ind
+        sql: open_paid_ind
+        type: string
+
+    -   name: one_time_vendor_address_ind
+        sql: one_time_vendor_address_ind
+        type: string
+
+    -   name: maximum_number_submissions
+        sql: maximum_number_submissions
+        type: string
+
+    -   name: nsf_on_off_ind
+        sql: nsf_on_off_ind
+        type: string
+
+    -   name: next_submission_date
+        sql: next_submission_date
+        type: time
+
+    -   name: multi_source_desc
+        sql: multi_source_desc
+        type: string
+
+    -   name: multi_source
+        sql: multi_source
+        type: string
+
+    -   name: multiple_invoice_ind
+        sql: multiple_invoice_ind
+        type: string
+
+    -   name: invoice_user_id
+        sql: invoice_user_id
+        type: string
+
+    -   name: invoice_type_desc
+        sql: invoice_type_desc
+        type: string
+
+    -   name: invoice_type
+        sql: invoice_type
+        type: string
+
+    -   name: invoice_re_established_ind
+        sql: invoice_re_established_ind
+        type: string
+
+    -   name: invoice_origin
+        sql: invoice_origin
+        type: string
+
+    -   name: invoice_date
+        sql: invoice_date
+        type: time
+
+    -   name: invoice_create_user
+        sql: invoice_create_user
+        type: string
+
+    -   name: invoice_create_date
+        sql: invoice_create_date
+        type: time
+
+    -   name: invoice_complete_user
+        sql: invoice_complete_user
+        type: string
+
+    -   name: invoice_complete_date
+        sql: invoice_complete_date
+        type: time
+
+    -   name: invoice_cancel_user_id
+        sql: invoice_cancel_user_id
+        type: string
+
+    -   name: invoice_cancel_activity_date
+        sql: invoice_cancel_activity_date
+        type: time
+
+    -   name: invoice_activity_date
+        sql: invoice_activity_date
+        type: time
+
+    -   name: invoice
+        sql: invoice
+        type: string
+        primary_key: true
+
+    -   name: installment_ind
+        sql: installment_ind
+        type: string
+
+    -   name: hold_ind
+        sql: hold_ind
+        type: string
+
+    -   name: grouping_desc
+        sql: grouping_desc
+        type: string
+
+    -   name: grouping
+        sql: grouping
+        type: string
+
+    -   name: document_accounting_ind
+        sql: document_accounting_ind
+        type: string
+
+    -   name: discount_percent
+        sql: discount_percent
+        type: string
+
+    -   name: discount_desc
+        sql: discount_desc
+        type: string
+
+    -   name: discount
+        sql: discount
+        type: string
+
+    -   name: disbursing_agent_ind
+        sql: disbursing_agent_ind
+        type: string
+
+    -   name: direct_deposit_override_ind
+        sql: direct_deposit_override_ind
+        type: string
+
+    -   name: deferred_edit_ind
+        sql: deferred_edit_ind
+        type: string
+
+    -   name: days_between_submissions
+        sql: days_between_submissions
+        type: string
+
+    -   name: data_origin
+        sql: data_origin
+        type: string
+
+    -   name: currency_desc
+        sql: currency_desc
+        type: string
+
+    -   name: currency
+        sql: currency
+        type: string
+
+    -   name: federal_tax_ind
+        sql: federal_tax_ind
+        type: string
+
+    -   name: federal_tax_id
+        sql: federal_tax_id
+        type: string
+
+    -   name: fax_country_code
+        sql: fax_country_code
+        type: string
+
+    -   name: credit_memo_ind
+        sql: credit_memo_ind
+        type: string
+
+    -   name: cancel_ind
+        sql: cancel_ind
+        type: string
+
+    -   name: cancel_date
+        sql: cancel_date
+        type: time
+
+    -   name: complete_ind
+        sql: complete_ind
+        type: string
+
+    -   name: approval_ind
+        sql: approval_ind
+        type: string
+
+    -   name: administrative_group
+        sql: administrative_group
+        type: string
+
+    measures: []
+
+    pre_aggregations: []

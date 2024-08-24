@@ -1,0 +1,63 @@
+cubes:
+    name: grant_attributes
+
+    sql_table: odsmgr.grant_attributes
+
+    joins:
+    -   name: grant_view
+        sql: '{CUBE}.grant_id = grant_view.grant_id'
+        relationship: zero_to_many
+
+    dimensions:
+    -   name: short_title
+        sql: short_title
+        type: string
+
+    -   name: process_group
+        sql: process_group
+        type: string
+
+    -   name: long_title
+        sql: long_title
+        type: string
+
+    -   name: multi_source_desc
+        sql: multi_source_desc
+        type: string
+
+    -   name: multi_source
+        sql: multi_source
+        type: string
+
+    -   name: grant_id
+        sql: grant_id
+        type: string
+        primary_key: true
+
+    -   name: attribute_table_value
+        sql: attribute_table_value
+        type: string
+
+    -   name: attribute_table
+        sql: attribute_table
+        type: string
+
+    -   name: attribute_short_desc
+        sql: attribute_short_desc
+        type: string
+
+    -   name: attribute_desc
+        sql: attribute_desc
+        type: string
+
+    -   name: attribute_data
+        sql: attribute_data
+        type: string
+
+    -   name: administrative_group
+        sql: administrative_group
+        type: string
+
+    measures: []
+
+    pre_aggregations: []

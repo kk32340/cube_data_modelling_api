@@ -1,0 +1,253 @@
+cubes:
+    name: room_assignment
+
+    sql_table: odsmgr.room_assignment
+
+    joins:
+    -   name: academic_study
+        sql: '{CUBE}.person_uid = academic_study.person_uid AND {CUBE}.academic_period
+            = academic_study.academic_period'
+        relationship: zero_to_many
+
+    dimensions:
+    -   name: sub_academic_period_desc
+        sql: sub_academic_period_desc
+        type: string
+
+    -   name: sub_academic_period
+        sql: sub_academic_period
+        type: string
+
+    -   name: room_type_desc
+        sql: room_type_desc
+        type: string
+
+    -   name: room_type
+        sql: room_type
+        type: string
+
+    -   name: room_total_periods
+        sql: room_total_periods
+        type: string
+
+    -   name: room_total_months
+        sql: room_total_months
+        type: string
+
+    -   name: room_total_days
+        sql: room_total_days
+        type: string
+
+    -   name: room_status_desc
+        sql: room_status_desc
+        type: string
+
+    -   name: room_status_date
+        sql: room_status_date
+        type: time
+
+    -   name: room_status
+        sql: room_status
+        type: string
+
+    -   name: room_start_date
+        sql: room_start_date
+        type: time
+
+    -   name: room_roll_ind
+        sql: room_roll_ind
+        type: string
+
+    -   name: room_rate_time
+        sql: room_rate_time
+        type: string
+
+    -   name: room_rate_desc
+        sql: room_rate_desc
+        type: string
+
+    -   name: room_rate
+        sql: room_rate
+        type: string
+
+    -   name: room_phone_num_combined
+        sql: room_phone_num_combined
+        type: string
+
+    -   name: room_phone_number
+        sql: room_phone_number
+        type: string
+
+    -   name: room_phone_ext
+        sql: room_phone_ext
+        type: string
+
+    -   name: room_phone_area
+        sql: room_phone_area
+        type: string
+
+    -   name: room_override_ind
+        sql: room_override_ind
+        type: string
+
+    -   name: room_overload_ind
+        sql: room_overload_ind
+        type: string
+
+    -   name: room_number
+        sql: room_number
+        type: string
+
+    -   name: room_end_date
+        sql: room_end_date
+        type: time
+
+    -   name: room_charges_ind
+        sql: room_charges_ind
+        type: string
+
+    -   name: room_capacity
+        sql: room_capacity
+        type: string
+
+    -   name: room_assessment_ind
+        sql: room_assessment_ind
+        type: string
+
+    -   name: room_application_type_desc
+        sql: room_application_type_desc
+        type: string
+
+    -   name: room_application_type
+        sql: room_application_type
+        type: string
+
+    -   name: room_application_to_period
+        sql: room_application_to_period
+        type: string
+
+    -   name: room_application_status_desc
+        sql: room_application_status_desc
+        type: string
+
+    -   name: room_application_status_date
+        sql: room_application_status_date
+        type: time
+
+    -   name: room_application_status
+        sql: room_application_status
+        type: string
+
+    -   name: room_application_from_period
+        sql: room_application_from_period
+        type: string
+
+    -   name: room_application_date_added
+        sql: room_application_date_added
+        type: time
+
+    -   name: process_group
+        sql: process_group
+        type: string
+
+    -   name: preferred_room
+        sql: preferred_room
+        type: string
+
+    -   name: preferred_category_desc
+        sql: preferred_category_desc
+        type: string
+
+    -   name: preferred_category
+        sql: preferred_category
+        type: string
+
+    -   name: preferred_campus_desc
+        sql: preferred_campus_desc
+        type: string
+
+    -   name: preferred_campus
+        sql: preferred_campus
+        type: string
+
+    -   name: preferred_building_desc
+        sql: preferred_building_desc
+        type: string
+
+    -   name: preferred_building
+        sql: preferred_building
+        type: string
+
+    -   name: name
+        sql: name
+        type: string
+
+    -   name: multi_source_desc
+        sql: multi_source_desc
+        type: string
+
+    -   name: multi_source
+        sql: multi_source
+        type: string
+
+    -   name: id
+        sql: id
+        type: string
+
+    -   name: building_phone_num_combined
+        sql: building_phone_num_combined
+        type: string
+
+    -   name: building_phone_number
+        sql: building_phone_number
+        type: string
+
+    -   name: building_phone_ext
+        sql: building_phone_ext
+        type: string
+
+    -   name: building_phone_area
+        sql: building_phone_area
+        type: string
+
+    -   name: building_desc
+        sql: building_desc
+        type: string
+
+    -   name: building_capacity
+        sql: building_capacity
+        type: string
+
+    -   name: building
+        sql: building
+        type: string
+
+    -   name: administrative_group
+        sql: administrative_group
+        type: string
+
+    -   name: academic_year_desc
+        sql: academic_year_desc
+        type: string
+
+    -   name: academic_year
+        sql: academic_year
+        type: string
+
+    -   name: academic_period_desc
+        sql: academic_period_desc
+        type: string
+
+    -   name: academic_period
+        sql: academic_period
+        type: string
+        primary_key: true
+
+    -   name: person_uid
+        sql: person_uid
+        type: string
+        primary_key: true
+
+    measures: []
+
+    pre_aggregations: []

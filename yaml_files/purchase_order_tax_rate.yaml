@@ -1,0 +1,65 @@
+cubes:
+    name: purchase_order_tax_rate
+
+    sql_table: odsmgr.purchase_order_tax_rate
+
+    joins:
+    -   name: purchase_order_item
+        sql: '{CUBE}.purchase_order = purchase_order_item.purchase_order AND {CUBE}.item
+            = purchase_order_item.item'
+        relationship: one_to_many
+
+    dimensions:
+    -   name: tax_rate_desc
+        sql: tax_rate_desc
+        type: string
+
+    -   name: tax_rate
+        sql: tax_rate
+        type: string
+
+    -   name: tax_amount
+        sql: tax_amount
+        type: string
+
+    -   name: taxable_amount
+        sql: taxable_amount
+        type: string
+
+    -   name: purchase_order
+        sql: purchase_order
+        type: string
+        primary_key: true
+
+    -   name: process_group
+        sql: process_group
+        type: string
+
+    -   name: pay_tax_to
+        sql: pay_tax_to
+        type: string
+
+    -   name: priority
+        sql: priority
+        type: string
+
+    -   name: multi_source_desc
+        sql: multi_source_desc
+        type: string
+
+    -   name: multi_source
+        sql: multi_source
+        type: string
+
+    -   name: item
+        sql: item
+        type: string
+        primary_key: true
+
+    -   name: administrative_group
+        sql: administrative_group
+        type: string
+
+    measures: []
+
+    pre_aggregations: []

@@ -1,0 +1,116 @@
+cubes:
+    name: ftvorgn
+
+    sql_table: fimsmgr.ftvorgn
+
+    joins:
+    -   name: foraqrc
+        sql: '{CUBE}.ftvorgn_orgn_code_pred = foraqrc.foraqrc_orgn_code'
+        relationship: one_to_many
+
+    -   name: organization_hierarchy
+        sql: '{CUBE}.ftvorgn_orgn_code = organization_hierarchy.organization_code'
+        relationship: one_to_one
+
+    dimensions:
+    -   name: ftvorgn_vpdi_code
+        sql: ftvorgn_vpdi_code
+        type: string
+
+    -   name: ftvorgn_data_origin
+        sql: ftvorgn_data_origin
+        type: string
+
+    -   name: ftvorgn_version
+        sql: ftvorgn_version
+        type: string
+
+    -   name: ftvorgn_surrogate_id
+        sql: ftvorgn_surrogate_id
+        type: string
+
+    -   name: ftvorgn_user_id
+        sql: ftvorgn_user_id
+        type: string
+
+    -   name: ftvorgn_title
+        sql: ftvorgn_title
+        type: string
+
+    -   name: ftvorgn_term_date
+        sql: ftvorgn_term_date
+        type: time
+
+    -   name: ftvorgn_status_ind
+        sql: ftvorgn_status_ind
+        type: string
+
+    -   name: ftvorgn_prog_code_def
+        sql: ftvorgn_prog_code_def
+        type: string
+
+    -   name: ftvorgn_orgn_code_pred
+        sql: ftvorgn_orgn_code_pred
+        type: string
+        primary_key: true
+
+    -   name: ftvorgn_orgn_code_nsf
+        sql: ftvorgn_orgn_code_nsf
+        type: string
+
+    -   name: ftvorgn_orgn_code
+        sql: ftvorgn_orgn_code
+        type: string
+        primary_key: true
+
+    -   name: ftvorgn_nchg_date
+        sql: ftvorgn_nchg_date
+        type: time
+
+    -   name: ftvorgn_locn_code_def
+        sql: ftvorgn_locn_code_def
+        type: string
+
+    -   name: ftvorgn_hierarchy_table_ind
+        sql: ftvorgn_hierarchy_table_ind
+        type: string
+
+    -   name: ftvorgn_fund_code_def
+        sql: ftvorgn_fund_code_def
+        type: string
+
+    -   name: ftvorgn_fmgr_code_pidm
+        sql: ftvorgn_fmgr_code_pidm
+        type: string
+
+    -   name: ftvorgn_encb_policy_ind
+        sql: ftvorgn_encb_policy_ind
+        type: string
+
+    -   name: ftvorgn_eff_date
+        sql: ftvorgn_eff_date
+        type: time
+
+    -   name: ftvorgn_data_entry_ind
+        sql: ftvorgn_data_entry_ind
+        type: string
+
+    -   name: ftvorgn_coas_code
+        sql: ftvorgn_coas_code
+        type: string
+
+    -   name: ftvorgn_alt_pool_ind
+        sql: ftvorgn_alt_pool_ind
+        type: string
+
+    -   name: ftvorgn_actv_code_def
+        sql: ftvorgn_actv_code_def
+        type: string
+
+    -   name: ftvorgn_activity_date
+        sql: ftvorgn_activity_date
+        type: time
+
+    measures: []
+
+    pre_aggregations: []

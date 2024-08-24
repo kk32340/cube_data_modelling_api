@@ -1,0 +1,212 @@
+cubes:
+    name: farinva
+
+    sql_table: 'farinva
+
+        '
+    joins:
+    -   name: fabinvh
+        sql: '{CUBE}.farinva_invh_code = fabinvh.fabinvh_code'
+        relationship: one_to_many
+
+    dimensions:
+    -   name: farinva_user_id
+        sql: farinva_user_id
+        type: string
+
+    -   name: farinva_tax_rucl_code
+        sql: farinva_tax_rucl_code
+        type: string
+
+    -   name: farinva_tax_amt_pct
+        sql: farinva_tax_amt_pct
+        type: string
+
+    -   name: farinva_tax_amt
+        sql: farinva_tax_amt
+        type: string
+
+    -   name: farinva_susp_ind
+        sql: farinva_susp_ind
+        type: string
+
+    -   name: farinva_seq_num
+        sql: farinva_seq_num
+        type: string
+
+    -   name: farinva_rucl_code
+        sql: farinva_rucl_code
+        type: string
+
+    -   name: farinva_proj_code
+        sql: farinva_proj_code
+        type: string
+
+    -   name: farinva_prog_code
+        sql: farinva_prog_code
+        type: string
+
+    -   name: farinva_prev_paid_amt
+        sql: farinva_prev_paid_amt
+        type: string
+
+    -   name: farinva_po_item
+        sql: farinva_po_item
+        type: string
+
+    -   name: farinva_pohd_code
+        sql: farinva_pohd_code
+        type: string
+
+    -   name: farinva_period
+        sql: farinva_period
+        type: string
+
+    -   name: farinva_partial_liq_ind
+        sql: farinva_partial_liq_ind
+        type: string
+
+    -   name: farinva_orgn_code
+        sql: farinva_orgn_code
+        type: string
+
+    -   name: farinva_open_paid_ind
+        sql: farinva_open_paid_ind
+        type: string
+
+    -   name: farinva_nsf_susp_ind
+        sql: farinva_nsf_susp_ind
+        type: string
+
+    -   name: farinva_nsf_override_ind
+        sql: farinva_nsf_override_ind
+        type: string
+
+    -   name: farinva_locn_code
+        sql: farinva_locn_code
+        type: string
+
+    -   name: farinva_ityp_seq_code
+        sql: farinva_ityp_seq_code
+        type: string
+
+    -   name: farinva_item
+        sql: farinva_item
+        type: string
+
+    -   name: farinva_invh_code
+        sql: farinva_invh_code
+        type: string
+        primary_key: true
+
+    -   name: farinva_invd_amt
+        sql: farinva_invd_amt
+        type: string
+
+    -   name: farinva_fund_code
+        sql: farinva_fund_code
+        type: string
+
+    -   name: farinva_fsyr_code
+        sql: farinva_fsyr_code
+        type: string
+
+    -   name: farinva_eoy_accr_status_ind
+        sql: farinva_eoy_accr_status_ind
+        type: string
+
+    -   name: farinva_disc_rucl_code
+        sql: farinva_disc_rucl_code
+        type: string
+
+    -   name: farinva_disc_amt_pct
+        sql: farinva_disc_amt_pct
+        type: string
+
+    -   name: farinva_disc_amt
+        sql: farinva_disc_amt
+        type: string
+
+    -   name: farinva_data_origin
+        sql: farinva_data_origin
+        type: string
+
+    -   name: farinva_create_user
+        sql: farinva_create_user
+        type: string
+
+    -   name: farinva_create_date
+        sql: farinva_create_date
+        type: time
+
+    -   name: farinva_convert_tax_amt
+        sql: farinva_convert_tax_amt
+        type: string
+
+    -   name: farinva_convert_disc_amt
+        sql: farinva_convert_disc_amt
+        type: string
+
+    -   name: farinva_convert_amt
+        sql: farinva_convert_amt
+        type: string
+
+    -   name: farinva_convert_addl_chrg_amt
+        sql: farinva_convert_addl_chrg_amt
+        type: string
+
+    -   name: farinva_coas_code
+        sql: farinva_coas_code
+        type: string
+
+    -   name: farinva_cap_amt
+        sql: farinva_cap_amt
+        type: string
+
+    -   name: farinva_bank_code
+        sql: farinva_bank_code
+        type: string
+
+    -   name: farinva_appr_ind
+        sql: farinva_appr_ind
+        type: string
+
+    -   name: farinva_appr_amt_pct
+        sql: farinva_appr_amt_pct
+        type: string
+
+    -   name: farinva_appr_amt
+        sql: farinva_appr_amt
+        type: string
+
+    -   name: farinva_addl_rucl_code
+        sql: farinva_addl_rucl_code
+        type: string
+
+    -   name: farinva_addl_chrg_amt
+        sql: farinva_addl_chrg_amt
+        type: string
+
+    -   name: farinva_addl_amt_pct
+        sql: farinva_addl_amt_pct
+        type: string
+
+    -   name: farinva_actv_code
+        sql: farinva_actv_code
+        type: string
+
+    -   name: farinva_activity_date
+        sql: farinva_activity_date
+        type: time
+
+    -   name: farinva_acct_code
+        sql: farinva_acct_code
+        type: string
+
+    -   name: farinva_acci_code
+        sql: farinva_acci_code
+        type: string
+
+    measures: []
+
+    pre_aggregations: []

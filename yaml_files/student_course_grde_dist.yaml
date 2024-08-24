@@ -1,0 +1,27 @@
+cubes:
+    name: student_course_grde_dist
+
+    sql_table: odsmgr.student_course_grde_dist
+
+    joins: []
+
+    dimensions:
+    -   name: grade_count
+        sql: grade_count
+        type: string
+
+    -   name: grade
+        sql: grade
+        type: string
+
+    -   name: course_reference_number
+        sql: course_reference_number
+        type: string
+
+    -   name: academic_period
+        sql: academic_period
+        type: string
+
+    measures: []
+
+    pre_aggregations: []

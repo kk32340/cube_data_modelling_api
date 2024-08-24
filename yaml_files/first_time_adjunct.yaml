@@ -1,0 +1,19 @@
+cubes:
+    name: first_time_adjunct
+
+    sql_table: odsmgr_cust.first_time_adjunct
+
+    joins: []
+
+    dimensions:
+    -   name: person_uid
+        sql: person_uid
+        type: string
+
+    -   name: academic_period
+        sql: academic_period
+        type: string
+
+    measures: []
+
+    pre_aggregations: []

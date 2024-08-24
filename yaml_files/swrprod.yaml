@@ -1,0 +1,255 @@
+cubes:
+    name: swrprod
+
+    sql_table: odsmgr_cust.swrprod
+
+    joins:
+    -   name: swrprod_stusta
+        sql: '{CUBE}.academic_period = swrprod_stusta.academic_period'
+        relationship: one_to_one
+
+    dimensions:
+    -   name: xlst_group
+        sql: xlst_group
+        type: string
+
+    -   name: wsch_ind
+        sql: wsch_ind
+        type: string
+
+    -   name: workload
+        sql: workload
+        type: string
+
+    -   name: wkly_hrs
+        sql: wkly_hrs
+        type: string
+
+    -   name: wexp_ind
+        sql: wexp_ind
+        type: string
+
+    -   name: wait_list_taken
+        sql: wait_list_taken
+        type: string
+
+    -   name: wait_list_remain
+        sql: wait_list_remain
+        type: string
+
+    -   name: wait_list_max
+        sql: wait_list_max
+        type: string
+
+    -   name: target_enrollment
+        sql: target_enrollment
+        type: string
+
+    -   name: subject_desc
+        sql: subject_desc
+        type: string
+
+    -   name: tlm
+        sql: tlm
+        type: string
+
+    -   name: save_max
+        sql: save_max
+        type: string
+
+    -   name: section
+        sql: section
+        type: string
+
+    -   name: seats_available
+        sql: seats_available
+        type: string
+
+    -   name: status_desc
+        sql: status_desc
+        type: string
+
+    -   name: status
+        sql: status
+        type: string
+
+    -   name: schedule_desc
+        sql: schedule_desc
+        type: string
+
+    -   name: schedule
+        sql: schedule
+        type: string
+
+    -   name: part_of_term_start_date
+        sql: part_of_term_start_date
+        type: time
+
+    -   name: part_of_term_end_date
+        sql: part_of_term_end_date
+        type: time
+
+    -   name: part_of_term_desc
+        sql: part_of_term_desc
+        type: string
+
+    -   name: part_of_term
+        sql: part_of_term
+        type: string
+
+    -   name: maximum_enrollment
+        sql: maximum_enrollment
+        type: string
+
+    -   name: no_meetings
+        sql: no_meetings
+        type: string
+
+    -   name: instructor_pidm
+        sql: instructor_pidm
+        type: string
+
+    -   name: instructor_last_name
+        sql: instructor_last_name
+        type: string
+
+    -   name: instructor_first_name
+        sql: instructor_first_name
+        type: string
+
+    -   name: fte_estimate_res
+        sql: fte_estimate_res
+        type: string
+
+    -   name: fte_estimate
+        sql: fte_estimate
+        type: string
+
+    -   name: fte_actual_res
+        sql: fte_actual_res
+        type: string
+
+    -   name: fte_actual_nonres
+        sql: fte_actual_nonres
+        type: string
+
+    -   name: division_desc
+        sql: division_desc
+        type: string
+
+    -   name: division
+        sql: division
+        type: string
+
+    -   name: department_desc
+        sql: department_desc
+        type: string
+
+    -   name: department
+        sql: department
+        type: string
+
+    -   name: daily_hrs
+        sql: daily_hrs
+        type: string
+
+    -   name: dsch_ind
+        sql: dsch_ind
+        type: string
+
+    -   name: credit_max
+        sql: credit_max
+        type: string
+
+    -   name: credit_ind
+        sql: credit_ind
+        type: string
+
+    -   name: credits
+        sql: credits
+        type: string
+
+    -   name: census_enrollment_date1
+        sql: census_enrollment_date1
+        type: time
+
+    -   name: course_number
+        sql: course_number
+        type: string
+
+    -   name: census_enr
+        sql: census_enr
+        type: string
+
+    -   name: campus_desc
+        sql: campus_desc
+        type: string
+
+    -   name: campus
+        sql: campus
+        type: string
+
+    -   name: contact_min
+        sql: contact_min
+        type: string
+
+    -   name: contact_max
+        sql: contact_max
+        type: string
+
+    -   name: contact_ind
+        sql: contact_ind
+        type: string
+
+    -   name: contact_hours
+        sql: contact_hours
+        type: string
+
+    -   name: college_desc
+        sql: college_desc
+        type: string
+
+    -   name: credit_min
+        sql: credit_min
+        type: string
+
+    -   name: actual_ind
+        sql: actual_ind
+        type: string
+
+    -   name: actual_enrollment
+        sql: actual_enrollment
+        type: string
+
+    -   name: accounting_method_desc
+        sql: accounting_method_desc
+        type: string
+
+    -   name: accounting_method
+        sql: accounting_method
+        type: string
+
+    -   name: academic_period_desc
+        sql: academic_period_desc
+        type: string
+
+    -   name: subject
+        sql: subject
+        type: string
+
+    -   name: college
+        sql: college
+        type: string
+
+    -   name: course_reference_number
+        sql: course_reference_number
+        type: string
+
+    -   name: academic_period
+        sql: academic_period
+        type: string
+        primary_key: true
+
+    measures: []
+
+    pre_aggregations: []

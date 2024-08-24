@@ -1,0 +1,119 @@
+cubes:
+    name: stvterm
+
+    sql_table: saturn.stvterm
+
+    joins:
+    -   name: enrollment
+        sql: '{CUBE}.stvterm_code = enrollment.academic_period'
+        relationship: one_to_many
+
+    -   name: receivable_account_detail
+        sql: '{CUBE}.stvterm_code = receivable_account_detail.academic_period'
+        relationship: one_to_many
+
+    dimensions:
+    -   name: stvterm_vpdi_code
+        sql: stvterm_vpdi_code
+        type: string
+
+    -   name: stvterm_data_origin
+        sql: stvterm_data_origin
+        type: string
+
+    -   name: stvterm_user_id
+        sql: stvterm_user_id
+        type: string
+
+    -   name: stvterm_version
+        sql: stvterm_version
+        type: string
+
+    -   name: stvterm_surrogate_id
+        sql: stvterm_surrogate_id
+        type: string
+
+    -   name: stvterm_fa_summer_ind
+        sql: stvterm_fa_summer_ind
+        type: string
+
+    -   name: stvterm_term_len_mult_is
+        sql: stvterm_term_len_mult_is
+        type: string
+
+    -   name: stvterm_term_len_mult
+        sql: stvterm_term_len_mult
+        type: string
+
+    -   name: stvterm_apport_cde
+        sql: stvterm_apport_cde
+        type: string
+
+    -   name: stvterm_mis_term_ctg
+        sql: stvterm_mis_term_ctg
+        type: string
+
+    -   name: stvterm_mis_term_id
+        sql: stvterm_mis_term_id
+        type: string
+
+    -   name: stvterm_trmt_code
+        sql: stvterm_trmt_code
+        type: string
+
+    -   name: stvterm_system_req_ind
+        sql: stvterm_system_req_ind
+        type: string
+
+    -   name: stvterm_start_date
+        sql: stvterm_start_date
+        type: time
+
+    -   name: stvterm_housing_start_date
+        sql: stvterm_housing_start_date
+        type: time
+
+    -   name: stvterm_housing_end_date
+        sql: stvterm_housing_end_date
+        type: time
+
+    -   name: stvterm_fa_term
+        sql: stvterm_fa_term
+        type: string
+
+    -   name: stvterm_fa_proc_yr
+        sql: stvterm_fa_proc_yr
+        type: string
+
+    -   name: stvterm_fa_period
+        sql: stvterm_fa_period
+        type: string
+
+    -   name: stvterm_fa_end_period
+        sql: stvterm_fa_end_period
+        type: string
+
+    -   name: stvterm_end_date
+        sql: stvterm_end_date
+        type: time
+
+    -   name: stvterm_desc
+        sql: stvterm_desc
+        type: string
+
+    -   name: stvterm_code
+        sql: stvterm_code
+        type: string
+        primary_key: true
+
+    -   name: stvterm_acyr_code
+        sql: stvterm_acyr_code
+        type: string
+
+    -   name: stvterm_activity_date
+        sql: stvterm_activity_date
+        type: time
+
+    measures: []
+
+    pre_aggregations: []

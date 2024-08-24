@@ -1,0 +1,103 @@
+cubes:
+    name: shbtatc
+
+    sql_table: saturn.shbtatc
+
+    joins: []
+
+    dimensions:
+    -   name: shbtatc_trns_title
+        sql: shbtatc_trns_title
+        type: string
+
+    -   name: shbtatc_trns_review_ind
+        sql: shbtatc_trns_review_ind
+        type: string
+
+    -   name: shbtatc_trns_low_hrs
+        sql: shbtatc_trns_low_hrs
+        type: string
+
+    -   name: shbtatc_trns_high_hrs
+        sql: shbtatc_trns_high_hrs
+        type: string
+
+    -   name: shbtatc_trns_catalog
+        sql: shbtatc_trns_catalog
+        type: string
+
+    -   name: shbtatc_tlvl_code
+        sql: shbtatc_tlvl_code
+        type: string
+
+    -   name: shbtatc_tgrd_code_min
+        sql: shbtatc_tgrd_code_min
+        type: string
+
+    -   name: shbtatc_term_code_eff_trns
+        sql: shbtatc_term_code_eff_trns
+        type: string
+
+    -   name: shbtatc_tast_code
+        sql: shbtatc_tast_code
+        type: string
+
+    -   name: shbtatc_subj_code_trns
+        sql: shbtatc_subj_code_trns
+        type: string
+
+    -   name: shbtatc_sbgi_code
+        sql: shbtatc_sbgi_code
+        type: string
+
+    -   name: shbtatc_program
+        sql: shbtatc_program
+        type: string
+
+    -   name: shbtatc_group_primary_ind
+        sql: shbtatc_group_primary_ind
+        type: string
+
+    -   name: shbtatc_group
+        sql: shbtatc_group
+        type: string
+
+    -   name: shbtatc_crse_numb_trns
+        sql: shbtatc_crse_numb_trns
+        type: string
+
+    -   name: shbtatc_activity_date
+        sql: shbtatc_activity_date
+        type: time
+
+    -   name: shbtatc_vpdi_code
+        sql: shbtatc_vpdi_code
+        type: string
+
+    -   name: shbtatc_version
+        sql: shbtatc_version
+        type: string
+
+    -   name: shbtatc_surrogate_id
+        sql: shbtatc_surrogate_id
+        type: string
+
+    -   name: shbtatc_protect_ind
+        sql: shbtatc_protect_ind
+        type: string
+
+    -   name: shbtatc_data_origin
+        sql: shbtatc_data_origin
+        type: string
+
+    -   name: shbtatc_user_id
+        sql: shbtatc_user_id
+        type: string
+
+    -   name: shbtatc_crse_desc
+        sql: shbtatc_crse_desc
+        type: string
+
+    measures: []
+
+    pre_aggregations: []

@@ -1,0 +1,169 @@
+cubes:
+    name: swrtmff_test_current
+
+    sql_table: odsmgr_cust.swrtmff_test_current
+
+    joins:
+    -   name: swrtmff_demo_current
+        sql: '{CUBE}.academic_period = swrtmff_demo_current.academic_period AND {CUBE}.person_uid
+            = swrtmff_demo_current.person_uid'
+        relationship: one_to_many
+
+    dimensions:
+    -   name: person_uid
+        sql: person_uid
+        type: string
+        primary_key: true
+
+    -   name: multi_measure_reading_date
+        sql: multi_measure_reading_date
+        type: time
+
+    -   name: multi_measure_reading
+        sql: multi_measure_reading
+        type: string
+
+    -   name: multi_measure_math_date
+        sql: multi_measure_math_date
+        type: time
+
+    -   name: multi_measure_math
+        sql: multi_measure_math
+        type: string
+
+    -   name: multi_measure_esl_date
+        sql: multi_measure_esl_date
+        type: time
+
+    -   name: multi_measure_esl
+        sql: multi_measure_esl
+        type: string
+
+    -   name: multi_measure_english_date
+        sql: multi_measure_english_date
+        type: time
+
+    -   name: multi_measure_english
+        sql: multi_measure_english
+        type: string
+
+    -   name: english_placement_date
+        sql: english_placement_date
+        type: time
+
+    -   name: english_placement
+        sql: english_placement
+        type: string
+
+    -   name: compass_writing_date
+        sql: compass_writing_date
+        type: time
+
+    -   name: compass_writing
+        sql: compass_writing
+        type: string
+
+    -   name: compass_reading_date
+        sql: compass_reading_date
+        type: time
+
+    -   name: compass_reading
+        sql: compass_reading
+        type: string
+
+    -   name: compass_num_skills_date
+        sql: compass_num_skills_date
+        type: time
+
+    -   name: compass_num_skills
+        sql: compass_num_skills
+        type: string
+
+    -   name: compass_interm_alg_date
+        sql: compass_interm_alg_date
+        type: time
+
+    -   name: compass_interm_alg
+        sql: compass_interm_alg
+        type: string
+
+    -   name: compass_elem_alg_date
+        sql: compass_elem_alg_date
+        type: time
+
+    -   name: compass_elem_alg
+        sql: compass_elem_alg
+        type: string
+
+    -   name: compass_college_alg_date
+        sql: compass_college_alg_date
+        type: time
+
+    -   name: compass_college_alg
+        sql: compass_college_alg
+        type: string
+
+    -   name: asset_writing_skill_date
+        sql: asset_writing_skill_date
+        type: time
+
+    -   name: asset_writing_skill
+        sql: asset_writing_skill
+        type: string
+
+    -   name: asset_trigonometry_date
+        sql: asset_trigonometry_date
+        type: time
+
+    -   name: asset_trigonometry
+        sql: asset_trigonometry
+        type: string
+
+    -   name: asset_reading_skill_date
+        sql: asset_reading_skill_date
+        type: time
+
+    -   name: asset_reading_skill
+        sql: asset_reading_skill
+        type: string
+
+    -   name: asset_numerical_skill_date
+        sql: asset_numerical_skill_date
+        type: time
+
+    -   name: asset_numerical_skill
+        sql: asset_numerical_skill
+        type: string
+
+    -   name: asset_int_algebra_date
+        sql: asset_int_algebra_date
+        type: time
+
+    -   name: asset_int_algebra
+        sql: asset_int_algebra
+        type: string
+
+    -   name: asset_elem_algebra_date
+        sql: asset_elem_algebra_date
+        type: time
+
+    -   name: asset_elem_algebra
+        sql: asset_elem_algebra
+        type: string
+
+    -   name: asset_coll_algebra_date
+        sql: asset_coll_algebra_date
+        type: time
+
+    -   name: asset_coll_algebra
+        sql: asset_coll_algebra
+        type: string
+
+    -   name: academic_period
+        sql: academic_period
+        type: string
+        primary_key: true
+
+    measures: []
+
+    pre_aggregations: []

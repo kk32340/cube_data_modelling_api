@@ -1,0 +1,23 @@
+cubes:
+    name: ir_course_hrs
+
+    sql_table: odsmgr_cust.ir_course_hrs
+
+    joins:
+    -   name: schedule_offering_stusta
+        sql: '{CUBE}.courseid = schedule_offering_stusta.course_identification'
+        relationship: zero_to_many
+
+    dimensions:
+    -   name: courseid
+        sql: courseid
+        type: string
+        primary_key: true
+
+    -   name: avghrs
+        sql: avghrs
+        type: string
+
+    measures: []
+
+    pre_aggregations: []

@@ -1,0 +1,507 @@
+cubes:
+    name: courses_with_attributes
+
+    sql_table: odsmgr_cust.courses_with_attributes
+
+    joins:
+    -   name: ir_course_catalog
+        sql: '{CUBE}.academic_period = ir_course_catalog.academic_period AND {CUBE}.subject
+            = ir_course_catalog.subject AND {CUBE}.course_number = ir_course_catalog.course_number'
+        relationship: one_to_many
+
+    -   name: student_course
+        sql: '{CUBE}.academic_period = student_course.academic_period AND {CUBE}.subject
+            = student_course.subject AND {CUBE}.course_number = student_course.course_number'
+        relationship: one_to_many
+
+    -   name: student_course_shortcut
+        sql: '{CUBE}.academic_period = courses_with_attributes.subject AND {CUBE}.course_number'
+        relationship: zero_to_many
+
+    dimensions:
+    -   name: workbased_lrnact
+        sql: workbased_lrnact
+        type: string
+
+    -   name: uc_transferable
+        sql: uc_transferable
+        type: string
+
+    -   name: subject
+        sql: subject
+        type: string
+        primary_key: true
+
+    -   name: pc_ge_soc_sci
+        sql: pc_ge_soc_sci
+        type: string
+
+    -   name: pc_ge_l_humanit
+        sql: pc_ge_l_humanit
+        type: string
+
+    -   name: pc_ge_k_physedhl
+        sql: pc_ge_k_physedhl
+        type: string
+
+    -   name: pc_ge_j_multicul
+        sql: pc_ge_j_multicul
+        type: string
+
+    -   name: pc_ge_i_analthnk
+        sql: pc_ge_i_analthnk
+        type: string
+
+    -   name: pc_ge_h_soc_beha
+        sql: pc_ge_h_soc_beha
+        type: string
+
+    -   name: pc_ge_hlth_ed
+        sql: pc_ge_hlth_ed
+        type: string
+
+    -   name: pc_ge_g_histpoly
+        sql: pc_ge_g_histpoly
+        type: string
+
+    -   name: pc_ge_generic
+        sql: pc_ge_generic
+        type: string
+
+    -   name: pc_ge_f_physsci
+        sql: pc_ge_f_physsci
+        type: string
+
+    -   name: pc_ge_e_biolsci
+        sql: pc_ge_e_biolsci
+        type: string
+
+    -   name: pc_ge_ethnic
+        sql: pc_ge_ethnic
+        type: string
+
+    -   name: pc_ge_d_math
+        sql: pc_ge_d_math
+        type: string
+
+    -   name: pc_ge_c_comm
+        sql: pc_ge_c_comm
+        type: string
+
+    -   name: pc_ge_b_writing
+        sql: pc_ge_b_writing
+        type: string
+
+    -   name: pc_ge_a_educatn
+        sql: pc_ge_a_educatn
+        type: string
+
+    -   name: precolleg_basic
+        sql: precolleg_basic
+        type: string
+
+    -   name: non_degree_appli
+        sql: non_degree_appli
+        type: string
+
+    -   name: learning_disab
+        sql: learning_disab
+        type: string
+
+    -   name: include_3rd_prd
+        sql: include_3rd_prd
+        type: string
+
+    -   name: include_1st_prd
+        sql: include_1st_prd
+        type: string
+
+    -   name: igetc_6a_non_eng
+        sql: igetc_6a_non_eng
+        type: string
+
+    -   name: igetc_5c_lab
+        sql: igetc_5c_lab
+        type: string
+
+    -   name: igetc_5b_biol
+        sql: igetc_5b_biol
+        type: string
+
+    -   name: igetc_5a_physsci
+        sql: igetc_5a_physsci
+        type: string
+
+    -   name: igetc_4_childdv
+        sql: igetc_4_childdv
+        type: string
+
+    -   name: igetc_4_all
+        sql: igetc_4_all
+        type: string
+
+    -   name: igetc_4_agri
+        sql: igetc_4_agri
+        type: string
+
+    -   name: igetc_4_admjst
+        sql: igetc_4_admjst
+        type: string
+
+    -   name: igetc_4j_soccrim
+        sql: igetc_4j_soccrim
+        type: string
+
+    -   name: igetc_4i_psych
+        sql: igetc_4i_psych
+        type: string
+
+    -   name: igetc_4h_polisci
+        sql: igetc_4h_polisci
+        type: string
+
+    -   name: igetc_4g_interds
+        sql: igetc_4g_interds
+        type: string
+
+    -   name: igetc_4f_history
+        sql: igetc_4f_history
+        type: string
+
+    -   name: igetc_4e_geog
+        sql: igetc_4e_geog
+        type: string
+
+    -   name: igetc_4d_gender
+        sql: igetc_4d_gender
+        type: string
+
+    -   name: igetc_4c_ethnic
+        sql: igetc_4c_ethnic
+        type: string
+
+    -   name: igetc_4b_econ
+        sql: igetc_4b_econ
+        type: string
+
+    -   name: igetc_4a_anthro
+        sql: igetc_4a_anthro
+        type: string
+
+    -   name: igetc_3_art_hum
+        sql: igetc_3_art_hum
+        type: string
+
+    -   name: igetc_3b_humanit
+        sql: igetc_3b_humanit
+        type: string
+
+    -   name: igetc_3a_arts
+        sql: igetc_3a_arts
+        type: string
+
+    -   name: igetc_2a_math
+        sql: igetc_2a_math
+        type: string
+
+    -   name: igetc_1c_speech
+        sql: igetc_1c_speech
+        type: string
+
+    -   name: igetc_1b_critthk
+        sql: igetc_1b_critthk
+        type: string
+
+    -   name: igetc_1a_englcmp
+        sql: igetc_1a_englcmp
+        type: string
+
+    -   name: exclude_from_320
+        sql: exclude_from_320
+        type: string
+
+    -   name: esl
+        sql: esl
+        type: string
+
+    -   name: dvlp_by_cvu_trnd
+        sql: dvlp_by_cvu_trnd
+        type: string
+
+    -   name: cc_trade_practic
+        sql: cc_trade_practic
+        type: string
+
+    -   name: cc_reading
+        sql: cc_reading
+        type: string
+
+    -   name: cc_humanities
+        sql: cc_humanities
+        type: string
+
+    -   name: cc_ge_phys_sci
+        sql: cc_ge_phys_sci
+        type: string
+
+    -   name: cc_ge_lifesci
+        sql: cc_ge_lifesci
+        type: string
+
+    -   name: cc_ge_generic
+        sql: cc_ge_generic
+        type: string
+
+    -   name: cc_ge_art
+        sql: cc_ge_art
+        type: string
+
+    -   name: cc_ge_act_part
+        sql: cc_ge_act_part
+        type: string
+
+    -   name: cc_fine_arts
+        sql: cc_fine_arts
+        type: string
+
+    -   name: course_number
+        sql: course_number
+        type: string
+        primary_key: true
+
+    -   name: course_indentification
+        sql: course_indentification
+        type: string
+
+    -   name: bc_lib_arts
+        sql: bc_lib_arts
+        type: string
+
+    -   name: bc_ge_std_ed_pln
+        sql: bc_ge_std_ed_pln
+        type: string
+
+    -   name: bc_ge_multicult
+        sql: bc_ge_multicult
+        type: string
+
+    -   name: bc_ge_math_comp
+        sql: bc_ge_math_comp
+        type: string
+
+    -   name: bc_ge_generic
+        sql: bc_ge_generic
+        type: string
+
+    -   name: bc_ge_composit
+        sql: bc_ge_composit
+        type: string
+
+    -   name: bc_gee2_phys_act
+        sql: bc_gee2_phys_act
+        type: string
+
+    -   name: bc_gee2_life_lrn
+        sql: bc_gee2_life_lrn
+        type: string
+
+    -   name: bc_ged3_amer_ins
+        sql: bc_ged3_amer_ins
+        type: string
+
+    -   name: bc_ged2_soc_sci
+        sql: bc_ged2_soc_sci
+        type: string
+
+    -   name: bc_ged1_behav_sc
+        sql: bc_ged1_behav_sc
+        type: string
+
+    -   name: bc_gec_art_lit_p
+        sql: bc_gec_art_lit_p
+        type: string
+
+    -   name: bc_geb2_math_log
+        sql: bc_geb2_math_log
+        type: string
+
+    -   name: bc_geb1_nat_sci
+        sql: bc_geb1_nat_sci
+        type: string
+
+    -   name: bc_gea2_writ_com
+        sql: bc_gea2_writ_com
+        type: string
+
+    -   name: bc_gea1_oral_com
+        sql: bc_gea1_oral_com
+        type: string
+
+    -   name: bc_ge9_phys_educ
+        sql: bc_ge9_phys_educ
+        type: string
+
+    -   name: bc_ge8_hlth_educ
+        sql: bc_ge8_hlth_educ
+        type: string
+
+    -   name: bc_ge7_math_logc
+        sql: bc_ge7_math_logc
+        type: string
+
+    -   name: bc_ge6_humanit
+        sql: bc_ge6_humanit
+        type: string
+
+    -   name: bc_ge5_natsci
+        sql: bc_ge5_natsci
+        type: string
+
+    -   name: bc_ge4_behavsci
+        sql: bc_ge4_behavsci
+        type: string
+
+    -   name: bc_ge3_socsci_a
+        sql: bc_ge3_socsci_a
+        type: string
+
+    -   name: bc_ge2_speech
+        sql: bc_ge2_speech
+        type: string
+
+    -   name: bc_ge2_socsci_b
+        sql: bc_ge2_socsci_b
+        type: string
+
+    -   name: bc_ge1_english
+        sql: bc_ge1_english
+        type: string
+
+    -   name: bc_elective
+        sql: bc_elective
+        type: string
+
+    -   name: basic_not_precol
+        sql: basic_not_precol
+        type: string
+
+    -   name: csu_transferable
+        sql: csu_transferable
+        type: string
+
+    -   name: csu_e2_activity
+        sql: csu_e2_activity
+        type: string
+
+    -   name: csu_e2_1unitpe
+        sql: csu_e2_1unitpe
+        type: string
+
+    -   name: csu_e1_int_org
+        sql: csu_e1_int_org
+        type: string
+
+    -   name: csu_d_any
+        sql: csu_d_any
+        type: string
+
+    -   name: csu_d9_psych
+        sql: csu_d9_psych
+        type: string
+
+    -   name: csu_d8_polysci
+        sql: csu_d8_polysci
+        type: string
+
+    -   name: csu_d7_interdis
+        sql: csu_d7_interdis
+        type: string
+
+    -   name: csu_d6_history
+        sql: csu_d6_history
+        type: string
+
+    -   name: csu_d5_geogr
+        sql: csu_d5_geogr
+        type: string
+
+    -   name: csu_d4_gender
+        sql: csu_d4_gender
+        type: string
+
+    -   name: csu_d3_ethnic
+        sql: csu_d3_ethnic
+        type: string
+
+    -   name: csu_d2_econ
+        sql: csu_d2_econ
+        type: string
+
+    -   name: csu_d1_anth_arch
+        sql: csu_d1_anth_arch
+        type: string
+
+    -   name: csu_d10_soc_crim
+        sql: csu_d10_soc_crim
+        type: string
+
+    -   name: csu_c2_humani
+        sql: csu_c2_humani
+        type: string
+
+    -   name: csu_c1_arts
+        sql: csu_c1_arts
+        type: string
+
+    -   name: csu_c1or2_arthum
+        sql: csu_c1or2_arthum
+        type: string
+
+    -   name: csu_b4_math
+        sql: csu_b4_math
+        type: string
+
+    -   name: csu_b3_lab
+        sql: csu_b3_lab
+        type: string
+
+    -   name: csu_b2_biolsci
+        sql: csu_b2_biolsci
+        type: string
+
+    -   name: csu_b1_physsci
+        sql: csu_b1_physsci
+        type: string
+
+    -   name: csu_b1or2_lab
+        sql: csu_b1or2_lab
+        type: string
+
+    -   name: csu_amerinst2
+        sql: csu_amerinst2
+        type: string
+
+    -   name: csu_amerinst1
+        sql: csu_amerinst1
+        type: string
+
+    -   name: csu_a3_crit_thnk
+        sql: csu_a3_crit_thnk
+        type: string
+
+    -   name: csu_a2_writ_com
+        sql: csu_a2_writ_com
+        type: string
+
+    -   name: csu_a1_oral_com
+        sql: csu_a1_oral_com
+        type: string
+
+    -   name: academic_period
+        sql: academic_period
+        type: string
+        primary_key: true
+
+    measures: []
+
+    pre_aggregations: []

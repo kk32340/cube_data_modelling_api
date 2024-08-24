@@ -1,0 +1,47 @@
+cubes:
+    name: top_sixth_ed
+
+    sql_table: odsmgr_cust.top_sixth_ed
+
+    joins:
+    -   name: course_catalog_mat
+        sql: '{CUBE}.top = course_catalog_mat.taxonomy_of_program_code'
+        relationship: one_to_many
+
+    -   name: academic_outcome
+        sql: '{CUBE}.top = academic_outcome.tops_code'
+        relationship: zero_to_many
+
+    -   name: academic_outcome_a
+        sql: '{CUBE}.top = academic_outcome_a.tops_code'
+        relationship: zero_to_many
+
+    dimensions:
+    -   name: top_title
+        sql: top_title
+        type: string
+
+    -   name: top
+        sql: top
+        type: string
+        primary_key: true
+
+    -   name: field1
+        sql: field1
+        type: string
+
+    -   name: cip_title
+        sql: cip_title
+        type: string
+
+    -   name: cip
+        sql: cip
+        type: string
+
+    -   name: cip_code
+        sql: cip_code
+        type: string
+
+    measures: []
+
+    pre_aggregations: []

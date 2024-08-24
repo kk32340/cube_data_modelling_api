@@ -1,0 +1,167 @@
+cubes:
+    name: address_current
+
+    sql_table: odsmgr.address_current
+
+    joins:
+    -   name: student course
+        sql: '{CUBE}.entity_uid = student course.person_uid'
+        relationship: one_to_many
+
+    -   name: person_stusta
+        sql: '{CUBE}.entity_uid = person_stusta.person_uid'
+        relationship: zero_to_many
+
+    -   name: swratnd_stusta
+        sql: '{CUBE}.entity_uid = swratnd_stusta.swratnd_pidm'
+        relationship: one_to_many
+
+    dimensions:
+    -   name: house_number
+        sql: house_number
+        type: string
+
+    -   name: street_line4
+        sql: street_line4
+        type: string
+
+    -   name: street_line3
+        sql: street_line3
+        type: string
+
+    -   name: street_line2
+        sql: street_line2
+        type: string
+
+    -   name: street_line1
+        sql: street_line1
+        type: string
+
+    -   name: state_province_desc
+        sql: state_province_desc
+        type: string
+
+    -   name: state_province
+        sql: state_province
+        type: string
+
+    -   name: process_group
+        sql: process_group
+        type: string
+
+    -   name: preferred_address_ind
+        sql: preferred_address_ind
+        type: string
+
+    -   name: postal_code
+        sql: postal_code
+        type: string
+
+    -   name: mailing_address_county
+        sql: mailing_address_county
+        type: string
+
+    -   name: mailing_address
+        sql: mailing_address
+        type: string
+
+    -   name: nation_iso_code
+        sql: nation_iso_code
+        type: string
+
+    -   name: nation_edi_equivalent
+        sql: nation_edi_equivalent
+        type: string
+
+    -   name: nation_desc
+        sql: nation_desc
+        type: string
+
+    -   name: nation
+        sql: nation
+        type: string
+
+    -   name: name
+        sql: name
+        type: string
+
+    -   name: multi_source_desc
+        sql: multi_source_desc
+        type: string
+
+    -   name: multi_source
+        sql: multi_source
+        type: string
+
+    -   name: id
+        sql: id
+        type: string
+
+    -   name: geographic_region_count
+        sql: geographic_region_count
+        type: string
+
+    -   name: entity_uid
+        sql: entity_uid
+        type: string
+        primary_key: true
+
+    -   name: delivery_point
+        sql: delivery_point
+        type: string
+
+    -   name: enrl_planning_service_desc
+        sql: enrl_planning_service_desc
+        type: string
+
+    -   name: enrl_planning_service
+        sql: enrl_planning_service
+        type: string
+
+    -   name: edi_equivalent
+        sql: edi_equivalent
+        type: string
+
+    -   name: federal_reporting_code
+        sql: federal_reporting_code
+        type: string
+
+    -   name: carrier_route
+        sql: carrier_route
+        type: string
+
+    -   name: county_desc
+        sql: county_desc
+        type: string
+
+    -   name: county
+        sql: county
+        type: string
+
+    -   name: correction_digit
+        sql: correction_digit
+        type: string
+
+    -   name: city
+        sql: city
+        type: string
+
+    -   name: administrative_group
+        sql: administrative_group
+        type: string
+
+    -   name: address_type_desc
+        sql: address_type_desc
+        type: string
+
+    -   name: address_type
+        sql: address_type
+        type: string
+
+    -   name: address_seq_number
+        sql: address_seq_number
+        type: string
+
+    measures: []
+
+    pre_aggregations: []

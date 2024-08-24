@@ -1,0 +1,95 @@
+cubes:
+    name: stvmajr
+
+    sql_table: saturn.stvmajr
+
+    joins:
+    -   name: top_sixth_ed
+        sql: '{CUBE}.stvmajr_tops_code = top_sixth_ed.top'
+        relationship: one_to_many
+
+    -   name: stvmajr_stusta
+        sql: '{CUBE}.stvmajr_tops_code = stvmajr_stusta.stvmajr_tops_code'
+        relationship: one_to_one
+
+    dimensions:
+    -   name: stvmajr_vpdi_code
+        sql: stvmajr_vpdi_code
+        type: string
+
+    -   name: stvmajr_data_origin
+        sql: stvmajr_data_origin
+        type: string
+
+    -   name: stvmajr_user_id
+        sql: stvmajr_user_id
+        type: string
+
+    -   name: stvmajr_version
+        sql: stvmajr_version
+        type: string
+
+    -   name: stvmajr_surrogate_id
+        sql: stvmajr_surrogate_id
+        type: string
+
+    -   name: stvmajr_tops_code
+        sql: stvmajr_tops_code
+        type: string
+        primary_key: true
+
+    -   name: stvmajr_sevis_equiv
+        sql: stvmajr_sevis_equiv
+        type: string
+
+    -   name: stvmajr_disp_web_ind
+        sql: stvmajr_disp_web_ind
+        type: string
+
+    -   name: stvmajr_vr_msg_no
+        sql: stvmajr_vr_msg_no
+        type: string
+
+    -   name: stvmajr_system_req_ind
+        sql: stvmajr_system_req_ind
+        type: string
+
+    -   name: stvmajr_aid_eligibility_ind
+        sql: stvmajr_aid_eligibility_ind
+        type: string
+
+    -   name: stvmajr_occupation_ind
+        sql: stvmajr_occupation_ind
+        type: string
+
+    -   name: stvmajr_activity_date
+        sql: stvmajr_activity_date
+        type: time
+
+    -   name: stvmajr_valid_concentratn_ind
+        sql: stvmajr_valid_concentratn_ind
+        type: string
+
+    -   name: stvmajr_valid_minor_ind
+        sql: stvmajr_valid_minor_ind
+        type: string
+
+    -   name: stvmajr_valid_major_ind
+        sql: stvmajr_valid_major_ind
+        type: string
+
+    -   name: stvmajr_cipc_code
+        sql: stvmajr_cipc_code
+        type: string
+
+    -   name: stvmajr_desc
+        sql: stvmajr_desc
+        type: string
+
+    -   name: stvmajr_code
+        sql: stvmajr_code
+        type: string
+
+    measures: []
+
+    pre_aggregations: []

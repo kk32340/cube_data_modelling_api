@@ -1,0 +1,39 @@
+cubes:
+    name: cust_stu_default_sum_all_fa
+
+    sql_table: odsmgr_cust.cust_stu_default_sum_all_fa
+
+    joins:
+    -   name: ir_student_defaults
+        sql: '{CUBE}.person_uid = ir_student_defaults.pidm'
+        relationship: one_to_many
+
+    dimensions:
+    -   name: totalaid
+        sql: totalaid
+        type: string
+
+    -   name: fund_title
+        sql: fund_title
+        type: string
+
+    -   name: aid_year_desc
+        sql: aid_year_desc
+        type: string
+
+    -   name: aid_year
+        sql: aid_year
+        type: string
+
+    -   name: id
+        sql: id
+        type: string
+
+    -   name: person_uid
+        sql: person_uid
+        type: string
+        primary_key: true
+
+    measures: []
+
+    pre_aggregations: []

@@ -1,0 +1,471 @@
+cubes:
+    name: person_detail
+
+    sql_table: odsmgr.person_detail
+
+    joins:
+    -   name: calcard_transactions
+        sql: '{CUBE}.person_uid = calcard_transactions.cardholder_pidm'
+        relationship: one_to_many
+
+    -   name: person
+        sql: '{CUBE}.person_uid = person.person_uid'
+        relationship: one_to_many
+
+    -   name: student_course
+        sql: '{CUBE}.person_uid = student_course.person_uid'
+        relationship: one_to_many
+
+    dimensions:
+    -   name: entity_activity_date
+        sql: entity_activity_date
+        type: time
+
+    -   name: entity_origin
+        sql: entity_origin
+        type: string
+
+    -   name: entity_update_user
+        sql: entity_update_user
+        type: string
+
+    -   name: entity_create_date
+        sql: entity_create_date
+        type: time
+
+    -   name: entity_create_data_origin
+        sql: entity_create_data_origin
+        type: string
+
+    -   name: entity_create_user
+        sql: entity_create_user
+        type: string
+
+    -   name: alternative_id_count
+        sql: alternative_id_count
+        type: string
+
+    -   name: veteran_special_disabled_ind
+        sql: veteran_special_disabled_ind
+        type: string
+
+    -   name: veteran_file_no
+        sql: veteran_file_no
+        type: string
+
+    -   name: veteran_category_desc
+        sql: veteran_category_desc
+        type: string
+
+    -   name: veteran_category
+        sql: veteran_category
+        type: string
+
+    -   name: tax_id
+        sql: tax_id
+        type: string
+
+    -   name: salutations_count
+        sql: salutations_count
+        type: string
+
+    -   name: spouse_accompanied_ind
+        sql: spouse_accompanied_ind
+        type: string
+
+    -   name: sponsor_of_person_desc
+        sql: sponsor_of_person_desc
+        type: string
+
+    -   name: sponsor_of_person
+        sql: sponsor_of_person
+        type: string
+
+    -   name: religion_desc
+        sql: religion_desc
+        type: string
+
+    -   name: religion
+        sql: religion
+        type: string
+
+    -   name: release_information_comment
+        sql: release_information_comment
+        type: string
+
+    -   name: signature_ind
+        sql: signature_ind
+        type: string
+
+    -   name: race_ethnicity_confirm_ind
+        sql: race_ethnicity_confirm_ind
+        type: string
+
+    -   name: race_ethnicity_confirm_date
+        sql: race_ethnicity_confirm_date
+        type: time
+
+    -   name: race_count
+        sql: race_count
+        type: string
+
+    -   name: race_category_count
+        sql: race_category_count
+        type: string
+
+    -   name: person_uid
+        sql: person_uid
+        type: string
+        primary_key: true
+
+    -   name: process_group
+        sql: process_group
+        type: string
+
+    -   name: passport_registration_no
+        sql: passport_registration_no
+        type: string
+
+    -   name: passport_issue_nation_desc
+        sql: passport_issue_nation_desc
+        type: string
+
+    -   name: passport_issue_nation
+        sql: passport_issue_nation
+        type: string
+
+    -   name: passport_id
+        sql: passport_id
+        type: string
+
+    -   name: passport_expire_date
+        sql: passport_expire_date
+        type: time
+
+    -   name: passport_certif_number
+        sql: passport_certif_number
+        type: string
+
+    -   name: passport_certif_elig_desc
+        sql: passport_certif_elig_desc
+        type: string
+
+    -   name: prim_medical_equipment_desc
+        sql: prim_medical_equipment_desc
+        type: string
+
+    -   name: prim_medical_equipment
+        sql: prim_medical_equipment
+        type: string
+
+    -   name: prim_medical_condition_desc
+        sql: prim_medical_condition_desc
+        type: string
+
+    -   name: prim_medical_condition
+        sql: prim_medical_condition
+        type: string
+
+    -   name: prim_ethnicity_category_desc
+        sql: prim_ethnicity_category_desc
+        type: string
+
+    -   name: prim_ethnicity_category
+        sql: prim_ethnicity_category
+        type: string
+
+    -   name: prim_disability_service_desc
+        sql: prim_disability_service_desc
+        type: string
+
+    -   name: prim_disability_service
+        sql: prim_disability_service
+        type: string
+
+    -   name: prim_disability_desc
+        sql: prim_disability_desc
+        type: string
+
+    -   name: prim_disability
+        sql: prim_disability
+        type: string
+
+    -   name: passport_certif_elig
+        sql: passport_certif_elig
+        type: string
+
+    -   name: passport_certif_date_recvd
+        sql: passport_certif_date_recvd
+        type: time
+
+    -   name: passport_certif_date_issue
+        sql: passport_certif_date_issue
+        type: time
+
+    -   name: primary_ethnicity_desc
+        sql: primary_ethnicity_desc
+        type: string
+
+    -   name: primary_ethnicity
+        sql: primary_ethnicity
+        type: string
+
+    -   name: preferred_first_name
+        sql: preferred_first_name
+        type: string
+
+    -   name: medical_information_count
+        sql: medical_information_count
+        type: string
+
+    -   name: marital_status_desc
+        sql: marital_status_desc
+        type: string
+
+    -   name: marital_status
+        sql: marital_status
+        type: string
+
+    -   name: nickname
+        sql: nickname
+        type: string
+
+    -   name: mailing_name_preferred
+        sql: mailing_name_preferred
+        type: string
+
+    -   name: mailing_name_informal
+        sql: mailing_name_informal
+        type: string
+
+    -   name: mailing_name_formal
+        sql: mailing_name_formal
+        type: string
+
+    -   name: native_language_desc
+        sql: native_language_desc
+        type: string
+
+    -   name: native_language
+        sql: native_language
+        type: string
+
+    -   name: nation_of_citizenship_desc2
+        sql: nation_of_citizenship_desc2
+        type: string
+
+    -   name: nation_of_citizenship_desc
+        sql: nation_of_citizenship_desc
+        type: string
+
+    -   name: nation_of_citizenship2
+        sql: nation_of_citizenship2
+        type: string
+
+    -   name: nation_of_citizenship
+        sql: nation_of_citizenship
+        type: string
+
+    -   name: nation_of_birth_desc
+        sql: nation_of_birth_desc
+        type: string
+
+    -   name: nation_of_birth
+        sql: nation_of_birth
+        type: string
+
+    -   name: name_type_desc
+        sql: name_type_desc
+        type: string
+
+    -   name: name_type
+        sql: name_type
+        type: string
+
+    -   name: name_suffix
+        sql: name_suffix
+        type: string
+
+    -   name: name_prefix
+        sql: name_prefix
+        type: string
+
+    -   name: multi_source_desc
+        sql: multi_source_desc
+        type: string
+
+    -   name: legal_name
+        sql: legal_name
+        type: string
+
+    -   name: legacy_desc
+        sql: legacy_desc
+        type: string
+
+    -   name: legacy
+        sql: legacy
+        type: string
+
+    -   name: last_name_prefix
+        sql: last_name_prefix
+        type: string
+
+    -   name: last_name
+        sql: last_name
+        type: string
+
+    -   name: multi_source
+        sql: multi_source
+        type: string
+
+    -   name: military_separation_date
+        sql: military_separation_date
+        type: time
+
+    -   name: military_branch
+        sql: military_branch
+        type: string
+
+    -   name: middle_name
+        sql: middle_name
+        type: string
+
+    -   name: middle_initial
+        sql: middle_initial
+        type: string
+
+    -   name: full_name_lfmi
+        sql: full_name_lfmi
+        type: string
+
+    -   name: full_name_fmil
+        sql: full_name_fmil
+        type: string
+
+    -   name: immigration_status_date
+        sql: immigration_status_date
+        type: time
+
+    -   name: immigration_status
+        sql: immigration_status
+        type: string
+
+    -   name: id_source
+        sql: id_source
+        type: string
+
+    -   name: id3
+        sql: id3
+        type: string
+
+    -   name: id2
+        sql: id2
+        type: string
+
+    -   name: id
+        sql: id
+        type: string
+
+    -   name: foreign_ssn
+        sql: foreign_ssn
+        type: string
+
+    -   name: hispanic_latino_ethnicity_ind
+        sql: hispanic_latino_ethnicity_ind
+        type: string
+
+    -   name: first_name
+        sql: first_name
+        type: string
+
+    -   name: government_id
+        sql: government_id
+        type: string
+
+    -   name: gender_desc
+        sql: gender_desc
+        type: string
+
+    -   name: gender
+        sql: gender
+        type: string
+
+    -   name: ethnicity_edi_equiv
+        sql: ethnicity_edi_equiv
+        type: string
+
+    -   name: deceased_status
+        sql: deceased_status
+        type: string
+
+    -   name: deceased_date
+        sql: deceased_date
+        type: time
+
+    -   name: employment_type_desc
+        sql: employment_type_desc
+        type: string
+
+    -   name: employment_type
+        sql: employment_type
+        type: string
+
+    -   name: email_preferred_desc
+        sql: email_preferred_desc
+        type: string
+
+    -   name: email_preferred_address
+        sql: email_preferred_address
+        type: string
+
+    -   name: email_preferred
+        sql: email_preferred
+        type: string
+
+    -   name: current_age
+        sql: current_age
+        type: string
+
+    -   name: duration_of_stay
+        sql: duration_of_stay
+        type: string
+
+    -   name: birth_date
+        sql: birth_date
+        type: time
+
+    -   name: confidentiality_ind
+        sql: confidentiality_ind
+        type: string
+
+    -   name: confidentiality_comment
+        sql: confidentiality_comment
+        type: string
+
+    -   name: citizenship_type
+        sql: citizenship_type
+        type: string
+
+    -   name: citizenship_ind
+        sql: citizenship_ind
+        type: string
+
+    -   name: citizenship_edi_equiv
+        sql: citizenship_edi_equiv
+        type: string
+
+    -   name: citizenship_desc
+        sql: citizenship_desc
+        type: string
+
+    -   name: children_number
+        sql: children_number
+        type: string
+
+    -   name: administrative_group
+        sql: administrative_group
+        type: string
+
+    measures: []
+
+    pre_aggregations: []

@@ -1,0 +1,235 @@
+cubes:
+    name: degree_slot
+
+    sql_table: odsmgr.degree_slot
+
+    joins:
+    -   name: person_stusta
+        sql: '{CUBE}.person_uid = person_stusta.person_uid'
+        relationship: zero_to_many
+
+    dimensions:
+    -   name: person_uid
+        sql: person_uid
+        type: string
+        primary_key: true
+
+    -   name: process_group
+        sql: process_group
+        type: string
+
+    -   name: major2_desc_3
+        sql: major2_desc_3
+        type: string
+
+    -   name: major2_desc_2
+        sql: major2_desc_2
+        type: string
+
+    -   name: major2_desc_1
+        sql: major2_desc_1
+        type: string
+
+    -   name: major2_3
+        sql: major2_3
+        type: string
+
+    -   name: major2_2
+        sql: major2_2
+        type: string
+
+    -   name: major2_1
+        sql: major2_1
+        type: string
+
+    -   name: major1_desc_3
+        sql: major1_desc_3
+        type: string
+
+    -   name: major1_desc_2
+        sql: major1_desc_2
+        type: string
+
+    -   name: major1_desc_1
+        sql: major1_desc_1
+        type: string
+
+    -   name: major1_3
+        sql: major1_3
+        type: string
+
+    -   name: major1_2
+        sql: major1_2
+        type: string
+
+    -   name: major1_1
+        sql: major1_1
+        type: string
+
+    -   name: multi_source_desc
+        sql: multi_source_desc
+        type: string
+
+    -   name: multi_source
+        sql: multi_source
+        type: string
+
+    -   name: institution_ind
+        sql: institution_ind
+        type: string
+
+    -   name: institution_desc_3
+        sql: institution_desc_3
+        type: string
+
+    -   name: institution_desc_2
+        sql: institution_desc_2
+        type: string
+
+    -   name: institution_desc_1
+        sql: institution_desc_1
+        type: string
+
+    -   name: institution_3
+        sql: institution_3
+        type: string
+
+    -   name: institution_2
+        sql: institution_2
+        type: string
+
+    -   name: institution_1
+        sql: institution_1
+        type: string
+
+    -   name: honor1_desc_3
+        sql: honor1_desc_3
+        type: string
+
+    -   name: honor1_desc_2
+        sql: honor1_desc_2
+        type: string
+
+    -   name: honor1_desc_1
+        sql: honor1_desc_1
+        type: string
+
+    -   name: honor1_3
+        sql: honor1_3
+        type: string
+
+    -   name: honor1_2
+        sql: honor1_2
+        type: string
+
+    -   name: honor1_1
+        sql: honor1_1
+        type: string
+
+    -   name: degree_level_desc_3
+        sql: degree_level_desc_3
+        type: string
+
+    -   name: degree_level_desc_2
+        sql: degree_level_desc_2
+        type: string
+
+    -   name: degree_level_desc_1
+        sql: degree_level_desc_1
+        type: string
+
+    -   name: degree_level_3
+        sql: degree_level_3
+        type: string
+
+    -   name: degree_level_2
+        sql: degree_level_2
+        type: string
+
+    -   name: degree_level_1
+        sql: degree_level_1
+        type: string
+
+    -   name: degree_desc_3
+        sql: degree_desc_3
+        type: string
+
+    -   name: degree_desc_2
+        sql: degree_desc_2
+        type: string
+
+    -   name: degree_desc_1
+        sql: degree_desc_1
+        type: string
+
+    -   name: degree_date_3
+        sql: degree_date_3
+        type: time
+
+    -   name: degree_date_2
+        sql: degree_date_2
+        type: time
+
+    -   name: degree_date_1
+        sql: degree_date_1
+        type: time
+
+    -   name: degree_3
+        sql: degree_3
+        type: string
+
+    -   name: degree_2
+        sql: degree_2
+        type: string
+
+    -   name: degree_1
+        sql: degree_1
+        type: string
+
+    -   name: college_desc_3
+        sql: college_desc_3
+        type: string
+
+    -   name: college_desc_2
+        sql: college_desc_2
+        type: string
+
+    -   name: college_desc_1
+        sql: college_desc_1
+        type: string
+
+    -   name: college_3
+        sql: college_3
+        type: string
+
+    -   name: college_2
+        sql: college_2
+        type: string
+
+    -   name: college_1
+        sql: college_1
+        type: string
+
+    -   name: administrative_group
+        sql: administrative_group
+        type: string
+
+    -   name: activity_date
+        sql: activity_date
+        type: time
+
+    -   name: academic_year_3
+        sql: academic_year_3
+        type: string
+
+    -   name: academic_year_2
+        sql: academic_year_2
+        type: string
+
+    -   name: academic_year_1
+        sql: academic_year_1
+        type: string
+
+    measures: []
+
+    pre_aggregations: []

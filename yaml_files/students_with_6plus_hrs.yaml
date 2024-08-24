@@ -1,0 +1,111 @@
+cubes:
+    name: students_with_6plus_hrs
+
+    sql_table: odsmgr_cust.students_with_6plus_hrs
+
+    joins: []
+
+    dimensions:
+    -   name: degree or certificate
+        sql: degree or certificate
+        type: string
+
+    -   name: major
+        sql: major
+        type: string
+
+    -   name: earned_credits
+        sql: earned_credits
+        type: string
+
+    -   name: last term
+        sql: last term
+        type: string
+
+    -   name: begin term
+        sql: begin term
+        type: string
+
+    -   name: marital status
+        sql: marital status
+        type: string
+
+    -   name: decease date
+        sql: decease date
+        type: time
+
+    -   name: high school
+        sql: high school
+        type: string
+
+    -   name: confidentiality indicator
+        sql: confidentiality indicator
+        type: string
+
+    -   name: gender
+        sql: gender
+        type: string
+
+    -   name: email address
+        sql: email address
+        type: string
+
+    -   name: date of birth
+        sql: date of birth
+        type: time
+
+    -   name: cell phone
+        sql: cell phone
+        type: string
+
+    -   name: evening phone
+        sql: evening phone
+        type: string
+
+    -   name: day phone
+        sql: day phone
+        type: string
+
+    -   name: postal_code
+        sql: postal_code
+        type: string
+
+    -   name: state
+        sql: state
+        type: string
+
+    -   name: city
+        sql: city
+        type: string
+
+    -   name: street
+        sql: street
+        type: string
+
+    -   name: middle name
+        sql: middle name
+        type: string
+
+    -   name: first name
+        sql: first name
+        type: string
+
+    -   name: last name
+        sql: last name
+        type: string
+
+    -   name: id
+        sql: id
+        type: string
+
+    -   name: person_uid
+        sql: person_uid
+        type: string
+
+    -   name: home_college
+        sql: home_college
+        type: string
+
+    measures: []
+
+    pre_aggregations: []

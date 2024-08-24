@@ -1,0 +1,105 @@
+cubes:
+    name: mst_course_attribute
+
+    sql_table: odsmgr.mst_course_attribute
+
+    joins:
+    -   name: mst_course_catalog
+        sql: '{CUBE}.academic_period_start = mst_course_attribute.academic_period_start
+            AND {CUBE}.academic_period_end = mst_course_attribute.academic_period_start
+            AND {CUBE}.course_number = mst_course_attribute.course_number AND {CUBE}.subject
+            = mst_course_attribute.subject'
+        relationship: zero_to_many
+
+    dimensions:
+    -   name: sub_academic_period_desc
+        sql: sub_academic_period_desc
+        type: string
+
+    -   name: sub_academic_period
+        sql: sub_academic_period
+        type: string
+
+    -   name: subject_desc
+        sql: subject_desc
+        type: string
+
+    -   name: subject
+        sql: subject
+        type: string
+        primary_key: true
+
+    -   name: zone_value
+        sql: zone_value
+        type: string
+
+    -   name: last_dml_date
+        sql: last_dml_date
+        type: time
+
+    -   name: last_activity_dml
+        sql: last_activity_dml
+        type: string
+
+    -   name: last_activity_date
+        sql: last_activity_date
+        type: time
+
+    -   name: mif_value
+        sql: mif_value
+        type: string
+
+    -   name: mif_desc
+        sql: mif_desc
+        type: string
+
+    -   name: domain_value
+        sql: domain_value
+        type: string
+
+    -   name: course_version
+        sql: course_version
+        type: string
+
+    -   name: course_number
+        sql: course_number
+        type: string
+        primary_key: true
+
+    -   name: course_attribute_desc
+        sql: course_attribute_desc
+        type: string
+
+    -   name: course_attribute
+        sql: course_attribute
+        type: string
+
+    -   name: academic_year_desc
+        sql: academic_year_desc
+        type: string
+
+    -   name: academic_period_start_desc
+        sql: academic_period_start_desc
+        type: string
+
+    -   name: academic_period_start
+        sql: academic_period_start
+        type: string
+        primary_key: true
+
+    -   name: academic_year
+        sql: academic_year
+        type: string
+
+    -   name: academic_period_end_desc
+        sql: academic_period_end_desc
+        type: string
+
+    -   name: academic_period_end
+        sql: academic_period_end
+        type: string
+        primary_key: true
+
+    measures: []
+
+    pre_aggregations: []

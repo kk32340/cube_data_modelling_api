@@ -1,0 +1,1019 @@
+cubes:
+    name: admissions_application
+
+    sql_table: odsmgr.admissions_application
+
+    joins:
+    -   name: admissions_decision_slot
+        sql: '{CUBE}.person_uid = admissions_decision_slot.person_uid AND {CUBE}.academic_period
+            = admissions_decision_slot.academic_period AND {CUBE}.application_number
+            = admissions_decision_slot.application_number'
+        relationship: one_to_one
+
+    -   name: admissions_requirement
+        sql: '{CUBE}.person_uid = admissions_requirement.person_uid AND {CUBE}.academic_year
+            = admissions_requirement.academic_year AND {CUBE}.academic_period = admissions_requirement.academic_period
+            AND {CUBE}.application_number = admissions_requirement.application_number'
+        relationship: one_to_one
+
+    -   name: pre_student
+        sql: '{CUBE}.person_uid = pre_student.person_uid'
+        relationship: one_to_many
+
+    -   name: admissions_rating_alias
+        sql: '{CUBE}.person_uid = admissions_application.application_number AND {CUBE}.academic_year
+            = admissions_application.academic_period'
+        relationship: one_to_one
+
+    -   name: ir_student_person
+        sql: '{CUBE}.person_uid = ir_student_person.person_uid'
+        relationship: one_to_one
+
+    dimensions:
+    -   name: appl_fee_waiver_reason_desc
+        sql: appl_fee_waiver_reason_desc
+        type: string
+
+    -   name: appl_fee_waiver_reason
+        sql: appl_fee_waiver_reason
+        type: string
+
+    -   name: application_info20
+        sql: application_info20
+        type: string
+
+    -   name: application_info_type20
+        sql: application_info_type20
+        type: string
+
+    -   name: application_info19
+        sql: application_info19
+        type: string
+
+    -   name: application_info_type19
+        sql: application_info_type19
+        type: string
+
+    -   name: application_info18
+        sql: application_info18
+        type: string
+
+    -   name: application_info_type18
+        sql: application_info_type18
+        type: string
+
+    -   name: application_info17
+        sql: application_info17
+        type: string
+
+    -   name: application_info_type17
+        sql: application_info_type17
+        type: string
+
+    -   name: application_info16
+        sql: application_info16
+        type: string
+
+    -   name: application_info_type16
+        sql: application_info_type16
+        type: string
+
+    -   name: application_info15
+        sql: application_info15
+        type: string
+
+    -   name: application_info_type15
+        sql: application_info_type15
+        type: string
+
+    -   name: application_info14
+        sql: application_info14
+        type: string
+
+    -   name: application_info_type14
+        sql: application_info_type14
+        type: string
+
+    -   name: application_info13
+        sql: application_info13
+        type: string
+
+    -   name: application_info_type13
+        sql: application_info_type13
+        type: string
+
+    -   name: application_info12
+        sql: application_info12
+        type: string
+
+    -   name: application_info_type12
+        sql: application_info_type12
+        type: string
+
+    -   name: application_info11
+        sql: application_info11
+        type: string
+
+    -   name: application_info_type11
+        sql: application_info_type11
+        type: string
+
+    -   name: application_info10
+        sql: application_info10
+        type: string
+
+    -   name: application_info_type10
+        sql: application_info_type10
+        type: string
+
+    -   name: application_info9
+        sql: application_info9
+        type: string
+
+    -   name: application_info_type9
+        sql: application_info_type9
+        type: string
+
+    -   name: application_info8
+        sql: application_info8
+        type: string
+
+    -   name: application_info_type8
+        sql: application_info_type8
+        type: string
+
+    -   name: application_info7
+        sql: application_info7
+        type: string
+
+    -   name: application_info_type7
+        sql: application_info_type7
+        type: string
+
+    -   name: application_info6
+        sql: application_info6
+        type: string
+
+    -   name: application_info_type6
+        sql: application_info_type6
+        type: string
+
+    -   name: application_info_type5
+        sql: application_info_type5
+        type: string
+
+    -   name: application_info_type4
+        sql: application_info_type4
+        type: string
+
+    -   name: application_info_type3
+        sql: application_info_type3
+        type: string
+
+    -   name: application_info_type2
+        sql: application_info_type2
+        type: string
+
+    -   name: application_info_type1
+        sql: application_info_type1
+        type: string
+
+    -   name: application_ind10
+        sql: application_ind10
+        type: string
+
+    -   name: application_ind_type10
+        sql: application_ind_type10
+        type: string
+
+    -   name: application_ind9
+        sql: application_ind9
+        type: string
+
+    -   name: application_ind_type9
+        sql: application_ind_type9
+        type: string
+
+    -   name: application_ind8
+        sql: application_ind8
+        type: string
+
+    -   name: application_ind_type8
+        sql: application_ind_type8
+        type: string
+
+    -   name: application_ind7
+        sql: application_ind7
+        type: string
+
+    -   name: application_ind_type7
+        sql: application_ind_type7
+        type: string
+
+    -   name: application_ind6
+        sql: application_ind6
+        type: string
+
+    -   name: application_ind_type6
+        sql: application_ind_type6
+        type: string
+
+    -   name: application_ind5
+        sql: application_ind5
+        type: string
+
+    -   name: application_ind_type5
+        sql: application_ind_type5
+        type: string
+
+    -   name: application_ind4
+        sql: application_ind4
+        type: string
+
+    -   name: application_ind_type4
+        sql: application_ind_type4
+        type: string
+
+    -   name: application_ind3
+        sql: application_ind3
+        type: string
+
+    -   name: application_ind_type3
+        sql: application_ind_type3
+        type: string
+
+    -   name: application_ind2
+        sql: application_ind2
+        type: string
+
+    -   name: application_ind_type2
+        sql: application_ind_type2
+        type: string
+
+    -   name: application_ind1
+        sql: application_ind1
+        type: string
+
+    -   name: application_ind_type1
+        sql: application_ind_type1
+        type: string
+
+    -   name: withdrawal_reason_desc
+        sql: withdrawal_reason_desc
+        type: string
+
+    -   name: withdrawal_reason
+        sql: withdrawal_reason
+        type: string
+
+    -   name: sub_academic_period_desc
+        sql: sub_academic_period_desc
+        type: string
+
+    -   name: sub_academic_period
+        sql: sub_academic_period
+        type: string
+
+    -   name: student_population_desc
+        sql: student_population_desc
+        type: string
+
+    -   name: student_population
+        sql: student_population
+        type: string
+
+    -   name: student_meeting_time_desc
+        sql: student_meeting_time_desc
+        type: string
+
+    -   name: student_meeting_time
+        sql: student_meeting_time
+        type: string
+
+    -   name: student_level_desc
+        sql: student_level_desc
+        type: string
+
+    -   name: student_level
+        sql: student_level
+        type: string
+
+    -   name: third_program_classif_desc
+        sql: third_program_classif_desc
+        type: string
+
+    -   name: third_program_classification
+        sql: third_program_classification
+        type: string
+
+    -   name: third_minor_desc
+        sql: third_minor_desc
+        type: string
+
+    -   name: third_minor
+        sql: third_minor
+        type: string
+
+    -   name: third_major_desc
+        sql: third_major_desc
+        type: string
+
+    -   name: third_major_conc_3_desc
+        sql: third_major_conc_3_desc
+        type: string
+
+    -   name: third_major_conc_3
+        sql: third_major_conc_3
+        type: string
+
+    -   name: third_major_conc_2_desc
+        sql: third_major_conc_2_desc
+        type: string
+
+    -   name: third_major_conc_2
+        sql: third_major_conc_2
+        type: string
+
+    -   name: third_major_conc_1_desc
+        sql: third_major_conc_1_desc
+        type: string
+
+    -   name: third_major_conc_1
+        sql: third_major_conc_1
+        type: string
+
+    -   name: third_major
+        sql: third_major
+        type: string
+
+    -   name: third_department_desc
+        sql: third_department_desc
+        type: string
+
+    -   name: third_department
+        sql: third_department
+        type: string
+
+    -   name: third_concentration_desc
+        sql: third_concentration_desc
+        type: string
+
+    -   name: third_concentration
+        sql: third_concentration
+        type: string
+
+    -   name: start_date
+        sql: start_date
+        type: time
+
+    -   name: residency_ind
+        sql: residency_ind
+        type: string
+
+    -   name: residency_desc
+        sql: residency_desc
+        type: string
+
+    -   name: residency
+        sql: residency
+        type: string
+
+    -   name: requirement_count
+        sql: requirement_count
+        type: string
+
+    -   name: required_interview_status_desc
+        sql: required_interview_status_desc
+        type: string
+
+    -   name: required_interview_status
+        sql: required_interview_status
+        type: string
+
+    -   name: source_count
+        sql: source_count
+        type: string
+
+    -   name: recruit_type_desc
+        sql: recruit_type_desc
+        type: string
+
+    -   name: recruit_type
+        sql: recruit_type
+        type: string
+
+    -   name: recruiter_desc
+        sql: recruiter_desc
+        type: string
+
+    -   name: recruiter
+        sql: recruiter
+        type: string
+
+    -   name: site_street_line4
+        sql: site_street_line4
+        type: string
+
+    -   name: site_street_line3
+        sql: site_street_line3
+        type: string
+
+    -   name: site_street_line2
+        sql: site_street_line2
+        type: string
+
+    -   name: site_street_line1
+        sql: site_street_line1
+        type: string
+
+    -   name: site_state_province_desc
+        sql: site_state_province_desc
+        type: string
+
+    -   name: site_state_province
+        sql: site_state_province
+        type: string
+
+    -   name: site_postal_code
+        sql: site_postal_code
+        type: string
+
+    -   name: site_nation_desc
+        sql: site_nation_desc
+        type: string
+
+    -   name: site_nation
+        sql: site_nation
+        type: string
+
+    -   name: site_desc
+        sql: site_desc
+        type: string
+
+    -   name: site_delivery_point
+        sql: site_delivery_point
+        type: string
+
+    -   name: site_county_code_desc
+        sql: site_county_code_desc
+        type: string
+
+    -   name: site_county_code
+        sql: site_county_code
+        type: string
+
+    -   name: site_correction_digit
+        sql: site_correction_digit
+        type: string
+
+    -   name: site_city
+        sql: site_city
+        type: string
+
+    -   name: site_carrier_route
+        sql: site_carrier_route
+        type: string
+
+    -   name: site
+        sql: site
+        type: string
+
+    -   name: rating_count
+        sql: rating_count
+        type: string
+
+    -   name: rate_desc
+        sql: rate_desc
+        type: string
+
+    -   name: rate
+        sql: rate
+        type: string
+
+    -   name: second_program_classif_desc
+        sql: second_program_classif_desc
+        type: string
+
+    -   name: second_program_classification
+        sql: second_program_classification
+        type: string
+
+    -   name: second_minor_desc
+        sql: second_minor_desc
+        type: string
+
+    -   name: second_minor
+        sql: second_minor
+        type: string
+
+    -   name: second_major_desc
+        sql: second_major_desc
+        type: string
+
+    -   name: second_major_conc_3_desc
+        sql: second_major_conc_3_desc
+        type: string
+
+    -   name: second_major_conc_3
+        sql: second_major_conc_3
+        type: string
+
+    -   name: second_major_conc_2_desc
+        sql: second_major_conc_2_desc
+        type: string
+
+    -   name: second_major_conc_2
+        sql: second_major_conc_2
+        type: string
+
+    -   name: second_major_conc_1_desc
+        sql: second_major_conc_1_desc
+        type: string
+
+    -   name: second_major_conc_1
+        sql: second_major_conc_1
+        type: string
+
+    -   name: second_major
+        sql: second_major
+        type: string
+
+    -   name: second_department_desc
+        sql: second_department_desc
+        type: string
+
+    -   name: second_department
+        sql: second_department
+        type: string
+
+    -   name: second_concentration_desc
+        sql: second_concentration_desc
+        type: string
+
+    -   name: second_concentration
+        sql: second_concentration
+        type: string
+
+    -   name: state_desc_birth_appl
+        sql: state_desc_birth_appl
+        type: string
+
+    -   name: state_desc_admit
+        sql: state_desc_admit
+        type: string
+
+    -   name: state_birth_appl
+        sql: state_birth_appl
+        type: string
+
+    -   name: state_admit
+        sql: state_admit
+        type: string
+
+    -   name: program_desc
+        sql: program_desc
+        type: string
+
+    -   name: program_classification_desc
+        sql: program_classification_desc
+        type: string
+
+    -   name: program_classification
+        sql: program_classification
+        type: string
+
+    -   name: person_uid
+        sql: person_uid
+        type: string
+        primary_key: true
+
+    -   name: program
+        sql: program
+        type: string
+
+    -   name: process_group
+        sql: process_group
+        type: string
+
+    -   name: primary_source_desc
+        sql: primary_source_desc
+        type: string
+
+    -   name: primary_source
+        sql: primary_source
+        type: string
+
+    -   name: primary_program_ind
+        sql: primary_program_ind
+        type: string
+
+    -   name: primary_advisor_type_desc
+        sql: primary_advisor_type_desc
+        type: string
+
+    -   name: primary_advisor_type
+        sql: primary_advisor_type
+        type: string
+
+    -   name: primary_advisor_last_name
+        sql: primary_advisor_last_name
+        type: string
+
+    -   name: primary_advisor_id
+        sql: primary_advisor_id
+        type: string
+
+    -   name: primary_advisor_first_name
+        sql: primary_advisor_first_name
+        type: string
+
+    -   name: post_code_admit
+        sql: post_code_admit
+        type: string
+
+    -   name: non_traditional_ind
+        sql: non_traditional_ind
+        type: string
+
+    -   name: major_desc
+        sql: major_desc
+        type: string
+
+    -   name: major
+        sql: major
+        type: string
+
+    -   name: mailing_count
+        sql: mailing_count
+        type: string
+
+    -   name: nation_desc_admit
+        sql: nation_desc_admit
+        type: string
+
+    -   name: nation_birth_desc_appl
+        sql: nation_birth_desc_appl
+        type: string
+
+    -   name: nation_birth_appl
+        sql: nation_birth_appl
+        type: string
+
+    -   name: nation_admit
+        sql: nation_admit
+        type: string
+
+    -   name: name
+        sql: name
+        type: string
+
+    -   name: multi_source_desc
+        sql: multi_source_desc
+        type: string
+
+    -   name: latest_decision_desc
+        sql: latest_decision_desc
+        type: string
+
+    -   name: latest_decision_date
+        sql: latest_decision_date
+        type: time
+
+    -   name: latest_decision
+        sql: latest_decision
+        type: string
+
+    -   name: multi_source
+        sql: multi_source
+        type: string
+
+    -   name: inst_denied_ind
+        sql: inst_denied_ind
+        type: string
+
+    -   name: inst_admit_any_time_ind
+        sql: inst_admit_any_time_ind
+        type: string
+
+    -   name: inst_accepted_current_ind
+        sql: inst_accepted_current_ind
+        type: string
+
+    -   name: institution_attending_desc
+        sql: institution_attending_desc
+        type: string
+
+    -   name: institution_attending
+        sql: institution_attending
+        type: string
+
+    -   name: incomplete_ind
+        sql: incomplete_ind
+        type: string
+
+    -   name: id
+        sql: id
+        type: string
+
+    -   name: fourth_program_classif_desc
+        sql: fourth_program_classif_desc
+        type: string
+
+    -   name: fourth_program_classification
+        sql: fourth_program_classification
+        type: string
+
+    -   name: fourth_minor_desc
+        sql: fourth_minor_desc
+        type: string
+
+    -   name: fourth_minor
+        sql: fourth_minor
+        type: string
+
+    -   name: fourth_major_desc
+        sql: fourth_major_desc
+        type: string
+
+    -   name: fourth_major_conc_3_desc
+        sql: fourth_major_conc_3_desc
+        type: string
+
+    -   name: fourth_major_conc_3
+        sql: fourth_major_conc_3
+        type: string
+
+    -   name: fourth_major_conc_2_desc
+        sql: fourth_major_conc_2_desc
+        type: string
+
+    -   name: fourth_major_conc_2
+        sql: fourth_major_conc_2
+        type: string
+
+    -   name: fourth_major_conc_1_desc
+        sql: fourth_major_conc_1_desc
+        type: string
+
+    -   name: fourth_major_conc_1
+        sql: fourth_major_conc_1
+        type: string
+
+    -   name: fourth_major
+        sql: fourth_major
+        type: string
+
+    -   name: fourth_department_desc
+        sql: fourth_department_desc
+        type: string
+
+    -   name: fourth_department
+        sql: fourth_department
+        type: string
+
+    -   name: first_minor_desc
+        sql: first_minor_desc
+        type: string
+
+    -   name: first_minor
+        sql: first_minor
+        type: string
+
+    -   name: first_concentration_desc
+        sql: first_concentration_desc
+        type: string
+
+    -   name: first_concentration
+        sql: first_concentration
+        type: string
+
+    -   name: finaid_applicant_ind
+        sql: finaid_applicant_ind
+        type: string
+
+    -   name: intended_time_status
+        sql: intended_time_status
+        type: string
+
+    -   name: department_desc
+        sql: department_desc
+        type: string
+
+    -   name: enrolled_ind
+        sql: enrolled_ind
+        type: string
+
+    -   name: department
+        sql: department
+        type: string
+
+    -   name: degree_desc
+        sql: degree_desc
+        type: string
+
+    -   name: degree
+        sql: degree
+        type: string
+
+    -   name: deferred_ind
+        sql: deferred_ind
+        type: string
+
+    -   name: decision_count
+        sql: decision_count
+        type: string
+
+    -   name: curriculum_priority_number
+        sql: curriculum_priority_number
+        type: string
+
+    -   name: curriculum_order
+        sql: curriculum_order
+        type: string
+
+    -   name: education_level_desc
+        sql: education_level_desc
+        type: string
+
+    -   name: education_level
+        sql: education_level
+        type: string
+
+    -   name: education_goal_desc
+        sql: education_goal_desc
+        type: string
+
+    -   name: education_goal
+        sql: education_goal
+        type: string
+
+    -   name: campus_desc
+        sql: campus_desc
+        type: string
+
+    -   name: campus
+        sql: campus
+        type: string
+
+    -   name: county_desc_birth_appl
+        sql: county_desc_birth_appl
+        type: string
+
+    -   name: county_desc_admit
+        sql: county_desc_admit
+        type: string
+
+    -   name: county_birth_appl
+        sql: county_birth_appl
+        type: string
+
+    -   name: county_admit
+        sql: county_admit
+        type: string
+
+    -   name: confirmed_ind
+        sql: confirmed_ind
+        type: string
+
+    -   name: complete_ind
+        sql: complete_ind
+        type: string
+
+    -   name: award_category_desc
+        sql: award_category_desc
+        type: string
+
+    -   name: award_category
+        sql: award_category
+        type: string
+
+    -   name: college_desc
+        sql: college_desc
+        type: string
+
+    -   name: college
+        sql: college
+        type: string
+
+    -   name: cohort_count
+        sql: cohort_count
+        type: string
+
+    -   name: attribute_count
+        sql: attribute_count
+        type: string
+
+    -   name: city_birth_appl
+        sql: city_birth_appl
+        type: string
+
+    -   name: application_date
+        sql: application_date
+        type: time
+
+    -   name: applicant_withdrawn_ind
+        sql: applicant_withdrawn_ind
+        type: string
+
+    -   name: appl_accept_current_ind
+        sql: appl_accept_current_ind
+        type: string
+
+    -   name: appl_accept_any_time_ind
+        sql: appl_accept_any_time_ind
+        type: string
+
+    -   name: application_status_desc
+        sql: application_status_desc
+        type: string
+
+    -   name: application_status_date
+        sql: application_status_date
+        type: time
+
+    -   name: application_status
+        sql: application_status
+        type: string
+
+    -   name: application_ranking_order
+        sql: application_ranking_order
+        type: string
+
+    -   name: application_number
+        sql: application_number
+        type: string
+        primary_key: true
+
+    -   name: application_info5
+        sql: application_info5
+        type: string
+
+    -   name: application_info4
+        sql: application_info4
+        type: string
+
+    -   name: application_info3
+        sql: application_info3
+        type: string
+
+    -   name: application_info2
+        sql: application_info2
+        type: string
+
+    -   name: application_info1
+        sql: application_info1
+        type: string
+
+    -   name: application_fee_required_ind
+        sql: application_fee_required_ind
+        type: string
+
+    -   name: application_fee_received_date
+        sql: application_fee_received_date
+        type: time
+
+    -   name: aid_year
+        sql: aid_year
+        type: string
+
+    -   name: applicant_declined_ind
+        sql: applicant_declined_ind
+        type: string
+
+    -   name: admissions_population_desc
+        sql: admissions_population_desc
+        type: string
+
+    -   name: admissions_population
+        sql: admissions_population
+        type: string
+
+    -   name: administrative_group
+        sql: administrative_group
+        type: string
+
+    -   name: administator_count
+        sql: administator_count
+        type: string
+
+    -   name: academic_year_desc
+        sql: academic_year_desc
+        type: string
+
+    -   name: academic_year
+        sql: academic_year
+        type: string
+        primary_key: true
+
+    -   name: academic_period
+        sql: academic_period
+        type: string
+        primary_key: true
+
+    -   name: academic_period_desc
+        sql: academic_period_desc
+        type: string
+
+    measures: []
+
+    pre_aggregations: []

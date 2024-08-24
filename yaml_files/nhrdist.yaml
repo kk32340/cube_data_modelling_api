@@ -1,0 +1,213 @@
+cubes:
+    name: nhrdist
+
+    sql_table: posnctl.nhrdist
+
+    joins:
+    -   name: person
+        sql: '{CUBE}.nhrdist_pidm = person.person_uid'
+        relationship: one_to_one
+
+    -   name: account_hierarchy
+        sql: '{CUBE}.nhrdist_acct_code = account_hierarchy.account'
+        relationship: one_to_many
+
+    -   name: organization_hierarchy
+        sql: '{CUBE}.nhrdist_orgn_code = organization_hierarchy.organization_code'
+        relationship: one_to_many
+
+    -   name: faculty_wrkld_cost
+        sql: '{CUBE}.nhrdist_pidm = faculty_wrkld_cost.person_uid'
+        relationship: zero_to_many
+
+    dimensions:
+    -   name: nhrdist_year
+        sql: nhrdist_year
+        type: string
+
+    -   name: nhrdist_pict_code
+        sql: nhrdist_pict_code
+        type: string
+
+    -   name: nhrdist_payno
+        sql: nhrdist_payno
+        type: string
+
+    -   name: nhrdist_pidm
+        sql: nhrdist_pidm
+        type: string
+        primary_key: true
+
+    -   name: nhrdist_seq_no
+        sql: nhrdist_seq_no
+        type: string
+
+    -   name: nhrdist_hist_type_ind
+        sql: nhrdist_hist_type_ind
+        type: string
+
+    -   name: nhrdist_category_code
+        sql: nhrdist_category_code
+        type: string
+
+    -   name: nhrdist_source
+        sql: nhrdist_source
+        type: string
+
+    -   name: nhrdist_fisc_code
+        sql: nhrdist_fisc_code
+        type: string
+
+    -   name: nhrdist_rucl_code
+        sql: nhrdist_rucl_code
+        type: string
+
+    -   name: nhrdist_coas_code
+        sql: nhrdist_coas_code
+        type: string
+
+    -   name: nhrdist_fund_code
+        sql: nhrdist_fund_code
+        type: string
+
+    -   name: nhrdist_orgn_code
+        sql: nhrdist_orgn_code
+        type: string
+        primary_key: true
+
+    -   name: nhrdist_acct_code
+        sql: nhrdist_acct_code
+        type: string
+        primary_key: true
+
+    -   name: nhrdist_prog_code
+        sql: nhrdist_prog_code
+        type: string
+
+    -   name: nhrdist_actv_code
+        sql: nhrdist_actv_code
+        type: string
+
+    -   name: nhrdist_locn_code
+        sql: nhrdist_locn_code
+        type: string
+
+    -   name: nhrdist_proj_code
+        sql: nhrdist_proj_code
+        type: string
+
+    -   name: nhrdist_ctyp_code
+        sql: nhrdist_ctyp_code
+        type: string
+
+    -   name: nhrdist_acct_code_external
+        sql: nhrdist_acct_code_external
+        type: string
+
+    -   name: nhrdist_dr_cr_ind
+        sql: nhrdist_dr_cr_ind
+        type: string
+
+    -   name: nhrdist_amt
+        sql: nhrdist_amt
+        type: string
+
+    -   name: nhrdist_trans_date
+        sql: nhrdist_trans_date
+        type: time
+
+    -   name: nhrdist_interfaced_ind
+        sql: nhrdist_interfaced_ind
+        type: string
+
+    -   name: nhrdist_obud_code
+        sql: nhrdist_obud_code
+        type: string
+
+    -   name: nhrdist_obph_code
+        sql: nhrdist_obph_code
+        type: string
+
+    -   name: nhrdist_posn
+        sql: nhrdist_posn
+        type: string
+
+    -   name: nhrdist_encd_num
+        sql: nhrdist_encd_num
+        type: string
+
+    -   name: nhrdist_encd_item_num
+        sql: nhrdist_encd_item_num
+        type: string
+
+    -   name: nhrdist_encd_seq_num
+        sql: nhrdist_encd_seq_num
+        type: string
+
+    -   name: nhrdist_ptot_status
+        sql: nhrdist_ptot_status
+        type: string
+
+    -   name: nhrdist_hrs
+        sql: nhrdist_hrs
+        type: string
+
+    -   name: nhrdist_bdca_code
+        sql: nhrdist_bdca_code
+        type: string
+
+    -   name: nhrdist_earn_code
+        sql: nhrdist_earn_code
+        type: string
+
+    -   name: nhrdist_ecls_code
+        sql: nhrdist_ecls_code
+        type: string
+
+    -   name: nhrdist_suff
+        sql: nhrdist_suff
+        type: string
+
+    -   name: nhrdist_activity_date
+        sql: nhrdist_activity_date
+        type: time
+
+    -   name: nhrdist_earn_expends_ptot_ind
+        sql: nhrdist_earn_expends_ptot_ind
+        type: string
+
+    -   name: nhrdist_tnum
+        sql: nhrdist_tnum
+        type: string
+
+    -   name: nhrdist_doc_code
+        sql: nhrdist_doc_code
+        type: string
+
+    -   name: nhrdist_posnbud_doc_code
+        sql: nhrdist_posnbud_doc_code
+        type: string
+
+    -   name: nhrdist_surrogate_id
+        sql: nhrdist_surrogate_id
+        type: string
+
+    -   name: nhrdist_version
+        sql: nhrdist_version
+        type: string
+
+    -   name: nhrdist_user_id
+        sql: nhrdist_user_id
+        type: string
+
+    -   name: nhrdist_data_origin
+        sql: nhrdist_data_origin
+        type: string
+
+    -   name: nhrdist_vpdi_code
+        sql: nhrdist_vpdi_code
+        type: string
+
+    measures: []
+
+    pre_aggregations: []

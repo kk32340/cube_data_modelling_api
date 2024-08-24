@@ -1,0 +1,549 @@
+cubes:
+    name: student course
+
+    sql_table: odsmgr.student_course
+
+    joins:
+    -   name: enrollment
+        sql: '{CUBE}.person_uid = enrollment.person_uid AND {CUBE}.academic_period
+            = enrollment.academic_period'
+        relationship: one_to_one
+
+    -   name: person_stusta
+        sql: '{CUBE}.person_uid = person_stusta.person_uid'
+        relationship: one_to_one
+
+    -   name: student course base_alias
+        sql: '{CUBE}.person_uid'
+        relationship: one_to_many
+
+    -   name: student_crse_grade_chg_kccd
+        sql: '{CUBE}.person_uid = student_crse_grade_chg_kccd.person_uid AND {CUBE}.academic_period
+            = student_crse_grade_chg_kccd.academic_period AND {CUBE}.course_reference_number
+            = student_crse_grade_chg_kccd.course_reference_number'
+        relationship: one_to_one
+
+    -   name: ir_section
+        sql: '{CUBE}.academic_period = ir_section.academic_period AND {CUBE}.course_reference_number
+            = ir_section.course_reference_number'
+        relationship: one_to_many
+
+    dimensions:
+    -   name: study_path_sequence
+        sql: study_path_sequence
+        type: string
+
+    -   name: registration_override_ind
+        sql: registration_override_ind
+        type: string
+
+    -   name: mututal_exclusion_override_ind
+        sql: mututal_exclusion_override_ind
+        type: string
+
+    -   name: student_cohort_override_ind
+        sql: student_cohort_override_ind
+        type: string
+
+    -   name: student_attribute_override_ind
+        sql: student_attribute_override_ind
+        type: string
+
+    -   name: department_restrict_over_ind
+        sql: department_restrict_over_ind
+        type: string
+
+    -   name: program_restrict_override_ind
+        sql: program_restrict_override_ind
+        type: string
+
+    -   name: degree_restrict_override_ind
+        sql: degree_restrict_override_ind
+        type: string
+
+    -   name: campus_restrict_override_ind
+        sql: campus_restrict_override_ind
+        type: string
+
+    -   name: test_score_override_ind
+        sql: test_score_override_ind
+        type: string
+
+    -   name: repeat_course_credit_over_ind
+        sql: repeat_course_credit_over_ind
+        type: string
+
+    -   name: repeat_course_override_ind
+        sql: repeat_course_override_ind
+        type: string
+
+    -   name: special_approval_override_ind
+        sql: special_approval_override_ind
+        type: string
+
+    -   name: class_restrict_override_ind
+        sql: class_restrict_override_ind
+        type: string
+
+    -   name: major_restrict_override_ind
+        sql: major_restrict_override_ind
+        type: string
+
+    -   name: college_restrict_override_ind
+        sql: college_restrict_override_ind
+        type: string
+
+    -   name: level_restrict_override_ind
+        sql: level_restrict_override_ind
+        type: string
+
+    -   name: capacity_override_ind
+        sql: capacity_override_ind
+        type: string
+
+    -   name: time_conflict_override_ind
+        sql: time_conflict_override_ind
+        type: string
+
+    -   name: prerequisite_override_ind
+        sql: prerequisite_override_ind
+        type: string
+
+    -   name: corequisite_override_ind
+        sql: corequisite_override_ind
+        type: string
+
+    -   name: link_override_ind
+        sql: link_override_ind
+        type: string
+
+    -   name: duplicate_course_override_ind
+        sql: duplicate_course_override_ind
+        type: string
+
+    -   name: grade_comment_desc
+        sql: grade_comment_desc
+        type: string
+
+    -   name: grade_comment
+        sql: grade_comment
+        type: string
+
+    -   name: charges_waived_ind
+        sql: charges_waived_ind
+        type: string
+
+    -   name: last_date_attend_required_ind
+        sql: last_date_attend_required_ind
+        type: string
+
+    -   name: incomplete_grade_ind
+        sql: incomplete_grade_ind
+        type: string
+
+    -   name: repeat_evaluate_ind
+        sql: repeat_evaluate_ind
+        type: string
+
+    -   name: credit_for_gpa_ind
+        sql: credit_for_gpa_ind
+        type: string
+
+    -   name: course_failed_ind
+        sql: course_failed_ind
+        type: string
+
+    -   name: course_passed_ind
+        sql: course_passed_ind
+        type: string
+
+    -   name: course_earned_ind
+        sql: course_earned_ind
+        type: string
+
+    -   name: course_attempted_ind
+        sql: course_attempted_ind
+        type: string
+
+    -   name: feedback_detail_exists_ind
+        sql: feedback_detail_exists_ind
+        type: string
+
+    -   name: integration_partner_sys_desc
+        sql: integration_partner_sys_desc
+        type: string
+
+    -   name: integration_partner_system
+        sql: integration_partner_system
+        type: string
+
+    -   name: integration_partner_desc
+        sql: integration_partner_desc
+        type: string
+
+    -   name: integration_partner
+        sql: integration_partner
+        type: string
+
+    -   name: register_census_date2_ind
+        sql: register_census_date2_ind
+        type: string
+
+    -   name: register_census_date1_ind
+        sql: register_census_date1_ind
+        type: string
+
+    -   name: waitlist_ind
+        sql: waitlist_ind
+        type: string
+
+    -   name: withdrawn_ind
+        sql: withdrawn_ind
+        type: string
+
+    -   name: course_register_ind
+        sql: course_register_ind
+        type: string
+
+    -   name: block_registration_desc
+        sql: block_registration_desc
+        type: string
+
+    -   name: block_registration
+        sql: block_registration
+        type: string
+
+    -   name: block_reg_sequence_number
+        sql: block_reg_sequence_number
+        type: string
+
+    -   name: sub_academic_period_desc
+        sql: sub_academic_period_desc
+        type: string
+
+    -   name: sub_academic_period
+        sql: sub_academic_period
+        type: string
+
+    -   name: subject_desc
+        sql: subject_desc
+        type: string
+
+    -   name: transfer_course_inst_desc
+        sql: transfer_course_inst_desc
+        type: string
+
+    -   name: transfer_course_institution
+        sql: transfer_course_institution
+        type: string
+
+    -   name: transfer_course_ind
+        sql: transfer_course_ind
+        type: string
+
+    -   name: traditional_ind
+        sql: traditional_ind
+        type: string
+
+    -   name: start_date
+        sql: start_date
+        type: time
+
+    -   name: special_approval_ind
+        sql: special_approval_ind
+        type: string
+
+    -   name: repeat_course_ind
+        sql: repeat_course_ind
+        type: string
+
+    -   name: registration_user_id
+        sql: registration_user_id
+        type: string
+
+    -   name: registration_status_desc
+        sql: registration_status_desc
+        type: string
+
+    -   name: registration_status_date
+        sql: registration_status_date
+        type: time
+
+    -   name: registration_status
+        sql: registration_status
+        type: string
+
+    -   name: registration_sequence_number
+        sql: registration_sequence_number
+        type: string
+
+    -   name: registration_error_flag
+        sql: registration_error_flag
+        type: string
+
+    -   name: quality_points
+        sql: quality_points
+        type: string
+
+    -   name: section_add_date
+        sql: section_add_date
+        type: time
+
+    -   name: schedule_type_desc
+        sql: schedule_type_desc
+        type: string
+
+    -   name: schedule_type
+        sql: schedule_type
+        type: string
+
+    -   name: process_group
+        sql: process_group
+        type: string
+
+    -   name: name
+        sql: name
+        type: string
+
+    -   name: multi_source_desc
+        sql: multi_source_desc
+        type: string
+
+    -   name: multi_source
+        sql: multi_source
+        type: string
+
+    -   name: last_attend_date
+        sql: last_attend_date
+        type: time
+
+    -   name: in_progress_course_ind
+        sql: in_progress_course_ind
+        type: string
+
+    -   name: mid_term_grade
+        sql: mid_term_grade
+        type: string
+
+    -   name: instruction_method_desc
+        sql: instruction_method_desc
+        type: string
+
+    -   name: instruction_method
+        sql: instruction_method
+        type: string
+
+    -   name: institution_course_ind
+        sql: institution_course_ind
+        type: string
+
+    -   name: incomplete_ext_date
+        sql: incomplete_ext_date
+        type: time
+
+    -   name: id
+        sql: id
+        type: string
+
+    -   name: hours_attended
+        sql: hours_attended
+        type: string
+
+    -   name: grade_value
+        sql: grade_value
+        type: string
+
+    -   name: grade_type_desc
+        sql: grade_type_desc
+        type: string
+
+    -   name: grade_type
+        sql: grade_type
+        type: string
+
+    -   name: grade_change_reason_desc
+        sql: grade_change_reason_desc
+        type: string
+
+    -   name: grade_change_reason
+        sql: grade_change_reason
+        type: string
+
+    -   name: grade_change_count
+        sql: grade_change_count
+        type: string
+
+    -   name: gradable_ind
+        sql: gradable_ind
+        type: string
+
+    -   name: final_grade_roll_ind
+        sql: final_grade_roll_ind
+        type: string
+
+    -   name: final_grade_date
+        sql: final_grade_date
+        type: time
+
+    -   name: final_grade
+        sql: final_grade
+        type: string
+
+    -   name: finalized_completion_date
+        sql: finalized_completion_date
+        type: time
+
+    -   name: division_desc
+        sql: division_desc
+        type: string
+
+    -   name: division
+        sql: division
+        type: string
+
+    -   name: extensions
+        sql: extensions
+        type: string
+
+    -   name: department_desc
+        sql: department_desc
+        type: string
+
+    -   name: department
+        sql: department
+        type: string
+
+    -   name: end_date
+        sql: end_date
+        type: time
+
+    -   name: eff_academic_period_of_grade
+        sql: eff_academic_period_of_grade
+        type: string
+
+    -   name: credits_passed
+        sql: credits_passed
+        type: string
+
+    -   name: credits_for_gpa
+        sql: credits_for_gpa
+        type: string
+
+    -   name: credits_earned
+        sql: credits_earned
+        type: string
+
+    -   name: credits_attempted
+        sql: credits_attempted
+        type: string
+
+    -   name: course_version
+        sql: course_version
+        type: string
+
+    -   name: course_title_short
+        sql: course_title_short
+        type: string
+
+    -   name: course_title_long
+        sql: course_title_long
+        type: string
+
+    -   name: course_section_number
+        sql: course_section_number
+        type: string
+
+    -   name: course_level_desc
+        sql: course_level_desc
+        type: string
+
+    -   name: course_level
+        sql: course_level
+        type: string
+
+    -   name: course_identification
+        sql: course_identification
+        type: string
+
+    -   name: course_credits_hold
+        sql: course_credits_hold
+        type: string
+
+    -   name: course_credits
+        sql: course_credits
+        type: string
+
+    -   name: course_billing_hold
+        sql: course_billing_hold
+        type: string
+
+    -   name: course_billing_credits
+        sql: course_billing_credits
+        type: string
+
+    -   name: campus_desc
+        sql: campus_desc
+        type: string
+
+    -   name: campus
+        sql: campus
+        type: string
+
+    -   name: course_attributes_count
+        sql: course_attributes_count
+        type: string
+
+    -   name: count_in_gpa_ind
+        sql: count_in_gpa_ind
+        type: string
+
+    -   name: college_desc
+        sql: college_desc
+        type: string
+
+    -   name: college
+        sql: college
+        type: string
+
+    -   name: administrative_group
+        sql: administrative_group
+        type: string
+
+    -   name: academic_year_desc
+        sql: academic_year_desc
+        type: string
+
+    -   name: academic_year
+        sql: academic_year
+        type: string
+
+    -   name: academic_period_desc
+        sql: academic_period_desc
+        type: string
+
+    -   name: course_reference_number
+        sql: course_reference_number
+        type: string
+        primary_key: true
+
+    -   name: course_number
+        sql: course_number
+        type: string
+
+    -   name: subject
+        sql: subject
+        type: string
+
+    -   name: academic_period
+        sql: academic_period
+        type: string
+        primary_key: true
+
+    -   name: person_uid
+        sql: person_uid
+        type: string
+        primary_key: true
+
+    measures: []
+
+    pre_aggregations: []

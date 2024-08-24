@@ -1,0 +1,43 @@
+cubes:
+    name: student_tutor_prospect_view
+
+    sql_table: odsmgr_cust.student_tutor_prospect_view
+
+    joins: []
+
+    dimensions:
+    -   name: term_course_taken
+        sql: term_course_taken
+        type: string
+
+    -   name: subject_description
+        sql: subject_description
+        type: string
+
+    -   name: course
+        sql: course
+        type: string
+
+    -   name: cell_phone
+        sql: cell_phone
+        type: string
+
+    -   name: day_phone
+        sql: day_phone
+        type: string
+
+    -   name: email_address
+        sql: email_address
+        type: string
+
+    -   name: name
+        sql: name
+        type: string
+
+    -   name: id
+        sql: id
+        type: string
+
+    measures: []
+
+    pre_aggregations: []

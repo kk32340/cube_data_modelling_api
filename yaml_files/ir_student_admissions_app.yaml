@@ -1,0 +1,35 @@
+cubes:
+    name: ir_student_admissions_app
+
+    sql_table: odsmgr_cust.ir_student_admissions_app
+
+    joins: []
+
+    dimensions:
+    -   name: application_date
+        sql: application_date
+        type: time
+
+    -   name: campus_code
+        sql: campus_code
+        type: string
+
+    -   name: college_code
+        sql: college_code
+        type: string
+
+    -   name: application_number
+        sql: application_number
+        type: string
+
+    -   name: academic_period
+        sql: academic_period
+        type: string
+
+    -   name: person_uid
+        sql: person_uid
+        type: string
+
+    measures: []
+
+    pre_aggregations: []

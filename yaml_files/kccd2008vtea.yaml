@@ -1,0 +1,23 @@
+cubes:
+    name: kccd2008vtea
+
+    sql_table: odsmgr_cust.kccd2008vtea
+
+    joins:
+    -   name: ir_student_person
+        sql: '{CUBE}.id = ir_student_person.ssn'
+        relationship: one_to_one
+
+    dimensions:
+    -   name: college
+        sql: college
+        type: string
+
+    -   name: id
+        sql: id
+        type: string
+        primary_key: true
+
+    measures: []
+
+    pre_aggregations: []

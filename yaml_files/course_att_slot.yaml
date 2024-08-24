@@ -1,0 +1,95 @@
+cubes:
+    name: course_att_slot
+
+    sql_table: odsmgr.course_att_slot
+
+    joins: []
+
+    dimensions:
+    -   name: subject
+        sql: subject
+        type: string
+
+    -   name: profile_code
+        sql: profile_code
+        type: string
+
+    -   name: process_group
+        sql: process_group
+        type: string
+
+    -   name: multi_source_desc
+        sql: multi_source_desc
+        type: string
+
+    -   name: multi_source
+        sql: multi_source
+        type: string
+
+    -   name: course_number
+        sql: course_number
+        type: string
+
+    -   name: course_attribute_desc5
+        sql: course_attribute_desc5
+        type: string
+
+    -   name: course_attribute_desc4
+        sql: course_attribute_desc4
+        type: string
+
+    -   name: course_attribute_desc3
+        sql: course_attribute_desc3
+        type: string
+
+    -   name: course_attribute_desc2
+        sql: course_attribute_desc2
+        type: string
+
+    -   name: course_attribute_desc1
+        sql: course_attribute_desc1
+        type: string
+
+    -   name: course_attribute5
+        sql: course_attribute5
+        type: string
+
+    -   name: course_attribute4
+        sql: course_attribute4
+        type: string
+
+    -   name: course_attribute3
+        sql: course_attribute3
+        type: string
+
+    -   name: course_attribute2
+        sql: course_attribute2
+        type: string
+
+    -   name: course_attribute1
+        sql: course_attribute1
+        type: string
+
+    -   name: attribute_rule
+        sql: attribute_rule
+        type: string
+
+    -   name: administrative_group
+        sql: administrative_group
+        type: string
+
+    -   name: activity_date
+        sql: activity_date
+        type: time
+
+    -   name: academic_period
+        sql: academic_period
+        type: string
+
+    -   name: academic_period_desc
+        sql: academic_period_desc
+        type: string
+
+    measures: []
+
+    pre_aggregations: []

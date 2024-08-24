@@ -1,0 +1,71 @@
+cubes:
+    name: comm_certificate
+
+    sql_table: odsmgr_cust.comm_certificate
+
+    joins:
+    -   name: person_address_phone_kccd_stusta
+        sql: '{CUBE}.id = person_address_phone_kccd_stusta.person_uid'
+        relationship: one_to_one
+
+    dimensions:
+    -   name: street2
+        sql: street2
+        type: string
+
+    -   name: street1
+        sql: street1
+        type: string
+
+    -   name: state
+        sql: state
+        type: string
+
+    -   name: postal_code
+        sql: postal_code
+        type: string
+
+    -   name: name
+        sql: name
+        type: string
+
+    -   name: id
+        sql: id
+        type: string
+        primary_key: true
+
+    -   name: final_grade
+        sql: final_grade
+        type: string
+
+    -   name: eve_phone
+        sql: eve_phone
+        type: string
+
+    -   name: day_phone
+        sql: day_phone
+        type: string
+
+    -   name: email_address
+        sql: email_address
+        type: string
+
+    -   name: course_identification
+        sql: course_identification
+        type: string
+
+    -   name: confidentiality_ind
+        sql: confidentiality_ind
+        type: string
+
+    -   name: city
+        sql: city
+        type: string
+
+    -   name: academic_period
+        sql: academic_period
+        type: string
+
+    measures: []
+
+    pre_aggregations: []

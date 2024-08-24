@@ -1,0 +1,63 @@
+cubes:
+    name: swbsect
+
+    sql_table: odsmgr_cust.swbsect
+
+    joins: []
+
+    dimensions:
+    -   name: swbsect_ssts_code
+        sql: swbsect_ssts_code
+        type: string
+
+    -   name: swbsect_wait_count
+        sql: swbsect_wait_count
+        type: string
+
+    -   name: swbsect_wait_capacity
+        sql: swbsect_wait_capacity
+        type: string
+
+    -   name: swbsect_wait_avail
+        sql: swbsect_wait_avail
+        type: string
+
+    -   name: swbsect_seats_avail
+        sql: swbsect_seats_avail
+        type: string
+
+    -   name: swbsect_max_enrl
+        sql: swbsect_max_enrl
+        type: string
+
+    -   name: swbsect_enrl
+        sql: swbsect_enrl
+        type: string
+
+    -   name: swbsect_date
+        sql: swbsect_date
+        type: string
+
+    -   name: swbsect_census_enrl
+        sql: swbsect_census_enrl
+        type: string
+
+    -   name: swbsect_camp_code
+        sql: swbsect_camp_code
+        type: string
+
+    -   name: freeze_date
+        sql: freeze_date
+        type: time
+
+    -   name: swbsect_crn
+        sql: swbsect_crn
+        type: string
+
+    -   name: swbsect_term_code
+        sql: swbsect_term_code
+        type: string
+
+    measures: []
+
+    pre_aggregations: []

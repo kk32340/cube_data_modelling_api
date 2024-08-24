@@ -1,0 +1,59 @@
+cubes:
+    name: enr_mgt_crse_avg
+
+    sql_table: odsmgr_cust.enr_mgt_crse_avg
+
+    joins: []
+
+    dimensions:
+    -   name: term_group
+        sql: term_group
+        type: string
+
+    -   name: subject_desc
+        sql: subject_desc
+        type: string
+
+    -   name: subject
+        sql: subject
+        type: string
+
+    -   name: sect_cnt
+        sql: sect_cnt
+        type: string
+
+    -   name: ftes_per_sect_avg
+        sql: ftes_per_sect_avg
+        type: string
+
+    -   name: current_term
+        sql: current_term
+        type: string
+
+    -   name: current_enr_tot
+        sql: current_enr_tot
+        type: string
+
+    -   name: current_enr_avg
+        sql: current_enr_avg
+        type: string
+
+    -   name: census_enr_tot
+        sql: census_enr_tot
+        type: string
+
+    -   name: census_enr_avg
+        sql: census_enr_avg
+        type: string
+
+    -   name: course_number
+        sql: course_number
+        type: string
+
+    -   name: college
+        sql: college
+        type: string
+
+    measures: []
+
+    pre_aggregations: []

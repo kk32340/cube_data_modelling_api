@@ -1,0 +1,247 @@
+cubes:
+    name: bc_placment_level
+
+    sql_table: odsmgr_cust.bc_placment_level
+
+    joins:
+    -   name: ir_student_person
+        sql: '{CUBE}.id = ir_student_person.id'
+        relationship: zero_to_many
+
+    dimensions:
+    -   name: student_type_desc
+        sql: student_type_desc
+        type: string
+
+    -   name: student_type
+        sql: student_type
+        type: string
+
+    -   name: prior_cum_units
+        sql: prior_cum_units
+        type: string
+
+    -   name: primary_ethnicity_desc
+        sql: primary_ethnicity_desc
+        type: string
+
+    -   name: primary_ethnicity
+        sql: primary_ethnicity
+        type: string
+
+    -   name: name
+        sql: name
+        type: string
+
+    -   name: multi_measure_reading_date
+        sql: multi_measure_reading_date
+        type: time
+
+    -   name: multi_measure_reading
+        sql: multi_measure_reading
+        type: string
+
+    -   name: multi_measure_math_date
+        sql: multi_measure_math_date
+        type: time
+
+    -   name: multi_measure_math
+        sql: multi_measure_math
+        type: string
+
+    -   name: multi_measure_english_date
+        sql: multi_measure_english_date
+        type: time
+
+    -   name: multi_measure_english
+        sql: multi_measure_english
+        type: string
+
+    -   name: id
+        sql: id
+        type: string
+        primary_key: true
+
+    -   name: home_college
+        sql: home_college
+        type: string
+
+    -   name: high_school_grad_date
+        sql: high_school_grad_date
+        type: time
+
+    -   name: grad_year
+        sql: grad_year
+        type: string
+
+    -   name: first_time_ind
+        sql: first_time_ind
+        type: string
+
+    -   name: first_term_enrolled
+        sql: first_term_enrolled
+        type: string
+
+    -   name: ever_enrolled_bc
+        sql: ever_enrolled_bc
+        type: string
+
+    -   name: ethnic_cat
+        sql: ethnic_cat
+        type: string
+
+    -   name: enrolled_on_census_bc
+        sql: enrolled_on_census_bc
+        type: string
+
+    -   name: english_placement_date
+        sql: english_placement_date
+        type: time
+
+    -   name: english_placement
+        sql: english_placement
+        type: string
+
+    -   name: current_enroll_bc
+        sql: current_enroll_bc
+        type: string
+
+    -   name: education_level_desc
+        sql: education_level_desc
+        type: string
+
+    -   name: education_level
+        sql: education_level
+        type: string
+
+    -   name: compass_reading_level
+        sql: compass_reading_level
+        type: string
+
+    -   name: compass_reading_date
+        sql: compass_reading_date
+        type: time
+
+    -   name: compass_reading
+        sql: compass_reading
+        type: string
+
+    -   name: compass_num_skills_date
+        sql: compass_num_skills_date
+        type: time
+
+    -   name: compass_num_skills
+        sql: compass_num_skills
+        type: string
+
+    -   name: compass_numerical_level
+        sql: compass_numerical_level
+        type: string
+
+    -   name: compass_int_alg_level
+        sql: compass_int_alg_level
+        type: string
+
+    -   name: compass_interm_alg_date
+        sql: compass_interm_alg_date
+        type: time
+
+    -   name: compass_interm_alg
+        sql: compass_interm_alg
+        type: string
+
+    -   name: compass_elem_alg_level
+        sql: compass_elem_alg_level
+        type: string
+
+    -   name: compass_elem_alg_date
+        sql: compass_elem_alg_date
+        type: time
+
+    -   name: compass_elem_alg
+        sql: compass_elem_alg
+        type: string
+
+    -   name: compass_coll_alg_level
+        sql: compass_coll_alg_level
+        type: string
+
+    -   name: compass_college_alg_date
+        sql: compass_college_alg_date
+        type: time
+
+    -   name: compass_college_alg
+        sql: compass_college_alg
+        type: string
+
+    -   name: asset_reading_skill_date
+        sql: asset_reading_skill_date
+        type: time
+
+    -   name: asset_reading_skill
+        sql: asset_reading_skill
+        type: string
+
+    -   name: asset_reading_level
+        sql: asset_reading_level
+        type: string
+
+    -   name: asset_numerical_skill_date
+        sql: asset_numerical_skill_date
+        type: time
+
+    -   name: asset_numerical_skills_level
+        sql: asset_numerical_skills_level
+        type: string
+
+    -   name: asset_numerical_skill
+        sql: asset_numerical_skill
+        type: string
+
+    -   name: asset_int_alg_level
+        sql: asset_int_alg_level
+        type: string
+
+    -   name: asset_int_algebra_date
+        sql: asset_int_algebra_date
+        type: time
+
+    -   name: asset_int_algebra
+        sql: asset_int_algebra
+        type: string
+
+    -   name: asset_elem_alg_level
+        sql: asset_elem_alg_level
+        type: string
+
+    -   name: asset_elem_algebra_date
+        sql: asset_elem_algebra_date
+        type: time
+
+    -   name: asset_elem_algebra
+        sql: asset_elem_algebra
+        type: string
+
+    -   name: asset_coll_alg_level
+        sql: asset_coll_alg_level
+        type: string
+
+    -   name: asset_coll_algebra_date
+        sql: asset_coll_algebra_date
+        type: time
+
+    -   name: asset_coll_algebra
+        sql: asset_coll_algebra
+        type: string
+
+    -   name: age_at_term
+        sql: age_at_term
+        type: string
+
+    -   name: academic_period
+        sql: academic_period
+        type: string
+
+    measures: []
+
+    pre_aggregations: []

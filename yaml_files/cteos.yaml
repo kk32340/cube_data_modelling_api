@@ -1,0 +1,47 @@
+cubes:
+    name: cteos
+
+    sql_table: odsmgr_cust.cteos
+
+    joins: []
+
+    dimensions:
+    -   name: college
+        sql: college
+        type: string
+
+    -   name: id
+        sql: id
+        type: string
+
+    -   name: last_name_abbr
+        sql: last_name_abbr
+        type: string
+
+    -   name: firt_name_abbr
+        sql: firt_name_abbr
+        type: string
+
+    -   name: student_ssn
+        sql: student_ssn
+        type: string
+
+    -   name: student_id
+        sql: student_id
+        type: string
+
+    -   name: college_id
+        sql: college_id
+        type: string
+
+    -   name: survey_id
+        sql: survey_id
+        type: string
+
+    -   name: person_uid
+        sql: person_uid
+        type: string
+
+    measures: []
+
+    pre_aggregations: []

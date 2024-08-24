@@ -1,0 +1,47 @@
+cubes:
+    name: placement_bc
+
+    sql_table: odsmgr_cust.placement_bc
+
+    joins:
+    -   name: student_course_stusta
+        sql: '{CUBE}.person_uid = student_course_stusta.person_uid'
+        relationship: one_to_many
+
+    dimensions:
+    -   name: test_score
+        sql: test_score
+        type: string
+
+    -   name: test_level
+        sql: test_level
+        type: string
+
+    -   name: test_group
+        sql: test_group
+        type: string
+
+    -   name: test_desc
+        sql: test_desc
+        type: string
+
+    -   name: test_date
+        sql: test_date
+        type: time
+
+    -   name: test
+        sql: test
+        type: string
+
+    -   name: person_uid
+        sql: person_uid
+        type: string
+        primary_key: true
+
+    -   name: course
+        sql: course
+        type: string
+
+    measures: []
+
+    pre_aggregations: []

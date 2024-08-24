@@ -1,0 +1,48 @@
+cubes:
+    name: scrtext_v
+
+    sql_table: odsmgr.scrtext_v
+
+    joins:
+    -   name: course_catalog
+        sql: '{CUBE}.academic_period = course_catalog.academic_period AND {CUBE}.subject
+            = course_catalog.subject AND {CUBE}.course_num = course_catalog.course_number'
+        relationship: zero_to_many
+
+    -   name: schedule_offering_stusta
+        sql: '{CUBE}.academic_period = schedule_offering_stusta.academic_period AND
+            {CUBE}.subject = schedule_offering_stusta.subject AND {CUBE}.course_num
+            = schedule_offering_stusta.course_number'
+        relationship: zero_to_many
+
+    dimensions:
+    -   name: text
+        sql: text
+        type: string
+
+    -   name: subject
+        sql: subject
+        type: string
+        primary_key: true
+
+    -   name: seq_no
+        sql: seq_no
+        type: string
+
+    -   name: course_num
+        sql: course_num
+        type: string
+        primary_key: true
+
+    -   name: academic_period_start
+        sql: academic_period_start
+        type: string
+
+    -   name: academic_period
+        sql: academic_period
+        type: string
+        primary_key: true
+
+    measures: []
+
+    pre_aggregations: []

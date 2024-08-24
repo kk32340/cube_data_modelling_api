@@ -1,0 +1,119 @@
+cubes:
+    name: stvrsts
+
+    sql_table: saturn.stvrsts
+
+    joins:
+    -   name: student_course_stusta
+        sql: '{CUBE}.stvrsts_code = student_course_stusta.registration_status'
+        relationship: one_to_many
+
+    dimensions:
+    -   name: stvrsts_vpdi_code
+        sql: stvrsts_vpdi_code
+        type: string
+
+    -   name: stvrsts_data_origin
+        sql: stvrsts_data_origin
+        type: string
+
+    -   name: stvrsts_user_id
+        sql: stvrsts_user_id
+        type: string
+
+    -   name: stvrsts_version
+        sql: stvrsts_version
+        type: string
+
+    -   name: stvrsts_surrogate_id
+        sql: stvrsts_surrogate_id
+        type: string
+
+    -   name: stvrsts_mis_bogw_ind
+        sql: stvrsts_mis_bogw_ind
+        type: string
+
+    -   name: stvrsts_action_desc
+        sql: stvrsts_action_desc
+        type: string
+
+    -   name: stvrsts_audit_ind
+        sql: stvrsts_audit_ind
+        type: string
+
+    -   name: stvrsts_apport_ind
+        sql: stvrsts_apport_ind
+        type: string
+
+    -   name: stvrsts_incl_tmst_ind
+        sql: stvrsts_incl_tmst_ind
+        type: string
+
+    -   name: stvrsts_attempt_hr_ind
+        sql: stvrsts_attempt_hr_ind
+        type: string
+
+    -   name: stvrsts_extension_ind
+        sql: stvrsts_extension_ind
+        type: string
+
+    -   name: stvrsts_web_ind
+        sql: stvrsts_web_ind
+        type: string
+
+    -   name: stvrsts_withdraw_ind
+        sql: stvrsts_withdraw_ind
+        type: string
+
+    -   name: stvrsts_sb_print_ind
+        sql: stvrsts_sb_print_ind
+        type: string
+
+    -   name: stvrsts_voice_type
+        sql: stvrsts_voice_type
+        type: string
+
+    -   name: stvrsts_system_req_ind
+        sql: stvrsts_system_req_ind
+        type: string
+
+    -   name: stvrsts_wait_ind
+        sql: stvrsts_wait_ind
+        type: string
+
+    -   name: stvrsts_activity_date
+        sql: stvrsts_activity_date
+        type: time
+
+    -   name: stvrsts_gradable_ind
+        sql: stvrsts_gradable_ind
+        type: string
+
+    -   name: stvrsts_auto_grade
+        sql: stvrsts_auto_grade
+        type: string
+
+    -   name: stvrsts_incl_assess
+        sql: stvrsts_incl_assess
+        type: string
+
+    -   name: stvrsts_incl_sect_enrl
+        sql: stvrsts_incl_sect_enrl
+        type: string
+
+    -   name: stvrsts_enterable_ind
+        sql: stvrsts_enterable_ind
+        type: string
+
+    -   name: stvrsts_desc
+        sql: stvrsts_desc
+        type: string
+
+    -   name: stvrsts_code
+        sql: stvrsts_code
+        type: string
+        primary_key: true
+
+    measures: []
+
+    pre_aggregations: []

@@ -1,0 +1,139 @@
+cubes:
+    name: fixed_asset_adjustment
+
+    sql_table: odsmgr.fixed_asset_adjustment
+
+    joins:
+    -   name: fixed_asset_item
+        sql: '{CUBE}.origination_tag_number = fixed_asset_item.origination_tag_number'
+        relationship: one_to_many
+
+    dimensions:
+    -   name: transaction_desc
+        sql: transaction_desc
+        type: string
+
+    -   name: transaction_date
+        sql: transaction_date
+        type: time
+
+    -   name: transaction_amount_adjusted
+        sql: transaction_amount_adjusted
+        type: string
+
+    -   name: transaction_amount
+        sql: transaction_amount
+        type: string
+
+    -   name: sequence_number
+        sql: sequence_number
+        type: string
+
+    -   name: permanent_tag_number
+        sql: permanent_tag_number
+        type: string
+
+    -   name: process_group
+        sql: process_group
+        type: string
+
+    -   name: origination_tag_number
+        sql: origination_tag_number
+        type: string
+        primary_key: true
+
+    -   name: net_book_value_amount
+        sql: net_book_value_amount
+        type: string
+
+    -   name: multi_source_desc
+        sql: multi_source_desc
+        type: string
+
+    -   name: multi_source
+        sql: multi_source
+        type: string
+
+    -   name: method_of_acquisition_desc
+        sql: method_of_acquisition_desc
+        type: string
+
+    -   name: method_of_acquisition
+        sql: method_of_acquisition
+        type: string
+
+    -   name: function_type
+        sql: function_type
+        type: string
+
+    -   name: fiscal_year
+        sql: fiscal_year
+        type: string
+
+    -   name: fiscal_period
+        sql: fiscal_period
+        type: string
+
+    -   name: document_reference_number
+        sql: document_reference_number
+        type: string
+
+    -   name: document
+        sql: document
+        type: string
+
+    -   name: distribution_percent
+        sql: distribution_percent
+        type: string
+
+    -   name: disposal_desc
+        sql: disposal_desc
+        type: string
+
+    -   name: disposal
+        sql: disposal
+        type: string
+
+    -   name: depreciation_adjustment_date
+        sql: depreciation_adjustment_date
+        type: time
+
+    -   name: equity_account_status
+        sql: equity_account_status
+        type: string
+
+    -   name: equity_account_desc
+        sql: equity_account_desc
+        type: string
+
+    -   name: equity_account
+        sql: equity_account
+        type: string
+
+    -   name: completed_ind
+        sql: completed_ind
+        type: string
+
+    -   name: approval_ind
+        sql: approval_ind
+        type: string
+
+    -   name: asset_amount
+        sql: asset_amount
+        type: string
+
+    -   name: administrative_group
+        sql: administrative_group
+        type: string
+
+    -   name: account_item
+        sql: account_item
+        type: string
+
+    -   name: accounting_sequence_number
+        sql: accounting_sequence_number
+        type: string
+
+    measures: []
+
+    pre_aggregations: []

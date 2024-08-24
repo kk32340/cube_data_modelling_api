@@ -1,0 +1,351 @@
+cubes:
+    name: ir_placement_initial
+
+    sql_table: odsmgr_cust.ir_placement_initial
+
+    joins: []
+
+    dimensions:
+    -   name: special_engl_placement_desc
+        sql: special_engl_placement_desc
+        type: time
+
+    -   name: special_engl_placement
+        sql: special_engl_placement
+        type: string
+
+    -   name: slep_reading_desc
+        sql: slep_reading_desc
+        type: time
+
+    -   name: slep_reading
+        sql: slep_reading
+        type: string
+
+    -   name: slep_listening_desc
+        sql: slep_listening_desc
+        type: time
+
+    -   name: slep_listening
+        sql: slep_listening
+        type: string
+
+    -   name: slep_composite_desc
+        sql: slep_composite_desc
+        type: time
+
+    -   name: slep_composite
+        sql: slep_composite
+        type: string
+
+    -   name: person_uid
+        sql: person_uid
+        type: string
+
+    -   name: math_self_placement_date
+        sql: math_self_placement_date
+        type: time
+
+    -   name: math_self_placement
+        sql: math_self_placement
+        type: string
+
+    -   name: multi_measure_reading_date
+        sql: multi_measure_reading_date
+        type: time
+
+    -   name: multi_measure_reading
+        sql: multi_measure_reading
+        type: string
+
+    -   name: multi_measure_math_date
+        sql: multi_measure_math_date
+        type: time
+
+    -   name: multi_measure_math
+        sql: multi_measure_math
+        type: string
+
+    -   name: multi_measure_esl_date
+        sql: multi_measure_esl_date
+        type: time
+
+    -   name: multi_measure_esl
+        sql: multi_measure_esl
+        type: string
+
+    -   name: multi_measure_english_date
+        sql: multi_measure_english_date
+        type: time
+
+    -   name: multi_measure_english
+        sql: multi_measure_english
+        type: string
+
+    -   name: essay_reader2_desc
+        sql: essay_reader2_desc
+        type: time
+
+    -   name: essay_reader2
+        sql: essay_reader2
+        type: string
+
+    -   name: essay_reader1_desc
+        sql: essay_reader1_desc
+        type: time
+
+    -   name: essay_reader1
+        sql: essay_reader1
+        type: string
+
+    -   name: esl_placement_level_desc
+        sql: esl_placement_level_desc
+        type: time
+
+    -   name: esl_placement_level
+        sql: esl_placement_level
+        type: string
+
+    -   name: esl_identified_desc
+        sql: esl_identified_desc
+        type: time
+
+    -   name: esl_identified
+        sql: esl_identified
+        type: string
+
+    -   name: esl_essay_bc_desc
+        sql: esl_essay_bc_desc
+        type: time
+
+    -   name: esl_essay_bc
+        sql: esl_essay_bc
+        type: string
+
+    -   name: esl_composite_desc
+        sql: esl_composite_desc
+        type: time
+
+    -   name: esl_composite
+        sql: esl_composite
+        type: string
+
+    -   name: english_placement_date
+        sql: english_placement_date
+        type: time
+
+    -   name: english_placement
+        sql: english_placement
+        type: string
+
+    -   name: celsa_date
+        sql: celsa_date
+        type: time
+
+    -   name: celsa_comperized_date
+        sql: celsa_comperized_date
+        type: time
+
+    -   name: celsa_comperized
+        sql: celsa_comperized
+        type: string
+
+    -   name: celsa
+        sql: celsa
+        type: string
+
+    -   name: compass_writing_date
+        sql: compass_writing_date
+        type: time
+
+    -   name: compass_writing
+        sql: compass_writing
+        type: string
+
+    -   name: compass_reading_date
+        sql: compass_reading_date
+        type: time
+
+    -   name: compass_reading
+        sql: compass_reading
+        type: string
+
+    -   name: compass_num_skills_date
+        sql: compass_num_skills_date
+        type: time
+
+    -   name: compass_num_skills
+        sql: compass_num_skills
+        type: string
+
+    -   name: compass_interm_alg_date
+        sql: compass_interm_alg_date
+        type: time
+
+    -   name: compass_interm_alg
+        sql: compass_interm_alg
+        type: string
+
+    -   name: compass_esl_writing_desc
+        sql: compass_esl_writing_desc
+        type: time
+
+    -   name: compass_esl_writing
+        sql: compass_esl_writing
+        type: string
+
+    -   name: compass_esl_reading_desc
+        sql: compass_esl_reading_desc
+        type: time
+
+    -   name: compass_esl_reading
+        sql: compass_esl_reading
+        type: string
+
+    -   name: compass_esl_listening_desc
+        sql: compass_esl_listening_desc
+        type: time
+
+    -   name: compass_esl_listening
+        sql: compass_esl_listening
+        type: string
+
+    -   name: compass_elem_alg_date
+        sql: compass_elem_alg_date
+        type: time
+
+    -   name: compass_elem_alg
+        sql: compass_elem_alg
+        type: string
+
+    -   name: compass_college_alg_date
+        sql: compass_college_alg_date
+        type: time
+
+    -   name: compass_college_alg
+        sql: compass_college_alg
+        type: string
+
+    -   name: companion_mm_writ_skills_date
+        sql: companion_mm_writ_skills_date
+        type: time
+
+    -   name: companion_mm_writ_skills
+        sql: companion_mm_writ_skills
+        type: string
+
+    -   name: companion_acc_sent_skill_date
+        sql: companion_acc_sent_skill_date
+        type: time
+
+    -   name: companion_acc_sent_skill
+        sql: companion_acc_sent_skill
+        type: string
+
+    -   name: companion_acc_read_skills_date
+        sql: companion_acc_read_skills_date
+        type: time
+
+    -   name: companion_acc_read_skills
+        sql: companion_acc_read_skills
+        type: string
+
+    -   name: asset_writing_skill_date
+        sql: asset_writing_skill_date
+        type: time
+
+    -   name: asset_writing_skill
+        sql: asset_writing_skill
+        type: string
+
+    -   name: asset_trigonometry_date
+        sql: asset_trigonometry_date
+        type: time
+
+    -   name: asset_trigonometry
+        sql: asset_trigonometry
+        type: string
+
+    -   name: asset_reading_skill_date
+        sql: asset_reading_skill_date
+        type: time
+
+    -   name: asset_reading_skill
+        sql: asset_reading_skill
+        type: string
+
+    -   name: asset_numerical_skill_date
+        sql: asset_numerical_skill_date
+        type: time
+
+    -   name: asset_numerical_skill
+        sql: asset_numerical_skill
+        type: string
+
+    -   name: asset_int_algebra_date
+        sql: asset_int_algebra_date
+        type: time
+
+    -   name: asset_int_algebra
+        sql: asset_int_algebra
+        type: string
+
+    -   name: asset_elem_algebra_date
+        sql: asset_elem_algebra_date
+        type: time
+
+    -   name: asset_elem_algebra
+        sql: asset_elem_algebra
+        type: string
+
+    -   name: asset_coll_algebra_date
+        sql: asset_coll_algebra_date
+        type: time
+
+    -   name: asset_coll_algebra
+        sql: asset_coll_algebra
+        type: string
+
+    -   name: accuplacer_sent_skills_date
+        sql: accuplacer_sent_skills_date
+        type: time
+
+    -   name: accuplacer_sent_skills
+        sql: accuplacer_sent_skills
+        type: string
+
+    -   name: accuplacer_read_compreh_date
+        sql: accuplacer_read_compreh_date
+        type: time
+
+    -   name: accuplacer_read_compreh
+        sql: accuplacer_read_compreh
+        type: string
+
+    -   name: accuplacer_elem_algebra_date
+        sql: accuplacer_elem_algebra_date
+        type: time
+
+    -   name: accuplacer_elem_algebra
+        sql: accuplacer_elem_algebra
+        type: string
+
+    -   name: accuplacer_coll_math_date
+        sql: accuplacer_coll_math_date
+        type: time
+
+    -   name: accuplacer_coll_math
+        sql: accuplacer_coll_math
+        type: string
+
+    -   name: accuplacer_arithmetic_date
+        sql: accuplacer_arithmetic_date
+        type: time
+
+    -   name: accuplacer_arithmetic
+        sql: accuplacer_arithmetic
+        type: string
+
+    measures: []
+
+    pre_aggregations: []

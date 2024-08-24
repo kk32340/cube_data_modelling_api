@@ -1,0 +1,87 @@
+cubes:
+    name: sal_dev_as_of_oct_total
+
+    sql_table: odsmgr_cust.sal_dev_as_of_oct_total
+
+    joins: []
+
+    dimensions:
+    -   name: title
+        sql: title
+        type: string
+
+    -   name: sincrm
+        sql: sincrm
+        type: string
+
+    -   name: shift
+        sql: shift
+        type: string
+
+    -   name: sgroup
+        sql: sgroup
+        type: string
+
+    -   name: position
+        sql: position
+        type: string
+
+    -   name: nstep
+        sql: nstep
+        type: string
+
+    -   name: npay
+        sql: npay
+        type: string
+
+    -   name: newyrjun
+        sql: newyrjun
+        type: string
+
+    -   name: hpay
+        sql: hpay
+        type: string
+
+    -   name: ftepct
+        sql: ftepct
+        type: string
+
+    -   name: curryrjun
+        sql: curryrjun
+        type: string
+
+    -   name: employeename
+        sql: employeename
+        type: string
+
+    -   name: employeeid
+        sql: employeeid
+        type: string
+
+    -   name: eclass
+        sql: eclass
+        type: string
+
+    -   name: atable
+        sql: atable
+        type: string
+
+    -   name: cstep
+        sql: cstep
+        type: string
+
+    -   name: apptpct
+        sql: apptpct
+        type: string
+
+    -   name: annsalary
+        sql: annsalary
+        type: string
+
+    -   name: agrade
+        sql: agrade
+        type: string
+
+    measures: []
+
+    pre_aggregations: []

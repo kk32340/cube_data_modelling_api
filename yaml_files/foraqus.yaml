@@ -1,0 +1,72 @@
+cubes:
+    name: foraqus
+
+    sql_table: fimsmgr.foraqus
+
+    joins:
+    -   name: fobprof
+        sql: '{CUBE}.foraqus_user_id_appr = fobprof.fobprof_user_id'
+        relationship: one_to_many
+
+    -   name: ftvappq
+        sql: '{CUBE}.foraqus_queue_id = ftvappq.ftvappq_queue_id'
+        relationship: one_to_many
+
+    dimensions:
+    -   name: foraqus_user_id_appr
+        sql: foraqus_user_id_appr
+        type: string
+        primary_key: true
+
+    -   name: foraqus_user_id
+        sql: foraqus_user_id
+        type: string
+
+    -   name: foraqus_term_date
+        sql: foraqus_term_date
+        type: time
+
+    -   name: foraqus_queue_limit
+        sql: foraqus_queue_limit
+        type: string
+
+    -   name: foraqus_queue_level
+        sql: foraqus_queue_level
+        type: string
+
+    -   name: foraqus_queue_id
+        sql: foraqus_queue_id
+        type: string
+        primary_key: true
+
+    -   name: foraqus_nchg_date
+        sql: foraqus_nchg_date
+        type: time
+
+    -   name: foraqus_eff_date
+        sql: foraqus_eff_date
+        type: time
+
+    -   name: foraqus_activity_date
+        sql: foraqus_activity_date
+        type: time
+
+    -   name: foraqus_surrogate_id
+        sql: foraqus_surrogate_id
+        type: string
+
+    -   name: foraqus_version
+        sql: foraqus_version
+        type: string
+
+    -   name: foraqus_data_origin
+        sql: foraqus_data_origin
+        type: string
+
+    -   name: foraqus_vpdi_code
+        sql: foraqus_vpdi_code
+        type: string
+
+    measures: []
+
+    pre_aggregations: []

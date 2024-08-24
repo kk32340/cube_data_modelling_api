@@ -1,0 +1,107 @@
+cubes:
+    name: gxrdird
+
+    sql_table: general.gxrdird
+
+    joins: []
+
+    dimensions:
+    -   name: gxrdird_user_id
+        sql: gxrdird_user_id
+        type: string
+
+    -   name: gxrdird_status
+        sql: gxrdird_status
+        type: string
+
+    -   name: gxrdird_scod_code_iso
+        sql: gxrdird_scod_code_iso
+        type: string
+
+    -   name: gxrdird_priority
+        sql: gxrdird_priority
+        type: string
+
+    -   name: gxrdird_pidm
+        sql: gxrdird_pidm
+        type: string
+
+    -   name: gxrdird_percent
+        sql: gxrdird_percent
+        type: string
+
+    -   name: gxrdird_hr_ind
+        sql: gxrdird_hr_ind
+        type: string
+
+    -   name: gxrdird_doc_type
+        sql: gxrdird_doc_type
+        type: string
+
+    -   name: gxrdird_bank_rout_num
+        sql: gxrdird_bank_rout_num
+        type: string
+
+    -   name: gxrdird_bank_acct_num
+        sql: gxrdird_bank_acct_num
+        type: string
+
+    -   name: gxrdird_atyp_code_iat
+        sql: gxrdird_atyp_code_iat
+        type: string
+
+    -   name: gxrdird_atyp_code
+        sql: gxrdird_atyp_code
+        type: string
+
+    -   name: gxrdird_ap_ind
+        sql: gxrdird_ap_ind
+        type: string
+
+    -   name: gxrdird_amount
+        sql: gxrdird_amount
+        type: string
+
+    -   name: gxrdird_addr_seqno_iat
+        sql: gxrdird_addr_seqno_iat
+        type: string
+
+    -   name: gxrdird_addr_seqno
+        sql: gxrdird_addr_seqno
+        type: string
+
+    -   name: gxrdird_activity_date
+        sql: gxrdird_activity_date
+        type: time
+
+    -   name: gxrdird_ach_iat_ind
+        sql: gxrdird_ach_iat_ind
+        type: string
+
+    -   name: gxrdird_acht_code
+        sql: gxrdird_acht_code
+        type: string
+
+    -   name: gxrdird_acct_type
+        sql: gxrdird_acct_type
+        type: string
+
+    -   name: gxrdird_surrogate_id
+        sql: gxrdird_surrogate_id
+        type: string
+
+    -   name: gxrdird_version
+        sql: gxrdird_version
+        type: string
+
+    -   name: gxrdird_data_origin
+        sql: gxrdird_data_origin
+        type: string
+
+    -   name: gxrdird_vpdi_code
+        sql: gxrdird_vpdi_code
+        type: string
+
+    measures: []
+
+    pre_aggregations: []

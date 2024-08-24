@@ -1,0 +1,55 @@
+cubes:
+    name: top_codes_current
+
+    sql_table: odsmgr_cust.top_codes_current
+
+    joins:
+    -   name: ir_section
+        sql: '{CUBE}.top_code = ir_section.top_code'
+        relationship: one_to_many
+
+    dimensions:
+    -   name: voc
+        sql: voc
+        type: string
+
+    -   name: top_title
+        sql: top_title
+        type: string
+
+    -   name: top4_title
+        sql: top4_title
+        type: string
+
+    -   name: top4_code
+        sql: top4_code
+        type: string
+
+    -   name: top2_title
+        sql: top2_title
+        type: string
+
+    -   name: top2_code
+        sql: top2_code
+        type: string
+
+    -   name: fifth_edition
+        sql: fifth_edition
+        type: string
+
+    -   name: cip_title
+        sql: cip_title
+        type: string
+
+    -   name: cip_code
+        sql: cip_code
+        type: string
+
+    -   name: top_code
+        sql: top_code
+        type: string
+        primary_key: true
+
+    measures: []
+
+    pre_aggregations: []

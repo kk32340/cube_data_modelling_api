@@ -1,0 +1,151 @@
+cubes:
+    name: slbbldg
+
+    sql_table: saturn.slbbldg
+
+    joins:
+    -   name: ir_session
+        sql: '{CUBE}.slbbldg_bldg_code = ir_session.building'
+        relationship: zero_to_many
+
+    -   name: ir_session_ir_section
+        sql: '{CUBE}.slbbldg_bldg_code = ir_session_ir_section.building'
+        relationship: zero_to_many
+
+    dimensions:
+    -   name: slbbldg_vpdi_code
+        sql: slbbldg_vpdi_code
+        type: string
+
+    -   name: slbbldg_version
+        sql: slbbldg_version
+        type: string
+
+    -   name: slbbldg_surrogate_id
+        sql: slbbldg_surrogate_id
+        type: string
+
+    -   name: slbbldg_cent_code
+        sql: slbbldg_cent_code
+        type: string
+
+    -   name: slbbldg_leased_ind
+        sql: slbbldg_leased_ind
+        type: string
+
+    -   name: slbbldg_street_line4
+        sql: slbbldg_street_line4
+        type: string
+
+    -   name: slbbldg_house_number
+        sql: slbbldg_house_number
+        type: string
+
+    -   name: slbbldg_ctry_code_phone
+        sql: slbbldg_ctry_code_phone
+        type: string
+
+    -   name: slbbldg_user_id
+        sql: slbbldg_user_id
+        type: string
+
+    -   name: slbbldg_data_origin
+        sql: slbbldg_data_origin
+        type: string
+
+    -   name: slbbldg_pars_code
+        sql: slbbldg_pars_code
+        type: string
+
+    -   name: slbbldg_key_number
+        sql: slbbldg_key_number
+        type: string
+
+    -   name: slbbldg_dept_code
+        sql: slbbldg_dept_code
+        type: string
+
+    -   name: slbbldg_coll_code
+        sql: slbbldg_coll_code
+        type: string
+
+    -   name: slbbldg_sex
+        sql: slbbldg_sex
+        type: string
+
+    -   name: slbbldg_activity_date
+        sql: slbbldg_activity_date
+        type: time
+
+    -   name: slbbldg_phone_extension
+        sql: slbbldg_phone_extension
+        type: string
+
+    -   name: slbbldg_phone_number
+        sql: slbbldg_phone_number
+        type: string
+
+    -   name: slbbldg_phone_area
+        sql: slbbldg_phone_area
+        type: string
+
+    -   name: slbbldg_cnty_code
+        sql: slbbldg_cnty_code
+        type: string
+
+    -   name: slbbldg_zip
+        sql: slbbldg_zip
+        type: string
+
+    -   name: slbbldg_stat_code
+        sql: slbbldg_stat_code
+        type: string
+
+    -   name: slbbldg_city
+        sql: slbbldg_city
+        type: string
+
+    -   name: slbbldg_street_line3
+        sql: slbbldg_street_line3
+        type: string
+
+    -   name: slbbldg_street_line2
+        sql: slbbldg_street_line2
+        type: string
+
+    -   name: slbbldg_street_line1
+        sql: slbbldg_street_line1
+        type: string
+
+    -   name: slbbldg_site_code
+        sql: slbbldg_site_code
+        type: string
+
+    -   name: slbbldg_prcd_code
+        sql: slbbldg_prcd_code
+        type: string
+
+    -   name: slbbldg_rrcd_code
+        sql: slbbldg_rrcd_code
+        type: string
+
+    -   name: slbbldg_maximum_capacity
+        sql: slbbldg_maximum_capacity
+        type: string
+
+    -   name: slbbldg_capacity
+        sql: slbbldg_capacity
+        type: string
+
+    -   name: slbbldg_camp_code
+        sql: slbbldg_camp_code
+        type: string
+
+    -   name: slbbldg_bldg_code
+        sql: slbbldg_bldg_code
+        type: string
+        primary_key: true
+
+    measures: []
+
+    pre_aggregations: []

@@ -1,0 +1,127 @@
+cubes:
+    name: hr_instr_workload_view
+
+    sql_table: odsmgr_cust.hr_instr_workload_view
+
+    joins: []
+
+    dimensions:
+    -   name: calendar_year
+        sql: calendar_year
+        type: string
+
+    -   name: percent_responsibility
+        sql: percent_responsibility
+        type: string
+
+    -   name: taxonomy_of_program_desc
+        sql: taxonomy_of_program_desc
+        type: string
+
+    -   name: top_code
+        sql: top_code
+        type: string
+
+    -   name: department_desc
+        sql: department_desc
+        type: string
+
+    -   name: college
+        sql: college
+        type: string
+
+    -   name: department
+        sql: department
+        type: string
+
+    -   name: catalog_workload
+        sql: catalog_workload
+        type: string
+
+    -   name: workload_adjust
+        sql: workload_adjust
+        type: string
+
+    -   name: calc_workload
+        sql: calc_workload
+        type: string
+
+    -   name: contract_type_desc
+        sql: contract_type_desc
+        type: string
+
+    -   name: contract_type
+        sql: contract_type
+        type: string
+
+    -   name: xlst
+        sql: xlst
+        type: string
+
+    -   name: schedule_desc
+        sql: schedule_desc
+        type: string
+
+    -   name: schedule
+        sql: schedule
+        type: string
+
+    -   name: category
+        sql: category
+        type: string
+
+    -   name: crn
+        sql: crn
+        type: string
+
+    -   name: title
+        sql: title
+        type: string
+
+    -   name: subject
+        sql: subject
+        type: string
+
+    -   name: course_number
+        sql: course_number
+        type: string
+
+    -   name: noninstr_wrkld
+        sql: noninstr_wrkld
+        type: string
+
+    -   name: noninstr_desc
+        sql: noninstr_desc
+        type: string
+
+    -   name: noninstr_typ
+        sql: noninstr_typ
+        type: string
+
+    -   name: job_suffix
+        sql: job_suffix
+        type: string
+
+    -   name: position
+        sql: position
+        type: string
+
+    -   name: name
+        sql: name
+        type: string
+
+    -   name: id
+        sql: id
+        type: string
+
+    -   name: person_uid
+        sql: person_uid
+        type: string
+
+    -   name: academic_period
+        sql: academic_period
+        type: string
+
+    measures: []
+
+    pre_aggregations: []

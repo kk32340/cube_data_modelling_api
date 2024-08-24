@@ -1,0 +1,226 @@
+cubes:
+    name: ir_student_term_gpa
+
+    sql_table: odsmgr_cust.ir_student_term_gpa
+
+    joins:
+    -   name: ir_finaid_award
+        sql: '{CUBE}.academic_period = ir_finaid_award.prev_academic_period AND {CUBE}.person_uid
+            = ir_finaid_award.person_uid'
+        relationship: zero_to_many
+
+    -   name: student_success_term
+        sql: '{CUBE}.academic_period = student_success_term.academic_period AND {CUBE}.person_uid
+            = student_success_term.person_uid'
+        relationship: one_to_many
+
+    dimensions:
+    -   name: term_gpa_credits_pc
+        sql: term_gpa_credits_pc
+        type: string
+
+    -   name: term_gpa_credits_cc
+        sql: term_gpa_credits_cc
+        type: string
+
+    -   name: term_gpa_credits_bc
+        sql: term_gpa_credits_bc
+        type: string
+
+    -   name: cum_gpa_credits_xfr_pc
+        sql: cum_gpa_credits_xfr_pc
+        type: string
+
+    -   name: cum_gpa_credits_xfr_cc
+        sql: cum_gpa_credits_xfr_cc
+        type: string
+
+    -   name: cum_gpa_credits_xfr_bc
+        sql: cum_gpa_credits_xfr_bc
+        type: string
+
+    -   name: cum_gpa_credits_inst_pc
+        sql: cum_gpa_credits_inst_pc
+        type: string
+
+    -   name: cum_gpa_credits_inst_cc
+        sql: cum_gpa_credits_inst_cc
+        type: string
+
+    -   name: cum_gpa_credits_inst_bc
+        sql: cum_gpa_credits_inst_bc
+        type: string
+
+    -   name: term_qlty_pts_pc
+        sql: term_qlty_pts_pc
+        type: string
+
+    -   name: term_qlty_pts_cc
+        sql: term_qlty_pts_cc
+        type: string
+
+    -   name: term_qlty_pts_bc
+        sql: term_qlty_pts_bc
+        type: string
+
+    -   name: term_gpa_pc
+        sql: term_gpa_pc
+        type: string
+
+    -   name: term_gpa_cc
+        sql: term_gpa_cc
+        type: string
+
+    -   name: term_gpa_bc
+        sql: term_gpa_bc
+        type: string
+
+    -   name: term_earned_units_pc
+        sql: term_earned_units_pc
+        type: string
+
+    -   name: term_earned_units_cc
+        sql: term_earned_units_cc
+        type: string
+
+    -   name: term_earned_units_bc
+        sql: term_earned_units_bc
+        type: string
+
+    -   name: term_attempted_units_pc
+        sql: term_attempted_units_pc
+        type: string
+
+    -   name: term_attempted_units_cc
+        sql: term_attempted_units_cc
+        type: string
+
+    -   name: term_attempted_units_bc
+        sql: term_attempted_units_bc
+        type: string
+
+    -   name: deans_list_val
+        sql: deans_list_val
+        type: string
+
+    -   name: deans_list_desc
+        sql: deans_list_desc
+        type: string
+
+    -   name: cum_qlty_pts_xfr_pc
+        sql: cum_qlty_pts_xfr_pc
+        type: string
+
+    -   name: cum_qlty_pts_xfr_cc
+        sql: cum_qlty_pts_xfr_cc
+        type: string
+
+    -   name: cum_qlty_pts_xfr_bc
+        sql: cum_qlty_pts_xfr_bc
+        type: string
+
+    -   name: cum_qlty_pts_inst_pc
+        sql: cum_qlty_pts_inst_pc
+        type: string
+
+    -   name: cum_qlty_pts_inst_cc
+        sql: cum_qlty_pts_inst_cc
+        type: string
+
+    -   name: cum_qlty_pts_inst_bc
+        sql: cum_qlty_pts_inst_bc
+        type: string
+
+    -   name: cum_gpa_xfr_pc
+        sql: cum_gpa_xfr_pc
+        type: string
+
+    -   name: cum_gpa_xfr_cc
+        sql: cum_gpa_xfr_cc
+        type: string
+
+    -   name: cum_gpa_xfr_bc
+        sql: cum_gpa_xfr_bc
+        type: string
+
+    -   name: cum_gpa_inst_pc
+        sql: cum_gpa_inst_pc
+        type: string
+
+    -   name: cum_gpa_inst_cc
+        sql: cum_gpa_inst_cc
+        type: string
+
+    -   name: cum_gpa_inst_bc
+        sql: cum_gpa_inst_bc
+        type: string
+
+    -   name: cum_earned_units_xfr_pc
+        sql: cum_earned_units_xfr_pc
+        type: string
+
+    -   name: cum_earned_units_xfr_cc
+        sql: cum_earned_units_xfr_cc
+        type: string
+
+    -   name: cum_earned_units_xfr_bc
+        sql: cum_earned_units_xfr_bc
+        type: string
+
+    -   name: cum_earned_units_inst_pc
+        sql: cum_earned_units_inst_pc
+        type: string
+
+    -   name: cum_earned_units_inst_cc
+        sql: cum_earned_units_inst_cc
+        type: string
+
+    -   name: cum_earned_units_inst_bc
+        sql: cum_earned_units_inst_bc
+        type: string
+
+    -   name: cum_attempted_units_xfr_pc
+        sql: cum_attempted_units_xfr_pc
+        type: string
+
+    -   name: cum_attempted_units_xfr_cc
+        sql: cum_attempted_units_xfr_cc
+        type: string
+
+    -   name: cum_attempted_units_xfr_bc
+        sql: cum_attempted_units_xfr_bc
+        type: string
+
+    -   name: cum_attempted_units_inst_pc
+        sql: cum_attempted_units_inst_pc
+        type: string
+
+    -   name: cum_attempted_units_inst_cc
+        sql: cum_attempted_units_inst_cc
+        type: string
+
+    -   name: cum_attempted_units_inst_bc
+        sql: cum_attempted_units_inst_bc
+        type: string
+
+    -   name: combined_acad_standing_desc
+        sql: combined_acad_standing_desc
+        type: string
+
+    -   name: combined_acad_standing
+        sql: combined_acad_standing
+        type: string
+
+    -   name: academic_period
+        sql: academic_period
+        type: string
+        primary_key: true
+
+    -   name: person_uid
+        sql: person_uid
+        type: string
+        primary_key: true
+
+    measures: []
+
+    pre_aggregations: []

@@ -1,0 +1,75 @@
+cubes:
+    name: course_type_rollup
+
+    sql_table: odsmgr_cust.course_type_rollup
+
+    joins:
+    -   name: ir_course_catalog
+        sql: '{CUBE}.academic_period = ir_course_catalog.academic_period AND {CUBE}.subject
+            = ir_course_catalog.subject AND {CUBE}.course_number = ir_course_catalog.course_number'
+        relationship: one_to_many
+
+    -   name: ir_section
+        sql: '{CUBE}.academic_period = ir_section.academic_period AND {CUBE}.subject
+            = ir_section.subject AND {CUBE}.course_number = ir_section.course_number'
+        relationship: one_to_many
+
+    -   name: course_catalog_alias
+        sql: '{CUBE}.academic_period = course_type_rollup.subject AND {CUBE}.course_number'
+        relationship: one_to_many
+
+    dimensions:
+    -   name: voc_ind
+        sql: voc_ind
+        type: string
+
+    -   name: uc_ind
+        sql: uc_ind
+        type: string
+
+    -   name: subject
+        sql: subject
+        type: string
+        primary_key: true
+
+    -   name: non_credit_ind
+        sql: non_credit_ind
+        type: string
+
+    -   name: igetc_ind
+        sql: igetc_ind
+        type: string
+
+    -   name: ge
+        sql: ge
+        type: string
+
+    -   name: degree_applicable_ind
+        sql: degree_applicable_ind
+        type: string
+
+    -   name: course_number
+        sql: course_number
+        type: string
+        primary_key: true
+
+    -   name: bskl_ind
+        sql: bskl_ind
+        type: string
+
+    -   name: csu_ind
+        sql: csu_ind
+        type: string
+
+    -   name: csu_ge
+        sql: csu_ge
+        type: string
+
+    -   name: academic_period
+        sql: academic_period
+        type: string
+        primary_key: true
+
+    measures: []
+
+    pre_aggregations: []

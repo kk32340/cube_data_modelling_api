@@ -1,0 +1,127 @@
+cubes:
+    name: gainful_employ_report
+
+    sql_table: odsmgr_cust.gainful_employ_report
+
+    joins: []
+
+    dimensions:
+    -   name: inst_name_othr_prog
+        sql: inst_name_othr_prog
+        type: string
+
+    -   name: opeid_othr_prog_inst
+        sql: opeid_othr_prog_inst
+        type: string
+
+    -   name: ge_prog_ind_othr_prog
+        sql: ge_prog_ind_othr_prog
+        type: string
+
+    -   name: prog_name_othr_prog
+        sql: prog_name_othr_prog
+        type: string
+
+    -   name: cred_lvl_othr_prog
+        sql: cred_lvl_othr_prog
+        type: string
+
+    -   name: cip_othr_program
+        sql: cip_othr_program
+        type: string
+
+    -   name: enr_othr_program
+        sql: enr_othr_program
+        type: string
+
+    -   name: tuition_fees_amt
+        sql: tuition_fees_amt
+        type: string
+
+    -   name: inst_finance_amt
+        sql: inst_finance_amt
+        type: string
+
+    -   name: private_loans_amt
+        sql: private_loans_amt
+        type: string
+
+    -   name: prog_atten_end_date
+        sql: prog_atten_end_date
+        type: time
+
+    -   name: program_atten_status
+        sql: program_atten_status
+        type: string
+
+    -   name: prog_begin_date_this_year
+        sql: prog_begin_date_this_year
+        type: time
+
+    -   name: program_atten_begin_date
+        sql: program_atten_begin_date
+        type: time
+
+    -   name: ffel_direct_loan
+        sql: ffel_direct_loan
+        type: string
+
+    -   name: med_dental_intern_res
+        sql: med_dental_intern_res
+        type: string
+
+    -   name: cred_lvl
+        sql: cred_lvl
+        type: string
+
+    -   name: cip_code
+        sql: cip_code
+        type: string
+
+    -   name: program_desc
+        sql: program_desc
+        type: string
+
+    -   name: ge_program
+        sql: ge_program
+        type: string
+
+    -   name: institutionname
+        sql: institutionname
+        type: string
+
+    -   name: opeid
+        sql: opeid
+        type: string
+
+    -   name: dob
+        sql: dob
+        type: string
+
+    -   name: lname
+        sql: lname
+        type: string
+
+    -   name: miname
+        sql: miname
+        type: string
+
+    -   name: fname
+        sql: fname
+        type: string
+
+    -   name: ssn
+        sql: ssn
+        type: string
+
+    -   name: awardyear
+        sql: awardyear
+        type: string
+
+    -   name: recordtype
+        sql: recordtype
+        type: string
+
+    measures: []
+
+    pre_aggregations: []

@@ -1,0 +1,547 @@
+cubes:
+    name: ftvfund
+
+    sql_table: fimsmgr.ftvfund
+
+    joins:
+    -   name: operating_ledger
+        sql: '{CUBE}.ftvfund_fund_code = operating_ledger.fund'
+        relationship: one_to_one
+
+    dimensions:
+    -   name: ftvfund_user_id
+        sql: ftvfund_user_id
+        type: string
+
+    -   name: ftvfund_title
+        sql: ftvfund_title
+        type: string
+
+    -   name: ftvfund_term_date
+        sql: ftvfund_term_date
+        type: time
+
+    -   name: ftvfund_status_ind
+        sql: ftvfund_status_ind
+        type: string
+
+    -   name: ftvfund_src_cap_same_ind
+        sql: ftvfund_src_cap_same_ind
+        type: string
+
+    -   name: ftvfund_spend_formula_freq_ind
+        sql: ftvfund_spend_formula_freq_ind
+        type: string
+
+    -   name: ftvfund_spendable_return_ind
+        sql: ftvfund_spendable_return_ind
+        type: string
+
+    -   name: ftvfund_spendable_rate
+        sql: ftvfund_spendable_rate
+        type: string
+
+    -   name: ftvfund_rest_ind
+        sql: ftvfund_rest_ind
+        type: string
+
+    -   name: ftvfund_real_gl_py
+        sql: ftvfund_real_gl_py
+        type: string
+
+    -   name: ftvfund_real_gl
+        sql: ftvfund_real_gl
+        type: string
+
+    -   name: ftvfund_py_retained_income
+        sql: ftvfund_py_retained_income
+        type: string
+
+    -   name: ftvfund_prop_code
+        sql: ftvfund_prop_code
+        type: string
+
+    -   name: ftvfund_proj_start_date_conp
+        sql: ftvfund_proj_start_date_conp
+        type: time
+
+    -   name: ftvfund_proj_end_date_conp
+        sql: ftvfund_proj_end_date_conp
+        type: time
+
+    -   name: ftvfund_proj_desc
+        sql: ftvfund_proj_desc
+        type: string
+
+    -   name: ftvfund_proj_complete_date
+        sql: ftvfund_proj_complete_date
+        type: time
+
+    -   name: ftvfund_prog_code_trf_ri_py
+        sql: ftvfund_prog_code_trf_ri_py
+        type: string
+
+    -   name: ftvfund_prog_code_trf_rgl_py
+        sql: ftvfund_prog_code_trf_rgl_py
+        type: string
+
+    -   name: ftvfund_prog_code_trf_rgl
+        sql: ftvfund_prog_code_trf_rgl
+        type: string
+
+    -   name: ftvfund_prog_code_trf_income
+        sql: ftvfund_prog_code_trf_income
+        type: string
+
+    -   name: ftvfund_prog_code_spend_incm
+        sql: ftvfund_prog_code_spend_incm
+        type: string
+
+    -   name: ftvfund_prog_code_spd_tr_frm
+        sql: ftvfund_prog_code_spd_tr_frm
+        type: string
+
+    -   name: ftvfund_prog_code_real_loss
+        sql: ftvfund_prog_code_real_loss
+        type: string
+
+    -   name: ftvfund_prog_code_real_gain
+        sql: ftvfund_prog_code_real_gain
+        type: string
+
+    -   name: ftvfund_prog_code_income
+        sql: ftvfund_prog_code_income
+        type: string
+
+    -   name: ftvfund_prog_code_def
+        sql: ftvfund_prog_code_def
+        type: string
+
+    -   name: ftvfund_prog_code_contra_rl
+        sql: ftvfund_prog_code_contra_rl
+        type: string
+
+    -   name: ftvfund_prog_code_contra_rg
+        sql: ftvfund_prog_code_contra_rg
+        type: string
+
+    -   name: ftvfund_prog_code_contra_inc
+        sql: ftvfund_prog_code_contra_inc
+        type: string
+
+    -   name: ftvfund_prog_code_cap_def
+        sql: ftvfund_prog_code_cap_def
+        type: string
+
+    -   name: ftvfund_prog_code_alloc_contra
+        sql: ftvfund_prog_code_alloc_contra
+        type: string
+
+    -   name: ftvfund_pool_ind
+        sql: ftvfund_pool_ind
+        type: string
+
+    -   name: ftvfund_pooling_method
+        sql: ftvfund_pooling_method
+        type: string
+
+    -   name: ftvfund_orgn_code_trf_ri_py
+        sql: ftvfund_orgn_code_trf_ri_py
+        type: string
+
+    -   name: ftvfund_orgn_code_trf_rgl_py
+        sql: ftvfund_orgn_code_trf_rgl_py
+        type: string
+
+    -   name: ftvfund_orgn_code_trf_rgl
+        sql: ftvfund_orgn_code_trf_rgl
+        type: string
+
+    -   name: ftvfund_orgn_code_trf_income
+        sql: ftvfund_orgn_code_trf_income
+        type: string
+
+    -   name: ftvfund_orgn_code_spend_incm
+        sql: ftvfund_orgn_code_spend_incm
+        type: string
+
+    -   name: ftvfund_orgn_code_spd_tr_frm
+        sql: ftvfund_orgn_code_spd_tr_frm
+        type: string
+
+    -   name: ftvfund_orgn_code_real_loss
+        sql: ftvfund_orgn_code_real_loss
+        type: string
+
+    -   name: ftvfund_orgn_code_real_gain
+        sql: ftvfund_orgn_code_real_gain
+        type: string
+
+    -   name: ftvfund_orgn_code_income
+        sql: ftvfund_orgn_code_income
+        type: string
+
+    -   name: ftvfund_orgn_code_def
+        sql: ftvfund_orgn_code_def
+        type: string
+
+    -   name: ftvfund_orgn_code_contra_rl
+        sql: ftvfund_orgn_code_contra_rl
+        type: string
+
+    -   name: ftvfund_orgn_code_contra_rg
+        sql: ftvfund_orgn_code_contra_rg
+        type: string
+
+    -   name: ftvfund_orgn_code_contra_inc
+        sql: ftvfund_orgn_code_contra_inc
+        type: string
+
+    -   name: ftvfund_orgn_code_cap_def
+        sql: ftvfund_orgn_code_cap_def
+        type: string
+
+    -   name: ftvfund_orgn_code_alloc_contra
+        sql: ftvfund_orgn_code_alloc_contra
+        type: string
+
+    -   name: ftvfund_nchg_date
+        sql: ftvfund_nchg_date
+        type: time
+
+    -   name: ftvfund_max_constr_amt
+        sql: ftvfund_max_constr_amt
+        type: string
+
+    -   name: ftvfund_locn_code_def
+        sql: ftvfund_locn_code_def
+        type: string
+
+    -   name: ftvfund_locn_code_cap_def
+        sql: ftvfund_locn_code_cap_def
+        type: string
+
+    -   name: ftvfund_indc_code
+        sql: ftvfund_indc_code
+        type: string
+
+    -   name: ftvfund_hier_table_ind
+        sql: ftvfund_hier_table_ind
+        type: string
+
+    -   name: ftvfund_grnt_code
+        sql: ftvfund_grnt_code
+        type: string
+
+    -   name: ftvfund_fund_code_spend_incm
+        sql: ftvfund_fund_code_spend_incm
+        type: string
+
+    -   name: ftvfund_fund_code_source
+        sql: ftvfund_fund_code_source
+        type: string
+
+    -   name: ftvfund_fund_code_pred
+        sql: ftvfund_fund_code_pred
+        type: string
+
+    -   name: ftvfund_fund_code_plant_conp
+        sql: ftvfund_fund_code_plant_conp
+        type: string
+
+    -   name: ftvfund_fund_code_plant
+        sql: ftvfund_fund_code_plant
+        type: string
+
+    -   name: ftvfund_fund_code_match
+        sql: ftvfund_fund_code_match
+        type: string
+
+    -   name: ftvfund_fund_code_endow_func
+        sql: ftvfund_fund_code_endow_func
+        type: string
+
+    -   name: ftvfund_fund_code_bavl
+        sql: ftvfund_fund_code_bavl
+        type: string
+
+    -   name: ftvfund_fund_code_alloc_tgt
+        sql: ftvfund_fund_code_alloc_tgt
+        type: string
+
+    -   name: ftvfund_fund_code
+        sql: ftvfund_fund_code
+        type: string
+        primary_key: true
+
+    -   name: ftvfund_ftyp_code
+        sql: ftvfund_ftyp_code
+        type: string
+
+    -   name: ftvfund_fmgr_code_pidm_conp
+        sql: ftvfund_fmgr_code_pidm_conp
+        type: string
+
+    -   name: ftvfund_fmgr_code_pidm
+        sql: ftvfund_fmgr_code_pidm
+        type: string
+
+    -   name: ftvfund_fbal_ind
+        sql: ftvfund_fbal_ind
+        type: string
+
+    -   name: ftvfund_expend_end_date
+        sql: ftvfund_expend_end_date
+        type: time
+
+    -   name: ftvfund_eff_date
+        sql: ftvfund_eff_date
+        type: time
+
+    -   name: ftvfund_distribution_st_date
+        sql: ftvfund_distribution_st_date
+        type: time
+
+    -   name: ftvfund_distribution_ind_rgl
+        sql: ftvfund_distribution_ind_rgl
+        type: string
+
+    -   name: ftvfund_distribution_ind_inc
+        sql: ftvfund_distribution_ind_inc
+        type: string
+
+    -   name: ftvfund_distribution_freq_rgl
+        sql: ftvfund_distribution_freq_rgl
+        type: string
+
+    -   name: ftvfund_distribution_freq_inc
+        sql: ftvfund_distribution_freq_inc
+        type: string
+
+    -   name: ftvfund_depr_post_code
+        sql: ftvfund_depr_post_code
+        type: string
+
+    -   name: ftvfund_depr_exp_eq_def_ind
+        sql: ftvfund_depr_exp_eq_def_ind
+        type: string
+
+    -   name: ftvfund_data_entry_ind
+        sql: ftvfund_data_entry_ind
+        type: string
+
+    -   name: ftvfund_current_year_income
+        sql: ftvfund_current_year_income
+        type: string
+
+    -   name: ftvfund_cum_cost_amt
+        sql: ftvfund_cum_cost_amt
+        type: string
+
+    -   name: ftvfund_cost_code_grnt
+        sql: ftvfund_cost_code_grnt
+        type: string
+
+    -   name: ftvfund_cost_code_conp
+        sql: ftvfund_cost_code_conp
+        type: string
+
+    -   name: ftvfund_conp_proj_num
+        sql: ftvfund_conp_proj_num
+        type: string
+
+    -   name: ftvfund_coas_code_match
+        sql: ftvfund_coas_code_match
+        type: string
+
+    -   name: ftvfund_coas_code
+        sql: ftvfund_coas_code
+        type: string
+
+    -   name: ftvfund_close_proj_ind
+        sql: ftvfund_close_proj_ind
+        type: string
+
+    -   name: ftvfund_cash_receipt_bank_code
+        sql: ftvfund_cash_receipt_bank_code
+        type: string
+
+    -   name: ftvfund_bavl_severity
+        sql: ftvfund_bavl_severity
+        type: string
+
+    -   name: ftvfund_bavl_period
+        sql: ftvfund_bavl_period
+        type: string
+
+    -   name: ftvfund_bavl_key_prog
+        sql: ftvfund_bavl_key_prog
+        type: string
+
+    -   name: ftvfund_bavl_key_orgn
+        sql: ftvfund_bavl_key_orgn
+        type: string
+
+    -   name: ftvfund_bavl_key_fund
+        sql: ftvfund_bavl_key_fund
+        type: string
+
+    -   name: ftvfund_bavl_key_acct
+        sql: ftvfund_bavl_key_acct
+        type: string
+
+    -   name: ftvfund_bank_code
+        sql: ftvfund_bank_code
+        type: string
+
+    -   name: ftvfund_arb_begin_unit_value
+        sql: ftvfund_arb_begin_unit_value
+        type: string
+
+    -   name: ftvfund_alloc_pct
+        sql: ftvfund_alloc_pct
+        type: string
+
+    -   name: ftvfund_actv_code_def
+        sql: ftvfund_actv_code_def
+        type: string
+
+    -   name: ftvfund_actv_code_cap_def
+        sql: ftvfund_actv_code_cap_def
+        type: string
+
+    -   name: ftvfund_activity_date
+        sql: ftvfund_activity_date
+        type: time
+
+    -   name: ftvfund_acct_code_trf_ri_py
+        sql: ftvfund_acct_code_trf_ri_py
+        type: string
+
+    -   name: ftvfund_acct_code_trf_rgl_py
+        sql: ftvfund_acct_code_trf_rgl_py
+        type: string
+
+    -   name: ftvfund_acct_code_trf_rgl
+        sql: ftvfund_acct_code_trf_rgl
+        type: string
+
+    -   name: ftvfund_acct_code_trf_income
+        sql: ftvfund_acct_code_trf_income
+        type: string
+
+    -   name: ftvfund_acct_code_spend_incm
+        sql: ftvfund_acct_code_spend_incm
+        type: string
+
+    -   name: ftvfund_acct_code_spend_excs
+        sql: ftvfund_acct_code_spend_excs
+        type: string
+
+    -   name: ftvfund_acct_code_spd_tr_to
+        sql: ftvfund_acct_code_spd_tr_to
+        type: string
+
+    -   name: ftvfund_acct_code_spd_tr_frm
+        sql: ftvfund_acct_code_spd_tr_frm
+        type: string
+
+    -   name: ftvfund_acct_code_rev
+        sql: ftvfund_acct_code_rev
+        type: string
+
+    -   name: ftvfund_acct_code_reclass
+        sql: ftvfund_acct_code_reclass
+        type: string
+
+    -   name: ftvfund_acct_code_real_loss
+        sql: ftvfund_acct_code_real_loss
+        type: string
+
+    -   name: ftvfund_acct_code_real_gain
+        sql: ftvfund_acct_code_real_gain
+        type: string
+
+    -   name: ftvfund_acct_code_pool
+        sql: ftvfund_acct_code_pool
+        type: string
+
+    -   name: ftvfund_acct_code_plant
+        sql: ftvfund_acct_code_plant
+        type: string
+
+    -   name: ftvfund_acct_code_loss
+        sql: ftvfund_acct_code_loss
+        type: string
+
+    -   name: ftvfund_acct_code_income
+        sql: ftvfund_acct_code_income
+        type: string
+
+    -   name: ftvfund_acct_code_gain
+        sql: ftvfund_acct_code_gain
+        type: string
+
+    -   name: ftvfund_acct_code_fund_bal
+        sql: ftvfund_acct_code_fund_bal
+        type: string
+
+    -   name: ftvfund_acct_code_equity
+        sql: ftvfund_acct_code_equity
+        type: string
+
+    -   name: ftvfund_acct_code_contra_rl
+        sql: ftvfund_acct_code_contra_rl
+        type: string
+
+    -   name: ftvfund_acct_code_contra_rg
+        sql: ftvfund_acct_code_contra_rg
+        type: string
+
+    -   name: ftvfund_acct_code_contra_inc
+        sql: ftvfund_acct_code_contra_inc
+        type: string
+
+    -   name: ftvfund_acct_code_cip
+        sql: ftvfund_acct_code_cip
+        type: string
+
+    -   name: ftvfund_acct_code_asset
+        sql: ftvfund_acct_code_asset
+        type: string
+
+    -   name: ftvfund_acct_code_alloc_contra
+        sql: ftvfund_acct_code_alloc_contra
+        type: string
+
+    -   name: ftvfund_acct_code_accr
+        sql: ftvfund_acct_code_accr
+        type: string
+
+    -   name: ftvfund_eff_cert_required_ind
+        sql: ftvfund_eff_cert_required_ind
+        type: string
+
+    -   name: ftvfund_eff_cert_alloc_ind
+        sql: ftvfund_eff_cert_alloc_ind
+        type: string
+
+    -   name: ftvfund_surrogate_id
+        sql: ftvfund_surrogate_id
+        type: string
+
+    -   name: ftvfund_version
+        sql: ftvfund_version
+        type: string
+
+    -   name: ftvfund_data_origin
+        sql: ftvfund_data_origin
+        type: string
+
+    -   name: ftvfund_vpdi_code
+        sql: ftvfund_vpdi_code
+        type: string
+
+    measures: []
+
+    pre_aggregations: []

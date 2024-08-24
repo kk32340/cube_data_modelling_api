@@ -1,0 +1,342 @@
+cubes:
+    name: fund_hierarchy
+
+    sql_table: odsmgr.fund_hierarchy
+
+    joins:
+    -   name: ftvfund
+        sql: '{CUBE}.fund = ftvfund.ftvfund_fund_code'
+        relationship: one_to_many
+
+    -   name: transaction_history
+        sql: '{CUBE}.chart_of_accounts = transaction_history.chart_of_accounts AND
+            {CUBE}.fund = transaction_history.fund'
+        relationship: one_to_many
+
+    -   name: grant_view
+        sql: '{CUBE}.grant_id = grant_view.grant_id'
+        relationship: one_to_one
+
+    -   name: mft_operating_ledger
+        sql: '{CUBE}.fund = mft_operating_ledger.fund'
+        relationship: one_to_many
+
+    dimensions:
+    -   name: location_desc
+        sql: location_desc
+        type: string
+
+    -   name: location_default
+        sql: location_default
+        type: string
+
+    -   name: activity_desc
+        sql: activity_desc
+        type: string
+
+    -   name: activity_default
+        sql: activity_default
+        type: string
+
+    -   name: program_desc
+        sql: program_desc
+        type: string
+
+    -   name: program_default
+        sql: program_default
+        type: string
+
+    -   name: organization_desc
+        sql: organization_desc
+        type: string
+
+    -   name: organization_default
+        sql: organization_default
+        type: string
+
+    -   name: fund_balance_restriction_desc
+        sql: fund_balance_restriction_desc
+        type: string
+
+    -   name: fund_balance_restriction
+        sql: fund_balance_restriction
+        type: string
+
+    -   name: fund_balance_desc
+        sql: fund_balance_desc
+        type: string
+
+    -   name: fund_balance
+        sql: fund_balance
+        type: string
+
+    -   name: fund_restriction_desc
+        sql: fund_restriction_desc
+        type: string
+
+    -   name: fund_restriction
+        sql: fund_restriction
+        type: string
+
+    -   name: data_entry_permitted_desc
+        sql: data_entry_permitted_desc
+        type: string
+
+    -   name: data_entry_permitted
+        sql: data_entry_permitted
+        type: string
+
+    -   name: chart_of_accounts_status
+        sql: chart_of_accounts_status
+        type: string
+
+    -   name: termination_date
+        sql: termination_date
+        type: time
+
+    -   name: street_line4
+        sql: street_line4
+        type: string
+
+    -   name: street_line3
+        sql: street_line3
+        type: string
+
+    -   name: street_line2
+        sql: street_line2
+        type: string
+
+    -   name: street_line1
+        sql: street_line1
+        type: string
+
+    -   name: state_province_desc
+        sql: state_province_desc
+        type: string
+
+    -   name: state_province
+        sql: state_province
+        type: string
+
+    -   name: process_group
+        sql: process_group
+        type: string
+
+    -   name: postal_code
+        sql: postal_code
+        type: string
+
+    -   name: nation_desc
+        sql: nation_desc
+        type: string
+
+    -   name: nation
+        sql: nation
+        type: string
+
+    -   name: multi_source_desc
+        sql: multi_source_desc
+        type: string
+
+    -   name: multi_source
+        sql: multi_source
+        type: string
+
+    -   name: fund_type_desc_1
+        sql: fund_type_desc_1
+        type: string
+
+    -   name: fund_type_desc
+        sql: fund_type_desc
+        type: string
+
+    -   name: fund_type
+        sql: fund_type
+        type: string
+
+    -   name: fund_status_5
+        sql: fund_status_5
+        type: string
+
+    -   name: fund_status_4
+        sql: fund_status_4
+        type: string
+
+    -   name: fund_status_3
+        sql: fund_status_3
+        type: string
+
+    -   name: fund_status_2
+        sql: fund_status_2
+        type: string
+
+    -   name: fund_status_1
+        sql: fund_status_1
+        type: string
+
+    -   name: fund_status
+        sql: fund_status
+        type: string
+
+    -   name: fund_pool_desc
+        sql: fund_pool_desc
+        type: string
+
+    -   name: fund_pool
+        sql: fund_pool
+        type: string
+
+    -   name: fund_level_5
+        sql: fund_level_5
+        type: string
+
+    -   name: fund_level_4
+        sql: fund_level_4
+        type: string
+
+    -   name: fund_level_3
+        sql: fund_level_3
+        type: string
+
+    -   name: fund_level_2
+        sql: fund_level_2
+        type: string
+
+    -   name: fund_level_1
+        sql: fund_level_1
+        type: string
+
+    -   name: fund_level
+        sql: fund_level
+        type: string
+
+    -   name: fund_desc_5
+        sql: fund_desc_5
+        type: string
+
+    -   name: fund_desc_4
+        sql: fund_desc_4
+        type: string
+
+    -   name: fund_desc_3
+        sql: fund_desc_3
+        type: string
+
+    -   name: fund_desc_2
+        sql: fund_desc_2
+        type: string
+
+    -   name: fund_desc_1
+        sql: fund_desc_1
+        type: string
+
+    -   name: fund_desc
+        sql: fund_desc
+        type: string
+
+    -   name: grant_status
+        sql: grant_status
+        type: string
+
+    -   name: grant_id
+        sql: grant_id
+        type: string
+        primary_key: true
+
+    -   name: grant_desc
+        sql: grant_desc
+        type: string
+
+    -   name: fmgr_middle_name
+        sql: fmgr_middle_name
+        type: string
+
+    -   name: fmgr_last_name
+        sql: fmgr_last_name
+        type: string
+
+    -   name: fmgr_first_name
+        sql: fmgr_first_name
+        type: string
+
+    -   name: financial_manager_uid
+        sql: financial_manager_uid
+        type: string
+
+    -   name: financial_manager_name
+        sql: financial_manager_name
+        type: string
+
+    -   name: financial_manager_id
+        sql: financial_manager_id
+        type: string
+
+    -   name: internal_fund_type_desc
+        sql: internal_fund_type_desc
+        type: string
+
+    -   name: internal_fund_type
+        sql: internal_fund_type
+        type: string
+
+    -   name: fund_type_status_2
+        sql: fund_type_status_2
+        type: string
+
+    -   name: fund_type_status_1
+        sql: fund_type_status_1
+        type: string
+
+    -   name: fund_type_level_2
+        sql: fund_type_level_2
+        type: string
+
+    -   name: fund_type_level_1
+        sql: fund_type_level_1
+        type: string
+
+    -   name: fund_type_level
+        sql: fund_type_level
+        type: string
+
+    -   name: fund_type_desc_2
+        sql: fund_type_desc_2
+        type: string
+
+    -   name: expend_end_date
+        sql: expend_end_date
+        type: time
+
+    -   name: chart_of_accounts_desc
+        sql: chart_of_accounts_desc
+        type: string
+
+    -   name: county_desc
+        sql: county_desc
+        type: string
+
+    -   name: county
+        sql: county
+        type: string
+
+    -   name: city
+        sql: city
+        type: string
+
+    -   name: administrative_group
+        sql: administrative_group
+        type: string
+
+    -   name: fund
+        sql: fund
+        type: string
+        primary_key: true
+
+    -   name: chart_of_accounts
+        sql: chart_of_accounts
+        type: string
+        primary_key: true
+
+    measures: []
+
+    pre_aggregations: []

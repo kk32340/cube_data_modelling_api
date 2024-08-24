@@ -1,0 +1,35 @@
+cubes:
+    name: ftes_by_tops
+
+    sql_table: odsmgr_cust.ftes_by_tops
+
+    joins: []
+
+    dimensions:
+    -   name: taxonomy_of_program_desc
+        sql: taxonomy_of_program_desc
+        type: string
+
+    -   name: taxonomy_of_program
+        sql: taxonomy_of_program
+        type: string
+
+    -   name: reporting_year
+        sql: reporting_year
+        type: string
+
+    -   name: department
+        sql: department
+        type: string
+
+    -   name: ftes
+        sql: ftes
+        type: string
+
+    -   name: college
+        sql: college
+        type: string
+
+    measures: []
+
+    pre_aggregations: []

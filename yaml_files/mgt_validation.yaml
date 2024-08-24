@@ -1,0 +1,75 @@
+cubes:
+    name: mgt_validation
+
+    sql_table: odsmgr.mgt_validation
+
+    joins:
+    -   name: nhrdist
+        sql: '{CUBE}.value = nhrdist.nhrdist_posn'
+        relationship: one_to_one
+
+    dimensions:
+    -   name: termination_date
+        sql: termination_date
+        type: time
+
+    -   name: table_name
+        sql: table_name
+        type: string
+
+    -   name: value_description
+        sql: value_description
+        type: string
+
+    -   name: value
+        sql: value
+        type: string
+        primary_key: true
+
+    -   name: zone_value
+        sql: zone_value
+        type: string
+
+    -   name: qualifier_description
+        sql: qualifier_description
+        type: string
+
+    -   name: qualifier
+        sql: qualifier
+        type: string
+
+    -   name: status_description
+        sql: status_description
+        type: string
+
+    -   name: status
+        sql: status
+        type: string
+
+    -   name: next_change_date
+        sql: next_change_date
+        type: time
+
+    -   name: mif_value
+        sql: mif_value
+        type: string
+
+    -   name: mif_desc
+        sql: mif_desc
+        type: string
+
+    -   name: domain_value
+        sql: domain_value
+        type: string
+
+    -   name: data_entry_ind
+        sql: data_entry_ind
+        type: string
+
+    -   name: effective_date
+        sql: effective_date
+        type: time
+
+    measures: []
+
+    pre_aggregations: []

@@ -1,0 +1,47 @@
+cubes:
+    name: spec_admit_stdnt
+
+    sql_table: odsmgr_cust.spec_admit_stdnt
+
+    joins: []
+
+    dimensions:
+    -   name: student_population_desc
+        sql: student_population_desc
+        type: string
+
+    -   name: student_population
+        sql: student_population
+        type: string
+
+    -   name: person_uid
+        sql: person_uid
+        type: string
+
+    -   name: last_name
+        sql: last_name
+        type: string
+
+    -   name: id_number
+        sql: id_number
+        type: string
+
+    -   name: first_name
+        sql: first_name
+        type: string
+
+    -   name: curr_academic_period
+        sql: curr_academic_period
+        type: string
+
+    -   name: college
+        sql: college
+        type: string
+
+    -   name: academic_period
+        sql: academic_period
+        type: string
+
+    measures: []
+
+    pre_aggregations: []

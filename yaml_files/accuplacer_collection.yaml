@@ -1,0 +1,15 @@
+cubes:
+    name: accuplacer_collection
+
+    sql_table: accuplacer.accuplacer_collection
+
+    joins: []
+
+    dimensions:
+    -   name: x
+        sql: x
+        type: string
+
+    measures: []
+
+    pre_aggregations: []

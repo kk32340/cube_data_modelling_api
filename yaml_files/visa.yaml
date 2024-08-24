@@ -1,0 +1,103 @@
+cubes:
+    name: visa
+
+    sql_table: odsmgr.visa
+
+    joins:
+    -   name: student_course_stusta
+        sql: '{CUBE}.person_uid = student_course_stusta.person_uid'
+        relationship: one_to_one
+
+    dimensions:
+    -   name: visa_type_desc
+        sql: visa_type_desc
+        type: string
+
+    -   name: visa_type
+        sql: visa_type
+        type: string
+
+    -   name: visa_start_date
+        sql: visa_start_date
+        type: time
+
+    -   name: visa_req_date
+        sql: visa_req_date
+        type: time
+
+    -   name: visa_number
+        sql: visa_number
+        type: string
+
+    -   name: visa_issuing_nation_desc
+        sql: visa_issuing_nation_desc
+        type: string
+
+    -   name: visa_issuing_nation
+        sql: visa_issuing_nation
+        type: string
+
+    -   name: visa_issuing_authority_desc
+        sql: visa_issuing_authority_desc
+        type: string
+
+    -   name: visa_issuing_authority
+        sql: visa_issuing_authority
+        type: string
+
+    -   name: visa_issue_date
+        sql: visa_issue_date
+        type: time
+
+    -   name: visa_expire_date
+        sql: visa_expire_date
+        type: time
+
+    -   name: process_group
+        sql: process_group
+        type: string
+
+    -   name: point_of_entry_desc
+        sql: point_of_entry_desc
+        type: string
+
+    -   name: point_of_entry
+        sql: point_of_entry
+        type: string
+
+    -   name: number_of_entries
+        sql: number_of_entries
+        type: string
+
+    -   name: name
+        sql: name
+        type: string
+
+    -   name: multi_source_desc
+        sql: multi_source_desc
+        type: string
+
+    -   name: multi_source
+        sql: multi_source
+        type: string
+
+    -   name: id
+        sql: id
+        type: string
+
+    -   name: entry_ind
+        sql: entry_ind
+        type: string
+
+    -   name: administrative_group
+        sql: administrative_group
+        type: string
+
+    -   name: person_uid
+        sql: person_uid
+        type: string
+        primary_key: true
+
+    measures: []
+
+    pre_aggregations: []

@@ -1,0 +1,43 @@
+cubes:
+    name: registration_stats
+
+    sql_table: odsmgr_cust.registration_stats
+
+    joins: []
+
+    dimensions:
+    -   name: seq_no
+        sql: seq_no
+        type: string
+
+    -   name: met_seq
+        sql: met_seq
+        type: string
+
+    -   name: metric_val
+        sql: metric_val
+        type: string
+
+    -   name: metric_type
+        sql: metric_type
+        type: string
+
+    -   name: descr
+        sql: descr
+        type: string
+
+    -   name: date_val
+        sql: date_val
+        type: time
+
+    -   name: college
+        sql: college
+        type: string
+
+    -   name: academic_period
+        sql: academic_period
+        type: string
+
+    measures: []
+
+    pre_aggregations: []

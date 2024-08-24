@@ -1,0 +1,139 @@
+cubes:
+    name: non_instructional_assignment
+
+    sql_table: odsmgr.non_instructional_assignment
+
+    joins:
+    -   name: instructional_assignment
+        sql: '{CUBE}.academic_period = instructional_assignment.academic_period AND
+            {CUBE}.person_uid = instructional_assignment.person_uid AND {CUBE}.contract_type
+            = instructional_assignment.contract_type'
+        relationship: zero_to_many
+
+    -   name: person_stusta
+        sql: '{CUBE}.person_uid = person_stusta.person_uid'
+        relationship: one_to_many
+
+    dimensions:
+    -   name: weekly_contact_hours
+        sql: weekly_contact_hours
+        type: string
+
+    -   name: taxonomy_of_program_desc
+        sql: taxonomy_of_program_desc
+        type: string
+
+    -   name: taxonomy_of_program
+        sql: taxonomy_of_program
+        type: string
+
+    -   name: sub_academic_period_desc
+        sql: sub_academic_period_desc
+        type: string
+
+    -   name: sub_academic_period
+        sql: sub_academic_period
+        type: string
+
+    -   name: person_uid
+        sql: person_uid
+        type: string
+        primary_key: true
+
+    -   name: process_group
+        sql: process_group
+        type: string
+
+    -   name: position
+        sql: position
+        type: string
+
+    -   name: non_instructional_workload
+        sql: non_instructional_workload
+        type: string
+
+    -   name: non_instructional_type
+        sql: non_instructional_type
+        type: string
+
+    -   name: non_instructional_desc
+        sql: non_instructional_desc
+        type: string
+
+    -   name: name
+        sql: name
+        type: string
+
+    -   name: multi_source_desc
+        sql: multi_source_desc
+        type: string
+
+    -   name: multi_source
+        sql: multi_source
+        type: string
+
+    -   name: job_suffix
+        sql: job_suffix
+        type: string
+
+    -   name: id
+        sql: id
+        type: string
+
+    -   name: department_desc
+        sql: department_desc
+        type: string
+
+    -   name: department
+        sql: department
+        type: string
+
+    -   name: contract_type_desc
+        sql: contract_type_desc
+        type: string
+
+    -   name: contract_type
+        sql: contract_type
+        type: string
+        primary_key: true
+
+    -   name: college_desc
+        sql: college_desc
+        type: string
+
+    -   name: college
+        sql: college
+        type: string
+
+    -   name: assignment_type_desc
+        sql: assignment_type_desc
+        type: string
+
+    -   name: assignment_type
+        sql: assignment_type
+        type: string
+
+    -   name: administrative_group
+        sql: administrative_group
+        type: string
+
+    -   name: academic_year_desc
+        sql: academic_year_desc
+        type: string
+
+    -   name: academic_year
+        sql: academic_year
+        type: string
+
+    -   name: academic_period_desc
+        sql: academic_period_desc
+        type: string
+
+    -   name: academic_period
+        sql: academic_period
+        type: string
+        primary_key: true
+
+    measures: []
+
+    pre_aggregations: []

@@ -1,0 +1,196 @@
+cubes:
+    name: test
+
+    sql_table: odsmgr.test
+
+    joins:
+    -   name: ir_placement
+        sql: '{CUBE}.person_uid = ir_placement.person_uid'
+        relationship: one_to_many
+
+    -   name: ir_student_person
+        sql: '{CUBE}.person_uid = ir_student_person.person_uid'
+        relationship: one_to_many
+
+    -   name: npsas_cohort
+        sql: '{CUBE}.person_uid = npsas_cohort.person_uid'
+        relationship: zero_to_many
+
+    -   name: student_success_base
+        sql: '{CUBE}.person_uid = student_success_base.person_uid'
+        relationship: one_to_many
+
+    -   name: person_alias
+        sql: '{CUBE}.person_uid'
+        relationship: one_to_many
+
+    -   name: ir_placement_a
+        sql: '{CUBE}.person_uid = ir_placement_a.person_uid'
+        relationship: one_to_many
+
+    -   name: test_stusta
+        sql: '{CUBE}.id = test_stusta.id'
+        relationship: one_to_one
+
+    -   name: test_stusta_alias
+        sql: '{CUBE}.id'
+        relationship: one_to_one
+
+    dimensions:
+    -   name: test_percentile_count
+        sql: test_percentile_count
+        type: string
+
+    -   name: test_type_desc
+        sql: test_type_desc
+        type: string
+
+    -   name: test_type
+        sql: test_type
+        type: string
+
+    -   name: test_source_desc
+        sql: test_source_desc
+        type: string
+
+    -   name: test_source
+        sql: test_source
+        type: string
+
+    -   name: test_score
+        sql: test_score
+        type: string
+
+    -   name: test_purpose_desc
+        sql: test_purpose_desc
+        type: string
+
+    -   name: test_purpose
+        sql: test_purpose
+        type: string
+
+    -   name: test_form_desc
+        sql: test_form_desc
+        type: string
+
+    -   name: test_form
+        sql: test_form
+        type: string
+
+    -   name: test_desc
+        sql: test_desc
+        type: string
+
+    -   name: test_date
+        sql: test_date
+        type: time
+
+    -   name: test_admin_type_desc
+        sql: test_admin_type_desc
+        type: string
+
+    -   name: test_admin_type
+        sql: test_admin_type
+        type: string
+
+    -   name: test_accomodation_desc
+        sql: test_accomodation_desc
+        type: string
+
+    -   name: test_accomodation
+        sql: test_accomodation
+        type: string
+
+    -   name: test
+        sql: test
+        type: string
+
+    -   name: recentered_or_revised_ind
+        sql: recentered_or_revised_ind
+        type: string
+
+    -   name: person_uid
+        sql: person_uid
+        type: string
+        primary_key: true
+
+    -   name: process_group
+        sql: process_group
+        type: string
+
+    -   name: original_score
+        sql: original_score
+        type: string
+
+    -   name: name
+        sql: name
+        type: string
+
+    -   name: multi_source_desc
+        sql: multi_source_desc
+        type: string
+
+    -   name: multi_source
+        sql: multi_source
+        type: string
+
+    -   name: instrument_desc
+        sql: instrument_desc
+        type: string
+
+    -   name: instrument
+        sql: instrument
+        type: string
+
+    -   name: id
+        sql: id
+        type: string
+        primary_key: true
+
+    -   name: equivalency_ind
+        sql: equivalency_ind
+        type: string
+
+    -   name: test_data_origin
+        sql: test_data_origin
+        type: string
+
+    -   name: test_entry_user_id
+        sql: test_entry_user_id
+        type: string
+
+    -   name: test_activity_date
+        sql: test_activity_date
+        type: time
+
+    -   name: test_sat_essay_id
+        sql: test_sat_essay_id
+        type: string
+
+    -   name: test_associated_appl_number
+        sql: test_associated_appl_number
+        type: string
+
+    -   name: test_associated_acad_prd_desc
+        sql: test_associated_acad_prd_desc
+        type: string
+
+    -   name: test_associated_acad_period
+        sql: test_associated_acad_period
+        type: string
+
+    -   name: requirement_desc
+        sql: requirement_desc
+        type: string
+
+    -   name: requirement
+        sql: requirement
+        type: string
+
+    -   name: administrative_group
+        sql: administrative_group
+        type: string
+
+    measures: []
+
+    pre_aggregations: []

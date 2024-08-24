@@ -1,0 +1,131 @@
+cubes:
+    name: test_initial
+
+    sql_table: odsmgr_cust.test_initial
+
+    joins: []
+
+    dimensions:
+    -   name: zone_value
+        sql: zone_value
+        type: string
+
+    -   name: test_type_desc
+        sql: test_type_desc
+        type: string
+
+    -   name: test_type
+        sql: test_type
+        type: string
+
+    -   name: test_source_desc
+        sql: test_source_desc
+        type: string
+
+    -   name: test_source
+        sql: test_source
+        type: string
+
+    -   name: test_score
+        sql: test_score
+        type: string
+
+    -   name: test_purpose_desc
+        sql: test_purpose_desc
+        type: string
+
+    -   name: test_purpose
+        sql: test_purpose
+        type: string
+
+    -   name: test_form_desc
+        sql: test_form_desc
+        type: string
+
+    -   name: test_form
+        sql: test_form
+        type: string
+
+    -   name: test_desc
+        sql: test_desc
+        type: string
+
+    -   name: test_date
+        sql: test_date
+        type: time
+
+    -   name: test_admin_type_desc
+        sql: test_admin_type_desc
+        type: string
+
+    -   name: test_admin_type
+        sql: test_admin_type
+        type: string
+
+    -   name: test_accomodation_desc
+        sql: test_accomodation_desc
+        type: string
+
+    -   name: test_accomodation
+        sql: test_accomodation
+        type: string
+
+    -   name: test
+        sql: test
+        type: string
+
+    -   name: recentered_or_revised_ind
+        sql: recentered_or_revised_ind
+        type: string
+
+    -   name: original_score
+        sql: original_score
+        type: string
+
+    -   name: last_dml_date
+        sql: last_dml_date
+        type: time
+
+    -   name: last_activity_dml
+        sql: last_activity_dml
+        type: string
+
+    -   name: last_activity_date
+        sql: last_activity_date
+        type: time
+
+    -   name: mif_value
+        sql: mif_value
+        type: string
+
+    -   name: mif_desc
+        sql: mif_desc
+        type: string
+
+    -   name: instrument_desc
+        sql: instrument_desc
+        type: string
+
+    -   name: instrument
+        sql: instrument
+        type: string
+
+    -   name: domain_value
+        sql: domain_value
+        type: string
+
+    -   name: equivalency_ind
+        sql: equivalency_ind
+        type: string
+
+    -   name: college
+        sql: college
+        type: string
+
+    -   name: person_uid
+        sql: person_uid
+        type: string
+
+    measures: []
+
+    pre_aggregations: []

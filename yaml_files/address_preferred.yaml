@@ -1,0 +1,207 @@
+cubes:
+    name: address_preferred
+
+    sql_table: odsmgr.address_preferred
+
+    joins:
+    -   name: person_stusta
+        sql: '{CUBE}.entity_uid = person_stusta.person_uid'
+        relationship: one_to_many
+
+    dimensions:
+    -   name: country_code
+        sql: country_code
+        type: string
+
+    -   name: house_number
+        sql: house_number
+        type: string
+
+    -   name: street_line4
+        sql: street_line4
+        type: string
+
+    -   name: street_line3
+        sql: street_line3
+        type: string
+
+    -   name: street_line2
+        sql: street_line2
+        type: string
+
+    -   name: street_line1
+        sql: street_line1
+        type: string
+
+    -   name: state_province_desc
+        sql: state_province_desc
+        type: string
+
+    -   name: state_province
+        sql: state_province
+        type: string
+
+    -   name: phone_ext
+        sql: phone_ext
+        type: string
+
+    -   name: phone_comment
+        sql: phone_comment
+        type: string
+
+    -   name: phone_area
+        sql: phone_area
+        type: string
+
+    -   name: process_group
+        sql: process_group
+        type: string
+
+    -   name: postal_code
+        sql: postal_code
+        type: string
+
+    -   name: phone_unlist_ind
+        sql: phone_unlist_ind
+        type: string
+
+    -   name: phone_type_desc
+        sql: phone_type_desc
+        type: string
+
+    -   name: phone_type
+        sql: phone_type
+        type: string
+
+    -   name: phone_status_ind
+        sql: phone_status_ind
+        type: string
+
+    -   name: phone_seq_number
+        sql: phone_seq_number
+        type: string
+
+    -   name: phone_primary_ind
+        sql: phone_primary_ind
+        type: string
+
+    -   name: phone_number_combined
+        sql: phone_number_combined
+        type: string
+
+    -   name: phone_number
+        sql: phone_number
+        type: string
+
+    -   name: phone_intl_access
+        sql: phone_intl_access
+        type: string
+
+    -   name: mailing_address_county
+        sql: mailing_address_county
+        type: string
+
+    -   name: mailing_address
+        sql: mailing_address
+        type: string
+
+    -   name: nation_iso_code
+        sql: nation_iso_code
+        type: string
+
+    -   name: nation_edi_equivalent
+        sql: nation_edi_equivalent
+        type: string
+
+    -   name: nation_desc
+        sql: nation_desc
+        type: string
+
+    -   name: nation
+        sql: nation
+        type: string
+
+    -   name: name
+        sql: name
+        type: string
+
+    -   name: multi_source_desc
+        sql: multi_source_desc
+        type: string
+
+    -   name: multi_source
+        sql: multi_source
+        type: string
+
+    -   name: id
+        sql: id
+        type: string
+
+    -   name: geographic_region_count
+        sql: geographic_region_count
+        type: string
+
+    -   name: entity_uid
+        sql: entity_uid
+        type: string
+        primary_key: true
+
+    -   name: delivery_point
+        sql: delivery_point
+        type: string
+
+    -   name: enrl_planning_service_desc
+        sql: enrl_planning_service_desc
+        type: string
+
+    -   name: enrl_planning_service
+        sql: enrl_planning_service
+        type: string
+
+    -   name: edi_equivalent
+        sql: edi_equivalent
+        type: string
+
+    -   name: federal_reporting_code
+        sql: federal_reporting_code
+        type: string
+
+    -   name: carrier_route
+        sql: carrier_route
+        type: string
+
+    -   name: county_desc
+        sql: county_desc
+        type: string
+
+    -   name: county
+        sql: county
+        type: string
+
+    -   name: correction_digit
+        sql: correction_digit
+        type: string
+
+    -   name: city
+        sql: city
+        type: string
+
+    -   name: administrative_group
+        sql: administrative_group
+        type: string
+
+    -   name: address_type_desc
+        sql: address_type_desc
+        type: string
+
+    -   name: address_type
+        sql: address_type
+        type: string
+
+    -   name: address_seq_number
+        sql: address_seq_number
+        type: string
+
+    measures: []
+
+    pre_aggregations: []

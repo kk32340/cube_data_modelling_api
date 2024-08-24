@@ -1,0 +1,62 @@
+cubes:
+    name: swrunit_view
+
+    sql_table: odsmgr_cust.swrunit_view
+
+    joins:
+    -   name: ir_student_term
+        sql: '{CUBE}.person_uid = ir_student_term.person_uid AND {CUBE}.academic_period
+            = ir_student_term.academic_period'
+        relationship: one_to_many
+
+    -   name: swrunit_view_stusta
+        sql: '{CUBE}.id = swrunit_view_stusta.id'
+        relationship: one_to_one
+
+    dimensions:
+    -   name: trm_units
+        sql: trm_units
+        type: string
+
+    -   name: trm_gpa
+        sql: trm_gpa
+        type: string
+
+    -   name: person_uid
+        sql: person_uid
+        type: string
+        primary_key: true
+
+    -   name: name
+        sql: name
+        type: string
+
+    -   name: id
+        sql: id
+        type: string
+        primary_key: true
+
+    -   name: current_units
+        sql: current_units
+        type: string
+
+    -   name: cum_units
+        sql: cum_units
+        type: string
+
+    -   name: cum_gpa
+        sql: cum_gpa
+        type: string
+
+    -   name: college
+        sql: college
+        type: string
+
+    -   name: academic_period
+        sql: academic_period
+        type: string
+        primary_key: true
+
+    measures: []
+
+    pre_aggregations: []

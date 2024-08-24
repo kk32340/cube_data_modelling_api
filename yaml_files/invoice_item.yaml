@@ -1,0 +1,126 @@
+cubes:
+    name: invoice_item
+
+    sql_table: odsmgr.invoice_item
+
+    joins:
+    -   name: invoice
+        sql: '{CUBE}.invoice = invoice.invoice'
+        relationship: one_to_many
+
+    -   name: purchase_order_item
+        sql: '{CUBE}.purchase_order = purchase_order_item.purchase_order AND {CUBE}.purchase_order_item
+            = purchase_order_item.item'
+        relationship: one_to_many
+
+    dimensions:
+    -   name: tax_group_desc
+        sql: tax_group_desc
+        type: string
+
+    -   name: tax_group
+        sql: tax_group
+        type: string
+
+    -   name: tax_amount
+        sql: tax_amount
+        type: string
+
+    -   name: purchase_order_item
+        sql: purchase_order_item
+        type: string
+        primary_key: true
+
+    -   name: purchase_order
+        sql: purchase_order
+        type: string
+        primary_key: true
+
+    -   name: process_group
+        sql: process_group
+        type: string
+
+    -   name: multi_source_desc
+        sql: multi_source_desc
+        type: string
+
+    -   name: multi_source
+        sql: multi_source
+        type: string
+
+    -   name: item
+        sql: item
+        type: string
+
+    -   name: discount_amount
+        sql: discount_amount
+        type: string
+
+    -   name: federal_tax_ind
+        sql: federal_tax_ind
+        type: string
+
+    -   name: converted_unit_price
+        sql: converted_unit_price
+        type: string
+
+    -   name: converted_tax_amount
+        sql: converted_tax_amount
+        type: string
+
+    -   name: converted_discount_amount
+        sql: converted_discount_amount
+        type: string
+
+    -   name: converted_additional_amount
+        sql: converted_additional_amount
+        type: string
+
+    -   name: commodity_unit_of_measure_desc
+        sql: commodity_unit_of_measure_desc
+        type: string
+
+    -   name: commodity_unit_of_measure
+        sql: commodity_unit_of_measure
+        type: string
+
+    -   name: commodity_hold_ind
+        sql: commodity_hold_ind
+        type: string
+
+    -   name: commodity_desc
+        sql: commodity_desc
+        type: string
+
+    -   name: commodity
+        sql: commodity
+        type: string
+
+    -   name: approved_unit_price
+        sql: approved_unit_price
+        type: string
+
+    -   name: approved_quantity
+        sql: approved_quantity
+        type: string
+
+    -   name: approved_item_amount
+        sql: approved_item_amount
+        type: string
+
+    -   name: administrative_group
+        sql: administrative_group
+        type: string
+
+    -   name: additional_charges_amount
+        sql: additional_charges_amount
+        type: string
+
+    -   name: invoice
+        sql: invoice
+        type: string
+        primary_key: true
+
+    measures: []
+
+    pre_aggregations: []

@@ -1,0 +1,596 @@
+cubes:
+    name: purchase_order
+
+    sql_table: odsmgr.purchase_order
+
+    joins:
+    -   name: fv_po_compliance
+        sql: '{CUBE}.purchase_order = fv_po_compliance.po#'
+        relationship: one_to_many
+
+    -   name: received_item
+        sql: '{CUBE}.purchase_order = received_item.purchase_order'
+        relationship: one_to_one
+
+    -   name: purchase_order_accounting
+        sql: '{CUBE}.purchase_order = purchase_order_accounting.purchase_order'
+        relationship: one_to_one
+
+    -   name: purchase_order_tax_rate
+        sql: '{CUBE}.purchase_order = purchase_order_tax_rate.purchase_order'
+        relationship: one_to_one
+
+    -   name: vendor
+        sql: '{CUBE}.vendor_uid = vendor.vendor_uid'
+        relationship: one_to_one
+
+    dimensions:
+    -   name: vendor_uid
+        sql: vendor_uid
+        type: string
+        primary_key: true
+
+    -   name: vendor_name
+        sql: vendor_name
+        type: string
+
+    -   name: vendor_id_number
+        sql: vendor_id_number
+        type: string
+
+    -   name: vendor_entity_ind
+        sql: vendor_entity_ind
+        type: string
+
+    -   name: vendor_email_address
+        sql: vendor_email_address
+        type: string
+
+    -   name: vendor_contact
+        sql: vendor_contact
+        type: string
+
+    -   name: suspense_ind
+        sql: suspense_ind
+        type: string
+
+    -   name: transaction_date
+        sql: transaction_date
+        type: time
+
+    -   name: total_converted_amount
+        sql: total_converted_amount
+        type: string
+
+    -   name: street_line4
+        sql: street_line4
+        type: string
+
+    -   name: total_blanket_order_bal
+        sql: total_blanket_order_bal
+        type: string
+
+    -   name: total_approved_item_amount
+        sql: total_approved_item_amount
+        type: string
+
+    -   name: street_line3
+        sql: street_line3
+        type: string
+
+    -   name: street_line2
+        sql: street_line2
+        type: string
+
+    -   name: street_line1
+        sql: street_line1
+        type: string
+
+    -   name: third_party_document
+        sql: third_party_document
+        type: string
+
+    -   name: rush_order_ind
+        sql: rush_order_ind
+        type: string
+
+    -   name: rush_amount
+        sql: rush_amount
+        type: string
+
+    -   name: requisition_text_desc
+        sql: requisition_text_desc
+        type: string
+
+    -   name: requisition_text
+        sql: requisition_text
+        type: string
+
+    -   name: requisition_or_bid_source_desc
+        sql: requisition_or_bid_source_desc
+        type: string
+
+    -   name: requisition_or_bid_source
+        sql: requisition_or_bid_source
+        type: string
+
+    -   name: required_date
+        sql: required_date
+        type: time
+
+    -   name: requestor_phone_number
+        sql: requestor_phone_number
+        type: string
+
+    -   name: requestor_phone_ext
+        sql: requestor_phone_ext
+        type: string
+
+    -   name: requestor_phone_area
+        sql: requestor_phone_area
+        type: string
+
+    -   name: requestor_name
+        sql: requestor_name
+        type: string
+
+    -   name: requestor_fax_number
+        sql: requestor_fax_number
+        type: string
+
+    -   name: requestor_fax_ext
+        sql: requestor_fax_ext
+        type: string
+
+    -   name: requestor_fax_area
+        sql: requestor_fax_area
+        type: string
+
+    -   name: requestor_email_address
+        sql: requestor_email_address
+        type: string
+
+    -   name: receiving_required_desc
+        sql: receiving_required_desc
+        type: string
+
+    -   name: receiving_required
+        sql: receiving_required
+        type: string
+
+    -   name: shipping_address
+        sql: shipping_address
+        type: string
+
+    -   name: purchase_order_user_id
+        sql: purchase_order_user_id
+        type: string
+
+    -   name: purchase_order_type_desc
+        sql: purchase_order_type_desc
+        type: string
+
+    -   name: purchase_order_type
+        sql: purchase_order_type
+        type: string
+
+    -   name: purchase_order_date
+        sql: purchase_order_date
+        type: time
+
+    -   name: purchase_order_class_desc
+        sql: purchase_order_class_desc
+        type: string
+
+    -   name: purchase_order_class
+        sql: purchase_order_class
+        type: string
+
+    -   name: purchase_order
+        sql: purchase_order
+        type: string
+        primary_key: true
+
+    -   name: state_province_desc
+        sql: state_province_desc
+        type: string
+
+    -   name: state_province
+        sql: state_province
+        type: string
+
+    -   name: phone_ext
+        sql: phone_ext
+        type: string
+
+    -   name: phone_area
+        sql: phone_area
+        type: string
+
+    -   name: process_group
+        sql: process_group
+        type: string
+
+    -   name: print_ind
+        sql: print_ind
+        type: string
+
+    -   name: printed_date
+        sql: printed_date
+        type: time
+
+    -   name: po_start_date
+        sql: po_start_date
+        type: time
+
+    -   name: po_end_date
+        sql: po_end_date
+        type: time
+
+    -   name: po_change_order
+        sql: po_change_order
+        type: string
+
+    -   name: po_change_date
+        sql: po_change_date
+        type: time
+
+    -   name: postal_code
+        sql: postal_code
+        type: string
+
+    -   name: organization_status_8
+        sql: organization_status_8
+        type: string
+
+    -   name: organization_status_7
+        sql: organization_status_7
+        type: string
+
+    -   name: organization_status_6
+        sql: organization_status_6
+        type: string
+
+    -   name: organization_status_5
+        sql: organization_status_5
+        type: string
+
+    -   name: organization_status_4
+        sql: organization_status_4
+        type: string
+
+    -   name: organization_status_3
+        sql: organization_status_3
+        type: string
+
+    -   name: organization_status_2
+        sql: organization_status_2
+        type: string
+
+    -   name: organization_status_1
+        sql: organization_status_1
+        type: string
+
+    -   name: phone_unlist_ind
+        sql: phone_unlist_ind
+        type: string
+
+    -   name: phone_number_combined
+        sql: phone_number_combined
+        type: string
+
+    -   name: phone_number
+        sql: phone_number
+        type: string
+
+    -   name: phone_intl_access
+        sql: phone_intl_access
+        type: string
+
+    -   name: organization_code
+        sql: organization_code
+        type: string
+
+    -   name: order_from_street_line4
+        sql: order_from_street_line4
+        type: string
+
+    -   name: order_from_street_line3
+        sql: order_from_street_line3
+        type: string
+
+    -   name: order_from_street_line2
+        sql: order_from_street_line2
+        type: string
+
+    -   name: order_from_street_line1
+        sql: order_from_street_line1
+        type: string
+
+    -   name: order_from_state_province_desc
+        sql: order_from_state_province_desc
+        type: string
+
+    -   name: order_from_state_province
+        sql: order_from_state_province
+        type: string
+
+    -   name: order_from_postal_code
+        sql: order_from_postal_code
+        type: string
+
+    -   name: order_from_nation_desc
+        sql: order_from_nation_desc
+        type: string
+
+    -   name: order_from_nation
+        sql: order_from_nation
+        type: string
+
+    -   name: order_from_delivery_point
+        sql: order_from_delivery_point
+        type: string
+
+    -   name: order_from_county_desc
+        sql: order_from_county_desc
+        type: string
+
+    -   name: order_from_county
+        sql: order_from_county
+        type: string
+
+    -   name: order_from_correction_digit
+        sql: order_from_correction_digit
+        type: string
+
+    -   name: order_from_city
+        sql: order_from_city
+        type: string
+
+    -   name: order_from_carrier_route
+        sql: order_from_carrier_route
+        type: string
+
+    -   name: nation_desc
+        sql: nation_desc
+        type: string
+
+    -   name: nation
+        sql: nation
+        type: string
+
+    -   name: multi_source_desc
+        sql: multi_source_desc
+        type: string
+
+    -   name: multi_source
+        sql: multi_source
+        type: string
+
+    -   name: organization_status
+        sql: organization_status
+        type: string
+
+    -   name: organization_level_8
+        sql: organization_level_8
+        type: string
+
+    -   name: organization_level_7
+        sql: organization_level_7
+        type: string
+
+    -   name: organization_level_6
+        sql: organization_level_6
+        type: string
+
+    -   name: organization_level_5
+        sql: organization_level_5
+        type: string
+
+    -   name: organization_level_4
+        sql: organization_level_4
+        type: string
+
+    -   name: organization_level_3
+        sql: organization_level_3
+        type: string
+
+    -   name: organization_level_2
+        sql: organization_level_2
+        type: string
+
+    -   name: organization_level_1
+        sql: organization_level_1
+        type: string
+
+    -   name: organization_desc_8
+        sql: organization_desc_8
+        type: string
+
+    -   name: organization_desc_7
+        sql: organization_desc_7
+        type: string
+
+    -   name: organization_desc_6
+        sql: organization_desc_6
+        type: string
+
+    -   name: organization_desc_5
+        sql: organization_desc_5
+        type: string
+
+    -   name: organization_desc_4
+        sql: organization_desc_4
+        type: string
+
+    -   name: organization_desc_3
+        sql: organization_desc_3
+        type: string
+
+    -   name: organization_desc_2
+        sql: organization_desc_2
+        type: string
+
+    -   name: organization_desc_1
+        sql: organization_desc_1
+        type: string
+
+    -   name: organization_desc
+        sql: organization_desc
+        type: string
+
+    -   name: freight_terms_desc
+        sql: freight_terms_desc
+        type: string
+
+    -   name: freight_terms
+        sql: freight_terms
+        type: string
+
+    -   name: floor
+        sql: floor
+        type: string
+
+    -   name: document_source
+        sql: document_source
+        type: string
+
+    -   name: discount_percent
+        sql: discount_percent
+        type: string
+
+    -   name: discount_desc
+        sql: discount_desc
+        type: string
+
+    -   name: discount
+        sql: discount
+        type: string
+
+    -   name: delivery_point
+        sql: delivery_point
+        type: string
+
+    -   name: edi_ind
+        sql: edi_ind
+        type: string
+
+    -   name: chart_of_accounts_desc
+        sql: chart_of_accounts_desc
+        type: string
+
+    -   name: chart_of_accounts
+        sql: chart_of_accounts
+        type: string
+
+    -   name: carrier_uid
+        sql: carrier_uid
+        type: string
+
+    -   name: carrier_route
+        sql: carrier_route
+        type: string
+
+    -   name: carrier_name
+        sql: carrier_name
+        type: string
+
+    -   name: carrier_id
+        sql: carrier_id
+        type: string
+
+    -   name: cancel_reason_desc
+        sql: cancel_reason_desc
+        type: string
+
+    -   name: cancel_reason
+        sql: cancel_reason
+        type: string
+
+    -   name: cancel_ind
+        sql: cancel_ind
+        type: string
+
+    -   name: cancel_date
+        sql: cancel_date
+        type: time
+
+    -   name: county_desc
+        sql: county_desc
+        type: string
+
+    -   name: county
+        sql: county
+        type: string
+
+    -   name: buyer_name
+        sql: buyer_name
+        type: string
+
+    -   name: buyer
+        sql: buyer
+        type: string
+
+    -   name: building
+        sql: building
+        type: string
+
+    -   name: correction_digit
+        sql: correction_digit
+        type: string
+
+    -   name: copied_purchase_order
+        sql: copied_purchase_order
+        type: string
+
+    -   name: blanket_order_ind
+        sql: blanket_order_ind
+        type: string
+
+    -   name: blanket_order
+        sql: blanket_order
+        type: string
+
+    -   name: contact_name
+        sql: contact_name
+        type: string
+
+    -   name: complete_ind
+        sql: complete_ind
+        type: string
+
+    -   name: closed_ind
+        sql: closed_ind
+        type: string
+
+    -   name: closed_date
+        sql: closed_date
+        type: time
+
+    -   name: city
+        sql: city
+        type: string
+
+    -   name: chart_of_accounts_status
+        sql: chart_of_accounts_status
+        type: string
+
+    -   name: approval_ind
+        sql: approval_ind
+        type: string
+
+    -   name: administrative_group
+        sql: administrative_group
+        type: string
+
+    -   name: additional_amount
+        sql: additional_amount
+        type: string
+
+    -   name: activity_date
+        sql: activity_date
+        type: time
+
+    measures: []
+
+    pre_aggregations: []

@@ -1,0 +1,45 @@
+cubes:
+    name: ir_student_term_matric
+
+    sql_table: odsmgr_cust.ir_student_term_matric
+
+    joins:
+    -   name: ir_student_term
+        sql: '{CUBE}.academic_period = ir_student_term.academic_period AND {CUBE}.person_uid
+            = ir_student_term.person_uid'
+        relationship: zero_to_many
+
+    -   name: ir_student_term_shortcut1
+        sql: '{CUBE}.academic_period = ir_student_term_matric.person_uid'
+        relationship: one_to_one
+
+    dimensions:
+    -   name: new_edplan
+        sql: new_edplan
+        type: string
+
+    -   name: new_oren
+        sql: new_oren
+        type: string
+
+    -   name: new_coun
+        sql: new_coun
+        type: string
+
+    -   name: new_asmt
+        sql: new_asmt
+        type: string
+
+    -   name: person_uid
+        sql: person_uid
+        type: string
+        primary_key: true
+
+    -   name: academic_period
+        sql: academic_period
+        type: string
+        primary_key: true
+
+    measures: []
+
+    pre_aggregations: []

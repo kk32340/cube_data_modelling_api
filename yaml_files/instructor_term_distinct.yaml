@@ -1,0 +1,31 @@
+cubes:
+    name: instructor_term_distinct
+
+    sql_table: odsmgr_cust.instructor_term_distinct
+
+    joins: []
+
+    dimensions:
+    -   name: person_uid
+        sql: person_uid
+        type: string
+
+    -   name: instructor_name
+        sql: instructor_name
+        type: string
+
+    -   name: instructor_last_name
+        sql: instructor_last_name
+        type: string
+
+    -   name: instructor_id
+        sql: instructor_id
+        type: string
+
+    -   name: academic_period
+        sql: academic_period
+        type: string
+
+    measures: []
+
+    pre_aggregations: []

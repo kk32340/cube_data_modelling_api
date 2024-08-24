@@ -1,0 +1,39 @@
+cubes:
+    name: lisa_mike_reg_info
+
+    sql_table: odsmgr_cust.lisa_mike_reg_info
+
+    joins: []
+
+    dimensions:
+    -   name: credits_earned
+        sql: credits_earned
+        type: string
+
+    -   name: reg_count
+        sql: reg_count
+        type: string
+
+    -   name: reg_college
+        sql: reg_college
+        type: string
+
+    -   name: reg_term
+        sql: reg_term
+        type: string
+
+    -   name: college
+        sql: college
+        type: string
+
+    -   name: person_uid
+        sql: person_uid
+        type: string
+
+    -   name: academic_period
+        sql: academic_period
+        type: string
+
+    measures: []
+
+    pre_aggregations: []

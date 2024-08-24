@@ -1,0 +1,79 @@
+cubes:
+    name: sssp_mis_all_data_view
+
+    sql_table: odsmgr_cust.sssp_mis_all_data_view
+
+    joins: []
+
+    dimensions:
+    -   name: service_date
+        sql: service_date
+        type: time
+
+    -   name: service
+        sql: service
+        type: string
+
+    -   name: service_code
+        sql: service_code
+        type: string
+
+    -   name: service_type
+        sql: service_type
+        type: string
+
+    -   name: high_school_code_desc
+        sql: high_school_code_desc
+        type: string
+
+    -   name: cell_phone
+        sql: cell_phone
+        type: string
+
+    -   name: day_phone
+        sql: day_phone
+        type: string
+
+    -   name: email_address
+        sql: email_address
+        type: string
+
+    -   name: middle_name
+        sql: middle_name
+        type: string
+
+    -   name: first_name
+        sql: first_name
+        type: string
+
+    -   name: last_name
+        sql: last_name
+        type: string
+
+    -   name: id
+        sql: id
+        type: string
+
+    -   name: pidm
+        sql: pidm
+        type: string
+
+    -   name: college
+        sql: college
+        type: string
+
+    -   name: term
+        sql: term
+        type: string
+
+    -   name: user_id
+        sql: user_id
+        type: string
+
+    -   name: college_code
+        sql: college_code
+        type: string
+
+    measures: []
+
+    pre_aggregations: []

@@ -1,0 +1,75 @@
+cubes:
+    name: ftvprog
+
+    sql_table: fimsmgr.ftvprog
+
+    joins:
+    -   name: program_hierarchy
+        sql: '{CUBE}.ftvprog_prog_code = program_hierarchy.program'
+        relationship: one_to_one
+
+    dimensions:
+    -   name: ftvprog_vpdi_code
+        sql: ftvprog_vpdi_code
+        type: string
+
+    -   name: ftvprog_data_origin
+        sql: ftvprog_data_origin
+        type: string
+
+    -   name: ftvprog_version
+        sql: ftvprog_version
+        type: string
+
+    -   name: ftvprog_surrogate_id
+        sql: ftvprog_surrogate_id
+        type: string
+
+    -   name: ftvprog_user_id
+        sql: ftvprog_user_id
+        type: string
+
+    -   name: ftvprog_title
+        sql: ftvprog_title
+        type: string
+
+    -   name: ftvprog_term_date
+        sql: ftvprog_term_date
+        type: time
+
+    -   name: ftvprog_status_ind
+        sql: ftvprog_status_ind
+        type: string
+
+    -   name: ftvprog_prog_code_pred
+        sql: ftvprog_prog_code_pred
+        type: string
+
+    -   name: ftvprog_prog_code
+        sql: ftvprog_prog_code
+        type: string
+        primary_key: true
+
+    -   name: ftvprog_nchg_date
+        sql: ftvprog_nchg_date
+        type: time
+
+    -   name: ftvprog_eff_date
+        sql: ftvprog_eff_date
+        type: time
+
+    -   name: ftvprog_data_entry_ind
+        sql: ftvprog_data_entry_ind
+        type: string
+
+    -   name: ftvprog_coas_code
+        sql: ftvprog_coas_code
+        type: string
+
+    -   name: ftvprog_activity_date
+        sql: ftvprog_activity_date
+        type: time
+
+    measures: []
+
+    pre_aggregations: []

@@ -1,0 +1,147 @@
+cubes:
+    name: cust_meeting_time_event
+
+    sql_table: odsmgr_cust.cust_meeting_time_event
+
+    joins: []
+
+    dimensions:
+    -   name: wednesday_ind
+        sql: wednesday_ind
+        type: string
+
+    -   name: sunday_ind
+        sql: sunday_ind
+        type: string
+
+    -   name: tuesday_ind
+        sql: tuesday_ind
+        type: string
+
+    -   name: thursday_ind
+        sql: thursday_ind
+        type: string
+
+    -   name: schedule
+        sql: schedule
+        type: string
+
+    -   name: saturday_ind
+        sql: saturday_ind
+        type: string
+
+    -   name: start_date
+        sql: start_date
+        type: time
+
+    -   name: room
+        sql: room
+        type: string
+
+    -   name: site
+        sql: site
+        type: string
+
+    -   name: schedule_status_desc
+        sql: schedule_status_desc
+        type: string
+
+    -   name: schedule_status
+        sql: schedule_status
+        type: string
+
+    -   name: schedule_desc
+        sql: schedule_desc
+        type: string
+
+    -   name: meeting_type_desc
+        sql: meeting_type_desc
+        type: string
+
+    -   name: meeting_type
+        sql: meeting_type
+        type: string
+
+    -   name: meeting_hours
+        sql: meeting_hours
+        type: string
+
+    -   name: monday_ind
+        sql: monday_ind
+        type: string
+
+    -   name: friday_ind
+        sql: friday_ind
+        type: string
+
+    -   name: event_type
+        sql: event_type
+        type: string
+
+    -   name: event_function_desc
+        sql: event_function_desc
+        type: string
+
+    -   name: event_function
+        sql: event_function
+        type: string
+
+    -   name: event_desc
+        sql: event_desc
+        type: string
+
+    -   name: event_contact
+        sql: event_contact
+        type: string
+
+    -   name: dept
+        sql: dept
+        type: string
+
+    -   name: end_time
+        sql: end_time
+        type: string
+
+    -   name: end_date
+        sql: end_date
+        type: time
+
+    -   name: course_reference_number
+        sql: course_reference_number
+        type: string
+
+    -   name: category
+        sql: category
+        type: string
+
+    -   name: campus
+        sql: campus
+        type: string
+
+    -   name: building_desc
+        sql: building_desc
+        type: string
+
+    -   name: building
+        sql: building
+        type: string
+
+    -   name: begin_time
+        sql: begin_time
+        type: string
+
+    -   name: committee_desc
+        sql: committee_desc
+        type: string
+
+    -   name: committee
+        sql: committee
+        type: string
+
+    -   name: college
+        sql: college
+        type: string
+
+    measures: []
+
+    pre_aggregations: []

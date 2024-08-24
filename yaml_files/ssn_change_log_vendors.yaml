@@ -1,0 +1,99 @@
+cubes:
+    name: ssn_change_log_vendors
+
+    sql_table: odsmgr_cust.ssn_change_log_vendors
+
+    joins: []
+
+    dimensions:
+    -   name: rec_set_b_person_uid
+        sql: rec_set_b_person_uid
+        type: string
+
+    -   name: rec_set_b_name
+        sql: rec_set_b_name
+        type: string
+
+    -   name: rec_set_b_id
+        sql: rec_set_b_id
+        type: string
+
+    -   name: rec_set_b_changed_on
+        sql: rec_set_b_changed_on
+        type: string
+
+    -   name: rec_set_b_changed_by
+        sql: rec_set_b_changed_by
+        type: string
+
+    -   name: rec_set_b_birthdate
+        sql: rec_set_b_birthdate
+        type: string
+
+    -   name: rec_set_a_person_uid
+        sql: rec_set_a_person_uid
+        type: string
+
+    -   name: rec_set_a_name
+        sql: rec_set_a_name
+        type: string
+
+    -   name: rec_set_a_id
+        sql: rec_set_a_id
+        type: string
+
+    -   name: rec_set_a_changed_on
+        sql: rec_set_a_changed_on
+        type: string
+
+    -   name: rec_set_a_changed_by
+        sql: rec_set_a_changed_by
+        type: string
+
+    -   name: rec_set_a_birthdate
+        sql: rec_set_a_birthdate
+        type: string
+
+    -   name: b_student_flag
+        sql: b_student_flag
+        type: string
+
+    -   name: b_hr_flag
+        sql: b_hr_flag
+        type: string
+
+    -   name: b_finance_flag
+        sql: b_finance_flag
+        type: string
+
+    -   name: b_finaid_flag
+        sql: b_finaid_flag
+        type: string
+
+    -   name: b_accounts_recievable
+        sql: b_accounts_recievable
+        type: string
+
+    -   name: a_student_flag
+        sql: a_student_flag
+        type: string
+
+    -   name: a_hr_flag
+        sql: a_hr_flag
+        type: string
+
+    -   name: a_finance_flag
+        sql: a_finance_flag
+        type: string
+
+    -   name: a_finaid_flag
+        sql: a_finaid_flag
+        type: string
+
+    -   name: a_accounts_recievable
+        sql: a_accounts_recievable
+        type: string
+
+    measures: []
+
+    pre_aggregations: []

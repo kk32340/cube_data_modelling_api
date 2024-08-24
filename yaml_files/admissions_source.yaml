@@ -1,0 +1,132 @@
+cubes:
+    name: admissions_source
+
+    sql_table: odsmgr.admissions_source
+
+    joins:
+    -   name: admissions_application
+        sql: '{CUBE}.person_uid = admissions_application.person_uid AND {CUBE}.academic_year
+            = admissions_application.academic_year AND {CUBE}.academic_period = admissions_application.academic_period
+            AND {CUBE}.application_number = admissions_application.application_number'
+        relationship: zero_to_many
+
+    dimensions:
+    -   name: adms_source_activity_date
+        sql: adms_source_activity_date
+        type: time
+
+    -   name: admissions_source_type_desc
+        sql: admissions_source_type_desc
+        type: string
+
+    -   name: admissions_source_type
+        sql: admissions_source_type
+        type: string
+
+    -   name: sub_academic_period_desc
+        sql: sub_academic_period_desc
+        type: string
+
+    -   name: sub_academic_period
+        sql: sub_academic_period
+        type: string
+
+    -   name: start_date
+        sql: start_date
+        type: string
+
+    -   name: program_desc
+        sql: program_desc
+        type: string
+
+    -   name: program_classification_desc
+        sql: program_classification_desc
+        type: string
+
+    -   name: program_classification
+        sql: program_classification
+        type: string
+
+    -   name: person_uid
+        sql: person_uid
+        type: string
+        primary_key: true
+
+    -   name: program
+        sql: program
+        type: string
+
+    -   name: process_group
+        sql: process_group
+        type: string
+
+    -   name: primary_source_ind
+        sql: primary_source_ind
+        type: string
+
+    -   name: major_desc
+        sql: major_desc
+        type: string
+
+    -   name: major
+        sql: major
+        type: string
+
+    -   name: multi_source_desc
+        sql: multi_source_desc
+        type: string
+
+    -   name: multi_source
+        sql: multi_source
+        type: string
+
+    -   name: institution_desc
+        sql: institution_desc
+        type: string
+
+    -   name: institution
+        sql: institution
+        type: string
+
+    -   name: degree_desc
+        sql: degree_desc
+        type: string
+
+    -   name: degree
+        sql: degree
+        type: string
+
+    -   name: date_source_reported
+        sql: date_source_reported
+        type: string
+
+    -   name: application_number
+        sql: application_number
+        type: string
+        primary_key: true
+
+    -   name: administrative_group
+        sql: administrative_group
+        type: string
+
+    -   name: academic_year_desc
+        sql: academic_year_desc
+        type: string
+
+    -   name: academic_year
+        sql: academic_year
+        type: string
+        primary_key: true
+
+    -   name: academic_period
+        sql: academic_period
+        type: string
+        primary_key: true
+
+    -   name: academic_period_desc
+        sql: academic_period_desc
+        type: string
+
+    measures: []
+
+    pre_aggregations: []

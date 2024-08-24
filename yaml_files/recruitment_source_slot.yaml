@@ -1,0 +1,88 @@
+cubes:
+    name: recruitment_source_slot
+
+    sql_table: odsmgr.recruitment_source_slot
+
+    joins:
+    -   name: recruitment_information
+        sql: '{CUBE}.person_uid = recruitment_information.person_uid AND {CUBE}.academic_period
+            = recruitment_information.academic_period AND {CUBE}.recruit_number =
+            recruitment_information.recruit_number'
+        relationship: one_to_many
+
+    -   name: recruitment_information_alias
+        sql: '{CUBE}.recruit_number = recruitment_source_slot.academic_period AND
+            {CUBE}.person_uid'
+        relationship: one_to_many
+
+    dimensions:
+    -   name: recruit_number
+        sql: recruit_number
+        type: string
+        primary_key: true
+
+    -   name: recruitment_source_rule
+        sql: recruitment_source_rule
+        type: string
+
+    -   name: profile_code
+        sql: profile_code
+        type: string
+
+    -   name: process_group
+        sql: process_group
+        type: string
+
+    -   name: multi_source_desc
+        sql: multi_source_desc
+        type: string
+
+    -   name: multi_source
+        sql: multi_source
+        type: string
+
+    -   name: institution_desc3
+        sql: institution_desc3
+        type: string
+
+    -   name: institution_desc2
+        sql: institution_desc2
+        type: string
+
+    -   name: institution_desc1
+        sql: institution_desc1
+        type: string
+
+    -   name: institution3
+        sql: institution3
+        type: string
+
+    -   name: institution2
+        sql: institution2
+        type: string
+
+    -   name: institution1
+        sql: institution1
+        type: string
+
+    -   name: administrative_group
+        sql: administrative_group
+        type: string
+
+    -   name: activity_date
+        sql: activity_date
+        type: time
+
+    -   name: academic_period
+        sql: academic_period
+        type: string
+        primary_key: true
+
+    -   name: person_uid
+        sql: person_uid
+        type: string
+        primary_key: true
+
+    measures: []
+
+    pre_aggregations: []

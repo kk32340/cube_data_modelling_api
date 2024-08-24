@@ -1,0 +1,79 @@
+cubes:
+    name: ftvbuyr
+
+    sql_table: fimsmgr.ftvbuyr
+
+    joins: []
+
+    dimensions:
+    -   name: ftvbuyr_ctry_code_phone
+        sql: ftvbuyr_ctry_code_phone
+        type: string
+
+    -   name: ftvbuyr_last_assign_date
+        sql: ftvbuyr_last_assign_date
+        type: time
+
+    -   name: ftvbuyr_lvpo_dollar_limit
+        sql: ftvbuyr_lvpo_dollar_limit
+        type: string
+
+    -   name: ftvbuyr_lvpo_ind
+        sql: ftvbuyr_lvpo_ind
+        type: string
+
+    -   name: ftvbuyr_phone_ext
+        sql: ftvbuyr_phone_ext
+        type: string
+
+    -   name: ftvbuyr_phone_number
+        sql: ftvbuyr_phone_number
+        type: string
+
+    -   name: ftvbuyr_phone_area
+        sql: ftvbuyr_phone_area
+        type: string
+
+    -   name: ftvbuyr_name
+        sql: ftvbuyr_name
+        type: string
+
+    -   name: ftvbuyr_user_id
+        sql: ftvbuyr_user_id
+        type: string
+
+    -   name: ftvbuyr_activity_date
+        sql: ftvbuyr_activity_date
+        type: time
+
+    -   name: ftvbuyr_term_date
+        sql: ftvbuyr_term_date
+        type: time
+
+    -   name: ftvbuyr_eff_date
+        sql: ftvbuyr_eff_date
+        type: time
+
+    -   name: ftvbuyr_code
+        sql: ftvbuyr_code
+        type: string
+
+    -   name: ftvbuyr_surrogate_id
+        sql: ftvbuyr_surrogate_id
+        type: string
+
+    -   name: ftvbuyr_version
+        sql: ftvbuyr_version
+        type: string
+
+    -   name: ftvbuyr_data_origin
+        sql: ftvbuyr_data_origin
+        type: string
+
+    -   name: ftvbuyr_vpdi_code
+        sql: ftvbuyr_vpdi_code
+        type: string
+
+    measures: []
+
+    pre_aggregations: []

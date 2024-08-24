@@ -1,0 +1,192 @@
+cubes:
+    name: farinvc
+
+    sql_table: 'farinvc
+
+        '
+    joins:
+    -   name: fabinvh
+        sql: '{CUBE}.farinvc_invh_code = fabinvh.fabinvh_code'
+        relationship: one_to_many
+
+    dimensions:
+    -   name: farinvc_data_origin
+        sql: farinvc_data_origin
+        type: string
+
+    -   name: farinvc_create_user
+        sql: farinvc_create_user
+        type: string
+
+    -   name: farinvc_create_date
+        sql: farinvc_create_date
+        type: time
+
+    -   name: farinvc_convert_unit_price
+        sql: farinvc_convert_unit_price
+        type: string
+
+    -   name: farinvc_convert_tax_amt
+        sql: farinvc_convert_tax_amt
+        type: string
+
+    -   name: farinvc_convert_disc_amt
+        sql: farinvc_convert_disc_amt
+        type: string
+
+    -   name: farinvc_convert_addl_chrg_amt
+        sql: farinvc_convert_addl_chrg_amt
+        type: string
+
+    -   name: farinvc_comm_desc
+        sql: farinvc_comm_desc
+        type: string
+
+    -   name: farinvc_comm_code
+        sql: farinvc_comm_code
+        type: string
+
+    -   name: farinvc_appr_unit_price
+        sql: farinvc_appr_unit_price
+        type: string
+
+    -   name: farinvc_appr_qty
+        sql: farinvc_appr_qty
+        type: string
+
+    -   name: farinvc_adjt_date
+        sql: farinvc_adjt_date
+        type: time
+
+    -   name: farinvc_adjt_code
+        sql: farinvc_adjt_code
+        type: string
+
+    -   name: farinvc_addl_chrg_amt
+        sql: farinvc_addl_chrg_amt
+        type: string
+
+    -   name: farinvc_activity_date
+        sql: farinvc_activity_date
+        type: time
+
+    -   name: farinvc_accept_unit_price
+        sql: farinvc_accept_unit_price
+        type: string
+
+    -   name: farinvc_accept_qty
+        sql: farinvc_accept_qty
+        type: string
+
+    -   name: farinvc_vend_inv_item
+        sql: farinvc_vend_inv_item
+        type: string
+
+    -   name: farinvc_vend_inv_date
+        sql: farinvc_vend_inv_date
+        type: time
+
+    -   name: farinvc_vend_inv_code
+        sql: farinvc_vend_inv_code
+        type: string
+
+    -   name: farinvc_user_id
+        sql: farinvc_user_id
+        type: string
+
+    -   name: farinvc_uoms_code
+        sql: farinvc_uoms_code
+        type: string
+
+    -   name: farinvc_ttag_num
+        sql: farinvc_ttag_num
+        type: string
+
+    -   name: farinvc_tol_override_ind
+        sql: farinvc_tol_override_ind
+        type: string
+
+    -   name: farinvc_tgrp_code
+        sql: farinvc_tgrp_code
+        type: string
+
+    -   name: farinvc_tax_amt
+        sql: farinvc_tax_amt
+        type: string
+
+    -   name: farinvc_tag_cap_code
+        sql: farinvc_tag_cap_code
+        type: string
+
+    -   name: farinvc_susp_ind
+        sql: farinvc_susp_ind
+        type: string
+
+    -   name: farinvc_recvd_qty
+        sql: farinvc_recvd_qty
+        type: string
+
+    -   name: farinvc_prev_paid_qty
+        sql: farinvc_prev_paid_qty
+        type: string
+
+    -   name: farinvc_prev_amt
+        sql: farinvc_prev_amt
+        type: string
+
+    -   name: farinvc_po_item
+        sql: farinvc_po_item
+        type: string
+
+    -   name: farinvc_pohd_code
+        sql: farinvc_pohd_code
+        type: string
+
+    -   name: farinvc_part_pmt_ind
+        sql: farinvc_part_pmt_ind
+        type: string
+
+    -   name: farinvc_override_tax_amt
+        sql: farinvc_override_tax_amt
+        type: string
+
+    -   name: farinvc_open_paid_ind
+        sql: farinvc_open_paid_ind
+        type: string
+
+    -   name: farinvc_last_rcvr_ind
+        sql: farinvc_last_rcvr_ind
+        type: string
+
+    -   name: farinvc_item
+        sql: farinvc_item
+        type: string
+
+    -   name: farinvc_invh_code
+        sql: farinvc_invh_code
+        type: string
+        primary_key: true
+
+    -   name: farinvc_invd_unit_price
+        sql: farinvc_invd_unit_price
+        type: string
+
+    -   name: farinvc_invd_qty
+        sql: farinvc_invd_qty
+        type: string
+
+    -   name: farinvc_hold_ind
+        sql: farinvc_hold_ind
+        type: string
+
+    -   name: farinvc_disc_amt
+        sql: farinvc_disc_amt
+        type: string
+
+    -   name: farinvc_desc_chge_ind
+        sql: farinvc_desc_chge_ind
+        type: string
+
+    measures: []
+
+    pre_aggregations: []

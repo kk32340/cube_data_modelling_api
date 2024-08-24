@@ -1,0 +1,195 @@
+cubes:
+    name: fgbtrnd@prod.kccd.edu
+
+    sql_table: fimsarc.fgbtrnd@prod.kccd.edu
+
+    joins: []
+
+    dimensions:
+    -   name: fgbtrnd_cs_memo_rate_percent
+        sql: fgbtrnd_cs_memo_rate_percent
+        type: string
+
+    -   name: fgbtrnd_cs_rate_percent
+        sql: fgbtrnd_cs_rate_percent
+        type: string
+
+    -   name: fgbtrnd_ic_memo_rate_percent
+        sql: fgbtrnd_ic_memo_rate_percent
+        type: string
+
+    -   name: fgbtrnd_ic_rate_percent
+        sql: fgbtrnd_ic_rate_percent
+        type: string
+
+    -   name: fgbtrnd_defer_grant_ind
+        sql: fgbtrnd_defer_grant_ind
+        type: string
+
+    -   name: fgbtrnd_alloc_pct
+        sql: fgbtrnd_alloc_pct
+        type: string
+
+    -   name: fgbtrnd_alloc_seq_num
+        sql: fgbtrnd_alloc_seq_num
+        type: string
+
+    -   name: fgbtrnd_alloc_doc_num
+        sql: fgbtrnd_alloc_doc_num
+        type: string
+
+    -   name: fgbtrnd_cmt_pct
+        sql: fgbtrnd_cmt_pct
+        type: string
+
+    -   name: fgbtrnd_cmt_type
+        sql: fgbtrnd_cmt_type
+        type: string
+
+    -   name: fgbtrnd_sum_post_doc_code
+        sql: fgbtrnd_sum_post_doc_code
+        type: string
+
+    -   name: fgbtrnd_prjd_code
+        sql: fgbtrnd_prjd_code
+        type: string
+
+    -   name: fgbtrnd_amt_ind
+        sql: fgbtrnd_amt_ind
+        type: string
+
+    -   name: fgbtrnd_serial_num
+        sql: fgbtrnd_serial_num
+        type: string
+
+    -   name: fgbtrnd_reversal_ind
+        sql: fgbtrnd_reversal_ind
+        type: string
+
+    -   name: fgbtrnd_recon_ind
+        sql: fgbtrnd_recon_ind
+        type: string
+
+    -   name: fgbtrnd_other_data
+        sql: fgbtrnd_other_data
+        type: string
+
+    -   name: fgbtrnd_dr_cr_ind
+        sql: fgbtrnd_dr_cr_ind
+        type: string
+
+    -   name: fgbtrnd_trans_amt
+        sql: fgbtrnd_trans_amt
+        type: string
+
+    -   name: fgbtrnd_encd_seq_num
+        sql: fgbtrnd_encd_seq_num
+        type: string
+
+    -   name: fgbtrnd_encd_item_num
+        sql: fgbtrnd_encd_item_num
+        type: string
+
+    -   name: fgbtrnd_encd_num
+        sql: fgbtrnd_encd_num
+        type: string
+
+    -   name: fgbtrnd_budget_period
+        sql: fgbtrnd_budget_period
+        type: string
+
+    -   name: fgbtrnd_bud_id
+        sql: fgbtrnd_bud_id
+        type: string
+
+    -   name: fgbtrnd_locn_code
+        sql: fgbtrnd_locn_code
+        type: string
+
+    -   name: fgbtrnd_actv_code
+        sql: fgbtrnd_actv_code
+        type: string
+
+    -   name: fgbtrnd_prog_code
+        sql: fgbtrnd_prog_code
+        type: string
+
+    -   name: fgbtrnd_acct_code
+        sql: fgbtrnd_acct_code
+        type: string
+
+    -   name: fgbtrnd_orgn_code
+        sql: fgbtrnd_orgn_code
+        type: string
+
+    -   name: fgbtrnd_fund_code
+        sql: fgbtrnd_fund_code
+        type: string
+
+    -   name: fgbtrnd_acci_code
+        sql: fgbtrnd_acci_code
+        type: string
+
+    -   name: fgbtrnd_fsyr_code
+        sql: fgbtrnd_fsyr_code
+        type: string
+
+    -   name: fgbtrnd_coas_code
+        sql: fgbtrnd_coas_code
+        type: string
+
+    -   name: fgbtrnd_proc_code
+        sql: fgbtrnd_proc_code
+        type: string
+
+    -   name: fgbtrnd_user_id
+        sql: fgbtrnd_user_id
+        type: string
+
+    -   name: fgbtrnd_activity_date
+        sql: fgbtrnd_activity_date
+        type: time
+
+    -   name: fgbtrnd_posting_period
+        sql: fgbtrnd_posting_period
+        type: string
+
+    -   name: fgbtrnd_field_code
+        sql: fgbtrnd_field_code
+        type: string
+
+    -   name: fgbtrnd_ledger_ind
+        sql: fgbtrnd_ledger_ind
+        type: string
+
+    -   name: fgbtrnd_rulp_code
+        sql: fgbtrnd_rulp_code
+        type: string
+
+    -   name: fgbtrnd_seq_num
+        sql: fgbtrnd_seq_num
+        type: string
+
+    -   name: fgbtrnd_item_num
+        sql: fgbtrnd_item_num
+        type: string
+
+    -   name: fgbtrnd_submission_number
+        sql: fgbtrnd_submission_number
+        type: string
+
+    -   name: fgbtrnd_doc_code
+        sql: fgbtrnd_doc_code
+        type: string
+
+    -   name: fgbtrnd_doc_seq_code
+        sql: fgbtrnd_doc_seq_code
+        type: string
+
+    -   name: fgbtrnd_rucl_code
+        sql: fgbtrnd_rucl_code
+        type: string
+
+    measures: []
+
+    pre_aggregations: []

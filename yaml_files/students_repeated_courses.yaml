@@ -1,0 +1,67 @@
+cubes:
+    name: students_repeated_courses
+
+    sql_table: odsmgr_cust.students_repeated_courses
+
+    joins: []
+
+    dimensions:
+    -   name: subject_desc
+        sql: subject_desc
+        type: string
+
+    -   name: subject
+        sql: subject
+        type: string
+
+    -   name: repeat_count
+        sql: repeat_count
+        type: string
+
+    -   name: registration_status_date
+        sql: registration_status_date
+        type: time
+
+    -   name: registration_status
+        sql: registration_status
+        type: string
+
+    -   name: person_uid
+        sql: person_uid
+        type: string
+
+    -   name: no_of_repeats_allowed
+        sql: no_of_repeats_allowed
+        type: string
+
+    -   name: final_grade_date
+        sql: final_grade_date
+        type: time
+
+    -   name: final_grade
+        sql: final_grade
+        type: string
+
+    -   name: course_title_short
+        sql: course_title_short
+        type: string
+
+    -   name: course_reference_number
+        sql: course_reference_number
+        type: string
+
+    -   name: course_number
+        sql: course_number
+        type: string
+
+    -   name: course_college
+        sql: course_college
+        type: string
+
+    -   name: academic_period
+        sql: academic_period
+        type: string
+
+    measures: []
+
+    pre_aggregations: []

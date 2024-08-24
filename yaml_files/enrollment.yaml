@@ -1,0 +1,373 @@
+cubes:
+    name: enrollment
+
+    sql_table: odsmgr.enrollment
+
+    joins:
+    -   name: academic_outcome_stusta_alias
+        sql: '{CUBE}.person_uid'
+        relationship: one_to_one
+
+    -   name: academic_study
+        sql: '{CUBE}.person_uid = academic_study.person_uid AND {CUBE}.academic_period
+            = academic_study.academic_period'
+        relationship: one_to_one
+
+    -   name: academic_study_alias
+        sql: '{CUBE}.person_uid'
+        relationship: one_to_many
+
+    -   name: advisor
+        sql: '{CUBE}.person_uid = advisor.person_uid AND {CUBE}.academic_period =
+            advisor.academic_period'
+        relationship: one_to_one
+
+    -   name: person_stusta
+        sql: '{CUBE}.person_uid = person_stusta.person_uid'
+        relationship: one_to_one
+
+    -   name: student_course_stusta
+        sql: '{CUBE}.person_uid = student_course_stusta.person_uid AND {CUBE}.academic_period
+            = student_course_stusta.academic_period'
+        relationship: one_to_one
+
+    -   name: receivable_account_detail
+        sql: '{CUBE}.person_uid = receivable_account_detail.account_uid AND {CUBE}.academic_period
+            = receivable_account_detail.academic_period'
+        relationship: one_to_many
+
+    -   name: swrceff
+        sql: '{CUBE}.academic_period = swrceff.academic_period AND {CUBE}.person_uid
+            = swrceff.person_uid'
+        relationship: one_to_many
+
+    dimensions:
+    -   name: activity_date
+        sql: activity_date
+        type: time
+
+    -   name: enrollment_data_origin
+        sql: enrollment_data_origin
+        type: string
+
+    -   name: enrollment_update_user
+        sql: enrollment_update_user
+        type: string
+
+    -   name: ar_charges_accept_ind_desc
+        sql: ar_charges_accept_ind_desc
+        type: string
+
+    -   name: maximum_required_source_desc
+        sql: maximum_required_source_desc
+        type: string
+
+    -   name: maximum_required_source
+        sql: maximum_required_source
+        type: string
+
+    -   name: maximum_required_credits
+        sql: maximum_required_credits
+        type: string
+
+    -   name: minimum_required_source_desc
+        sql: minimum_required_source_desc
+        type: string
+
+    -   name: minimum_required_source
+        sql: minimum_required_source
+        type: string
+
+    -   name: minimum_required_credits
+        sql: minimum_required_credits
+        type: string
+
+    -   name: not_enrolled_ind
+        sql: not_enrolled_ind
+        type: string
+
+    -   name: enroll_census_date2_ind
+        sql: enroll_census_date2_ind
+        type: string
+
+    -   name: enroll_census_date1_ind
+        sql: enroll_census_date1_ind
+        type: string
+
+    -   name: enrollment_withdrawal_date
+        sql: enrollment_withdrawal_date
+        type: time
+
+    -   name: external_withdrawn_ind
+        sql: external_withdrawn_ind
+        type: string
+
+    -   name: withdrawn_ind
+        sql: withdrawn_ind
+        type: string
+
+    -   name: prevent_registration_ind
+        sql: prevent_registration_ind
+        type: string
+
+    -   name: aid_enrollment_period_desc
+        sql: aid_enrollment_period_desc
+        type: string
+
+    -   name: aid_enrollment_period
+        sql: aid_enrollment_period
+        type: string
+
+    -   name: aid_year_desc
+        sql: aid_year_desc
+        type: string
+
+    -   name: aid_year
+        sql: aid_year
+        type: string
+
+    -   name: withdrawal_reason_desc
+        sql: withdrawal_reason_desc
+        type: string
+
+    -   name: withdrawal_reason
+        sql: withdrawal_reason
+        type: string
+
+    -   name: sub_academic_period_desc
+        sql: sub_academic_period_desc
+        type: string
+
+    -   name: sub_academic_period
+        sql: sub_academic_period
+        type: string
+
+    -   name: transfer_to_institution_desc
+        sql: transfer_to_institution_desc
+        type: string
+
+    -   name: transfer_to_institution
+        sql: transfer_to_institution
+        type: string
+
+    -   name: total_non_ceu_credits
+        sql: total_non_ceu_credits
+        type: string
+
+    -   name: total_non_ceu_billing
+        sql: total_non_ceu_billing
+        type: string
+
+    -   name: total_credits
+        sql: total_credits
+        type: string
+
+    -   name: total_ceu_credits
+        sql: total_ceu_credits
+        type: string
+
+    -   name: student_fte
+        sql: student_fte
+        type: string
+
+    -   name: student_class_boap_desc
+        sql: student_class_boap_desc
+        type: string
+
+    -   name: student_classification_desc
+        sql: student_classification_desc
+        type: string
+
+    -   name: student_classification_boap
+        sql: student_classification_boap
+        type: string
+
+    -   name: student_classification
+        sql: student_classification
+        type: string
+
+    -   name: total_ceu_billing
+        sql: total_ceu_billing
+        type: string
+
+    -   name: total_billing
+        sql: total_billing
+        type: string
+
+    -   name: special_exam_desc
+        sql: special_exam_desc
+        type: string
+
+    -   name: special_exam_credit
+        sql: special_exam_credit
+        type: string
+
+    -   name: registration_reason_desc
+        sql: registration_reason_desc
+        type: string
+
+    -   name: registration_reason
+        sql: registration_reason
+        type: string
+
+    -   name: registered_ind
+        sql: registered_ind
+        type: string
+
+    -   name: prospect_ind
+        sql: prospect_ind
+        type: string
+
+    -   name: process_group
+        sql: process_group
+        type: string
+
+    -   name: name
+        sql: name
+        type: string
+
+    -   name: multi_source_desc
+        sql: multi_source_desc
+        type: string
+
+    -   name: multi_source
+        sql: multi_source
+        type: string
+
+    -   name: inst_aid_recipient_ind
+        sql: inst_aid_recipient_ind
+        type: string
+
+    -   name: inquirer_ind
+        sql: inquirer_ind
+        type: string
+
+    -   name: id
+        sql: id
+        type: string
+
+    -   name: housing_ind
+        sql: housing_ind
+        type: string
+
+    -   name: fte_divisor
+        sql: fte_divisor
+        type: string
+
+    -   name: graduated_ind
+        sql: graduated_ind
+        type: string
+
+    -   name: fin_aid_applicant_ind
+        sql: fin_aid_applicant_ind
+        type: string
+
+    -   name: deposit_ind
+        sql: deposit_ind
+        type: string
+
+    -   name: enrollment_status_desc
+        sql: enrollment_status_desc
+        type: string
+
+    -   name: enrollment_status_date
+        sql: enrollment_status_date
+        type: time
+
+    -   name: enrollment_status
+        sql: enrollment_status
+        type: string
+
+    -   name: enrollment_exists_ind
+        sql: enrollment_exists_ind
+        type: string
+
+    -   name: enrollment_add_date
+        sql: enrollment_add_date
+        type: time
+
+    -   name: enrolled_ind
+        sql: enrolled_ind
+        type: string
+
+    -   name: current_time_status_desc
+        sql: current_time_status_desc
+        type: string
+
+    -   name: current_time_status_date
+        sql: current_time_status_date
+        type: time
+
+    -   name: current_time_status
+        sql: current_time_status
+        type: string
+
+    -   name: continuing_education_ind
+        sql: continuing_education_ind
+        type: string
+
+    -   name: assessment_date
+        sql: assessment_date
+        type: time
+
+    -   name: ar_chrgs_acceptance_ind
+        sql: ar_chrgs_acceptance_ind
+        type: string
+
+    -   name: applicant_ind
+        sql: applicant_ind
+        type: string
+
+    -   name: admit_ind
+        sql: admit_ind
+        type: string
+
+    -   name: administrative_group
+        sql: administrative_group
+        type: string
+
+    -   name: academic_year_desc
+        sql: academic_year_desc
+        type: string
+
+    -   name: academic_standing_end_desc
+        sql: academic_standing_end_desc
+        type: string
+
+    -   name: academic_standing_end_date
+        sql: academic_standing_end_date
+        type: time
+
+    -   name: academic_standing_end
+        sql: academic_standing_end
+        type: string
+
+    -   name: academic_year
+        sql: academic_year
+        type: string
+
+    -   name: academic_outcome_enrolled_ind
+        sql: academic_outcome_enrolled_ind
+        type: string
+
+    -   name: academic_history_exists_ind
+        sql: academic_history_exists_ind
+        type: string
+
+    -   name: academic_period_desc
+        sql: academic_period_desc
+        type: string
+
+    -   name: academic_period
+        sql: academic_period
+        type: string
+        primary_key: true
+
+    -   name: person_uid
+        sql: person_uid
+        type: string
+        primary_key: true
+
+    measures: []
+
+    pre_aggregations: []

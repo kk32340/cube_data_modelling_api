@@ -1,0 +1,23 @@
+cubes:
+    name: testing_category
+
+    sql_table: odsmgr_cust.testing_category
+
+    joins:
+    -   name: testing_category_stusta
+        sql: '{CUBE}.test_code = testing_category_stusta.test_code'
+        relationship: one_to_one
+
+    dimensions:
+    -   name: placement_type
+        sql: placement_type
+        type: string
+
+    -   name: test_code
+        sql: test_code
+        type: string
+        primary_key: true
+
+    measures: []
+
+    pre_aggregations: []

@@ -1,0 +1,670 @@
+cubes:
+    name: grant_fund
+
+    sql_table: odsmgr.grant_fund
+
+    joins:
+    -   name: fund_hierarchy
+        sql: '{CUBE}.chart_of_accounts = fund_hierarchy.chart_of_accounts AND {CUBE}.fund
+            = fund_hierarchy.fund'
+        relationship: one_to_many
+
+    -   name: grant_view
+        sql: '{CUBE}.grant_id = grant_view.grant_id'
+        relationship: zero_to_many
+
+    dimensions:
+    -   name: withholding_percent
+        sql: withholding_percent
+        type: string
+
+    -   name: withholding_ar_account_desc
+        sql: withholding_ar_account_desc
+        type: string
+
+    -   name: withholding_ar_account
+        sql: withholding_ar_account
+        type: string
+
+    -   name: withholding_amount
+        sql: withholding_amount
+        type: string
+
+    -   name: unbilled_accrual_account_desc
+        sql: unbilled_accrual_account_desc
+        type: string
+
+    -   name: unbilled_accrual_account
+        sql: unbilled_accrual_account
+        type: string
+
+    -   name: subcategory_desc
+        sql: subcategory_desc
+        type: string
+
+    -   name: subcategory
+        sql: subcategory
+        type: string
+
+    -   name: revenue_accrual_account_desc
+        sql: revenue_accrual_account_desc
+        type: string
+
+    -   name: revenue_accrual_account
+        sql: revenue_accrual_account
+        type: string
+
+    -   name: responsible_orgn_status
+        sql: responsible_orgn_status
+        type: string
+
+    -   name: responsible_organization_desc
+        sql: responsible_organization_desc
+        type: string
+
+    -   name: responsible_organization_code
+        sql: responsible_organization_code
+        type: string
+
+    -   name: sponsor_number
+        sql: sponsor_number
+        type: string
+
+    -   name: source_fund_desc
+        sql: source_fund_desc
+        type: string
+
+    -   name: source_fund
+        sql: source_fund
+        type: string
+
+    -   name: related_grant
+        sql: related_grant
+        type: string
+
+    -   name: proposal_short_title
+        sql: proposal_short_title
+        type: string
+
+    -   name: proposal_long_title
+        sql: proposal_long_title
+        type: string
+
+    -   name: proposal
+        sql: proposal
+        type: string
+
+    -   name: project_start_date
+        sql: project_start_date
+        type: time
+
+    -   name: project_end_date
+        sql: project_end_date
+        type: time
+
+    -   name: project_close_ind
+        sql: project_close_ind
+        type: string
+
+    -   name: status_fiscal_year
+        sql: status_fiscal_year
+        type: string
+
+    -   name: status_fiscal_period
+        sql: status_fiscal_period
+        type: string
+
+    -   name: status_desc
+        sql: status_desc
+        type: string
+
+    -   name: status_date
+        sql: status_date
+        type: time
+
+    -   name: status
+        sql: status
+        type: string
+
+    -   name: process_group
+        sql: process_group
+        type: string
+
+    -   name: principal_investigator_uid
+        sql: principal_investigator_uid
+        type: string
+
+    -   name: principal_investigator_title
+        sql: principal_investigator_title
+        type: string
+
+    -   name: principal_investigator_name
+        sql: principal_investigator_name
+        type: string
+
+    -   name: principal_investigator_mname
+        sql: principal_investigator_mname
+        type: string
+
+    -   name: principal_investigator_lname
+        sql: principal_investigator_lname
+        type: string
+
+    -   name: principal_investigator_id
+        sql: principal_investigator_id
+        type: string
+
+    -   name: principal_investigator_fname
+        sql: principal_investigator_fname
+        type: string
+
+    -   name: maximum_constr_project_amount
+        sql: maximum_constr_project_amount
+        type: string
+
+    -   name: multi_source_desc
+        sql: multi_source_desc
+        type: string
+
+    -   name: multi_year_encumbrance_ind
+        sql: multi_year_encumbrance_ind
+        type: string
+
+    -   name: grant_fund_user_id
+        sql: grant_fund_user_id
+        type: string
+
+    -   name: grant_fund_activity_date
+        sql: grant_fund_activity_date
+        type: time
+
+    -   name: multi_source
+        sql: multi_source
+        type: string
+
+    -   name: fund_type_desc
+        sql: fund_type_desc
+        type: string
+
+    -   name: fund_type
+        sql: fund_type
+        type: string
+
+    -   name: fund_termination_date
+        sql: fund_termination_date
+        type: time
+
+    -   name: fund_status
+        sql: fund_status
+        type: string
+
+    -   name: fund_predecessor_desc
+        sql: fund_predecessor_desc
+        type: string
+
+    -   name: fund_predecessor
+        sql: fund_predecessor
+        type: string
+
+    -   name: fund_indirect_cost_rate_desc
+        sql: fund_indirect_cost_rate_desc
+        type: string
+
+    -   name: fund_indirect_cost_rate
+        sql: fund_indirect_cost_rate
+        type: string
+
+    -   name: fund_indirect_cost_distri_desc
+        sql: fund_indirect_cost_distri_desc
+        type: string
+
+    -   name: fund_indirect_cost_distri
+        sql: fund_indirect_cost_distri
+        type: string
+
+    -   name: fund_indirect_cost_charge_desc
+        sql: fund_indirect_cost_charge_desc
+        type: string
+
+    -   name: fund_indirect_cost_charge
+        sql: fund_indirect_cost_charge
+        type: string
+
+    -   name: fund_indirect_cost_base_desc
+        sql: fund_indirect_cost_base_desc
+        type: string
+
+    -   name: fund_indirect_cost_base
+        sql: fund_indirect_cost_base
+        type: string
+
+    -   name: fund_fmgr_street_line4
+        sql: fund_fmgr_street_line4
+        type: string
+
+    -   name: fund_fmgr_street_line3
+        sql: fund_fmgr_street_line3
+        type: string
+
+    -   name: fund_fmgr_street_line2
+        sql: fund_fmgr_street_line2
+        type: string
+
+    -   name: fund_fmgr_street_line1
+        sql: fund_fmgr_street_line1
+        type: string
+
+    -   name: fund_fmgr_state_province_desc
+        sql: fund_fmgr_state_province_desc
+        type: string
+
+    -   name: fund_fmgr_state_province
+        sql: fund_fmgr_state_province
+        type: string
+
+    -   name: fund_fmgr_postal_code
+        sql: fund_fmgr_postal_code
+        type: string
+
+    -   name: fund_fmgr_nation_desc
+        sql: fund_fmgr_nation_desc
+        type: string
+
+    -   name: fund_fmgr_nation
+        sql: fund_fmgr_nation
+        type: string
+
+    -   name: fund_fmgr_middle_name
+        sql: fund_fmgr_middle_name
+        type: string
+
+    -   name: fund_fmgr_last_name
+        sql: fund_fmgr_last_name
+        type: string
+
+    -   name: fund_fmgr_first_name
+        sql: fund_fmgr_first_name
+        type: string
+
+    -   name: fund_fmgr_county_desc
+        sql: fund_fmgr_county_desc
+        type: string
+
+    -   name: fund_fmgr_county
+        sql: fund_fmgr_county
+        type: string
+
+    -   name: fund_fmgr_city
+        sql: fund_fmgr_city
+        type: string
+
+    -   name: fund_financial_manager_uid
+        sql: fund_financial_manager_uid
+        type: string
+
+    -   name: fund_financial_manager_name
+        sql: fund_financial_manager_name
+        type: string
+
+    -   name: fund_financial_manager_id
+        sql: fund_financial_manager_id
+        type: string
+
+    -   name: fund_expenditure_end_date
+        sql: fund_expenditure_end_date
+        type: time
+
+    -   name: indirect_cost_rate_desc
+        sql: indirect_cost_rate_desc
+        type: string
+
+    -   name: indirect_cost_rate
+        sql: indirect_cost_rate
+        type: string
+
+    -   name: indirect_cost_distrib_desc
+        sql: indirect_cost_distrib_desc
+        type: string
+
+    -   name: indirect_cost_distribution
+        sql: indirect_cost_distribution
+        type: string
+
+    -   name: indirect_cost_charge_desc
+        sql: indirect_cost_charge_desc
+        type: string
+
+    -   name: indirect_cost_charge
+        sql: indirect_cost_charge
+        type: string
+
+    -   name: indirect_cost_base_desc
+        sql: indirect_cost_base_desc
+        type: string
+
+    -   name: chart_of_accounts_cost_status
+        sql: chart_of_accounts_cost_status
+        type: string
+
+    -   name: indirect_cost_base
+        sql: indirect_cost_base
+        type: string
+
+    -   name: fund_desc
+        sql: fund_desc
+        type: string
+
+    -   name: fund_cost_share_rate_desc
+        sql: fund_cost_share_rate_desc
+        type: string
+
+    -   name: fund_cost_share_rate
+        sql: fund_cost_share_rate
+        type: string
+
+    -   name: fund_cost_share_distrib_desc
+        sql: fund_cost_share_distrib_desc
+        type: string
+
+    -   name: fund_cost_share_distrib
+        sql: fund_cost_share_distrib
+        type: string
+
+    -   name: fund_cost_share_charge_desc
+        sql: fund_cost_share_charge_desc
+        type: string
+
+    -   name: fund_cost_share_charge
+        sql: fund_cost_share_charge
+        type: string
+
+    -   name: fund_cost_share_base_desc
+        sql: fund_cost_share_base_desc
+        type: string
+
+    -   name: fund_cost_share_base
+        sql: fund_cost_share_base
+        type: string
+
+    -   name: fund_bank_uid
+        sql: fund_bank_uid
+        type: string
+
+    -   name: fund_bank_name
+        sql: fund_bank_name
+        type: string
+
+    -   name: fund_bank_id
+        sql: fund_bank_id
+        type: string
+
+    -   name: fund_bank_desc
+        sql: fund_bank_desc
+        type: string
+
+    -   name: fund_bank
+        sql: fund_bank
+        type: string
+
+    -   name: chart_of_accounts_status
+        sql: chart_of_accounts_status
+        type: string
+
+    -   name: fund
+        sql: fund
+        type: string
+        primary_key: true
+
+    -   name: grant_type_desc
+        sql: grant_type_desc
+        type: string
+
+    -   name: grant_type
+        sql: grant_type
+        type: string
+
+    -   name: grant_termination_date
+        sql: grant_termination_date
+        type: time
+
+    -   name: grant_short_title
+        sql: grant_short_title
+        type: string
+
+    -   name: grant_long_title
+        sql: grant_long_title
+        type: string
+
+    -   name: grant_id
+        sql: grant_id
+        type: string
+        primary_key: true
+
+    -   name: expenditure_end_date
+        sql: expenditure_end_date
+        type: time
+
+    -   name: estimated_cum_cost_amount
+        sql: estimated_cum_cost_amount
+        type: string
+
+    -   name: current_year_amount
+        sql: current_year_amount
+        type: string
+
+    -   name: cumulative_amount
+        sql: cumulative_amount
+        type: string
+
+    -   name: federal_identification_uid
+        sql: federal_identification_uid
+        type: string
+
+    -   name: federal_identification_desc
+        sql: federal_identification_desc
+        type: string
+
+    -   name: federal_identification
+        sql: federal_identification
+        type: string
+
+    -   name: chart_of_accounts_desc
+        sql: chart_of_accounts_desc
+        type: string
+
+    -   name: chart_of_accounts_cost_desc
+        sql: chart_of_accounts_cost_desc
+        type: string
+
+    -   name: chart_of_accounts_cost
+        sql: chart_of_accounts_cost
+        type: string
+
+    -   name: chart_of_accounts
+        sql: chart_of_accounts
+        type: string
+        primary_key: true
+
+    -   name: category_desc
+        sql: category_desc
+        type: string
+
+    -   name: category
+        sql: category
+        type: string
+
+    -   name: cash_receipt_bank_uid
+        sql: cash_receipt_bank_uid
+        type: string
+
+    -   name: cash_receipt_bank_name
+        sql: cash_receipt_bank_name
+        type: string
+
+    -   name: cash_receipt_bank_id
+        sql: cash_receipt_bank_id
+        type: string
+
+    -   name: cash_receipt_bank_desc
+        sql: cash_receipt_bank_desc
+        type: string
+
+    -   name: cash_receipt_bank
+        sql: cash_receipt_bank
+        type: string
+
+    -   name: cost_share_rate_desc
+        sql: cost_share_rate_desc
+        type: string
+
+    -   name: cost_share_rate
+        sql: cost_share_rate
+        type: string
+
+    -   name: cost_share_distribution_desc
+        sql: cost_share_distribution_desc
+        type: string
+
+    -   name: cost_share_distribution
+        sql: cost_share_distribution
+        type: string
+
+    -   name: cost_share_charge_desc
+        sql: cost_share_charge_desc
+        type: string
+
+    -   name: cost_share_charge
+        sql: cost_share_charge
+        type: string
+
+    -   name: cost_share_base_desc
+        sql: cost_share_base_desc
+        type: string
+
+    -   name: cost_share_base
+        sql: cost_share_base
+        type: string
+
+    -   name: budget_period_start_date
+        sql: budget_period_start_date
+        type: time
+
+    -   name: budget_period_end_date
+        sql: budget_period_end_date
+        type: time
+
+    -   name: billed_ar_account_desc
+        sql: billed_ar_account_desc
+        type: string
+
+    -   name: billed_ar_account
+        sql: billed_ar_account
+        type: string
+
+    -   name: constr_project_start_date
+        sql: constr_project_start_date
+        type: time
+
+    -   name: constr_project_number
+        sql: constr_project_number
+        type: string
+
+    -   name: constr_project_fmgr_uid
+        sql: constr_project_fmgr_uid
+        type: string
+
+    -   name: constr_project_fmgr_mid_name
+        sql: constr_project_fmgr_mid_name
+        type: string
+
+    -   name: constr_project_fmgr_last_name
+        sql: constr_project_fmgr_last_name
+        type: string
+
+    -   name: constr_project_fmgr_id
+        sql: constr_project_fmgr_id
+        type: string
+
+    -   name: constr_project_fmgr_first_name
+        sql: constr_project_fmgr_first_name
+        type: string
+
+    -   name: constr_project_end_date
+        sql: constr_project_end_date
+        type: time
+
+    -   name: constr_project_desc
+        sql: constr_project_desc
+        type: string
+
+    -   name: constr_project_complete_date
+        sql: constr_project_complete_date
+        type: time
+
+    -   name: constr_in_progr_account_desc
+        sql: constr_in_progr_account_desc
+        type: string
+
+    -   name: constr_in_progr_account
+        sql: constr_in_progr_account
+        type: string
+
+    -   name: construction_plant_fund_desc
+        sql: construction_plant_fund_desc
+        type: string
+
+    -   name: construction_plant_fund
+        sql: construction_plant_fund
+        type: string
+
+    -   name: alternate_status_desc
+        sql: alternate_status_desc
+        type: string
+
+    -   name: agency_name
+        sql: agency_name
+        type: string
+
+    -   name: agency_id
+        sql: agency_id
+        type: string
+
+    -   name: agency_email
+        sql: agency_email
+        type: string
+
+    -   name: agency_contact
+        sql: agency_contact
+        type: string
+
+    -   name: agency_commitment_amount
+        sql: agency_commitment_amount
+        type: string
+
+    -   name: agency_address_sequence_number
+        sql: agency_address_sequence_number
+        type: string
+
+    -   name: agency_address
+        sql: agency_address
+        type: string
+
+    -   name: agency_uid
+        sql: agency_uid
+        type: string
+
+    -   name: agency_telephone_seq_number
+        sql: agency_telephone_seq_number
+        type: string
+
+    -   name: agency_phone_type
+        sql: agency_phone_type
+        type: string
+
+    -   name: administrative_group
+        sql: administrative_group
+        type: string
+
+    measures: []
+
+    pre_aggregations: []

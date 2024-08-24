@@ -1,0 +1,227 @@
+cubes:
+    name: shttran
+
+    sql_table: saturn.shttran
+
+    joins: []
+
+    dimensions:
+    -   name: shttran_vpdi_code
+        sql: shttran_vpdi_code
+        type: string
+
+    -   name: shttran_data_origin
+        sql: shttran_data_origin
+        type: string
+
+    -   name: shttran_user_id
+        sql: shttran_user_id
+        type: string
+
+    -   name: shttran_version
+        sql: shttran_version
+        type: string
+
+    -   name: shttran_surrogate_id
+        sql: shttran_surrogate_id
+        type: string
+
+    -   name: shttran_order_id
+        sql: shttran_order_id
+        type: string
+
+    -   name: shttran_house_number
+        sql: shttran_house_number
+        type: string
+
+    -   name: shttran_street_line4
+        sql: shttran_street_line4
+        type: string
+
+    -   name: shttran_ctry_code_phone
+        sql: shttran_ctry_code_phone
+        type: string
+
+    -   name: shttran_zip
+        sql: shttran_zip
+        type: string
+
+    -   name: shttran_wsso_code
+        sql: shttran_wsso_code
+        type: string
+
+    -   name: shttran_wpyo_receipt_number
+        sql: shttran_wpyo_receipt_number
+        type: string
+
+    -   name: shttran_wpyo_code
+        sql: shttran_wpyo_code
+        type: string
+
+    -   name: shttran_user
+        sql: shttran_user
+        type: string
+
+    -   name: shttran_type
+        sql: shttran_type
+        type: string
+
+    -   name: shttran_tprt_code
+        sql: shttran_tprt_code
+        type: string
+
+    -   name: shttran_term_code_in_prg
+        sql: shttran_term_code_in_prg
+        type: string
+
+    -   name: shttran_term_code_detc
+        sql: shttran_term_code_detc
+        type: string
+
+    -   name: shttran_term
+        sql: shttran_term
+        type: string
+
+    -   name: shttran_street3
+        sql: shttran_street3
+        type: string
+
+    -   name: shttran_street2
+        sql: shttran_street2
+        type: string
+
+    -   name: shttran_street1
+        sql: shttran_street1
+        type: string
+
+    -   name: shttran_stat_code
+        sql: shttran_stat_code
+        type: string
+
+    -   name: shttran_sessionid
+        sql: shttran_sessionid
+        type: string
+
+    -   name: shttran_seq_no
+        sql: shttran_seq_no
+        type: string
+
+    -   name: shttran_sent_date
+        sql: shttran_sent_date
+        type: time
+
+    -   name: shttran_sbgi_code
+        sql: shttran_sbgi_code
+        type: string
+
+    -   name: shttran_request_date
+        sql: shttran_request_date
+        type: time
+
+    -   name: shttran_print_date
+        sql: shttran_print_date
+        type: time
+
+    -   name: shttran_printer
+        sql: shttran_printer
+        type: string
+
+    -   name: shttran_pidm
+        sql: shttran_pidm
+        type: string
+
+    -   name: shttran_phone_number
+        sql: shttran_phone_number
+        type: string
+
+    -   name: shttran_phone_ext
+        sql: shttran_phone_ext
+        type: string
+
+    -   name: shttran_phone_area
+        sql: shttran_phone_area
+        type: string
+
+    -   name: shttran_official_ind
+        sql: shttran_official_ind
+        type: string
+
+    -   name: shttran_no_copies
+        sql: shttran_no_copies
+        type: string
+
+    -   name: shttran_natn_code
+        sql: shttran_natn_code
+        type: string
+
+    -   name: shttran_levl_code
+        sql: shttran_levl_code
+        type: string
+
+    -   name: shttran_intl_access
+        sql: shttran_intl_access
+        type: string
+
+    -   name: shttran_id
+        sql: shttran_id
+        type: string
+
+    -   name: shttran_hold_grde_ind
+        sql: shttran_hold_grde_ind
+        type: string
+
+    -   name: shttran_hold_degr_ind
+        sql: shttran_hold_degr_ind
+        type: string
+
+    -   name: shttran_error_ind
+        sql: shttran_error_ind
+        type: string
+
+    -   name: shttran_edi_status_date
+        sql: shttran_edi_status_date
+        type: time
+
+    -   name: shttran_edi_sent_date
+        sql: shttran_edi_sent_date
+        type: time
+
+    -   name: shttran_edi_request_num
+        sql: shttran_edi_request_num
+        type: string
+
+    -   name: shttran_edis_code
+        sql: shttran_edis_code
+        type: string
+
+    -   name: shttran_detc_detail_code
+        sql: shttran_detc_detail_code
+        type: string
+
+    -   name: shttran_detc_desc
+        sql: shttran_detc_desc
+        type: string
+
+    -   name: shttran_detc_amount
+        sql: shttran_detc_amount
+        type: string
+
+    -   name: shttran_coll_code
+        sql: shttran_coll_code
+        type: string
+
+    -   name: shttran_city
+        sql: shttran_city
+        type: string
+
+    -   name: shttran_addr_name
+        sql: shttran_addr_name
+        type: string
+
+    -   name: shttran_activity_date
+        sql: shttran_activity_date
+        type: time
+
+    measures: []
+
+    pre_aggregations: []

@@ -1,0 +1,48 @@
+cubes:
+    name: fobapph
+
+    sql_table: 'fobapph@prod.kccd.edu
+
+        '
+    joins:
+    -   name: transaction_history
+        sql: '{CUBE}.fobapph_doc_code = transaction_history.document'
+        relationship: one_to_many
+
+    dimensions:
+    -   name: fobapph_user_id
+        sql: fobapph_user_id
+        type: string
+
+    -   name: fobapph_submission_number
+        sql: fobapph_submission_number
+        type: string
+
+    -   name: fobapph_seq_num
+        sql: fobapph_seq_num
+        type: string
+
+    -   name: fobapph_queue_level
+        sql: fobapph_queue_level
+        type: string
+
+    -   name: fobapph_queue_id
+        sql: fobapph_queue_id
+        type: string
+
+    -   name: fobapph_doc_code
+        sql: fobapph_doc_code
+        type: string
+        primary_key: true
+
+    -   name: fobapph_chg_seq_num
+        sql: fobapph_chg_seq_num
+        type: string
+
+    -   name: fobapph_activity_date
+        sql: fobapph_activity_date
+        type: time
+
+    measures: []
+
+    pre_aggregations: []

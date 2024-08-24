@@ -1,0 +1,247 @@
+cubes:
+  name: account_hierarchy
+  sql_table: odsmgr.account_hierarchy
+  joins:
+    - name: mft_operating_ledger
+      sql: >-
+        {CUBE}.account=mft_operating_ledger.account AND
+        {CUBE}.process_group=mft_operating_ledger.sum_year_to_date_activity
+      relationship: zero_to_many
+  dimensions:
+    - name: process_group
+      sql: process_group
+      type: string
+    - name: normal_balance
+      sql: normal_balance
+      type: string
+    - name: multi_source_desc
+      sql: multi_source_desc
+      type: string
+    - name: ctrl_adopted_budget
+      sql: ctrl_adopted_budget
+      type: string
+    - name: ctrl_adopted_budget_desc
+      sql: ctrl_adopted_budget_desc
+      type: string
+    - name: ctrl_adopted_budget_sequence
+      sql: ctrl_adopted_budget_sequence
+      type: string
+    - name: ctrl_adopted_budget_seq_desc
+      sql: ctrl_adopted_budget_seq_desc
+      type: string
+    - name: ctrl_budget_adjustment
+      sql: ctrl_budget_adjustment
+      type: string
+    - name: ctrl_budget_adjustment_desc
+      sql: ctrl_budget_adjustment_desc
+      type: string
+    - name: ctrl_budget_adjust_sequence
+      sql: ctrl_budget_adjust_sequence
+      type: string
+    - name: ctrl_budget_adjust_seq_desc
+      sql: ctrl_budget_adjust_seq_desc
+      type: string
+    - name: ctrl_actual_activity
+      sql: ctrl_actual_activity
+      type: string
+    - name: ctrl_actual_activity_desc
+      sql: ctrl_actual_activity_desc
+      type: string
+    - name: ctrl_actual_activity_sequence
+      sql: ctrl_actual_activity_sequence
+      type: string
+    - name: ctrl_actual_activity_seq_desc
+      sql: ctrl_actual_activity_seq_desc
+      type: string
+    - name: ctrl_encumbrance
+      sql: ctrl_encumbrance
+      type: string
+    - name: ctrl_encumbrance_desc
+      sql: ctrl_encumbrance_desc
+      type: string
+    - name: ctrl_encumbrance_sequence
+      sql: ctrl_encumbrance_sequence
+      type: string
+    - name: ctrl_encumbrance_seq_desc
+      sql: ctrl_encumbrance_seq_desc
+      type: string
+    - name: ctrl_budget_reserve
+      sql: ctrl_budget_reserve
+      type: string
+    - name: ctrl_budget_reserve_desc
+      sql: ctrl_budget_reserve_desc
+      type: string
+    - name: ctrl_budget_reserve_sequence
+      sql: ctrl_budget_reserve_sequence
+      type: string
+    - name: ctrl_budget_reserve_seq_desc
+      sql: ctrl_budget_reserve_seq_desc
+      type: string
+    - name: ctrl_temporary_budget
+      sql: ctrl_temporary_budget
+      type: string
+    - name: ctrl_temporary_budget_desc
+      sql: ctrl_temporary_budget_desc
+      type: string
+    - name: ctrl_temporary_budget_sequence
+      sql: ctrl_temporary_budget_sequence
+      type: string
+    - name: ctrl_temporary_budget_seq_desc
+      sql: ctrl_temporary_budget_seq_desc
+      type: string
+    - name: ctrl_adopted_budget_py
+      sql: ctrl_adopted_budget_py
+      type: string
+    - name: ctrl_adopted_budget_py_desc
+      sql: ctrl_adopted_budget_py_desc
+      type: string
+    - name: ctrl_budget_adjustment_py
+      sql: ctrl_budget_adjustment_py
+      type: string
+    - name: ctrl_budget_adjustment_py_desc
+      sql: ctrl_budget_adjustment_py_desc
+      type: string
+    - name: ctrl_actual_activity_py
+      sql: ctrl_actual_activity_py
+      type: string
+    - name: ctrl_actual_activity_py_desc
+      sql: ctrl_actual_activity_py_desc
+      type: string
+    - name: ctrl_encumbrance_py
+      sql: ctrl_encumbrance_py
+      type: string
+    - name: ctrl_encumbrance_py_desc
+      sql: ctrl_encumbrance_py_desc
+      type: string
+    - name: ctrl_budget_reserve_py
+      sql: ctrl_budget_reserve_py
+      type: string
+    - name: ctrl_budget_reserve_py_desc
+      sql: ctrl_budget_reserve_py_desc
+      type: string
+    - name: ctrl_temporary_budget_py
+      sql: ctrl_temporary_budget_py
+      type: string
+    - name: ctrl_temporary_budget_py_desc
+      sql: ctrl_temporary_budget_py_desc
+      type: string
+    - name: multi_source
+      sql: multi_source
+      type: string
+    - name: internal_account_type_desc
+      sql: internal_account_type_desc
+      type: string
+    - name: internal_account_type
+      sql: internal_account_type
+      type: string
+    - name: chart_of_accounts_desc
+      sql: chart_of_accounts_desc
+      type: string
+    - name: chart_of_accounts
+      sql: chart_of_accounts
+      type: string
+    - name: administrative_group
+      sql: administrative_group
+      type: string
+    - name: account_type_status_2
+      sql: account_type_status_2
+      type: string
+    - name: account_type_status_1
+      sql: account_type_status_1
+      type: string
+    - name: account_type_level_2
+      sql: account_type_level_2
+      type: string
+    - name: account_level_3
+      sql: account_level_3
+      type: string
+    - name: account_level_2
+      sql: account_level_2
+      type: string
+    - name: account_level_1
+      sql: account_level_1
+      type: string
+    - name: account_level
+      sql: account_level
+      type: string
+    - name: account_desc_4
+      sql: account_desc_4
+      type: string
+    - name: account_desc_3
+      sql: account_desc_3
+      type: string
+    - name: account_desc_2
+      sql: account_desc_2
+      type: string
+    - name: account_desc_1
+      sql: account_desc_1
+      type: string
+    - name: account_desc
+      sql: account_desc
+      type: string
+    - name: account_class_desc
+      sql: account_class_desc
+      type: string
+    - name: account_class
+      sql: account_class
+      type: string
+    - name: termination_date
+      sql: termination_date
+      type: time
+    - name: data_entry_permitted
+      sql: data_entry_permitted
+      type: string
+    - name: data_entry_permitted_desc
+      sql: data_entry_permitted_desc
+      type: string
+    - name: account_type_level_1
+      sql: account_type_level_1
+      type: string
+    - name: account_type_level
+      sql: account_type_level
+      type: string
+    - name: account_type_desc_2
+      sql: account_type_desc_2
+      type: string
+    - name: account_type_desc_1
+      sql: account_type_desc_1
+      type: string
+    - name: account_type_desc
+      sql: account_type_desc
+      type: string
+    - name: account_type
+      sql: account_type
+      type: string
+    - name: account_status_4
+      sql: account_status_4
+      type: string
+    - name: account_status_3
+      sql: account_status_3
+      type: string
+    - name: account_status_2
+      sql: account_status_2
+      type: string
+    - name: account_status_1
+      sql: account_status_1
+      type: string
+    - name: account_status
+      sql: account_status
+      type: string
+    - name: account_pool_desc
+      sql: account_pool_desc
+      type: string
+    - name: account_pool
+      sql: account_pool
+      type: string
+    - name: account_level_4
+      sql: account_level_4
+      type: string
+    - name: chart_of_accounts_status
+      sql: chart_of_accounts_status
+      type: string
+    - name: account
+      sql: account
+      type: string
+      primary_key: true
+  measures: []
+  pre_aggregations: []

@@ -1,0 +1,605 @@
+cubes:
+    name: meeting_time_slot
+
+    sql_table: odsmgr.meeting_time_slot
+
+    joins:
+    -   name: schedule_offering_stusta
+        sql: '{CUBE}.academic_period = schedule_offering_stusta.academic_period AND
+            {CUBE}.course_reference_number = schedule_offering_stusta.course_reference_number'
+        relationship: zero_to_many
+
+    dimensions:
+    -   name: wednesday_ind9
+        sql: wednesday_ind9
+        type: string
+
+    -   name: wednesday_ind8
+        sql: wednesday_ind8
+        type: string
+
+    -   name: wednesday_ind7
+        sql: wednesday_ind7
+        type: string
+
+    -   name: wednesday_ind6
+        sql: wednesday_ind6
+        type: string
+
+    -   name: wednesday_ind5
+        sql: wednesday_ind5
+        type: string
+
+    -   name: wednesday_ind4
+        sql: wednesday_ind4
+        type: string
+
+    -   name: wednesday_ind3
+        sql: wednesday_ind3
+        type: string
+
+    -   name: wednesday_ind2
+        sql: wednesday_ind2
+        type: string
+
+    -   name: wednesday_ind10
+        sql: wednesday_ind10
+        type: string
+
+    -   name: wednesday_ind1
+        sql: wednesday_ind1
+        type: string
+
+    -   name: sunday_ind9
+        sql: sunday_ind9
+        type: string
+
+    -   name: sunday_ind8
+        sql: sunday_ind8
+        type: string
+
+    -   name: sunday_ind7
+        sql: sunday_ind7
+        type: string
+
+    -   name: sunday_ind6
+        sql: sunday_ind6
+        type: string
+
+    -   name: sunday_ind5
+        sql: sunday_ind5
+        type: string
+
+    -   name: sunday_ind4
+        sql: sunday_ind4
+        type: string
+
+    -   name: sunday_ind3
+        sql: sunday_ind3
+        type: string
+
+    -   name: sunday_ind2
+        sql: sunday_ind2
+        type: string
+
+    -   name: sunday_ind10
+        sql: sunday_ind10
+        type: string
+
+    -   name: sunday_ind1
+        sql: sunday_ind1
+        type: string
+
+    -   name: tuesday_ind9
+        sql: tuesday_ind9
+        type: string
+
+    -   name: tuesday_ind8
+        sql: tuesday_ind8
+        type: string
+
+    -   name: tuesday_ind7
+        sql: tuesday_ind7
+        type: string
+
+    -   name: tuesday_ind6
+        sql: tuesday_ind6
+        type: string
+
+    -   name: tuesday_ind5
+        sql: tuesday_ind5
+        type: string
+
+    -   name: tuesday_ind4
+        sql: tuesday_ind4
+        type: string
+
+    -   name: tuesday_ind3
+        sql: tuesday_ind3
+        type: string
+
+    -   name: tuesday_ind2
+        sql: tuesday_ind2
+        type: string
+
+    -   name: tuesday_ind10
+        sql: tuesday_ind10
+        type: string
+
+    -   name: tuesday_ind1
+        sql: tuesday_ind1
+        type: string
+
+    -   name: thursday_ind9
+        sql: thursday_ind9
+        type: string
+
+    -   name: thursday_ind8
+        sql: thursday_ind8
+        type: string
+
+    -   name: thursday_ind7
+        sql: thursday_ind7
+        type: string
+
+    -   name: thursday_ind6
+        sql: thursday_ind6
+        type: string
+
+    -   name: thursday_ind5
+        sql: thursday_ind5
+        type: string
+
+    -   name: thursday_ind4
+        sql: thursday_ind4
+        type: string
+
+    -   name: thursday_ind3
+        sql: thursday_ind3
+        type: string
+
+    -   name: thursday_ind2
+        sql: thursday_ind2
+        type: string
+
+    -   name: thursday_ind10
+        sql: thursday_ind10
+        type: string
+
+    -   name: thursday_ind1
+        sql: thursday_ind1
+        type: string
+
+    -   name: saturday_ind9
+        sql: saturday_ind9
+        type: string
+
+    -   name: saturday_ind8
+        sql: saturday_ind8
+        type: string
+
+    -   name: saturday_ind7
+        sql: saturday_ind7
+        type: string
+
+    -   name: saturday_ind6
+        sql: saturday_ind6
+        type: string
+
+    -   name: saturday_ind5
+        sql: saturday_ind5
+        type: string
+
+    -   name: saturday_ind4
+        sql: saturday_ind4
+        type: string
+
+    -   name: saturday_ind3
+        sql: saturday_ind3
+        type: string
+
+    -   name: saturday_ind2
+        sql: saturday_ind2
+        type: string
+
+    -   name: saturday_ind10
+        sql: saturday_ind10
+        type: string
+
+    -   name: saturday_ind1
+        sql: saturday_ind1
+        type: string
+
+    -   name: room9
+        sql: room9
+        type: string
+
+    -   name: room8
+        sql: room8
+        type: string
+
+    -   name: room7
+        sql: room7
+        type: string
+
+    -   name: room6
+        sql: room6
+        type: string
+
+    -   name: room5
+        sql: room5
+        type: string
+
+    -   name: room4
+        sql: room4
+        type: string
+
+    -   name: room3
+        sql: room3
+        type: string
+
+    -   name: room2
+        sql: room2
+        type: string
+
+    -   name: room10
+        sql: room10
+        type: string
+
+    -   name: room1
+        sql: room1
+        type: string
+
+    -   name: schedule_desc9
+        sql: schedule_desc9
+        type: string
+
+    -   name: schedule_desc8
+        sql: schedule_desc8
+        type: string
+
+    -   name: schedule_desc7
+        sql: schedule_desc7
+        type: string
+
+    -   name: schedule_desc6
+        sql: schedule_desc6
+        type: string
+
+    -   name: schedule_desc5
+        sql: schedule_desc5
+        type: string
+
+    -   name: schedule_desc4
+        sql: schedule_desc4
+        type: string
+
+    -   name: schedule_desc3
+        sql: schedule_desc3
+        type: string
+
+    -   name: schedule_desc2
+        sql: schedule_desc2
+        type: string
+
+    -   name: schedule_desc10
+        sql: schedule_desc10
+        type: string
+
+    -   name: schedule_desc1
+        sql: schedule_desc1
+        type: string
+
+    -   name: schedule9
+        sql: schedule9
+        type: string
+
+    -   name: schedule8
+        sql: schedule8
+        type: string
+
+    -   name: schedule7
+        sql: schedule7
+        type: string
+
+    -   name: schedule6
+        sql: schedule6
+        type: string
+
+    -   name: schedule5
+        sql: schedule5
+        type: string
+
+    -   name: schedule4
+        sql: schedule4
+        type: string
+
+    -   name: schedule3
+        sql: schedule3
+        type: string
+
+    -   name: schedule2
+        sql: schedule2
+        type: string
+
+    -   name: schedule10
+        sql: schedule10
+        type: string
+
+    -   name: schedule1
+        sql: schedule1
+        type: string
+
+    -   name: process_group
+        sql: process_group
+        type: string
+
+    -   name: multi_source_desc
+        sql: multi_source_desc
+        type: string
+
+    -   name: multi_source
+        sql: multi_source
+        type: string
+
+    -   name: monday_ind9
+        sql: monday_ind9
+        type: string
+
+    -   name: monday_ind8
+        sql: monday_ind8
+        type: string
+
+    -   name: monday_ind7
+        sql: monday_ind7
+        type: string
+
+    -   name: monday_ind6
+        sql: monday_ind6
+        type: string
+
+    -   name: monday_ind5
+        sql: monday_ind5
+        type: string
+
+    -   name: monday_ind4
+        sql: monday_ind4
+        type: string
+
+    -   name: monday_ind3
+        sql: monday_ind3
+        type: string
+
+    -   name: monday_ind2
+        sql: monday_ind2
+        type: string
+
+    -   name: monday_ind10
+        sql: monday_ind10
+        type: string
+
+    -   name: monday_ind1
+        sql: monday_ind1
+        type: string
+
+    -   name: friday_ind9
+        sql: friday_ind9
+        type: string
+
+    -   name: friday_ind8
+        sql: friday_ind8
+        type: string
+
+    -   name: friday_ind7
+        sql: friday_ind7
+        type: string
+
+    -   name: friday_ind6
+        sql: friday_ind6
+        type: string
+
+    -   name: friday_ind5
+        sql: friday_ind5
+        type: string
+
+    -   name: friday_ind4
+        sql: friday_ind4
+        type: string
+
+    -   name: friday_ind3
+        sql: friday_ind3
+        type: string
+
+    -   name: friday_ind2
+        sql: friday_ind2
+        type: string
+
+    -   name: friday_ind10
+        sql: friday_ind10
+        type: string
+
+    -   name: friday_ind1
+        sql: friday_ind1
+        type: string
+
+    -   name: end_time9
+        sql: end_time9
+        type: string
+
+    -   name: end_time8
+        sql: end_time8
+        type: string
+
+    -   name: end_time7
+        sql: end_time7
+        type: string
+
+    -   name: end_time6
+        sql: end_time6
+        type: string
+
+    -   name: end_time5
+        sql: end_time5
+        type: string
+
+    -   name: end_time4
+        sql: end_time4
+        type: string
+
+    -   name: end_time3
+        sql: end_time3
+        type: string
+
+    -   name: end_time2
+        sql: end_time2
+        type: string
+
+    -   name: end_time10
+        sql: end_time10
+        type: string
+
+    -   name: end_time1
+        sql: end_time1
+        type: string
+
+    -   name: course_reference_number
+        sql: course_reference_number
+        type: string
+        primary_key: true
+
+    -   name: building_desc9
+        sql: building_desc9
+        type: string
+
+    -   name: building_desc8
+        sql: building_desc8
+        type: string
+
+    -   name: building_desc7
+        sql: building_desc7
+        type: string
+
+    -   name: building_desc6
+        sql: building_desc6
+        type: string
+
+    -   name: building_desc5
+        sql: building_desc5
+        type: string
+
+    -   name: building_desc4
+        sql: building_desc4
+        type: string
+
+    -   name: building_desc3
+        sql: building_desc3
+        type: string
+
+    -   name: building_desc2
+        sql: building_desc2
+        type: string
+
+    -   name: building_desc10
+        sql: building_desc10
+        type: string
+
+    -   name: building_desc1
+        sql: building_desc1
+        type: string
+
+    -   name: building9
+        sql: building9
+        type: string
+
+    -   name: building8
+        sql: building8
+        type: string
+
+    -   name: building7
+        sql: building7
+        type: string
+
+    -   name: building6
+        sql: building6
+        type: string
+
+    -   name: building5
+        sql: building5
+        type: string
+
+    -   name: building4
+        sql: building4
+        type: string
+
+    -   name: building3
+        sql: building3
+        type: string
+
+    -   name: building2
+        sql: building2
+        type: string
+
+    -   name: building10
+        sql: building10
+        type: string
+
+    -   name: building1
+        sql: building1
+        type: string
+
+    -   name: begin_time9
+        sql: begin_time9
+        type: string
+
+    -   name: begin_time8
+        sql: begin_time8
+        type: string
+
+    -   name: begin_time7
+        sql: begin_time7
+        type: string
+
+    -   name: begin_time6
+        sql: begin_time6
+        type: string
+
+    -   name: begin_time5
+        sql: begin_time5
+        type: string
+
+    -   name: begin_time4
+        sql: begin_time4
+        type: string
+
+    -   name: begin_time3
+        sql: begin_time3
+        type: string
+
+    -   name: begin_time2
+        sql: begin_time2
+        type: string
+
+    -   name: begin_time10
+        sql: begin_time10
+        type: string
+
+    -   name: begin_time1
+        sql: begin_time1
+        type: string
+
+    -   name: administrative_group
+        sql: administrative_group
+        type: string
+
+    -   name: activity_date
+        sql: activity_date
+        type: time
+
+    -   name: academic_period
+        sql: academic_period
+        type: string
+        primary_key: true
+
+    measures: []
+
+    pre_aggregations: []

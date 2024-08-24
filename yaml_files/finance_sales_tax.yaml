@@ -1,0 +1,71 @@
+cubes:
+    name: finance_sales_tax
+
+    sql_table: odsmgr_cust.finance_sales_tax
+
+    joins: []
+
+    dimensions:
+    -   name: vendor
+        sql: vendor
+        type: string
+
+    -   name: trans_date
+        sql: trans_date
+        type: time
+
+    -   name: rucl
+        sql: rucl
+        type: string
+
+    -   name: prog
+        sql: prog
+        type: string
+
+    -   name: period
+        sql: period
+        type: string
+
+    -   name: orgn
+        sql: orgn
+        type: string
+
+    -   name: fund
+        sql: fund
+        type: string
+
+    -   name: fiscal_year
+        sql: fiscal_year
+        type: string
+
+    -   name: document
+        sql: document
+        type: string
+
+    -   name: descr
+        sql: descr
+        type: string
+
+    -   name: cancel_ind
+        sql: cancel_ind
+        type: string
+
+    -   name: chknum
+        sql: chknum
+        type: string
+
+    -   name: amount
+        sql: amount
+        type: string
+
+    -   name: actv
+        sql: actv
+        type: string
+
+    -   name: acct
+        sql: acct
+        type: string
+
+    measures: []
+
+    pre_aggregations: []

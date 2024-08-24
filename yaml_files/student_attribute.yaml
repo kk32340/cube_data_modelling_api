@@ -1,0 +1,78 @@
+cubes:
+    name: student_attribute
+
+    sql_table: odsmgr.student_attribute
+
+    joins:
+    -   name: academic_study
+        sql: '{CUBE}.person_uid = academic_study.person_uid AND {CUBE}.academic_period
+            = academic_study.academic_period'
+        relationship: one_to_one
+
+    -   name: academic_study_alias
+        sql: '{CUBE}.person_uid'
+        relationship: one_to_one
+
+    -   name: enrollment
+        sql: '{CUBE}.person_uid = enrollment.person_uid AND {CUBE}.academic_period
+            = enrollment.academic_period'
+        relationship: one_to_many
+
+    dimensions:
+    -   name: sub_academic_period_desc
+        sql: sub_academic_period_desc
+        type: string
+
+    -   name: sub_academic_period
+        sql: sub_academic_period
+        type: string
+
+    -   name: student_attribute_desc
+        sql: student_attribute_desc
+        type: string
+
+    -   name: student_attribute
+        sql: student_attribute
+        type: string
+
+    -   name: process_group
+        sql: process_group
+        type: string
+
+    -   name: multi_source_desc
+        sql: multi_source_desc
+        type: string
+
+    -   name: multi_source
+        sql: multi_source
+        type: string
+
+    -   name: administrative_group
+        sql: administrative_group
+        type: string
+
+    -   name: academic_year_desc
+        sql: academic_year_desc
+        type: string
+
+    -   name: academic_year
+        sql: academic_year
+        type: string
+
+    -   name: academic_period_desc
+        sql: academic_period_desc
+        type: string
+
+    -   name: academic_period
+        sql: academic_period
+        type: string
+        primary_key: true
+
+    -   name: person_uid
+        sql: person_uid
+        type: string
+        primary_key: true
+
+    measures: []
+
+    pre_aggregations: []

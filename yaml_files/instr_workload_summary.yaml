@@ -1,0 +1,43 @@
+cubes:
+    name: instr_workload_summary
+
+    sql_table: odsmgr_cust.instr_workload_summary
+
+    joins: []
+
+    dimensions:
+    -   name: calendar_year
+        sql: calendar_year
+        type: string
+
+    -   name: workload
+        sql: workload
+        type: string
+
+    -   name: instructor_last_name
+        sql: instructor_last_name
+        type: string
+
+    -   name: instructor_id
+        sql: instructor_id
+        type: string
+
+    -   name: instructor
+        sql: instructor
+        type: string
+
+    -   name: campus
+        sql: campus
+        type: string
+
+    -   name: person_uid
+        sql: person_uid
+        type: string
+
+    -   name: academic_period
+        sql: academic_period
+        type: string
+
+    measures: []
+
+    pre_aggregations: []

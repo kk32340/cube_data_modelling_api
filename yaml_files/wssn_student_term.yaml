@@ -1,0 +1,99 @@
+cubes:
+    name: wssn_student_term
+
+    sql_table: odsmgr_cust.wssn_student_term
+
+    joins:
+    -   name: wssn_id
+        sql: '{CUBE}.person_uid = wssn_id.person_uid'
+        relationship: zero_to_many
+
+    dimensions:
+    -   name: dependents_sf07_desc
+        sql: dependents_sf07_desc
+        type: string
+
+    -   name: dependents_sf07
+        sql: dependents_sf07
+        type: string
+
+    -   name: marital_status_desc
+        sql: marital_status_desc
+        type: string
+
+    -   name: date_application_completed
+        sql: date_application_completed
+        type: time
+
+    -   name: application_create_date
+        sql: application_create_date
+        type: time
+
+    -   name: application_receipt_date
+        sql: application_receipt_date
+        type: time
+
+    -   name: hourly_wage_earned_sc17
+        sql: hourly_wage_earned_sc17
+        type: string
+
+    -   name: hours_per_week_sc16
+        sql: hours_per_week_sc16
+        type: string
+
+    -   name: end_date_sc15
+        sql: end_date_sc15
+        type: time
+
+    -   name: begin_date_sc14
+        sql: begin_date_sc14
+        type: time
+
+    -   name: bog_sf21
+        sql: bog_sf21
+        type: string
+
+    -   name: pell_sf21_date
+        sql: pell_sf21_date
+        type: time
+
+    -   name: pell_sf21
+        sql: pell_sf21
+        type: string
+
+    -   name: martial_status_sf07
+        sql: martial_status_sf07
+        type: string
+
+    -   name: application_number
+        sql: application_number
+        type: string
+
+    -   name: fm_adjusted_gross_income_sf09
+        sql: fm_adjusted_gross_income_sf09
+        type: string
+
+    -   name: interface_tape_desc
+        sql: interface_tape_desc
+        type: string
+
+    -   name: interface_tape_code
+        sql: interface_tape_code
+        type: string
+
+    -   name: aid_year
+        sql: aid_year
+        type: string
+
+    -   name: person_uid
+        sql: person_uid
+        type: string
+        primary_key: true
+
+    -   name: academic_period
+        sql: academic_period
+        type: string
+
+    measures: []
+
+    pre_aggregations: []

@@ -1,0 +1,47 @@
+cubes:
+    name: swvsprt
+
+    sql_table: saturn.swvsprt
+
+    joins:
+    -   name: swbsprt
+        sql: '{CUBE}.swvsprt_code = swbsprt.swbsprt_sprt_code'
+        relationship: one_to_many
+
+    dimensions:
+    -   name: swvsprt_vpdi_code
+        sql: swvsprt_vpdi_code
+        type: string
+
+    -   name: swvsprt_data_origin
+        sql: swvsprt_data_origin
+        type: string
+
+    -   name: swvsprt_user_id
+        sql: swvsprt_user_id
+        type: string
+
+    -   name: swvsprt_version
+        sql: swvsprt_version
+        type: string
+
+    -   name: swvsprt_surrogate_id
+        sql: swvsprt_surrogate_id
+        type: string
+
+    -   name: swvsprt_activity_date
+        sql: swvsprt_activity_date
+        type: time
+
+    -   name: swvsprt_name
+        sql: swvsprt_name
+        type: string
+
+    -   name: swvsprt_code
+        sql: swvsprt_code
+        type: string
+        primary_key: true
+
+    measures: []
+
+    pre_aggregations: []

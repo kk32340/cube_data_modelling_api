@@ -1,0 +1,51 @@
+cubes:
+    name: sfbrgrp
+
+    sql_table: saturn.sfbrgrp
+
+    joins: []
+
+    dimensions:
+    -   name: sfbrgrp_vpdi_code
+        sql: sfbrgrp_vpdi_code
+        type: string
+
+    -   name: sfbrgrp_data_origin
+        sql: sfbrgrp_data_origin
+        type: string
+
+    -   name: sfbrgrp_user_id
+        sql: sfbrgrp_user_id
+        type: string
+
+    -   name: sfbrgrp_version
+        sql: sfbrgrp_version
+        type: string
+
+    -   name: sfbrgrp_surrogate_id
+        sql: sfbrgrp_surrogate_id
+        type: string
+
+    -   name: sfbrgrp_user
+        sql: sfbrgrp_user
+        type: string
+
+    -   name: sfbrgrp_term_code
+        sql: sfbrgrp_term_code
+        type: string
+
+    -   name: sfbrgrp_rgrp_code
+        sql: sfbrgrp_rgrp_code
+        type: string
+
+    -   name: sfbrgrp_activity_date
+        sql: sfbrgrp_activity_date
+        type: time
+
+    -   name: sfbrgrp_pidm
+        sql: sfbrgrp_pidm
+        type: string
+
+    measures: []
+
+    pre_aggregations: []

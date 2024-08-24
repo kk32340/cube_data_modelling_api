@@ -1,0 +1,91 @@
+cubes:
+    name: recruitment_cohort
+
+    sql_table: odsmgr.recruitment_cohort
+
+    joins:
+    -   name: recruitment_information
+        sql: '{CUBE}.person_uid = recruitment_information.person_uid AND {CUBE}.academic_period
+            = recruitment_information.academic_period AND {CUBE}.recruit_number =
+            recruitment_information.recruit_number'
+        relationship: one_to_many
+
+    -   name: recruitment_information_alias
+        sql: '{CUBE}.recruit_number = recruitment_cohort.academic_period AND {CUBE}.person_uid'
+        relationship: one_to_many    
+
+    dimensions:
+    -   name: sub_academic_period_desc
+        sql: sub_academic_period_desc
+        type: string
+
+    -   name: sub_academic_period
+        sql: sub_academic_period
+        type: string
+
+    -   name: recruit_number
+        sql: recruit_number
+        type: string
+        primary_key: true
+
+    -   name: person_uid
+        sql: person_uid
+        type: string
+        primary_key: true
+
+    -   name: process_group
+        sql: process_group
+        type: string
+
+    -   name: multi_source_desc
+        sql: multi_source_desc
+        type: string
+
+    -   name: multi_source
+        sql: multi_source
+        type: string
+
+    -   name: cohort_inactive_reason_desc
+        sql: cohort_inactive_reason_desc
+        type: string
+
+    -   name: cohort_inactive_reason
+        sql: cohort_inactive_reason
+        type: string
+
+    -   name: cohort_desc
+        sql: cohort_desc
+        type: string
+
+    -   name: cohort_active_ind
+        sql: cohort_active_ind
+        type: string
+
+    -   name: cohort
+        sql: cohort
+        type: string
+
+    -   name: administrative_group
+        sql: administrative_group
+        type: string
+
+    -   name: academic_year_desc
+        sql: academic_year_desc
+        type: string
+
+    -   name: academic_year
+        sql: academic_year
+        type: string
+
+    -   name: academic_period_desc
+        sql: academic_period_desc
+        type: string
+
+    -   name: academic_period
+        sql: academic_period
+        type: string
+        primary_key: true
+
+    measures: []
+
+    pre_aggregations: []

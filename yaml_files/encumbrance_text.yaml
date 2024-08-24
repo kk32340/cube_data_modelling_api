@@ -1,0 +1,59 @@
+cubes:
+    name: encumbrance_text
+
+    sql_table: odsmgr.encumbrance_text
+
+    joins:
+    -   name: encumbrance
+        sql: '{CUBE}.encumbrance = encumbrance.encumbrance_number'
+        relationship: zero_to_many
+
+    dimensions:
+    -   name: text
+        sql: text
+        type: string
+
+    -   name: sequence_number
+        sql: sequence_number
+        type: string
+
+    -   name: process_group
+        sql: process_group
+        type: string
+
+    -   name: print_ind
+        sql: print_ind
+        type: string
+
+    -   name: multi_source_desc
+        sql: multi_source_desc
+        type: string
+
+    -   name: multi_source
+        sql: multi_source
+        type: string
+
+    -   name: item
+        sql: item
+        type: string
+
+    -   name: entity_uid
+        sql: entity_uid
+        type: string
+
+    -   name: encumbrance_desc
+        sql: encumbrance_desc
+        type: string
+
+    -   name: encumbrance
+        sql: encumbrance
+        type: string
+        primary_key: true
+
+    -   name: administrative_group
+        sql: administrative_group
+        type: string
+
+    measures: []
+
+    pre_aggregations: []

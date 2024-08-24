@@ -1,0 +1,115 @@
+cubes:
+    name: ftvacct
+
+    sql_table: fimsmgr.ftvacct
+
+    joins:
+    -   name: account_hierarchy
+        sql: '{CUBE}.ftvacct_acct_code = account_hierarchy.account'
+        relationship: one_to_many
+
+    dimensions:
+    -   name: ftvacct_user_id
+        sql: ftvacct_user_id
+        type: string
+
+    -   name: ftvacct_title
+        sql: ftvacct_title
+        type: string
+
+    -   name: ftvacct_term_date
+        sql: ftvacct_term_date
+        type: time
+
+    -   name: ftvacct_status_ind
+        sql: ftvacct_status_ind
+        type: string
+
+    -   name: ftvacct_normal_bal
+        sql: ftvacct_normal_bal
+        type: string
+
+    -   name: ftvacct_nchg_date
+        sql: ftvacct_nchg_date
+        type: time
+
+    -   name: ftvacct_ityp_seq_code
+        sql: ftvacct_ityp_seq_code
+        type: string
+
+    -   name: ftvacct_fringe_pct
+        sql: ftvacct_fringe_pct
+        type: string
+
+    -   name: ftvacct_eff_date
+        sql: ftvacct_eff_date
+        type: time
+
+    -   name: ftvacct_data_entry_ind
+        sql: ftvacct_data_entry_ind
+        type: string
+
+    -   name: ftvacct_coas_code
+        sql: ftvacct_coas_code
+        type: string
+
+    -   name: ftvacct_atyp_code
+        sql: ftvacct_atyp_code
+        type: string
+
+    -   name: ftvacct_activity_date
+        sql: ftvacct_activity_date
+        type: time
+
+    -   name: ftvacct_acct_code_pred
+        sql: ftvacct_acct_code_pred
+        type: string
+
+    -   name: ftvacct_acct_code_pool
+        sql: ftvacct_acct_code_pool
+        type: string
+
+    -   name: ftvacct_acct_code_fringe
+        sql: ftvacct_acct_code_fringe
+        type: string
+
+    -   name: ftvacct_acct_code_depr_exp
+        sql: ftvacct_acct_code_depr_exp
+        type: string
+
+    -   name: ftvacct_acct_code_depr_accum
+        sql: ftvacct_acct_code_depr_accum
+        type: string
+
+    -   name: ftvacct_acct_code_asset
+        sql: ftvacct_acct_code_asset
+        type: string
+
+    -   name: ftvacct_acct_code
+        sql: ftvacct_acct_code
+        type: string
+        primary_key: true
+
+    -   name: ftvacct_acct_class_code
+        sql: ftvacct_acct_class_code
+        type: string
+
+    -   name: ftvacct_surrogate_id
+        sql: ftvacct_surrogate_id
+        type: string
+
+    -   name: ftvacct_version
+        sql: ftvacct_version
+        type: string
+
+    -   name: ftvacct_data_origin
+        sql: ftvacct_data_origin
+        type: string
+
+    -   name: ftvacct_vpdi_code
+        sql: ftvacct_vpdi_code
+        type: string
+
+    measures: []
+
+    pre_aggregations: []

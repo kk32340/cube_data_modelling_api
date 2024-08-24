@@ -1,0 +1,135 @@
+cubes:
+    name: course_schedule_slot
+
+    sql_table: odsmgr.course_schedule_slot
+
+    joins: []
+
+    dimensions:
+    -   name: subject
+        sql: subject
+        type: string
+
+    -   name: schedule_workload4
+        sql: schedule_workload4
+        type: string
+
+    -   name: schedule_workload3
+        sql: schedule_workload3
+        type: string
+
+    -   name: schedule_workload2
+        sql: schedule_workload2
+        type: string
+
+    -   name: schedule_workload1
+        sql: schedule_workload1
+        type: string
+
+    -   name: schedule_rule
+        sql: schedule_rule
+        type: string
+
+    -   name: schedule_max_enrollment4
+        sql: schedule_max_enrollment4
+        type: string
+
+    -   name: schedule_max_enrollment3
+        sql: schedule_max_enrollment3
+        type: string
+
+    -   name: schedule_max_enrollment2
+        sql: schedule_max_enrollment2
+        type: string
+
+    -   name: schedule_max_enrollment1
+        sql: schedule_max_enrollment1
+        type: string
+
+    -   name: schedule_desc4
+        sql: schedule_desc4
+        type: string
+
+    -   name: schedule_desc3
+        sql: schedule_desc3
+        type: string
+
+    -   name: schedule_desc2
+        sql: schedule_desc2
+        type: string
+
+    -   name: schedule_desc1
+        sql: schedule_desc1
+        type: string
+
+    -   name: schedule_adj_workload4
+        sql: schedule_adj_workload4
+        type: string
+
+    -   name: schedule_adj_workload3
+        sql: schedule_adj_workload3
+        type: string
+
+    -   name: schedule_adj_workload2
+        sql: schedule_adj_workload2
+        type: string
+
+    -   name: schedule_adj_workload1
+        sql: schedule_adj_workload1
+        type: string
+
+    -   name: schedule4
+        sql: schedule4
+        type: string
+
+    -   name: schedule3
+        sql: schedule3
+        type: string
+
+    -   name: schedule2
+        sql: schedule2
+        type: string
+
+    -   name: schedule1
+        sql: schedule1
+        type: string
+
+    -   name: profile_code
+        sql: profile_code
+        type: string
+
+    -   name: process_group
+        sql: process_group
+        type: string
+
+    -   name: multi_source_desc
+        sql: multi_source_desc
+        type: string
+
+    -   name: multi_source
+        sql: multi_source
+        type: string
+
+    -   name: course_number
+        sql: course_number
+        type: string
+
+    -   name: administrative_group
+        sql: administrative_group
+        type: string
+
+    -   name: activity_date
+        sql: activity_date
+        type: time
+
+    -   name: academic_period
+        sql: academic_period
+        type: string
+
+    -   name: academic_period_desc
+        sql: academic_period_desc
+        type: string
+
+    measures: []
+
+    pre_aggregations: []

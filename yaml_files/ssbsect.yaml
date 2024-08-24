@@ -1,0 +1,317 @@
+cubes:
+    name: ssbsect
+
+    sql_table: saturn.ssbsect
+
+    joins:
+    -   name: schedule_offering_stusta
+        sql: '{CUBE}.ssbsect_term_code = schedule_offering_stusta.academic_period
+            AND {CUBE}.ssbsect_crn = schedule_offering_stusta.course_reference_number'
+        relationship: one_to_many
+
+    dimensions:
+    -   name: ssbsect_reas_score_ctof_date
+        sql: ssbsect_reas_score_ctof_date
+        type: time
+
+    -   name: ssbsect_reas_score_open_date
+        sql: ssbsect_reas_score_open_date
+        type: time
+
+    -   name: ssbsect_score_cutoff_date
+        sql: ssbsect_score_cutoff_date
+        type: time
+
+    -   name: ssbsect_score_open_date
+        sql: ssbsect_score_open_date
+        type: time
+
+    -   name: ssbsect_vpdi_code
+        sql: ssbsect_vpdi_code
+        type: string
+
+    -   name: ssbsect_version
+        sql: ssbsect_version
+        type: string
+
+    -   name: ssbsect_surrogate_id
+        sql: ssbsect_surrogate_id
+        type: string
+
+    -   name: ssbsect_keyword_index_id
+        sql: ssbsect_keyword_index_id
+        type: string
+
+    -   name: ssbsect_prereq_chk_method_cde
+        sql: ssbsect_prereq_chk_method_cde
+        type: string
+
+    -   name: ssbsect_reg_auth_active_ind
+        sql: ssbsect_reg_auth_active_ind
+        type: string
+
+    -   name: ssbsect_acyr_code
+        sql: ssbsect_acyr_code
+        type: string
+
+    -   name: ssbsect_wait_count
+        sql: ssbsect_wait_count
+        type: string
+
+    -   name: ssbsect_wait_capacity
+        sql: ssbsect_wait_capacity
+        type: string
+
+    -   name: ssbsect_wait_avail
+        sql: ssbsect_wait_avail
+        type: string
+
+    -   name: ssbsect_voice_avail
+        sql: ssbsect_voice_avail
+        type: string
+
+    -   name: ssbsect_user_id
+        sql: ssbsect_user_id
+        type: string
+
+    -   name: ssbsect_tuiw_ind
+        sql: ssbsect_tuiw_ind
+        type: string
+
+    -   name: ssbsect_tot_credit_hrs
+        sql: ssbsect_tot_credit_hrs
+        type: string
+
+    -   name: ssbsect_term_code
+        sql: ssbsect_term_code
+        type: string
+        primary_key: true
+
+    -   name: ssbsect_subset_of_comp
+        sql: ssbsect_subset_of_comp
+        type: string
+
+    -   name: ssbsect_subj_code
+        sql: ssbsect_subj_code
+        type: string
+
+    -   name: ssbsect_ssts_code
+        sql: ssbsect_ssts_code
+        type: string
+
+    -   name: ssbsect_sess_code
+        sql: ssbsect_sess_code
+        type: string
+
+    -   name: ssbsect_seq_numb
+        sql: ssbsect_seq_numb
+        type: string
+
+    -   name: ssbsect_seats_avail
+        sql: ssbsect_seats_avail
+        type: string
+
+    -   name: ssbsect_schd_code
+        sql: ssbsect_schd_code
+        type: string
+
+    -   name: ssbsect_sapr_code
+        sql: ssbsect_sapr_code
+        type: string
+
+    -   name: ssbsect_reserved_ind
+        sql: ssbsect_reserved_ind
+        type: string
+
+    -   name: ssbsect_reg_to_date
+        sql: ssbsect_reg_to_date
+        type: time
+
+    -   name: ssbsect_reg_oneup
+        sql: ssbsect_reg_oneup
+        type: string
+
+    -   name: ssbsect_reg_from_date
+        sql: ssbsect_reg_from_date
+        type: time
+
+    -   name: ssbsect_refund_cut_off_date
+        sql: ssbsect_refund_cut_off_date
+        type: time
+
+    -   name: ssbsect_ptrm_weeks
+        sql: ssbsect_ptrm_weeks
+        type: string
+
+    -   name: ssbsect_ptrm_start_date
+        sql: ssbsect_ptrm_start_date
+        type: time
+
+    -   name: ssbsect_ptrm_end_date
+        sql: ssbsect_ptrm_end_date
+        type: time
+
+    -   name: ssbsect_ptrm_code
+        sql: ssbsect_ptrm_code
+        type: string
+
+    -   name: ssbsect_proj_enrl
+        sql: ssbsect_proj_enrl
+        type: string
+
+    -   name: ssbsect_prnt_ind
+        sql: ssbsect_prnt_ind
+        type: string
+
+    -   name: ssbsect_prior_enrl
+        sql: ssbsect_prior_enrl
+        type: string
+
+    -   name: ssbsect_oth_hr
+        sql: ssbsect_oth_hr
+        type: string
+
+    -   name: ssbsect_number_of_units
+        sql: ssbsect_number_of_units
+        type: string
+
+    -   name: ssbsect_number_of_extensions
+        sql: ssbsect_number_of_extensions
+        type: string
+
+    -   name: ssbsect_max_enrl
+        sql: ssbsect_max_enrl
+        type: string
+
+    -   name: ssbsect_link_ident
+        sql: ssbsect_link_ident
+        type: string
+
+    -   name: ssbsect_lec_hr
+        sql: ssbsect_lec_hr
+        type: string
+
+    -   name: ssbsect_learner_regstart_tdate
+        sql: ssbsect_learner_regstart_tdate
+        type: time
+
+    -   name: ssbsect_learner_regstart_fdate
+        sql: ssbsect_learner_regstart_fdate
+        type: time
+
+    -   name: ssbsect_lab_hr
+        sql: ssbsect_lab_hr
+        type: string
+
+    -   name: ssbsect_intg_cde
+        sql: ssbsect_intg_cde
+        type: string
+
+    -   name: ssbsect_insm_code
+        sql: ssbsect_insm_code
+        type: string
+
+    -   name: ssbsect_gsch_name
+        sql: ssbsect_gsch_name
+        type: string
+
+    -   name: ssbsect_gradable_ind
+        sql: ssbsect_gradable_ind
+        type: string
+
+    -   name: ssbsect_gmod_code
+        sql: ssbsect_gmod_code
+        type: string
+
+    -   name: ssbsect_enrl_cut_off_date
+        sql: ssbsect_enrl_cut_off_date
+        type: time
+
+    -   name: ssbsect_enrl
+        sql: ssbsect_enrl
+        type: string
+
+    -   name: ssbsect_dunt_code
+        sql: ssbsect_dunt_code
+        type: string
+
+    -   name: ssbsect_drop_cut_off_date
+        sql: ssbsect_drop_cut_off_date
+        type: time
+
+    -   name: ssbsect_data_origin
+        sql: ssbsect_data_origin
+        type: string
+
+    -   name: ssbsect_crse_title
+        sql: ssbsect_crse_title
+        type: string
+
+    -   name: ssbsect_crse_numb
+        sql: ssbsect_crse_numb
+        type: string
+
+    -   name: ssbsect_crn
+        sql: ssbsect_crn
+        type: string
+        primary_key: true
+
+    -   name: ssbsect_credit_hrs
+        sql: ssbsect_credit_hrs
+        type: string
+
+    -   name: ssbsect_cont_hr
+        sql: ssbsect_cont_hr
+        type: string
+
+    -   name: ssbsect_census_enrl_date
+        sql: ssbsect_census_enrl_date
+        type: time
+
+    -   name: ssbsect_census_enrl
+        sql: ssbsect_census_enrl
+        type: string
+
+    -   name: ssbsect_census_2_enrl
+        sql: ssbsect_census_2_enrl
+        type: string
+
+    -   name: ssbsect_census_2_date
+        sql: ssbsect_census_2_date
+        type: time
+
+    -   name: ssbsect_capp_prereq_test_ind
+        sql: ssbsect_capp_prereq_test_ind
+        type: string
+
+    -   name: ssbsect_camp_code
+        sql: ssbsect_camp_code
+        type: string
+
+    -   name: ssbsect_bill_hrs
+        sql: ssbsect_bill_hrs
+        type: string
+
+    -   name: ssbsect_best_of_comp
+        sql: ssbsect_best_of_comp
+        type: string
+
+    -   name: ssbsect_activity_date
+        sql: ssbsect_activity_date
+        type: time
+
+    -   name: ssbsect_acct_code
+        sql: ssbsect_acct_code
+        type: string
+
+    -   name: ssbsect_accl_code
+        sql: ssbsect_accl_code
+        type: string
+
+    -   name: ssbsect_acad_cut_off_date
+        sql: ssbsect_acad_cut_off_date
+        type: time
+
+    measures: []
+
+    pre_aggregations: []

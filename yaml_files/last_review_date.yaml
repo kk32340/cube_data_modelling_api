@@ -1,0 +1,23 @@
+cubes:
+    name: last_review_date
+
+    sql_table: odsmgr_cust.last_review_date
+
+    joins: []
+
+    dimensions:
+    -   name: person_uid
+        sql: person_uid
+        type: string
+
+    -   name: last_review_date
+        sql: last_review_date
+        type: time
+
+    -   name: employee_class
+        sql: employee_class
+        type: string
+
+    measures: []
+
+    pre_aggregations: []

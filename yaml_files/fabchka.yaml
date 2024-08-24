@@ -1,0 +1,130 @@
+cubes:
+    name: fabchka
+
+    sql_table: fimsmgr.fabchka
+
+    joins:
+    -   name: fgbtrnh
+        sql: '{CUBE}.fabchka_item = fgbtrnh.fgbtrnh_item_num AND {CUBE}.fabchka_seq_num
+            = fgbtrnh.fgbtrnh_seq_num AND {CUBE}.fabchka_check_num = fgbtrnh.fgbtrnh_doc_code'
+        relationship: one_to_many
+
+    dimensions:
+    -   name: fabchka_tax_amt
+        sql: fabchka_tax_amt
+        type: string
+
+    -   name: fabchka_st_whold_amt
+        sql: fabchka_st_whold_amt
+        type: string
+
+    -   name: fabchka_seq_num
+        sql: fabchka_seq_num
+        type: string
+        primary_key: true
+
+    -   name: fabchka_period
+        sql: fabchka_period
+        type: string
+
+    -   name: fabchka_item
+        sql: fabchka_item
+        type: string
+        primary_key: true
+
+    -   name: fabchka_inv_code
+        sql: fabchka_inv_code
+        type: string
+
+    -   name: fabchka_gross_amt
+        sql: fabchka_gross_amt
+        type: string
+
+    -   name: fabchka_fsyr_code
+        sql: fabchka_fsyr_code
+        type: string
+
+    -   name: fabchka_fed_whold_amt
+        sql: fabchka_fed_whold_amt
+        type: string
+
+    -   name: fabchka_disc_amt
+        sql: fabchka_disc_amt
+        type: string
+
+    -   name: fabchka_disb_agent_ind
+        sql: fabchka_disb_agent_ind
+        type: string
+
+    -   name: fabchka_cr_memo_ind
+        sql: fabchka_cr_memo_ind
+        type: string
+
+    -   name: fabchka_convert_tax_amt
+        sql: fabchka_convert_tax_amt
+        type: string
+
+    -   name: fabchka_convert_disc_amt
+        sql: fabchka_convert_disc_amt
+        type: string
+
+    -   name: fabchka_convert_amt
+        sql: fabchka_convert_amt
+        type: string
+
+    -   name: fabchka_convert_addl_chrg_amt
+        sql: fabchka_convert_addl_chrg_amt
+        type: string
+
+    -   name: fabchka_check_type_ind
+        sql: fabchka_check_type_ind
+        type: string
+
+    -   name: fabchka_check_num
+        sql: fabchka_check_num
+        type: string
+        primary_key: true
+
+    -   name: fabchka_check_date
+        sql: fabchka_check_date
+        type: time
+
+    -   name: fabchka_cancel_date
+        sql: fabchka_cancel_date
+        type: time
+
+    -   name: fabchka_bank_code
+        sql: fabchka_bank_code
+        type: string
+
+    -   name: fabchka_addl_amt
+        sql: fabchka_addl_amt
+        type: string
+
+    -   name: fabchka_surrogate_id
+        sql: fabchka_surrogate_id
+        type: string
+
+    -   name: fabchka_version
+        sql: fabchka_version
+        type: string
+
+    -   name: fabchka_user_id
+        sql: fabchka_user_id
+        type: string
+
+    -   name: fabchka_data_origin
+        sql: fabchka_data_origin
+        type: string
+
+    -   name: fabchka_activity_date
+        sql: fabchka_activity_date
+        type: time
+
+    -   name: fabchka_vpdi_code
+        sql: fabchka_vpdi_code
+        type: string
+
+    measures: []
+
+    pre_aggregations: []

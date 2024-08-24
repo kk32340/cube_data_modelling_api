@@ -1,0 +1,59 @@
+cubes:
+    name: fpbrchd
+
+    sql_table: fimsmgr.fpbrchd
+
+    joins:
+    -   name: received_item_alias
+        sql: '{CUBE}.fpbrchd_code'
+        relationship: one_to_one
+
+    dimensions:
+    -   name: fpbrchd_user_id
+        sql: fpbrchd_user_id
+        type: string
+
+    -   name: fpbrchd_rcvd_date
+        sql: fpbrchd_rcvd_date
+        type: time
+
+    -   name: fpbrchd_rcmt_code
+        sql: fpbrchd_rcmt_code
+        type: string
+
+    -   name: fpbrchd_complete_ind
+        sql: fpbrchd_complete_ind
+        type: string
+
+    -   name: fpbrchd_code
+        sql: fpbrchd_code
+        type: string
+        primary_key: true
+
+    -   name: fpbrchd_carr_pidm
+        sql: fpbrchd_carr_pidm
+        type: string
+
+    -   name: fpbrchd_activity_date
+        sql: fpbrchd_activity_date
+        type: time
+
+    -   name: fpbrchd_surrogate_id
+        sql: fpbrchd_surrogate_id
+        type: string
+
+    -   name: fpbrchd_version
+        sql: fpbrchd_version
+        type: string
+
+    -   name: fpbrchd_data_origin
+        sql: fpbrchd_data_origin
+        type: string
+
+    -   name: fpbrchd_vpdi_code
+        sql: fpbrchd_vpdi_code
+        type: string
+
+    measures: []
+
+    pre_aggregations: []

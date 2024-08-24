@@ -1,0 +1,183 @@
+cubes:
+    name: cross_reference_slot
+
+    sql_table: odsmgr.cross_reference_slot
+
+    joins: []
+
+    dimensions:
+    -   name: related_uid5
+        sql: related_uid5
+        type: string
+
+    -   name: related_uid4
+        sql: related_uid4
+        type: string
+
+    -   name: related_uid3
+        sql: related_uid3
+        type: string
+
+    -   name: related_uid2
+        sql: related_uid2
+        type: string
+
+    -   name: related_uid1
+        sql: related_uid1
+        type: string
+
+    -   name: related_tax_id5
+        sql: related_tax_id5
+        type: string
+
+    -   name: related_tax_id4
+        sql: related_tax_id4
+        type: string
+
+    -   name: related_tax_id3
+        sql: related_tax_id3
+        type: string
+
+    -   name: related_tax_id2
+        sql: related_tax_id2
+        type: string
+
+    -   name: related_tax_id1
+        sql: related_tax_id1
+        type: string
+
+    -   name: related_reference_desc5
+        sql: related_reference_desc5
+        type: string
+
+    -   name: related_reference_desc4
+        sql: related_reference_desc4
+        type: string
+
+    -   name: related_reference_desc3
+        sql: related_reference_desc3
+        type: string
+
+    -   name: related_reference_desc2
+        sql: related_reference_desc2
+        type: string
+
+    -   name: related_reference_desc1
+        sql: related_reference_desc1
+        type: string
+
+    -   name: related_middle_initial5
+        sql: related_middle_initial5
+        type: string
+
+    -   name: related_middle_initial4
+        sql: related_middle_initial4
+        type: string
+
+    -   name: related_middle_initial3
+        sql: related_middle_initial3
+        type: string
+
+    -   name: related_middle_initial2
+        sql: related_middle_initial2
+        type: string
+
+    -   name: related_middle_initial1
+        sql: related_middle_initial1
+        type: string
+
+    -   name: related_last_name5
+        sql: related_last_name5
+        type: string
+
+    -   name: related_last_name4
+        sql: related_last_name4
+        type: string
+
+    -   name: related_last_name3
+        sql: related_last_name3
+        type: string
+
+    -   name: related_last_name2
+        sql: related_last_name2
+        type: string
+
+    -   name: related_last_name1
+        sql: related_last_name1
+        type: string
+
+    -   name: related_first_name5
+        sql: related_first_name5
+        type: string
+
+    -   name: related_first_name4
+        sql: related_first_name4
+        type: string
+
+    -   name: related_first_name3
+        sql: related_first_name3
+        type: string
+
+    -   name: related_first_name2
+        sql: related_first_name2
+        type: string
+
+    -   name: related_first_name1
+        sql: related_first_name1
+        type: string
+
+    -   name: related_cross_reference5
+        sql: related_cross_reference5
+        type: string
+
+    -   name: related_cross_reference4
+        sql: related_cross_reference4
+        type: string
+
+    -   name: related_cross_reference3
+        sql: related_cross_reference3
+        type: string
+
+    -   name: related_cross_reference2
+        sql: related_cross_reference2
+        type: string
+
+    -   name: related_cross_reference1
+        sql: related_cross_reference1
+        type: string
+
+    -   name: profile_code
+        sql: profile_code
+        type: string
+
+    -   name: process_group
+        sql: process_group
+        type: string
+
+    -   name: multi_source_desc
+        sql: multi_source_desc
+        type: string
+
+    -   name: multi_source
+        sql: multi_source
+        type: string
+
+    -   name: entity_uid
+        sql: entity_uid
+        type: string
+
+    -   name: cross_reference_rule
+        sql: cross_reference_rule
+        type: string
+
+    -   name: administrative_group
+        sql: administrative_group
+        type: string
+
+    -   name: activity_date
+        sql: activity_date
+        type: time
+
+    measures: []
+
+    pre_aggregations: []

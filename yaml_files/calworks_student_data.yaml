@@ -1,0 +1,128 @@
+cubes:
+    name: calworks_student_data
+
+    sql_table: odsmgr_cust.calworks_student_data
+
+    joins:
+    -   name: stvcoll
+        sql: '{CUBE}.dicd_code = stvcoll.stvcoll_dicd_code'
+        relationship: one_to_many
+
+    -   name: ir_student_term_shortcut1
+        sql: '{CUBE}.person_uid = calworks_student_data.academic_period'
+        relationship: one_to_one
+
+    dimensions:
+    -   name: user_id
+        sql: user_id
+        type: string
+
+    -   name: supply_ind
+        sql: supply_ind
+        type: string
+
+    -   name: tutor_ind
+        sql: tutor_ind
+        type: string
+
+    -   name: trans_asst_ind
+        sql: trans_asst_ind
+        type: string
+
+    -   name: total_dep
+        sql: total_dep
+        type: string
+
+    -   name: resume_ind
+        sql: resume_ind
+        type: string
+
+    -   name: sfst_code
+        sql: sfst_code
+        type: string
+
+    -   name: scst_code
+        sql: scst_code
+        type: string
+
+    -   name: person_uid
+        sql: person_uid
+        type: string
+        primary_key: true
+
+    -   name: oth_exp_ind
+        sql: oth_exp_ind
+        type: string
+
+    -   name: oths_code
+        sql: oths_code
+        type: string
+
+    -   name: placement_ind
+        sql: placement_ind
+        type: string
+
+    -   name: oncamp_chd_care_hr
+        sql: oncamp_chd_care_hr
+        type: string
+
+    -   name: offcamp_chd_care_hr
+        sql: offcamp_chd_care_hr
+        type: string
+
+    -   name: job_srch_ind
+        sql: job_srch_ind
+        type: string
+
+    -   name: job_skl_ind
+        sql: job_skl_ind
+        type: string
+
+    -   name: intv_skl_ind
+        sql: intv_skl_ind
+        type: string
+
+    -   name: dicd_code
+        sql: dicd_code
+        type: string
+        primary_key: true
+
+    -   name: dep_child_care
+        sql: dep_child_care
+        type: string
+
+    -   name: empl_oth_ind
+        sql: empl_oth_ind
+        type: string
+
+    -   name: data_origin
+        sql: data_origin
+        type: string
+
+    -   name: elst_code
+        sql: elst_code
+        type: string
+
+    -   name: book_ind
+        sql: book_ind
+        type: string
+
+    -   name: cmsv_code
+        sql: cmsv_code
+        type: string
+
+    -   name: activity_date
+        sql: activity_date
+        type: time
+
+    -   name: active_ind
+        sql: active_ind
+        type: string
+
+    -   name: academic_period
+        sql: academic_period
+        type: string
+
+    measures: []
+
+    pre_aggregations: []

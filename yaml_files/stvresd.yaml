@@ -1,0 +1,71 @@
+cubes:
+    name: stvresd
+
+    sql_table: saturn.stvresd
+
+    joins: []
+
+    dimensions:
+    -   name: stvresd_vpdi_code
+        sql: stvresd_vpdi_code
+        type: string
+
+    -   name: stvresd_data_origin
+        sql: stvresd_data_origin
+        type: string
+
+    -   name: stvresd_user_id
+        sql: stvresd_user_id
+        type: string
+
+    -   name: stvresd_version
+        sql: stvresd_version
+        type: string
+
+    -   name: stvresd_surrogate_id
+        sql: stvresd_surrogate_id
+        type: string
+
+    -   name: stvresd_foreign_ind
+        sql: stvresd_foreign_ind
+        type: string
+
+    -   name: stvresd_bogw_elig_ind
+        sql: stvresd_bogw_elig_ind
+        type: string
+
+    -   name: stvresd_disp_web_ind
+        sql: stvresd_disp_web_ind
+        type: string
+
+    -   name: stvresd_vr_msg_no
+        sql: stvresd_vr_msg_no
+        type: string
+
+    -   name: stvresd_system_req_ind
+        sql: stvresd_system_req_ind
+        type: string
+
+    -   name: stvresd_in_state_ind
+        sql: stvresd_in_state_ind
+        type: string
+
+    -   name: stvresd_edi_equiv
+        sql: stvresd_edi_equiv
+        type: string
+
+    -   name: stvresd_desc
+        sql: stvresd_desc
+        type: string
+
+    -   name: stvresd_code
+        sql: stvresd_code
+        type: string
+
+    -   name: stvresd_activity_date
+        sql: stvresd_activity_date
+        type: time
+
+    measures: []
+
+    pre_aggregations: []

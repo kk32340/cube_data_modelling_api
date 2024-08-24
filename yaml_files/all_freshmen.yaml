@@ -1,0 +1,59 @@
+cubes:
+    name: all_freshmen
+
+    sql_table: odsmgr_cust.all_freshmen
+
+    joins: []
+
+    dimensions:
+    -   name: credit_hours_next_term
+        sql: credit_hours_next_term
+        type: string
+
+    -   name: current_credit_hours
+        sql: current_credit_hours
+        type: string
+
+    -   name: earned_credit_hours
+        sql: earned_credit_hours
+        type: string
+
+    -   name: degree
+        sql: degree
+        type: string
+
+    -   name: course
+        sql: course
+        type: string
+
+    -   name: major
+        sql: major
+        type: string
+
+    -   name: home_college
+        sql: home_college
+        type: string
+
+    -   name: academic_period
+        sql: academic_period
+        type: string
+
+    -   name: name
+        sql: name
+        type: string
+
+    -   name: id
+        sql: id
+        type: string
+
+    -   name: person_uid
+        sql: person_uid
+        type: string
+
+    -   name: registration_status
+        sql: registration_status
+        type: string
+
+    measures: []
+
+    pre_aggregations: []

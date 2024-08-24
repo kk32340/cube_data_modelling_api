@@ -1,0 +1,119 @@
+cubes:
+    name: location_hierarchy
+
+    sql_table: odsmgr.location_hierarchy
+
+    joins: []
+
+    dimensions:
+    -   name: process_group
+        sql: process_group
+        type: string
+
+    -   name: location_status_5
+        sql: location_status_5
+        type: string
+
+    -   name: location_status_4
+        sql: location_status_4
+        type: string
+
+    -   name: location_status_3
+        sql: location_status_3
+        type: string
+
+    -   name: location_status_2
+        sql: location_status_2
+        type: string
+
+    -   name: location_status_1
+        sql: location_status_1
+        type: string
+
+    -   name: location_status
+        sql: location_status
+        type: string
+
+    -   name: location_level_5
+        sql: location_level_5
+        type: string
+
+    -   name: location_level_4
+        sql: location_level_4
+        type: string
+
+    -   name: location_level_3
+        sql: location_level_3
+        type: string
+
+    -   name: location_level_2
+        sql: location_level_2
+        type: string
+
+    -   name: location_level_1
+        sql: location_level_1
+        type: string
+
+    -   name: termination_date
+        sql: termination_date
+        type: time
+
+    -   name: location_level
+        sql: location_level
+        type: string
+
+    -   name: location_desc_5
+        sql: location_desc_5
+        type: string
+
+    -   name: location_desc_4
+        sql: location_desc_4
+        type: string
+
+    -   name: location_desc_3
+        sql: location_desc_3
+        type: string
+
+    -   name: location_desc_2
+        sql: location_desc_2
+        type: string
+
+    -   name: location_desc_1
+        sql: location_desc_1
+        type: string
+
+    -   name: location_desc
+        sql: location_desc
+        type: string
+
+    -   name: multi_source_desc
+        sql: multi_source_desc
+        type: string
+
+    -   name: multi_source
+        sql: multi_source
+        type: string
+
+    -   name: chart_of_accounts_desc
+        sql: chart_of_accounts_desc
+        type: string
+
+    -   name: administrative_group
+        sql: administrative_group
+        type: string
+
+    -   name: chart_of_accounts_status
+        sql: chart_of_accounts_status
+        type: string
+
+    -   name: location
+        sql: location
+        type: string
+
+    -   name: chart_of_accounts
+        sql: chart_of_accounts
+        type: string
+
+    measures: []
+
+    pre_aggregations: []

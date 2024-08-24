@@ -1,0 +1,79 @@
+cubes:
+    name: foraqrc
+
+    sql_table: fimsmgr.foraqrc
+
+    joins:
+    -   name: ftvappq
+        sql: '{CUBE}.foraqrc_queue_id = ftvappq.ftvappq_queue_id'
+        relationship: one_to_many
+
+    dimensions:
+    -   name: foraqrc_user_id
+        sql: foraqrc_user_id
+        type: string
+
+    -   name: foraqrc_rule_group
+        sql: foraqrc_rule_group
+        type: string
+
+    -   name: foraqrc_queue_id
+        sql: foraqrc_queue_id
+        type: string
+        primary_key: true
+
+    -   name: foraqrc_prog_code
+        sql: foraqrc_prog_code
+        type: string
+
+    -   name: foraqrc_orgn_code
+        sql: foraqrc_orgn_code
+        type: string
+
+    -   name: foraqrc_fund_code
+        sql: foraqrc_fund_code
+        type: string
+
+    -   name: foraqrc_ftyp_code
+        sql: foraqrc_ftyp_code
+        type: string
+
+    -   name: foraqrc_doc_type
+        sql: foraqrc_doc_type
+        type: string
+
+    -   name: foraqrc_coas_code
+        sql: foraqrc_coas_code
+        type: string
+
+    -   name: foraqrc_atyp_code
+        sql: foraqrc_atyp_code
+        type: string
+
+    -   name: foraqrc_activity_date
+        sql: foraqrc_activity_date
+        type: time
+
+    -   name: foraqrc_acct_code
+        sql: foraqrc_acct_code
+        type: string
+
+    -   name: foraqrc_surrogate_id
+        sql: foraqrc_surrogate_id
+        type: string
+
+    -   name: foraqrc_version
+        sql: foraqrc_version
+        type: string
+
+    -   name: foraqrc_data_origin
+        sql: foraqrc_data_origin
+        type: string
+
+    -   name: foraqrc_vpdi_code
+        sql: foraqrc_vpdi_code
+        type: string
+
+    measures: []
+
+    pre_aggregations: []

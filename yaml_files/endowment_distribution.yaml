@@ -1,0 +1,570 @@
+cubes:
+    name: endowment_distribution
+
+    sql_table: odsmgr.endowment_distribution
+
+    joins:
+    -   name: endowment_units
+        sql: '{CUBE}.endowment_pool = endowment_units.endowment_pool AND {CUBE}.fund
+            = endowment_units.fund AND {CUBE}.chart_of_accounts = endowment_units.chart_of_accounts'
+        relationship: one_to_many
+
+    dimensions:
+    -   name: variance_spend_freq
+        sql: variance_spend_freq
+        type: string
+
+    -   name: variance_spend_dr_chart_pool
+        sql: variance_spend_dr_chart_pool
+        type: string
+
+    -   name: variance_spend_dr_chart_desc
+        sql: variance_spend_dr_chart_desc
+        type: string
+
+    -   name: variance_spend_acct_index_desc
+        sql: variance_spend_acct_index_desc
+        type: string
+
+    -   name: variance_spend_acct_index
+        sql: variance_spend_acct_index
+        type: string
+
+    -   name: variance_dr_prog_pool_desc
+        sql: variance_dr_prog_pool_desc
+        type: string
+
+    -   name: variance_dr_prog_pool
+        sql: variance_dr_prog_pool
+        type: string
+
+    -   name: variance_dr_orgn_pool_desc
+        sql: variance_dr_orgn_pool_desc
+        type: string
+
+    -   name: variance_dr_orgn_pool
+        sql: variance_dr_orgn_pool
+        type: string
+
+    -   name: variance_dr_locn_pool_desc
+        sql: variance_dr_locn_pool_desc
+        type: string
+
+    -   name: variance_dr_locn_pool
+        sql: variance_dr_locn_pool
+        type: string
+
+    -   name: variance_dr_fund_pool_desc
+        sql: variance_dr_fund_pool_desc
+        type: string
+
+    -   name: variance_dr_fund_pool
+        sql: variance_dr_fund_pool
+        type: string
+
+    -   name: variance_dr_actv_pool_desc
+        sql: variance_dr_actv_pool_desc
+        type: string
+
+    -   name: variance_dr_actv_pool
+        sql: variance_dr_actv_pool
+        type: string
+
+    -   name: variance_dr_acct_pool_desc
+        sql: variance_dr_acct_pool_desc
+        type: string
+
+    -   name: variance_dr_acct_pool
+        sql: variance_dr_acct_pool
+        type: string
+
+    -   name: variance_cr_acct_pool_desc
+        sql: variance_cr_acct_pool_desc
+        type: string
+
+    -   name: variance_cr_acct_pool
+        sql: variance_cr_acct_pool
+        type: string
+
+    -   name: unreal_gain_loss_rate
+        sql: unreal_gain_loss_rate
+        type: string
+
+    -   name: unreal_gain_loss_index_desc
+        sql: unreal_gain_loss_index_desc
+        type: string
+
+    -   name: unreal_gain_loss_index
+        sql: unreal_gain_loss_index
+        type: string
+
+    -   name: unreal_gain_loss_end_date
+        sql: unreal_gain_loss_end_date
+        type: time
+
+    -   name: unreal_gain_loss_dr_prog_pool
+        sql: unreal_gain_loss_dr_prog_pool
+        type: string
+
+    -   name: unreal_gain_loss_dr_prog_desc
+        sql: unreal_gain_loss_dr_prog_desc
+        type: string
+
+    -   name: unreal_gain_loss_dr_orgn_pool
+        sql: unreal_gain_loss_dr_orgn_pool
+        type: string
+
+    -   name: unreal_gain_loss_dr_orgn_desc
+        sql: unreal_gain_loss_dr_orgn_desc
+        type: string
+
+    -   name: unreal_gain_loss_dr_locn_pool
+        sql: unreal_gain_loss_dr_locn_pool
+        type: string
+
+    -   name: unreal_gain_loss_dr_locn_desc
+        sql: unreal_gain_loss_dr_locn_desc
+        type: string
+
+    -   name: unreal_gain_loss_dr_fund_pool
+        sql: unreal_gain_loss_dr_fund_pool
+        type: string
+
+    -   name: unreal_gain_loss_dr_fund_desc
+        sql: unreal_gain_loss_dr_fund_desc
+        type: string
+
+    -   name: unreal_gain_loss_dr_chart_pool
+        sql: unreal_gain_loss_dr_chart_pool
+        type: string
+
+    -   name: unreal_gain_loss_dr_chart_desc
+        sql: unreal_gain_loss_dr_chart_desc
+        type: string
+
+    -   name: unreal_gain_loss_dr_actv_pool
+        sql: unreal_gain_loss_dr_actv_pool
+        type: string
+
+    -   name: unreal_gain_loss_dr_actv_desc
+        sql: unreal_gain_loss_dr_actv_desc
+        type: string
+
+    -   name: unreal_gain_loss_dr_acct_pool
+        sql: unreal_gain_loss_dr_acct_pool
+        type: string
+
+    -   name: unreal_gain_loss_dr_acct_desc
+        sql: unreal_gain_loss_dr_acct_desc
+        type: string
+
+    -   name: unreal_gain_loss_cr_acct_pool
+        sql: unreal_gain_loss_cr_acct_pool
+        type: string
+
+    -   name: unreal_gain_loss_cr_acct_desc
+        sql: unreal_gain_loss_cr_acct_desc
+        type: string
+
+    -   name: unreal_gain_loss_amount
+        sql: unreal_gain_loss_amount
+        type: string
+
+    -   name: unit_spend_rate
+        sql: unit_spend_rate
+        type: string
+
+    -   name: account_type_status
+        sql: account_type_status
+        type: string
+
+    -   name: unitization_frequency
+        sql: unitization_frequency
+        type: string
+
+    -   name: submission_number
+        sql: submission_number
+        type: string
+
+    -   name: restriction_type_desc
+        sql: restriction_type_desc
+        type: string
+
+    -   name: restriction_type
+        sql: restriction_type
+        type: string
+
+    -   name: spend_variable_rate
+        sql: spend_variable_rate
+        type: string
+
+    -   name: spend_variable_end_date
+        sql: spend_variable_end_date
+        type: time
+
+    -   name: spend_variable_amount
+        sql: spend_variable_amount
+        type: string
+
+    -   name: special_instructions
+        sql: special_instructions
+        type: string
+
+    -   name: real_gain_loss_rate
+        sql: real_gain_loss_rate
+        type: string
+
+    -   name: real_gain_loss_end_date
+        sql: real_gain_loss_end_date
+        type: time
+
+    -   name: real_gain_loss_amount
+        sql: real_gain_loss_amount
+        type: string
+
+    -   name: process_group
+        sql: process_group
+        type: string
+
+    -   name: pool_termination_date
+        sql: pool_termination_date
+        type: time
+
+    -   name: pool_status_desc
+        sql: pool_status_desc
+        type: string
+
+    -   name: pool_status
+        sql: pool_status
+        type: string
+
+    -   name: multi_source_desc
+        sql: multi_source_desc
+        type: string
+
+    -   name: multi_source
+        sql: multi_source
+        type: string
+
+    -   name: income_spend_end_date
+        sql: income_spend_end_date
+        type: time
+
+    -   name: fund_status
+        sql: fund_status
+        type: string
+
+    -   name: income_spend_amount
+        sql: income_spend_amount
+        type: string
+
+    -   name: income_dr_prog_pool_desc
+        sql: income_dr_prog_pool_desc
+        type: string
+
+    -   name: income_dr_prog_pool
+        sql: income_dr_prog_pool
+        type: string
+
+    -   name: income_dr_orgn_pool_desc
+        sql: income_dr_orgn_pool_desc
+        type: string
+
+    -   name: income_dr_orgn_pool
+        sql: income_dr_orgn_pool
+        type: string
+
+    -   name: income_dr_locn_pool_desc
+        sql: income_dr_locn_pool_desc
+        type: string
+
+    -   name: income_dr_locn_pool
+        sql: income_dr_locn_pool
+        type: string
+
+    -   name: income_dr_fund_pool_desc
+        sql: income_dr_fund_pool_desc
+        type: string
+
+    -   name: income_dr_fund_pool
+        sql: income_dr_fund_pool
+        type: string
+
+    -   name: income_dr_chart_pool_desc
+        sql: income_dr_chart_pool_desc
+        type: string
+
+    -   name: income_dr_chart_pool
+        sql: income_dr_chart_pool
+        type: string
+
+    -   name: income_dr_actv_pool_desc
+        sql: income_dr_actv_pool_desc
+        type: string
+
+    -   name: income_dr_actv_pool
+        sql: income_dr_actv_pool
+        type: string
+
+    -   name: income_dr_acct_pool_desc
+        sql: income_dr_acct_pool_desc
+        type: string
+
+    -   name: income_dr_acct_pool
+        sql: income_dr_acct_pool
+        type: string
+
+    -   name: fund_desc
+        sql: fund_desc
+        type: string
+
+    -   name: income_dr_account_index_desc
+        sql: income_dr_account_index_desc
+        type: string
+
+    -   name: income_dr_account_index
+        sql: income_dr_account_index
+        type: string
+
+    -   name: income_distribution_freq
+        sql: income_distribution_freq
+        type: string
+
+    -   name: income_cr_program_desc
+        sql: income_cr_program_desc
+        type: string
+
+    -   name: income_cr_program
+        sql: income_cr_program
+        type: string
+
+    -   name: income_cr_organization_desc
+        sql: income_cr_organization_desc
+        type: string
+
+    -   name: income_cr_organization
+        sql: income_cr_organization
+        type: string
+
+    -   name: income_cr_location_desc
+        sql: income_cr_location_desc
+        type: string
+
+    -   name: income_cr_location
+        sql: income_cr_location
+        type: string
+
+    -   name: income_cr_fund_desc
+        sql: income_cr_fund_desc
+        type: string
+
+    -   name: income_cr_chart_status
+        sql: income_cr_chart_status
+        type: string
+
+    -   name: income_cr_fund
+        sql: income_cr_fund
+        type: string
+
+    -   name: income_cr_chart_pool_desc
+        sql: income_cr_chart_pool_desc
+        type: string
+
+    -   name: income_cr_chart_pool
+        sql: income_cr_chart_pool
+        type: string
+
+    -   name: income_cr_chart_desc
+        sql: income_cr_chart_desc
+        type: string
+
+    -   name: income_cr_chart
+        sql: income_cr_chart
+        type: string
+
+    -   name: income_cr_activity_desc
+        sql: income_cr_activity_desc
+        type: string
+
+    -   name: income_cr_activity
+        sql: income_cr_activity
+        type: string
+
+    -   name: income_cr_account_pool_desc
+        sql: income_cr_account_pool_desc
+        type: string
+
+    -   name: income_cr_account_pool
+        sql: income_cr_account_pool
+        type: string
+
+    -   name: income_cr_account_desc
+        sql: income_cr_account_desc
+        type: string
+
+    -   name: income_cr_account
+        sql: income_cr_account
+        type: string
+
+    -   name: income_classification_desc
+        sql: income_classification_desc
+        type: string
+
+    -   name: income_classification
+        sql: income_classification
+        type: string
+
+    -   name: fund
+        sql: fund
+        type: string
+        primary_key: true
+
+    -   name: gain_loss_dr_prog_pool_desc
+        sql: gain_loss_dr_prog_pool_desc
+        type: string
+
+    -   name: gain_loss_dr_prog_pool
+        sql: gain_loss_dr_prog_pool
+        type: string
+
+    -   name: gain_loss_dr_orgn_pool_desc
+        sql: gain_loss_dr_orgn_pool_desc
+        type: string
+
+    -   name: gain_loss_dr_orgn_pool
+        sql: gain_loss_dr_orgn_pool
+        type: string
+
+    -   name: gain_loss_dr_locn_pool_desc
+        sql: gain_loss_dr_locn_pool_desc
+        type: string
+
+    -   name: gain_loss_dr_locn_pool
+        sql: gain_loss_dr_locn_pool
+        type: string
+
+    -   name: gain_loss_dr_fund_pool_desc
+        sql: gain_loss_dr_fund_pool_desc
+        type: string
+
+    -   name: gain_loss_dr_fund_pool
+        sql: gain_loss_dr_fund_pool
+        type: string
+
+    -   name: gain_loss_dr_chart_pool_desc
+        sql: gain_loss_dr_chart_pool_desc
+        type: string
+
+    -   name: gain_loss_dr_chart_pool
+        sql: gain_loss_dr_chart_pool
+        type: string
+
+    -   name: gain_loss_dr_actv_pool_desc
+        sql: gain_loss_dr_actv_pool_desc
+        type: string
+
+    -   name: gain_loss_dr_actv_pool
+        sql: gain_loss_dr_actv_pool
+        type: string
+
+    -   name: gain_loss_dr_acct_pool_desc
+        sql: gain_loss_dr_acct_pool_desc
+        type: string
+
+    -   name: gain_loss_dr_acct_pool
+        sql: gain_loss_dr_acct_pool
+        type: string
+
+    -   name: gain_loss_distribution_freq
+        sql: gain_loss_distribution_freq
+        type: string
+
+    -   name: gain_loss_cr_acct_pool_desc
+        sql: gain_loss_cr_acct_pool_desc
+        type: string
+
+    -   name: gain_loss_cr_acct_pool
+        sql: gain_loss_cr_acct_pool
+        type: string
+
+    -   name: gain_loss_account_index_desc
+        sql: gain_loss_account_index_desc
+        type: string
+
+    -   name: gain_loss_account_index
+        sql: gain_loss_account_index
+        type: string
+
+    -   name: document_number
+        sql: document_number
+        type: string
+
+    -   name: distribution_unrealized_freq
+        sql: distribution_unrealized_freq
+        type: string
+
+    -   name: endowment_type_desc
+        sql: endowment_type_desc
+        type: string
+
+    -   name: endowment_type
+        sql: endowment_type
+        type: string
+
+    -   name: income_cr_fund_status
+        sql: income_cr_fund_status
+        type: string
+
+    -   name: endowment_termination_date
+        sql: endowment_termination_date
+        type: time
+
+    -   name: endowment_pool_desc
+        sql: endowment_pool_desc
+        type: string
+
+    -   name: chart_of_accounts_status
+        sql: chart_of_accounts_status
+        type: string
+
+    -   name: endowment_pool
+        sql: endowment_pool
+        type: string
+        primary_key: true
+
+    -   name: endowment_fund_sd
+        sql: endowment_fund_sd
+        type: string
+
+    -   name: endowment_fund_ld
+        sql: endowment_fund_ld
+        type: string
+
+    -   name: endowment_established_date
+        sql: endowment_established_date
+        type: time
+
+    -   name: chart_of_accounts_desc
+        sql: chart_of_accounts_desc
+        type: string
+
+    -   name: chart_of_accounts
+        sql: chart_of_accounts
+        type: string
+        primary_key: true
+
+    -   name: administrative_group
+        sql: administrative_group
+        type: string
+
+    -   name: account_type_desc
+        sql: account_type_desc
+        type: string
+
+    -   name: account_type
+        sql: account_type
+        type: string
+
+    measures: []
+
+    pre_aggregations: []

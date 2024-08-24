@@ -1,0 +1,105 @@
+cubes:
+    name: swrtmff_indicators_current
+
+    sql_table: odsmgr_cust.swrtmff_indicators_current
+
+    joins:
+    -   name: swrtmff_demo_current
+        sql: '{CUBE}.academic_period = swrtmff_demo_current.academic_period AND {CUBE}.person_uid
+            = swrtmff_demo_current.person_uid'
+        relationship: one_to_many
+
+    dimensions:
+    -   name: term_militarty_collected
+        sql: term_militarty_collected
+        type: string
+
+    -   name: tech_prep_ind
+        sql: tech_prep_ind
+        type: string
+
+    -   name: vereran_ind
+        sql: vereran_ind
+        type: string
+
+    -   name: resident_ind
+        sql: resident_ind
+        type: string
+
+    -   name: sports_ind
+        sql: sports_ind
+        type: string
+
+    -   name: single_parent
+        sql: single_parent
+        type: string
+
+    -   name: person_uid
+        sql: person_uid
+        type: string
+        primary_key: true
+
+    -   name: probation_ind
+        sql: probation_ind
+        type: string
+
+    -   name: non_resident_ind
+        sql: non_resident_ind
+        type: string
+
+    -   name: military_spouse
+        sql: military_spouse
+        type: string
+
+    -   name: military_self
+        sql: military_self
+        type: string
+
+    -   name: military_mother
+        sql: military_mother
+        type: string
+
+    -   name: military_guardian
+        sql: military_guardian
+        type: string
+
+    -   name: military_father
+        sql: military_father
+        type: string
+
+    -   name: foreign_ind
+        sql: foreign_ind
+        type: string
+
+    -   name: displaced_homemaker
+        sql: displaced_homemaker
+        type: string
+
+    -   name: eops_ind
+        sql: eops_ind
+        type: string
+
+    -   name: dsps_ind
+        sql: dsps_ind
+        type: string
+
+    -   name: care_ind
+        sql: care_ind
+        type: string
+
+    -   name: cal_works_ind
+        sql: cal_works_ind
+        type: string
+
+    -   name: active_military_ind
+        sql: active_military_ind
+        type: string
+
+    -   name: academic_period
+        sql: academic_period
+        type: string
+        primary_key: true
+
+    measures: []
+
+    pre_aggregations: []

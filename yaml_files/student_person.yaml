@@ -1,0 +1,155 @@
+cubes:
+    name: student_person
+
+    sql_table: odsmgr_cust.student_person
+
+    joins:
+    -   name: receivable_account_detail
+        sql: '{CUBE}.person_uid = receivable_account_detail.account_uid'
+        relationship: one_to_many
+
+    -   name: student_term
+        sql: '{CUBE}.person_uid = student_term.person_uid'
+        relationship: one_to_many
+
+    -   name: swbsprt
+        sql: '{CUBE}.person_uid = swbsprt.swbsprt_pidm'
+        relationship: one_to_many
+
+    dimensions:
+    -   name: street2
+        sql: street2
+        type: string
+
+    -   name: street1
+        sql: street1
+        type: string
+
+    -   name: state
+        sql: state
+        type: string
+
+    -   name: person_uid
+        sql: person_uid
+        type: string
+        primary_key: true
+
+    -   name: primary_ethnicity_desc
+        sql: primary_ethnicity_desc
+        type: string
+
+    -   name: primary_ethnicity
+        sql: primary_ethnicity
+        type: string
+
+    -   name: primary_disability_desc
+        sql: primary_disability_desc
+        type: string
+
+    -   name: primary_disability
+        sql: primary_disability
+        type: string
+
+    -   name: postal_code
+        sql: postal_code
+        type: string
+
+    -   name: phone_number
+        sql: phone_number
+        type: string
+
+    -   name: native_language_desc
+        sql: native_language_desc
+        type: string
+
+    -   name: native_language
+        sql: native_language
+        type: string
+
+    -   name: last_name
+        sql: last_name
+        type: string
+
+    -   name: middle_name
+        sql: middle_name
+        type: string
+
+    -   name: method_admission_apply
+        sql: method_admission_apply
+        type: string
+
+    -   name: id
+        sql: id
+        type: string
+
+    -   name: high_school_grad_date
+        sql: high_school_grad_date
+        type: time
+
+    -   name: high_school_code_desc
+        sql: high_school_code_desc
+        type: string
+
+    -   name: high_school_code
+        sql: high_school_code
+        type: string
+
+    -   name: first_name
+        sql: first_name
+        type: string
+
+    -   name: gender_desc
+        sql: gender_desc
+        type: string
+
+    -   name: gender
+        sql: gender
+        type: string
+
+    -   name: email_address
+        sql: email_address
+        type: string
+
+    -   name: current_age
+        sql: current_age
+        type: string
+
+    -   name: county_desc
+        sql: county_desc
+        type: string
+
+    -   name: county
+        sql: county
+        type: string
+
+    -   name: birth_date
+        sql: birth_date
+        type: time
+
+    -   name: confidentiality_ind
+        sql: confidentiality_ind
+        type: string
+
+    -   name: city
+        sql: city
+        type: string
+
+    -   name: citizen_type
+        sql: citizen_type
+        type: string
+
+    -   name: citizenship_type_desc
+        sql: citizenship_type_desc
+        type: string
+
+    -   name: citizenship_ind
+        sql: citizenship_ind
+        type: string
+
+    -   name: admission_application_date
+        sql: admission_application_date
+        type: string
+
+    measures: []
+
+    pre_aggregations: []

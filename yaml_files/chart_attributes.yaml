@@ -1,0 +1,71 @@
+cubes:
+    name: chart_attributes
+
+    sql_table: odsmgr.chart_attributes
+
+    joins: []
+
+    dimensions:
+    -   name: process_group
+        sql: process_group
+        type: string
+
+    -   name: multi_source_desc
+        sql: multi_source_desc
+        type: string
+
+    -   name: multi_source
+        sql: multi_source
+        type: string
+
+    -   name: chart_of_accounts_desc
+        sql: chart_of_accounts_desc
+        type: string
+
+    -   name: attribute_value_end_date
+        sql: attribute_value_end_date
+        type: time
+
+    -   name: attribute_value_desc
+        sql: attribute_value_desc
+        type: string
+
+    -   name: attribute_value_begin_date
+        sql: attribute_value_begin_date
+        type: time
+
+    -   name: attribute_value
+        sql: attribute_value
+        type: string
+
+    -   name: attribute_type_status_desc
+        sql: attribute_type_status_desc
+        type: string
+
+    -   name: attribute_type_status
+        sql: attribute_type_status
+        type: string
+
+    -   name: attribute_type_desc
+        sql: attribute_type_desc
+        type: string
+
+    -   name: chart_of_accounts_status
+        sql: chart_of_accounts_status
+        type: string
+
+    -   name: attribute_type
+        sql: attribute_type
+        type: string
+
+    -   name: administrative_group
+        sql: administrative_group
+        type: string
+
+    -   name: chart_of_accounts
+        sql: chart_of_accounts
+        type: string
+
+    measures: []
+
+    pre_aggregations: []

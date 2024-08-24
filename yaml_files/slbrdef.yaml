@@ -1,0 +1,150 @@
+cubes:
+    name: slbrdef
+
+    sql_table: saturn.slbrdef
+
+    joins:
+    -   name: cust_meeting_time_event
+        sql: '{CUBE}.slbrdef_bldg_code = cust_meeting_time_event.building AND {CUBE}.slbrdef_room_number
+            = cust_meeting_time_event.room'
+        relationship: zero_to_many
+
+    -   name: meeting_time
+        sql: '{CUBE}.slbrdef_bldg_code = meeting_time.building AND {CUBE}.slbrdef_room_number
+            = meeting_time.room'
+        relationship: zero_to_many
+
+    dimensions:
+    -   name: slbrdef_vpdi_code
+        sql: slbrdef_vpdi_code
+        type: string
+
+    -   name: slbrdef_data_origin
+        sql: slbrdef_data_origin
+        type: string
+
+    -   name: slbrdef_user_id
+        sql: slbrdef_user_id
+        type: string
+
+    -   name: slbrdef_version
+        sql: slbrdef_version
+        type: string
+
+    -   name: slbrdef_surrogate_id
+        sql: slbrdef_surrogate_id
+        type: string
+
+    -   name: slbrdef_ctry_code_phone
+        sql: slbrdef_ctry_code_phone
+        type: string
+
+    -   name: slbrdef_width
+        sql: slbrdef_width
+        type: string
+
+    -   name: slbrdef_utility_rate_period
+        sql: slbrdef_utility_rate_period
+        type: string
+
+    -   name: slbrdef_utility_rate
+        sql: slbrdef_utility_rate
+        type: string
+
+    -   name: slbrdef_term_code_eff
+        sql: slbrdef_term_code_eff
+        type: string
+
+    -   name: slbrdef_sex
+        sql: slbrdef_sex
+        type: string
+
+    -   name: slbrdef_rrcd_code
+        sql: slbrdef_rrcd_code
+        type: string
+
+    -   name: slbrdef_room_type
+        sql: slbrdef_room_type
+        type: string
+
+    -   name: slbrdef_room_number
+        sql: slbrdef_room_number
+        type: string
+        primary_key: true
+
+    -   name: slbrdef_rmst_code
+        sql: slbrdef_rmst_code
+        type: string
+
+    -   name: slbrdef_priority
+        sql: slbrdef_priority
+        type: string
+
+    -   name: slbrdef_prcd_code
+        sql: slbrdef_prcd_code
+        type: string
+
+    -   name: slbrdef_phone_number
+        sql: slbrdef_phone_number
+        type: string
+
+    -   name: slbrdef_phone_extension
+        sql: slbrdef_phone_extension
+        type: string
+
+    -   name: slbrdef_phone_area
+        sql: slbrdef_phone_area
+        type: string
+
+    -   name: slbrdef_pars_code
+        sql: slbrdef_pars_code
+        type: string
+
+    -   name: slbrdef_maximum_capacity
+        sql: slbrdef_maximum_capacity
+        type: string
+
+    -   name: slbrdef_length
+        sql: slbrdef_length
+        type: string
+
+    -   name: slbrdef_key_number
+        sql: slbrdef_key_number
+        type: string
+
+    -   name: slbrdef_desc
+        sql: slbrdef_desc
+        type: string
+
+    -   name: slbrdef_dept_code
+        sql: slbrdef_dept_code
+        type: string
+
+    -   name: slbrdef_coll_code
+        sql: slbrdef_coll_code
+        type: string
+
+    -   name: slbrdef_capacity
+        sql: slbrdef_capacity
+        type: string
+
+    -   name: slbrdef_bldg_code
+        sql: slbrdef_bldg_code
+        type: string
+        primary_key: true
+
+    -   name: slbrdef_bcat_code
+        sql: slbrdef_bcat_code
+        type: string
+
+    -   name: slbrdef_area
+        sql: slbrdef_area
+        type: string
+
+    -   name: slbrdef_activity_date
+        sql: slbrdef_activity_date
+        type: time
+
+    measures: []
+
+    pre_aggregations: []

@@ -1,0 +1,87 @@
+cubes:
+    name: swreops_view
+
+    sql_table: odsmgr_cust.swreops_view
+
+    joins:
+    -   name: ir_student_term_shortcut1
+        sql: '{CUBE}.term_code = swreops_view.pidm'
+        relationship: one_to_one
+
+    dimensions:
+    -   name: activity_date
+        sql: activity_date
+        type: time
+
+    -   name: wthd_desc
+        sql: wthd_desc
+        type: string
+
+    -   name: wthd_code
+        sql: wthd_code
+        type: string
+
+    -   name: term_desc
+        sql: term_desc
+        type: string
+
+    -   name: term_code
+        sql: term_code
+        type: string
+        primary_key: true
+
+    -   name: trac_code
+        sql: trac_code
+        type: string
+
+    -   name: planned_credits
+        sql: planned_credits
+        type: string
+
+    -   name: pidm
+        sql: pidm
+        type: string
+
+    -   name: married
+        sql: married
+        type: string
+
+    -   name: marriage_desc
+        sql: marriage_desc
+        type: string
+
+    -   name: name
+        sql: name
+        type: string
+
+    -   name: id
+        sql: id
+        type: string
+
+    -   name: eops_desc
+        sql: eops_desc
+        type: string
+
+    -   name: eops_code_1char
+        sql: eops_code_1char
+        type: string
+
+    -   name: eops_code
+        sql: eops_code
+        type: string
+
+    -   name: elig_afdc_desc
+        sql: elig_afdc_desc
+        type: string
+
+    -   name: elig_afdc
+        sql: elig_afdc
+        type: string
+
+    -   name: accept_term
+        sql: accept_term
+        type: string
+
+    measures: []
+
+    pre_aggregations: []

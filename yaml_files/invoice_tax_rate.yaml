@@ -1,0 +1,88 @@
+cubes:
+    name: invoice_tax_rate
+
+    sql_table: odsmgr.invoice_tax_rate
+
+    joins:
+    -   name: invoice_item
+        sql: '{CUBE}.item = invoice_item.item AND {CUBE}.invoice = invoice_item.invoice'
+        relationship: one_to_many
+
+    dimensions:
+    -   name: tax_rate_desc
+        sql: tax_rate_desc
+        type: string
+
+    -   name: tax_rate
+        sql: tax_rate
+        type: string
+
+    -   name: tax_amount
+        sql: tax_amount
+        type: string
+
+    -   name: taxable_amount
+        sql: taxable_amount
+        type: string
+
+    -   name: rule_class_desc
+        sql: rule_class_desc
+        type: string
+
+    -   name: rule_class
+        sql: rule_class
+        type: string
+
+    -   name: rebate_percent
+        sql: rebate_percent
+        type: string
+
+    -   name: rebate_amount
+        sql: rebate_amount
+        type: string
+
+    -   name: sequence_number
+        sql: sequence_number
+        type: string
+
+    -   name: process_group
+        sql: process_group
+        type: string
+
+    -   name: pay_tax_to
+        sql: pay_tax_to
+        type: string
+
+    -   name: multi_source_desc
+        sql: multi_source_desc
+        type: string
+
+    -   name: multi_source
+        sql: multi_source
+        type: string
+
+    -   name: item
+        sql: item
+        type: string
+        primary_key: true
+
+    -   name: invoice
+        sql: invoice
+        type: string
+        primary_key: true
+
+    -   name: converted_tax_amount
+        sql: converted_tax_amount
+        type: string
+
+    -   name: converted_rebate_amount
+        sql: converted_rebate_amount
+        type: string
+
+    -   name: administrative_group
+        sql: administrative_group
+        type: string
+
+    measures: []
+
+    pre_aggregations: []

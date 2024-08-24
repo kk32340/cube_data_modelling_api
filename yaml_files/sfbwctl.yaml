@@ -1,0 +1,53 @@
+cubes:
+    name: sfbwctl
+
+    sql_table: saturn.sfbwctl
+
+    joins:
+    -   name: sfbrgrp
+        sql: '{CUBE}.sfbwctl_term_code = sfbrgrp.sfbrgrp_term_code AND {CUBE}.sfbwctl_rgrp_code
+            = sfbrgrp.sfbrgrp_rgrp_code'
+        relationship: one_to_many
+
+    dimensions:
+    -   name: sfbwctl_vpdi_code
+        sql: sfbwctl_vpdi_code
+        type: string
+
+    -   name: sfbwctl_data_origin
+        sql: sfbwctl_data_origin
+        type: string
+
+    -   name: sfbwctl_user_id
+        sql: sfbwctl_user_id
+        type: string
+
+    -   name: sfbwctl_version
+        sql: sfbwctl_version
+        type: string
+
+    -   name: sfbwctl_surrogate_id
+        sql: sfbwctl_surrogate_id
+        type: string
+
+    -   name: sfbwctl_term_code
+        sql: sfbwctl_term_code
+        type: string
+        primary_key: true
+
+    -   name: sfbwctl_rgrp_code
+        sql: sfbwctl_rgrp_code
+        type: string
+        primary_key: true
+
+    -   name: sfbwctl_priority
+        sql: sfbwctl_priority
+        type: string
+
+    -   name: sfbwctl_activity_date
+        sql: sfbwctl_activity_date
+        type: time
+
+    measures: []
+
+    pre_aggregations: []

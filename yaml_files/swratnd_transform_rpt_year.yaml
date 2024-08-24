@@ -1,0 +1,63 @@
+cubes:
+    name: swratnd_transform_rpt_year
+
+    sql_table: odsmgr_cust.swratnd_transform_rpt_year
+
+    joins:
+    -   name: mft_operating_ledger
+        sql: '{CUBE}.reporting_year = mft_operating_ledger.fiscal_year'
+        relationship: one_to_one
+
+    dimensions:
+    -   name: taxonomy_of_program_desc
+        sql: taxonomy_of_program_desc
+        type: string
+
+    -   name: taxonomy_of_program
+        sql: taxonomy_of_program
+        type: string
+
+    -   name: swratnd_camp_code
+        sql: swratnd_camp_code
+        type: string
+
+    -   name: subject
+        sql: subject
+        type: string
+
+    -   name: reporting_year
+        sql: reporting_year
+        type: string
+        primary_key: true
+
+    -   name: ftes_sum
+        sql: ftes_sum
+        type: string
+
+    -   name: division
+        sql: division
+        type: string
+
+    -   name: department
+        sql: department
+        type: string
+
+    -   name: enr
+        sql: enr
+        type: string
+
+    -   name: course_number
+        sql: course_number
+        type: string
+
+    -   name: crn
+        sql: crn
+        type: string
+
+    -   name: acct_code
+        sql: acct_code
+        type: string
+
+    measures: []
+
+    pre_aggregations: []

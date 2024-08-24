@@ -1,0 +1,105 @@
+cubes:
+    name: course_schedule
+
+    sql_table: odsmgr.course_schedule
+
+    joins:
+    -   name: course_catalog
+        sql: '{CUBE}.course_identification = course_catalog.course_identification
+            AND {CUBE}.academic_period = course_catalog.academic_period'
+        relationship: zero_to_many
+
+    -   name: course_catalog_alias
+        sql: '{CUBE}.academic_period = course_schedule.course_identification'
+        relationship: zero_to_many
+
+    dimensions:
+    -   name: sub_academic_period_desc
+        sql: sub_academic_period_desc
+        type: string
+
+    -   name: sub_academic_period
+        sql: sub_academic_period
+        type: string
+
+    -   name: subject_desc
+        sql: subject_desc
+        type: string
+
+    -   name: subject
+        sql: subject
+        type: string
+
+    -   name: schedule
+        sql: schedule
+        type: string
+
+    -   name: schedule_workload
+        sql: schedule_workload
+        type: string
+
+    -   name: schedule_max_enrollment
+        sql: schedule_max_enrollment
+        type: string
+
+    -   name: schedule_desc
+        sql: schedule_desc
+        type: string
+
+    -   name: schedule_adj_workload
+        sql: schedule_adj_workload
+        type: string
+
+    -   name: process_group
+        sql: process_group
+        type: string
+
+    -   name: multi_source_desc
+        sql: multi_source_desc
+        type: string
+
+    -   name: multi_source
+        sql: multi_source
+        type: string
+
+    -   name: instructional_method_desc
+        sql: instructional_method_desc
+        type: string
+
+    -   name: instructional_method
+        sql: instructional_method
+        type: string
+
+    -   name: course_number
+        sql: course_number
+        type: string
+
+    -   name: course_identification
+        sql: course_identification
+        type: string
+        primary_key: true
+
+    -   name: administrative_group
+        sql: administrative_group
+        type: string
+
+    -   name: academic_year_desc
+        sql: academic_year_desc
+        type: string
+
+    -   name: academic_year
+        sql: academic_year
+        type: string
+
+    -   name: academic_period
+        sql: academic_period
+        type: string
+        primary_key: true
+
+    -   name: academic_period_desc
+        sql: academic_period_desc
+        type: string
+
+    measures: []
+
+    pre_aggregations: []

@@ -1,0 +1,23 @@
+cubes:
+    name: ir_student_term_gpa_all_camp
+
+    sql_table: odsmgr_cust.ir_student_term_gpa_all_camp
+
+    joins: []
+
+    dimensions:
+    -   name: academic_period_gpa
+        sql: academic_period_gpa
+        type: string
+
+    -   name: academic_period
+        sql: academic_period
+        type: string
+
+    -   name: person_uid
+        sql: person_uid
+        type: string
+
+    measures: []
+
+    pre_aggregations: []

@@ -1,0 +1,163 @@
+cubes:
+    name: npsass_student_pop_view
+
+    sql_table: odsmgr_cust.npsass_student_pop_view
+
+    joins:
+    -   name: npsas_cohort
+        sql: '{CUBE}.person_uid = npsas_cohort.person_uid'
+        relationship: zero_to_many
+
+    dimensions:
+    -   name: perm_email
+        sql: perm_email
+        type: string
+
+    -   name: perm_phone_number
+        sql: perm_phone_number
+        type: string
+
+    -   name: perm_area_code
+        sql: perm_area_code
+        type: string
+
+    -   name: perm_country_code
+        sql: perm_country_code
+        type: string
+
+    -   name: perm_zip
+        sql: perm_zip
+        type: string
+
+    -   name: perm_country
+        sql: perm_country
+        type: string
+
+    -   name: perm_state
+        sql: perm_state
+        type: string
+
+    -   name: perm_city
+        sql: perm_city
+        type: string
+
+    -   name: perm_address2
+        sql: perm_address2
+        type: string
+
+    -   name: perm_address1
+        sql: perm_address1
+        type: string
+
+    -   name: campus_email
+        sql: campus_email
+        type: string
+
+    -   name: cell_phone_number
+        sql: cell_phone_number
+        type: string
+
+    -   name: cell_area_code
+        sql: cell_area_code
+        type: string
+
+    -   name: local_phone_number
+        sql: local_phone_number
+        type: string
+
+    -   name: local_area_code
+        sql: local_area_code
+        type: string
+
+    -   name: local_zip
+        sql: local_zip
+        type: string
+
+    -   name: local_state
+        sql: local_state
+        type: string
+
+    -   name: local_city
+        sql: local_city
+        type: string
+
+    -   name: local_address2
+        sql: local_address2
+        type: string
+
+    -   name: local_address1
+        sql: local_address1
+        type: string
+
+    -   name: cip
+        sql: cip
+        type: string
+
+    -   name: major
+        sql: major
+        type: string
+
+    -   name: degree_program
+        sql: degree_program
+        type: string
+
+    -   name: ftb
+        sql: ftb
+        type: string
+
+    -   name: high_school_grade_date
+        sql: high_school_grade_date
+        type: time
+
+    -   name: class_level
+        sql: class_level
+        type: string
+
+    -   name: education_level
+        sql: education_level
+        type: string
+
+    -   name: birth_date
+        sql: birth_date
+        type: string
+
+    -   name: tax_id
+        sql: tax_id
+        type: string
+
+    -   name: id
+        sql: id
+        type: string
+
+    -   name: name_suffix
+        sql: name_suffix
+        type: string
+
+    -   name: last_name
+        sql: last_name
+        type: string
+
+    -   name: middle_initial
+        sql: middle_initial
+        type: string
+
+    -   name: first_name
+        sql: first_name
+        type: string
+
+    -   name: home_college
+        sql: home_college
+        type: string
+
+    -   name: person_uid
+        sql: person_uid
+        type: string
+        primary_key: true
+
+    -   name: academic_period
+        sql: academic_period
+        type: string
+
+    measures: []
+
+    pre_aggregations: []

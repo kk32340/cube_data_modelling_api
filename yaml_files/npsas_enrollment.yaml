@@ -1,0 +1,155 @@
+cubes:
+    name: npsas_enrollment
+
+    sql_table: odsmgr_cust.npsas_enrollment
+
+    joins: []
+
+    dimensions:
+    -   name: cipc
+        sql: cipc
+        type: string
+
+    -   name: sat_writing
+        sql: sat_writing
+        type: string
+
+    -   name: sat_math
+        sql: sat_math
+        type: string
+
+    -   name: sat_critical_reading
+        sql: sat_critical_reading
+        type: string
+
+    -   name: act_composite
+        sql: act_composite
+        type: string
+
+    -   name: act_science
+        sql: act_science
+        type: string
+
+    -   name: act_reading
+        sql: act_reading
+        type: string
+
+    -   name: act_math
+        sql: act_math
+        type: string
+
+    -   name: act_english
+        sql: act_english
+        type: string
+
+    -   name: spring_2016_enr_credits
+        sql: spring_2016_enr_credits
+        type: string
+
+    -   name: spring_2016_enr_status
+        sql: spring_2016_enr_status
+        type: string
+
+    -   name: fall_2015_enr_credits
+        sql: fall_2015_enr_credits
+        type: string
+
+    -   name: fall_2015_enr_status
+        sql: fall_2015_enr_status
+        type: string
+
+    -   name: summer_2015_enr_credits
+        sql: summer_2015_enr_credits
+        type: string
+
+    -   name: summer_2015_enr_status
+        sql: summer_2015_enr_status
+        type: string
+
+    -   name: remedial_course_taken
+        sql: remedial_course_taken
+        type: string
+
+    -   name: last_attend_date
+        sql: last_attend_date
+        type: time
+
+    -   name: first_month_enr
+        sql: first_month_enr
+        type: string
+
+    -   name: first_year_enr
+        sql: first_year_enr
+        type: string
+
+    -   name: tuition_fees
+        sql: tuition_fees
+        type: string
+
+    -   name: total_xfer_units
+        sql: total_xfer_units
+        type: string
+
+    -   name: educational_goal_desc
+        sql: educational_goal_desc
+        type: string
+
+    -   name: educational_goal
+        sql: educational_goal
+        type: string
+
+    -   name: education_level_desc
+        sql: education_level_desc
+        type: string
+
+    -   name: education_level
+        sql: education_level
+        type: string
+
+    -   name: program_classification_desc
+        sql: program_classification_desc
+        type: string
+
+    -   name: program_classification
+        sql: program_classification
+        type: string
+
+    -   name: major_desc
+        sql: major_desc
+        type: string
+
+    -   name: major
+        sql: major
+        type: string
+
+    -   name: person_uid
+        sql: person_uid
+        type: string
+
+    -   name: college
+        sql: college
+        type: string
+
+    -   name: acyr
+        sql: acyr
+        type: string
+
+    -   name: full name
+        sql: full name
+        type: string
+
+    -   name: id
+        sql: id
+        type: string
+
+    -   name: student_id
+        sql: student_id
+        type: string
+
+    -   name: study_id
+        sql: study_id
+        type: string
+
+    measures: []
+
+    pre_aggregations: []

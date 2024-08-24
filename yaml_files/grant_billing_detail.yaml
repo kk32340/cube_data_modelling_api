@@ -1,0 +1,251 @@
+cubes:
+    name: grant_billing_detail
+
+    sql_table: odsmgr.grant_billing_detail
+
+    joins:
+    -   name: grant_view
+        sql: '{CUBE}.bill_grant_id = grant_view.grant_id'
+        relationship: zero_to_many
+
+    dimensions:
+    -   name: short_title
+        sql: short_title
+        type: string
+
+    -   name: process_group
+        sql: process_group
+        type: string
+
+    -   name: payment_management_sys_desc
+        sql: payment_management_sys_desc
+        type: string
+
+    -   name: payment_management_sys_code
+        sql: payment_management_sys_code
+        type: string
+
+    -   name: long_title
+        sql: long_title
+        type: string
+
+    -   name: letter_of_credit_number
+        sql: letter_of_credit_number
+        type: string
+
+    -   name: multi_source_desc
+        sql: multi_source_desc
+        type: string
+
+    -   name: multi_source
+        sql: multi_source
+        type: string
+
+    -   name: hold_release_date
+        sql: hold_release_date
+        type: time
+
+    -   name: federal_share_amount
+        sql: federal_share_amount
+        type: string
+
+    -   name: bill_tran_number
+        sql: bill_tran_number
+        type: string
+
+    -   name: bill_transaction_desc
+        sql: bill_transaction_desc
+        type: string
+
+    -   name: bill_transaction_date
+        sql: bill_transaction_date
+        type: time
+
+    -   name: bill_transaction_amount
+        sql: bill_transaction_amount
+        type: string
+
+    -   name: bill_submission_number
+        sql: bill_submission_number
+        type: string
+
+    -   name: bill_status_desc
+        sql: bill_status_desc
+        type: string
+
+    -   name: bill_status
+        sql: bill_status
+        type: string
+
+    -   name: bill_sequence_number
+        sql: bill_sequence_number
+        type: string
+
+    -   name: bill_run_date
+        sql: bill_run_date
+        type: time
+
+    -   name: bill_reversal_ind
+        sql: bill_reversal_ind
+        type: string
+
+    -   name: bill_program_status
+        sql: bill_program_status
+        type: string
+
+    -   name: bill_program_desc
+        sql: bill_program_desc
+        type: string
+
+    -   name: bill_program
+        sql: bill_program
+        type: string
+
+    -   name: bill_period_date
+        sql: bill_period_date
+        type: time
+
+    -   name: bill_organization_status
+        sql: bill_organization_status
+        type: string
+
+    -   name: bill_organization_desc
+        sql: bill_organization_desc
+        type: string
+
+    -   name: bill_organization
+        sql: bill_organization
+        type: string
+
+    -   name: bill_location_status
+        sql: bill_location_status
+        type: string
+
+    -   name: bill_location_desc
+        sql: bill_location_desc
+        type: string
+
+    -   name: bill_location
+        sql: bill_location
+        type: string
+
+    -   name: bill_item
+        sql: bill_item
+        type: string
+
+    -   name: bill_invoice_number
+        sql: bill_invoice_number
+        type: string
+
+    -   name: bill_hold_date
+        sql: bill_hold_date
+        type: time
+
+    -   name: bill_grant_id
+        sql: bill_grant_id
+        type: string
+        primary_key: true
+
+    -   name: bill_fund_status
+        sql: bill_fund_status
+        type: string
+
+    -   name: bill_fund_desc
+        sql: bill_fund_desc
+        type: string
+
+    -   name: bill_chart_of_accounts_status
+        sql: bill_chart_of_accounts_status
+        type: string
+
+    -   name: bill_fund
+        sql: bill_fund
+        type: string
+
+    -   name: bill_document_type
+        sql: bill_document_type
+        type: string
+
+    -   name: bill_document
+        sql: bill_document
+        type: string
+
+    -   name: bill_chart_of_accounts_desc
+        sql: bill_chart_of_accounts_desc
+        type: string
+
+    -   name: bill_chart_of_accounts
+        sql: bill_chart_of_accounts
+        type: string
+
+    -   name: bill_alternate_fund_status
+        sql: bill_alternate_fund_status
+        type: string
+
+    -   name: bill_alternate_fund_desc
+        sql: bill_alternate_fund_desc
+        type: string
+
+    -   name: bill_alternate_fund
+        sql: bill_alternate_fund
+        type: string
+
+    -   name: bill_adjusted_invoice_number
+        sql: bill_adjusted_invoice_number
+        type: string
+
+    -   name: bill_adjusted_date
+        sql: bill_adjusted_date
+        type: time
+
+    -   name: bill_activity_status
+        sql: bill_activity_status
+        type: string
+
+    -   name: bill_activity_desc
+        sql: bill_activity_desc
+        type: string
+
+    -   name: bill_activity
+        sql: bill_activity
+        type: string
+
+    -   name: bill_account_status
+        sql: bill_account_status
+        type: string
+
+    -   name: bill_account_index_status
+        sql: bill_account_index_status
+        type: string
+
+    -   name: bill_account_index_desc
+        sql: bill_account_index_desc
+        type: string
+
+    -   name: bill_account_index
+        sql: bill_account_index
+        type: string
+
+    -   name: bill_account_desc
+        sql: bill_account_desc
+        type: string
+
+    -   name: bill_account
+        sql: bill_account
+        type: string
+
+    -   name: administrative_group
+        sql: administrative_group
+        type: string
+
+    -   name: account_class_desc
+        sql: account_class_desc
+        type: string
+
+    -   name: account_class
+        sql: account_class
+        type: string
+
+    measures: []
+
+    pre_aggregations: []

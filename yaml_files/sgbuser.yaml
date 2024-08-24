@@ -1,0 +1,95 @@
+cubes:
+    name: sgbuser
+
+    sql_table: saturn.sgbuser
+
+    joins: []
+
+    dimensions:
+    -   name: sgbuser_vpdi_code
+        sql: sgbuser_vpdi_code
+        type: string
+
+    -   name: sgbuser_data_origin
+        sql: sgbuser_data_origin
+        type: string
+
+    -   name: sgbuser_user_id
+        sql: sgbuser_user_id
+        type: string
+
+    -   name: sgbuser_version
+        sql: sgbuser_version
+        type: string
+
+    -   name: sgbuser_surrogate_id
+        sql: sgbuser_surrogate_id
+        type: string
+
+    -   name: sgbuser_wiav_code
+        sql: sgbuser_wiav_code
+        type: string
+
+    -   name: sgbuser_basic_skill_waiv_ind
+        sql: sgbuser_basic_skill_waiv_ind
+        type: string
+
+    -   name: sgbuser_migr_work_ind
+        sql: sgbuser_migr_work_ind
+        type: string
+
+    -   name: sgbuser_activity_date
+        sql: sgbuser_activity_date
+        type: time
+
+    -   name: sgbuser_sudj_code
+        sql: sgbuser_sudj_code
+        type: string
+
+    -   name: sgbuser_sudi_code
+        sql: sgbuser_sudi_code
+        type: string
+
+    -   name: sgbuser_sudh_code
+        sql: sgbuser_sudh_code
+        type: string
+
+    -   name: sgbuser_sudg_code
+        sql: sgbuser_sudg_code
+        type: string
+
+    -   name: sgbuser_sudf_code
+        sql: sgbuser_sudf_code
+        type: string
+
+    -   name: sgbuser_sude_code
+        sql: sgbuser_sude_code
+        type: string
+
+    -   name: sgbuser_sudd_code
+        sql: sgbuser_sudd_code
+        type: string
+
+    -   name: sgbuser_sudc_code
+        sql: sgbuser_sudc_code
+        type: string
+
+    -   name: sgbuser_sudb_code
+        sql: sgbuser_sudb_code
+        type: string
+
+    -   name: sgbuser_suda_code
+        sql: sgbuser_suda_code
+        type: string
+
+    -   name: sgbuser_term_code
+        sql: sgbuser_term_code
+        type: string
+
+    -   name: sgbuser_pidm
+        sql: sgbuser_pidm
+        type: string
+
+    measures: []
+
+    pre_aggregations: []

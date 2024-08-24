@@ -1,0 +1,167 @@
+cubes:
+    name: invoice_tax_rate_slot
+
+    sql_table: odsmgr.invoice_tax_rate_slot
+
+    joins: []
+
+    dimensions:
+    -   name: tax_rate_desc8
+        sql: tax_rate_desc8
+        type: string
+
+    -   name: tax_rate_desc7
+        sql: tax_rate_desc7
+        type: string
+
+    -   name: tax_rate_desc6
+        sql: tax_rate_desc6
+        type: string
+
+    -   name: tax_rate_desc5
+        sql: tax_rate_desc5
+        type: string
+
+    -   name: tax_rate_desc4
+        sql: tax_rate_desc4
+        type: string
+
+    -   name: tax_rate_desc3
+        sql: tax_rate_desc3
+        type: string
+
+    -   name: tax_rate_desc2
+        sql: tax_rate_desc2
+        type: string
+
+    -   name: tax_rate_desc1
+        sql: tax_rate_desc1
+        type: string
+
+    -   name: tax_rate8
+        sql: tax_rate8
+        type: string
+
+    -   name: tax_rate7
+        sql: tax_rate7
+        type: string
+
+    -   name: tax_rate6
+        sql: tax_rate6
+        type: string
+
+    -   name: tax_rate5
+        sql: tax_rate5
+        type: string
+
+    -   name: tax_rate4
+        sql: tax_rate4
+        type: string
+
+    -   name: tax_rate3
+        sql: tax_rate3
+        type: string
+
+    -   name: tax_rate2
+        sql: tax_rate2
+        type: string
+
+    -   name: tax_rate1
+        sql: tax_rate1
+        type: string
+
+    -   name: rebate_amount8
+        sql: rebate_amount8
+        type: string
+
+    -   name: rebate_amount7
+        sql: rebate_amount7
+        type: string
+
+    -   name: rebate_amount6
+        sql: rebate_amount6
+        type: string
+
+    -   name: rebate_amount5
+        sql: rebate_amount5
+        type: string
+
+    -   name: rebate_amount4
+        sql: rebate_amount4
+        type: string
+
+    -   name: rebate_amount3
+        sql: rebate_amount3
+        type: string
+
+    -   name: rebate_amount2
+        sql: rebate_amount2
+        type: string
+
+    -   name: rebate_amount1
+        sql: rebate_amount1
+        type: string
+
+    -   name: process_group
+        sql: process_group
+        type: string
+
+    -   name: multi_source_desc
+        sql: multi_source_desc
+        type: string
+
+    -   name: multi_source
+        sql: multi_source
+        type: string
+
+    -   name: item
+        sql: item
+        type: string
+
+    -   name: invoice
+        sql: invoice
+        type: string
+
+    -   name: converted_rebate_amount8
+        sql: converted_rebate_amount8
+        type: string
+
+    -   name: converted_rebate_amount7
+        sql: converted_rebate_amount7
+        type: string
+
+    -   name: converted_rebate_amount6
+        sql: converted_rebate_amount6
+        type: string
+
+    -   name: converted_rebate_amount5
+        sql: converted_rebate_amount5
+        type: string
+
+    -   name: converted_rebate_amount4
+        sql: converted_rebate_amount4
+        type: string
+
+    -   name: converted_rebate_amount3
+        sql: converted_rebate_amount3
+        type: string
+
+    -   name: converted_rebate_amount2
+        sql: converted_rebate_amount2
+        type: string
+
+    -   name: converted_rebate_amount1
+        sql: converted_rebate_amount1
+        type: string
+
+    -   name: administrative_group
+        sql: administrative_group
+        type: string
+
+    -   name: activity_date
+        sql: activity_date
+        type: time
+
+    measures: []
+
+    pre_aggregations: []

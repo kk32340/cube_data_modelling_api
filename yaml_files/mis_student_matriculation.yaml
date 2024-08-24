@@ -1,0 +1,78 @@
+cubes:
+    name: mis_student_matriculation
+
+    sql_table: odsmgr_cust.mis_student_matriculation
+
+    joins:
+    -   name: mis_student_term
+        sql: '{CUBE}.college_id = mis_student_term.college_id AND {CUBE}.term_id =
+            mis_student_term.term_id AND {CUBE}.cccco_student_id = mis_student_term.cccco_student_id'
+        relationship: one_to_many
+
+    dimensions:
+    -   name: term_id
+        sql: term_id
+        type: string
+        primary_key: true
+
+    -   name: special_needs
+        sql: special_needs
+        type: string
+
+    -   name: orientation_status
+        sql: orientation_status
+        type: string
+
+    -   name: orientation_services
+        sql: orientation_services
+        type: string
+
+    -   name: major
+        sql: major
+        type: string
+
+    -   name: follow_up_services
+        sql: follow_up_services
+        type: string
+
+    -   name: goals
+        sql: goals
+        type: string
+
+    -   name: cccco_student_id
+        sql: cccco_student_id
+        type: string
+        primary_key: true
+
+    -   name: college_id
+        sql: college_id
+        type: string
+        primary_key: true
+
+    -   name: college
+        sql: college
+        type: string
+
+    -   name: assessment_status
+        sql: assessment_status
+        type: string
+
+    -   name: assessment_services_place
+        sql: assessment_services_place
+        type: string
+
+    -   name: assessment_services_other
+        sql: assessment_services_other
+        type: string
+
+    -   name: advisement_status
+        sql: advisement_status
+        type: string
+
+    -   name: advisement_services
+        sql: advisement_services
+        type: string
+
+    measures: []
+
+    pre_aggregations: []

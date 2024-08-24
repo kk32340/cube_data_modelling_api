@@ -1,0 +1,35 @@
+cubes:
+    name: ir_ss_orientation
+
+    sql_table: odsmgr_cust.ir_ss_orientation
+
+    joins: []
+
+    dimensions:
+    -   name: init_orientation_services
+        sql: init_orientation_services
+        type: string
+
+    -   name: init_orien_exempt_status
+        sql: init_orien_exempt_status
+        type: string
+
+    -   name: course_of_study
+        sql: course_of_study
+        type: string
+
+    -   name: college
+        sql: college
+        type: string
+
+    -   name: academic_period
+        sql: academic_period
+        type: string
+
+    -   name: person_uid
+        sql: person_uid
+        type: string
+
+    measures: []
+
+    pre_aggregations: []

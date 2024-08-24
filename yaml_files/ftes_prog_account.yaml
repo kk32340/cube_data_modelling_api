@@ -1,0 +1,63 @@
+cubes:
+    name: ftes_prog_account
+
+    sql_table: odsmgr_cust.ftes_prog_account
+
+    joins: []
+
+    dimensions:
+    -   name: taxonomy_of_program_desc
+        sql: taxonomy_of_program_desc
+        type: string
+
+    -   name: taxonomy_of_program
+        sql: taxonomy_of_program
+        type: string
+
+    -   name: transaction_amount
+        sql: transaction_amount
+        type: string
+
+    -   name: program_desc
+        sql: program_desc
+        type: string
+
+    -   name: program
+        sql: program
+        type: string
+
+    -   name: organization_code
+        sql: organization_code
+        type: string
+
+    -   name: fund_desc
+        sql: fund_desc
+        type: string
+
+    -   name: fund
+        sql: fund
+        type: string
+
+    -   name: ftes
+        sql: ftes
+        type: string
+
+    -   name: fiscal_year
+        sql: fiscal_year
+        type: string
+
+    -   name: college
+        sql: college
+        type: string
+
+    -   name: actual_organization_desc_2
+        sql: actual_organization_desc_2
+        type: string
+
+    -   name: actual_account_type_level_2
+        sql: actual_account_type_level_2
+        type: string
+
+    measures: []
+
+    pre_aggregations: []

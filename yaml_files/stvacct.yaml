@@ -1,0 +1,63 @@
+cubes:
+    name: stvacct
+
+    sql_table: saturn.stvacct
+
+    joins: []
+
+    dimensions:
+    -   name: stvacct_vpdi_code
+        sql: stvacct_vpdi_code
+        type: string
+
+    -   name: stvacct_data_origin
+        sql: stvacct_data_origin
+        type: string
+
+    -   name: stvacct_user_id
+        sql: stvacct_user_id
+        type: string
+
+    -   name: stvacct_version
+        sql: stvacct_version
+        type: string
+
+    -   name: stvacct_surrogate_id
+        sql: stvacct_surrogate_id
+        type: string
+
+    -   name: stvacct_independent_lab_ind
+        sql: stvacct_independent_lab_ind
+        type: string
+
+    -   name: stvacct_wch
+        sql: stvacct_wch
+        type: string
+
+    -   name: stvacct_independent_ind
+        sql: stvacct_independent_ind
+        type: string
+
+    -   name: stvacct_desc
+        sql: stvacct_desc
+        type: string
+
+    -   name: stvacct_dch
+        sql: stvacct_dch
+        type: string
+
+    -   name: stvacct_code
+        sql: stvacct_code
+        type: string
+
+    -   name: stvacct_actual_ind
+        sql: stvacct_actual_ind
+        type: string
+
+    -   name: stvacct_activity_date
+        sql: stvacct_activity_date
+        type: time
+
+    measures: []
+
+    pre_aggregations: []

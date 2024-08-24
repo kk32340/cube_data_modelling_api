@@ -1,0 +1,319 @@
+cubes:
+    name: ir_student_person
+
+    sql_table: odsmgr_cust.ir_student_person
+
+    joins:
+    -   name: cteos
+        sql: '{CUBE}.person_uid = cteos.person_uid'
+        relationship: one_to_many
+
+    -   name: ir_student_admissions_app
+        sql: '{CUBE}.person_uid = ir_student_admissions_app.person_uid'
+        relationship: one_to_many
+
+    -   name: student_sports_term_view
+        sql: '{CUBE}.person_uid = student_sports_term_view.sgrsprt_pidm'
+        relationship: one_to_many
+
+    -   name: test_initial
+        sql: '{CUBE}.person_uid = test_initial.person_uid'
+        relationship: one_to_many
+
+    -   name: ir_student_term
+        sql: '{CUBE}.person_uid = ir_student_term.person_uid'
+        relationship: one_to_one
+
+    -   name: arccspar_view
+        sql: '{CUBE}.person_uid = arccspar_view.pidm'
+        relationship: one_to_many
+
+    -   name: ir_placement_initial
+        sql: '{CUBE}.person_uid = ir_placement_initial.person_uid'
+        relationship: one_to_one
+
+    -   name: ir_student_term_gpa
+        sql: '{CUBE}.person_uid = ir_student_term_gpa.person_uid'
+        relationship: one_to_many
+
+    -   name: ir_student_class_status
+        sql: '{CUBE}.person_uid = ir_student_class_status.student_pidm'
+        relationship: one_to_many
+
+    -   name: student_course_shortcut
+        sql: '{CUBE}.person_uid'
+        relationship: one_to_one
+
+    -   name: wssn_id
+        sql: '{CUBE}.person_uid = wssn_id.person_uid'
+        relationship: one_to_many
+
+    -   name: wssn_id_shortcut
+        sql: '{CUBE}.person_uid'
+        relationship: zero_to_many
+
+    -   name: students_repeated_courses
+        sql: '{CUBE}.person_uid = students_repeated_courses.person_uid'
+        relationship: one_to_many
+
+    -   name: swreops_view
+        sql: '{CUBE}.person_uid = swreops_view.pidm'
+        relationship: zero_to_many
+
+    -   name: sgrdisa
+        sql: '{CUBE}.person_uid = sgrdisa.sgrdisa_pidm'
+        relationship: zero_to_many
+
+    dimensions:
+    -   name: gedl_guard_2_desc
+        sql: gedl_guard_2_desc
+        type: string
+
+    -   name: gedl_guard_2
+        sql: gedl_guard_2
+        type: string
+
+    -   name: gedl_guard_1_desc
+        sql: gedl_guard_1_desc
+        type: string
+
+    -   name: gedl_guard_1
+        sql: gedl_guard_1
+        type: string
+
+    -   name: ssn
+        sql: ssn
+        type: string
+
+    -   name: res_street2
+        sql: res_street2
+        type: string
+
+    -   name: res_street1
+        sql: res_street1
+        type: string
+
+    -   name: res_state
+        sql: res_state
+        type: string
+
+    -   name: res_postal_code
+        sql: res_postal_code
+        type: string
+
+    -   name: res_nation_desc
+        sql: res_nation_desc
+        type: string
+
+    -   name: res_nation
+        sql: res_nation
+        type: string
+
+    -   name: res_county_desc
+        sql: res_county_desc
+        type: string
+
+    -   name: res_county
+        sql: res_county
+        type: string
+
+    -   name: res_city
+        sql: res_city
+        type: string
+
+    -   name: primary_language_desc
+        sql: primary_language_desc
+        type: string
+
+    -   name: primary_language
+        sql: primary_language
+        type: string
+
+    -   name: primary_ethnicity_desc
+        sql: primary_ethnicity_desc
+        type: string
+
+    -   name: primary_ethnicity
+        sql: primary_ethnicity
+        type: string
+
+    -   name: orig_ed_goal_desc
+        sql: orig_ed_goal_desc
+        type: string
+
+    -   name: orig_ed_goal
+        sql: orig_ed_goal
+        type: string
+
+    -   name: office_phone
+        sql: office_phone
+        type: string
+
+    -   name: mail_street2
+        sql: mail_street2
+        type: string
+
+    -   name: mail_street1
+        sql: mail_street1
+        type: string
+
+    -   name: mail_state
+        sql: mail_state
+        type: string
+
+    -   name: mail_res_street2
+        sql: mail_res_street2
+        type: string
+
+    -   name: mail_res_street1
+        sql: mail_res_street1
+        type: string
+
+    -   name: mail_res_state
+        sql: mail_res_state
+        type: string
+
+    -   name: mail_res_postal_code
+        sql: mail_res_postal_code
+        type: string
+
+    -   name: mail_res_nation_desc
+        sql: mail_res_nation_desc
+        type: string
+
+    -   name: mail_res_nation
+        sql: mail_res_nation
+        type: string
+
+    -   name: mail_res_county_desc
+        sql: mail_res_county_desc
+        type: string
+
+    -   name: mail_res_county
+        sql: mail_res_county
+        type: string
+
+    -   name: mail_res_city
+        sql: mail_res_city
+        type: string
+
+    -   name: mail_postal_code
+        sql: mail_postal_code
+        type: string
+
+    -   name: mail_nation_desc
+        sql: mail_nation_desc
+        type: string
+
+    -   name: mail_nation
+        sql: mail_nation
+        type: string
+
+    -   name: mail_county_desc
+        sql: mail_county_desc
+        type: string
+
+    -   name: mail_county
+        sql: mail_county
+        type: string
+
+    -   name: mail_city
+        sql: mail_city
+        type: string
+
+    -   name: name_suffix
+        sql: name_suffix
+        type: string
+
+    -   name: last_name
+        sql: last_name
+        type: string
+
+    -   name: middle_name
+        sql: middle_name
+        type: string
+
+    -   name: high_school_grad_date
+        sql: high_school_grad_date
+        type: time
+
+    -   name: high_school_code_desc
+        sql: high_school_code_desc
+        type: string
+
+    -   name: high_school_code
+        sql: high_school_code
+        type: string
+
+    -   name: first_term_enrolled
+        sql: first_term_enrolled
+        type: string
+
+    -   name: first_name
+        sql: first_name
+        type: string
+
+    -   name: gender_desc
+        sql: gender_desc
+        type: string
+
+    -   name: gender
+        sql: gender
+        type: string
+
+    -   name: eve_phone
+        sql: eve_phone
+        type: string
+
+    -   name: day_phone
+        sql: day_phone
+        type: string
+
+    -   name: email_address
+        sql: email_address
+        type: string
+
+    -   name: current_age
+        sql: current_age
+        type: string
+
+    -   name: cell_phone
+        sql: cell_phone
+        type: string
+
+    -   name: birth_date
+        sql: birth_date
+        type: time
+
+    -   name: confidentiality_ind
+        sql: confidentiality_ind
+        type: string
+
+    -   name: citizen_type
+        sql: citizen_type
+        type: string
+
+    -   name: citizenship_type_desc
+        sql: citizenship_type_desc
+        type: string
+
+    -   name: citizenship_ind
+        sql: citizenship_ind
+        type: string
+
+    -   name: admission_application_date
+        sql: admission_application_date
+        type: time
+
+    -   name: person_uid
+        sql: person_uid
+        type: string
+        primary_key: true
+
+    -   name: id
+        sql: id
+        type: string
+
+    measures: []
+
+    pre_aggregations: []

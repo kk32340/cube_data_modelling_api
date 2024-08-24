@@ -1,0 +1,384 @@
+cubes:
+    name: ir_session
+
+    sql_table: odsmgr_cust.ir_session
+
+    joins:
+    -   name: ir_student_person
+        sql: '{CUBE}.instructor_pidm = ir_student_person.person_uid'
+        relationship: one_to_one
+
+    -   name: student_course_shortcut
+        sql: '{CUBE}.academic_period = ir_session.crn'
+        relationship: one_to_one
+
+    -   name: stvterm
+        sql: '{CUBE}.academic_period = stvterm.stvterm_code'
+        relationship: one_to_one
+
+    dimensions:
+    -   name: building_desc
+        sql: building_desc
+        type: string
+
+    -   name: xlst_group
+        sql: xlst_group
+        type: string
+
+    -   name: workload
+        sql: workload
+        type: string
+
+    -   name: wednesday_ind
+        sql: wednesday_ind
+        type: string
+
+    -   name: sunday_ind
+        sql: sunday_ind
+        type: string
+
+    -   name: tuesday_ind
+        sql: tuesday_ind
+        type: string
+
+    -   name: subject_desc
+        sql: subject_desc
+        type: string
+
+    -   name: tlm
+        sql: tlm
+        type: string
+
+    -   name: thursday_ind
+        sql: thursday_ind
+        type: string
+
+    -   name: saturday_ind
+        sql: saturday_ind
+        type: string
+
+    -   name: start_date_section
+        sql: start_date_section
+        type: time
+
+    -   name: room
+        sql: room
+        type: string
+
+    -   name: session_ind
+        sql: session_ind
+        type: string
+
+    -   name: section_workload
+        sql: section_workload
+        type: string
+
+    -   name: section_status_desc
+        sql: section_status_desc
+        type: string
+
+    -   name: section_status_code
+        sql: section_status_code
+        type: string
+
+    -   name: section_seq
+        sql: section_seq
+        type: string
+
+    -   name: percent_responsibility
+        sql: percent_responsibility
+        type: string
+
+    -   name: primary_meeting_ind
+        sql: primary_meeting_ind
+        type: string
+
+    -   name: part_of_term_desc
+        sql: part_of_term_desc
+        type: string
+
+    -   name: part_of_term_code
+        sql: part_of_term_code
+        type: string
+
+    -   name: primary_instructor_ind
+        sql: primary_instructor_ind
+        type: string
+
+    -   name: meeting_days_asgn
+        sql: meeting_days_asgn
+        type: string
+
+    -   name: last_day_enr
+        sql: last_day_enr
+        type: string
+
+    -   name: monday_ind
+        sql: monday_ind
+        type: string
+
+    -   name: method_of_instr_mis
+        sql: method_of_instr_mis
+        type: string
+
+    -   name: method_of_instr_desc
+        sql: method_of_instr_desc
+        type: string
+
+    -   name: method_of_instr_code
+        sql: method_of_instr_code
+        type: string
+
+    -   name: method_of_attend_desc
+        sql: method_of_attend_desc
+        type: string
+
+    -   name: method_of_attend_code
+        sql: method_of_attend_code
+        type: string
+
+    -   name: instructor_pidm
+        sql: instructor_pidm
+        type: string
+        primary_key: true
+
+    -   name: instructor_middle_name
+        sql: instructor_middle_name
+        type: string
+
+    -   name: instructor_last_name
+        sql: instructor_last_name
+        type: string
+
+    -   name: instructor_id
+        sql: instructor_id
+        type: string
+
+    -   name: instructor_first_name
+        sql: instructor_first_name
+        type: string
+
+    -   name: ftes_estimate_resident
+        sql: ftes_estimate_resident
+        type: string
+
+    -   name: ftes_estimate_nonresident
+        sql: ftes_estimate_nonresident
+        type: string
+
+    -   name: ftes_actual_resident
+        sql: ftes_actual_resident
+        type: string
+
+    -   name: ftes_actual_nonresident
+        sql: ftes_actual_nonresident
+        type: string
+
+    -   name: friday_ind
+        sql: friday_ind
+        type: string
+
+    -   name: grade_xx
+        sql: grade_xx
+        type: string
+
+    -   name: grade_w
+        sql: grade_w
+        type: string
+
+    -   name: grade_ug
+        sql: grade_ug
+        type: string
+
+    -   name: grade_tot
+        sql: grade_tot
+        type: string
+
+    -   name: grade_rd
+        sql: grade_rd
+        type: string
+
+    -   name: grade_p
+        sql: grade_p
+        type: string
+
+    -   name: grade_np
+        sql: grade_np
+        type: string
+
+    -   name: grade_nc
+        sql: grade_nc
+        type: string
+
+    -   name: grade_ip
+        sql: grade_ip
+        type: string
+
+    -   name: grade_i
+        sql: grade_i
+        type: string
+
+    -   name: grade_f
+        sql: grade_f
+        type: string
+
+    -   name: grade_dr
+        sql: grade_dr
+        type: string
+
+    -   name: grade_d
+        sql: grade_d
+        type: string
+
+    -   name: grade_cr
+        sql: grade_cr
+        type: string
+
+    -   name: grade_c
+        sql: grade_c
+        type: string
+
+    -   name: grade_b
+        sql: grade_b
+        type: string
+
+    -   name: grade_au
+        sql: grade_au
+        type: string
+
+    -   name: grade_a
+        sql: grade_a
+        type: string
+
+    -   name: first_day_enr
+        sql: first_day_enr
+        type: string
+
+    -   name: divs_desc
+        sql: divs_desc
+        type: string
+
+    -   name: divs_code
+        sql: divs_code
+        type: string
+
+    -   name: dept_desc
+        sql: dept_desc
+        type: string
+
+    -   name: dept_code
+        sql: dept_code
+        type: string
+
+    -   name: end_time
+        sql: end_time
+        type: string
+
+    -   name: end_date_section
+        sql: end_date_section
+        type: time
+
+    -   name: day_or_evening_desc
+        sql: day_or_evening_desc
+        type: string
+
+    -   name: day_or_evening_code
+        sql: day_or_evening_code
+        type: string
+
+    -   name: current_res_enr
+        sql: current_res_enr
+        type: string
+
+    -   name: current_nonres_enr
+        sql: current_nonres_enr
+        type: string
+
+    -   name: census_res_enr
+        sql: census_res_enr
+        type: string
+
+    -   name: census_nonres_enr
+        sql: census_nonres_enr
+        type: string
+
+    -   name: course_title
+        sql: course_title
+        type: string
+
+    -   name: course_number_sort
+        sql: course_number_sort
+        type: string
+
+    -   name: census_enr
+        sql: census_enr
+        type: string
+
+    -   name: census_date_section
+        sql: census_date_section
+        type: time
+
+    -   name: campus_desc
+        sql: campus_desc
+        type: string
+
+    -   name: campus
+        sql: campus
+        type: string
+
+    -   name: building
+        sql: building
+        type: string
+
+    -   name: contract_type_desc
+        sql: contract_type_desc
+        type: string
+
+    -   name: contract_type
+        sql: contract_type
+        type: string
+
+    -   name: contact_hours
+        sql: contact_hours
+        type: string
+
+    -   name: begin_time
+        sql: begin_time
+        type: string
+
+    -   name: college_desc
+        sql: college_desc
+        type: string
+
+    -   name: college
+        sql: college
+        type: string
+
+    -   name: crn
+        sql: crn
+        type: string
+
+    -   name: credit_units
+        sql: credit_units
+        type: string
+
+    -   name: academic_period_desc
+        sql: academic_period_desc
+        type: string
+
+    -   name: course_number
+        sql: course_number
+        type: string
+
+    -   name: subject_code
+        sql: subject_code
+        type: string
+
+    -   name: academic_period
+        sql: academic_period
+        type: string
+        primary_key: true
+
+    measures: []
+
+    pre_aggregations: []

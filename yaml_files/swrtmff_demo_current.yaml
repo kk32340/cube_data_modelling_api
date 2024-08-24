@@ -1,0 +1,415 @@
+cubes:
+    name: swrtmff_demo_current
+
+    sql_table: odsmgr_cust.swrtmff_demo_current
+
+    joins: []
+
+    dimensions:
+    -   name: transfer_plan_desc
+        sql: transfer_plan_desc
+        type: string
+
+    -   name: transfer_plan_code
+        sql: transfer_plan_code
+        type: string
+
+    -   name: student_type_desc
+        sql: student_type_desc
+        type: string
+
+    -   name: student_type
+        sql: student_type
+        type: string
+
+    -   name: student_residency_desc
+        sql: student_residency_desc
+        type: string
+
+    -   name: student_residency
+        sql: student_residency
+        type: string
+
+    -   name: ssn_formatted
+        sql: ssn_formatted
+        type: string
+
+    -   name: ssn
+        sql: ssn
+        type: string
+
+    -   name: registered_ind
+        sql: registered_ind
+        type: string
+
+    -   name: phone_area_code_eve
+        sql: phone_area_code_eve
+        type: string
+
+    -   name: phone_area_code_day
+        sql: phone_area_code_day
+        type: string
+
+    -   name: primary_language_desc
+        sql: primary_language_desc
+        type: string
+
+    -   name: primary_language
+        sql: primary_language
+        type: string
+
+    -   name: planned_employment_desc
+        sql: planned_employment_desc
+        type: string
+
+    -   name: planned_employment_code
+        sql: planned_employment_code
+        type: string
+
+    -   name: phone_number_eve
+        sql: phone_number_eve
+        type: string
+
+    -   name: phone_number_day
+        sql: phone_number_day
+        type: string
+
+    -   name: matric_orientation
+        sql: matric_orientation
+        type: string
+
+    -   name: matric_education_plan
+        sql: matric_education_plan
+        type: string
+
+    -   name: matric_counseling
+        sql: matric_counseling
+        type: string
+
+    -   name: matric_assessment
+        sql: matric_assessment
+        type: string
+
+    -   name: major_desc
+        sql: major_desc
+        type: string
+
+    -   name: major_code
+        sql: major_code
+        type: string
+
+    -   name: last_name
+        sql: last_name
+        type: string
+
+    -   name: middle_name
+        sql: middle_name
+        type: string
+
+    -   name: id
+        sql: id
+        type: string
+
+    -   name: high_school_grad_date
+        sql: high_school_grad_date
+        type: time
+
+    -   name: high_school_code_desc
+        sql: high_school_code_desc
+        type: string
+
+    -   name: high_school_code
+        sql: high_school_code
+        type: string
+
+    -   name: headcount_status
+        sql: headcount_status
+        type: string
+
+    -   name: first_term
+        sql: first_term
+        type: string
+
+    -   name: first_name
+        sql: first_name
+        type: string
+
+    -   name: goal_time_desc
+        sql: goal_time_desc
+        type: string
+
+    -   name: goal_time_code
+        sql: goal_time_code
+        type: string
+
+    -   name: goal_desc
+        sql: goal_desc
+        type: string
+
+    -   name: goal
+        sql: goal
+        type: string
+
+    -   name: gender
+        sql: gender
+        type: string
+
+    -   name: ethnicity_desc
+        sql: ethnicity_desc
+        type: string
+
+    -   name: ethnicity_code
+        sql: ethnicity_code
+        type: string
+
+    -   name: enrl_pc_online
+        sql: enrl_pc_online
+        type: string
+
+    -   name: enrl_pc_off_campus
+        sql: enrl_pc_off_campus
+        type: string
+
+    -   name: enrl_pc_main
+        sql: enrl_pc_main
+        type: string
+
+    -   name: enrl_pc_dvlpmnt_ctr
+        sql: enrl_pc_dvlpmnt_ctr
+        type: string
+
+    -   name: enrl_ever_enroll_pc
+        sql: enrl_ever_enroll_pc
+        type: string
+
+    -   name: enrl_ever_enroll_cc
+        sql: enrl_ever_enroll_cc
+        type: string
+
+    -   name: enrl_ever_enroll_bc
+        sql: enrl_ever_enroll_bc
+        type: string
+
+    -   name: enrl_current_units_pc
+        sql: enrl_current_units_pc
+        type: string
+
+    -   name: enrl_current_units_cc
+        sql: enrl_current_units_cc
+        type: string
+
+    -   name: enrl_current_units_bc
+        sql: enrl_current_units_bc
+        type: string
+
+    -   name: enrl_current_enroll_pc
+        sql: enrl_current_enroll_pc
+        type: string
+
+    -   name: enrl_current_enroll_cc
+        sql: enrl_current_enroll_cc
+        type: string
+
+    -   name: enrl_current_enroll_bc
+        sql: enrl_current_enroll_bc
+        type: string
+
+    -   name: enrl_cc_southern
+        sql: enrl_cc_southern
+        type: string
+
+    -   name: enrl_cc_online
+        sql: enrl_cc_online
+        type: string
+
+    -   name: enrl_cc_mammoth
+        sql: enrl_cc_mammoth
+        type: string
+
+    -   name: enrl_cc_main
+        sql: enrl_cc_main
+        type: string
+
+    -   name: enrl_cc_krv
+        sql: enrl_cc_krv
+        type: string
+
+    -   name: enrl_cc_bishop
+        sql: enrl_cc_bishop
+        type: string
+
+    -   name: enrl_bc_weil
+        sql: enrl_bc_weil
+        type: string
+
+    -   name: enrl_bc_weekend
+        sql: enrl_bc_weekend
+        type: string
+
+    -   name: enrl_bc_tehachapi
+        sql: enrl_bc_tehachapi
+        type: string
+
+    -   name: enrl_bc_southwest
+        sql: enrl_bc_southwest
+        type: string
+
+    -   name: enrl_bc_online
+        sql: enrl_bc_online
+        type: string
+
+    -   name: degree_awarded
+        sql: degree_awarded
+        type: string
+
+    -   name: enrl_bc_northwest
+        sql: enrl_bc_northwest
+        type: string
+
+    -   name: enrl_bc_main
+        sql: enrl_bc_main
+        type: string
+
+    -   name: enrl_bc_itv
+        sql: enrl_bc_itv
+        type: string
+
+    -   name: enrl_bc_frazier_park
+        sql: enrl_bc_frazier_park
+        type: string
+
+    -   name: enrl_bc_delano
+        sql: enrl_bc_delano
+        type: string
+
+    -   name: enrl_bc_bksfd_area
+        sql: enrl_bc_bksfd_area
+        type: string
+
+    -   name: enrl_bc_arvin_lamont
+        sql: enrl_bc_arvin_lamont
+        type: string
+
+    -   name: deceased_ind
+        sql: deceased_ind
+        type: string
+
+    -   name: deceased_date
+        sql: deceased_date
+        type: time
+
+    -   name: email_addr
+        sql: email_addr
+        type: string
+
+    -   name: education_level_desc
+        sql: education_level_desc
+        type: string
+
+    -   name: education_level
+        sql: education_level
+        type: string
+
+    -   name: birth
+        sql: birth
+        type: time
+
+    -   name: confidentiality_ind
+        sql: confidentiality_ind
+        type: string
+
+    -   name: college_desc
+        sql: college_desc
+        type: string
+
+    -   name: college
+        sql: college
+        type: string
+
+    -   name: citizen_desc
+        sql: citizen_desc
+        type: string
+
+    -   name: citizenship_code
+        sql: citizenship_code
+        type: string
+
+    -   name: age
+        sql: age
+        type: string
+
+    -   name: age_at_term
+        sql: age_at_term
+        type: string
+
+    -   name: addr_zip
+        sql: addr_zip
+        type: string
+
+    -   name: addr_state
+        sql: addr_state
+        type: string
+
+    -   name: addr_nation_desc
+        sql: addr_nation_desc
+        type: string
+
+    -   name: addr_nation_code
+        sql: addr_nation_code
+        type: string
+
+    -   name: addr_line3
+        sql: addr_line3
+        type: string
+
+    -   name: addr_line2
+        sql: addr_line2
+        type: string
+
+    -   name: addr_line1
+        sql: addr_line1
+        type: string
+
+    -   name: addr_city
+        sql: addr_city
+        type: string
+
+    -   name: acad_standing_progress_desc
+        sql: acad_standing_progress_desc
+        type: string
+
+    -   name: acad_standing_progress
+        sql: acad_standing_progress
+        type: string
+
+    -   name: acad_standing_lt200_desc
+        sql: acad_standing_lt200_desc
+        type: string
+
+    -   name: acad_standing_lt200
+        sql: acad_standing_lt200
+        type: string
+
+    -   name: academic_standing_desc
+        sql: academic_standing_desc
+        type: string
+
+    -   name: academic_standing
+        sql: academic_standing
+        type: string
+
+    -   name: academic_period_desc
+        sql: academic_period_desc
+        type: string
+
+    -   name: academic_period
+        sql: academic_period
+        type: string
+
+    -   name: person_uid
+        sql: person_uid
+        type: string
+
+    measures: []
+
+    pre_aggregations: []

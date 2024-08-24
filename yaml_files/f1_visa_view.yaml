@@ -1,0 +1,27 @@
+cubes:
+    name: f1_visa_view
+
+    sql_table: odsmgr_cust.f1_visa_view
+
+    joins: []
+
+    dimensions:
+    -   name: term
+        sql: term
+        type: string
+
+    -   name: name
+        sql: name
+        type: string
+
+    -   name: id
+        sql: id
+        type: string
+
+    -   name: person_uid
+        sql: person_uid
+        type: string
+
+    measures: []
+
+    pre_aggregations: []

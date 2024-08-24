@@ -1,0 +1,313 @@
+cubes:
+    name: swrtmff_gpa_current
+
+    sql_table: odsmgr_cust.swrtmff_gpa_current
+
+    joins:
+    -   name: swrtmff_demo_current
+        sql: '{CUBE}.person_uid = swrtmff_demo_current.person_uid AND {CUBE}.academic_period
+            = swrtmff_demo_current.academic_period'
+        relationship: one_to_many
+
+    dimensions:
+    -   name: trm_qualpts_xfr_pc
+        sql: trm_qualpts_xfr_pc
+        type: string
+
+    -   name: trm_qualpts_xfr_cc
+        sql: trm_qualpts_xfr_cc
+        type: string
+
+    -   name: trm_qualpts_xfr_bc
+        sql: trm_qualpts_xfr_bc
+        type: string
+
+    -   name: trm_qualpts_inst_pc
+        sql: trm_qualpts_inst_pc
+        type: string
+
+    -   name: trm_qualpts_inst_cc
+        sql: trm_qualpts_inst_cc
+        type: string
+
+    -   name: trm_qualpts_inst_bc
+        sql: trm_qualpts_inst_bc
+        type: string
+
+    -   name: trm_pass_xfr_pc
+        sql: trm_pass_xfr_pc
+        type: string
+
+    -   name: trm_pass_xfr_cc
+        sql: trm_pass_xfr_cc
+        type: string
+
+    -   name: trm_pass_xfr_bc
+        sql: trm_pass_xfr_bc
+        type: string
+
+    -   name: trm_pass_inst_pc
+        sql: trm_pass_inst_pc
+        type: string
+
+    -   name: trm_pass_inst_cc
+        sql: trm_pass_inst_cc
+        type: string
+
+    -   name: trm_pass_inst_bc
+        sql: trm_pass_inst_bc
+        type: string
+
+    -   name: trm_gpa_xfr_pc
+        sql: trm_gpa_xfr_pc
+        type: string
+
+    -   name: trm_gpa_xfr_cc
+        sql: trm_gpa_xfr_cc
+        type: string
+
+    -   name: trm_gpa_xfr_bc
+        sql: trm_gpa_xfr_bc
+        type: string
+
+    -   name: trm_gpa_inst_pc
+        sql: trm_gpa_inst_pc
+        type: string
+
+    -   name: trm_gpa_inst_cc
+        sql: trm_gpa_inst_cc
+        type: string
+
+    -   name: trm_gpa_inst_bc
+        sql: trm_gpa_inst_bc
+        type: string
+
+    -   name: trm_gpahrs_xfr_pc
+        sql: trm_gpahrs_xfr_pc
+        type: string
+
+    -   name: trm_gpahrs_xfr_cc
+        sql: trm_gpahrs_xfr_cc
+        type: string
+
+    -   name: trm_gpahrs_xfr_bc
+        sql: trm_gpahrs_xfr_bc
+        type: string
+
+    -   name: trm_gpahrs_inst_pc
+        sql: trm_gpahrs_inst_pc
+        type: string
+
+    -   name: trm_gpahrs_inst_cc
+        sql: trm_gpahrs_inst_cc
+        type: string
+
+    -   name: trm_gpahrs_inst_bc
+        sql: trm_gpahrs_inst_bc
+        type: string
+
+    -   name: trm_earn_xfr_pc
+        sql: trm_earn_xfr_pc
+        type: string
+
+    -   name: trm_earn_xfr_cc
+        sql: trm_earn_xfr_cc
+        type: string
+
+    -   name: trm_earn_xfr_bc
+        sql: trm_earn_xfr_bc
+        type: string
+
+    -   name: trm_earn_inst_pc
+        sql: trm_earn_inst_pc
+        type: string
+
+    -   name: trm_earn_inst_cc
+        sql: trm_earn_inst_cc
+        type: string
+
+    -   name: trm_earn_inst_bc
+        sql: trm_earn_inst_bc
+        type: string
+
+    -   name: trm_atpd_xfr_pc
+        sql: trm_atpd_xfr_pc
+        type: string
+
+    -   name: trm_atpd_xfr_cc
+        sql: trm_atpd_xfr_cc
+        type: string
+
+    -   name: trm_atpd_xfr_bc
+        sql: trm_atpd_xfr_bc
+        type: string
+
+    -   name: trm_atpd_inst_pc
+        sql: trm_atpd_inst_pc
+        type: string
+
+    -   name: trm_atpd_inst_cc
+        sql: trm_atpd_inst_cc
+        type: string
+
+    -   name: trm_atpd_inst_bc
+        sql: trm_atpd_inst_bc
+        type: string
+
+    -   name: person_uid
+        sql: person_uid
+        type: string
+        primary_key: true
+
+    -   name: cum_qualpts_xfr_pc
+        sql: cum_qualpts_xfr_pc
+        type: string
+
+    -   name: cum_qualpts_xfr_cc
+        sql: cum_qualpts_xfr_cc
+        type: string
+
+    -   name: cum_qualpts_xfr_bc
+        sql: cum_qualpts_xfr_bc
+        type: string
+
+    -   name: cum_qualpts_inst_pc
+        sql: cum_qualpts_inst_pc
+        type: string
+
+    -   name: cum_qualpts_inst_cc
+        sql: cum_qualpts_inst_cc
+        type: string
+
+    -   name: cum_qualpts_inst_bc
+        sql: cum_qualpts_inst_bc
+        type: string
+
+    -   name: cum_pass_xfr_pc
+        sql: cum_pass_xfr_pc
+        type: string
+
+    -   name: cum_pass_xfr_cc
+        sql: cum_pass_xfr_cc
+        type: string
+
+    -   name: cum_pass_xfr_bc
+        sql: cum_pass_xfr_bc
+        type: string
+
+    -   name: cum_pass_inst_pc
+        sql: cum_pass_inst_pc
+        type: string
+
+    -   name: cum_pass_inst_cc
+        sql: cum_pass_inst_cc
+        type: string
+
+    -   name: cum_pass_inst_bc
+        sql: cum_pass_inst_bc
+        type: string
+
+    -   name: cum_gpa_xfr_pc
+        sql: cum_gpa_xfr_pc
+        type: string
+
+    -   name: cum_gpa_xfr_cc
+        sql: cum_gpa_xfr_cc
+        type: string
+
+    -   name: cum_gpa_xfr_bc
+        sql: cum_gpa_xfr_bc
+        type: string
+
+    -   name: cum_gpa_inst_pc
+        sql: cum_gpa_inst_pc
+        type: string
+
+    -   name: cum_gpa_inst_cc
+        sql: cum_gpa_inst_cc
+        type: string
+
+    -   name: cum_gpa_inst_bc
+        sql: cum_gpa_inst_bc
+        type: string
+
+    -   name: cum_gpahrs_xfr_pc
+        sql: cum_gpahrs_xfr_pc
+        type: string
+
+    -   name: cum_gpahrs_xfr_cc
+        sql: cum_gpahrs_xfr_cc
+        type: string
+
+    -   name: cum_gpahrs_xfr_bc
+        sql: cum_gpahrs_xfr_bc
+        type: string
+
+    -   name: cum_gpahrs_inst_pc
+        sql: cum_gpahrs_inst_pc
+        type: string
+
+    -   name: cum_gpahrs_inst_cc
+        sql: cum_gpahrs_inst_cc
+        type: string
+
+    -   name: cum_gpahrs_inst_bc
+        sql: cum_gpahrs_inst_bc
+        type: string
+
+    -   name: cum_earn_xfr_pc
+        sql: cum_earn_xfr_pc
+        type: string
+
+    -   name: cum_earn_xfr_cc
+        sql: cum_earn_xfr_cc
+        type: string
+
+    -   name: cum_earn_xfr_bc
+        sql: cum_earn_xfr_bc
+        type: string
+
+    -   name: cum_earn_inst_pc
+        sql: cum_earn_inst_pc
+        type: string
+
+    -   name: cum_earn_inst_cc
+        sql: cum_earn_inst_cc
+        type: string
+
+    -   name: cum_earn_inst_bc
+        sql: cum_earn_inst_bc
+        type: string
+
+    -   name: cum_atpd_xfr_pc
+        sql: cum_atpd_xfr_pc
+        type: string
+
+    -   name: cum_atpd_xfr_cc
+        sql: cum_atpd_xfr_cc
+        type: string
+
+    -   name: cum_atpd_xfr_bc
+        sql: cum_atpd_xfr_bc
+        type: string
+
+    -   name: cum_atpd_inst_pc
+        sql: cum_atpd_inst_pc
+        type: string
+
+    -   name: cum_atpd_inst_cc
+        sql: cum_atpd_inst_cc
+        type: string
+
+    -   name: cum_atpd_inst_bc
+        sql: cum_atpd_inst_bc
+        type: string
+
+    -   name: academic_period
+        sql: academic_period
+        type: string
+        primary_key: true
+
+    measures: []
+
+    pre_aggregations: []

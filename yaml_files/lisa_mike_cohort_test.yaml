@@ -1,0 +1,27 @@
+cubes:
+    name: lisa_mike_cohort_test
+
+    sql_table: odsmgr_cust.lisa_mike_cohort_test
+
+    joins:
+    -   name: ir_student_person
+        sql: '{CUBE}.person_uid = ir_student_person.person_uid'
+        relationship: one_to_one
+
+    dimensions:
+    -   name: college
+        sql: college
+        type: string
+
+    -   name: academic_period
+        sql: academic_period
+        type: string
+
+    -   name: person_uid
+        sql: person_uid
+        type: string
+        primary_key: true
+
+    measures: []
+
+    pre_aggregations: []

@@ -1,0 +1,95 @@
+cubes:
+    name: sirnist
+
+    sql_table: saturn.sirnist
+
+    joins:
+    -   name: person_detail_stusta
+        sql: '{CUBE}.sirnist_pidm = person_detail_stusta.person_uid'
+        relationship: one_to_one
+
+    dimensions:
+    -   name: sirnist_vpdi_code
+        sql: sirnist_vpdi_code
+        type: string
+
+    -   name: sirnist_data_origin
+        sql: sirnist_data_origin
+        type: string
+
+    -   name: sirnist_user_id
+        sql: sirnist_user_id
+        type: string
+
+    -   name: sirnist_version
+        sql: sirnist_version
+        type: string
+
+    -   name: sirnist_surrogate_id
+        sql: sirnist_surrogate_id
+        type: string
+
+    -   name: sirnist_load_override_source
+        sql: sirnist_load_override_source
+        type: string
+
+    -   name: sirnist_load_override_ind
+        sql: sirnist_load_override_ind
+        type: string
+
+    -   name: sirnist_weekly_hrs
+        sql: sirnist_weekly_hrs
+        type: string
+
+    -   name: sirnist_asty_code
+        sql: sirnist_asty_code
+        type: string
+
+    -   name: sirnist_suff
+        sql: sirnist_suff
+        type: string
+
+    -   name: sirnist_posn
+        sql: sirnist_posn
+        type: string
+
+    -   name: sirnist_fcnt_code
+        sql: sirnist_fcnt_code
+        type: string
+
+    -   name: sirnist_activity_date
+        sql: sirnist_activity_date
+        type: time
+
+    -   name: sirnist_tops_code
+        sql: sirnist_tops_code
+        type: string
+
+    -   name: sirnist_nist_workload
+        sql: sirnist_nist_workload
+        type: string
+
+    -   name: sirnist_dept_code
+        sql: sirnist_dept_code
+        type: string
+
+    -   name: sirnist_coll_code
+        sql: sirnist_coll_code
+        type: string
+
+    -   name: sirnist_nist_code
+        sql: sirnist_nist_code
+        type: string
+
+    -   name: sirnist_term_code
+        sql: sirnist_term_code
+        type: string
+
+    -   name: sirnist_pidm
+        sql: sirnist_pidm
+        type: string
+        primary_key: true
+
+    measures: []
+
+    pre_aggregations: []

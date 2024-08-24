@@ -1,0 +1,39 @@
+cubes:
+    name: fv_potential_1099
+
+    sql_table: odsmgr_cust.fv_potential_1099
+
+    joins: []
+
+    dimensions:
+    -   name: vendor_name
+        sql: vendor_name
+        type: string
+
+    -   name: vendor_id
+        sql: vendor_id
+        type: string
+
+    -   name: orgn
+        sql: orgn
+        type: string
+
+    -   name: invh
+        sql: invh
+        type: string
+
+    -   name: fund
+        sql: fund
+        type: string
+
+    -   name: amt
+        sql: amt
+        type: string
+
+    -   name: acct
+        sql: acct
+        type: string
+
+    measures: []
+
+    pre_aggregations: []

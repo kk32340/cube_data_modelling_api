@@ -1,0 +1,39 @@
+cubes:
+    name: ge_course
+
+    sql_table: odsmgr_cust.ge_course
+
+    joins:
+    -   name: ir_section_shortcut
+        sql: '{CUBE}.course_id'
+        relationship: one_to_one
+
+    dimensions:
+    -   name: status
+        sql: status
+        type: string
+
+    -   name: third_area
+        sql: third_area
+        type: string
+
+    -   name: seecond_area
+        sql: seecond_area
+        type: string
+
+    -   name: first_area
+        sql: first_area
+        type: string
+
+    -   name: course
+        sql: course
+        type: string
+
+    -   name: course_id
+        sql: course_id
+        type: string
+        primary_key: true
+
+    measures: []
+
+    pre_aggregations: []

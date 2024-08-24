@@ -1,0 +1,61 @@
+cubes:
+    name: slrrdef
+
+    sql_table: saturn.slrrdef
+
+    joins:
+    -   name: slbrdef
+        sql: '{CUBE}.slrrdef_bldg_code = slbrdef.slbrdef_bldg_code AND {CUBE}.slrrdef_room_number
+            = slbrdef.slbrdef_room_number'
+        relationship: zero_to_many
+
+    dimensions:
+    -   name: slrrdef_vpdi_code
+        sql: slrrdef_vpdi_code
+        type: string
+
+    -   name: slrrdef_data_origin
+        sql: slrrdef_data_origin
+        type: string
+
+    -   name: slrrdef_user_id
+        sql: slrrdef_user_id
+        type: string
+
+    -   name: slrrdef_version
+        sql: slrrdef_version
+        type: string
+
+    -   name: slrrdef_surrogate_id
+        sql: slrrdef_surrogate_id
+        type: string
+
+    -   name: slrrdef_term_code_eff
+        sql: slrrdef_term_code_eff
+        type: string
+
+    -   name: slrrdef_activity_date
+        sql: slrrdef_activity_date
+        type: time
+
+    -   name: slrrdef_must_match
+        sql: slrrdef_must_match
+        type: string
+
+    -   name: slrrdef_rdef_code
+        sql: slrrdef_rdef_code
+        type: string
+
+    -   name: slrrdef_room_number
+        sql: slrrdef_room_number
+        type: string
+        primary_key: true
+
+    -   name: slrrdef_bldg_code
+        sql: slrrdef_bldg_code
+        type: string
+        primary_key: true
+
+    measures: []
+
+    pre_aggregations: []

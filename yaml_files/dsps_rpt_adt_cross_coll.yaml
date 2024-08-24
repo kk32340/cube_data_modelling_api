@@ -1,0 +1,51 @@
+cubes:
+    name: dsps_rpt_adt_cross_coll
+
+    sql_table: odsmgr_cust.dsps_rpt_adt_cross_coll
+
+    joins: []
+
+    dimensions:
+    -   name: term_code
+        sql: term_code
+        type: string
+
+    -   name: service_desc
+        sql: service_desc
+        type: string
+
+    -   name: service_college
+        sql: service_college
+        type: string
+
+    -   name: service_code
+        sql: service_code
+        type: string
+
+    -   name: program_college
+        sql: program_college
+        type: string
+
+    -   name: name
+        sql: name
+        type: string
+
+    -   name: id
+        sql: id
+        type: string
+
+    -   name: disa_desc
+        sql: disa_desc
+        type: string
+
+    -   name: disa_code
+        sql: disa_code
+        type: string
+
+    -   name: academic_year
+        sql: academic_year
+        type: string
+
+    measures: []
+
+    pre_aggregations: []

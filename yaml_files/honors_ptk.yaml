@@ -1,0 +1,223 @@
+cubes:
+    name: honors_ptk
+
+    sql_table: odsmgr_cust.honors_ptk
+
+    joins: []
+
+    dimensions:
+    -   name: term_age
+        sql: term_age
+        type: string
+
+    -   name: telepone
+        sql: telepone
+        type: string
+
+    -   name: transferrable_credits
+        sql: transferrable_credits
+        type: string
+
+    -   name: student_population_desc
+        sql: student_population_desc
+        type: string
+
+    -   name: student_population
+        sql: student_population
+        type: string
+
+    -   name: person_uid
+        sql: person_uid
+        type: string
+
+    -   name: privacy
+        sql: privacy
+        type: string
+
+    -   name: major_desc
+        sql: major_desc
+        type: string
+
+    -   name: major_code
+        sql: major_code
+        type: string
+
+    -   name: last_name
+        sql: last_name
+        type: string
+
+    -   name: middle_name
+        sql: middle_name
+        type: string
+
+    -   name: id
+        sql: id
+        type: string
+
+    -   name: first_name
+        sql: first_name
+        type: string
+
+    -   name: gender
+        sql: gender
+        type: string
+
+    -   name: ethnicity_desc
+        sql: ethnicity_desc
+        type: string
+
+    -   name: ethnicity_code
+        sql: ethnicity_code
+        type: string
+
+    -   name: enrl_current_units_pc
+        sql: enrl_current_units_pc
+        type: string
+
+    -   name: enrl_current_units_cc
+        sql: enrl_current_units_cc
+        type: string
+
+    -   name: enrl_current_units_bc
+        sql: enrl_current_units_bc
+        type: string
+
+    -   name: enrl_current_enroll_pc
+        sql: enrl_current_enroll_pc
+        type: string
+
+    -   name: enrl_current_enroll_cc
+        sql: enrl_current_enroll_cc
+        type: string
+
+    -   name: enrl_current_enroll_bc
+        sql: enrl_current_enroll_bc
+        type: string
+
+    -   name: degree_appl_credits
+        sql: degree_appl_credits
+        type: string
+
+    -   name: email_addr
+        sql: email_addr
+        type: string
+
+    -   name: cum_units_earned_pc
+        sql: cum_units_earned_pc
+        type: string
+
+    -   name: cum_units_earned_cc
+        sql: cum_units_earned_cc
+        type: string
+
+    -   name: cum_units_earned_bc
+        sql: cum_units_earned_bc
+        type: string
+
+    -   name: cum_units_att_pc
+        sql: cum_units_att_pc
+        type: string
+
+    -   name: cum_units_att_cc
+        sql: cum_units_att_cc
+        type: string
+
+    -   name: cum_units_att_bc
+        sql: cum_units_att_bc
+        type: string
+
+    -   name: cum_quality_pts_pc
+        sql: cum_quality_pts_pc
+        type: string
+
+    -   name: cum_quality_pts_cc
+        sql: cum_quality_pts_cc
+        type: string
+
+    -   name: cum_quality_pts_bc
+        sql: cum_quality_pts_bc
+        type: string
+
+    -   name: cum_grade_pts_pc
+        sql: cum_grade_pts_pc
+        type: string
+
+    -   name: cum_grade_pts_cc
+        sql: cum_grade_pts_cc
+        type: string
+
+    -   name: cum_grade_pts_bc
+        sql: cum_grade_pts_bc
+        type: string
+
+    -   name: cum_gpa_inst_pc
+        sql: cum_gpa_inst_pc
+        type: string
+
+    -   name: cum_gpa_inst_cc
+        sql: cum_gpa_inst_cc
+        type: string
+
+    -   name: cum_gpa_inst_bc
+        sql: cum_gpa_inst_bc
+        type: string
+
+    -   name: cum_gpa_credits_pc
+        sql: cum_gpa_credits_pc
+        type: string
+
+    -   name: cum_gpa_credits_cc
+        sql: cum_gpa_credits_cc
+        type: string
+
+    -   name: cum_gpa_credits_bc
+        sql: cum_gpa_credits_bc
+        type: string
+
+    -   name: education_level_desc
+        sql: education_level_desc
+        type: string
+
+    -   name: education_level
+        sql: education_level
+        type: string
+
+    -   name: birth
+        sql: birth
+        type: time
+
+    -   name: college
+        sql: college
+        type: string
+
+    -   name: addr_zip
+        sql: addr_zip
+        type: string
+
+    -   name: addr_state
+        sql: addr_state
+        type: string
+
+    -   name: addr_line3
+        sql: addr_line3
+        type: string
+
+    -   name: addr_line2
+        sql: addr_line2
+        type: string
+
+    -   name: addr_line1
+        sql: addr_line1
+        type: string
+
+    -   name: addr_city
+        sql: addr_city
+        type: string
+
+    -   name: academic_period
+        sql: academic_period
+        type: string
+
+    measures: []
+
+    pre_aggregations: []

@@ -1,0 +1,238 @@
+cubes:
+    name: ir_course_catalog
+
+    sql_table: odsmgr_cust.ir_course_catalog
+
+    joins:
+    -   name: ir_section
+        sql: '{CUBE}.academic_period = ir_section.academic_period AND {CUBE}.subject
+            = ir_section.subject AND {CUBE}.course_number = ir_section.course_number'
+        relationship: one_to_many
+
+    dimensions:
+    -   name: taxonomy_of_program_desc
+        sql: taxonomy_of_program_desc
+        type: string
+
+    -   name: taxonomy_of_program_code
+        sql: taxonomy_of_program_code
+        type: string
+
+    -   name: subject_desc
+        sql: subject_desc
+        type: string
+
+    -   name: title_short_desc
+        sql: title_short_desc
+        type: string
+
+    -   name: special_class_status
+        sql: special_class_status
+        type: string
+
+    -   name: repeat_status_desc
+        sql: repeat_status_desc
+        type: string
+
+    -   name: repeat_status_code
+        sql: repeat_status_code
+        type: string
+
+    -   name: status_desc
+        sql: status_desc
+        type: string
+
+    -   name: status
+        sql: status
+        type: string
+
+    -   name: program_classification_desc
+        sql: program_classification_desc
+        type: string
+
+    -   name: program_classification
+        sql: program_classification
+        type: string
+
+    -   name: prior_to_coll_level
+        sql: prior_to_coll_level
+        type: string
+
+    -   name: other_min
+        sql: other_min
+        type: string
+
+    -   name: other_max
+        sql: other_max
+        type: string
+
+    -   name: program_status
+        sql: program_status
+        type: string
+
+    -   name: occupational_course_desc
+        sql: occupational_course_desc
+        type: string
+
+    -   name: occupational_course_code
+        sql: occupational_course_code
+        type: string
+
+    -   name: number_of_repeats_allowed
+        sql: number_of_repeats_allowed
+        type: string
+
+    -   name: non_credit_cat
+        sql: non_credit_cat
+        type: string
+
+    -   name: lecture_min
+        sql: lecture_min
+        type: string
+
+    -   name: lecture_max
+        sql: lecture_max
+        type: string
+
+    -   name: lab_min
+        sql: lab_min
+        type: string
+
+    -   name: lab_max
+        sql: lab_max
+        type: string
+
+    -   name: funding_code
+        sql: funding_code
+        type: string
+
+    -   name: division_desc
+        sql: division_desc
+        type: string
+
+    -   name: division
+        sql: division
+        type: string
+
+    -   name: department_desc
+        sql: department_desc
+        type: string
+
+    -   name: department
+        sql: department
+        type: string
+
+    -   name: default_grade_type_desc
+        sql: default_grade_type_desc
+        type: string
+
+    -   name: default_grade_type
+        sql: default_grade_type
+        type: string
+
+    -   name: credit_min
+        sql: credit_min
+        type: string
+
+    -   name: credit_max
+        sql: credit_max
+        type: string
+
+    -   name: course_prereqs_count
+        sql: course_prereqs_count
+        type: string
+
+    -   name: course_identification
+        sql: course_identification
+        type: string
+
+    -   name: course_credit_category
+        sql: course_credit_category
+        type: string
+
+    -   name: course_coreq_count
+        sql: course_coreq_count
+        type: string
+
+    -   name: course_classification_desc
+        sql: course_classification_desc
+        type: string
+
+    -   name: course_classification
+        sql: course_classification
+        type: string
+
+    -   name: cal_articulation_seq
+        sql: cal_articulation_seq
+        type: string
+
+    -   name: cal_articulation_number
+        sql: cal_articulation_number
+        type: string
+
+    -   name: course_approval_desc
+        sql: course_approval_desc
+        type: string
+
+    -   name: course_approval
+        sql: course_approval
+        type: string
+
+    -   name: cooperative_education_ind
+        sql: cooperative_education_ind
+        type: string
+
+    -   name: control_number
+        sql: control_number
+        type: string
+
+    -   name: contact_min
+        sql: contact_min
+        type: string
+
+    -   name: contact_max
+        sql: contact_max
+        type: string
+
+    -   name: basic_skills_ind
+        sql: basic_skills_ind
+        type: string
+
+    -   name: college_desc
+        sql: college_desc
+        type: string
+
+    -   name: college
+        sql: college
+        type: string
+
+    -   name: credit_status_code
+        sql: credit_status_code
+        type: string
+
+    -   name: active_course_ind
+        sql: active_course_ind
+        type: string
+
+    -   name: academic_period_desc
+        sql: academic_period_desc
+        type: string
+
+    -   name: course_number
+        sql: course_number
+        type: string
+        primary_key: true
+
+    -   name: subject
+        sql: subject
+        type: string
+        primary_key: true
+
+    -   name: academic_period
+        sql: academic_period
+        type: string
+        primary_key: true
+
+    measures: []
+
+    pre_aggregations: []

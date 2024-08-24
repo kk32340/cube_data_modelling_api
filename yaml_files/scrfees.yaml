@@ -1,0 +1,153 @@
+cubes:
+    name: scrfees
+
+    sql_table: saturn.scrfees
+
+    joins:
+    -   name: course_catalog
+        sql: '{CUBE}.scrfees_subj_code = course_catalog.subject AND {CUBE}.scrfees_crse_numb
+            = course_catalog.course_number'
+        relationship: one_to_many
+
+    dimensions:
+    -   name: scrfees_vpdi_code
+        sql: scrfees_vpdi_code
+        type: string
+
+    -   name: scrfees_data_origin
+        sql: scrfees_data_origin
+        type: string
+
+    -   name: scrfees_version
+        sql: scrfees_version
+        type: string
+
+    -   name: scrfees_surrogate_id
+        sql: scrfees_surrogate_id
+        type: string
+
+    -   name: scrfees_user_id
+        sql: scrfees_user_id
+        type: string
+
+    -   name: scrfees_seq_no
+        sql: scrfees_seq_no
+        type: string
+
+    -   name: scrfees_vtyp_code
+        sql: scrfees_vtyp_code
+        type: string
+
+    -   name: scrfees_chrt_code
+        sql: scrfees_chrt_code
+        type: string
+
+    -   name: scrfees_atts_code
+        sql: scrfees_atts_code
+        type: string
+
+    -   name: scrfees_styp_code
+        sql: scrfees_styp_code
+        type: string
+
+    -   name: scrfees_rate_code
+        sql: scrfees_rate_code
+        type: string
+
+    -   name: scrfees_clas_code
+        sql: scrfees_clas_code
+        type: string
+
+    -   name: scrfees_resd_code
+        sql: scrfees_resd_code
+        type: string
+
+    -   name: scrfees_prim_sec_cde
+        sql: scrfees_prim_sec_cde
+        type: string
+
+    -   name: scrfees_dept_code
+        sql: scrfees_dept_code
+        type: string
+
+    -   name: scrfees_majr_code
+        sql: scrfees_majr_code
+        type: string
+
+    -   name: scrfees_lfst_code
+        sql: scrfees_lfst_code
+        type: string
+
+    -   name: scrfees_styp_code_curric
+        sql: scrfees_styp_code_curric
+        type: string
+
+    -   name: scrfees_rate_code_curric
+        sql: scrfees_rate_code_curric
+        type: string
+
+    -   name: scrfees_term_code_admit
+        sql: scrfees_term_code_admit
+        type: string
+
+    -   name: scrfees_degc_code
+        sql: scrfees_degc_code
+        type: string
+
+    -   name: scrfees_program
+        sql: scrfees_program
+        type: string
+
+    -   name: scrfees_camp_code
+        sql: scrfees_camp_code
+        type: string
+
+    -   name: scrfees_coll_code
+        sql: scrfees_coll_code
+        type: string
+
+    -   name: scrfees_levl_code_stdn
+        sql: scrfees_levl_code_stdn
+        type: string
+
+    -   name: scrfees_subj_code
+        sql: scrfees_subj_code
+        type: string
+        primary_key: true
+
+    -   name: scrfees_ftyp_code
+        sql: scrfees_ftyp_code
+        type: string
+
+    -   name: scrfees_fee_ind_ind
+        sql: scrfees_fee_ind_ind
+        type: string
+
+    -   name: scrfees_fee_ind
+        sql: scrfees_fee_ind
+        type: string
+
+    -   name: scrfees_fee_amount
+        sql: scrfees_fee_amount
+        type: string
+
+    -   name: scrfees_eff_term
+        sql: scrfees_eff_term
+        type: string
+
+    -   name: scrfees_detl_code
+        sql: scrfees_detl_code
+        type: string
+
+    -   name: scrfees_crse_numb
+        sql: scrfees_crse_numb
+        type: string
+        primary_key: true
+
+    -   name: scrfees_activity_date
+        sql: scrfees_activity_date
+        type: time
+
+    measures: []
+
+    pre_aggregations: []

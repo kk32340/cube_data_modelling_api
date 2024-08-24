@@ -1,0 +1,31 @@
+cubes:
+    name: registration_event_dates
+
+    sql_table: odsmgr_cust.registration_event_dates
+
+    joins: []
+
+    dimensions:
+    -   name: event_desc
+        sql: event_desc
+        type: string
+
+    -   name: event
+        sql: event
+        type: string
+
+    -   name: date_val
+        sql: date_val
+        type: time
+
+    -   name: college
+        sql: college
+        type: string
+
+    -   name: academic_period
+        sql: academic_period
+        type: string
+
+    measures: []
+
+    pre_aggregations: []

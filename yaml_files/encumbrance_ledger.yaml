@@ -1,0 +1,67 @@
+cubes:
+    name: encumbrance_ledger
+
+    sql_table: odsmgr.encumbrance_ledger
+
+    joins:
+    -   name: encumbrance_accounting
+        sql: '{CUBE}.encumbrance_number = encumbrance_accounting.encumbrance_number
+            AND {CUBE}.sequence_number = encumbrance_accounting.sequence_number AND
+            {CUBE}.item = encumbrance_accounting.item'
+        relationship: one_to_many
+
+    dimensions:
+    -   name: sequence_number
+        sql: sequence_number
+        type: string
+        primary_key: true
+
+    -   name: process_group
+        sql: process_group
+        type: string
+
+    -   name: original_amount
+        sql: original_amount
+        type: string
+
+    -   name: multi_source_desc
+        sql: multi_source_desc
+        type: string
+
+    -   name: multi_source
+        sql: multi_source
+        type: string
+
+    -   name: item
+        sql: item
+        type: string
+        primary_key: true
+
+    -   name: fiscal_year
+        sql: fiscal_year
+        type: string
+
+    -   name: fiscal_period
+        sql: fiscal_period
+        type: string
+
+    -   name: encumbrance_number
+        sql: encumbrance_number
+        type: string
+        primary_key: true
+
+    -   name: curr_liquidations
+        sql: curr_liquidations
+        type: string
+
+    -   name: curr_adjustments
+        sql: curr_adjustments
+        type: string
+
+    -   name: administrative_group
+        sql: administrative_group
+        type: string
+
+    measures: []
+
+    pre_aggregations: []

@@ -1,0 +1,219 @@
+cubes:
+    name: aebg_courses_students
+
+    sql_table: odsmgr_cust.aebg_courses_students
+
+    joins: []
+
+    dimensions:
+    -   name: program
+        sql: program
+        type: string
+
+    -   name: program_area
+        sql: program_area
+        type: string
+
+    -   name: contact hours
+        sql: contact hours
+        type: string
+
+    -   name: credits_earned
+        sql: credits_earned
+        type: string
+
+    -   name: completed_course
+        sql: completed_course
+        type: string
+
+    -   name: enrolled_in_course
+        sql: enrolled_in_course
+        type: string
+
+    -   name: employment status
+        sql: employment status
+        type: string
+
+    -   name: unspecified
+        sql: unspecified
+        type: string
+
+    -   name: ged
+        sql: ged
+        type: string
+
+    -   name: college or professional degree
+        sql: college or professional degree
+        type: string
+
+    -   name: some college
+        sql: some college
+        type: string
+
+    -   name: high school diploma or alt
+        sql: high school diploma or alt
+        type: string
+
+    -   name: not a high school grad
+        sql: not a high school grad
+        type: string
+
+    -   name: grades 9-12
+        sql: grades 9-12
+        type: string
+
+    -   name: grades 6-8
+        sql: grades 6-8
+        type: string
+
+    -   name: grades 1-5
+        sql: grades 1-5
+        type: string
+
+    -   name: no schooling
+        sql: no schooling
+        type: string
+
+    -   name: long term unemployed
+        sql: long term unemployed
+        type: string
+
+    -   name: veteran
+        sql: veteran
+        type: string
+
+    -   name: adults in foster care
+        sql: adults in foster care
+        type: string
+
+    -   name: migrant or seasonal worker
+        sql: migrant or seasonal worker
+        type: string
+
+    -   name: low-income
+        sql: low-income
+        type: string
+
+    -   name: cb22_non_credit_cat
+        sql: cb22_non_credit_cat
+        type: string
+
+    -   name: cb21_prior_to_coll_level
+        sql: cb21_prior_to_coll_level
+        type: string
+
+    -   name: cb09_sam_code
+        sql: cb09_sam_code
+        type: string
+
+    -   name: cb08_basic_skills_code
+        sql: cb08_basic_skills_code
+        type: string
+
+    -   name: cb05_transfer_status
+        sql: cb05_transfer_status
+        type: string
+
+    -   name: cb04_credit_status
+        sql: cb04_credit_status
+        type: string
+
+    -   name: course_reference_number
+        sql: course_reference_number
+        type: string
+
+    -   name: course_identification
+        sql: course_identification
+        type: string
+
+    -   name: homeless
+        sql: homeless
+        type: string
+
+    -   name: ex-offender
+        sql: ex-offender
+        type: string
+
+    -   name: exhausting tanf within 2 years
+        sql: exhausting tanf within 2 years
+        type: string
+
+    -   name: english learner
+        sql: english learner
+        type: string
+
+    -   name: displaced homemaker
+        sql: displaced homemaker
+        type: string
+
+    -   name: persons with disabilities
+        sql: persons with disabilities
+        type: string
+
+    -   name: 65 and over
+        sql: 65 and over
+        type: string
+
+    -   name: single parent
+        sql: single parent
+        type: string
+
+    -   name: 55-64
+        sql: 55-64
+        type: string
+
+    -   name: 45-54
+        sql: 45-54
+        type: string
+
+    -   name: 35-44
+        sql: 35-44
+        type: string
+
+    -   name: 22-34
+        sql: 22-34
+        type: string
+
+    -   name: begin_term
+        sql: begin_term
+        type: string
+
+    -   name: 18-21
+        sql: 18-21
+        type: string
+
+    -   name: age
+        sql: age
+        type: string
+
+    -   name: gender
+        sql: gender
+        type: string
+
+    -   name: race
+        sql: race
+        type: string
+
+    -   name: name
+        sql: name
+        type: string
+
+    -   name: id
+        sql: id
+        type: string
+
+    -   name: person_uid
+        sql: person_uid
+        type: string
+
+    -   name: academic_period
+        sql: academic_period
+        type: string
+
+    -   name: college
+        sql: college
+        type: string
+
+    measures: []
+
+    pre_aggregations: []

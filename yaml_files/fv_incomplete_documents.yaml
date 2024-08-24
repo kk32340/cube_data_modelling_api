@@ -1,0 +1,43 @@
+cubes:
+    name: fv_incomplete_documents
+
+    sql_table: odsmgr_cust.fv_incomplete_documents
+
+    joins: []
+
+    dimensions:
+    -   name: vendor_name
+        sql: vendor_name
+        type: string
+
+    -   name: user_id
+        sql: user_id
+        type: string
+
+    -   name: transaction_date
+        sql: transaction_date
+        type: time
+
+    -   name: seq_num
+        sql: seq_num
+        type: string
+
+    -   name: orgn_code
+        sql: orgn_code
+        type: string
+
+    -   name: doc_num
+        sql: doc_num
+        type: string
+
+    -   name: amt
+        sql: amt
+        type: string
+
+    -   name: activity_date
+        sql: activity_date
+        type: time
+
+    measures: []
+
+    pre_aggregations: []

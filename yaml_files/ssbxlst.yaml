@@ -1,0 +1,70 @@
+cubes:
+    name: ssbxlst
+
+    sql_table: saturn.ssbxlst
+
+    joins:
+    -   name: ir_section
+        sql: '{CUBE}.ssbxlst_xlst_group = ir_section.xlst_group AND {CUBE}.ssbxlst_term_code
+            = ir_section.academic_period'
+        relationship: zero_to_many
+
+    -   name: ssbxlst_stusta
+        sql: '{CUBE}.ssbxlst_user_id = ssbxlst_stusta.ssbxlst_user_id'
+        relationship: one_to_one
+
+    dimensions:
+    -   name: ssbxlst_vpdi_code
+        sql: ssbxlst_vpdi_code
+        type: string
+
+    -   name: ssbxlst_data_origin
+        sql: ssbxlst_data_origin
+        type: string
+
+    -   name: ssbxlst_user_id
+        sql: ssbxlst_user_id
+        type: string
+        primary_key: true
+
+    -   name: ssbxlst_version
+        sql: ssbxlst_version
+        type: string
+
+    -   name: ssbxlst_surrogate_id
+        sql: ssbxlst_surrogate_id
+        type: string
+
+    -   name: ssbxlst_xlst_group
+        sql: ssbxlst_xlst_group
+        type: string
+        primary_key: true
+
+    -   name: ssbxlst_term_code
+        sql: ssbxlst_term_code
+        type: string
+        primary_key: true
+
+    -   name: ssbxlst_seats_avail
+        sql: ssbxlst_seats_avail
+        type: string
+
+    -   name: ssbxlst_max_enrl
+        sql: ssbxlst_max_enrl
+        type: string
+
+    -   name: ssbxlst_enrl
+        sql: ssbxlst_enrl
+        type: string
+
+    -   name: ssbxlst_desc
+        sql: ssbxlst_desc
+        type: string
+
+    -   name: ssbxlst_activity_date
+        sql: ssbxlst_activity_date
+        type: time
+
+    measures: []
+
+    pre_aggregations: []

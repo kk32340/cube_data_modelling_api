@@ -1,0 +1,43 @@
+cubes:
+    name: program_info
+
+    sql_table: odsmgr_cust.program_info
+
+    joins: []
+
+    dimensions:
+    -   name: program_code
+        sql: program_code
+        type: string
+
+    -   name: major_term_code_eff
+        sql: major_term_code_eff
+        type: string
+
+    -   name: is_transfer
+        sql: is_transfer
+        type: string
+
+    -   name: cip
+        sql: cip
+        type: string
+
+    -   name: degree_code
+        sql: degree_code
+        type: string
+
+    -   name: major_desc
+        sql: major_desc
+        type: string
+
+    -   name: major
+        sql: major
+        type: string
+
+    -   name: program_desc
+        sql: program_desc
+        type: string
+
+    measures: []
+
+    pre_aggregations: []

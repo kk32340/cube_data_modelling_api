@@ -1,0 +1,71 @@
+cubes:
+    name: cust_eops
+
+    sql_table: odsmgr_cust.cust_eops
+
+    joins: []
+
+    dimensions:
+    -   name: person_uid
+        sql: person_uid
+        type: string
+
+    -   name: withdrawal_reason_desc
+        sql: withdrawal_reason_desc
+        type: string
+
+    -   name: withdrawal_reason_code
+        sql: withdrawal_reason_code
+        type: string
+
+    -   name: trac_desc
+        sql: trac_desc
+        type: string
+
+    -   name: trac_code
+        sql: trac_code
+        type: string
+
+    -   name: state_fa_elig_desc
+        sql: state_fa_elig_desc
+        type: string
+
+    -   name: state_fa_elig_code
+        sql: state_fa_elig_code
+        type: string
+
+    -   name: planned_credits
+        sql: planned_credits
+        type: string
+
+    -   name: eops_status_desc
+        sql: eops_status_desc
+        type: string
+
+    -   name: eops_status_code
+        sql: eops_status_code
+        type: string
+
+    -   name: accepted_date
+        sql: accepted_date
+        type: time
+
+    -   name: accepted_academic_period
+        sql: accepted_academic_period
+        type: string
+
+    -   name: effective_academic_period
+        sql: effective_academic_period
+        type: string
+
+    -   name: id
+        sql: id
+        type: string
+
+    -   name: name
+        sql: name
+        type: string
+
+    measures: []
+
+    pre_aggregations: []

@@ -1,0 +1,183 @@
+cubes:
+    name: contact
+
+    sql_table: odsmgr.contact
+
+    joins:
+    -   name: person_stusta
+        sql: '{CUBE}.person_uid = person_stusta.person_uid'
+        relationship: one_to_many
+
+    dimensions:
+    -   name: sub_academic_period_desc
+        sql: sub_academic_period_desc
+        type: string
+
+    -   name: sub_academic_period
+        sql: sub_academic_period
+        type: string
+
+    -   name: recruiter_uid
+        sql: recruiter_uid
+        type: string
+
+    -   name: recruiter_name
+        sql: recruiter_name
+        type: string
+
+    -   name: recruiter_id
+        sql: recruiter_id
+        type: string
+
+    -   name: program_desc
+        sql: program_desc
+        type: string
+
+    -   name: program_classification_desc
+        sql: program_classification_desc
+        type: string
+
+    -   name: program_classification
+        sql: program_classification
+        type: string
+
+    -   name: person_uid
+        sql: person_uid
+        type: string
+        primary_key: true
+
+    -   name: program
+        sql: program
+        type: string
+
+    -   name: process_group
+        sql: process_group
+        type: string
+
+    -   name: major_desc
+        sql: major_desc
+        type: string
+
+    -   name: major
+        sql: major
+        type: string
+
+    -   name: name
+        sql: name
+        type: string
+
+    -   name: multi_source_desc
+        sql: multi_source_desc
+        type: string
+
+    -   name: multi_source
+        sql: multi_source
+        type: string
+
+    -   name: interviewer_name
+        sql: interviewer_name
+        type: string
+
+    -   name: interviewer_id
+        sql: interviewer_id
+        type: string
+
+    -   name: inbound_outbound_ind
+        sql: inbound_outbound_ind
+        type: string
+
+    -   name: id
+        sql: id
+        type: string
+
+    -   name: interest_status_desc
+        sql: interest_status_desc
+        type: string
+
+    -   name: interest_status
+        sql: interest_status
+        type: string
+
+    -   name: degree_desc
+        sql: degree_desc
+        type: string
+
+    -   name: degree
+        sql: degree
+        type: string
+
+    -   name: contact_type_source_desc
+        sql: contact_type_source_desc
+        type: string
+
+    -   name: contact_type_source
+        sql: contact_type_source
+        type: string
+
+    -   name: contact_type_desc
+        sql: contact_type_desc
+        type: string
+
+    -   name: contact_type
+        sql: contact_type
+        type: string
+
+    -   name: contact_to_time
+        sql: contact_to_time
+        type: string
+
+    -   name: contact_status_desc
+        sql: contact_status_desc
+        type: string
+
+    -   name: contact_status
+        sql: contact_status
+        type: string
+
+    -   name: contact_score
+        sql: contact_score
+        type: string
+
+    -   name: contact_from_time
+        sql: contact_from_time
+        type: string
+
+    -   name: contact_date
+        sql: contact_date
+        type: time
+
+    -   name: contact_complete
+        sql: contact_complete
+        type: string
+
+    -   name: appointment_recruiter_desc
+        sql: appointment_recruiter_desc
+        type: string
+
+    -   name: appointment_recruiter
+        sql: appointment_recruiter
+        type: string
+
+    -   name: administrative_group
+        sql: administrative_group
+        type: string
+
+    -   name: academic_year_desc
+        sql: academic_year_desc
+        type: string
+
+    -   name: academic_year
+        sql: academic_year
+        type: string
+
+    -   name: academic_period
+        sql: academic_period
+        type: string
+
+    -   name: academic_period_desc
+        sql: academic_period_desc
+        type: string
+
+    measures: []
+
+    pre_aggregations: []

@@ -1,0 +1,31 @@
+cubes:
+    name: application_results
+
+    sql_table: odsmgr_cust.application_results
+
+    joins: []
+
+    dimensions:
+    -   name: status
+        sql: status
+        type: string
+
+    -   name: person_uid
+        sql: person_uid
+        type: string
+
+    -   name: id
+        sql: id
+        type: string
+
+    -   name: college
+        sql: college
+        type: string
+
+    -   name: academic_period
+        sql: academic_period
+        type: string
+
+    measures: []
+
+    pre_aggregations: []

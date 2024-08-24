@@ -1,0 +1,211 @@
+cubes:
+    name: fgbtrnh@prod.kccd.edu
+
+    sql_table: fimsarc.fgbtrnh@prod.kccd.edu
+
+    joins: []
+
+    dimensions:
+    -   name: fgbtrnh_acct_code
+        sql: fgbtrnh_acct_code
+        type: string
+
+    -   name: fgbtrnh_orgn_code
+        sql: fgbtrnh_orgn_code
+        type: string
+
+    -   name: fgbtrnh_fund_code
+        sql: fgbtrnh_fund_code
+        type: string
+
+    -   name: fgbtrnh_acci_code
+        sql: fgbtrnh_acci_code
+        type: string
+
+    -   name: fgbtrnh_fsyr_code
+        sql: fgbtrnh_fsyr_code
+        type: string
+
+    -   name: fgbtrnh_coas_code
+        sql: fgbtrnh_coas_code
+        type: string
+
+    -   name: fgbtrnh_bud_id
+        sql: fgbtrnh_bud_id
+        type: string
+
+    -   name: fgbtrnh_bank_code
+        sql: fgbtrnh_bank_code
+        type: string
+
+    -   name: fgbtrnh_dr_cr_ind
+        sql: fgbtrnh_dr_cr_ind
+        type: string
+
+    -   name: fgbtrnh_trans_desc
+        sql: fgbtrnh_trans_desc
+        type: string
+
+    -   name: fgbtrnh_trans_amt
+        sql: fgbtrnh_trans_amt
+        type: string
+
+    -   name: fgbtrnh_trans_date
+        sql: fgbtrnh_trans_date
+        type: time
+
+    -   name: fgbtrnh_doc_ref_num
+        sql: fgbtrnh_doc_ref_num
+        type: string
+
+    -   name: fgbtrnh_user_id
+        sql: fgbtrnh_user_id
+        type: string
+
+    -   name: fgbtrnh_activity_date
+        sql: fgbtrnh_activity_date
+        type: time
+
+    -   name: fgbtrnh_rucl_code
+        sql: fgbtrnh_rucl_code
+        type: string
+
+    -   name: fgbtrnh_serial_num
+        sql: fgbtrnh_serial_num
+        type: string
+
+    -   name: fgbtrnh_reversal_ind
+        sql: fgbtrnh_reversal_ind
+        type: string
+
+    -   name: fgbtrnh_submission_number
+        sql: fgbtrnh_submission_number
+        type: string
+
+    -   name: fgbtrnh_doc_seq_code
+        sql: fgbtrnh_doc_seq_code
+        type: string
+
+    -   name: fgbtrnh_seq_num
+        sql: fgbtrnh_seq_num
+        type: string
+
+    -   name: fgbtrnh_item_num
+        sql: fgbtrnh_item_num
+        type: string
+
+    -   name: fgbtrnh_doc_code
+        sql: fgbtrnh_doc_code
+        type: string
+
+    -   name: fgbtrnh_fund_code_pool
+        sql: fgbtrnh_fund_code_pool
+        type: string
+
+    -   name: fgbtrnh_coas_code_pool
+        sql: fgbtrnh_coas_code_pool
+        type: string
+
+    -   name: fgbtrnh_sum_post_doc_code
+        sql: fgbtrnh_sum_post_doc_code
+        type: string
+
+    -   name: fgbtrnh_exchange_diff
+        sql: fgbtrnh_exchange_diff
+        type: string
+
+    -   name: fgbtrnh_exchange_amt
+        sql: fgbtrnh_exchange_amt
+        type: string
+
+    -   name: fgbtrnh_convert_amt
+        sql: fgbtrnh_convert_amt
+        type: string
+
+    -   name: fgbtrnh_curr_code
+        sql: fgbtrnh_curr_code
+        type: string
+
+    -   name: fgbtrnh_abal_override
+        sql: fgbtrnh_abal_override
+        type: string
+
+    -   name: fgbtrnh_accrual_ind
+        sql: fgbtrnh_accrual_ind
+        type: string
+
+    -   name: fgbtrnh_budget_period
+        sql: fgbtrnh_budget_period
+        type: string
+
+    -   name: fgbtrnh_vendor_pidm
+        sql: fgbtrnh_vendor_pidm
+        type: string
+
+    -   name: fgbtrnh_encb_type
+        sql: fgbtrnh_encb_type
+        type: string
+
+    -   name: fgbtrnh_cmt_pct
+        sql: fgbtrnh_cmt_pct
+        type: string
+
+    -   name: fgbtrnh_cmt_type
+        sql: fgbtrnh_cmt_type
+        type: string
+
+    -   name: fgbtrnh_bud_dispn
+        sql: fgbtrnh_bud_dispn
+        type: string
+
+    -   name: fgbtrnh_dist_pct
+        sql: fgbtrnh_dist_pct
+        type: string
+
+    -   name: fgbtrnh_auto_jrnl_id
+        sql: fgbtrnh_auto_jrnl_id
+        type: string
+
+    -   name: fgbtrnh_prjd_code
+        sql: fgbtrnh_prjd_code
+        type: string
+
+    -   name: fgbtrnh_encd_action_ind
+        sql: fgbtrnh_encd_action_ind
+        type: string
+
+    -   name: fgbtrnh_encd_seq_num
+        sql: fgbtrnh_encd_seq_num
+        type: string
+
+    -   name: fgbtrnh_encd_item_num
+        sql: fgbtrnh_encd_item_num
+        type: string
+
+    -   name: fgbtrnh_encd_num
+        sql: fgbtrnh_encd_num
+        type: string
+
+    -   name: fgbtrnh_dep_num
+        sql: fgbtrnh_dep_num
+        type: string
+
+    -   name: fgbtrnh_posting_period
+        sql: fgbtrnh_posting_period
+        type: string
+
+    -   name: fgbtrnh_locn_code
+        sql: fgbtrnh_locn_code
+        type: string
+
+    -   name: fgbtrnh_actv_code
+        sql: fgbtrnh_actv_code
+        type: string
+
+    -   name: fgbtrnh_prog_code
+        sql: fgbtrnh_prog_code
+        type: string
+
+    measures: []
+
+    pre_aggregations: []

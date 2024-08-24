@@ -1,0 +1,376 @@
+cubes:
+    name: fixed_asset_item
+
+    sql_table: odsmgr.fixed_asset_item
+
+    joins:
+    -   name: grant_view
+        sql: '{CUBE}.grant_id = grant_view.grant_id'
+        relationship: one_to_many
+
+    -   name: location_hierarchy
+        sql: '{CUBE}.chart_of_accounts = location_hierarchy.chart_of_accounts AND
+            {CUBE}.location = location_hierarchy.location'
+        relationship: one_to_many
+
+    -   name: organization_hierarchy
+        sql: '{CUBE}.chart_of_accounts = organization_hierarchy.chart_of_accounts
+            AND {CUBE}.organization_code = organization_hierarchy.organization_code'
+        relationship: one_to_many
+
+    dimensions:
+    -   name: work_in_progress_ind
+        sql: work_in_progress_ind
+        type: string
+
+    -   name: vendor_uid
+        sql: vendor_uid
+        type: string
+
+    -   name: vendor_name
+        sql: vendor_name
+        type: string
+
+    -   name: vendor_id
+        sql: vendor_id
+        type: string
+
+    -   name: user_status_desc
+        sql: user_status_desc
+        type: string
+
+    -   name: user_status
+        sql: user_status
+        type: string
+
+    -   name: subordinate_type_desc
+        sql: subordinate_type_desc
+        type: string
+
+    -   name: subordinate_type
+        sql: subordinate_type
+        type: string
+
+    -   name: transfer_date
+        sql: transfer_date
+        type: time
+
+    -   name: total_original_cost_amount
+        sql: total_original_cost_amount
+        type: string
+
+    -   name: total_net_book_value_amount
+        sql: total_net_book_value_amount
+        type: string
+
+    -   name: titled_to_desc
+        sql: titled_to_desc
+        type: string
+
+    -   name: titled_to
+        sql: titled_to
+        type: string
+
+    -   name: source_document_type
+        sql: source_document_type
+        type: string
+
+    -   name: source_document_sub_number
+        sql: source_document_sub_number
+        type: string
+
+    -   name: source_document_seq_number
+        sql: source_document_seq_number
+        type: string
+
+    -   name: source_document_date
+        sql: source_document_date
+        type: time
+
+    -   name: source_document
+        sql: source_document
+        type: string
+
+    -   name: replacement_value_amount
+        sql: replacement_value_amount
+        type: string
+
+    -   name: receiver
+        sql: receiver
+        type: string
+
+    -   name: received_date
+        sql: received_date
+        type: time
+
+    -   name: purchase_order_item
+        sql: purchase_order_item
+        type: string
+
+    -   name: purchase_order
+        sql: purchase_order
+        type: string
+
+    -   name: serial_number
+        sql: serial_number
+        type: string
+
+    -   name: location_status
+        sql: location_status
+        type: string
+
+    -   name: person_uid
+        sql: person_uid
+        type: string
+
+    -   name: permanent_tag_number_date
+        sql: permanent_tag_number_date
+        type: time
+
+    -   name: permanent_tag_number
+        sql: permanent_tag_number
+        type: string
+
+    -   name: process_group
+        sql: process_group
+        type: string
+
+    -   name: origination_tag_number_primary
+        sql: origination_tag_number_primary
+        type: string
+
+    -   name: origination_tag_number_old
+        sql: origination_tag_number_old
+        type: string
+
+    -   name: origination_tag_number_date
+        sql: origination_tag_number_date
+        type: time
+
+    -   name: origination_tag_cancel_date
+        sql: origination_tag_cancel_date
+        type: time
+
+    -   name: original_cost_amount
+        sql: original_cost_amount
+        type: string
+
+    -   name: original_capitalized_amount
+        sql: original_capitalized_amount
+        type: string
+
+    -   name: organization_desc
+        sql: organization_desc
+        type: string
+
+    -   name: chart_of_accounts_status
+        sql: chart_of_accounts_status
+        type: string
+
+    -   name: organization_code
+        sql: organization_code
+        type: string
+        primary_key: true
+
+    -   name: market_value_amount
+        sql: market_value_amount
+        type: string
+
+    -   name: manufacturer
+        sql: manufacturer
+        type: string
+
+    -   name: make
+        sql: make
+        type: string
+
+    -   name: normal_useful_life
+        sql: normal_useful_life
+        type: string
+
+    -   name: net_book_value_amount
+        sql: net_book_value_amount
+        type: string
+
+    -   name: location_desc
+        sql: location_desc
+        type: string
+
+    -   name: organization_status
+        sql: organization_status
+        type: string
+
+    -   name: location
+        sql: location
+        type: string
+        primary_key: true
+
+    -   name: multi_source_desc
+        sql: multi_source_desc
+        type: string
+
+    -   name: last_inventory_date
+        sql: last_inventory_date
+        type: time
+
+    -   name: last_adjustment_date
+        sql: last_adjustment_date
+        type: time
+
+    -   name: multi_source
+        sql: multi_source
+        type: string
+
+    -   name: model
+        sql: model
+        type: string
+
+    -   name: in_service_date
+        sql: in_service_date
+        type: time
+
+    -   name: invoice_item
+        sql: invoice_item
+        type: string
+
+    -   name: invoice_date
+        sql: invoice_date
+        type: time
+
+    -   name: invoice
+        sql: invoice
+        type: string
+
+    -   name: method_of_disposal_desc
+        sql: method_of_disposal_desc
+        type: string
+
+    -   name: method_of_disposal
+        sql: method_of_disposal
+        type: string
+
+    -   name: method_of_acquisition_desc
+        sql: method_of_acquisition_desc
+        type: string
+
+    -   name: method_of_acquisition
+        sql: method_of_acquisition
+        type: string
+
+    -   name: full_name_lfmi
+        sql: full_name_lfmi
+        type: string
+
+    -   name: full_name_fmil
+        sql: full_name_fmil
+        type: string
+
+    -   name: id
+        sql: id
+        type: string
+
+    -   name: grant_title
+        sql: grant_title
+        type: string
+
+    -   name: grant_long_title
+        sql: grant_long_title
+        type: string
+
+    -   name: grant_id
+        sql: grant_id
+        type: string
+        primary_key: true
+
+    -   name: insurance_amount
+        sql: insurance_amount
+        type: string
+
+    -   name: disposal_date
+        sql: disposal_date
+        type: time
+
+    -   name: external_reference_number
+        sql: external_reference_number
+        type: string
+
+    -   name: chart_of_accounts_desc
+        sql: chart_of_accounts_desc
+        type: string
+
+    -   name: chart_of_accounts
+        sql: chart_of_accounts
+        type: string
+        primary_key: true
+
+    -   name: capitalization_date
+        sql: capitalization_date
+        type: time
+
+    -   name: book_value_amount
+        sql: book_value_amount
+        type: string
+
+    -   name: condition_desc
+        sql: condition_desc
+        type: string
+
+    -   name: condition
+        sql: condition
+        type: string
+
+    -   name: commodity_desc
+        sql: commodity_desc
+        type: string
+
+    -   name: commodity
+        sql: commodity
+        type: string
+
+    -   name: barcode_number
+        sql: barcode_number
+        type: string
+
+    -   name: asset_type_desc
+        sql: asset_type_desc
+        type: string
+
+    -   name: asset_type
+        sql: asset_type
+        type: string
+
+    -   name: asset_status_desc
+        sql: asset_status_desc
+        type: string
+
+    -   name: asset_status
+        sql: asset_status
+        type: string
+
+    -   name: asset_gift_ind
+        sql: asset_gift_ind
+        type: string
+
+    -   name: asset_desc
+        sql: asset_desc
+        type: string
+
+    -   name: administrative_group
+        sql: administrative_group
+        type: string
+
+    -   name: additional_serial_number
+        sql: additional_serial_number
+        type: string
+
+    -   name: acquisition_date
+        sql: acquisition_date
+        type: time
+
+    -   name: origination_tag_number
+        sql: origination_tag_number
+        type: string
+
+    measures: []
+
+    pre_aggregations: []

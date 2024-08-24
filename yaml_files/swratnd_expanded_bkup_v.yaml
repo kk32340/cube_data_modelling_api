@@ -1,0 +1,181 @@
+cubes:
+    name: swratnd_expanded_bkup_v
+
+    sql_table: odsmgr_cust.swratnd_expanded_bkup_v
+
+    joins:
+    -   name: swratnd_expanded
+        sql: '{CUBE}.swratnd_term_code = swratnd_expanded.swratnd_term_code AND {CUBE}.swratnd_crn
+            = swratnd_expanded.swratnd_crn'
+        relationship: zero_to_one
+
+    dimensions:
+    -   name: wsch_ind
+        sql: wsch_ind
+        type: string
+
+    -   name: wexp_ind
+        sql: wexp_ind
+        type: string
+
+    -   name: term_length_multiplier
+        sql: term_length_multiplier
+        type: string
+
+    -   name: swratnd_term_code
+        sql: swratnd_term_code
+        type: string
+        primary_key: true
+
+    -   name: swratnd_subj_code
+        sql: swratnd_subj_code
+        type: string
+
+    -   name: swratnd_seq_no
+        sql: swratnd_seq_no
+        type: string
+
+    -   name: swratnd_rsts_date
+        sql: swratnd_rsts_date
+        type: time
+
+    -   name: swratnd_rsts_code
+        sql: swratnd_rsts_code
+        type: string
+
+    -   name: swratnd_resd_code
+        sql: swratnd_resd_code
+        type: string
+
+    -   name: swratnd_report_no
+        sql: swratnd_report_no
+        type: string
+
+    -   name: swratnd_pidm
+        sql: swratnd_pidm
+        type: string
+
+    -   name: swratnd_period
+        sql: swratnd_period
+        type: string
+
+    -   name: swratnd_hours_attend
+        sql: swratnd_hours_attend
+        type: string
+
+    -   name: swratnd_gain_ind
+        sql: swratnd_gain_ind
+        type: string
+
+    -   name: swratnd_exclude_ind
+        sql: swratnd_exclude_ind
+        type: string
+
+    -   name: swratnd_crse_numb
+        sql: swratnd_crse_numb
+        type: string
+
+    -   name: swratnd_crn
+        sql: swratnd_crn
+        type: string
+        primary_key: true
+
+    -   name: swratnd_class_sort_key
+        sql: swratnd_class_sort_key
+        type: string
+
+    -   name: swratnd_camp_code
+        sql: swratnd_camp_code
+        type: string
+
+    -   name: swratnd_acyr_code
+        sql: swratnd_acyr_code
+        type: string
+
+    -   name: swratnd_activity_date
+        sql: swratnd_activity_date
+        type: time
+
+    -   name: swratnd_acct_code
+        sql: swratnd_acct_code
+        type: string
+
+    -   name: subject_desc
+        sql: subject_desc
+        type: string
+
+    -   name: subject
+        sql: subject
+        type: string
+
+    -   name: student_population_desc
+        sql: student_population_desc
+        type: string
+
+    -   name: student_population
+        sql: student_population
+        type: string
+
+    -   name: student_id
+        sql: student_id
+        type: string
+
+    -   name: pterm
+        sql: pterm
+        type: string
+
+    -   name: no_meetings
+        sql: no_meetings
+        type: string
+
+    -   name: location_desc
+        sql: location_desc
+        type: string
+
+    -   name: location
+        sql: location
+        type: string
+
+    -   name: ftes_actual
+        sql: ftes_actual
+        type: string
+
+    -   name: division_desc
+        sql: division_desc
+        type: string
+
+    -   name: division
+        sql: division
+        type: string
+
+    -   name: department_desc
+        sql: department_desc
+        type: string
+
+    -   name: department
+        sql: department
+        type: string
+
+    -   name: day_or_eve
+        sql: day_or_eve
+        type: string
+
+    -   name: dsch_ind
+        sql: dsch_ind
+        type: string
+
+    -   name: credit_ind
+        sql: credit_ind
+        type: string
+
+    -   name: course_attribute
+        sql: course_attribute
+        type: string
+
+    -   name: actual_ind
+        sql: actual_ind
+        type: string
+
+    measures: []
+
+    pre_aggregations: []

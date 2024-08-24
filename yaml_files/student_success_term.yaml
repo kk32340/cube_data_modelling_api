@@ -1,0 +1,291 @@
+cubes:
+    name: student_success_term
+
+    sql_table: odsmgr_cust.student_success_term
+
+    joins: []
+
+    dimensions:
+    -   name: aid_year
+        sql: aid_year
+        type: string
+
+    -   name: acad_standing_progress_desc
+        sql: acad_standing_progress_desc
+        type: string
+
+    -   name: acad_standing_progress
+        sql: acad_standing_progress
+        type: string
+
+    -   name: acad_standing_lt200
+        sql: acad_standing_lt200
+        type: string
+
+    -   name: acad_standing_lt200_desc
+        sql: acad_standing_lt200_desc
+        type: string
+
+    -   name: home_college
+        sql: home_college
+        type: string
+
+    -   name: econ_disadv_ind
+        sql: econ_disadv_ind
+        type: string
+
+    -   name: major_desc
+        sql: major_desc
+        type: string
+
+    -   name: foster_youth_ind
+        sql: foster_youth_ind
+        type: string
+
+    -   name: gedl_guard_1
+        sql: gedl_guard_1
+        type: string
+
+    -   name: gedl_guard_1_desc
+        sql: gedl_guard_1_desc
+        type: string
+
+    -   name: gedl_guard_2
+        sql: gedl_guard_2
+        type: string
+
+    -   name: gedl_guard_2_desc
+        sql: gedl_guard_2_desc
+        type: string
+
+    -   name: major
+        sql: major
+        type: string
+
+    -   name: calworks_ind
+        sql: calworks_ind
+        type: string
+
+    -   name: displaced_homemaker_ind
+        sql: displaced_homemaker_ind
+        type: string
+
+    -   name: single_parent_ind
+        sql: single_parent_ind
+        type: string
+
+    -   name: care_ind
+        sql: care_ind
+        type: string
+
+    -   name: eops_ind
+        sql: eops_ind
+        type: string
+
+    -   name: dsps_ind
+        sql: dsps_ind
+        type: string
+
+    -   name: current_enroll_pc
+        sql: current_enroll_pc
+        type: string
+
+    -   name: current_enroll_cc
+        sql: current_enroll_cc
+        type: string
+
+    -   name: current_enroll_bc
+        sql: current_enroll_bc
+        type: string
+
+    -   name: enrolled_on_census_pc
+        sql: enrolled_on_census_pc
+        type: string
+
+    -   name: enrolled_on_census_cc
+        sql: enrolled_on_census_cc
+        type: string
+
+    -   name: enrolled_on_census_bc
+        sql: enrolled_on_census_bc
+        type: string
+
+    -   name: fist_day_enrolled_pc
+        sql: fist_day_enrolled_pc
+        type: string
+
+    -   name: first_day_enrolled_cc
+        sql: first_day_enrolled_cc
+        type: string
+
+    -   name: first_day_enrolled_bc
+        sql: first_day_enrolled_bc
+        type: string
+
+    -   name: ever_enrolled_pc
+        sql: ever_enrolled_pc
+        type: string
+
+    -   name: ever_enrolled_cc
+        sql: ever_enrolled_cc
+        type: string
+
+    -   name: ever_enrolled_bc
+        sql: ever_enrolled_bc
+        type: string
+
+    -   name: veteran_ind
+        sql: veteran_ind
+        type: string
+
+    -   name: finaid_awarded
+        sql: finaid_awarded
+        type: string
+
+    -   name: applicant_ind
+        sql: applicant_ind
+        type: string
+
+    -   name: planned_employment_desc
+        sql: planned_employment_desc
+        type: string
+
+    -   name: planned_employment_code
+        sql: planned_employment_code
+        type: string
+
+    -   name: educational_goal_desc
+        sql: educational_goal_desc
+        type: string
+
+    -   name: educational_goal
+        sql: educational_goal
+        type: string
+
+    -   name: combined_acad_standing_desc
+        sql: combined_acad_standing_desc
+        type: string
+
+    -   name: combined_academic_standing
+        sql: combined_academic_standing
+        type: string
+
+    -   name: education_level_desc
+        sql: education_level_desc
+        type: string
+
+    -   name: education_level
+        sql: education_level
+        type: string
+
+    -   name: student_type_desc
+        sql: student_type_desc
+        type: string
+
+    -   name: student_type
+        sql: student_type
+        type: string
+
+    -   name: residency_desc
+        sql: residency_desc
+        type: string
+
+    -   name: residency
+        sql: residency
+        type: string
+
+    -   name: academic_year_sfs
+        sql: academic_year_sfs
+        type: string
+
+    -   name: primary_ethnicity_desc
+        sql: primary_ethnicity_desc
+        type: string
+
+    -   name: primary_ethnicity
+        sql: primary_ethnicity
+        type: string
+
+    -   name: gender
+        sql: gender
+        type: string
+
+    -   name: base_acyr_sfs
+        sql: base_acyr_sfs
+        type: string
+
+    -   name: base_term
+        sql: base_term
+        type: string
+
+    -   name: current_enrolled
+        sql: current_enrolled
+        type: string
+
+    -   name: enrolled_on_census
+        sql: enrolled_on_census
+        type: string
+
+    -   name: first_day_enrolled
+        sql: first_day_enrolled
+        type: string
+
+    -   name: mail_res_postal_code
+        sql: mail_res_postal_code
+        type: string
+
+    -   name: mail_res_state
+        sql: mail_res_state
+        type: string
+
+    -   name: mail_res_city
+        sql: mail_res_city
+        type: string
+
+    -   name: mail_res_street2
+        sql: mail_res_street2
+        type: string
+
+    -   name: mail_res_street1
+        sql: mail_res_street1
+        type: string
+
+    -   name: age_at_term
+        sql: age_at_term
+        type: string
+
+    -   name: matric_orientation
+        sql: matric_orientation
+        type: string
+
+    -   name: matric_education_plan
+        sql: matric_education_plan
+        type: string
+
+    -   name: matric_counseling
+        sql: matric_counseling
+        type: string
+
+    -   name: matric_assesment
+        sql: matric_assesment
+        type: string
+
+    -   name: name
+        sql: name
+        type: string
+
+    -   name: person_uid
+        sql: person_uid
+        type: string
+
+    -   name: academic_period
+        sql: academic_period
+        type: string
+
+    -   name: load_date
+        sql: load_date
+        type: time
+
+    measures: []
+
+    pre_aggregations: []

@@ -1,0 +1,556 @@
+cubes:
+    name: academic_outcome
+
+    sql_table: odsmgr.academic_outcome
+
+    joins:
+    -   name: cdc_with_term
+        sql: '{CUBE}.person_uid = cdc_with_term.person_uid'
+        relationship: one_to_many
+
+    -   name: cdc
+        sql: '{CUBE}.person_uid = cdc.person_uid'
+        relationship: one_to_many
+
+    -   name: ir_student_term
+        sql: '{CUBE}.person_uid = ir_student_term.person_uid'
+        relationship: one_to_many
+
+    -   name: mis_student_ident
+        sql: '{CUBE}.person_uid = mis_student_ident.person_uid'
+        relationship: one_to_many
+
+    -   name: person_detail
+        sql: '{CUBE}.person_uid = person_detail.person_uid'
+        relationship: zero_to_many
+
+    -   name: ir_student_person
+        sql: '{CUBE}.person_uid = ir_student_person.person_uid'
+        relationship: one_to_one
+
+    -   name: ir_student_term_gpa
+        sql: '{CUBE}.person_uid = ir_student_term_gpa.person_uid'
+        relationship: one_to_one
+
+    -   name: student_course
+        sql: '{CUBE}.person_uid = student_course.person_uid'
+        relationship: one_to_one
+
+    -   name: student_success_base
+        sql: '{CUBE}.person_uid = student_success_base.person_uid'
+        relationship: one_to_many
+
+    -   name: wssn_id
+        sql: '{CUBE}.person_uid = wssn_id.person_uid'
+        relationship: one_to_many
+
+    -   name: ir_student_term_gpa_ir_student_term
+        sql: '{CUBE}.person_uid = ir_student_term_gpa_ir_student_term.person_uid'
+        relationship: one_to_one
+
+    -   name: academic_outcome_stusta_alias
+        sql: '{CUBE}.id'
+        relationship: one_to_one
+
+    -   name: academic_outcome_stusta
+        sql: '{CUBE}.id = academic_outcome_stusta.id'
+        relationship: one_to_one
+
+    dimensions:
+    -   name: transfer_gpa
+        sql: transfer_gpa
+        type: string
+
+    -   name: transfer_quality_points
+        sql: transfer_quality_points
+        type: string
+
+    -   name: transfer_gpa_credits
+        sql: transfer_gpa_credits
+        type: string
+
+    -   name: transfer_credits_passed
+        sql: transfer_credits_passed
+        type: string
+
+    -   name: transfer_credits_earned
+        sql: transfer_credits_earned
+        type: string
+
+    -   name: transfer_credits_attempted
+        sql: transfer_credits_attempted
+        type: string
+
+    -   name: institution_gpa
+        sql: institution_gpa
+        type: string
+
+    -   name: institution_quality_points
+        sql: institution_quality_points
+        type: string
+
+    -   name: institution_gpa_credits
+        sql: institution_gpa_credits
+        type: string
+
+    -   name: institution_credits_passed
+        sql: institution_credits_passed
+        type: string
+
+    -   name: institution_credits_earned
+        sql: institution_credits_earned
+        type: string
+
+    -   name: institution_credits_attempted
+        sql: institution_credits_attempted
+        type: string
+
+    -   name: third_concentration
+        sql: third_concentration
+        type: string
+
+    -   name: sub_academic_period_grad_desc
+        sql: sub_academic_period_grad_desc
+        type: string
+
+    -   name: sub_academic_period_graduation
+        sql: sub_academic_period_graduation
+        type: string
+
+    -   name: transfer_work_exists_ind
+        sql: transfer_work_exists_ind
+        type: string
+
+    -   name: student_level_desc
+        sql: student_level_desc
+        type: string
+
+    -   name: student_level
+        sql: student_level
+        type: string
+
+    -   name: third_program_classif_desc
+        sql: third_program_classif_desc
+        type: string
+
+    -   name: third_program_classification
+        sql: third_program_classification
+        type: string
+
+    -   name: third_minor_desc
+        sql: third_minor_desc
+        type: string
+
+    -   name: third_minor
+        sql: third_minor
+        type: string
+
+    -   name: third_major_desc
+        sql: third_major_desc
+        type: string
+
+    -   name: third_major_conc_3_desc
+        sql: third_major_conc_3_desc
+        type: string
+
+    -   name: third_major_conc_3
+        sql: third_major_conc_3
+        type: string
+
+    -   name: third_major_conc_2_desc
+        sql: third_major_conc_2_desc
+        type: string
+
+    -   name: third_major_conc_2
+        sql: third_major_conc_2
+        type: string
+
+    -   name: third_major_conc_1_desc
+        sql: third_major_conc_1_desc
+        type: string
+
+    -   name: third_major_conc_1
+        sql: third_major_conc_1
+        type: string
+
+    -   name: third_major
+        sql: third_major
+        type: string
+
+    -   name: third_department_desc
+        sql: third_department_desc
+        type: string
+
+    -   name: third_department
+        sql: third_department
+        type: string
+
+    -   name: third_concentration_desc
+        sql: third_concentration_desc
+        type: string
+
+    -   name: quality_points
+        sql: quality_points
+        type: string
+
+    -   name: second_program_classif_desc
+        sql: second_program_classif_desc
+        type: string
+
+    -   name: second_program_classification
+        sql: second_program_classification
+        type: string
+
+    -   name: second_minor_desc
+        sql: second_minor_desc
+        type: string
+
+    -   name: second_minor
+        sql: second_minor
+        type: string
+
+    -   name: second_major_desc
+        sql: second_major_desc
+        type: string
+
+    -   name: second_major_conc_3_desc
+        sql: second_major_conc_3_desc
+        type: string
+
+    -   name: second_major_conc_3
+        sql: second_major_conc_3
+        type: string
+
+    -   name: second_major_conc_2_desc
+        sql: second_major_conc_2_desc
+        type: string
+
+    -   name: second_major_conc_2
+        sql: second_major_conc_2
+        type: string
+
+    -   name: second_major_conc_1_desc
+        sql: second_major_conc_1_desc
+        type: string
+
+    -   name: second_major_conc_1
+        sql: second_major_conc_1
+        type: string
+
+    -   name: second_major
+        sql: second_major
+        type: string
+
+    -   name: second_department_desc
+        sql: second_department_desc
+        type: string
+
+    -   name: second_department
+        sql: second_department
+        type: string
+
+    -   name: second_concentration_desc
+        sql: second_concentration_desc
+        type: string
+
+    -   name: second_concentration
+        sql: second_concentration
+        type: string
+
+    -   name: status_desc
+        sql: status_desc
+        type: string
+
+    -   name: status
+        sql: status
+        type: string
+
+    -   name: program_desc
+        sql: program_desc
+        type: string
+
+    -   name: program_classification_desc
+        sql: program_classification_desc
+        type: string
+
+    -   name: program_classification
+        sql: program_classification
+        type: string
+
+    -   name: person_uid
+        sql: person_uid
+        type: string
+        primary_key: true
+
+    -   name: program
+        sql: program
+        type: string
+
+    -   name: process_group
+        sql: process_group
+        type: string
+
+    -   name: outcome_number
+        sql: outcome_number
+        type: string
+
+    -   name: outcome_graduation_date
+        sql: outcome_graduation_date
+        type: time
+
+    -   name: outcome_awarded_ind
+        sql: outcome_awarded_ind
+        type: string
+
+    -   name: outcome_application_date
+        sql: outcome_application_date
+        type: time
+
+    -   name: official_document_name
+        sql: official_document_name
+        type: string
+
+    -   name: major_desc
+        sql: major_desc
+        type: string
+
+    -   name: major
+        sql: major
+        type: string
+
+    -   name: name
+        sql: name
+        type: string
+
+    -   name: multi_source_desc
+        sql: multi_source_desc
+        type: string
+
+    -   name: multi_source
+        sql: multi_source
+        type: string
+
+    -   name: institutional_honors_count
+        sql: institutional_honors_count
+        type: string
+
+    -   name: id
+        sql: id
+        type: string
+        primary_key: true
+
+    -   name: honors_count
+        sql: honors_count
+        type: string
+
+    -   name: fourth_program_classif_desc
+        sql: fourth_program_classif_desc
+        type: string
+
+    -   name: fourth_program_classification
+        sql: fourth_program_classification
+        type: string
+
+    -   name: fourth_minor_desc
+        sql: fourth_minor_desc
+        type: string
+
+    -   name: fourth_minor
+        sql: fourth_minor
+        type: string
+
+    -   name: fourth_major_desc
+        sql: fourth_major_desc
+        type: string
+
+    -   name: fourth_major_conc_3_desc
+        sql: fourth_major_conc_3_desc
+        type: string
+
+    -   name: fourth_major_conc_3
+        sql: fourth_major_conc_3
+        type: string
+
+    -   name: fourth_major_conc_2_desc
+        sql: fourth_major_conc_2_desc
+        type: string
+
+    -   name: fourth_major_conc_2
+        sql: fourth_major_conc_2
+        type: string
+
+    -   name: fourth_major_conc_1_desc
+        sql: fourth_major_conc_1_desc
+        type: string
+
+    -   name: fourth_major_conc_1
+        sql: fourth_major_conc_1
+        type: string
+
+    -   name: fourth_major
+        sql: fourth_major
+        type: string
+
+    -   name: fourth_department_desc
+        sql: fourth_department_desc
+        type: string
+
+    -   name: fourth_department
+        sql: fourth_department
+        type: string
+
+    -   name: grad_req_comp_acad_per_desc
+        sql: grad_req_comp_acad_per_desc
+        type: string
+
+    -   name: grad_req_completed_acad_per
+        sql: grad_req_completed_acad_per
+        type: string
+
+    -   name: grad_authorized_adds_chgs
+        sql: grad_authorized_adds_chgs
+        type: string
+
+    -   name: graduation_status_desc
+        sql: graduation_status_desc
+        type: string
+
+    -   name: graduation_status
+        sql: graduation_status
+        type: string
+
+    -   name: graduated_ind
+        sql: graduated_ind
+        type: string
+
+    -   name: first_minor_desc
+        sql: first_minor_desc
+        type: string
+
+    -   name: first_minor
+        sql: first_minor
+        type: string
+
+    -   name: first_concentration_desc
+        sql: first_concentration_desc
+        type: string
+
+    -   name: first_concentration
+        sql: first_concentration
+        type: string
+
+    -   name: gpa_credits
+        sql: gpa_credits
+        type: string
+
+    -   name: gpa
+        sql: gpa
+        type: string
+
+    -   name: department_desc
+        sql: department_desc
+        type: string
+
+    -   name: departmental_honors_count
+        sql: departmental_honors_count
+        type: string
+
+    -   name: department
+        sql: department
+        type: string
+
+    -   name: degree_desc
+        sql: degree_desc
+        type: string
+
+    -   name: degree
+        sql: degree
+        type: string
+
+    -   name: curriculum_priority_number
+        sql: curriculum_priority_number
+        type: string
+
+    -   name: curriculum_order
+        sql: curriculum_order
+        type: string
+
+    -   name: credits_passed
+        sql: credits_passed
+        type: string
+
+    -   name: credits_earned
+        sql: credits_earned
+        type: string
+
+    -   name: credits_attempted
+        sql: credits_attempted
+        type: string
+
+    -   name: campus_desc
+        sql: campus_desc
+        type: string
+
+    -   name: campus
+        sql: campus
+        type: string
+
+    -   name: bulletin_year_desc
+        sql: bulletin_year_desc
+        type: string
+
+    -   name: bulletin_year
+        sql: bulletin_year
+        type: string
+
+    -   name: award_category_desc
+        sql: award_category_desc
+        type: string
+
+    -   name: award_category
+        sql: award_category
+        type: string
+
+    -   name: college_desc
+        sql: college_desc
+        type: string
+
+    -   name: college
+        sql: college
+        type: string
+
+    -   name: applied_for_outcome_ind
+        sql: applied_for_outcome_ind
+        type: string
+
+    -   name: administrative_group
+        sql: administrative_group
+        type: string
+
+    -   name: academic_year_graduation_desc
+        sql: academic_year_graduation_desc
+        type: string
+
+    -   name: academic_year_graduation
+        sql: academic_year_graduation
+        type: string
+
+    -   name: academic_period_grad_desc
+        sql: academic_period_grad_desc
+        type: string
+
+    -   name: academic_period
+        sql: academic_period
+        type: string
+
+    -   name: academic_period_graduation
+        sql: academic_period_graduation
+        type: string
+
+    -   name: academic_period_desc
+        sql: academic_period_desc
+        type: string
+
+    measures: []
+
+    pre_aggregations: []

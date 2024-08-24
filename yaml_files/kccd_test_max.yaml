@@ -1,0 +1,35 @@
+cubes:
+    name: kccd_test_max
+
+    sql_table: odsmgr.kccd_test_max
+
+    joins:
+    -   name: student course
+        sql: '{CUBE}.person_uid = student course.person_uid'
+        relationship: zero_to_many
+
+    dimensions:
+    -   name: test_score
+        sql: test_score
+        type: string
+
+    -   name: test_desc
+        sql: test_desc
+        type: string
+
+    -   name: test_date
+        sql: test_date
+        type: time
+
+    -   name: test
+        sql: test
+        type: string
+
+    -   name: person_uid
+        sql: person_uid
+        type: string
+        primary_key: true
+
+    measures: []
+
+    pre_aggregations: []

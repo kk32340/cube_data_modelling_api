@@ -1,0 +1,35 @@
+cubes:
+    name: swrsser_care
+
+    sql_table: odsmgr_cust.swrsser_care
+
+    joins: []
+
+    dimensions:
+    -   name: term_code
+        sql: term_code
+        type: string
+
+    -   name: value
+        sql: value
+        type: string
+
+    -   name: units
+        sql: units
+        type: string
+
+    -   name: seq
+        sql: seq
+        type: string
+
+    -   name: metric
+        sql: metric
+        type: string
+
+    -   name: college
+        sql: college
+        type: string
+
+    measures: []
+
+    pre_aggregations: []

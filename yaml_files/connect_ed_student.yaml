@@ -1,0 +1,119 @@
+cubes:
+    name: connect_ed_student
+
+    sql_table: edi_user1.connect_ed_student
+
+    joins:
+    -   name: student_course_stusta
+        sql: '{CUBE}.referencecode = student_course_stusta.id'
+        relationship: one_to_many
+
+    dimensions:
+    -   name: workphonealt
+        sql: workphonealt
+        type: string
+
+    -   name: workphone
+        sql: workphone
+        type: string
+
+    -   name: terminate
+        sql: terminate
+        type: string
+
+    -   name: ttyphone
+        sql: ttyphone
+        type: string
+
+    -   name: smsphone
+        sql: smsphone
+        type: string
+
+    -   name: referencecode
+        sql: referencecode
+        type: string
+        primary_key: true
+
+    -   name: status
+        sql: status
+        type: string
+
+    -   name: primaryphone
+        sql: primaryphone
+        type: string
+
+    -   name: lastname
+        sql: lastname
+        type: string
+
+    -   name: language
+        sql: language
+        type: string
+
+    -   name: mobilephonealt
+        sql: mobilephonealt
+        type: string
+
+    -   name: mobilephone
+        sql: mobilephone
+        type: string
+
+    -   name: institution
+        sql: institution
+        type: string
+
+    -   name: homezip
+        sql: homezip
+        type: string
+
+    -   name: homestate
+        sql: homestate
+        type: string
+
+    -   name: homephonealt
+        sql: homephonealt
+        type: string
+
+    -   name: homephone
+        sql: homephone
+        type: string
+
+    -   name: homecity
+        sql: homecity
+        type: string
+
+    -   name: homeaddress
+        sql: homeaddress
+        type: string
+
+    -   name: group
+        sql: group
+        type: string
+
+    -   name: firstname
+        sql: firstname
+        type: string
+
+    -   name: gender
+        sql: gender
+        type: string
+
+    -   name: emailaddressalt
+        sql: emailaddressalt
+        type: string
+
+    -   name: emailaddress
+        sql: emailaddress
+        type: string
+
+    -   name: contacttype
+        sql: contacttype
+        type: string
+
+    -   name: additionalphone
+        sql: additionalphone
+        type: string
+
+    measures: []
+
+    pre_aggregations: []

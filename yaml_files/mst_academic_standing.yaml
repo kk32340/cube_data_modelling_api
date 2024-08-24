@@ -1,0 +1,177 @@
+cubes:
+    name: mst_academic_standing
+
+    sql_table: odsmgr.mst_academic_standing
+
+    joins:
+    -   name: ir_student_term
+        sql: '{CUBE}.academic_period = ir_student_term.academic_period AND {CUBE}.person_uid
+            = ir_student_term.person_uid'
+        relationship: one_to_one
+
+    dimensions:
+    -   name: sub_academic_period_desc
+        sql: sub_academic_period_desc
+        type: string
+
+    -   name: sub_academic_period
+        sql: sub_academic_period
+        type: string
+
+    -   name: student_level_desc
+        sql: student_level_desc
+        type: string
+
+    -   name: student_level
+        sql: student_level
+        type: string
+
+    -   name: zone_value
+        sql: zone_value
+        type: string
+
+    -   name: person_uid
+        sql: person_uid
+        type: string
+        primary_key: true
+
+    -   name: progress_eval_override_desc
+        sql: progress_eval_override_desc
+        type: string
+
+    -   name: progress_eval_override
+        sql: progress_eval_override
+        type: string
+
+    -   name: progress_evaluation_end_desc
+        sql: progress_evaluation_end_desc
+        type: string
+
+    -   name: progress_evaluation_end_date
+        sql: progress_evaluation_end_date
+        type: time
+
+    -   name: progress_evaluation_end
+        sql: progress_evaluation_end
+        type: string
+
+    -   name: progress_evaluation_desc
+        sql: progress_evaluation_desc
+        type: string
+
+    -   name: progress_evaluation_date
+        sql: progress_evaluation_date
+        type: time
+
+    -   name: progress_evaluation
+        sql: progress_evaluation
+        type: string
+
+    -   name: last_dml_date
+        sql: last_dml_date
+        type: time
+
+    -   name: last_activity_dml
+        sql: last_activity_dml
+        type: string
+
+    -   name: last_activity_date
+        sql: last_activity_date
+        type: time
+
+    -   name: mif_value
+        sql: mif_value
+        type: string
+
+    -   name: mif_desc
+        sql: mif_desc
+        type: string
+
+    -   name: domain_value
+        sql: domain_value
+        type: string
+
+    -   name: comb_acad_stand_override_desc
+        sql: comb_acad_stand_override_desc
+        type: string
+
+    -   name: comb_acad_stand_override
+        sql: comb_acad_stand_override
+        type: string
+
+    -   name: combined_acad_stand_end_desc
+        sql: combined_acad_stand_end_desc
+        type: string
+
+    -   name: combined_acad_stand_end_date
+        sql: combined_acad_stand_end_date
+        type: time
+
+    -   name: combined_acad_stand_end
+        sql: combined_acad_stand_end
+        type: string
+
+    -   name: combined_acad_standing_desc
+        sql: combined_acad_standing_desc
+        type: string
+
+    -   name: combined_acad_standing_date
+        sql: combined_acad_standing_date
+        type: time
+
+    -   name: combined_acad_standing
+        sql: combined_acad_standing
+        type: string
+
+    -   name: academic_year_desc
+        sql: academic_year_desc
+        type: string
+
+    -   name: acad_standing_end_desc
+        sql: acad_standing_end_desc
+        type: string
+
+    -   name: academic_standing_end
+        sql: academic_standing_end
+        type: string
+
+    -   name: academic_standing_desc
+        sql: academic_standing_desc
+        type: string
+
+    -   name: academic_standing_date
+        sql: academic_standing_date
+        type: time
+
+    -   name: academic_standing
+        sql: academic_standing
+        type: string
+
+    -   name: academic_year
+        sql: academic_year
+        type: string
+
+    -   name: academic_stand_override_desc
+        sql: academic_stand_override_desc
+        type: string
+
+    -   name: academic_stand_override
+        sql: academic_stand_override
+        type: string
+
+    -   name: academic_standing_end_dt
+        sql: academic_standing_end_dt
+        type: time
+
+    -   name: academic_period
+        sql: academic_period
+        type: string
+        primary_key: true
+
+    -   name: academic_period_desc
+        sql: academic_period_desc
+        type: string
+
+    measures: []
+
+    pre_aggregations: []

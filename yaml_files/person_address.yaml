@@ -1,0 +1,159 @@
+cubes:
+    name: person_address
+
+    sql_table: odsmgr.person_address
+
+    joins:
+    -   name: academic_study
+        sql: '{CUBE}.person_uid = academic_study.person_uid'
+        relationship: one_to_one
+
+    -   name: enrollment
+        sql: '{CUBE}.person_uid = enrollment.person_uid'
+        relationship: one_to_one
+
+    -   name: student course
+        sql: '{CUBE}.person_uid = student course.person_uid'
+        relationship: one_to_many
+
+    -   name: student_attribute
+        sql: '{CUBE}.person_uid = student_attribute.person_uid'
+        relationship: one_to_many
+
+    -   name: student_course_stusta
+        sql: '{CUBE}.person_uid = student_course_stusta.person_uid'
+        relationship: one_to_many
+
+    dimensions:
+    -   name: address_type_desc
+        sql: address_type_desc
+        type: string
+
+    -   name: address_type
+        sql: address_type
+        type: string
+
+    -   name: address_number
+        sql: address_number
+        type: string
+
+    -   name: street_line4
+        sql: street_line4
+        type: string
+
+    -   name: street_line3
+        sql: street_line3
+        type: string
+
+    -   name: street_line2
+        sql: street_line2
+        type: string
+
+    -   name: street_line1
+        sql: street_line1
+        type: string
+
+    -   name: state_province_desc
+        sql: state_province_desc
+        type: string
+
+    -   name: state_province
+        sql: state_province
+        type: string
+
+    -   name: process_group
+        sql: process_group
+        type: string
+
+    -   name: postal_code
+        sql: postal_code
+        type: string
+
+    -   name: mailing_name_preferred
+        sql: mailing_name_preferred
+        type: string
+
+    -   name: mailing_name_informal
+        sql: mailing_name_informal
+        type: string
+
+    -   name: mailing_name_formal
+        sql: mailing_name_formal
+        type: string
+
+    -   name: mailing_informal_county
+        sql: mailing_informal_county
+        type: string
+
+    -   name: mailing_informal
+        sql: mailing_informal
+        type: string
+
+    -   name: mailing_formal_county
+        sql: mailing_formal_county
+        type: string
+
+    -   name: mailing_formal
+        sql: mailing_formal
+        type: string
+
+    -   name: nation_desc
+        sql: nation_desc
+        type: string
+
+    -   name: nation
+        sql: nation
+        type: string
+
+    -   name: multi_source_desc
+        sql: multi_source_desc
+        type: string
+
+    -   name: multi_source
+        sql: multi_source
+        type: string
+
+    -   name: id
+        sql: id
+        type: string
+
+    -   name: delivery_point
+        sql: delivery_point
+        type: string
+
+    -   name: carrier_route
+        sql: carrier_route
+        type: string
+
+    -   name: county_desc
+        sql: county_desc
+        type: string
+
+    -   name: county
+        sql: county
+        type: string
+
+    -   name: correction_digit
+        sql: correction_digit
+        type: string
+
+    -   name: city
+        sql: city
+        type: string
+
+    -   name: administrative_group
+        sql: administrative_group
+        type: string
+
+    -   name: address_rule
+        sql: address_rule
+        type: string
+
+    -   name: person_uid
+        sql: person_uid
+        type: string
+        primary_key: true
+
+    measures: []
+
+    pre_aggregations: []

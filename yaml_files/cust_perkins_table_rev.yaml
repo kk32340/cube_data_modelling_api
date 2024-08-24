@@ -1,0 +1,31 @@
+cubes:
+    name: cust_perkins_table_rev
+
+    sql_table: odsmgr_cust.cust_perkins_table_rev
+
+    joins: []
+
+    dimensions:
+    -   name: top5
+        sql: top5
+        type: string
+
+    -   name: person_uid
+        sql: person_uid
+        type: string
+
+    -   name: concentrator_ind
+        sql: concentrator_ind
+        type: string
+
+    -   name: college
+        sql: college
+        type: string
+
+    -   name: academic_year_sfs
+        sql: academic_year_sfs
+        type: string
+
+    measures: []
+
+    pre_aggregations: []

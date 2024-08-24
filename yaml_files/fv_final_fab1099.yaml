@@ -1,0 +1,43 @@
+cubes:
+    name: fv_final_fab1099
+
+    sql_table: odsmgr_cust.fv_final_fab1099
+
+    joins: []
+
+    dimensions:
+    -   name: name
+        sql: name
+        type: string
+
+    -   name: vendor_id
+        sql: vendor_id
+        type: string
+
+    -   name: total_wo_tax
+        sql: total_wo_tax
+        type: string
+
+    -   name: rpt_yr
+        sql: rpt_yr
+        type: string
+
+    -   name: rpt_id
+        sql: rpt_id
+        type: string
+
+    -   name: ityp_code
+        sql: ityp_code
+        type: string
+
+    -   name: invh_code
+        sql: invh_code
+        type: string
+
+    -   name: acct_code
+        sql: acct_code
+        type: string
+
+    measures: []
+
+    pre_aggregations: []

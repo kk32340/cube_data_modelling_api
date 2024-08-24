@@ -1,0 +1,123 @@
+cubes:
+    name: sirasgn
+
+    sql_table: saturn.sirasgn
+
+    joins:
+    -   name: schedule_offering_stusta
+        sql: '{CUBE}.sirasgn_term_code = schedule_offering_stusta.academic_period
+            AND {CUBE}.sirasgn_crn = schedule_offering_stusta.course_reference_number'
+        relationship: one_to_many
+
+    -   name: sirnist
+        sql: '{CUBE}.sirasgn_pidm = sirnist.sirnist_pidm AND {CUBE}.sirasgn_term_code
+            = sirnist.sirnist_term_code'
+        relationship: one_to_one
+
+    dimensions:
+    -   name: sirasgn_vpdi_code
+        sql: sirasgn_vpdi_code
+        type: string
+
+    -   name: sirasgn_version
+        sql: sirasgn_version
+        type: string
+
+    -   name: sirasgn_surrogate_id
+        sql: sirasgn_surrogate_id
+        type: string
+
+    -   name: sirasgn_load_override_source
+        sql: sirasgn_load_override_source
+        type: string
+
+    -   name: sirasgn_load_override_ind
+        sql: sirasgn_load_override_ind
+        type: string
+
+    -   name: sirasgn_incr_enrl_date
+        sql: sirasgn_incr_enrl_date
+        type: time
+
+    -   name: sirasgn_incr_enrl
+        sql: sirasgn_incr_enrl
+        type: string
+
+    -   name: sirasgn_workload_incr
+        sql: sirasgn_workload_incr
+        type: string
+
+    -   name: sirasgn_workload_adjust
+        sql: sirasgn_workload_adjust
+        type: string
+
+    -   name: sirasgn_user_id
+        sql: sirasgn_user_id
+        type: string
+
+    -   name: sirasgn_term_code
+        sql: sirasgn_term_code
+        type: string
+        primary_key: true
+
+    -   name: sirasgn_suff
+        sql: sirasgn_suff
+        type: string
+
+    -   name: sirasgn_primary_ind
+        sql: sirasgn_primary_ind
+        type: string
+
+    -   name: sirasgn_posn
+        sql: sirasgn_posn
+        type: string
+
+    -   name: sirasgn_position
+        sql: sirasgn_position
+        type: string
+
+    -   name: sirasgn_percent_sess
+        sql: sirasgn_percent_sess
+        type: string
+
+    -   name: sirasgn_percent_response
+        sql: sirasgn_percent_response
+        type: string
+
+    -   name: sirasgn_over_ride
+        sql: sirasgn_over_ride
+        type: string
+
+    -   name: sirasgn_fcnt_code
+        sql: sirasgn_fcnt_code
+        type: string
+
+    -   name: sirasgn_data_origin
+        sql: sirasgn_data_origin
+        type: string
+
+    -   name: sirasgn_crn
+        sql: sirasgn_crn
+        type: string
+        primary_key: true
+
+    -   name: sirasgn_category
+        sql: sirasgn_category
+        type: string
+
+    -   name: sirasgn_asty_code
+        sql: sirasgn_asty_code
+        type: string
+
+    -   name: sirasgn_activity_date
+        sql: sirasgn_activity_date
+        type: time
+
+    -   name: sirasgn_pidm
+        sql: sirasgn_pidm
+        type: string
+        primary_key: true
+
+    measures: []
+
+    pre_aggregations: []

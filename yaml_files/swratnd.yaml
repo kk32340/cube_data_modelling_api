@@ -1,0 +1,107 @@
+cubes:
+    name: swratnd
+
+    sql_table: saturn.swratnd
+
+    joins: []
+
+    dimensions:
+    -   name: swratnd_vpdi_code
+        sql: swratnd_vpdi_code
+        type: string
+
+    -   name: swratnd_data_origin
+        sql: swratnd_data_origin
+        type: string
+
+    -   name: swratnd_user_id
+        sql: swratnd_user_id
+        type: string
+
+    -   name: swratnd_version
+        sql: swratnd_version
+        type: string
+
+    -   name: swratnd_surrogate_id
+        sql: swratnd_surrogate_id
+        type: string
+
+    -   name: swratnd_term_code
+        sql: swratnd_term_code
+        type: string
+
+    -   name: swratnd_subj_code
+        sql: swratnd_subj_code
+        type: string
+
+    -   name: swratnd_seq_no
+        sql: swratnd_seq_no
+        type: string
+
+    -   name: swratnd_rsts_date
+        sql: swratnd_rsts_date
+        type: time
+
+    -   name: swratnd_rsts_code
+        sql: swratnd_rsts_code
+        type: string
+
+    -   name: swratnd_resd_code
+        sql: swratnd_resd_code
+        type: string
+
+    -   name: swratnd_report_no
+        sql: swratnd_report_no
+        type: string
+
+    -   name: swratnd_pidm
+        sql: swratnd_pidm
+        type: string
+
+    -   name: swratnd_period
+        sql: swratnd_period
+        type: string
+
+    -   name: swratnd_hours_attend
+        sql: swratnd_hours_attend
+        type: string
+
+    -   name: swratnd_gain_ind
+        sql: swratnd_gain_ind
+        type: string
+
+    -   name: swratnd_exclude_ind
+        sql: swratnd_exclude_ind
+        type: string
+
+    -   name: swratnd_crse_numb
+        sql: swratnd_crse_numb
+        type: string
+
+    -   name: swratnd_crn
+        sql: swratnd_crn
+        type: string
+
+    -   name: swratnd_class_sort_key
+        sql: swratnd_class_sort_key
+        type: string
+
+    -   name: swratnd_camp_code
+        sql: swratnd_camp_code
+        type: string
+
+    -   name: swratnd_acyr_code
+        sql: swratnd_acyr_code
+        type: string
+
+    -   name: swratnd_activity_date
+        sql: swratnd_activity_date
+        type: time
+
+    -   name: swratnd_acct_code
+        sql: swratnd_acct_code
+        type: string
+
+    measures: []
+
+    pre_aggregations: []

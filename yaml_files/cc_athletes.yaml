@@ -1,0 +1,42 @@
+cubes:
+    name: cc_athletes
+
+    sql_table: odsmgr_cust.cc_athletes
+
+    joins:
+    -   name: ir_student_term_gpa
+        sql: '{CUBE}.person_uid = ir_student_term_gpa.person_uid AND {CUBE}.first_term
+            = ir_student_term_gpa.academic_period'
+        relationship: one_to_many
+
+    -   name: ir_student_term_gpa_ir_student_term
+        sql: '{CUBE}.person_uid = ir_student_term_gpa_ir_student_term.person_uid AND
+            {CUBE}.first_term = ir_student_term_gpa_ir_student_term.academic_period'
+        relationship: one_to_many
+
+    dimensions:
+    -   name: person_uid
+        sql: person_uid
+        type: string
+        primary_key: true
+
+    -   name: name
+        sql: name
+        type: string
+
+    -   name: id
+        sql: id
+        type: string
+
+    -   name: first_term
+        sql: first_term
+        type: string
+        primary_key: true
+
+    -   name: gender
+        sql: gender
+        type: string
+
+    measures: []
+
+    pre_aggregations: []

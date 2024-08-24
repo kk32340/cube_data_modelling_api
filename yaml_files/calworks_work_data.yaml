@@ -1,0 +1,74 @@
+cubes:
+    name: calworks_work_data
+
+    sql_table: odsmgr_cust.calworks_work_data
+
+    joins:
+    -   name: calworks_student_data
+        sql: '{CUBE}.person_uid = calworks_student_data.person_uid AND {CUBE}.academic_period
+            = calworks_student_data.academic_period AND {CUBE}.dicd_code = calworks_student_data.dicd_code'
+        relationship: one_to_many
+
+    dimensions:
+    -   name: user_id
+        sql: user_id
+        type: string
+
+    -   name: swas_code
+        sql: swas_code
+        type: string
+
+    -   name: tops_code
+        sql: tops_code
+        type: string
+
+    -   name: person_uid
+        sql: person_uid
+        type: string
+        primary_key: true
+
+    -   name: hr_wage
+        sql: hr_wage
+        type: string
+
+    -   name: dicd_code
+        sql: dicd_code
+        type: string
+        primary_key: true
+
+    -   name: end_date
+        sql: end_date
+        type: time
+
+    -   name: data_origin
+        sql: data_origin
+        type: string
+
+    -   name: begin_year
+        sql: begin_year
+        type: string
+
+    -   name: begin_date
+        sql: begin_date
+        type: time
+
+    -   name: avg_hr
+        sql: avg_hr
+        type: string
+
+    -   name: activity_date
+        sql: activity_date
+        type: time
+
+    -   name: active_ind
+        sql: active_ind
+        type: string
+
+    -   name: academic_period
+        sql: academic_period
+        type: string
+        primary_key: true
+
+    measures: []
+
+    pre_aggregations: []

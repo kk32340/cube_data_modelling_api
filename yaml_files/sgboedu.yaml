@@ -1,0 +1,83 @@
+cubes:
+    name: sgboedu
+
+    sql_table: saturn.sgboedu
+
+    joins: []
+
+    dimensions:
+    -   name: sgboedu_vpdi_code
+        sql: sgboedu_vpdi_code
+        type: string
+
+    -   name: sgboedu_data_origin
+        sql: sgboedu_data_origin
+        type: string
+
+    -   name: sgboedu_user_id
+        sql: sgboedu_user_id
+        type: string
+
+    -   name: sgboedu_version
+        sql: sgboedu_version
+        type: string
+
+    -   name: sgboedu_surrogate_id
+        sql: sgboedu_surrogate_id
+        type: string
+
+    -   name: sgboedu_care_accept_term
+        sql: sgboedu_care_accept_term
+        type: string
+
+    -   name: sgboedu_wthd_code
+        sql: sgboedu_wthd_code
+        type: string
+
+    -   name: sgboedu_trac_code
+        sql: sgboedu_trac_code
+        type: string
+
+    -   name: sgboedu_term_code_eff
+        sql: sgboedu_term_code_eff
+        type: string
+
+    -   name: sgboedu_sfae_code
+        sql: sgboedu_sfae_code
+        type: string
+
+    -   name: sgboedu_planned_credits
+        sql: sgboedu_planned_credits
+        type: string
+
+    -   name: sgboedu_pidm
+        sql: sgboedu_pidm
+        type: string
+
+    -   name: sgboedu_mars_code
+        sql: sgboedu_mars_code
+        type: string
+
+    -   name: sgboedu_eops_code
+        sql: sgboedu_eops_code
+        type: string
+
+    -   name: sgboedu_deps_code
+        sql: sgboedu_deps_code
+        type: string
+
+    -   name: sgboedu_afdc_code
+        sql: sgboedu_afdc_code
+        type: string
+
+    -   name: sgboedu_activity_date
+        sql: sgboedu_activity_date
+        type: time
+
+    -   name: sgboedu_accept_date
+        sql: sgboedu_accept_date
+        type: time
+
+    measures: []
+
+    pre_aggregations: []

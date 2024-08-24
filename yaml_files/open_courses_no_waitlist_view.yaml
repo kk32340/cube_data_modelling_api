@@ -1,0 +1,63 @@
+cubes:
+    name: open_courses_no_waitlist_view
+
+    sql_table: odsmgr_cust.open_courses_no_waitlist_view
+
+    joins: []
+
+    dimensions:
+    -   name: academic_period
+        sql: academic_period
+        type: string
+
+    -   name: special_approval
+        sql: special_approval
+        type: string
+
+    -   name: prereqs
+        sql: prereqs
+        type: string
+
+    -   name: seats_available
+        sql: seats_available
+        type: string
+
+    -   name: campus_desc
+        sql: campus_desc
+        type: string
+
+    -   name: end_date
+        sql: end_date
+        type: time
+
+    -   name: start_date
+        sql: start_date
+        type: time
+
+    -   name: course_title
+        sql: course_title
+        type: string
+
+    -   name: subject
+        sql: subject
+        type: string
+
+    -   name: course_id
+        sql: course_id
+        type: string
+
+    -   name: course_number
+        sql: course_number
+        type: string
+
+    -   name: crn
+        sql: crn
+        type: string
+
+    -   name: college
+        sql: college
+        type: string
+
+    measures: []
+
+    pre_aggregations: []

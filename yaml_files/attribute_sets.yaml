@@ -1,0 +1,83 @@
+cubes:
+    name: attribute_sets
+
+    sql_table: odsmgr.attribute_sets
+
+    joins:
+    -   name: chart_attributes
+        sql: '{CUBE}.chart_of_accounts = chart_attributes.chart_of_accounts'
+        relationship: one_to_many
+
+    dimensions:
+    -   name: set_code_desc
+        sql: set_code_desc
+        type: string
+
+    -   name: chart_of_accounts_status
+        sql: chart_of_accounts_status
+        type: string
+
+    -   name: set_code
+        sql: set_code
+        type: string
+
+    -   name: process_group
+        sql: process_group
+        type: string
+
+    -   name: multi_source_desc
+        sql: multi_source_desc
+        type: string
+
+    -   name: multi_source
+        sql: multi_source
+        type: string
+
+    -   name: chart_of_accounts_desc
+        sql: chart_of_accounts_desc
+        type: string
+
+    -   name: chart_of_accounts
+        sql: chart_of_accounts
+        type: string
+        primary_key: true
+
+    -   name: attribute_value_end_date
+        sql: attribute_value_end_date
+        type: time
+
+    -   name: attribute_value_desc
+        sql: attribute_value_desc
+        type: string
+
+    -   name: attribute_value_begin_date
+        sql: attribute_value_begin_date
+        type: time
+
+    -   name: attribute_value
+        sql: attribute_value
+        type: string
+
+    -   name: attribute_type_status_desc
+        sql: attribute_type_status_desc
+        type: string
+
+    -   name: attribute_type_status
+        sql: attribute_type_status
+        type: string
+
+    -   name: attribute_type_desc
+        sql: attribute_type_desc
+        type: string
+
+    -   name: attribute_type
+        sql: attribute_type
+        type: string
+
+    -   name: administrative_group
+        sql: administrative_group
+        type: string
+
+    measures: []
+
+    pre_aggregations: []

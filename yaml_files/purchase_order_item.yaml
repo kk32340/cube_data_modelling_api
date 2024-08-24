@@ -1,0 +1,316 @@
+cubes:
+    name: purchase_order_item
+
+    sql_table: odsmgr.purchase_order_item
+
+    joins:
+    -   name: purchase_order
+        sql: '{CUBE}.purchase_order = purchase_order.purchase_order'
+        relationship: zero_to_many
+
+    -   name: received_item
+        sql: '{CUBE}.item = received_item.item AND {CUBE}.purchase_order = received_item.purchase_order'
+        relationship: one_to_one
+
+    -   name: received_item_alias
+        sql: '{CUBE}.purchase_order = purchase_order_item.item'
+        relationship: one_to_one
+
+    dimensions:
+    -   name: text_usage_desc
+        sql: text_usage_desc
+        type: string
+
+    -   name: text_usage
+        sql: text_usage
+        type: string
+
+    -   name: vendor_uid
+        sql: vendor_uid
+        type: string
+
+    -   name: vendor_reference_number
+        sql: vendor_reference_number
+        type: string
+
+    -   name: vendor_name
+        sql: vendor_name
+        type: string
+
+    -   name: tax_group_desc
+        sql: tax_group_desc
+        type: string
+
+    -   name: tax_group
+        sql: tax_group
+        type: string
+
+    -   name: tax_amount
+        sql: tax_amount
+        type: string
+
+    -   name: vendor_id
+        sql: vendor_id
+        type: string
+
+    -   name: vendor_agreement
+        sql: vendor_agreement
+        type: string
+
+    -   name: user_id
+        sql: user_id
+        type: string
+
+    -   name: suspense_ind
+        sql: suspense_ind
+        type: string
+
+    -   name: unit_price
+        sql: unit_price
+        type: string
+
+    -   name: unit_of_measure_desc
+        sql: unit_of_measure_desc
+        type: string
+
+    -   name: unit_of_measure
+        sql: unit_of_measure
+        type: string
+
+    -   name: street_line4
+        sql: street_line4
+        type: string
+
+    -   name: street_line3
+        sql: street_line3
+        type: string
+
+    -   name: street_line2
+        sql: street_line2
+        type: string
+
+    -   name: street_line1
+        sql: street_line1
+        type: string
+
+    -   name: requisition_number
+        sql: requisition_number
+        type: string
+
+    -   name: requisition
+        sql: requisition
+        type: string
+
+    -   name: requestor_name
+        sql: requestor_name
+        type: string
+
+    -   name: shipment_to_address
+        sql: shipment_to_address
+        type: string
+
+    -   name: quantity
+        sql: quantity
+        type: string
+
+    -   name: state_province_desc
+        sql: state_province_desc
+        type: string
+
+    -   name: state_province
+        sql: state_province
+        type: string
+
+    -   name: phone_ext
+        sql: phone_ext
+        type: string
+
+    -   name: phone_area
+        sql: phone_area
+        type: string
+
+    -   name: process_group
+        sql: process_group
+        type: string
+
+    -   name: postal_code
+        sql: postal_code
+        type: string
+
+    -   name: phone_unlist_ind
+        sql: phone_unlist_ind
+        type: string
+
+    -   name: phone_number_combined
+        sql: phone_number_combined
+        type: string
+
+    -   name: phone_number
+        sql: phone_number
+        type: string
+
+    -   name: phone_intl_access
+        sql: phone_intl_access
+        type: string
+
+    -   name: nation_desc
+        sql: nation_desc
+        type: string
+
+    -   name: nation
+        sql: nation
+        type: string
+
+    -   name: liquidation_amount
+        sql: liquidation_amount
+        type: string
+
+    -   name: multi_source_desc
+        sql: multi_source_desc
+        type: string
+
+    -   name: multi_source
+        sql: multi_source
+        type: string
+
+    -   name: item_delivery_date
+        sql: item_delivery_date
+        type: time
+
+    -   name: item_change_order
+        sql: item_change_order
+        type: string
+
+    -   name: floor
+        sql: floor
+        type: string
+
+    -   name: discount_percent
+        sql: discount_percent
+        type: string
+
+    -   name: discount_amount
+        sql: discount_amount
+        type: string
+
+    -   name: delivery_point
+        sql: delivery_point
+        type: string
+
+    -   name: change_order_amount
+        sql: change_order_amount
+        type: string
+
+    -   name: carrier_route
+        sql: carrier_route
+        type: string
+
+    -   name: cancel_ind
+        sql: cancel_ind
+        type: string
+
+    -   name: cancel_date
+        sql: cancel_date
+        type: time
+
+    -   name: county_desc
+        sql: county_desc
+        type: string
+
+    -   name: county
+        sql: county
+        type: string
+
+    -   name: building
+        sql: building
+        type: string
+
+    -   name: correction_digit
+        sql: correction_digit
+        type: string
+
+    -   name: converted_unit_price
+        sql: converted_unit_price
+        type: string
+
+    -   name: converted_tax_amount
+        sql: converted_tax_amount
+        type: string
+
+    -   name: converted_discount_amount
+        sql: converted_discount_amount
+        type: string
+
+    -   name: converted_approved_item_amount
+        sql: converted_approved_item_amount
+        type: string
+
+    -   name: converted_additnal_amount
+        sql: converted_additnal_amount
+        type: string
+
+    -   name: blanket_order_remaining_bal
+        sql: blanket_order_remaining_bal
+        type: string
+
+    -   name: contact_name
+        sql: contact_name
+        type: string
+
+    -   name: bid_number
+        sql: bid_number
+        type: string
+
+    -   name: commodity_desc_change_ind
+        sql: commodity_desc_change_ind
+        type: string
+
+    -   name: commodity_desc
+        sql: commodity_desc
+        type: string
+
+    -   name: commodity
+        sql: commodity
+        type: string
+
+    -   name: closed_ind
+        sql: closed_ind
+        type: string
+
+    -   name: city
+        sql: city
+        type: string
+
+    -   name: approved_item_amount
+        sql: approved_item_amount
+        type: string
+
+    -   name: agreement_minimum_quantity
+        sql: agreement_minimum_quantity
+        type: string
+
+    -   name: administrative_group
+        sql: administrative_group
+        type: string
+
+    -   name: additional_charges_amount
+        sql: additional_charges_amount
+        type: string
+
+    -   name: activity_date
+        sql: activity_date
+        type: time
+
+    -   name: item
+        sql: item
+        type: string
+        primary_key: true
+
+    -   name: purchase_order
+        sql: purchase_order
+        type: string
+        primary_key: true
+
+    measures: []
+
+    pre_aggregations: []

@@ -1,0 +1,39 @@
+cubes:
+    name: npsas_cohort
+
+    sql_table: odsmgr_cust.npsas_cohort
+
+    joins: []
+
+    dimensions:
+    -   name: college
+        sql: college
+        type: string
+
+    -   name: acyr
+        sql: acyr
+        type: string
+
+    -   name: full name
+        sql: full name
+        type: string
+
+    -   name: id
+        sql: id
+        type: string
+
+    -   name: student_id
+        sql: student_id
+        type: string
+
+    -   name: study_id
+        sql: study_id
+        type: string
+
+    -   name: person_uid
+        sql: person_uid
+        type: string
+
+    measures: []
+
+    pre_aggregations: []

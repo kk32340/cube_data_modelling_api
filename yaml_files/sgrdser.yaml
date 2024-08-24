@@ -1,0 +1,103 @@
+cubes:
+    name: sgrdser
+
+    sql_table: saturn.sgrdser
+
+    joins:
+    -   name: cust_sgrdisa
+        sql: '{CUBE}.sgrdser_pidm = cust_sgrdisa.sgrdisa_pidm AND {CUBE}.sgrdser_term_code
+            = cust_sgrdisa.sgrdisa_term_code AND {CUBE}.sgrdser_disa_code = cust_sgrdisa.sgrdisa_disa_code'
+        relationship: zero_to_many
+
+    -   name: dsps_rpt_main
+        sql: '{CUBE}.sgrdser_term_code = dsps_rpt_main.sgrdisa_term_code AND {CUBE}.sgrdser_pidm
+            = dsps_rpt_main.sgrdisa_pidm AND {CUBE}.sgrdser_disa_code = dsps_rpt_main.sgrdisa_disa_code'
+        relationship: zero_to_many
+
+    dimensions:
+    -   name: sgrdser_vpdi_code
+        sql: sgrdser_vpdi_code
+        type: string
+
+    -   name: sgrdser_data_origin
+        sql: sgrdser_data_origin
+        type: string
+
+    -   name: sgrdser_user_id
+        sql: sgrdser_user_id
+        type: string
+
+    -   name: sgrdser_version
+        sql: sgrdser_version
+        type: string
+
+    -   name: sgrdser_surrogate_id
+        sql: sgrdser_surrogate_id
+        type: string
+
+    -   name: sgrdser_term_code
+        sql: sgrdser_term_code
+        type: string
+        primary_key: true
+
+    -   name: sgrdser_ssst_code
+        sql: sgrdser_ssst_code
+        type: string
+
+    -   name: sgrdser_ssrs_code
+        sql: sgrdser_ssrs_code
+        type: string
+
+    -   name: sgrdser_sser_code
+        sql: sgrdser_sser_code
+        type: string
+
+    -   name: sgrdser_ssep_code
+        sql: sgrdser_ssep_code
+        type: string
+
+    -   name: sgrdser_sprv_code
+        sql: sgrdser_sprv_code
+        type: string
+
+    -   name: sgrdser_sepr_code
+        sql: sgrdser_sepr_code
+        type: string
+
+    -   name: sgrdser_pidm
+        sql: sgrdser_pidm
+        type: string
+        primary_key: true
+
+    -   name: sgrdser_orig_code
+        sql: sgrdser_orig_code
+        type: string
+
+    -   name: sgrdser_nbr_contacts
+        sql: sgrdser_nbr_contacts
+        type: string
+
+    -   name: sgrdser_end_date
+        sql: sgrdser_end_date
+        type: time
+
+    -   name: sgrdser_disa_code
+        sql: sgrdser_disa_code
+        type: string
+        primary_key: true
+
+    -   name: sgrdser_camp_code
+        sql: sgrdser_camp_code
+        type: string
+
+    -   name: sgrdser_begin_date
+        sql: sgrdser_begin_date
+        type: time
+
+    -   name: sgrdser_activity_date
+        sql: sgrdser_activity_date
+        type: time
+
+    measures: []
+
+    pre_aggregations: []

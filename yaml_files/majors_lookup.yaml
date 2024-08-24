@@ -1,0 +1,47 @@
+cubes:
+    name: majors_lookup
+
+    sql_table: odsmgr_cust.majors_lookup
+
+    joins:
+    -   name: academic_outcome
+        sql: '{CUBE}.major_code = academic_outcome.major'
+        relationship: zero_to_many
+
+    -   name: academic_outcome_a
+        sql: '{CUBE}.major_code = academic_outcome_a.major'
+        relationship: zero_to_many
+
+    -   name: ir_student_term
+        sql: '{CUBE}.major_code = ir_student_term.major'
+        relationship: zero_to_many
+
+    dimensions:
+    -   name: upd_major
+        sql: upd_major
+        type: string
+
+    -   name: program_type
+        sql: program_type
+        type: string
+
+    -   name: major_desc
+        sql: major_desc
+        type: string
+
+    -   name: major_code
+        sql: major_code
+        type: string
+        primary_key: true
+
+    -   name: grp
+        sql: grp
+        type: string
+
+    -   name: career_pathway
+        sql: career_pathway
+        type: string
+
+    measures: []
+
+    pre_aggregations: []

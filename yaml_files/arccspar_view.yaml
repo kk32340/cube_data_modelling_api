@@ -1,0 +1,171 @@
+cubes:
+    name: arccspar_view
+
+    sql_table: odsmgr_cust.arccspar_view
+
+    joins: []
+
+    dimensions:
+    -   name: term_first_reg_dte
+        sql: term_first_reg_dte
+        type: time
+
+    -   name: term
+        sql: term
+        type: string
+
+    -   name: success_courses
+        sql: success_courses
+        type: string
+
+    -   name: trnsfrprep
+        sql: trnsfrprep
+        type: string
+
+    -   name: trnsfrdirec
+        sql: trnsfrdirec
+        type: string
+
+    -   name: trnsfr4yr
+        sql: trnsfr4yr
+        type: string
+
+    -   name: rptyear
+        sql: rptyear
+        type: string
+
+    -   name: rcdaa
+        sql: rcdaa
+        type: string
+
+    -   name: rcd18unts
+        sql: rcd18unts
+        type: string
+
+    -   name: orig_ed_goal_desc
+        sql: orig_ed_goal_desc
+        type: string
+
+    -   name: orig_ed_goal
+        sql: orig_ed_goal
+        type: string
+
+    -   name: field17
+        sql: field17
+        type: string
+
+    -   name: pidm
+        sql: pidm
+        type: string
+
+    -   name: matric_orientation
+        sql: matric_orientation
+        type: string
+
+    -   name: matric_education_plan
+        sql: matric_education_plan
+        type: string
+
+    -   name: matric_counseling
+        sql: matric_counseling
+        type: string
+
+    -   name: matric_assesment
+        sql: matric_assesment
+        type: string
+
+    -   name: finaid_grant
+        sql: finaid_grant
+        type: string
+
+    -   name: finaid_first_applied
+        sql: finaid_first_applied
+        type: time
+
+    -   name: major_desc
+        sql: major_desc
+        type: string
+
+    -   name: major
+        sql: major
+        type: string
+
+    -   name: informed_goal_desc
+        sql: informed_goal_desc
+        type: string
+
+    -   name: informed_goal
+        sql: informed_goal
+        type: string
+
+    -   name: id
+        sql: id
+        type: string
+
+    -   name: first_term
+        sql: first_term
+        type: string
+
+    -   name: gender
+        sql: gender
+        type: string
+
+    -   name: ethnicity
+        sql: ethnicity
+        type: string
+
+    -   name: ethnic
+        sql: ethnic
+        type: string
+
+    -   name: degrappl
+        sql: degrappl
+        type: string
+
+    -   name: enrlcrdt
+        sql: enrlcrdt
+        type: string
+
+    -   name: comp30unts
+        sql: comp30unts
+        type: string
+
+    -   name: ban_id
+        sql: ban_id
+        type: string
+
+    -   name: college
+        sql: college
+        type: string
+
+    -   name: finaid_work
+        sql: finaid_work
+        type: string
+
+    -   name: finaid_loan
+        sql: finaid_loan
+        type: string
+
+    -   name: finaid_bogw
+        sql: finaid_bogw
+        type: string
+
+    -   name: cohort
+        sql: cohort
+        type: string
+
+    -   name: attempted_unts
+        sql: attempted_unts
+        type: string
+
+    -   name: age
+        sql: age
+        type: string
+
+    -   name: admission_application_date
+        sql: admission_application_date
+        type: time
+
+    measures: []
+
+    pre_aggregations: []

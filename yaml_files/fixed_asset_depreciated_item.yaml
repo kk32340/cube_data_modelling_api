@@ -1,0 +1,115 @@
+cubes:
+    name: fixed_asset_depreciated_item
+
+    sql_table: odsmgr.fixed_asset_depreciated_item
+
+    joins:
+    -   name: fixed_asset_item
+        sql: '{CUBE}.origination_tag_number = fixed_asset_item.origination_tag_number'
+        relationship: one_to_many
+
+    dimensions:
+    -   name: total_net_book_value_amount
+        sql: total_net_book_value_amount
+        type: string
+
+    -   name: total_depreciation_amount
+        sql: total_depreciation_amount
+        type: string
+
+    -   name: salvage_amount
+        sql: salvage_amount
+        type: string
+
+    -   name: remaining_life_years
+        sql: remaining_life_years
+        type: string
+
+    -   name: remaining_life_semi_annual
+        sql: remaining_life_semi_annual
+        type: string
+
+    -   name: remaining_life_quarters
+        sql: remaining_life_quarters
+        type: string
+
+    -   name: remaining_life_months
+        sql: remaining_life_months
+        type: string
+
+    -   name: permanent_tag_number
+        sql: permanent_tag_number
+        type: string
+
+    -   name: process_group
+        sql: process_group
+        type: string
+
+    -   name: prior_last_depreciation_date
+        sql: prior_last_depreciation_date
+        type: time
+
+    -   name: origination_tag_number
+        sql: origination_tag_number
+        type: string
+        primary_key: true
+
+    -   name: old_depreciation_amount
+        sql: old_depreciation_amount
+        type: string
+
+    -   name: net_depreciation_amount
+        sql: net_depreciation_amount
+        type: string
+
+    -   name: net_book_value_amount
+        sql: net_book_value_amount
+        type: string
+
+    -   name: multi_source_desc
+        sql: multi_source_desc
+        type: string
+
+    -   name: last_depreciation_date
+        sql: last_depreciation_date
+        type: time
+
+    -   name: multi_source
+        sql: multi_source
+        type: string
+
+    -   name: depreciation_start_date
+        sql: depreciation_start_date
+        type: time
+
+    -   name: depreciation_method_desc
+        sql: depreciation_method_desc
+        type: string
+
+    -   name: depreciation_method
+        sql: depreciation_method
+        type: string
+
+    -   name: depreciation_frequency
+        sql: depreciation_frequency
+        type: string
+
+    -   name: asset_amount
+        sql: asset_amount
+        type: string
+
+    -   name: adjusted_amount
+        sql: adjusted_amount
+        type: string
+
+    -   name: administrative_group
+        sql: administrative_group
+        type: string
+
+    -   name: actual_useful_life_years
+        sql: actual_useful_life_years
+        type: string
+
+    measures: []
+
+    pre_aggregations: []

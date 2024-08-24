@@ -1,0 +1,147 @@
+cubes:
+    name: encumbrance
+
+    sql_table: odsmgr.encumbrance
+
+    joins:
+    -   name: purchase_order
+        sql: '{CUBE}.encumbrance_number = purchase_order.purchase_order'
+        relationship: one_to_one
+
+    dimensions:
+    -   name: text_ind
+        sql: text_ind
+        type: string
+
+    -   name: vendor_uid
+        sql: vendor_uid
+        type: string
+
+    -   name: vendor_name
+        sql: vendor_name
+        type: string
+
+    -   name: vendor_id
+        sql: vendor_id
+        type: string
+
+    -   name: transaction_date
+        sql: transaction_date
+        type: time
+
+    -   name: process_group
+        sql: process_group
+        type: string
+
+    -   name: multi_source_desc
+        sql: multi_source_desc
+        type: string
+
+    -   name: deferred_edit_ind
+        sql: deferred_edit_ind
+        type: string
+
+    -   name: nsf_on_off_ind
+        sql: nsf_on_off_ind
+        type: string
+
+    -   name: ledger_encumbered_amount
+        sql: ledger_encumbered_amount
+        type: string
+
+    -   name: ledger_remaining_balance
+        sql: ledger_remaining_balance
+        type: string
+
+    -   name: encumbrance_user_id
+        sql: encumbrance_user_id
+        type: string
+
+    -   name: encumbrance_activity_date
+        sql: encumbrance_activity_date
+        type: time
+
+    -   name: encumbrance_data_origin
+        sql: encumbrance_data_origin
+        type: string
+
+    -   name: encumbrance_create_date
+        sql: encumbrance_create_date
+        type: time
+
+    -   name: encumbrance_create_user
+        sql: encumbrance_create_user
+        type: string
+
+    -   name: encumbrance_create_source
+        sql: encumbrance_create_source
+        type: string
+
+    -   name: multi_source
+        sql: multi_source
+        type: string
+
+    -   name: document_reference_number
+        sql: document_reference_number
+        type: string
+
+    -   name: established_date
+        sql: established_date
+        type: time
+
+    -   name: encumbrance_type
+        sql: encumbrance_type
+        type: string
+
+    -   name: encumbrance_status
+        sql: encumbrance_status
+        type: string
+
+    -   name: encumbrance_source
+        sql: encumbrance_source
+        type: string
+
+    -   name: encumbrance_number
+        sql: encumbrance_number
+        type: string
+        primary_key: true
+
+    -   name: encumbrance_type_desc
+        sql: encumbrance_type_desc
+        type: string
+
+    -   name: encumbrance_desc
+        sql: encumbrance_desc
+        type: string
+
+    -   name: hr_encumbrance_ind
+        sql: hr_encumbrance_ind
+        type: string
+
+    -   name: change_number
+        sql: change_number
+        type: string
+
+    -   name: change_desc
+        sql: change_desc
+        type: string
+
+    -   name: complete_ind
+        sql: complete_ind
+        type: string
+
+    -   name: approval_ind
+        sql: approval_ind
+        type: string
+
+    -   name: amount
+        sql: amount
+        type: string
+
+    -   name: administrative_group
+        sql: administrative_group
+        type: string
+
+    measures: []
+
+    pre_aggregations: []

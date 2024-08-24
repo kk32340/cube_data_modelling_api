@@ -1,0 +1,391 @@
+cubes:
+    name: receivable_account_detail
+
+    sql_table: odsmgr.receivable_account_detail
+
+    joins:
+    -   name: person_detail_stusta
+        sql: '{CUBE}.account_uid = person_detail_stusta.person_uid'
+        relationship: one_to_one
+
+    -   name: sport_stusta
+        sql: '{CUBE}.account_uid = sport_stusta.person_uid AND {CUBE}.academic_period
+            = sport_stusta.academic_period'
+        relationship: one_to_many
+
+    -   name: student
+        sql: '{CUBE}.account_uid = student.person_uid'
+        relationship: one_to_one
+
+    -   name: student_term
+        sql: '{CUBE}.academic_period = student_term.academic_period AND {CUBE}.account_uid
+            = student_term.person_uid'
+        relationship: one_to_many
+
+    -   name: ir_student_person
+        sql: '{CUBE}.account_uid = ir_student_person.person_uid'
+        relationship: one_to_one
+
+    -   name: ir_student_term
+        sql: '{CUBE}.academic_period = ir_student_term.academic_period AND {CUBE}.account_uid
+            = ir_student_term.person_uid'
+        relationship: one_to_one
+
+    dimensions:
+    -   name: account_detail_data_origin
+        sql: account_detail_data_origin
+        type: string
+
+    -   name: account_detail_user_id
+        sql: account_detail_user_id
+        type: string
+
+    -   name: refund_desc
+        sql: refund_desc
+        type: string
+
+    -   name: refund
+        sql: refund
+        type: string
+
+    -   name: tax_document_box_number_desc
+        sql: tax_document_box_number_desc
+        type: string
+
+    -   name: study_path
+        sql: study_path
+        type: string
+
+    -   name: contract_pymt_transaction_ind
+        sql: contract_pymt_transaction_ind
+        type: string
+
+    -   name: aid_enrollment_period_desc
+        sql: aid_enrollment_period_desc
+        type: string
+
+    -   name: aid_enrollment_period
+        sql: aid_enrollment_period
+        type: string
+
+    -   name: aid_year_desc
+        sql: aid_year_desc
+        type: string
+
+    -   name: aid_year
+        sql: aid_year
+        type: string
+
+    -   name: designator_type_desc
+        sql: designator_type_desc
+        type: string
+
+    -   name: designator_type
+        sql: designator_type
+        type: string
+
+    -   name: operating_designator_desc
+        sql: operating_designator_desc
+        type: string
+
+    -   name: ledger_designator_desc
+        sql: ledger_designator_desc
+        type: string
+
+    -   name: tax_year
+        sql: tax_year
+        type: string
+
+    -   name: tax_future_item
+        sql: tax_future_item
+        type: string
+
+    -   name: tax_document_box_number
+        sql: tax_document_box_number
+        type: string
+
+    -   name: tax_document
+        sql: tax_document
+        type: string
+
+    -   name: tax_amount
+        sql: tax_amount
+        type: string
+
+    -   name: sub_academic_period_desc
+        sql: sub_academic_period_desc
+        type: string
+
+    -   name: sub_academic_period
+        sql: sub_academic_period
+        type: string
+
+    -   name: tran_number_paid
+        sql: tran_number_paid
+        type: string
+
+    -   name: transaction_number
+        sql: transaction_number
+        type: string
+
+    -   name: transaction_desc
+        sql: transaction_desc
+        type: string
+
+    -   name: transaction_date
+        sql: transaction_date
+        type: time
+
+    -   name: returned_check_ind
+        sql: returned_check_ind
+        type: string
+
+    -   name: source_desc
+        sql: source_desc
+        type: string
+
+    -   name: source
+        sql: source
+        type: string
+
+    -   name: receipt_number
+        sql: receipt_number
+        type: string
+
+    -   name: statement_date
+        sql: statement_date
+        type: time
+
+    -   name: process_group
+        sql: process_group
+        type: string
+
+    -   name: priority
+        sql: priority
+        type: string
+
+    -   name: pre_bill_flag
+        sql: pre_bill_flag
+        type: string
+
+    -   name: post_cashier
+        sql: post_cashier
+        type: string
+
+    -   name: posting_document
+        sql: posting_document
+        type: string
+
+    -   name: posting_date
+        sql: posting_date
+        type: time
+
+    -   name: operating_designator
+        sql: operating_designator
+        type: string
+
+    -   name: operating_date
+        sql: operating_date
+        type: time
+
+    -   name: name
+        sql: name
+        type: string
+
+    -   name: multi_source_desc
+        sql: multi_source_desc
+        type: string
+
+    -   name: ledger_designator
+        sql: ledger_designator
+        type: string
+
+    -   name: multi_source
+        sql: multi_source
+        type: string
+
+    -   name: journal_source
+        sql: journal_source
+        type: string
+
+    -   name: journal_entry
+        sql: journal_entry
+        type: string
+
+    -   name: invoice_number
+        sql: invoice_number
+        type: string
+
+    -   name: id
+        sql: id
+        type: string
+
+    -   name: foreign_currency_desc
+        sql: foreign_currency_desc
+        type: string
+
+    -   name: foreign_currency_amount
+        sql: foreign_currency_amount
+        type: string
+
+    -   name: foreign_currency
+        sql: foreign_currency
+        type: string
+
+    -   name: financial_aid_upload_field
+        sql: financial_aid_upload_field
+        type: string
+
+    -   name: document_number
+        sql: document_number
+        type: string
+
+    -   name: external_ind
+        sql: external_ind
+        type: string
+
+    -   name: detail_code_type
+        sql: detail_code_type
+        type: string
+
+    -   name: detail_code_desc
+        sql: detail_code_desc
+        type: string
+
+    -   name: detail_code
+        sql: detail_code
+        type: string
+
+    -   name: entry_date
+        sql: entry_date
+        type: time
+
+    -   name: effective_date
+        sql: effective_date
+        type: time
+
+    -   name: due_date
+        sql: due_date
+        type: time
+
+    -   name: credit_card_number
+        sql: credit_card_number
+        type: string
+
+    -   name: course_reference_number
+        sql: course_reference_number
+        type: string
+
+    -   name: category_desc
+        sql: category_desc
+        type: string
+
+    -   name: category
+        sql: category
+        type: string
+
+    -   name: cashier_session_number
+        sql: cashier_session_number
+        type: string
+
+    -   name: cashier_end_time
+        sql: cashier_end_time
+        type: string
+
+    -   name: cashier_end_date
+        sql: cashier_end_date
+        type: time
+
+    -   name: bill_sequence
+        sql: bill_sequence
+        type: string
+
+    -   name: bill_date
+        sql: bill_date
+        type: time
+
+    -   name: bill_amount
+        sql: bill_amount
+        type: string
+
+    -   name: balance
+        sql: balance
+        type: string
+
+    -   name: crossref_source_desc
+        sql: crossref_source_desc
+        type: string
+
+    -   name: crossref_source
+        sql: crossref_source
+        type: string
+
+    -   name: crossref_number
+        sql: crossref_number
+        type: string
+
+    -   name: crossref_entity_uid
+        sql: crossref_entity_uid
+        type: string
+
+    -   name: crossref_detail_code_desc
+        sql: crossref_detail_code_desc
+        type: string
+
+    -   name: crossref_detail_code
+        sql: crossref_detail_code
+        type: string
+
+    -   name: crossref_category_desc
+        sql: crossref_category_desc
+        type: string
+
+    -   name: crossref_category
+        sql: crossref_category
+        type: string
+
+    -   name: amount
+        sql: amount
+        type: string
+
+    -   name: administrative_group
+        sql: administrative_group
+        type: string
+
+    -   name: account_detail_activity_date
+        sql: account_detail_activity_date
+        type: time
+
+    -   name: account_posting_status
+        sql: account_posting_status
+        type: string
+
+    -   name: account_posted_amount
+        sql: account_posted_amount
+        type: string
+
+    -   name: academic_year_desc
+        sql: academic_year_desc
+        type: string
+
+    -   name: academic_year
+        sql: academic_year
+        type: string
+
+    -   name: academic_period_desc
+        sql: academic_period_desc
+        type: string
+
+    -   name: account_uid
+        sql: account_uid
+        type: string
+        primary_key: true
+
+    -   name: academic_period
+        sql: academic_period
+        type: string
+        primary_key: true
+
+    measures: []
+
+    pre_aggregations: []

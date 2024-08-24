@@ -1,0 +1,71 @@
+cubes:
+    name: ir_student_defaults
+
+    sql_table: odsmgr_cust.ir_student_defaults
+
+    joins:
+    -   name: ir_student_person
+        sql: '{CUBE}.pidm = ir_student_person.person_uid'
+        relationship: one_to_one
+
+    dimensions:
+    -   name: cdr_date_of_default_string
+        sql: cdr_date_of_default_string
+        type: string
+
+    -   name: id
+        sql: id
+        type: string
+
+    -   name: record_added
+        sql: record_added
+        type: time
+
+    -   name: cdr_date_of_default
+        sql: cdr_date_of_default
+        type: time
+
+    -   name: usage_code
+        sql: usage_code
+        type: string
+
+    -   name: cohort_year
+        sql: cohort_year
+        type: string
+
+    -   name: loan_status_curr
+        sql: loan_status_curr
+        type: string
+
+    -   name: service_code
+        sql: service_code
+        type: string
+
+    -   name: opeid
+        sql: opeid
+        type: string
+
+    -   name: last_name
+        sql: last_name
+        type: string
+
+    -   name: mi
+        sql: mi
+        type: string
+
+    -   name: first_name
+        sql: first_name
+        type: string
+
+    -   name: ssn
+        sql: ssn
+        type: string
+
+    -   name: pidm
+        sql: pidm
+        type: string
+        primary_key: true
+
+    measures: []
+
+    pre_aggregations: []

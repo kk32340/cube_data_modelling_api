@@ -1,0 +1,67 @@
+cubes:
+    name: students_enrl_online_courses
+
+    sql_table: odsmgr_cust.students_enrl_online_courses
+
+    joins: []
+
+    dimensions:
+    -   name: mail_res_state
+        sql: mail_res_state
+        type: string
+
+    -   name: restricted state
+        sql: restricted state
+        type: string
+
+    -   name: enrolled in online course
+        sql: enrolled in online course
+        type: string
+
+    -   name: state of residence
+        sql: state of residence
+        type: string
+
+    -   name: name
+        sql: name
+        type: string
+
+    -   name: personal email
+        sql: personal email
+        type: string
+
+    -   name: college email address
+        sql: college email address
+        type: string
+
+    -   name: evening phone
+        sql: evening phone
+        type: string
+
+    -   name: day phone
+        sql: day phone
+        type: string
+
+    -   name: cell phone
+        sql: cell phone
+        type: string
+
+    -   name: id
+        sql: id
+        type: string
+
+    -   name: person_uid
+        sql: person_uid
+        type: string
+
+    -   name: academic_period
+        sql: academic_period
+        type: string
+
+    -   name: college
+        sql: college
+        type: string
+
+    measures: []
+
+    pre_aggregations: []

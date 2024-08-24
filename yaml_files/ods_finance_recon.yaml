@@ -1,0 +1,59 @@
+cubes:
+    name: ods_finance_recon
+
+    sql_table: odsmgr_cust.ods_finance_recon
+
+    joins: []
+
+    dimensions:
+    -   name: table_name
+        sql: table_name
+        type: string
+
+    -   name: val_field
+        sql: val_field
+        type: string
+
+    -   name: recon_dt
+        sql: recon_dt
+        type: time
+
+    -   name: prod_val
+        sql: prod_val
+        type: string
+
+    -   name: prod_count
+        sql: prod_count
+        type: string
+
+    -   name: ods_val
+        sql: ods_val
+        type: string
+
+    -   name: ods_count
+        sql: ods_count
+        type: string
+
+    -   name: diff_val
+        sql: diff_val
+        type: string
+
+    -   name: diff_row
+        sql: diff_row
+        type: string
+
+    -   name: chg_tbl_upd
+        sql: chg_tbl_upd
+        type: string
+
+    -   name: chg_tbl_ins
+        sql: chg_tbl_ins
+        type: string
+
+    -   name: chg_tbl_del
+        sql: chg_tbl_del
+        type: string
+
+    measures: []
+
+    pre_aggregations: []

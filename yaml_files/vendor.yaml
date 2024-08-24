@@ -1,0 +1,595 @@
+cubes:
+    name: vendor
+
+    sql_table: odsmgr.vendor
+
+    joins:
+    -   name: transaction_history
+        sql: '{CUBE}.vendor_uid = transaction_history.vendor_uid'
+        relationship: one_to_many
+
+    -   name: person_stusta
+        sql: '{CUBE}.vendor_uid = person_stusta.person_uid'
+        relationship: one_to_one
+
+    dimensions:
+    -   name: vendor_start_date
+        sql: vendor_start_date
+        type: time
+
+    -   name: vendor_termination_date
+        sql: vendor_termination_date
+        type: time
+
+    -   name: vendor_type_count
+        sql: vendor_type_count
+        type: string
+
+    -   name: tax_id
+        sql: tax_id
+        type: string
+
+    -   name: street_line4
+        sql: street_line4
+        type: string
+
+    -   name: street_line3
+        sql: street_line3
+        type: string
+
+    -   name: street_line2
+        sql: street_line2
+        type: string
+
+    -   name: street_line1
+        sql: street_line1
+        type: string
+
+    -   name: remit_to_street_line4
+        sql: remit_to_street_line4
+        type: string
+
+    -   name: remit_to_street_line3
+        sql: remit_to_street_line3
+        type: string
+
+    -   name: remit_to_street_line2
+        sql: remit_to_street_line2
+        type: string
+
+    -   name: remit_to_street_line1
+        sql: remit_to_street_line1
+        type: string
+
+    -   name: remit_to_state_province_desc
+        sql: remit_to_state_province_desc
+        type: string
+
+    -   name: remit_to_state_province
+        sql: remit_to_state_province
+        type: string
+
+    -   name: remit_to_postal_code
+        sql: remit_to_postal_code
+        type: string
+
+    -   name: remit_to_phone_unlist_ind
+        sql: remit_to_phone_unlist_ind
+        type: string
+
+    -   name: remit_to_phone_type_desc
+        sql: remit_to_phone_type_desc
+        type: string
+
+    -   name: remit_to_phone_type
+        sql: remit_to_phone_type
+        type: string
+
+    -   name: remit_to_phone_number_combined
+        sql: remit_to_phone_number_combined
+        type: string
+
+    -   name: remit_to_nation_desc
+        sql: remit_to_nation_desc
+        type: string
+
+    -   name: remit_to_nation
+        sql: remit_to_nation
+        type: string
+
+    -   name: remit_to_floor
+        sql: remit_to_floor
+        type: string
+
+    -   name: remit_to_fax_number
+        sql: remit_to_fax_number
+        type: string
+
+    -   name: remit_to_email_type_desc
+        sql: remit_to_email_type_desc
+        type: string
+
+    -   name: remit_to_email_type
+        sql: remit_to_email_type
+        type: string
+
+    -   name: remit_to_email_address
+        sql: remit_to_email_address
+        type: string
+
+    -   name: remit_to_address_number
+        sql: remit_to_address_number
+        type: string
+
+    -   name: remit_to_delivery_point
+        sql: remit_to_delivery_point
+        type: string
+
+    -   name: remit_to_county_desc
+        sql: remit_to_county_desc
+        type: string
+
+    -   name: remit_to_county
+        sql: remit_to_county
+        type: string
+
+    -   name: remit_to_correction_digit
+        sql: remit_to_correction_digit
+        type: string
+
+    -   name: remit_to_city
+        sql: remit_to_city
+        type: string
+
+    -   name: remit_to_carrier_route
+        sql: remit_to_carrier_route
+        type: string
+
+    -   name: remit_to_building
+        sql: remit_to_building
+        type: string
+
+    -   name: remit_to_address_type_desc
+        sql: remit_to_address_type_desc
+        type: string
+
+    -   name: remit_to_address_type
+        sql: remit_to_address_type
+        type: string
+
+    -   name: state_province_desc
+        sql: state_province_desc
+        type: string
+
+    -   name: state_province
+        sql: state_province
+        type: string
+
+    -   name: phone_ext
+        sql: phone_ext
+        type: string
+
+    -   name: phone_country_code
+        sql: phone_country_code
+        type: string
+
+    -   name: phone_area
+        sql: phone_area
+        type: string
+
+    -   name: process_group
+        sql: process_group
+        type: string
+
+    -   name: postal_code
+        sql: postal_code
+        type: string
+
+    -   name: phone_number_combined
+        sql: phone_number_combined
+        type: string
+
+    -   name: phone_number
+        sql: phone_number
+        type: string
+
+    -   name: order_from_street_line4
+        sql: order_from_street_line4
+        type: string
+
+    -   name: order_from_street_line3
+        sql: order_from_street_line3
+        type: string
+
+    -   name: order_from_street_line2
+        sql: order_from_street_line2
+        type: string
+
+    -   name: order_from_street_line1
+        sql: order_from_street_line1
+        type: string
+
+    -   name: order_from_state_province_desc
+        sql: order_from_state_province_desc
+        type: string
+
+    -   name: order_from_state_province
+        sql: order_from_state_province
+        type: string
+
+    -   name: order_from_postal_code
+        sql: order_from_postal_code
+        type: string
+
+    -   name: order_from_phone_unlist_ind
+        sql: order_from_phone_unlist_ind
+        type: string
+
+    -   name: order_from_phone_type_desc
+        sql: order_from_phone_type_desc
+        type: string
+
+    -   name: order_from_phone_type
+        sql: order_from_phone_type
+        type: string
+
+    -   name: order_from_phone_combined
+        sql: order_from_phone_combined
+        type: string
+
+    -   name: order_from_nation_desc
+        sql: order_from_nation_desc
+        type: string
+
+    -   name: order_from_nation
+        sql: order_from_nation
+        type: string
+
+    -   name: order_from_floor
+        sql: order_from_floor
+        type: string
+
+    -   name: order_from_fax_number
+        sql: order_from_fax_number
+        type: string
+
+    -   name: order_from_email_type_desc
+        sql: order_from_email_type_desc
+        type: string
+
+    -   name: order_from_email_type
+        sql: order_from_email_type
+        type: string
+
+    -   name: order_from_email_address
+        sql: order_from_email_address
+        type: string
+
+    -   name: order_from_address_number
+        sql: order_from_address_number
+        type: string
+
+    -   name: order_from_delivery_point
+        sql: order_from_delivery_point
+        type: string
+
+    -   name: order_from_county_desc
+        sql: order_from_county_desc
+        type: string
+
+    -   name: order_from_county
+        sql: order_from_county
+        type: string
+
+    -   name: order_from_correction_digit
+        sql: order_from_correction_digit
+        type: string
+
+    -   name: order_from_city
+        sql: order_from_city
+        type: string
+
+    -   name: order_from_carrier_route
+        sql: order_from_carrier_route
+        type: string
+
+    -   name: order_from_building
+        sql: order_from_building
+        type: string
+
+    -   name: order_from_address_type_desc
+        sql: order_from_address_type_desc
+        type: string
+
+    -   name: order_from_address_type
+        sql: order_from_address_type
+        type: string
+
+    -   name: federal_withholding_percent
+        sql: federal_withholding_percent
+        type: string
+
+    -   name: state_withholding_percent
+        sql: state_withholding_percent
+        type: string
+
+    -   name: tax_income_type_key
+        sql: tax_income_type_key
+        type: string
+
+    -   name: tax_income_type
+        sql: tax_income_type
+        type: string
+
+    -   name: tax_income_type_desc
+        sql: tax_income_type_desc
+        type: string
+
+    -   name: vendor_collects_tax
+        sql: vendor_collects_tax
+        type: string
+
+    -   name: vendor_collects_tax_desc
+        sql: vendor_collects_tax_desc
+        type: string
+
+    -   name: number_of_tax_id_notices
+        sql: number_of_tax_id_notices
+        type: string
+
+    -   name: nation_desc
+        sql: nation_desc
+        type: string
+
+    -   name: nation
+        sql: nation
+        type: string
+
+    -   name: name
+        sql: name
+        type: string
+
+    -   name: multi_source_desc
+        sql: multi_source_desc
+        type: string
+
+    -   name: eprocurement_vendor_ind
+        sql: eprocurement_vendor_ind
+        type: string
+
+    -   name: invoice_grouping
+        sql: invoice_grouping
+        type: string
+
+    -   name: invoice_grouping_desc
+        sql: invoice_grouping_desc
+        type: string
+
+    -   name: vendor_residency
+        sql: vendor_residency
+        type: string
+
+    -   name: vendor_residency_desc
+        sql: vendor_residency_desc
+        type: string
+
+    -   name: carrier_vendor
+        sql: carrier_vendor
+        type: string
+
+    -   name: carrier_vendor_desc
+        sql: carrier_vendor_desc
+        type: string
+
+    -   name: currency
+        sql: currency
+        type: string
+
+    -   name: currency_desc
+        sql: currency_desc
+        type: string
+
+    -   name: discount
+        sql: discount
+        type: string
+
+    -   name: discount_desc
+        sql: discount_desc
+        type: string
+
+    -   name: discount_percent
+        sql: discount_percent
+        type: string
+
+    -   name: order_hold_reason
+        sql: order_hold_reason
+        type: string
+
+    -   name: order_hold_reason_desc
+        sql: order_hold_reason_desc
+        type: string
+
+    -   name: payment_hold_reason
+        sql: payment_hold_reason
+        type: string
+
+    -   name: payment_hold_reason_desc
+        sql: payment_hold_reason_desc
+        type: string
+
+    -   name: vendor_user_id
+        sql: vendor_user_id
+        type: string
+
+    -   name: vendor_activity_date
+        sql: vendor_activity_date
+        type: time
+
+    -   name: vendor_data_origin
+        sql: vendor_data_origin
+        type: string
+
+    -   name: multi_source
+        sql: multi_source
+        type: string
+
+    -   name: most_recent_tax_id_notice_year
+        sql: most_recent_tax_id_notice_year
+        type: string
+
+    -   name: id
+        sql: id
+        type: string
+
+    -   name: floor
+        sql: floor
+        type: string
+
+    -   name: entity_type
+        sql: entity_type
+        type: string
+
+    -   name: delivery_point
+        sql: delivery_point
+        type: string
+
+    -   name: federal_report_vendor_uid
+        sql: federal_report_vendor_uid
+        type: string
+
+    -   name: federal_report_vendor_id
+        sql: federal_report_vendor_id
+        type: string
+
+    -   name: federal_report_vendor_name
+        sql: federal_report_vendor_name
+        type: string
+
+    -   name: federal_reportable_tax_ind
+        sql: federal_reportable_tax_ind
+        type: string
+
+    -   name: carrier_route
+        sql: carrier_route
+        type: string
+
+    -   name: campus_desc
+        sql: campus_desc
+        type: string
+
+    -   name: campus
+        sql: campus
+        type: string
+
+    -   name: county_desc
+        sql: county_desc
+        type: string
+
+    -   name: county
+        sql: county
+        type: string
+
+    -   name: building
+        sql: building
+        type: string
+
+    -   name: correction_digit
+        sql: correction_digit
+        type: string
+
+    -   name: contact_name
+        sql: contact_name
+        type: string
+
+    -   name: city
+        sql: city
+        type: string
+
+    -   name: administrative_group
+        sql: administrative_group
+        type: string
+
+    -   name: address_type_desc
+        sql: address_type_desc
+        type: string
+
+    -   name: address_type
+        sql: address_type
+        type: string
+
+    -   name: vendor_uid
+        sql: vendor_uid
+        type: string
+        primary_key: true
+
+    -   name: remit_to_vendor_uid
+        sql: remit_to_vendor_uid
+        type: string
+
+    -   name: remit_to_vendor_id
+        sql: remit_to_vendor_id
+        type: string
+
+    -   name: remit_to_vendor_name
+        sql: remit_to_vendor_name
+        type: string
+
+    -   name: federal_address_type
+        sql: federal_address_type
+        type: string
+
+    -   name: federal_address_number
+        sql: federal_address_number
+        type: string
+
+    -   name: federal_street_line1
+        sql: federal_street_line1
+        type: string
+
+    -   name: federal_street_line2
+        sql: federal_street_line2
+        type: string
+
+    -   name: federal_street_line3
+        sql: federal_street_line3
+        type: string
+
+    -   name: federal_street_line4
+        sql: federal_street_line4
+        type: string
+
+    -   name: federal_city
+        sql: federal_city
+        type: string
+
+    -   name: federal_county
+        sql: federal_county
+        type: string
+
+    -   name: federal_county_desc
+        sql: federal_county_desc
+        type: string
+
+    -   name: federal_state_province
+        sql: federal_state_province
+        type: string
+
+    -   name: federal_state_province_desc
+        sql: federal_state_province_desc
+        type: string
+
+    -   name: federal_postal_code
+        sql: federal_postal_code
+        type: string
+
+    -   name: federal_nation
+        sql: federal_nation
+        type: string
+
+    -   name: federal_nation_desc
+        sql: federal_nation_desc
+        type: string
+
+    measures: []
+
+    pre_aggregations: []

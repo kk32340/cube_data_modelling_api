@@ -1,0 +1,143 @@
+cubes:
+    name: recruitment_source
+
+    sql_table: odsmgr.recruitment_source
+
+    joins:
+    -   name: recruitment_information
+        sql: '{CUBE}.person_uid = recruitment_information.person_uid AND {CUBE}.academic_period
+            = recruitment_information.academic_period AND {CUBE}.recruit_number =
+            recruitment_information.recruit_number'
+        relationship: one_to_many
+
+    -   name: recruitment_information_alias
+        sql: '{CUBE}.recruit_number = recruitment_source.academic_period AND {CUBE}.person_uid'
+        relationship: one_to_many
+
+    dimensions:
+    -   name: recruit_source_activity_date
+        sql: recruit_source_activity_date
+        type: time
+
+    -   name: recruit_source_type_desc
+        sql: recruit_source_type_desc
+        type: string
+
+    -   name: recruit_source_type
+        sql: recruit_source_type
+        type: string
+
+    -   name: sub_academic_period_desc
+        sql: sub_academic_period_desc
+        type: string
+
+    -   name: sub_academic_period
+        sql: sub_academic_period
+        type: string
+
+    -   name: start_date
+        sql: start_date
+        type: time
+
+    -   name: recruit_number
+        sql: recruit_number
+        type: string
+        primary_key: true
+
+    -   name: program_desc
+        sql: program_desc
+        type: string
+
+    -   name: person_uid
+        sql: person_uid
+        type: string
+        primary_key: true
+
+    -   name: program_classification_desc
+        sql: program_classification_desc
+        type: string
+
+    -   name: program_classification
+        sql: program_classification
+        type: string
+
+    -   name: program
+        sql: program
+        type: string
+
+    -   name: process_group
+        sql: process_group
+        type: string
+
+    -   name: primary_source_ind
+        sql: primary_source_ind
+        type: string
+
+    -   name: major_desc
+        sql: major_desc
+        type: string
+
+    -   name: major
+        sql: major
+        type: string
+
+    -   name: name
+        sql: name
+        type: string
+
+    -   name: multi_source_desc
+        sql: multi_source_desc
+        type: string
+
+    -   name: multi_source
+        sql: multi_source
+        type: string
+
+    -   name: institution_desc
+        sql: institution_desc
+        type: string
+
+    -   name: institution
+        sql: institution
+        type: string
+
+    -   name: id
+        sql: id
+        type: string
+
+    -   name: degree_desc
+        sql: degree_desc
+        type: string
+
+    -   name: degree
+        sql: degree
+        type: string
+
+    -   name: date_source_reported
+        sql: date_source_reported
+        type: time
+
+    -   name: administrative_group
+        sql: administrative_group
+        type: string
+
+    -   name: academic_year_desc
+        sql: academic_year_desc
+        type: string
+
+    -   name: academic_year
+        sql: academic_year
+        type: string
+
+    -   name: academic_period_desc
+        sql: academic_period_desc
+        type: string
+
+    -   name: academic_period
+        sql: academic_period
+        type: string
+        primary_key: true
+
+    measures: []
+
+    pre_aggregations: []

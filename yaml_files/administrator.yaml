@@ -1,0 +1,99 @@
+cubes:
+    name: administrator
+
+    sql_table: odsmgr.administrator
+
+    joins: []
+
+    dimensions:
+    -   name: rater_ind
+        sql: rater_ind
+        type: string
+
+    -   name: sub_academic_period_desc
+        sql: sub_academic_period_desc
+        type: string
+
+    -   name: sub_academic_period
+        sql: sub_academic_period
+        type: string
+
+    -   name: person_uid
+        sql: person_uid
+        type: string
+
+    -   name: process_group
+        sql: process_group
+        type: string
+
+    -   name: name
+        sql: name
+        type: string
+
+    -   name: multi_source_desc
+        sql: multi_source_desc
+        type: string
+
+    -   name: multi_source
+        sql: multi_source
+        type: string
+
+    -   name: module
+        sql: module
+        type: string
+
+    -   name: id
+        sql: id
+        type: string
+
+    -   name: application_recruit_number
+        sql: application_recruit_number
+        type: string
+
+    -   name: administrator_first_name
+        sql: administrator_first_name
+        type: string
+
+    -   name: administrator_uid
+        sql: administrator_uid
+        type: string
+
+    -   name: administrator_role_desc
+        sql: administrator_role_desc
+        type: string
+
+    -   name: administrator_role
+        sql: administrator_role
+        type: string
+
+    -   name: administrator_last_name
+        sql: administrator_last_name
+        type: string
+
+    -   name: administrator_id
+        sql: administrator_id
+        type: string
+
+    -   name: administrative_group
+        sql: administrative_group
+        type: string
+
+    -   name: academic_year_desc
+        sql: academic_year_desc
+        type: string
+
+    -   name: academic_year
+        sql: academic_year
+        type: string
+
+    -   name: academic_period
+        sql: academic_period
+        type: string
+
+    -   name: academic_period_desc
+        sql: academic_period_desc
+        type: string
+
+    measures: []
+
+    pre_aggregations: []

@@ -1,0 +1,127 @@
+cubes:
+    name: person_sensitive_race_slot
+
+    sql_table: odsmgr.person_sensitive_race_slot
+
+    joins:
+    -   name: ir_student_person
+        sql: '{CUBE}.person_uid = ir_student_person.person_uid'
+        relationship: zero_to_many
+
+    dimensions:
+    -   name: race_rule
+        sql: race_rule
+        type: string
+
+    -   name: profile_code
+        sql: profile_code
+        type: string
+
+    -   name: race_desc5
+        sql: race_desc5
+        type: string
+
+    -   name: race_desc4
+        sql: race_desc4
+        type: string
+
+    -   name: race_desc3
+        sql: race_desc3
+        type: string
+
+    -   name: race_desc2
+        sql: race_desc2
+        type: string
+
+    -   name: race_desc1
+        sql: race_desc1
+        type: string
+
+    -   name: race_category_desc5
+        sql: race_category_desc5
+        type: string
+
+    -   name: race_category_desc4
+        sql: race_category_desc4
+        type: string
+
+    -   name: race_category_desc3
+        sql: race_category_desc3
+        type: string
+
+    -   name: race_category_desc2
+        sql: race_category_desc2
+        type: string
+
+    -   name: race_category_desc1
+        sql: race_category_desc1
+        type: string
+
+    -   name: race_category5
+        sql: race_category5
+        type: string
+
+    -   name: race_category4
+        sql: race_category4
+        type: string
+
+    -   name: race_category3
+        sql: race_category3
+        type: string
+
+    -   name: race_category2
+        sql: race_category2
+        type: string
+
+    -   name: race_category1
+        sql: race_category1
+        type: string
+
+    -   name: race5
+        sql: race5
+        type: string
+
+    -   name: race4
+        sql: race4
+        type: string
+
+    -   name: race3
+        sql: race3
+        type: string
+
+    -   name: race2
+        sql: race2
+        type: string
+
+    -   name: race1
+        sql: race1
+        type: string
+
+    -   name: person_uid
+        sql: person_uid
+        type: string
+        primary_key: true
+
+    -   name: process_group
+        sql: process_group
+        type: string
+
+    -   name: multi_source_desc
+        sql: multi_source_desc
+        type: string
+
+    -   name: multi_source
+        sql: multi_source
+        type: string
+
+    -   name: administrative_group
+        sql: administrative_group
+        type: string
+
+    -   name: activity_date
+        sql: activity_date
+        type: time
+
+    measures: []
+
+    pre_aggregations: []

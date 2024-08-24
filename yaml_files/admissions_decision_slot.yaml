@@ -1,0 +1,103 @@
+cubes:
+    name: admissions_decision_slot
+
+    sql_table: odsmgr.admissions_decision_slot
+
+    joins: []
+
+    dimensions:
+    -   name: person_uid
+        sql: person_uid
+        type: string
+
+    -   name: process_group
+        sql: process_group
+        type: string
+
+    -   name: multi_source_desc
+        sql: multi_source_desc
+        type: string
+
+    -   name: multi_source
+        sql: multi_source
+        type: string
+
+    -   name: decision_desc5
+        sql: decision_desc5
+        type: string
+
+    -   name: decision_desc4
+        sql: decision_desc4
+        type: string
+
+    -   name: decision_desc3
+        sql: decision_desc3
+        type: string
+
+    -   name: decision_desc2
+        sql: decision_desc2
+        type: string
+
+    -   name: decision_desc1
+        sql: decision_desc1
+        type: string
+
+    -   name: decision_date5
+        sql: decision_date5
+        type: time
+
+    -   name: decision_date4
+        sql: decision_date4
+        type: time
+
+    -   name: decision_date3
+        sql: decision_date3
+        type: time
+
+    -   name: decision_date2
+        sql: decision_date2
+        type: time
+
+    -   name: decision_date1
+        sql: decision_date1
+        type: time
+
+    -   name: decision5
+        sql: decision5
+        type: string
+
+    -   name: decision4
+        sql: decision4
+        type: string
+
+    -   name: decision3
+        sql: decision3
+        type: string
+
+    -   name: decision2
+        sql: decision2
+        type: string
+
+    -   name: decision1
+        sql: decision1
+        type: string
+
+    -   name: application_number
+        sql: application_number
+        type: string
+
+    -   name: administrative_group
+        sql: administrative_group
+        type: string
+
+    -   name: activity_date
+        sql: activity_date
+        type: time
+
+    -   name: academic_period
+        sql: academic_period
+        type: string
+
+    measures: []
+
+    pre_aggregations: []

@@ -1,0 +1,27 @@
+cubes:
+    name: cust_college_enrl_dates
+
+    sql_table: odsmgr_cust.cust_college_enrl_dates
+
+    joins: []
+
+    dimensions:
+    -   name: seq_no
+        sql: seq_no
+        type: string
+
+    -   name: date_val
+        sql: date_val
+        type: time
+
+    -   name: college
+        sql: college
+        type: string
+
+    -   name: academic_period
+        sql: academic_period
+        type: string
+
+    measures: []
+
+    pre_aggregations: []

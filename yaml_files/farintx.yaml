@@ -1,0 +1,100 @@
+cubes:
+    name: farintx
+
+    sql_table: 'farintx@prod@source_db
+
+        '
+    joins:
+    -   name: fabinvh
+        sql: '{CUBE}.farintx_invh_code = fabinvh.fabinvh_code'
+        relationship: zero_to_many
+
+    dimensions:
+    -   name: farintx_user_id
+        sql: farintx_user_id
+        type: string
+
+    -   name: farintx_trat_descrip
+        sql: farintx_trat_descrip
+        type: string
+
+    -   name: farintx_trat_code
+        sql: farintx_trat_code
+        type: string
+
+    -   name: farintx_tax_amt
+        sql: farintx_tax_amt
+        type: string
+
+    -   name: farintx_taxable_amt
+        sql: farintx_taxable_amt
+        type: string
+
+    -   name: farintx_seq_num
+        sql: farintx_seq_num
+        type: string
+
+    -   name: farintx_rucl_code
+        sql: farintx_rucl_code
+        type: string
+
+    -   name: farintx_rebate_percent
+        sql: farintx_rebate_percent
+        type: string
+
+    -   name: farintx_rebate_ind
+        sql: farintx_rebate_ind
+        type: string
+
+    -   name: farintx_rebate_amt
+        sql: farintx_rebate_amt
+        type: string
+
+    -   name: farintx_priority_num
+        sql: farintx_priority_num
+        type: string
+
+    -   name: farintx_pay_tax_to
+        sql: farintx_pay_tax_to
+        type: string
+
+    -   name: farintx_item
+        sql: farintx_item
+        type: string
+
+    -   name: farintx_invh_code
+        sql: farintx_invh_code
+        type: string
+        primary_key: true
+
+    -   name: farintx_fund_code_rebate
+        sql: farintx_fund_code_rebate
+        type: string
+
+    -   name: farintx_data_origin
+        sql: farintx_data_origin
+        type: string
+
+    -   name: farintx_convert_tax_amt
+        sql: farintx_convert_tax_amt
+        type: string
+
+    -   name: farintx_convert_rebate_amt
+        sql: farintx_convert_rebate_amt
+        type: string
+
+    -   name: farintx_coas_code_rebate
+        sql: farintx_coas_code_rebate
+        type: string
+
+    -   name: farintx_activity_date
+        sql: farintx_activity_date
+        type: time
+
+    -   name: farintx_acct_code_ar_rebate
+        sql: farintx_acct_code_ar_rebate
+        type: string
+
+    measures: []
+
+    pre_aggregations: []

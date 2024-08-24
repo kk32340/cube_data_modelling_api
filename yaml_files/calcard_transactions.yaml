@@ -1,0 +1,83 @@
+cubes:
+    name: calcard_transactions
+
+    sql_table: odsmgr_cust.calcard_transactions
+
+    joins:
+    -   name: person_detail_stusta
+        sql: '{CUBE}.cardholder_pidm = person_detail_stusta.person_uid'
+        relationship: one_to_one
+
+    dimensions:
+    -   name: vend_state
+        sql: vend_state
+        type: string
+
+    -   name: vend_name
+        sql: vend_name
+        type: string
+
+    -   name: vend_city
+        sql: vend_city
+        type: string
+
+    -   name: trans_ref_num
+        sql: trans_ref_num
+        type: string
+
+    -   name: time_stamp
+        sql: time_stamp
+        type: string
+
+    -   name: orig_trans_amt
+        sql: orig_trans_amt
+        type: string
+
+    -   name: orgn_code
+        sql: orgn_code
+        type: string
+
+    -   name: prog_code
+        sql: prog_code
+        type: string
+
+    -   name: invoice_date
+        sql: invoice_date
+        type: time
+
+    -   name: fund_code
+        sql: fund_code
+        type: string
+
+    -   name: feed_doc_code
+        sql: feed_doc_code
+        type: string
+
+    -   name: dr_cr_ind
+        sql: dr_cr_ind
+        type: string
+
+    -   name: card_code
+        sql: card_code
+        type: string
+
+    -   name: cardholder_pidm
+        sql: cardholder_pidm
+        type: string
+        primary_key: true
+
+    -   name: bank_post_date
+        sql: bank_post_date
+        type: time
+
+    -   name: activity_date
+        sql: activity_date
+        type: time
+
+    -   name: acct_code
+        sql: acct_code
+        type: string
+
+    measures: []
+
+    pre_aggregations: []

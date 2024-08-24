@@ -1,0 +1,507 @@
+cubes:
+    name: msvgvc1
+
+    sql_table: odsmgr.msvgvc1
+
+    joins: []
+
+    dimensions:
+    -   name: category
+        sql: category
+        type: string
+
+    -   name: integration_partner_sys_desc
+        sql: integration_partner_sys_desc
+        type: string
+
+    -   name: integration_partner_system
+        sql: integration_partner_system
+        type: string
+
+    -   name: integration_partner_desc
+        sql: integration_partner_desc
+        type: string
+
+    -   name: integration_partner
+        sql: integration_partner
+        type: string
+
+    -   name: instruction_method_desc
+        sql: instruction_method_desc
+        type: string
+
+    -   name: instruction_method
+        sql: instruction_method
+        type: string
+
+    -   name: cross_list_activity_date
+        sql: cross_list_activity_date
+        type: time
+
+    -   name: cross_list_seats_available
+        sql: cross_list_seats_available
+        type: string
+
+    -   name: cross_list_enrollment
+        sql: cross_list_enrollment
+        type: string
+
+    -   name: cross_list_maximum_enrollment
+        sql: cross_list_maximum_enrollment
+        type: string
+
+    -   name: section_cross_list_desc
+        sql: section_cross_list_desc
+        type: string
+
+    -   name: section_cross_list
+        sql: section_cross_list
+        type: string
+
+    -   name: workload_adjust
+        sql: workload_adjust
+        type: string
+
+    -   name: wait_list_taken
+        sql: wait_list_taken
+        type: string
+
+    -   name: wait_list_remain
+        sql: wait_list_remain
+        type: string
+
+    -   name: wait_list_max
+        sql: wait_list_max
+        type: string
+
+    -   name: voice_web_available_ind
+        sql: voice_web_available_ind
+        type: string
+
+    -   name: taxonomy_of_program_desc
+        sql: taxonomy_of_program_desc
+        type: string
+
+    -   name: taxonomy_of_program
+        sql: taxonomy_of_program
+        type: string
+
+    -   name: target_enrollment
+        sql: target_enrollment
+        type: string
+
+    -   name: sub_academic_period_desc
+        sql: sub_academic_period_desc
+        type: string
+
+    -   name: sub_academic_period
+        sql: sub_academic_period
+        type: string
+
+    -   name: subject_desc
+        sql: subject_desc
+        type: string
+
+    -   name: subject
+        sql: subject
+        type: string
+
+    -   name: student_meeting_time_desc
+        sql: student_meeting_time_desc
+        type: string
+
+    -   name: student_meeting_time
+        sql: student_meeting_time
+        type: string
+
+    -   name: title_short_desc
+        sql: title_short_desc
+        type: string
+
+    -   name: title_long_desc
+        sql: title_long_desc
+        type: string
+
+    -   name: start_date
+        sql: start_date
+        type: time
+
+    -   name: special_approval_desc
+        sql: special_approval_desc
+        type: string
+
+    -   name: special_approval
+        sql: special_approval
+        type: string
+
+    -   name: registration_start_date
+        sql: registration_start_date
+        type: time
+
+    -   name: registration_permit_ind
+        sql: registration_permit_ind
+        type: string
+
+    -   name: registration_end_date
+        sql: registration_end_date
+        type: time
+
+    -   name: seats_available
+        sql: seats_available
+        type: string
+
+    -   name: status_desc
+        sql: status_desc
+        type: string
+
+    -   name: status
+        sql: status
+        type: string
+
+    -   name: schedule_type_desc
+        sql: schedule_type_desc
+        type: string
+
+    -   name: schedule_count
+        sql: schedule_count
+        type: string
+
+    -   name: schedule
+        sql: schedule
+        type: string
+
+    -   name: program_classification_desc
+        sql: program_classification_desc
+        type: string
+
+    -   name: program_classification
+        sql: program_classification
+        type: string
+
+    -   name: percent_responsibility
+        sql: percent_responsibility
+        type: string
+
+    -   name: process_group
+        sql: process_group
+        type: string
+
+    -   name: prior_enrollment
+        sql: prior_enrollment
+        type: string
+
+    -   name: primary_ind
+        sql: primary_ind
+        type: string
+
+    -   name: meeting_time_count
+        sql: meeting_time_count
+        type: string
+
+    -   name: max_other_hours
+        sql: max_other_hours
+        type: string
+
+    -   name: max_lecture_hours
+        sql: max_lecture_hours
+        type: string
+
+    -   name: max_lab_hours
+        sql: max_lab_hours
+        type: string
+
+    -   name: max_credits
+        sql: max_credits
+        type: string
+
+    -   name: max_contact_hours
+        sql: max_contact_hours
+        type: string
+
+    -   name: max_billing
+        sql: max_billing
+        type: string
+
+    -   name: maximum_enrollment
+        sql: maximum_enrollment
+        type: string
+
+    -   name: offering_prereq_count
+        sql: offering_prereq_count
+        type: string
+
+    -   name: offering_number
+        sql: offering_number
+        type: string
+
+    -   name: offering_coreq_count
+        sql: offering_coreq_count
+        type: string
+
+    -   name: occupational_course_desc
+        sql: occupational_course_desc
+        type: string
+
+    -   name: occupational_course
+        sql: occupational_course
+        type: string
+
+    -   name: non_traditional_course
+        sql: non_traditional_course
+        type: string
+
+    -   name: link_identifier
+        sql: link_identifier
+        type: string
+
+    -   name: multi_source_desc
+        sql: multi_source_desc
+        type: string
+
+    -   name: multi_source
+        sql: multi_source
+        type: string
+
+    -   name: min_other_hours
+        sql: min_other_hours
+        type: string
+
+    -   name: min_lecture_hours
+        sql: min_lecture_hours
+        type: string
+
+    -   name: min_lab_hours
+        sql: min_lab_hours
+        type: string
+
+    -   name: min_credits
+        sql: min_credits
+        type: string
+
+    -   name: min_contact_hours
+        sql: min_contact_hours
+        type: string
+
+    -   name: min_billing
+        sql: min_billing
+        type: string
+
+    -   name: minimum_enrollment
+        sql: minimum_enrollment
+        type: string
+
+    -   name: instructor_uid
+        sql: instructor_uid
+        type: string
+
+    -   name: instructor_middle_name
+        sql: instructor_middle_name
+        type: string
+
+    -   name: instructor_last_name
+        sql: instructor_last_name
+        type: string
+
+    -   name: instructor_id
+        sql: instructor_id
+        type: string
+
+    -   name: instructor_first_name
+        sql: instructor_first_name
+        type: string
+
+    -   name: instructor_count
+        sql: instructor_count
+        type: string
+
+    -   name: grade_type_desc
+        sql: grade_type_desc
+        type: string
+
+    -   name: grade_type_count
+        sql: grade_type_count
+        type: string
+
+    -   name: grade_type
+        sql: grade_type
+        type: string
+
+    -   name: gradable_ind
+        sql: gradable_ind
+        type: string
+
+    -   name: generated_credits
+        sql: generated_credits
+        type: string
+
+    -   name: division_desc
+        sql: division_desc
+        type: string
+
+    -   name: division
+        sql: division
+        type: string
+
+    -   name: extensions_permitted
+        sql: extensions_permitted
+        type: string
+
+    -   name: extensions_max_date
+        sql: extensions_max_date
+        type: time
+
+    -   name: exempt_tuition_section
+        sql: exempt_tuition_section
+        type: string
+
+    -   name: department_desc
+        sql: department_desc
+        type: string
+
+    -   name: department
+        sql: department
+        type: string
+
+    -   name: end_date
+        sql: end_date
+        type: time
+
+    -   name: duration_units
+        sql: duration_units
+        type: string
+
+    -   name: duration
+        sql: duration
+        type: string
+
+    -   name: census_enrollment_date2
+        sql: census_enrollment_date2
+        type: time
+
+    -   name: census_enrollment_date1
+        sql: census_enrollment_date1
+        type: time
+
+    -   name: course_version
+        sql: course_version
+        type: string
+
+    -   name: course_text_narrative
+        sql: course_text_narrative
+        type: string
+
+    -   name: course_reporting_code_6
+        sql: course_reporting_code_6
+        type: string
+
+    -   name: course_reporting_code_5
+        sql: course_reporting_code_5
+        type: string
+
+    -   name: course_reporting_code_4
+        sql: course_reporting_code_4
+        type: string
+
+    -   name: course_reporting_code_3
+        sql: course_reporting_code_3
+        type: string
+
+    -   name: course_reporting_code_2
+        sql: course_reporting_code_2
+        type: string
+
+    -   name: course_reporting_code_1
+        sql: course_reporting_code_1
+        type: string
+
+    -   name: course_reference_number
+        sql: course_reference_number
+        type: string
+
+    -   name: census_enrollment2
+        sql: census_enrollment2
+        type: string
+
+    -   name: census_enrollment1
+        sql: census_enrollment1
+        type: string
+
+    -   name: course_number
+        sql: course_number
+        type: string
+
+    -   name: course_identification
+        sql: course_identification
+        type: string
+
+    -   name: course_class_level_desc
+        sql: course_class_level_desc
+        type: string
+
+    -   name: course_class_level
+        sql: course_class_level
+        type: string
+
+    -   name: campus_desc
+        sql: campus_desc
+        type: string
+
+    -   name: campus
+        sql: campus
+        type: string
+
+    -   name: college_desc
+        sql: college_desc
+        type: string
+
+    -   name: college
+        sql: college
+        type: string
+
+    -   name: attribute_count
+        sql: attribute_count
+        type: string
+
+    -   name: administrative_group
+        sql: administrative_group
+        type: string
+
+    -   name: actual_enrollment
+        sql: actual_enrollment
+        type: string
+
+    -   name: active_offering_ind
+        sql: active_offering_ind
+        type: string
+
+    -   name: academic_year_desc
+        sql: academic_year_desc
+        type: string
+
+    -   name: accounting_method_desc
+        sql: accounting_method_desc
+        type: string
+
+    -   name: accounting_method
+        sql: accounting_method
+        type: string
+
+    -   name: academic_period_weeks
+        sql: academic_period_weeks
+        type: string
+
+    -   name: academic_year
+        sql: academic_year
+        type: string
+
+    -   name: academic_period_desc
+        sql: academic_period_desc
+        type: string
+
+    -   name: academic_period
+        sql: academic_period
+        type: string
+
+    measures: []
+
+    pre_aggregations: []

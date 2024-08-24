@@ -1,0 +1,171 @@
+cubes:
+    name: ftvcard
+
+    sql_table: fimsmgr.ftvcard
+
+    joins: []
+
+    dimensions:
+    -   name: ftvcard_prog_code_def
+        sql: ftvcard_prog_code_def
+        type: string
+
+    -   name: ftvcard_acct_code_def
+        sql: ftvcard_acct_code_def
+        type: string
+
+    -   name: ftvcard_orgn_code_def
+        sql: ftvcard_orgn_code_def
+        type: string
+
+    -   name: ftvcard_fund_code_def
+        sql: ftvcard_fund_code_def
+        type: string
+
+    -   name: ftvcard_acci_code_def
+        sql: ftvcard_acci_code_def
+        type: string
+
+    -   name: ftvcard_orgn_code_resp
+        sql: ftvcard_orgn_code_resp
+        type: string
+
+    -   name: ftvcard_mult_card_desc
+        sql: ftvcard_mult_card_desc
+        type: string
+
+    -   name: ftvcard_sponsored_card_ind
+        sql: ftvcard_sponsored_card_ind
+        type: string
+
+    -   name: ftvcard_mother_maiden_name
+        sql: ftvcard_mother_maiden_name
+        type: string
+
+    -   name: ftvcard_cardholder_pidm
+        sql: ftvcard_cardholder_pidm
+        type: string
+
+    -   name: ftvcard_sponsor_pidm
+        sql: ftvcard_sponsor_pidm
+        type: string
+
+    -   name: ftvcard_bus_mgr_user_id
+        sql: ftvcard_bus_mgr_user_id
+        type: string
+
+    -   name: ftvcard_user_id
+        sql: ftvcard_user_id
+        type: string
+
+    -   name: ftvcard_activity_date
+        sql: ftvcard_activity_date
+        type: time
+
+    -   name: ftvcard_coas_code_def
+        sql: ftvcard_coas_code_def
+        type: string
+
+    -   name: ftvcard_process_lag_days
+        sql: ftvcard_process_lag_days
+        type: string
+
+    -   name: ftvcard_acct_mgr_user_id
+        sql: ftvcard_acct_mgr_user_id
+        type: string
+
+    -   name: ftvcard_expiration_date
+        sql: ftvcard_expiration_date
+        type: time
+
+    -   name: ftvcard_start_date
+        sql: ftvcard_start_date
+        type: time
+
+    -   name: ftvcard_status_code
+        sql: ftvcard_status_code
+        type: string
+
+    -   name: ftvcard_card_type_code
+        sql: ftvcard_card_type_code
+        type: string
+
+    -   name: ftvcard_code
+        sql: ftvcard_code
+        type: string
+
+    -   name: ftvcard_trans_cycle_num
+        sql: ftvcard_trans_cycle_num
+        type: string
+
+    -   name: ftvcard_single_purch_amt
+        sql: ftvcard_single_purch_amt
+        type: string
+
+    -   name: ftvcard_trans_day_num
+        sql: ftvcard_trans_day_num
+        type: string
+
+    -   name: ftvcard_spending_limit_amt
+        sql: ftvcard_spending_limit_amt
+        type: string
+
+    -   name: ftvcard_mrchnt_category_code
+        sql: ftvcard_mrchnt_category_code
+        type: string
+
+    -   name: ftvcard_proj_code_def
+        sql: ftvcard_proj_code_def
+        type: string
+
+    -   name: ftvcard_bank_code_def
+        sql: ftvcard_bank_code_def
+        type: string
+
+    -   name: ftvcard_locn_code_def
+        sql: ftvcard_locn_code_def
+        type: string
+
+    -   name: ftvcard_actv_code_def
+        sql: ftvcard_actv_code_def
+        type: string
+
+    -   name: ftvcard_process_module_cde
+        sql: ftvcard_process_module_cde
+        type: string
+
+    -   name: ftvcard_reconcile_doc_seq
+        sql: ftvcard_reconcile_doc_seq
+        type: string
+
+    -   name: ftvcard_ch_email_cde
+        sql: ftvcard_ch_email_cde
+        type: string
+
+    -   name: ftvcard_am_email_cde
+        sql: ftvcard_am_email_cde
+        type: string
+
+    -   name: ftvcard_bm_email_cde
+        sql: ftvcard_bm_email_cde
+        type: string
+
+    -   name: ftvcard_surrogate_id
+        sql: ftvcard_surrogate_id
+        type: string
+
+    -   name: ftvcard_version
+        sql: ftvcard_version
+        type: string
+
+    -   name: ftvcard_data_origin
+        sql: ftvcard_data_origin
+        type: string
+
+    -   name: ftvcard_vpdi_code
+        sql: ftvcard_vpdi_code
+        type: string
+
+    measures: []
+
+    pre_aggregations: []

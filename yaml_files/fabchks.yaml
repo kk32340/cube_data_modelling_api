@@ -1,0 +1,87 @@
+cubes:
+    name: fabchks
+
+    sql_table: fimsmgr.fabchks
+
+    joins:
+    -   name: fgbtrnh
+        sql: '{CUBE}.fabchks_check_num = fgbtrnh.fgbtrnh_doc_code'
+        relationship: one_to_many
+
+    -   name: transaction_history
+        sql: '{CUBE}.fabchks_check_num = transaction_history.document'
+        relationship: one_to_many
+
+    dimensions:
+    -   name: fabchks_user_id
+        sql: fabchks_user_id
+        type: string
+
+    -   name: fabchks_recon_ind
+        sql: fabchks_recon_ind
+        type: string
+
+    -   name: fabchks_check_type_ind
+        sql: fabchks_check_type_ind
+        type: string
+
+    -   name: fabchks_check_num
+        sql: fabchks_check_num
+        type: string
+        primary_key: true
+
+    -   name: fabchks_check_date
+        sql: fabchks_check_date
+        type: time
+
+    -   name: fabchks_check_amt
+        sql: fabchks_check_amt
+        type: string
+
+    -   name: fabchks_cancel_ind
+        sql: fabchks_cancel_ind
+        type: string
+
+    -   name: fabchks_cancel_date
+        sql: fabchks_cancel_date
+        type: time
+
+    -   name: fabchks_bank_code
+        sql: fabchks_bank_code
+        type: string
+
+    -   name: fabchks_activity_date
+        sql: fabchks_activity_date
+        type: time
+
+    -   name: fabchks_ach_ind
+        sql: fabchks_ach_ind
+        type: string
+
+    -   name: fabchks_pay_type
+        sql: fabchks_pay_type
+        type: string
+
+    -   name: fabchks_surrogate_id
+        sql: fabchks_surrogate_id
+        type: string
+
+    -   name: fabchks_version
+        sql: fabchks_version
+        type: string
+
+    -   name: fabchks_data_origin
+        sql: fabchks_data_origin
+        type: string
+
+    -   name: fabchks_vpdi_code
+        sql: fabchks_vpdi_code
+        type: string
+
+    -   name: fabchks_crsn_code
+        sql: fabchks_crsn_code
+        type: string
+
+    measures: []
+
+    pre_aggregations: []

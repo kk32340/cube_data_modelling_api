@@ -1,0 +1,91 @@
+cubes:
+    name: arccspar
+
+    sql_table: odsmgr_cust.arccspar
+
+    joins:
+    -   name: ir_student_person
+        sql: '{CUBE}.pidm = ir_student_person.person_uid'
+        relationship: one_to_one
+
+    dimensions:
+    -   name: trnsfrprep
+        sql: trnsfrprep
+        type: string
+
+    -   name: trnsfrdirec
+        sql: trnsfrdirec
+        type: string
+
+    -   name: trnsfr4yr
+        sql: trnsfr4yr
+        type: string
+
+    -   name: rptyear
+        sql: rptyear
+        type: string
+
+    -   name: rcdaa
+        sql: rcdaa
+        type: string
+
+    -   name: rcd18unts
+        sql: rcd18unts
+        type: string
+
+    -   name: field17
+        sql: field17
+        type: string
+
+    -   name: pidm
+        sql: pidm
+        type: string
+        primary_key: true
+
+    -   name: id
+        sql: id
+        type: string
+
+    -   name: gender
+        sql: gender
+        type: string
+
+    -   name: ethnicity
+        sql: ethnicity
+        type: string
+
+    -   name: ethnic
+        sql: ethnic
+        type: string
+
+    -   name: degrappl
+        sql: degrappl
+        type: string
+
+    -   name: enrlcrdt
+        sql: enrlcrdt
+        type: string
+
+    -   name: comp30unts
+        sql: comp30unts
+        type: string
+
+    -   name: ban_id
+        sql: ban_id
+        type: string
+
+    -   name: college
+        sql: college
+        type: string
+
+    -   name: cohort
+        sql: cohort
+        type: string
+
+    -   name: age
+        sql: age
+        type: string
+
+    measures: []
+
+    pre_aggregations: []

@@ -1,0 +1,51 @@
+cubes:
+    name: svbsfys
+
+    sql_table: saturn.svbsfys
+
+    joins: []
+
+    dimensions:
+    -   name: svbsfys_vpdi_code
+        sql: svbsfys_vpdi_code
+        type: string
+
+    -   name: svbsfys_version
+        sql: svbsfys_version
+        type: string
+
+    -   name: svbsfys_surrogate_id
+        sql: svbsfys_surrogate_id
+        type: string
+
+    -   name: svbsfys_data_origin
+        sql: svbsfys_data_origin
+        type: string
+
+    -   name: svbsfys_user_id
+        sql: svbsfys_user_id
+        type: string
+
+    -   name: svbsfys_activity_date
+        sql: svbsfys_activity_date
+        type: time
+
+    -   name: svbsfys_foster_youth_cde
+        sql: svbsfys_foster_youth_cde
+        type: string
+
+    -   name: svbsfys_pidm
+        sql: svbsfys_pidm
+        type: string
+
+    -   name: svbsfys_dicd_code
+        sql: svbsfys_dicd_code
+        type: string
+
+    -   name: svbsfys_eff_term
+        sql: svbsfys_eff_term
+        type: string
+
+    measures: []
+
+    pre_aggregations: []

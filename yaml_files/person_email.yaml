@@ -1,0 +1,59 @@
+cubes:
+    name: person_email
+
+    sql_table: odsmgr_cust.person_email
+
+    joins:
+    -   name: student_cohort
+        sql: '{CUBE}.goremal_pidm = student_cohort.person_uid'
+        relationship: zero_to_many
+
+    -   name: student_person
+        sql: '{CUBE}.goremal_pidm = student_person.person_uid'
+        relationship: zero_to_many
+
+    dimensions:
+    -   name: goremal_data_origin
+        sql: goremal_data_origin
+        type: string
+
+    -   name: goremal_disp_web_ind
+        sql: goremal_disp_web_ind
+        type: string
+
+    -   name: goremal_comment
+        sql: goremal_comment
+        type: string
+
+    -   name: goremal_user_id
+        sql: goremal_user_id
+        type: string
+
+    -   name: goremal_activity_date
+        sql: goremal_activity_date
+        type: time
+
+    -   name: goremal_preferred_ind
+        sql: goremal_preferred_ind
+        type: string
+
+    -   name: goremal_status_ind
+        sql: goremal_status_ind
+        type: string
+
+    -   name: goremal_email_address
+        sql: goremal_email_address
+        type: string
+
+    -   name: goremal_emal_code
+        sql: goremal_emal_code
+        type: string
+
+    -   name: goremal_pidm
+        sql: goremal_pidm
+        type: string
+        primary_key: true
+
+    measures: []
+
+    pre_aggregations: []

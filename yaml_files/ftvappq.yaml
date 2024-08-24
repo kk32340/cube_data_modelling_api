@@ -1,0 +1,55 @@
+cubes:
+    name: ftvappq
+
+    sql_table: fimsmgr.ftvappq
+
+    joins: []
+
+    dimensions:
+    -   name: ftvappq_user_id
+        sql: ftvappq_user_id
+        type: string
+
+    -   name: ftvappq_queue_limit
+        sql: ftvappq_queue_limit
+        type: string
+
+    -   name: ftvappq_next_queue_id
+        sql: ftvappq_next_queue_id
+        type: string
+
+    -   name: ftvappq_description
+        sql: ftvappq_description
+        type: string
+
+    -   name: ftvappq_approval_req
+        sql: ftvappq_approval_req
+        type: string
+
+    -   name: ftvappq_activity_date
+        sql: ftvappq_activity_date
+        type: time
+
+    -   name: ftvappq_queue_id
+        sql: ftvappq_queue_id
+        type: string
+
+    -   name: ftvappq_surrogate_id
+        sql: ftvappq_surrogate_id
+        type: string
+
+    -   name: ftvappq_version
+        sql: ftvappq_version
+        type: string
+
+    -   name: ftvappq_data_origin
+        sql: ftvappq_data_origin
+        type: string
+
+    -   name: ftvappq_vpdi_code
+        sql: ftvappq_vpdi_code
+        type: string
+
+    measures: []
+
+    pre_aggregations: []

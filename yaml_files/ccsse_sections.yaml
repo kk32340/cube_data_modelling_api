@@ -1,0 +1,23 @@
+cubes:
+    name: ccsse_sections
+
+    sql_table: odsmgr_cust.ccsse_sections
+
+    joins: []
+
+    dimensions:
+    -   name: date_added
+        sql: date_added
+        type: time
+
+    -   name: course_reference_number
+        sql: course_reference_number
+        type: string
+
+    -   name: academic_period
+        sql: academic_period
+        type: string
+
+    measures: []
+
+    pre_aggregations: []

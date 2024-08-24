@@ -1,0 +1,63 @@
+cubes:
+    name: radt_cohort
+
+    sql_table: odsmgr_cust.radt_cohort
+
+    joins: []
+
+    dimensions:
+    -   name: registration_status_desc
+        sql: registration_status_desc
+        type: string
+
+    -   name: registration_status
+        sql: registration_status
+        type: string
+
+    -   name: person_uid
+        sql: person_uid
+        type: string
+
+    -   name: prev_term_gpa
+        sql: prev_term_gpa
+        type: string
+
+    -   name: mail_res_street2
+        sql: mail_res_street2
+        type: string
+
+    -   name: mail_res_street1
+        sql: mail_res_street1
+        type: string
+
+    -   name: mail_res_state
+        sql: mail_res_state
+        type: string
+
+    -   name: mail_res_postal_code
+        sql: mail_res_postal_code
+        type: string
+
+    -   name: mail_res_city
+        sql: mail_res_city
+        type: string
+
+    -   name: last_name
+        sql: last_name
+        type: string
+
+    -   name: id
+        sql: id
+        type: string
+
+    -   name: first_name
+        sql: first_name
+        type: string
+
+    -   name: academic_period
+        sql: academic_period
+        type: string
+
+    measures: []
+
+    pre_aggregations: []

@@ -1,0 +1,62 @@
+cubes:
+    name: glbextr
+
+    sql_table: general.glbextr
+
+    joins:
+    -   name: receivable_account_detail
+        sql: '{CUBE}.pidm = receivable_account_detail.account_uid'
+        relationship: one_to_one
+
+    dimensions:
+    -   name: glbextr_vpdi_code
+        sql: glbextr_vpdi_code
+        type: string
+
+    -   name: glbextr_data_origin
+        sql: glbextr_data_origin
+        type: string
+
+    -   name: glbextr_version
+        sql: glbextr_version
+        type: string
+
+    -   name: glbextr_surrogate_id
+        sql: glbextr_surrogate_id
+        type: string
+
+    -   name: glbextr_slct_ind
+        sql: glbextr_slct_ind
+        type: string
+
+    -   name: glbextr_sys_ind
+        sql: glbextr_sys_ind
+        type: string
+
+    -   name: glbextr_activity_date
+        sql: glbextr_activity_date
+        type: time
+
+    -   name: glbextr_key
+        sql: glbextr_key
+        type: string
+
+    -   name: glbextr_user_id
+        sql: glbextr_user_id
+        type: string
+
+    -   name: glbextr_creator_id
+        sql: glbextr_creator_id
+        type: string
+
+    -   name: glbextr_selection
+        sql: glbextr_selection
+        type: string
+
+    -   name: glbextr_application
+        sql: glbextr_application
+        type: string
+
+    measures: []
+
+    pre_aggregations: []

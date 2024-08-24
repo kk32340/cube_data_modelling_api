@@ -1,0 +1,271 @@
+cubes:
+    name: person_international
+
+    sql_table: odsmgr.person_international
+
+    joins: []
+
+    dimensions:
+    -   name: visa_type_desc
+        sql: visa_type_desc
+        type: string
+
+    -   name: visa_type
+        sql: visa_type
+        type: string
+
+    -   name: visa_start_date
+        sql: visa_start_date
+        type: time
+
+    -   name: visa_req_date
+        sql: visa_req_date
+        type: time
+
+    -   name: visa_number
+        sql: visa_number
+        type: string
+
+    -   name: visa_issuing_nation_desc
+        sql: visa_issuing_nation_desc
+        type: string
+
+    -   name: visa_issuing_nation
+        sql: visa_issuing_nation
+        type: string
+
+    -   name: visa_issuing_authority_desc
+        sql: visa_issuing_authority_desc
+        type: string
+
+    -   name: visa_issuing_authority
+        sql: visa_issuing_authority
+        type: string
+
+    -   name: visa_issue_date
+        sql: visa_issue_date
+        type: time
+
+    -   name: visa_expire_date
+        sql: visa_expire_date
+        type: time
+
+    -   name: tax_id
+        sql: tax_id
+        type: string
+
+    -   name: spouse_accompanied_ind
+        sql: spouse_accompanied_ind
+        type: string
+
+    -   name: sponsor_of_person_desc
+        sql: sponsor_of_person_desc
+        type: string
+
+    -   name: sponsor_of_person
+        sql: sponsor_of_person
+        type: string
+
+    -   name: signature_ind
+        sql: signature_ind
+        type: string
+
+    -   name: person_uid
+        sql: person_uid
+        type: string
+
+    -   name: process_group
+        sql: process_group
+        type: string
+
+    -   name: passport_registration_no
+        sql: passport_registration_no
+        type: string
+
+    -   name: passport_issue_nation_desc
+        sql: passport_issue_nation_desc
+        type: string
+
+    -   name: passport_issue_nation
+        sql: passport_issue_nation
+        type: string
+
+    -   name: passport_id
+        sql: passport_id
+        type: string
+
+    -   name: passport_expire_date
+        sql: passport_expire_date
+        type: time
+
+    -   name: passport_certif_number
+        sql: passport_certif_number
+        type: string
+
+    -   name: passport_certif_elig_desc
+        sql: passport_certif_elig_desc
+        type: string
+
+    -   name: passport_certif_elig
+        sql: passport_certif_elig
+        type: string
+
+    -   name: passport_certif_date_recvd
+        sql: passport_certif_date_recvd
+        type: time
+
+    -   name: passport_certif_date_issue
+        sql: passport_certif_date_issue
+        type: time
+
+    -   name: point_of_entry_desc
+        sql: point_of_entry_desc
+        type: string
+
+    -   name: point_of_entry
+        sql: point_of_entry
+        type: string
+
+    -   name: marital_status_desc
+        sql: marital_status_desc
+        type: string
+
+    -   name: marital_status
+        sql: marital_status
+        type: string
+
+    -   name: number_of_entries
+        sql: number_of_entries
+        type: string
+
+    -   name: native_language_desc
+        sql: native_language_desc
+        type: string
+
+    -   name: native_language
+        sql: native_language
+        type: string
+
+    -   name: nation_of_citizenship_desc2
+        sql: nation_of_citizenship_desc2
+        type: string
+
+    -   name: nation_of_citizenship_desc
+        sql: nation_of_citizenship_desc
+        type: string
+
+    -   name: nation_of_citizenship2
+        sql: nation_of_citizenship2
+        type: string
+
+    -   name: nation_of_citizenship
+        sql: nation_of_citizenship
+        type: string
+
+    -   name: nation_of_birth_desc
+        sql: nation_of_birth_desc
+        type: string
+
+    -   name: nation_of_birth
+        sql: nation_of_birth
+        type: string
+
+    -   name: nation_iso_code
+        sql: nation_iso_code
+        type: string
+
+    -   name: nation_edi_equivalent
+        sql: nation_edi_equivalent
+        type: string
+
+    -   name: multi_source_desc
+        sql: multi_source_desc
+        type: string
+
+    -   name: last_name
+        sql: last_name
+        type: string
+
+    -   name: multi_source
+        sql: multi_source
+        type: string
+
+    -   name: middle_name
+        sql: middle_name
+        type: string
+
+    -   name: full_name_lfmi
+        sql: full_name_lfmi
+        type: string
+
+    -   name: immigration_status_date
+        sql: immigration_status_date
+        type: time
+
+    -   name: immigration_status
+        sql: immigration_status
+        type: string
+
+    -   name: foreign_tax_id
+        sql: foreign_tax_id
+        type: string
+
+    -   name: first_name
+        sql: first_name
+        type: string
+
+    -   name: government_id
+        sql: government_id
+        type: string
+
+    -   name: entry_ind
+        sql: entry_ind
+        type: string
+
+    -   name: deceased_status
+        sql: deceased_status
+        type: string
+
+    -   name: deceased_date
+        sql: deceased_date
+        type: time
+
+    -   name: employment_type_desc
+        sql: employment_type_desc
+        type: string
+
+    -   name: employment_type
+        sql: employment_type
+        type: string
+
+    -   name: duration_of_stay
+        sql: duration_of_stay
+        type: string
+
+    -   name: citizenship_type
+        sql: citizenship_type
+        type: string
+
+    -   name: citizenship_ind
+        sql: citizenship_ind
+        type: string
+
+    -   name: citizenship_edi_equiv
+        sql: citizenship_edi_equiv
+        type: string
+
+    -   name: citizenship_desc
+        sql: citizenship_desc
+        type: string
+
+    -   name: children_number
+        sql: children_number
+        type: string
+
+    -   name: administrative_group
+        sql: administrative_group
+        type: string
+
+    measures: []
+
+    pre_aggregations: []

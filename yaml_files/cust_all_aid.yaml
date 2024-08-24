@@ -1,0 +1,62 @@
+cubes:
+    name: cust_all_aid
+
+    sql_table: odsmgr_cust.cust_all_aid
+
+    joins:
+    -   name: ir_student_term
+        sql: '{CUBE}.person_uid = ir_student_term.person_uid AND {CUBE}.academic_period
+            = ir_student_term.academic_period'
+        relationship: one_to_many
+
+    -   name: student_course
+        sql: '{CUBE}.person_uid = student_course.person_uid AND {CUBE}.academic_period
+            = student_course.academic_period'
+        relationship: zero_to_many
+
+    dimensions:
+    -   name: award_amount
+        sql: award_amount
+        type: string
+
+    -   name: aid_source
+        sql: aid_source
+        type: string
+
+    -   name: aid_type
+        sql: aid_type
+        type: string
+
+    -   name: award_description
+        sql: award_description
+        type: string
+
+    -   name: award
+        sql: award
+        type: string
+
+    -   name: finaid_college
+        sql: finaid_college
+        type: string
+
+    -   name: aid_year
+        sql: aid_year
+        type: string
+
+    -   name: id
+        sql: id
+        type: string
+
+    -   name: academic_period
+        sql: academic_period
+        type: string
+        primary_key: true
+
+    -   name: person_uid
+        sql: person_uid
+        type: string
+        primary_key: true
+
+    measures: []
+
+    pre_aggregations: []

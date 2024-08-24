@@ -1,0 +1,71 @@
+cubes:
+    name: student_worker_view
+
+    sql_table: odsmgr_cust.student_worker_view
+
+    joins: []
+
+    dimensions:
+    -   name: email address
+        sql: email address
+        type: string
+
+    -   name: total semesters enrolled
+        sql: total semesters enrolled
+        type: string
+
+    -   name: new employee
+        sql: new employee
+        type: string
+
+    -   name: full or part time
+        sql: full or part time
+        type: string
+
+    -   name: funding source
+        sql: funding source
+        type: string
+
+    -   name: employment campus
+        sql: employment campus
+        type: string
+
+    -   name: place employed
+        sql: place employed
+        type: string
+
+    -   name: major
+        sql: major
+        type: string
+
+    -   name: gpa
+        sql: gpa
+        type: string
+
+    -   name: name
+        sql: name
+        type: string
+
+    -   name: id
+        sql: id
+        type: string
+
+    -   name: person_uid
+        sql: person_uid
+        type: string
+
+    -   name: academic_period
+        sql: academic_period
+        type: string
+
+    -   name: college
+        sql: college
+        type: string
+
+    -   name: term credit hours enrolled
+        sql: term credit hours enrolled
+        type: string
+
+    measures: []
+
+    pre_aggregations: []

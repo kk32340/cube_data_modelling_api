@@ -1,0 +1,71 @@
+cubes:
+    name: mis_edplan_view
+
+    sql_table: odsmgr_cust.mis_edplan_view
+
+    joins: []
+
+    dimensions:
+    -   name: college_code
+        sql: college_code
+        type: string
+
+    -   name: svredpl_user_id
+        sql: svredpl_user_id
+        type: string
+
+    -   name: education_plan
+        sql: education_plan
+        type: string
+
+    -   name: counseling_updated
+        sql: counseling_updated
+        type: string
+
+    -   name: high_school_code_desc
+        sql: high_school_code_desc
+        type: string
+
+    -   name: cell_phone
+        sql: cell_phone
+        type: string
+
+    -   name: day_phone
+        sql: day_phone
+        type: string
+
+    -   name: email_address
+        sql: email_address
+        type: string
+
+    -   name: middle_name
+        sql: middle_name
+        type: string
+
+    -   name: first_name
+        sql: first_name
+        type: string
+
+    -   name: last_name
+        sql: last_name
+        type: string
+
+    -   name: id
+        sql: id
+        type: string
+
+    -   name: college
+        sql: college
+        type: string
+
+    -   name: svredpl_pidm
+        sql: svredpl_pidm
+        type: string
+
+    -   name: term
+        sql: term
+        type: string
+
+    measures: []
+
+    pre_aggregations: []

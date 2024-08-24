@@ -1,0 +1,535 @@
+cubes:
+    name: previous_education_slot
+
+    sql_table: odsmgr.previous_education_slot
+
+    joins: []
+
+    dimensions:
+    -   name: ps_award_category_desc_3
+        sql: ps_award_category_desc_3
+        type: string
+
+    -   name: ps_award_category_3
+        sql: ps_award_category_3
+        type: string
+
+    -   name: ps_award_category_desc_2
+        sql: ps_award_category_desc_2
+        type: string
+
+    -   name: ps_award_category_2
+        sql: ps_award_category_2
+        type: string
+
+    -   name: ps_award_category_desc_1
+        sql: ps_award_category_desc_1
+        type: string
+
+    -   name: ps_award_category_1
+        sql: ps_award_category_1
+        type: string
+
+    -   name: ss_transcript_reviewed_date
+        sql: ss_transcript_reviewed_date
+        type: time
+
+    -   name: ss_transcript_received_date
+        sql: ss_transcript_received_date
+        type: time
+
+    -   name: ss_school_size
+        sql: ss_school_size
+        type: string
+
+    -   name: ss_school_rank
+        sql: ss_school_rank
+        type: string
+
+    -   name: ss_school_gpa
+        sql: ss_school_gpa
+        type: string
+
+    -   name: ss_percentile
+        sql: ss_percentile
+        type: string
+
+    -   name: ss_official_transcript_ind
+        sql: ss_official_transcript_ind
+        type: string
+
+    -   name: ss_grad_date
+        sql: ss_grad_date
+        type: time
+
+    -   name: ss_diploma_desc
+        sql: ss_diploma_desc
+        type: string
+
+    -   name: ss_diploma
+        sql: ss_diploma
+        type: string
+
+    -   name: ss_attend_to_date
+        sql: ss_attend_to_date
+        type: time
+
+    -   name: ss_attend_from_date
+        sql: ss_attend_from_date
+        type: time
+
+    -   name: ps_transcript_reviewed_date_3
+        sql: ps_transcript_reviewed_date_3
+        type: time
+
+    -   name: ps_transcript_reviewed_date_2
+        sql: ps_transcript_reviewed_date_2
+        type: time
+
+    -   name: ps_transcript_reviewed_date_1
+        sql: ps_transcript_reviewed_date_1
+        type: time
+
+    -   name: ps_transcript_received_date_3
+        sql: ps_transcript_received_date_3
+        type: time
+
+    -   name: ps_transcript_received_date_2
+        sql: ps_transcript_received_date_2
+        type: time
+
+    -   name: ps_transcript_received_date_1
+        sql: ps_transcript_received_date_1
+        type: time
+
+    -   name: ps_school_size_3
+        sql: ps_school_size_3
+        type: string
+
+    -   name: ps_school_size_2
+        sql: ps_school_size_2
+        type: string
+
+    -   name: ps_school_size_1
+        sql: ps_school_size_1
+        type: string
+
+    -   name: ps_school_rank_3
+        sql: ps_school_rank_3
+        type: string
+
+    -   name: ps_school_rank_2
+        sql: ps_school_rank_2
+        type: string
+
+    -   name: ps_school_rank_1
+        sql: ps_school_rank_1
+        type: string
+
+    -   name: ps_school_percentile_3
+        sql: ps_school_percentile_3
+        type: string
+
+    -   name: ps_school_percentile_2
+        sql: ps_school_percentile_2
+        type: string
+
+    -   name: ps_school_percentile_1
+        sql: ps_school_percentile_1
+        type: string
+
+    -   name: ps_school_gpa_3
+        sql: ps_school_gpa_3
+        type: string
+
+    -   name: ps_school_gpa_2
+        sql: ps_school_gpa_2
+        type: string
+
+    -   name: ps_school_gpa_1
+        sql: ps_school_gpa_1
+        type: string
+
+    -   name: ps_official_transcript_ind_3
+        sql: ps_official_transcript_ind_3
+        type: string
+
+    -   name: ps_official_transcript_ind_2
+        sql: ps_official_transcript_ind_2
+        type: string
+
+    -   name: ps_official_transcript_ind_1
+        sql: ps_official_transcript_ind_1
+        type: string
+
+    -   name: ps_education_goal_desc_3
+        sql: ps_education_goal_desc_3
+        type: string
+
+    -   name: ps_education_goal_desc_2
+        sql: ps_education_goal_desc_2
+        type: string
+
+    -   name: ps_education_goal_desc_1
+        sql: ps_education_goal_desc_1
+        type: string
+
+    -   name: ps_education_goal_3
+        sql: ps_education_goal_3
+        type: string
+
+    -   name: ps_education_goal_2
+        sql: ps_education_goal_2
+        type: string
+
+    -   name: ps_education_goal_1
+        sql: ps_education_goal_1
+        type: string
+
+    -   name: ps_attend_to_date_3
+        sql: ps_attend_to_date_3
+        type: time
+
+    -   name: ps_attend_to_date_2
+        sql: ps_attend_to_date_2
+        type: time
+
+    -   name: ps_attend_to_date_1
+        sql: ps_attend_to_date_1
+        type: time
+
+    -   name: ps_attend_from_date_3
+        sql: ps_attend_from_date_3
+        type: time
+
+    -   name: ps_attend_from_date_2
+        sql: ps_attend_from_date_2
+        type: time
+
+    -   name: ps_attend_from_date_1
+        sql: ps_attend_from_date_1
+        type: time
+
+    -   name: secondary_school_name
+        sql: secondary_school_name
+        type: string
+
+    -   name: secondary_school
+        sql: secondary_school
+        type: string
+
+    -   name: program_classification3_3
+        sql: program_classification3_3
+        type: string
+
+    -   name: program_classification3_2
+        sql: program_classification3_2
+        type: string
+
+    -   name: program_classification3_1
+        sql: program_classification3_1
+        type: string
+
+    -   name: program_classification2_3
+        sql: program_classification2_3
+        type: string
+
+    -   name: program_classification2_2
+        sql: program_classification2_2
+        type: string
+
+    -   name: program_classification2_1
+        sql: program_classification2_1
+        type: string
+
+    -   name: program_classification1_3
+        sql: program_classification1_3
+        type: string
+
+    -   name: program_classification1_2
+        sql: program_classification1_2
+        type: string
+
+    -   name: program_classification1_1
+        sql: program_classification1_1
+        type: string
+
+    -   name: program_classif3_desc_3
+        sql: program_classif3_desc_3
+        type: string
+
+    -   name: program_classif3_desc_2
+        sql: program_classif3_desc_2
+        type: string
+
+    -   name: program_classif3_desc_1
+        sql: program_classif3_desc_1
+        type: string
+
+    -   name: program_classif2_desc_3
+        sql: program_classif2_desc_3
+        type: string
+
+    -   name: program_classif2_desc_2
+        sql: program_classif2_desc_2
+        type: string
+
+    -   name: program_classif2_desc_1
+        sql: program_classif2_desc_1
+        type: string
+
+    -   name: program_classif1_desc_3
+        sql: program_classif1_desc_3
+        type: string
+
+    -   name: program_classif1_desc_2
+        sql: program_classif1_desc_2
+        type: string
+
+    -   name: program_classif1_desc_1
+        sql: program_classif1_desc_1
+        type: string
+
+    -   name: process_group
+        sql: process_group
+        type: string
+
+    -   name: post_secondary_trans_credits_3
+        sql: post_secondary_trans_credits_3
+        type: string
+
+    -   name: post_secondary_trans_credits_2
+        sql: post_secondary_trans_credits_2
+        type: string
+
+    -   name: post_secondary_trans_credits_1
+        sql: post_secondary_trans_credits_1
+        type: string
+
+    -   name: post_secondary_school_desc_3
+        sql: post_secondary_school_desc_3
+        type: string
+
+    -   name: post_secondary_school_desc_2
+        sql: post_secondary_school_desc_2
+        type: string
+
+    -   name: post_secondary_school_desc_1
+        sql: post_secondary_school_desc_1
+        type: string
+
+    -   name: post_secondary_school_3
+        sql: post_secondary_school_3
+        type: string
+
+    -   name: post_secondary_school_2
+        sql: post_secondary_school_2
+        type: string
+
+    -   name: post_secondary_school_1
+        sql: post_secondary_school_1
+        type: string
+
+    -   name: post_secondary_major3_desc_3
+        sql: post_secondary_major3_desc_3
+        type: string
+
+    -   name: post_secondary_major3_desc_2
+        sql: post_secondary_major3_desc_2
+        type: string
+
+    -   name: post_secondary_major3_desc_1
+        sql: post_secondary_major3_desc_1
+        type: string
+
+    -   name: post_secondary_major3_3
+        sql: post_secondary_major3_3
+        type: string
+
+    -   name: post_secondary_major3_2
+        sql: post_secondary_major3_2
+        type: string
+
+    -   name: post_secondary_major3_1
+        sql: post_secondary_major3_1
+        type: string
+
+    -   name: post_secondary_major2_desc_3
+        sql: post_secondary_major2_desc_3
+        type: string
+
+    -   name: post_secondary_major2_desc_2
+        sql: post_secondary_major2_desc_2
+        type: string
+
+    -   name: post_secondary_major2_desc_1
+        sql: post_secondary_major2_desc_1
+        type: string
+
+    -   name: post_secondary_major2_3
+        sql: post_secondary_major2_3
+        type: string
+
+    -   name: post_secondary_major2_2
+        sql: post_secondary_major2_2
+        type: string
+
+    -   name: post_secondary_major2_1
+        sql: post_secondary_major2_1
+        type: string
+
+    -   name: post_secondary_major1_desc_3
+        sql: post_secondary_major1_desc_3
+        type: string
+
+    -   name: post_secondary_major1_desc_2
+        sql: post_secondary_major1_desc_2
+        type: string
+
+    -   name: post_secondary_major1_desc_1
+        sql: post_secondary_major1_desc_1
+        type: string
+
+    -   name: post_secondary_major1_3
+        sql: post_secondary_major1_3
+        type: string
+
+    -   name: post_secondary_major1_2
+        sql: post_secondary_major1_2
+        type: string
+
+    -   name: post_secondary_major1_1
+        sql: post_secondary_major1_1
+        type: string
+
+    -   name: post_secondary_honors_desc_3
+        sql: post_secondary_honors_desc_3
+        type: string
+
+    -   name: post_secondary_honors_desc_2
+        sql: post_secondary_honors_desc_2
+        type: string
+
+    -   name: post_secondary_honors_desc_1
+        sql: post_secondary_honors_desc_1
+        type: string
+
+    -   name: post_secondary_honors_3
+        sql: post_secondary_honors_3
+        type: string
+
+    -   name: post_secondary_honors_2
+        sql: post_secondary_honors_2
+        type: string
+
+    -   name: post_secondary_honors_1
+        sql: post_secondary_honors_1
+        type: string
+
+    -   name: post_secondary_degree_year_3
+        sql: post_secondary_degree_year_3
+        type: string
+
+    -   name: post_secondary_degree_year_2
+        sql: post_secondary_degree_year_2
+        type: string
+
+    -   name: post_secondary_degree_year_1
+        sql: post_secondary_degree_year_1
+        type: string
+
+    -   name: post_secondary_degree_seq_3
+        sql: post_secondary_degree_seq_3
+        type: string
+
+    -   name: post_secondary_degree_seq_2
+        sql: post_secondary_degree_seq_2
+        type: string
+
+    -   name: post_secondary_degree_seq_1
+        sql: post_secondary_degree_seq_1
+        type: string
+
+    -   name: post_secondary_degree_desc_3
+        sql: post_secondary_degree_desc_3
+        type: string
+
+    -   name: post_secondary_degree_desc_2
+        sql: post_secondary_degree_desc_2
+        type: string
+
+    -   name: post_secondary_degree_desc_1
+        sql: post_secondary_degree_desc_1
+        type: string
+
+    -   name: post_secondary_degree_date_3
+        sql: post_secondary_degree_date_3
+        type: time
+
+    -   name: post_secondary_degree_date_2
+        sql: post_secondary_degree_date_2
+        type: time
+
+    -   name: post_secondary_degree_date_1
+        sql: post_secondary_degree_date_1
+        type: time
+
+    -   name: post_secondary_degree_3
+        sql: post_secondary_degree_3
+        type: string
+
+    -   name: post_secondary_degree_2
+        sql: post_secondary_degree_2
+        type: string
+
+    -   name: post_secondary_degree_1
+        sql: post_secondary_degree_1
+        type: string
+
+    -   name: post_secondary_college_desc_3
+        sql: post_secondary_college_desc_3
+        type: string
+
+    -   name: post_secondary_college_desc_2
+        sql: post_secondary_college_desc_2
+        type: string
+
+    -   name: post_secondary_college_desc_1
+        sql: post_secondary_college_desc_1
+        type: string
+
+    -   name: post_secondary_college_3
+        sql: post_secondary_college_3
+        type: string
+
+    -   name: post_secondary_college_2
+        sql: post_secondary_college_2
+        type: string
+
+    -   name: post_secondary_college_1
+        sql: post_secondary_college_1
+        type: string
+
+    -   name: multi_source_desc
+        sql: multi_source_desc
+        type: string
+
+    -   name: multi_source
+        sql: multi_source
+        type: string
+
+    -   name: administrative_group
+        sql: administrative_group
+        type: string
+
+    -   name: activity_date
+        sql: activity_date
+        type: time
+
+    -   name: person_uid
+        sql: person_uid
+        type: string
+
+    measures: []
+
+    pre_aggregations: []

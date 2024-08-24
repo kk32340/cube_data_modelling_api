@@ -1,0 +1,51 @@
+cubes:
+    name: active_distance_ed_courses
+
+    sql_table: odsmgr_cust.active_distance_ed_courses
+
+    joins: []
+
+    dimensions:
+    -   name: campus
+        sql: campus
+        type: string
+
+    -   name: instruction_method_desc
+        sql: instruction_method_desc
+        type: string
+
+    -   name: instruction_method
+        sql: instruction_method
+        type: string
+
+    -   name: schedule_desc
+        sql: schedule_desc
+        type: string
+
+    -   name: schedule
+        sql: schedule
+        type: string
+
+    -   name: title_short_desc
+        sql: title_short_desc
+        type: string
+
+    -   name: course_identification
+        sql: course_identification
+        type: string
+
+    -   name: course_reference_number
+        sql: course_reference_number
+        type: string
+
+    -   name: college
+        sql: college
+        type: string
+
+    -   name: academic_period
+        sql: academic_period
+        type: string
+
+    measures: []
+
+    pre_aggregations: []

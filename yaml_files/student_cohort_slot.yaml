@@ -1,0 +1,99 @@
+cubes:
+    name: student_cohort_slot
+
+    sql_table: odsmgr.student_cohort_slot
+
+    joins: []
+
+    dimensions:
+    -   name: person_uid
+        sql: person_uid
+        type: string
+
+    -   name: profile_code
+        sql: profile_code
+        type: string
+
+    -   name: process_group
+        sql: process_group
+        type: string
+
+    -   name: multi_source_desc
+        sql: multi_source_desc
+        type: string
+
+    -   name: multi_source
+        sql: multi_source
+        type: string
+
+    -   name: cohort_rule
+        sql: cohort_rule
+        type: string
+
+    -   name: cohort_inactive_reason_desc3
+        sql: cohort_inactive_reason_desc3
+        type: string
+
+    -   name: cohort_inactive_reason_desc2
+        sql: cohort_inactive_reason_desc2
+        type: string
+
+    -   name: cohort_inactive_reason_desc1
+        sql: cohort_inactive_reason_desc1
+        type: string
+
+    -   name: cohort_inactive_reason3
+        sql: cohort_inactive_reason3
+        type: string
+
+    -   name: cohort_inactive_reason2
+        sql: cohort_inactive_reason2
+        type: string
+
+    -   name: cohort_inactive_reason1
+        sql: cohort_inactive_reason1
+        type: string
+
+    -   name: cohort_desc3
+        sql: cohort_desc3
+        type: string
+
+    -   name: cohort_desc2
+        sql: cohort_desc2
+        type: string
+
+    -   name: cohort_desc1
+        sql: cohort_desc1
+        type: string
+
+    -   name: cohort3
+        sql: cohort3
+        type: string
+
+    -   name: cohort2
+        sql: cohort2
+        type: string
+
+    -   name: cohort1
+        sql: cohort1
+        type: string
+
+    -   name: administrative_group
+        sql: administrative_group
+        type: string
+
+    -   name: activity_date
+        sql: activity_date
+        type: time
+
+    -   name: academic_period_desc
+        sql: academic_period_desc
+        type: string
+
+    -   name: academic_period
+        sql: academic_period
+        type: string
+
+    measures: []
+
+    pre_aggregations: []

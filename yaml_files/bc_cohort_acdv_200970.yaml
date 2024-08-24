@@ -1,0 +1,43 @@
+cubes:
+    name: bc_cohort_acdv_200970
+
+    sql_table: odsmgr_cust.bc_cohort_acdv_200970
+
+    joins:
+    -   name: academic_study
+        sql: '{CUBE}.person_uid = academic_study.person_uid'
+        relationship: one_to_one
+
+    -   name: academic_study_alias
+        sql: '{CUBE}.person_uid'
+        relationship: one_to_one
+
+    -   name: ir_student_term_gpa
+        sql: '{CUBE}.person_uid = ir_student_term_gpa.person_uid'
+        relationship: one_to_one
+
+    dimensions:
+    -   name: name
+        sql: name
+        type: string
+
+    -   name: id
+        sql: id
+        type: string
+
+    -   name: couns_ind
+        sql: couns_ind
+        type: string
+
+    -   name: academic_period
+        sql: academic_period
+        type: string
+
+    -   name: person_uid
+        sql: person_uid
+        type: string
+        primary_key: true
+
+    measures: []
+
+    pre_aggregations: []

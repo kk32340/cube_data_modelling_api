@@ -1,0 +1,95 @@
+cubes:
+    name: endowment_summarized_units
+
+    sql_table: odsmgr.endowment_summarized_units
+
+    joins: []
+
+    dimensions:
+    -   name: units_purchased
+        sql: units_purchased
+        type: string
+
+    -   name: unitization_period_end_date
+        sql: unitization_period_end_date
+        type: time
+
+    -   name: process_group
+        sql: process_group
+        type: string
+
+    -   name: market_value
+        sql: market_value
+        type: string
+
+    -   name: market_valuation_date
+        sql: market_valuation_date
+        type: time
+
+    -   name: market_purchase_unit_price
+        sql: market_purchase_unit_price
+        type: string
+
+    -   name: multi_source_desc
+        sql: multi_source_desc
+        type: string
+
+    -   name: multi_source
+        sql: multi_source
+        type: string
+
+    -   name: fund_desc
+        sql: fund_desc
+        type: string
+
+    -   name: fund
+        sql: fund
+        type: string
+
+    -   name: endowment_pool_desc
+        sql: endowment_pool_desc
+        type: string
+
+    -   name: chart_of_accounts_status
+        sql: chart_of_accounts_status
+        type: string
+
+    -   name: endowment_pool
+        sql: endowment_pool
+        type: string
+
+    -   name: endowment_fund_ld
+        sql: endowment_fund_ld
+        type: string
+
+    -   name: chart_of_accounts_desc
+        sql: chart_of_accounts_desc
+        type: string
+
+    -   name: chart_of_accounts
+        sql: chart_of_accounts
+        type: string
+
+    -   name: fund_status
+        sql: fund_status
+        type: string
+
+    -   name: book_amount
+        sql: book_amount
+        type: string
+
+    -   name: aggregate_units_purchased
+        sql: aggregate_units_purchased
+        type: string
+
+    -   name: aggregate_book_amount
+        sql: aggregate_book_amount
+        type: string
+
+    -   name: administrative_group
+        sql: administrative_group
+        type: string
+
+    measures: []
+
+    pre_aggregations: []

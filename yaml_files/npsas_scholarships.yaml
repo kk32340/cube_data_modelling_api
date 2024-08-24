@@ -1,0 +1,39 @@
+cubes:
+    name: npsas_scholarships
+
+    sql_table: odsmgr_cust.npsas_scholarships
+
+    joins: []
+
+    dimensions:
+    -   name: aid_year
+        sql: aid_year
+        type: string
+
+    -   name: resource_actual_amount
+        sql: resource_actual_amount
+        type: string
+
+    -   name: applicant_resource_desc
+        sql: applicant_resource_desc
+        type: string
+
+    -   name: applicant_resource
+        sql: applicant_resource
+        type: string
+
+    -   name: full name
+        sql: full name
+        type: string
+
+    -   name: id
+        sql: id
+        type: string
+
+    -   name: person_uid
+        sql: person_uid
+        type: string
+
+    measures: []
+
+    pre_aggregations: []

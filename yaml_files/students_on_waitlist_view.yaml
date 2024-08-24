@@ -1,0 +1,63 @@
+cubes:
+    name: students_on_waitlist_view
+
+    sql_table: odsmgr_cust.students_on_waitlist_view
+
+    joins: []
+
+    dimensions:
+    -   name: waitlist_position
+        sql: waitlist_position
+        type: string
+
+    -   name: crn
+        sql: crn
+        type: string
+
+    -   name: section
+        sql: section
+        type: string
+
+    -   name: course_title_short
+        sql: course_title_short
+        type: string
+
+    -   name: course_number
+        sql: course_number
+        type: string
+
+    -   name: subject
+        sql: subject
+        type: string
+
+    -   name: email_address
+        sql: email_address
+        type: string
+
+    -   name: name
+        sql: name
+        type: string
+
+    -   name: id
+        sql: id
+        type: string
+
+    -   name: academic_period
+        sql: academic_period
+        type: string
+
+    -   name: college
+        sql: college
+        type: string
+
+    -   name: day phone
+        sql: day phone
+        type: string
+
+    -   name: cell phone
+        sql: cell phone
+        type: string
+
+    measures: []
+
+    pre_aggregations: []

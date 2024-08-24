@@ -1,0 +1,67 @@
+cubes:
+    name: sgrdisa
+
+    sql_table: saturn.sgrdisa
+
+    joins:
+    -   name: person_stusta
+        sql: '{CUBE}.sgrdisa_pidm = person_stusta.person_uid'
+        relationship: one_to_one
+
+    -   name: ir_student_term_shortcut1
+        sql: '{CUBE}.sgrdisa_pidm = sgrdisa.sgrdisa_term_code'
+        relationship: one_to_one
+
+    dimensions:
+    -   name: sgrdisa_vpdi_code
+        sql: sgrdisa_vpdi_code
+        type: string
+
+    -   name: sgrdisa_data_origin
+        sql: sgrdisa_data_origin
+        type: string
+
+    -   name: sgrdisa_user_id
+        sql: sgrdisa_user_id
+        type: string
+
+    -   name: sgrdisa_version
+        sql: sgrdisa_version
+        type: string
+
+    -   name: sgrdisa_surrogate_id
+        sql: sgrdisa_surrogate_id
+        type: string
+
+    -   name: sgrdisa_term_code
+        sql: sgrdisa_term_code
+        type: string
+
+    -   name: sgrdisa_spsr_code
+        sql: sgrdisa_spsr_code
+        type: string
+
+    -   name: sgrdisa_primary_ind
+        sql: sgrdisa_primary_ind
+        type: string
+
+    -   name: sgrdisa_pidm
+        sql: sgrdisa_pidm
+        type: string
+        primary_key: true
+
+    -   name: sgrdisa_medi_code
+        sql: sgrdisa_medi_code
+        type: string
+
+    -   name: sgrdisa_disa_code
+        sql: sgrdisa_disa_code
+        type: string
+
+    -   name: sgrdisa_activity_date
+        sql: sgrdisa_activity_date
+        type: time
+
+    measures: []
+
+    pre_aggregations: []

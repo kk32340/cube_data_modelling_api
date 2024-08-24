@@ -1,0 +1,187 @@
+cubes:
+    name: person_sensitive
+
+    sql_table: odsmgr.person_sensitive
+
+    joins: []
+
+    dimensions:
+    -   name: tax_id
+        sql: tax_id
+        type: string
+
+    -   name: religion_desc
+        sql: religion_desc
+        type: string
+
+    -   name: religion
+        sql: religion
+        type: string
+
+    -   name: race_ethnicity_confirm_ind
+        sql: race_ethnicity_confirm_ind
+        type: string
+
+    -   name: race_ethnicity_confirm_date
+        sql: race_ethnicity_confirm_date
+        type: time
+
+    -   name: race_count
+        sql: race_count
+        type: string
+
+    -   name: race_category_count
+        sql: race_category_count
+        type: string
+
+    -   name: person_uid
+        sql: person_uid
+        type: string
+
+    -   name: process_group
+        sql: process_group
+        type: string
+
+    -   name: prim_ethnicity_category_desc
+        sql: prim_ethnicity_category_desc
+        type: string
+
+    -   name: prim_ethnicity_category
+        sql: prim_ethnicity_category
+        type: string
+
+    -   name: prim_disability_service_desc
+        sql: prim_disability_service_desc
+        type: string
+
+    -   name: primary_medical_equipment_desc
+        sql: primary_medical_equipment_desc
+        type: string
+
+    -   name: primary_medical_equipment
+        sql: primary_medical_equipment
+        type: string
+
+    -   name: primary_medical_condition_desc
+        sql: primary_medical_condition_desc
+        type: string
+
+    -   name: primary_medical_condition
+        sql: primary_medical_condition
+        type: string
+
+    -   name: primary_ethnicity_desc
+        sql: primary_ethnicity_desc
+        type: string
+
+    -   name: primary_ethnicity
+        sql: primary_ethnicity
+        type: string
+
+    -   name: primary_disability_service
+        sql: primary_disability_service
+        type: string
+
+    -   name: primary_disability_desc
+        sql: primary_disability_desc
+        type: string
+
+    -   name: primary_disability
+        sql: primary_disability
+        type: string
+
+    -   name: medical_information_count
+        sql: medical_information_count
+        type: string
+
+    -   name: marital_status_desc
+        sql: marital_status_desc
+        type: string
+
+    -   name: marital_status
+        sql: marital_status
+        type: string
+
+    -   name: multi_source_desc
+        sql: multi_source_desc
+        type: string
+
+    -   name: legacy_desc
+        sql: legacy_desc
+        type: string
+
+    -   name: legacy
+        sql: legacy
+        type: string
+
+    -   name: last_name
+        sql: last_name
+        type: string
+
+    -   name: multi_source
+        sql: multi_source
+        type: string
+
+    -   name: middle_name
+        sql: middle_name
+        type: string
+
+    -   name: full_name_lfmi
+        sql: full_name_lfmi
+        type: string
+
+    -   name: immigration_status_date
+        sql: immigration_status_date
+        type: time
+
+    -   name: immigration_status
+        sql: immigration_status
+        type: string
+
+    -   name: id
+        sql: id
+        type: string
+
+    -   name: foreign_tax_id
+        sql: foreign_tax_id
+        type: string
+
+    -   name: hispanic_latino_ethnicity_ind
+        sql: hispanic_latino_ethnicity_ind
+        type: string
+
+    -   name: first_name
+        sql: first_name
+        type: string
+
+    -   name: government_id
+        sql: government_id
+        type: string
+
+    -   name: gender_desc
+        sql: gender_desc
+        type: string
+
+    -   name: gender
+        sql: gender
+        type: string
+
+    -   name: ethnicity_edi_equiv
+        sql: ethnicity_edi_equiv
+        type: string
+
+    -   name: birth_date
+        sql: birth_date
+        type: time
+
+    -   name: age
+        sql: age
+        type: string
+
+    -   name: administrative_group
+        sql: administrative_group
+        type: string
+
+    measures: []
+
+    pre_aggregations: []

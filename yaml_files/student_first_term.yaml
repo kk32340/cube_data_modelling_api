@@ -1,0 +1,39 @@
+cubes:
+    name: student_first_term
+
+    sql_table: odsmgr_cust.student_first_term
+
+    joins:
+    -   name: ir_student_person
+        sql: '{CUBE}.person_uid = ir_student_person.person_uid'
+        relationship: one_to_many
+
+    -   name: ir_student_term
+        sql: '{CUBE}.person_uid = ir_student_term.person_uid'
+        relationship: one_to_many
+
+    -   name: student_term_units
+        sql: '{CUBE}.person_uid = student_term_units.person_uid'
+        relationship: one_to_many
+
+    -   name: student_first_term_stusta
+        sql: '{CUBE}.person_uid = student_first_term_stusta.person_uid'
+        relationship: one_to_one
+
+    dimensions:
+    -   name: person_uid
+        sql: person_uid
+        type: string
+        primary_key: true
+
+    -   name: modified_first_term
+        sql: modified_first_term
+        type: string
+
+    -   name: academic_period
+        sql: academic_period
+        type: string
+
+    measures: []
+
+    pre_aggregations: []

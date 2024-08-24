@@ -1,0 +1,699 @@
+cubes:
+    name: budget_detail
+
+    sql_table: odsmgr.budget_detail
+
+    joins: []
+
+    dimensions:
+    -   name: program_level_5
+        sql: program_level_5
+        type: string
+
+    -   name: program_level_4
+        sql: program_level_4
+        type: string
+
+    -   name: program_level_3
+        sql: program_level_3
+        type: string
+
+    -   name: program_level_2
+        sql: program_level_2
+        type: string
+
+    -   name: program_level_1
+        sql: program_level_1
+        type: string
+
+    -   name: program_desc_5
+        sql: program_desc_5
+        type: string
+
+    -   name: program_desc_4
+        sql: program_desc_4
+        type: string
+
+    -   name: program_desc_3
+        sql: program_desc_3
+        type: string
+
+    -   name: program_desc_2
+        sql: program_desc_2
+        type: string
+
+    -   name: program_desc_1
+        sql: program_desc_1
+        type: string
+
+    -   name: program_desc
+        sql: program_desc
+        type: string
+
+    -   name: program
+        sql: program
+        type: string
+
+    -   name: process_group
+        sql: process_group
+        type: string
+
+    -   name: prior_ytd_activity
+        sql: prior_ytd_activity
+        type: string
+
+    -   name: origin_point
+        sql: origin_point
+        type: string
+
+    -   name: original_budget
+        sql: original_budget
+        type: string
+
+    -   name: orgn_fmgr_middle_name
+        sql: orgn_fmgr_middle_name
+        type: string
+
+    -   name: orgn_fmgr_last_name
+        sql: orgn_fmgr_last_name
+        type: string
+
+    -   name: orgn_fmgr_first_name
+        sql: orgn_fmgr_first_name
+        type: string
+
+    -   name: orgn_financial_manager_uid
+        sql: orgn_financial_manager_uid
+        type: string
+
+    -   name: orgn_financial_manager_name
+        sql: orgn_financial_manager_name
+        type: string
+
+    -   name: orgn_financial_manager_id
+        sql: orgn_financial_manager_id
+        type: string
+
+    -   name: organization_status_8
+        sql: organization_status_8
+        type: string
+
+    -   name: organization_status_7
+        sql: organization_status_7
+        type: string
+
+    -   name: organization_status_6
+        sql: organization_status_6
+        type: string
+
+    -   name: organization_status_5
+        sql: organization_status_5
+        type: string
+
+    -   name: organization_status_4
+        sql: organization_status_4
+        type: string
+
+    -   name: organization_status_3
+        sql: organization_status_3
+        type: string
+
+    -   name: organization_status_2
+        sql: organization_status_2
+        type: string
+
+    -   name: organization_status_1
+        sql: organization_status_1
+        type: string
+
+    -   name: program_status_5
+        sql: program_status_5
+        type: string
+
+    -   name: program_status_4
+        sql: program_status_4
+        type: string
+
+    -   name: program_status_3
+        sql: program_status_3
+        type: string
+
+    -   name: program_status_2
+        sql: program_status_2
+        type: string
+
+    -   name: program_status_1
+        sql: program_status_1
+        type: string
+
+    -   name: program_status
+        sql: program_status
+        type: string
+
+    -   name: organization_desc
+        sql: organization_desc
+        type: string
+
+    -   name: organization_code
+        sql: organization_code
+        type: string
+
+    -   name: normal_balance
+        sql: normal_balance
+        type: string
+
+    -   name: location_status_5
+        sql: location_status_5
+        type: string
+
+    -   name: location_status_4
+        sql: location_status_4
+        type: string
+
+    -   name: location_status_3
+        sql: location_status_3
+        type: string
+
+    -   name: location_status_2
+        sql: location_status_2
+        type: string
+
+    -   name: location_status_1
+        sql: location_status_1
+        type: string
+
+    -   name: location_status
+        sql: location_status
+        type: string
+
+    -   name: location_level_5
+        sql: location_level_5
+        type: string
+
+    -   name: location_level_4
+        sql: location_level_4
+        type: string
+
+    -   name: location_level_3
+        sql: location_level_3
+        type: string
+
+    -   name: location_level_2
+        sql: location_level_2
+        type: string
+
+    -   name: location_level_1
+        sql: location_level_1
+        type: string
+
+    -   name: location_desc_5
+        sql: location_desc_5
+        type: string
+
+    -   name: location_desc_4
+        sql: location_desc_4
+        type: string
+
+    -   name: location_desc_3
+        sql: location_desc_3
+        type: string
+
+    -   name: location_desc_2
+        sql: location_desc_2
+        type: string
+
+    -   name: location_desc_1
+        sql: location_desc_1
+        type: string
+
+    -   name: location_desc
+        sql: location_desc
+        type: string
+
+    -   name: location
+        sql: location
+        type: string
+
+    -   name: multi_source_desc
+        sql: multi_source_desc
+        type: string
+
+    -   name: budget_line_item_id
+        sql: budget_line_item_id
+        type: string
+
+    -   name: multi_source
+        sql: multi_source
+        type: string
+
+    -   name: organization_status
+        sql: organization_status
+        type: string
+
+    -   name: organization_pool_desc
+        sql: organization_pool_desc
+        type: string
+
+    -   name: organization_pool
+        sql: organization_pool
+        type: string
+
+    -   name: organization_lock_status
+        sql: organization_lock_status
+        type: string
+
+    -   name: organization_level_8
+        sql: organization_level_8
+        type: string
+
+    -   name: organization_level_7
+        sql: organization_level_7
+        type: string
+
+    -   name: organization_level_6
+        sql: organization_level_6
+        type: string
+
+    -   name: organization_level_5
+        sql: organization_level_5
+        type: string
+
+    -   name: organization_level_4
+        sql: organization_level_4
+        type: string
+
+    -   name: organization_level_3
+        sql: organization_level_3
+        type: string
+
+    -   name: organization_level_2
+        sql: organization_level_2
+        type: string
+
+    -   name: organization_level_1
+        sql: organization_level_1
+        type: string
+
+    -   name: organization_desc_8
+        sql: organization_desc_8
+        type: string
+
+    -   name: organization_desc_7
+        sql: organization_desc_7
+        type: string
+
+    -   name: organization_desc_6
+        sql: organization_desc_6
+        type: string
+
+    -   name: organization_desc_5
+        sql: organization_desc_5
+        type: string
+
+    -   name: organization_desc_4
+        sql: organization_desc_4
+        type: string
+
+    -   name: organization_desc_3
+        sql: organization_desc_3
+        type: string
+
+    -   name: organization_desc_2
+        sql: organization_desc_2
+        type: string
+
+    -   name: organization_desc_1
+        sql: organization_desc_1
+        type: string
+
+    -   name: fund_type_desc_1
+        sql: fund_type_desc_1
+        type: string
+
+    -   name: fund_status_5
+        sql: fund_status_5
+        type: string
+
+    -   name: fund_status_4
+        sql: fund_status_4
+        type: string
+
+    -   name: fund_status_3
+        sql: fund_status_3
+        type: string
+
+    -   name: fund_status_2
+        sql: fund_status_2
+        type: string
+
+    -   name: fund_status_1
+        sql: fund_status_1
+        type: string
+
+    -   name: fund_status
+        sql: fund_status
+        type: string
+
+    -   name: fund_pool_desc
+        sql: fund_pool_desc
+        type: string
+
+    -   name: fund_pool
+        sql: fund_pool
+        type: string
+
+    -   name: fund_level_5
+        sql: fund_level_5
+        type: string
+
+    -   name: fund_level_4
+        sql: fund_level_4
+        type: string
+
+    -   name: fund_level_3
+        sql: fund_level_3
+        type: string
+
+    -   name: fund_level_2
+        sql: fund_level_2
+        type: string
+
+    -   name: fund_level_1
+        sql: fund_level_1
+        type: string
+
+    -   name: fund_fmgr_middle_name
+        sql: fund_fmgr_middle_name
+        type: string
+
+    -   name: fund_fmgr_last_name
+        sql: fund_fmgr_last_name
+        type: string
+
+    -   name: fund_fmgr_first_name
+        sql: fund_fmgr_first_name
+        type: string
+
+    -   name: fund_financial_manager_uid
+        sql: fund_financial_manager_uid
+        type: string
+
+    -   name: fund_financial_manager_name
+        sql: fund_financial_manager_name
+        type: string
+
+    -   name: fund_financial_manager_id
+        sql: fund_financial_manager_id
+        type: string
+
+    -   name: fund_desc_5
+        sql: fund_desc_5
+        type: string
+
+    -   name: fund_desc_4
+        sql: fund_desc_4
+        type: string
+
+    -   name: fund_desc_3
+        sql: fund_desc_3
+        type: string
+
+    -   name: fund_desc_2
+        sql: fund_desc_2
+        type: string
+
+    -   name: fund_desc_1
+        sql: fund_desc_1
+        type: string
+
+    -   name: fund_desc
+        sql: fund_desc
+        type: string
+
+    -   name: fund
+        sql: fund
+        type: string
+
+    -   name: internal_fund_type_desc
+        sql: internal_fund_type_desc
+        type: string
+
+    -   name: internal_fund_type
+        sql: internal_fund_type
+        type: string
+
+    -   name: internal_account_type_desc
+        sql: internal_account_type_desc
+        type: string
+
+    -   name: internal_account_type
+        sql: internal_account_type
+        type: string
+
+    -   name: fund_type_status_2
+        sql: fund_type_status_2
+        type: string
+
+    -   name: fund_type_status_1
+        sql: fund_type_status_1
+        type: string
+
+    -   name: fund_type_level_2
+        sql: fund_type_level_2
+        type: string
+
+    -   name: fund_type_level_1
+        sql: fund_type_level_1
+        type: string
+
+    -   name: fund_type_desc_2
+        sql: fund_type_desc_2
+        type: string
+
+    -   name: deleted_ind
+        sql: deleted_ind
+        type: string
+
+    -   name: current_ytd_activity
+        sql: current_ytd_activity
+        type: string
+
+    -   name: current_budget_adjustments
+        sql: current_budget_adjustments
+        type: string
+
+    -   name: current_budget
+        sql: current_budget
+        type: string
+
+    -   name: current_adopted_budget
+        sql: current_adopted_budget
+        type: string
+
+    -   name: duration
+        sql: duration
+        type: string
+
+    -   name: chart_of_accounts_desc
+        sql: chart_of_accounts_desc
+        type: string
+
+    -   name: chart_of_accounts
+        sql: chart_of_accounts
+        type: string
+
+    -   name: budget_year
+        sql: budget_year
+        type: string
+
+    -   name: budget_phase_desc
+        sql: budget_phase_desc
+        type: string
+
+    -   name: budget_phase
+        sql: budget_phase
+        type: string
+
+    -   name: budget_identifier_desc
+        sql: budget_identifier_desc
+        type: string
+
+    -   name: budget_identifier
+        sql: budget_identifier
+        type: string
+
+    -   name: budget_amount
+        sql: budget_amount
+        type: string
+
+    -   name: budget_adjustment
+        sql: budget_adjustment
+        type: string
+
+    -   name: base_temp_budget_adjustments
+        sql: base_temp_budget_adjustments
+        type: string
+
+    -   name: base_temp_adopted_budget
+        sql: base_temp_adopted_budget
+        type: string
+
+    -   name: base_chart_of_accounts_status
+        sql: base_chart_of_accounts_status
+        type: string
+
+    -   name: base_fiscal_year
+        sql: base_fiscal_year
+        type: string
+
+    -   name: base_chart_of_accounts_desc
+        sql: base_chart_of_accounts_desc
+        type: string
+
+    -   name: base_chart_of_accounts
+        sql: base_chart_of_accounts
+        type: string
+
+    -   name: base_budget_adjustments
+        sql: base_budget_adjustments
+        type: string
+
+    -   name: base_budgeted_amount
+        sql: base_budgeted_amount
+        type: string
+
+    -   name: base_adopted_budget
+        sql: base_adopted_budget
+        type: string
+
+    -   name: audit_exists_ind
+        sql: audit_exists_ind
+        type: string
+
+    -   name: chart_of_accounts_status
+        sql: chart_of_accounts_status
+        type: string
+
+    -   name: administrative_group
+        sql: administrative_group
+        type: string
+
+    -   name: activity
+        sql: activity
+        type: string
+
+    -   name: activity_status
+        sql: activity_status
+        type: string
+
+    -   name: activity_desc
+        sql: activity_desc
+        type: string
+
+    -   name: account_type_status_2
+        sql: account_type_status_2
+        type: string
+
+    -   name: account_type_status_1
+        sql: account_type_status_1
+        type: string
+
+    -   name: account_type_level_2
+        sql: account_type_level_2
+        type: string
+
+    -   name: account_level_3
+        sql: account_level_3
+        type: string
+
+    -   name: account_level_2
+        sql: account_level_2
+        type: string
+
+    -   name: account_level_1
+        sql: account_level_1
+        type: string
+
+    -   name: account_desc_4
+        sql: account_desc_4
+        type: string
+
+    -   name: account_desc_3
+        sql: account_desc_3
+        type: string
+
+    -   name: account_desc_2
+        sql: account_desc_2
+        type: string
+
+    -   name: account_desc_1
+        sql: account_desc_1
+        type: string
+
+    -   name: account_desc
+        sql: account_desc
+        type: string
+
+    -   name: account_class_desc
+        sql: account_class_desc
+        type: string
+
+    -   name: account_class
+        sql: account_class
+        type: string
+
+    -   name: account_type_level_1
+        sql: account_type_level_1
+        type: string
+
+    -   name: account_type_desc_2
+        sql: account_type_desc_2
+        type: string
+
+    -   name: account_type_desc_1
+        sql: account_type_desc_1
+        type: string
+
+    -   name: account_status_4
+        sql: account_status_4
+        type: string
+
+    -   name: account_status_3
+        sql: account_status_3
+        type: string
+
+    -   name: account_status_2
+        sql: account_status_2
+        type: string
+
+    -   name: account_status_1
+        sql: account_status_1
+        type: string
+
+    -   name: account_status
+        sql: account_status
+        type: string
+
+    -   name: account_pool_desc
+        sql: account_pool_desc
+        type: string
+
+    -   name: account_pool
+        sql: account_pool
+        type: string
+
+    -   name: account_level_4
+        sql: account_level_4
+        type: string
+
+    -   name: accounting_id
+        sql: accounting_id
+        type: string
+
+    -   name: account
+        sql: account
+        type: string
+
+    measures: []
+
+    pre_aggregations: []

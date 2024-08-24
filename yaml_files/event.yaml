@@ -1,0 +1,247 @@
+cubes:
+    name: event
+
+    sql_table: odsmgr.event
+
+    joins:
+    -   name: receivable_account_detail
+        sql: '{CUBE}.agency_id = receivable_account_detail.account_uid'
+        relationship: one_to_one
+
+    dimensions:
+    -   name: contact_id
+        sql: contact_id
+        type: string
+
+    -   name: agency_id
+        sql: agency_id
+        type: string
+        primary_key: true
+
+    -   name: system_ind
+        sql: system_ind
+        type: string
+
+    -   name: site_desc
+        sql: site_desc
+        type: string
+
+    -   name: site
+        sql: site
+        type: string
+
+    -   name: phone_ext
+        sql: phone_ext
+        type: string
+
+    -   name: phone_area
+        sql: phone_area
+        type: string
+
+    -   name: process_group
+        sql: process_group
+        type: string
+
+    -   name: phone_number_combined
+        sql: phone_number_combined
+        type: string
+
+    -   name: phone_number
+        sql: phone_number
+        type: string
+
+    -   name: multi_source_desc
+        sql: multi_source_desc
+        type: string
+
+    -   name: multi_source
+        sql: multi_source
+        type: string
+
+    -   name: function_type_desc
+        sql: function_type_desc
+        type: string
+
+    -   name: function_type
+        sql: function_type
+        type: string
+
+    -   name: function_target_audience
+        sql: function_target_audience
+        type: string
+
+    -   name: function_status_desc
+        sql: function_status_desc
+        type: string
+
+    -   name: function_status
+        sql: function_status
+        type: string
+
+    -   name: function_start_date
+        sql: function_start_date
+        type: time
+
+    -   name: function_sponsor_uid
+        sql: function_sponsor_uid
+        type: string
+
+    -   name: function_rsvp_confirm_date
+        sql: function_rsvp_confirm_date
+        type: time
+
+    -   name: function_room
+        sql: function_room
+        type: string
+
+    -   name: function_purpose_desc
+        sql: function_purpose_desc
+        type: string
+
+    -   name: function_purpose
+        sql: function_purpose
+        type: string
+
+    -   name: function_plan_attend
+        sql: function_plan_attend
+        type: string
+
+    -   name: function_location_date
+        sql: function_location_date
+        type: time
+
+    -   name: function_location
+        sql: function_location
+        type: string
+
+    -   name: function_letter
+        sql: function_letter
+        type: string
+
+    -   name: function_invitation_date
+        sql: function_invitation_date
+        type: time
+
+    -   name: function_end_time
+        sql: function_end_time
+        type: string
+
+    -   name: function_end_date
+        sql: function_end_date
+        type: time
+
+    -   name: function_emphasis_desc
+        sql: function_emphasis_desc
+        type: string
+
+    -   name: function_emphasis
+        sql: function_emphasis
+        type: string
+
+    -   name: function_desc
+        sql: function_desc
+        type: string
+
+    -   name: function_committee_name
+        sql: function_committee_name
+        type: string
+
+    -   name: function_code
+        sql: function_code
+        type: string
+
+    -   name: function_brk_even_attend
+        sql: function_brk_even_attend
+        type: string
+
+    -   name: function_bldg
+        sql: function_bldg
+        type: string
+
+    -   name: function_begin_time
+        sql: function_begin_time
+        type: string
+
+    -   name: division_desc
+        sql: division_desc
+        type: string
+
+    -   name: division
+        sql: division
+        type: string
+
+    -   name: event_type_desc
+        sql: event_type_desc
+        type: string
+
+    -   name: event_type
+        sql: event_type
+        type: string
+
+    -   name: event_id
+        sql: event_id
+        type: string
+
+    -   name: event_desc
+        sql: event_desc
+        type: string
+
+    -   name: department_desc
+        sql: department_desc
+        type: string
+
+    -   name: department
+        sql: department
+        type: string
+
+    -   name: campus_desc
+        sql: campus_desc
+        type: string
+
+    -   name: campus
+        sql: campus
+        type: string
+
+    -   name: contact_uid
+        sql: contact_uid
+        type: string
+
+    -   name: contact_desc
+        sql: contact_desc
+        type: string
+
+    -   name: contact_address_type_desc
+        sql: contact_address_type_desc
+        type: string
+
+    -   name: contact_address_type
+        sql: contact_address_type
+        type: string
+
+    -   name: committee_ind
+        sql: committee_ind
+        type: string
+
+    -   name: college_desc
+        sql: college_desc
+        type: string
+
+    -   name: college
+        sql: college
+        type: string
+
+    -   name: agency_desc
+        sql: agency_desc
+        type: string
+
+    -   name: agency_uid
+        sql: agency_uid
+        type: string
+
+    -   name: administrative_group
+        sql: administrative_group
+        type: string
+
+    measures: []
+
+    pre_aggregations: []

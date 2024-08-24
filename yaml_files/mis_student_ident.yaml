@@ -1,0 +1,79 @@
+cubes:
+    name: mis_student_ident
+
+    sql_table: odsmgr_cust.mis_student_ident
+
+    joins:
+    -   name: kccd2008vtea
+        sql: '{CUBE}.student_id = kccd2008vtea.id'
+        relationship: one_to_many
+
+    -   name: mis_student_term
+        sql: '{CUBE}.college_id = mis_student_term.college_id AND {CUBE}.cccco_student_id
+            = mis_student_term.cccco_student_id'
+        relationship: one_to_many
+
+    -   name: student_success_base
+        sql: '{CUBE}.person_uid = student_success_base.person_uid'
+        relationship: zero_to_many
+
+    -   name: person_detail_ir_shortcut
+        sql: '{CUBE}.person_uid'
+        relationship: one_to_one
+
+    -   name: student_course
+        sql: '{CUBE}.person_uid = student_course.person_uid'
+        relationship: one_to_one
+
+    dimensions:
+    -   name: import_date
+        sql: import_date
+        type: time
+
+    -   name: first_term
+        sql: first_term
+        type: string
+
+    -   name: term_id
+        sql: term_id
+        type: string
+
+    -   name: cco_trm
+        sql: cco_trm
+        type: string
+
+    -   name: student_id_status
+        sql: student_id_status
+        type: string
+
+    -   name: student_id
+        sql: student_id
+        type: string
+        primary_key: true
+
+    -   name: cccco_student_id
+        sql: cccco_student_id
+        type: string
+        primary_key: true
+
+    -   name: ban_id
+        sql: ban_id
+        type: string
+
+    -   name: college_id
+        sql: college_id
+        type: string
+        primary_key: true
+
+    -   name: college
+        sql: college
+        type: string
+
+    -   name: person_uid
+        sql: person_uid
+        type: string
+        primary_key: true
+
+    measures: []
+
+    pre_aggregations: []

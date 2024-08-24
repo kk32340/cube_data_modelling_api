@@ -1,0 +1,175 @@
+cubes:
+    name: staff_assignment
+
+    sql_table: odsmgr_cust.staff_assignment
+
+    joins:
+    -   name: ir_session
+        sql: '{CUBE}.term = ir_session.academic_period AND {CUBE}.crn = ir_session.crn
+            AND {CUBE}.user_id = ir_session.instructor_id'
+        relationship: zero_to_many
+
+    -   name: ir_session_ir_section
+        sql: '{CUBE}.term = ir_session_ir_section.academic_period AND {CUBE}.crn =
+            ir_session_ir_section.crn AND {CUBE}.user_id = ir_session_ir_section.instructor_id'
+        relationship: zero_to_many
+
+    dimensions:
+    -   name: xpay_fte
+        sql: xpay_fte
+        type: string
+
+    -   name: xpay_comp
+        sql: xpay_comp
+        type: string
+
+    -   name: category
+        sql: category
+        type: string
+
+    -   name: xpper
+        sql: xpper
+        type: string
+
+    -   name: term_desc
+        sql: term_desc
+        type: string
+
+    -   name: wed
+        sql: wed
+        type: string
+
+    -   name: term
+        sql: term
+        type: string
+        primary_key: true
+
+    -   name: user_id
+        sql: user_id
+        type: string
+        primary_key: true
+
+    -   name: sun
+        sql: sun
+        type: string
+
+    -   name: tue
+        sql: tue
+        type: string
+
+    -   name: subject
+        sql: subject
+        type: string
+
+    -   name: thur
+        sql: thur
+        type: string
+
+    -   name: sat
+        sql: sat
+        type: string
+
+    -   name: start_date
+        sql: start_date
+        type: time
+
+    -   name: ssn
+        sql: ssn
+        type: string
+
+    -   name: room
+        sql: room
+        type: string
+
+    -   name: sect_no
+        sql: sect_no
+        type: string
+
+    -   name: project
+        sql: project
+        type: string
+
+    -   name: start_time
+        sql: start_time
+        type: string
+
+    -   name: max_stdnts
+        sql: max_stdnts
+        type: string
+
+    -   name: num_weeks
+        sql: num_weeks
+        type: string
+
+    -   name: location
+        sql: location
+        type: string
+
+    -   name: last_name
+        sql: last_name
+        type: string
+
+    -   name: mon
+        sql: mon
+        type: string
+
+    -   name: instructor
+        sql: instructor
+        type: string
+
+    -   name: hpw
+        sql: hpw
+        type: string
+
+    -   name: fri
+        sql: fri
+        type: string
+
+    -   name: first_name
+        sql: first_name
+        type: string
+
+    -   name: dept
+        sql: dept
+        type: string
+
+    -   name: end_time
+        sql: end_time
+        type: string
+
+    -   name: end_date
+        sql: end_date
+        type: time
+
+    -   name: carry_over
+        sql: carry_over
+        type: string
+
+    -   name: course
+        sql: course
+        type: string
+
+    -   name: base
+        sql: base
+        type: string
+
+    -   name: college
+        sql: college
+        type: string
+
+    -   name: assign_code
+        sql: assign_code
+        type: string
+
+    -   name: crn
+        sql: crn
+        type: string
+        primary_key: true
+
+    -   name: adjunct
+        sql: adjunct
+        type: string
+
+    measures: []
+
+    pre_aggregations: []

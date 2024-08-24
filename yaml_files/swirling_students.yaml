@@ -1,0 +1,59 @@
+cubes:
+    name: swirling_students
+
+    sql_table: odsmgr_cust.swirling_students
+
+    joins: []
+
+    dimensions:
+    -   name: course_wl_cnt_pc
+        sql: course_wl_cnt_pc
+        type: string
+
+    -   name: course_wl_cnt_cc
+        sql: course_wl_cnt_cc
+        type: string
+
+    -   name: course_wl_cnt_bc
+        sql: course_wl_cnt_bc
+        type: string
+
+    -   name: wl_cnt_pc
+        sql: wl_cnt_pc
+        type: string
+
+    -   name: wl_cnt_cc
+        sql: wl_cnt_cc
+        type: string
+
+    -   name: wl_cnt_bc
+        sql: wl_cnt_bc
+        type: string
+
+    -   name: enr_cnt_bc_cc_pc
+        sql: enr_cnt_bc_cc_pc
+        type: string
+
+    -   name: enr_cnt_cc_pc
+        sql: enr_cnt_cc_pc
+        type: string
+
+    -   name: enr_cnt_bc_cc
+        sql: enr_cnt_bc_cc
+        type: string
+
+    -   name: enr_cnt_bc_pc
+        sql: enr_cnt_bc_pc
+        type: string
+
+    -   name: activity_date
+        sql: activity_date
+        type: time
+
+    -   name: academic_period
+        sql: academic_period
+        type: string
+
+    measures: []
+
+    pre_aggregations: []

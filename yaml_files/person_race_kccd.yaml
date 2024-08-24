@@ -1,0 +1,71 @@
+cubes:
+    name: person_race_kccd
+
+    sql_table: odsmgr_cust.person_race_kccd
+
+    joins:
+    -   name: ir_student_person
+        sql: '{CUBE}.person_uid = ir_student_person.person_uid'
+        relationship: one_to_many
+
+    -   name: ir_student_term
+        sql: '{CUBE}.person_uid = ir_student_term.person_uid'
+        relationship: one_to_many
+
+    dimensions:
+    -   name: grp8_filipino
+        sql: grp8_filipino
+        type: string
+
+    -   name: st_unk3
+        sql: st_unk3
+        type: string
+
+    -   name: st_unk2
+        sql: st_unk2
+        type: string
+
+    -   name: st_unk1
+        sql: st_unk1
+        type: string
+
+    -   name: person_uid
+        sql: person_uid
+        type: string
+        primary_key: true
+
+    -   name: multi_race
+        sql: multi_race
+        type: string
+
+    -   name: grp7_white
+        sql: grp7_white
+        type: string
+
+    -   name: grp6_pac_isl
+        sql: grp6_pac_isl
+        type: string
+
+    -   name: grp5_amer_indian
+        sql: grp5_amer_indian
+        type: string
+
+    -   name: grp4_black
+        sql: grp4_black
+        type: string
+
+    -   name: grp3_asian
+        sql: grp3_asian
+        type: string
+
+    -   name: grp2_hisp_breakout
+        sql: grp2_hisp_breakout
+        type: string
+
+    -   name: grp1_hisp_ind
+        sql: grp1_hisp_ind
+        type: string
+
+    measures: []
+
+    pre_aggregations: []

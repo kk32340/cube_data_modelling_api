@@ -1,0 +1,47 @@
+cubes:
+    name: student_success_cohort
+
+    sql_table: odsmgr_cust.student_success_cohort
+
+    joins:
+    -   name: student_success_term
+        sql: '{CUBE}.person_uid = student_success_term.person_uid'
+        relationship: one_to_one
+
+    dimensions:
+    -   name: load_date
+        sql: load_date
+        type: time
+
+    -   name: transfer_reg
+        sql: transfer_reg
+        type: string
+
+    -   name: transfer_gpa
+        sql: transfer_gpa
+        type: string
+
+    -   name: name
+        sql: name
+        type: string
+
+    -   name: college
+        sql: college
+        type: string
+
+    -   name: id
+        sql: id
+        type: string
+
+    -   name: person_uid
+        sql: person_uid
+        type: string
+        primary_key: true
+
+    -   name: academic_period
+        sql: academic_period
+        type: string
+
+    measures: []
+
+    pre_aggregations: []

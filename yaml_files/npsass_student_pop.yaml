@@ -1,0 +1,63 @@
+cubes:
+    name: npsass_student_pop
+
+    sql_table: odsmgr_cust.npsass_student_pop
+
+    joins: []
+
+    dimensions:
+    -   name: qual_ind
+        sql: qual_ind
+        type: string
+
+    -   name: major_desc
+        sql: major_desc
+        type: string
+
+    -   name: major
+        sql: major
+        type: string
+
+    -   name: birth_date
+        sql: birth_date
+        type: string
+
+    -   name: tax_id
+        sql: tax_id
+        type: string
+
+    -   name: id
+        sql: id
+        type: string
+
+    -   name: name_suffix
+        sql: name_suffix
+        type: string
+
+    -   name: last_name
+        sql: last_name
+        type: string
+
+    -   name: middle_initial
+        sql: middle_initial
+        type: string
+
+    -   name: first_name
+        sql: first_name
+        type: string
+
+    -   name: home_college
+        sql: home_college
+        type: string
+
+    -   name: person_uid
+        sql: person_uid
+        type: string
+
+    -   name: academic_period
+        sql: academic_period
+        type: string
+
+    measures: []
+
+    pre_aggregations: []

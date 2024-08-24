@@ -1,0 +1,171 @@
+cubes:
+    name: sport
+
+    sql_table: odsmgr.sport
+
+    joins:
+    -   name: student_course_shortcut
+        sql: '{CUBE}.academic_period = sport.person_uid'
+        relationship: one_to_one
+
+    -   name: ir_student_term_shortcut1
+        sql: '{CUBE}.academic_period = sport.person_uid'
+        relationship: zero_to_many
+
+    dimensions:
+    -   name: sport_activity_date
+        sql: sport_activity_date
+        type: time
+
+    -   name: seasons_competition_remaining
+        sql: seasons_competition_remaining
+        type: string
+
+    -   name: seasons_competition_used
+        sql: seasons_competition_used
+        type: string
+
+    -   name: seasons_competition_available
+        sql: seasons_competition_available
+        type: string
+
+    -   name: season_change_reason_desc
+        sql: season_change_reason_desc
+        type: string
+
+    -   name: season_change_reason
+        sql: season_change_reason
+        type: string
+
+    -   name: seasons_used_ind
+        sql: seasons_used_ind
+        type: string
+
+    -   name: end_acad_period_eligible_desc
+        sql: end_acad_period_eligible_desc
+        type: string
+
+    -   name: end_acad_period_eligible
+        sql: end_acad_period_eligible
+        type: string
+
+    -   name: begin_acad_period_elig_desc
+        sql: begin_acad_period_elig_desc
+        type: string
+
+    -   name: begin_acad_period_eligible
+        sql: begin_acad_period_eligible
+        type: string
+
+    -   name: athletic_acad_eligible_desc
+        sql: athletic_acad_eligible_desc
+        type: string
+
+    -   name: athletic_academic_eligible
+        sql: athletic_academic_eligible
+        type: string
+
+    -   name: athletic_sport_active_ind
+        sql: athletic_sport_active_ind
+        type: string
+
+    -   name: sub_academic_period_desc
+        sql: sub_academic_period_desc
+        type: string
+
+    -   name: sub_academic_period
+        sql: sub_academic_period
+        type: string
+
+    -   name: sport_status_desc
+        sql: sport_status_desc
+        type: string
+
+    -   name: sport_status
+        sql: sport_status
+        type: string
+
+    -   name: process_group
+        sql: process_group
+        type: string
+
+    -   name: name
+        sql: name
+        type: string
+
+    -   name: multi_source_desc
+        sql: multi_source_desc
+        type: string
+
+    -   name: multi_source
+        sql: multi_source
+        type: string
+
+    -   name: id
+        sql: id
+        type: string
+
+    -   name: eligibility_desc
+        sql: eligibility_desc
+        type: string
+
+    -   name: eligibility
+        sql: eligibility
+        type: string
+
+    -   name: athletic_aid_ind
+        sql: athletic_aid_ind
+        type: string
+
+    -   name: administrative_group
+        sql: administrative_group
+        type: string
+
+    -   name: activity_category_desc
+        sql: activity_category_desc
+        type: string
+
+    -   name: activity_category
+        sql: activity_category
+        type: string
+
+    -   name: activity
+        sql: activity
+        type: string
+
+    -   name: activity_type_desc
+        sql: activity_type_desc
+        type: string
+
+    -   name: activity_type
+        sql: activity_type
+        type: string
+
+    -   name: activity_desc
+        sql: activity_desc
+        type: string
+
+    -   name: academic_year_desc
+        sql: academic_year_desc
+        type: string
+
+    -   name: academic_year
+        sql: academic_year
+        type: string
+
+    -   name: academic_period_desc
+        sql: academic_period_desc
+        type: string
+
+    -   name: person_uid
+        sql: person_uid
+        type: string
+
+    -   name: academic_period
+        sql: academic_period
+        type: string
+        primary_key: true
+
+    measures: []
+
+    pre_aggregations: []

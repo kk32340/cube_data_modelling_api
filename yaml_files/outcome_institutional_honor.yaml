@@ -1,0 +1,70 @@
+cubes:
+    name: outcome_institutional_honor
+
+    sql_table: odsmgr.outcome_institutional_honor
+
+    joins:
+    -   name: academic_outcome_stusta
+        sql: '{CUBE}.person_uid = academic_outcome_stusta.person_uid AND {CUBE}.degree
+            = academic_outcome_stusta.degree AND {CUBE}.outcome_number = academic_outcome_stusta.outcome_number'
+        relationship: zero_to_many
+
+    -   name: person_stusta
+        sql: '{CUBE}.person_uid = person_stusta.person_uid'
+        relationship: zero_to_many
+
+    dimensions:
+    -   name: transcript_ind
+        sql: transcript_ind
+        type: string
+
+    -   name: person_uid
+        sql: person_uid
+        type: string
+        primary_key: true
+
+    -   name: process_group
+        sql: process_group
+        type: string
+
+    -   name: outcome_number
+        sql: outcome_number
+        type: string
+        primary_key: true
+
+    -   name: multi_source_desc
+        sql: multi_source_desc
+        type: string
+
+    -   name: multi_source
+        sql: multi_source
+        type: string
+
+    -   name: honor_desc
+        sql: honor_desc
+        type: string
+
+    -   name: honor
+        sql: honor
+        type: string
+
+    -   name: degree_desc
+        sql: degree_desc
+        type: string
+
+    -   name: degree
+        sql: degree
+        type: string
+        primary_key: true
+
+    -   name: commencement_ind
+        sql: commencement_ind
+        type: string
+
+    -   name: administrative_group
+        sql: administrative_group
+        type: string
+
+    measures: []
+
+    pre_aggregations: []

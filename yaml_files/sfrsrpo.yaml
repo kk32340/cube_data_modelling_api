@@ -1,0 +1,71 @@
+cubes:
+    name: sfrsrpo
+
+    sql_table: saturn.sfrsrpo
+
+    joins: []
+
+    dimensions:
+    -   name: sfrsrpo_vpdi_code
+        sql: sfrsrpo_vpdi_code
+        type: string
+
+    -   name: sfrsrpo_data_origin
+        sql: sfrsrpo_data_origin
+        type: string
+
+    -   name: sfrsrpo_user_id
+        sql: sfrsrpo_user_id
+        type: string
+
+    -   name: sfrsrpo_version
+        sql: sfrsrpo_version
+        type: string
+
+    -   name: sfrsrpo_surrogate_id
+        sql: sfrsrpo_surrogate_id
+        type: string
+
+    -   name: sfrsrpo_apport_eff_date
+        sql: sfrsrpo_apport_eff_date
+        type: time
+
+    -   name: sfrsrpo_user
+        sql: sfrsrpo_user
+        type: string
+
+    -   name: sfrsrpo_crn
+        sql: sfrsrpo_crn
+        type: string
+
+    -   name: sfrsrpo_seq_numb
+        sql: sfrsrpo_seq_numb
+        type: string
+
+    -   name: sfrsrpo_activity_date
+        sql: sfrsrpo_activity_date
+        type: time
+
+    -   name: sfrsrpo_crse_numb
+        sql: sfrsrpo_crse_numb
+        type: string
+
+    -   name: sfrsrpo_subj_code
+        sql: sfrsrpo_subj_code
+        type: string
+
+    -   name: sfrsrpo_rovr_code
+        sql: sfrsrpo_rovr_code
+        type: string
+
+    -   name: sfrsrpo_pidm
+        sql: sfrsrpo_pidm
+        type: string
+
+    -   name: sfrsrpo_term_code
+        sql: sfrsrpo_term_code
+        type: string
+
+    measures: []
+
+    pre_aggregations: []

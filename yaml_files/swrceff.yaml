@@ -1,0 +1,419 @@
+cubes:
+    name: swrceff
+
+    sql_table: odsmgr_cust.swrceff
+
+    joins: []
+
+    dimensions:
+    -   name: withdraw_ind
+        sql: withdraw_ind
+        type: string
+
+    -   name: term_mil_collect
+        sql: term_mil_collect
+        type: string
+
+    -   name: wait_list_ind
+        sql: wait_list_ind
+        type: string
+
+    -   name: tech_prep_ind
+        sql: tech_prep_ind
+        type: string
+
+    -   name: veteran_ind
+        sql: veteran_ind
+        type: string
+
+    -   name: subj_desc
+        sql: subj_desc
+        type: string
+
+    -   name: subj_code
+        sql: subj_code
+        type: string
+
+    -   name: ssn_formatted
+        sql: ssn_formatted
+        type: string
+
+    -   name: ssn
+        sql: ssn
+        type: string
+
+    -   name: rsts_desc
+        sql: rsts_desc
+        type: string
+
+    -   name: rsts_date
+        sql: rsts_date
+        type: time
+
+    -   name: rsts_code
+        sql: rsts_code
+        type: string
+
+    -   name: resident_ind
+        sql: resident_ind
+        type: string
+
+    -   name: sports_ind
+        sql: sports_ind
+        type: string
+
+    -   name: single_parent_id
+        sql: single_parent_id
+        type: string
+
+    -   name: ptrm_desc
+        sql: ptrm_desc
+        type: string
+
+    -   name: ptrm_code
+        sql: ptrm_code
+        type: string
+
+    -   name: section_no
+        sql: section_no
+        type: string
+
+    -   name: stdt_units
+        sql: stdt_units
+        type: string
+
+    -   name: phone_no_eve
+        sql: phone_no_eve
+        type: string
+
+    -   name: phone_no_day
+        sql: phone_no_day
+        type: string
+
+    -   name: non_resdident_ind
+        sql: non_resdident_ind
+        type: string
+
+    -   name: major_desc
+        sql: major_desc
+        type: string
+
+    -   name: major_code
+        sql: major_code
+        type: string
+
+    -   name: mailing_name
+        sql: mailing_name
+        type: string
+
+    -   name: natn_desc
+        sql: natn_desc
+        type: string
+
+    -   name: name_last_first_mi
+        sql: name_last_first_mi
+        type: string
+
+    -   name: last_name
+        sql: last_name
+        type: string
+
+    -   name: multi_measure_reading
+        sql: multi_measure_reading
+        type: string
+
+    -   name: multi_measure_math
+        sql: multi_measure_math
+        type: string
+
+    -   name: multi_measure_esl
+        sql: multi_measure_esl
+        type: string
+
+    -   name: multi_measure_english
+        sql: multi_measure_english
+        type: string
+
+    -   name: middle_name
+        sql: middle_name
+        type: string
+
+    -   name: instr_mi
+        sql: instr_mi
+        type: string
+
+    -   name: instr_last
+        sql: instr_last
+        type: string
+
+    -   name: instr_first
+        sql: instr_first
+        type: string
+
+    -   name: incl_sect_enrl_ind
+        sql: incl_sect_enrl_ind
+        type: string
+
+    -   name: incl_for_attendance
+        sql: incl_for_attendance
+        type: string
+
+    -   name: id
+        sql: id
+        type: string
+
+    -   name: foreign_ind
+        sql: foreign_ind
+        type: string
+
+    -   name: high_school_name
+        sql: high_school_name
+        type: string
+
+    -   name: high_school_grad_date
+        sql: high_school_grad_date
+        type: time
+
+    -   name: high_school_code
+        sql: high_school_code
+        type: string
+
+    -   name: first_name
+        sql: first_name
+        type: string
+
+    -   name: gender_code
+        sql: gender_code
+        type: string
+
+    -   name: divs_desc
+        sql: divs_desc
+        type: string
+
+    -   name: divs_code
+        sql: divs_code
+        type: string
+
+    -   name: displaced_homemaker_ind
+        sql: displaced_homemaker_ind
+        type: string
+
+    -   name: dept_desc
+        sql: dept_desc
+        type: string
+
+    -   name: dept_code
+        sql: dept_code
+        type: string
+
+    -   name: ethn_desc
+        sql: ethn_desc
+        type: string
+
+    -   name: ethn_code
+        sql: ethn_code
+        type: string
+
+    -   name: eops_ind
+        sql: eops_ind
+        type: string
+
+    -   name: english_placement
+        sql: english_placement
+        type: string
+
+    -   name: deceased_ind
+        sql: deceased_ind
+        type: string
+
+    -   name: day_eve_code
+        sql: day_eve_code
+        type: string
+
+    -   name: ed_level_desc
+        sql: ed_level_desc
+        type: string
+
+    -   name: ed_level_code
+        sql: ed_level_code
+        type: string
+
+    -   name: dsps_ind
+        sql: dsps_ind
+        type: string
+
+    -   name: course_title
+        sql: course_title
+        type: string
+
+    -   name: course_reference_number
+        sql: course_reference_number
+        type: string
+
+    -   name: census_date
+        sql: census_date
+        type: time
+
+    -   name: course_number
+        sql: course_number
+        type: string
+
+    -   name: care_ind
+        sql: care_ind
+        type: string
+
+    -   name: campus_desc
+        sql: campus_desc
+        type: string
+
+    -   name: campus
+        sql: campus
+        type: string
+
+    -   name: cal_works_ind
+        sql: cal_works_ind
+        type: string
+
+    -   name: birthdate
+        sql: birthdate
+        type: time
+
+    -   name: confidentiality_ind
+        sql: confidentiality_ind
+        type: string
+
+    -   name: compass_writing
+        sql: compass_writing
+        type: string
+
+    -   name: compass_reading
+        sql: compass_reading
+        type: string
+
+    -   name: compass_num_skills
+        sql: compass_num_skills
+        type: string
+
+    -   name: compass_interm_alg
+        sql: compass_interm_alg
+        type: string
+
+    -   name: compass_elem_alg
+        sql: compass_elem_alg
+        type: string
+
+    -   name: compass_college_alg
+        sql: compass_college_alg
+        type: string
+
+    -   name: college_desc
+        sql: college_desc
+        type: string
+
+    -   name: college
+        sql: college
+        type: string
+
+    -   name: asset_writing_skill
+        sql: asset_writing_skill
+        type: string
+
+    -   name: asset_trigonometry
+        sql: asset_trigonometry
+        type: string
+
+    -   name: citz_desc
+        sql: citz_desc
+        type: string
+
+    -   name: citz_code
+        sql: citz_code
+        type: string
+
+    -   name: city_state_zip
+        sql: city_state_zip
+        type: string
+
+    -   name: area_code_eve
+        sql: area_code_eve
+        type: string
+
+    -   name: area_code_day
+        sql: area_code_day
+        type: string
+
+    -   name: asset_reading_skill
+        sql: asset_reading_skill
+        type: string
+
+    -   name: asset_numerical_skill
+        sql: asset_numerical_skill
+        type: string
+
+    -   name: asset_int_algebra
+        sql: asset_int_algebra
+        type: string
+
+    -   name: asset_elem_algebra
+        sql: asset_elem_algebra
+        type: string
+
+    -   name: asset_coll_algebra
+        sql: asset_coll_algebra
+        type: string
+
+    -   name: age_begin_term
+        sql: age_begin_term
+        type: string
+
+    -   name: addr_zip
+        sql: addr_zip
+        type: string
+
+    -   name: addr_state
+        sql: addr_state
+        type: string
+
+    -   name: addr_line3
+        sql: addr_line3
+        type: string
+
+    -   name: addr_line2
+        sql: addr_line2
+        type: string
+
+    -   name: addr_line1
+        sql: addr_line1
+        type: string
+
+    -   name: addr_city
+        sql: addr_city
+        type: string
+
+    -   name: active_mil_ind
+        sql: active_mil_ind
+        type: string
+
+    -   name: acct_code
+        sql: acct_code
+        type: string
+
+    -   name: acct_desc
+        sql: acct_desc
+        type: string
+
+    -   name: academic_period_desc
+        sql: academic_period_desc
+        type: string
+
+    -   name: person_uid
+        sql: person_uid
+        type: string
+
+    -   name: academic_period
+        sql: academic_period
+        type: string
+
+    measures: []
+
+    pre_aggregations: []

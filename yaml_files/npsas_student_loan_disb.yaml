@@ -1,0 +1,47 @@
+cubes:
+    name: npsas_student_loan_disb
+
+    sql_table: odsmgr_cust.npsas_student_loan_disb
+
+    joins: []
+
+    dimensions:
+    -   name: parent_plus_loan
+        sql: parent_plus_loan
+        type: string
+
+    -   name: unsubsidized_loan_amount
+        sql: unsubsidized_loan_amount
+        type: string
+
+    -   name: subsidized_loan_amount
+        sql: subsidized_loan_amount
+        type: string
+
+    -   name: person_uid
+        sql: person_uid
+        type: string
+
+    -   name: full name
+        sql: full name
+        type: string
+
+    -   name: id
+        sql: id
+        type: string
+
+    -   name: study_id
+        sql: study_id
+        type: string
+
+    -   name: college
+        sql: college
+        type: string
+
+    -   name: acyr
+        sql: acyr
+        type: string
+
+    measures: []
+
+    pre_aggregations: []

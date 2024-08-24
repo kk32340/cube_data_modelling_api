@@ -1,0 +1,67 @@
+cubes:
+    name: all_basic_skills_courses
+
+    sql_table: odsmgr_cust.all_basic_skills_courses
+
+    joins: []
+
+    dimensions:
+    -   name: section
+        sql: section
+        type: string
+
+    -   name: basic_skill_cde
+        sql: basic_skill_cde
+        type: string
+
+    -   name: actual_enrollment
+        sql: actual_enrollment
+        type: string
+
+    -   name: campus_desc
+        sql: campus_desc
+        type: string
+
+    -   name: end_date
+        sql: end_date
+        type: time
+
+    -   name: start_date
+        sql: start_date
+        type: time
+
+    -   name: course_title
+        sql: course_title
+        type: string
+
+    -   name: subject
+        sql: subject
+        type: string
+
+    -   name: course_id
+        sql: course_id
+        type: string
+
+    -   name: course_number
+        sql: course_number
+        type: string
+
+    -   name: crn
+        sql: crn
+        type: string
+
+    -   name: college
+        sql: college
+        type: string
+
+    -   name: academic_period
+        sql: academic_period
+        type: string
+
+    -   name: census_enrollment1
+        sql: census_enrollment1
+        type: string
+
+    measures: []
+
+    pre_aggregations: []

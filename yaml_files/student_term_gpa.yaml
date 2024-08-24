@@ -1,0 +1,109 @@
+cubes:
+    name: student_term_gpa
+
+    sql_table: odsmgr_cust.student_term_gpa
+
+    joins:
+    -   name: student_term
+        sql: '{CUBE}.academic_period = student_term.academic_period AND {CUBE}.person_uid
+            = student_term.person_uid'
+        relationship: one_to_many
+
+    dimensions:
+    -   name: term_pc
+        sql: term_pc
+        type: string
+
+    -   name: term_gpa_cc
+        sql: term_gpa_cc
+        type: string
+
+    -   name: term_gpa_bc
+        sql: term_gpa_bc
+        type: string
+
+    -   name: term_earned_pc
+        sql: term_earned_pc
+        type: string
+
+    -   name: term_earned_cc
+        sql: term_earned_cc
+        type: string
+
+    -   name: term_earned_bc
+        sql: term_earned_bc
+        type: string
+
+    -   name: term_attempted_pc
+        sql: term_attempted_pc
+        type: string
+
+    -   name: term_attempted_cc
+        sql: term_attempted_cc
+        type: string
+
+    -   name: term_attempted_bc
+        sql: term_attempted_bc
+        type: string
+
+    -   name: student_status
+        sql: student_status
+        type: string
+
+    -   name: person_uid
+        sql: person_uid
+        type: string
+        primary_key: true
+
+    -   name: pres_honors_ind
+        sql: pres_honors_ind
+        type: string
+
+    -   name: deans_list_ind
+        sql: deans_list_ind
+        type: string
+
+    -   name: cumm_gpa_pc
+        sql: cumm_gpa_pc
+        type: string
+
+    -   name: cumm_gpa_cc
+        sql: cumm_gpa_cc
+        type: string
+
+    -   name: cumm_gpa_bc
+        sql: cumm_gpa_bc
+        type: string
+
+    -   name: cumm_earned_pc
+        sql: cumm_earned_pc
+        type: string
+
+    -   name: cumm_earned_cc
+        sql: cumm_earned_cc
+        type: string
+
+    -   name: cumm_earned_bc
+        sql: cumm_earned_bc
+        type: string
+
+    -   name: cumm_attempted_pc
+        sql: cumm_attempted_pc
+        type: string
+
+    -   name: cumm_attempted_cc
+        sql: cumm_attempted_cc
+        type: string
+
+    -   name: cumm_attempted_bc
+        sql: cumm_attempted_bc
+        type: string
+
+    -   name: academic_period
+        sql: academic_period
+        type: string
+        primary_key: true
+
+    measures: []
+
+    pre_aggregations: []

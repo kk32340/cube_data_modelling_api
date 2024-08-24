@@ -1,0 +1,129 @@
+cubes:
+    name: swbuser
+
+    sql_table: saturn.swbuser
+
+    joins:
+    -   name: student_course_stusta
+        sql: '{CUBE}.swbuser_pidm = student_course_stusta.person_uid AND {CUBE}.swbuser_term_code
+            = student_course_stusta.academic_period'
+        relationship: one_to_one
+
+    -   name: ir_student_term_shortcut1
+        sql: '{CUBE}.swbuser_pidm = swbuser.swbuser_term_code'
+        relationship: one_to_one
+
+    dimensions:
+    -   name: swbuser_vpdi_code
+        sql: swbuser_vpdi_code
+        type: string
+
+    -   name: swbuser_data_origin
+        sql: swbuser_data_origin
+        type: string
+
+    -   name: swbuser_user_id
+        sql: swbuser_user_id
+        type: string
+
+    -   name: swbuser_version
+        sql: swbuser_version
+        type: string
+
+    -   name: swbuser_surrogate_id
+        sql: swbuser_surrogate_id
+        type: string
+
+    -   name: swbuser_sga_decline_date
+        sql: swbuser_sga_decline_date
+        type: time
+
+    -   name: swbuser_stem_grant
+        sql: swbuser_stem_grant
+        type: string
+
+    -   name: swbuser_migrant_worker
+        sql: swbuser_migrant_worker
+        type: string
+
+    -   name: swbuser_vtea
+        sql: swbuser_vtea
+        type: string
+
+    -   name: swbuser_voter_reg_ind
+        sql: swbuser_voter_reg_ind
+        type: string
+
+    -   name: swbuser_voed_code
+        sql: swbuser_voed_code
+        type: string
+
+    -   name: swbuser_trpl_code
+        sql: swbuser_trpl_code
+        type: string
+
+    -   name: swbuser_term_code
+        sql: swbuser_term_code
+        type: string
+        primary_key: true
+
+    -   name: swbuser_suda_code
+        sql: swbuser_suda_code
+        type: string
+
+    -   name: swbuser_residency_q4
+        sql: swbuser_residency_q4
+        type: string
+
+    -   name: swbuser_residency_q3
+        sql: swbuser_residency_q3
+        type: string
+
+    -   name: swbuser_residency_q2
+        sql: swbuser_residency_q2
+        type: string
+
+    -   name: swbuser_residency_q1
+        sql: swbuser_residency_q1
+        type: string
+
+    -   name: swbuser_pidm
+        sql: swbuser_pidm
+        type: string
+        primary_key: true
+
+    -   name: swbuser_mktg_source
+        sql: swbuser_mktg_source
+        type: string
+
+    -   name: swbuser_mil_spouse
+        sql: swbuser_mil_spouse
+        type: string
+
+    -   name: swbuser_mil_self
+        sql: swbuser_mil_self
+        type: string
+
+    -   name: swbuser_mil_mother
+        sql: swbuser_mil_mother
+        type: string
+
+    -   name: swbuser_mil_guardian
+        sql: swbuser_mil_guardian
+        type: string
+
+    -   name: swbuser_mil_father
+        sql: swbuser_mil_father
+        type: string
+
+    -   name: swbuser_ca_begin_stay
+        sql: swbuser_ca_begin_stay
+        type: time
+
+    -   name: swbuser_activity_date
+        sql: swbuser_activity_date
+        type: time
+
+    measures: []
+
+    pre_aggregations: []

@@ -1,0 +1,219 @@
+cubes:
+    name: noninstruct_assign_slot
+
+    sql_table: odsmgr.noninstruct_assign_slot
+
+    joins:
+    -   name: person_stusta
+        sql: '{CUBE}.person_uid = person_stusta.person_uid'
+        relationship: zero_to_many
+
+    dimensions:
+    -   name: person_uid
+        sql: person_uid
+        type: string
+        primary_key: true
+
+    -   name: profile_code
+        sql: profile_code
+        type: string
+
+    -   name: process_group
+        sql: process_group
+        type: string
+
+    -   name: noninstructional_workload6
+        sql: noninstructional_workload6
+        type: string
+
+    -   name: noninstructional_workload5
+        sql: noninstructional_workload5
+        type: string
+
+    -   name: noninstructional_workload4
+        sql: noninstructional_workload4
+        type: string
+
+    -   name: noninstructional_workload3
+        sql: noninstructional_workload3
+        type: string
+
+    -   name: noninstructional_workload2
+        sql: noninstructional_workload2
+        type: string
+
+    -   name: noninstructional_workload1
+        sql: noninstructional_workload1
+        type: string
+
+    -   name: noninstructional_type_desc6
+        sql: noninstructional_type_desc6
+        type: string
+
+    -   name: noninstructional_type_desc5
+        sql: noninstructional_type_desc5
+        type: string
+
+    -   name: noninstructional_type_desc4
+        sql: noninstructional_type_desc4
+        type: string
+
+    -   name: noninstructional_type_desc3
+        sql: noninstructional_type_desc3
+        type: string
+
+    -   name: noninstructional_type_desc2
+        sql: noninstructional_type_desc2
+        type: string
+
+    -   name: noninstructional_type_desc1
+        sql: noninstructional_type_desc1
+        type: string
+
+    -   name: noninstructional_type6
+        sql: noninstructional_type6
+        type: string
+
+    -   name: noninstructional_type5
+        sql: noninstructional_type5
+        type: string
+
+    -   name: noninstructional_type4
+        sql: noninstructional_type4
+        type: string
+
+    -   name: noninstructional_type3
+        sql: noninstructional_type3
+        type: string
+
+    -   name: noninstructional_type2
+        sql: noninstructional_type2
+        type: string
+
+    -   name: noninstructional_type1
+        sql: noninstructional_type1
+        type: string
+
+    -   name: multi_source_desc
+        sql: multi_source_desc
+        type: string
+
+    -   name: multi_source
+        sql: multi_source
+        type: string
+
+    -   name: department_desc6
+        sql: department_desc6
+        type: string
+
+    -   name: department_desc5
+        sql: department_desc5
+        type: string
+
+    -   name: department_desc4
+        sql: department_desc4
+        type: string
+
+    -   name: department_desc3
+        sql: department_desc3
+        type: string
+
+    -   name: department_desc2
+        sql: department_desc2
+        type: string
+
+    -   name: department_desc1
+        sql: department_desc1
+        type: string
+
+    -   name: department6
+        sql: department6
+        type: string
+
+    -   name: department5
+        sql: department5
+        type: string
+
+    -   name: department4
+        sql: department4
+        type: string
+
+    -   name: department3
+        sql: department3
+        type: string
+
+    -   name: department2
+        sql: department2
+        type: string
+
+    -   name: department1
+        sql: department1
+        type: string
+
+    -   name: college_desc6
+        sql: college_desc6
+        type: string
+
+    -   name: college_desc5
+        sql: college_desc5
+        type: string
+
+    -   name: college_desc4
+        sql: college_desc4
+        type: string
+
+    -   name: college_desc3
+        sql: college_desc3
+        type: string
+
+    -   name: college_desc2
+        sql: college_desc2
+        type: string
+
+    -   name: college_desc1
+        sql: college_desc1
+        type: string
+
+    -   name: college6
+        sql: college6
+        type: string
+
+    -   name: college5
+        sql: college5
+        type: string
+
+    -   name: college4
+        sql: college4
+        type: string
+
+    -   name: college3
+        sql: college3
+        type: string
+
+    -   name: college2
+        sql: college2
+        type: string
+
+    -   name: college1
+        sql: college1
+        type: string
+
+    -   name: assignment_rule
+        sql: assignment_rule
+        type: string
+
+    -   name: administrative_group
+        sql: administrative_group
+        type: string
+
+    -   name: activity_date
+        sql: activity_date
+        type: time
+
+    -   name: academic_period
+        sql: academic_period
+        type: string
+
+    measures: []
+
+    pre_aggregations: []

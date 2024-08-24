@@ -1,0 +1,129 @@
+cubes:
+    name: faculty_wrkld_cost
+
+    sql_table: odsmgr_cust.faculty_wrkld_cost
+
+    joins:
+    -   name: faculty
+        sql: '{CUBE}.academic_period = faculty.academic_period AND {CUBE}.person_uid
+            = faculty.person_uid'
+        relationship: one_to_many
+
+    -   name: faculty_alias
+        sql: '{CUBE}.academic_period'
+        relationship: one_to_many
+
+    -   name: ir_session_shortcut
+        sql: '{CUBE}.academic_period = faculty_wrkld_cost.crn AND {CUBE}.person_uid'
+        relationship: one_to_one
+
+    dimensions:
+    -   name: workload
+        sql: workload
+        type: string
+
+    -   name: subject_desc
+        sql: subject_desc
+        type: string
+
+    -   name: subject
+        sql: subject
+        type: string
+
+    -   name: top_desc
+        sql: top_desc
+        type: string
+
+    -   name: top_code
+        sql: top_code
+        type: string
+
+    -   name: person_uid
+        sql: person_uid
+        type: string
+        primary_key: true
+
+    -   name: non_instr_code_desc
+        sql: non_instr_code_desc
+        type: string
+
+    -   name: non_instr_code
+        sql: non_instr_code
+        type: string
+
+    -   name: name
+        sql: name
+        type: string
+
+    -   name: id
+        sql: id
+        type: string
+
+    -   name: department_desc
+        sql: department_desc
+        type: string
+
+    -   name: department
+        sql: department
+        type: string
+
+    -   name: course_start_date
+        sql: course_start_date
+        type: time
+
+    -   name: course_end_date
+        sql: course_end_date
+        type: time
+
+    -   name: course_desc
+        sql: course_desc
+        type: string
+
+    -   name: course
+        sql: course
+        type: string
+
+    -   name: cost
+        sql: cost
+        type: string
+
+    -   name: contract_type_desc
+        sql: contract_type_desc
+        type: string
+
+    -   name: contract_type
+        sql: contract_type
+        type: string
+
+    -   name: comb_code_desc
+        sql: comb_code_desc
+        type: string
+
+    -   name: comb_code
+        sql: comb_code
+        type: string
+
+    -   name: college
+        sql: college
+        type: string
+
+    -   name: assignment_type_desc
+        sql: assignment_type_desc
+        type: string
+
+    -   name: assignment_type
+        sql: assignment_type
+        type: string
+
+    -   name: crn
+        sql: crn
+        type: string
+
+    -   name: academic_period
+        sql: academic_period
+        type: string
+        primary_key: true
+
+    measures: []
+
+    pre_aggregations: []

@@ -1,0 +1,65 @@
+cubes:
+    name: ir_finaid_award
+
+    sql_table: odsmgr_cust.ir_finaid_award
+
+    joins:
+    -   name: ir_student_term
+        sql: '{CUBE}.person_uid = ir_student_term.person_uid AND {CUBE}.academic_period
+            = ir_student_term.academic_period'
+        relationship: zero_to_many
+
+    dimensions:
+    -   name: id
+        sql: id
+        type: string
+
+    -   name: award_amount
+        sql: award_amount
+        type: string
+
+    -   name: award_status
+        sql: award_status
+        type: string
+
+    -   name: fa_awarding_college
+        sql: fa_awarding_college
+        type: string
+
+    -   name: award_title
+        sql: award_title
+        type: string
+
+    -   name: award_name
+        sql: award_name
+        type: string
+
+    -   name: award_code
+        sql: award_code
+        type: string
+
+    -   name: fa_aid_period
+        sql: fa_aid_period
+        type: string
+
+    -   name: fa_aid_year
+        sql: fa_aid_year
+        type: string
+
+    -   name: academic_period
+        sql: academic_period
+        type: string
+        primary_key: true
+
+    -   name: person_uid
+        sql: person_uid
+        type: string
+        primary_key: true
+
+    -   name: prev_academic_period
+        sql: prev_academic_period
+        type: string
+
+    measures: []
+
+    pre_aggregations: []

@@ -1,0 +1,267 @@
+cubes:
+    name: pre_student
+
+    sql_table: odsmgr.pre_student
+
+    joins:
+    -   name: person_stusta
+        sql: '{CUBE}.person_uid = person_stusta.person_uid'
+        relationship: zero_to_many
+
+    dimensions:
+    -   name: test_count
+        sql: test_count
+        type: string
+
+    -   name: sec_transcript_reviewed_date
+        sql: sec_transcript_reviewed_date
+        type: time
+
+    -   name: sec_transcript_received_date
+        sql: sec_transcript_received_date
+        type: time
+
+    -   name: sec_official_transcript_ind
+        sql: sec_official_transcript_ind
+        type: string
+
+    -   name: ps_transcript_reviewed_date
+        sql: ps_transcript_reviewed_date
+        type: time
+
+    -   name: ps_transcript_received_date
+        sql: ps_transcript_received_date
+        type: time
+
+    -   name: ps_school_size
+        sql: ps_school_size
+        type: string
+
+    -   name: ps_school_rank
+        sql: ps_school_rank
+        type: string
+
+    -   name: ps_school_percentile
+        sql: ps_school_percentile
+        type: string
+
+    -   name: ps_official_transcript_ind
+        sql: ps_official_transcript_ind
+        type: string
+
+    -   name: ps_gpa_transferred
+        sql: ps_gpa_transferred
+        type: string
+
+    -   name: ps_attend_to_date
+        sql: ps_attend_to_date
+        type: time
+
+    -   name: ps_attend_from_date
+        sql: ps_attend_from_date
+        type: time
+
+    -   name: secondary_subject_count
+        sql: secondary_subject_count
+        type: string
+
+    -   name: secondary_school_size
+        sql: secondary_school_size
+        type: string
+
+    -   name: secondary_school_reported_gpa
+        sql: secondary_school_reported_gpa
+        type: string
+
+    -   name: secondary_school_rank
+        sql: secondary_school_rank
+        type: string
+
+    -   name: secondary_school_percentile
+        sql: secondary_school_percentile
+        type: string
+
+    -   name: secondary_school_grad_date
+        sql: secondary_school_grad_date
+        type: time
+
+    -   name: secondary_school_diploma_desc
+        sql: secondary_school_diploma_desc
+        type: string
+
+    -   name: secondary_school_diploma
+        sql: secondary_school_diploma
+        type: string
+
+    -   name: secondary_school_count
+        sql: secondary_school_count
+        type: string
+
+    -   name: secondary_attend_to_date
+        sql: secondary_attend_to_date
+        type: time
+
+    -   name: secondary_attend_from_date
+        sql: secondary_attend_from_date
+        type: time
+
+    -   name: program_classification3_desc
+        sql: program_classification3_desc
+        type: string
+
+    -   name: program_classification3
+        sql: program_classification3
+        type: string
+
+    -   name: program_classification2_desc
+        sql: program_classification2_desc
+        type: string
+
+    -   name: program_classification2
+        sql: program_classification2
+        type: string
+
+    -   name: program_classification1_desc
+        sql: program_classification1_desc
+        type: string
+
+    -   name: program_classification1
+        sql: program_classification1
+        type: string
+
+    -   name: process_group
+        sql: process_group
+        type: string
+
+    -   name: post_secondary_school_count
+        sql: post_secondary_school_count
+        type: string
+
+    -   name: post_secondary_major_desc3
+        sql: post_secondary_major_desc3
+        type: string
+
+    -   name: post_secondary_major_desc2
+        sql: post_secondary_major_desc2
+        type: string
+
+    -   name: post_secondary_major_desc1
+        sql: post_secondary_major_desc1
+        type: string
+
+    -   name: post_secondary_major3
+        sql: post_secondary_major3
+        type: string
+
+    -   name: post_secondary_major2
+        sql: post_secondary_major2
+        type: string
+
+    -   name: post_secondary_major1
+        sql: post_secondary_major1
+        type: string
+
+    -   name: post_secondary_degree_desc2
+        sql: post_secondary_degree_desc2
+        type: string
+
+    -   name: post_secondary_degree_desc1
+        sql: post_secondary_degree_desc1
+        type: string
+
+    -   name: post_secondary_degree_date2
+        sql: post_secondary_degree_date2
+        type: time
+
+    -   name: post_secondary_degree_date1
+        sql: post_secondary_degree_date1
+        type: time
+
+    -   name: post_secondary_degree2
+        sql: post_secondary_degree2
+        type: string
+
+    -   name: post_secondary_degree1
+        sql: post_secondary_degree1
+        type: string
+
+    -   name: name
+        sql: name
+        type: string
+
+    -   name: multi_source_desc
+        sql: multi_source_desc
+        type: string
+
+    -   name: latest_secondary_school_desc
+        sql: latest_secondary_school_desc
+        type: string
+
+    -   name: latest_secondary_school
+        sql: latest_secondary_school
+        type: string
+
+    -   name: latest_post_secondary_school
+        sql: latest_post_secondary_school
+        type: string
+
+    -   name: latest_post_secondary_desc
+        sql: latest_post_secondary_desc
+        type: string
+
+    -   name: latest_contact_desc
+        sql: latest_contact_desc
+        type: string
+
+    -   name: latest_contact_date
+        sql: latest_contact_date
+        type: time
+
+    -   name: latest_contact
+        sql: latest_contact
+        type: string
+
+    -   name: multi_source
+        sql: multi_source
+        type: string
+
+    -   name: id
+        sql: id
+        type: string
+
+    -   name: hold_count
+        sql: hold_count
+        type: string
+
+    -   name: first_contact_desc
+        sql: first_contact_desc
+        type: string
+
+    -   name: first_contact_date
+        sql: first_contact_date
+        type: time
+
+    -   name: first_contact
+        sql: first_contact
+        type: string
+
+    -   name: interests_count
+        sql: interests_count
+        type: string
+
+    -   name: contacts_count
+        sql: contacts_count
+        type: string
+
+    -   name: administrative_group
+        sql: administrative_group
+        type: string
+
+    -   name: person_uid
+        sql: person_uid
+        type: string
+        primary_key: true
+
+    measures: []
+
+    pre_aggregations: []

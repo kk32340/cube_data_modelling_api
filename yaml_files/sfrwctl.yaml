@@ -1,0 +1,69 @@
+cubes:
+    name: sfrwctl
+
+    sql_table: saturn.sfrwctl
+
+    joins:
+    -   name: sfbwctl
+        sql: '{CUBE}.sfrwctl_term_code = sfbwctl.sfbwctl_term_code AND {CUBE}.sfrwctl_priority
+            = sfbwctl.sfbwctl_priority'
+        relationship: one_to_many
+
+    dimensions:
+    -   name: sfrwctl_vpdi_code
+        sql: sfrwctl_vpdi_code
+        type: string
+
+    -   name: sfrwctl_data_origin
+        sql: sfrwctl_data_origin
+        type: string
+
+    -   name: sfrwctl_user_id
+        sql: sfrwctl_user_id
+        type: string
+
+    -   name: sfrwctl_version
+        sql: sfrwctl_version
+        type: string
+
+    -   name: sfrwctl_surrogate_id
+        sql: sfrwctl_surrogate_id
+        type: string
+
+    -   name: sfrwctl_term_code
+        sql: sfrwctl_term_code
+        type: string
+        primary_key: true
+
+    -   name: sfrwctl_seq_no
+        sql: sfrwctl_seq_no
+        type: string
+
+    -   name: sfrwctl_priority
+        sql: sfrwctl_priority
+        type: string
+        primary_key: true
+
+    -   name: sfrwctl_hour_end
+        sql: sfrwctl_hour_end
+        type: string
+
+    -   name: sfrwctl_hour_begin
+        sql: sfrwctl_hour_begin
+        type: string
+
+    -   name: sfrwctl_end_date
+        sql: sfrwctl_end_date
+        type: time
+
+    -   name: sfrwctl_begin_date
+        sql: sfrwctl_begin_date
+        type: time
+
+    -   name: sfrwctl_activity_date
+        sql: sfrwctl_activity_date
+        type: time
+
+    measures: []
+
+    pre_aggregations: []

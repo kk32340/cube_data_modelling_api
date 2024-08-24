@@ -1,0 +1,295 @@
+cubes:
+    name: degree
+
+    sql_table: odsmgr.degree
+
+    joins:
+    -   name: person_stusta
+        sql: '{CUBE}.person_uid = person_stusta.person_uid'
+        relationship: zero_to_many
+
+    dimensions:
+    -   name: third_concentration_desc
+        sql: third_concentration_desc
+        type: string
+
+    -   name: third_concentration
+        sql: third_concentration
+        type: string
+
+    -   name: second_minor_desc
+        sql: second_minor_desc
+        type: string
+
+    -   name: second_minor
+        sql: second_minor
+        type: string
+
+    -   name: second_major_conc_3_desc
+        sql: second_major_conc_3_desc
+        type: string
+
+    -   name: second_major_conc_3
+        sql: second_major_conc_3
+        type: string
+
+    -   name: second_major_conc_2_desc
+        sql: second_major_conc_2_desc
+        type: string
+
+    -   name: second_major_conc_2
+        sql: second_major_conc_2
+        type: string
+
+    -   name: second_major_conc_1_desc
+        sql: second_major_conc_1_desc
+        type: string
+
+    -   name: second_major_conc_1
+        sql: second_major_conc_1
+        type: string
+
+    -   name: second_concentration_desc
+        sql: second_concentration_desc
+        type: string
+
+    -   name: second_concentration
+        sql: second_concentration
+        type: string
+
+    -   name: person_uid
+        sql: person_uid
+        type: string
+        primary_key: true
+
+    -   name: process_group
+        sql: process_group
+        type: string
+
+    -   name: major3_desc
+        sql: major3_desc
+        type: string
+
+    -   name: major3
+        sql: major3
+        type: string
+
+    -   name: major2_desc
+        sql: major2_desc
+        type: string
+
+    -   name: major2
+        sql: major2
+        type: string
+
+    -   name: major1_desc
+        sql: major1_desc
+        type: string
+
+    -   name: major1
+        sql: major1
+        type: string
+
+    -   name: name
+        sql: name
+        type: string
+
+    -   name: multi_source_desc
+        sql: multi_source_desc
+        type: string
+
+    -   name: multi_source
+        sql: multi_source
+        type: string
+
+    -   name: institution_ind
+        sql: institution_ind
+        type: string
+
+    -   name: institution_desc
+        sql: institution_desc
+        type: string
+
+    -   name: institution
+        sql: institution
+        type: string
+
+    -   name: id
+        sql: id
+        type: string
+
+    -   name: honor5_desc
+        sql: honor5_desc
+        type: string
+
+    -   name: honor5
+        sql: honor5
+        type: string
+
+    -   name: honor4_desc
+        sql: honor4_desc
+        type: string
+
+    -   name: honor4
+        sql: honor4
+        type: string
+
+    -   name: honor3_desc
+        sql: honor3_desc
+        type: string
+
+    -   name: honor3
+        sql: honor3
+        type: string
+
+    -   name: honor2_desc
+        sql: honor2_desc
+        type: string
+
+    -   name: honor2
+        sql: honor2
+        type: string
+
+    -   name: honor1_desc
+        sql: honor1_desc
+        type: string
+
+    -   name: honor1
+        sql: honor1
+        type: string
+
+    -   name: first_minor_desc
+        sql: first_minor_desc
+        type: string
+
+    -   name: first_minor
+        sql: first_minor
+        type: string
+
+    -   name: first_concentration_desc
+        sql: first_concentration_desc
+        type: string
+
+    -   name: first_concentration
+        sql: first_concentration
+        type: string
+
+    -   name: department_honor5_desc
+        sql: department_honor5_desc
+        type: string
+
+    -   name: department_honor5
+        sql: department_honor5
+        type: string
+
+    -   name: department_honor4_desc
+        sql: department_honor4_desc
+        type: string
+
+    -   name: department_honor4
+        sql: department_honor4
+        type: string
+
+    -   name: department_honor3_desc
+        sql: department_honor3_desc
+        type: string
+
+    -   name: department_honor3
+        sql: department_honor3
+        type: string
+
+    -   name: department_honor2_desc
+        sql: department_honor2_desc
+        type: string
+
+    -   name: department_honor2
+        sql: department_honor2
+        type: string
+
+    -   name: department_honor1_desc
+        sql: department_honor1_desc
+        type: string
+
+    -   name: department_honor1
+        sql: department_honor1
+        type: string
+
+    -   name: department2_desc
+        sql: department2_desc
+        type: string
+
+    -   name: department2
+        sql: department2
+        type: string
+
+    -   name: department1_desc
+        sql: department1_desc
+        type: string
+
+    -   name: department1
+        sql: department1
+        type: string
+
+    -   name: degree_number
+        sql: degree_number
+        type: string
+
+    -   name: degree_desc
+        sql: degree_desc
+        type: string
+
+    -   name: degree_date
+        sql: degree_date
+        type: time
+
+    -   name: degree_comment
+        sql: degree_comment
+        type: string
+
+    -   name: degree
+        sql: degree
+        type: string
+
+    -   name: campus_desc
+        sql: campus_desc
+        type: string
+
+    -   name: campus
+        sql: campus
+        type: string
+
+    -   name: bulletin_year_desc
+        sql: bulletin_year_desc
+        type: string
+
+    -   name: bulletin_year
+        sql: bulletin_year
+        type: string
+
+    -   name: college_desc
+        sql: college_desc
+        type: string
+
+    -   name: college
+        sql: college
+        type: string
+
+    -   name: administrative_group
+        sql: administrative_group
+        type: string
+
+    -   name: additional_majors_ind
+        sql: additional_majors_ind
+        type: string
+
+    -   name: academic_year_desc
+        sql: academic_year_desc
+        type: string
+
+    -   name: academic_year
+        sql: academic_year
+        type: string
+
+    measures: []
+
+    pre_aggregations: []

@@ -1,0 +1,41 @@
+cubes:
+    name: student_major_hist
+
+    sql_table: odsmgr_cust.student_major_hist
+
+    joins:
+    -   name: ir_student_term
+        sql: '{CUBE}.person_uid = ir_student_term.person_uid AND {CUBE}.academic_period
+            = ir_student_term.academic_period'
+        relationship: one_to_many
+
+    dimensions:
+    -   name: activity_date
+        sql: activity_date
+        type: time
+
+    -   name: rec_type
+        sql: rec_type
+        type: string
+
+    -   name: major_desc
+        sql: major_desc
+        type: string
+
+    -   name: major
+        sql: major
+        type: string
+
+    -   name: person_uid
+        sql: person_uid
+        type: string
+        primary_key: true
+
+    -   name: academic_period
+        sql: academic_period
+        type: string
+        primary_key: true
+
+    measures: []
+
+    pre_aggregations: []

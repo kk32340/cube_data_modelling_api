@@ -1,0 +1,143 @@
+cubes:
+    name: program_hierarchy
+
+    sql_table: odsmgr.program_hierarchy
+
+    joins:
+    -   name: course_catalog
+        sql: '{CUBE}.program = course_catalog.taxonomy_of_program_code'
+        relationship: zero_to_many
+
+    -   name: course_catalog_alias
+        sql: '{CUBE}.program'
+        relationship: zero_to_many
+
+    -   name: swratnd_transform_rpt_year_alias
+        sql: '{CUBE}.program'
+        relationship: zero_to_many
+
+    -   name: swratnd_transform_rpt_year
+        sql: '{CUBE}.program = swratnd_transform_rpt_year.taxonomy_of_program'
+        relationship: zero_to_many
+
+    dimensions:
+    -   name: data_entry_permitted_desc
+        sql: data_entry_permitted_desc
+        type: string
+
+    -   name: data_entry_permitted
+        sql: data_entry_permitted
+        type: string
+
+    -   name: termination_date
+        sql: termination_date
+        type: time
+
+    -   name: chart_of_accounts_status
+        sql: chart_of_accounts_status
+        type: string
+
+    -   name: program_level_5
+        sql: program_level_5
+        type: string
+
+    -   name: program_level_4
+        sql: program_level_4
+        type: string
+
+    -   name: program_level_3
+        sql: program_level_3
+        type: string
+
+    -   name: program_level_2
+        sql: program_level_2
+        type: string
+
+    -   name: program_level_1
+        sql: program_level_1
+        type: string
+
+    -   name: program_level
+        sql: program_level
+        type: string
+
+    -   name: program_desc_5
+        sql: program_desc_5
+        type: string
+
+    -   name: program_desc_4
+        sql: program_desc_4
+        type: string
+
+    -   name: program_desc_3
+        sql: program_desc_3
+        type: string
+
+    -   name: program_desc_2
+        sql: program_desc_2
+        type: string
+
+    -   name: program_desc_1
+        sql: program_desc_1
+        type: string
+
+    -   name: program_desc
+        sql: program_desc
+        type: string
+
+    -   name: process_group
+        sql: process_group
+        type: string
+
+    -   name: program_status_5
+        sql: program_status_5
+        type: string
+
+    -   name: program_status_4
+        sql: program_status_4
+        type: string
+
+    -   name: program_status_3
+        sql: program_status_3
+        type: string
+
+    -   name: program_status_2
+        sql: program_status_2
+        type: string
+
+    -   name: program_status_1
+        sql: program_status_1
+        type: string
+
+    -   name: program_status
+        sql: program_status
+        type: string
+
+    -   name: multi_source_desc
+        sql: multi_source_desc
+        type: string
+
+    -   name: multi_source
+        sql: multi_source
+        type: string
+
+    -   name: chart_of_accounts_desc
+        sql: chart_of_accounts_desc
+        type: string
+
+    -   name: administrative_group
+        sql: administrative_group
+        type: string
+
+    -   name: program
+        sql: program
+        type: string
+        primary_key: true
+
+    -   name: chart_of_accounts
+        sql: chart_of_accounts
+        type: string
+
+    measures: []
+
+    pre_aggregations: []

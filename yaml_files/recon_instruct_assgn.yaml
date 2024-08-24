@@ -1,0 +1,35 @@
+cubes:
+    name: recon_instruct_assgn
+
+    sql_table: odsmgr_cust.recon_instruct_assgn
+
+    joins: []
+
+    dimensions:
+    -   name: course_identification
+        sql: course_identification
+        type: string
+
+    -   name: campus_desc
+        sql: campus_desc
+        type: string
+
+    -   name: campus
+        sql: campus
+        type: string
+
+    -   name: college
+        sql: college
+        type: string
+
+    -   name: course_reference_number
+        sql: course_reference_number
+        type: string
+
+    -   name: academic_period
+        sql: academic_period
+        type: string
+
+    measures: []
+
+    pre_aggregations: []

@@ -1,0 +1,47 @@
+cubes:
+    name: lov_fiscal_year
+
+    sql_table: odslov.lov_fiscal_year
+
+    joins: []
+
+    dimensions:
+    -   name: table_name
+        sql: table_name
+        type: string
+
+    -   name: qualifier
+        sql: qualifier
+        type: string
+
+    -   name: qualifier_description
+        sql: qualifier_description
+        type: string
+
+    -   name: value
+        sql: value
+        type: string
+
+    -   name: value_description
+        sql: value_description
+        type: string
+
+    -   name: multi_source
+        sql: multi_source
+        type: string
+
+    -   name: multi_source_desc
+        sql: multi_source_desc
+        type: string
+
+    -   name: process_group
+        sql: process_group
+        type: string
+
+    -   name: administrative_group
+        sql: administrative_group
+        type: string
+
+    measures: []
+
+    pre_aggregations: []

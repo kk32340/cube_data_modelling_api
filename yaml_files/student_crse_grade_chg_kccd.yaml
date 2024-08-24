@@ -1,0 +1,43 @@
+cubes:
+    name: student_crse_grade_chg_kccd
+
+    sql_table: odsmgr_cust.student_crse_grade_chg_kccd
+
+    joins:
+    -   name: student_course_stusta
+        sql: '{CUBE}.academic_period = student_course_stusta.academic_period AND {CUBE}.course_reference_number
+            = student_course_stusta.course_reference_number AND {CUBE}.person_uid
+            = student_course_stusta.person_uid'
+        relationship: zero_to_many
+
+    dimensions:
+    -   name: college
+        sql: college
+        type: string
+
+    -   name: person_uid
+        sql: person_uid
+        type: string
+        primary_key: true
+
+    -   name: orig_grade
+        sql: orig_grade
+        type: string
+
+    -   name: final_grade
+        sql: final_grade
+        type: string
+
+    -   name: course_reference_number
+        sql: course_reference_number
+        type: string
+        primary_key: true
+
+    -   name: academic_period
+        sql: academic_period
+        type: string
+        primary_key: true
+
+    measures: []
+
+    pre_aggregations: []

@@ -1,0 +1,90 @@
+cubes:
+    name: ir_student_aid_types
+
+    sql_table: odsmgr_cust.ir_student_aid_types
+
+    joins:
+    -   name: ir_student_term
+        sql: '{CUBE}.person_uid = ir_student_term.person_uid AND {CUBE}.academic_period
+            = ir_student_term.academic_period'
+        relationship: zero_to_many
+
+    -   name: student_course
+        sql: '{CUBE}.person_uid = student_course.person_uid AND {CUBE}.academic_period
+            = student_course.academic_period'
+        relationship: zero_to_many
+
+    dimensions:
+    -   name: eopsresourse_ind
+        sql: eopsresourse_ind
+        type: string
+
+    -   name: eopsbooks_ind
+        sql: eopsbooks_ind
+        type: string
+
+    -   name: chafee_ind
+        sql: chafee_ind
+        type: string
+
+    -   name: care_ind
+        sql: care_ind
+        type: string
+
+    -   name: bookvoucher_ind
+        sql: bookvoucher_ind
+        type: string
+
+    -   name: acg_ind
+        sql: acg_ind
+        type: string
+
+    -   name: loan_ind
+        sql: loan_ind
+        type: string
+
+    -   name: pell_ind
+        sql: pell_ind
+        type: string
+
+    -   name: bogw_ind
+        sql: bogw_ind
+        type: string
+
+    -   name: calgrantb_ind
+        sql: calgrantb_ind
+        type: string
+
+    -   name: calgrantc_ind
+        sql: calgrantc_ind
+        type: string
+
+    -   name: eops_ind
+        sql: eops_ind
+        type: string
+
+    -   name: seog_ind
+        sql: seog_ind
+        type: string
+
+    -   name: id
+        sql: id
+        type: string
+
+    -   name: aid_year
+        sql: aid_year
+        type: string
+
+    -   name: academic_period
+        sql: academic_period
+        type: string
+        primary_key: true
+
+    -   name: person_uid
+        sql: person_uid
+        type: string
+        primary_key: true
+
+    measures: []
+
+    pre_aggregations: []

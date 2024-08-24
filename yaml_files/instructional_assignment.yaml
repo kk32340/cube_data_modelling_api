@@ -1,0 +1,167 @@
+cubes:
+    name: instructional_assignment
+
+    sql_table: odsmgr.instructional_assignment
+
+    joins:
+    -   name: faculty
+        sql: '{CUBE}.person_uid = faculty.person_uid AND {CUBE}.academic_period =
+            faculty.academic_period'
+        relationship: one_to_many
+
+    -   name: faculty_alias
+        sql: '{CUBE}.person_uid = instructional_assignment.academic_period'
+        relationship: one_to_many
+
+    -   name: first_time_adjunct
+        sql: '{CUBE}.person_uid = first_time_adjunct.person_uid AND {CUBE}.academic_period
+            = first_time_adjunct.academic_period'
+        relationship: one_to_many
+
+    -   name: instr_workload_summary
+        sql: '{CUBE}.academic_period = instr_workload_summary.academic_period AND
+            {CUBE}.person_uid = instr_workload_summary.person_uid'
+        relationship: one_to_many
+
+    -   name: meeting_time
+        sql: '{CUBE}.academic_period = meeting_time.academic_period AND {CUBE}.course_reference_number
+            = meeting_time.course_reference_number AND {CUBE}.category = meeting_time.category'
+        relationship: one_to_one
+
+    -   name: person_address_phone_kccd_stusta
+        sql: '{CUBE}.person_uid = person_address_phone_kccd_stusta.person_uid'
+        relationship: one_to_one
+
+    -   name: ongoing_adjunct
+        sql: '{CUBE}.academic_period = ongoing_adjunct.academic_period AND {CUBE}.person_uid
+            = ongoing_adjunct.person_uid'
+        relationship: one_to_many
+
+    -   name: person_address
+        sql: '{CUBE}.person_uid = person_address.person_uid'
+        relationship: one_to_many
+
+    dimensions:
+    -   name: feedback_detail_exists_ind
+        sql: feedback_detail_exists_ind
+        type: string
+
+    -   name: workload_adjust
+        sql: workload_adjust
+        type: string
+
+    -   name: weekly_contact_hours
+        sql: weekly_contact_hours
+        type: string
+
+    -   name: sub_academic_period_desc
+        sql: sub_academic_period_desc
+        type: string
+
+    -   name: sub_academic_period
+        sql: sub_academic_period
+        type: string
+
+    -   name: session_percentage
+        sql: session_percentage
+        type: string
+
+    -   name: percent_responsibility
+        sql: percent_responsibility
+        type: string
+
+    -   name: process_group
+        sql: process_group
+        type: string
+
+    -   name: primary_ind
+        sql: primary_ind
+        type: string
+
+    -   name: position
+        sql: position
+        type: string
+
+    -   name: multi_source_desc
+        sql: multi_source_desc
+        type: string
+
+    -   name: multi_source
+        sql: multi_source
+        type: string
+
+    -   name: job_suffix
+        sql: job_suffix
+        type: string
+
+    -   name: instructor_name
+        sql: instructor_name
+        type: string
+
+    -   name: instructor_last_name
+        sql: instructor_last_name
+        type: string
+
+    -   name: instructor_id
+        sql: instructor_id
+        type: string
+
+    -   name: instructor_first_name
+        sql: instructor_first_name
+        type: string
+
+    -   name: course_reference_number
+        sql: course_reference_number
+        type: string
+        primary_key: true
+
+    -   name: category
+        sql: category
+        type: string
+        primary_key: true
+
+    -   name: contract_type_desc
+        sql: contract_type_desc
+        type: string
+
+    -   name: contract_type
+        sql: contract_type
+        type: string
+
+    -   name: assignment_type_desc
+        sql: assignment_type_desc
+        type: string
+
+    -   name: assignment_type
+        sql: assignment_type
+        type: string
+
+    -   name: administrative_group
+        sql: administrative_group
+        type: string
+
+    -   name: academic_year_desc
+        sql: academic_year_desc
+        type: string
+
+    -   name: academic_year
+        sql: academic_year
+        type: string
+
+    -   name: academic_period_desc
+        sql: academic_period_desc
+        type: string
+
+    -   name: person_uid
+        sql: person_uid
+        type: string
+        primary_key: true
+
+    -   name: academic_period
+        sql: academic_period
+        type: string
+        primary_key: true
+
+    measures: []
+
+    pre_aggregations: []

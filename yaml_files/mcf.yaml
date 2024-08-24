@@ -1,0 +1,67 @@
+cubes:
+    name: mcf
+
+    sql_table: odsmgr_cust.mcf
+
+    joins:
+    -   name: top_codes_current
+        sql: '{CUBE}.top_code = top_codes_current.top_code'
+        relationship: zero_to_many
+
+    dimensions:
+    -   name: units_min
+        sql: units_min
+        type: string
+
+    -   name: units_max
+        sql: units_max
+        type: string
+
+    -   name: top_code
+        sql: top_code
+        type: string
+        primary_key: true
+
+    -   name: sam_code
+        sql: sam_code
+        type: string
+
+    -   name: prior_college_level
+        sql: prior_college_level
+        type: string
+
+    -   name: noncred_category
+        sql: noncred_category
+        type: string
+
+    -   name: funding_category
+        sql: funding_category
+        type: string
+
+    -   name: dept
+        sql: dept
+        type: string
+
+    -   name: dte
+        sql: dte
+        type: time
+
+    -   name: control_num
+        sql: control_num
+        type: string
+
+    -   name: basic_skills
+        sql: basic_skills
+        type: string
+
+    -   name: college_id
+        sql: college_id
+        type: string
+
+    -   name: credit_status
+        sql: credit_status
+        type: string
+
+    measures: []
+
+    pre_aggregations: []

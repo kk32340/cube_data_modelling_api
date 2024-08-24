@@ -1,0 +1,125 @@
+cubes:
+    name: ir_student_term_sport
+
+    sql_table: odsmgr_cust.ir_student_term_sport
+
+    joins:
+    -   name: ir_student_term
+        sql: '{CUBE}.person_uid = ir_student_term.person_uid AND {CUBE}.term_code
+            = ir_student_term.academic_period'
+        relationship: one_to_many
+
+    -   name: ir_student_term_shortcut1
+        sql: '{CUBE}.person_uid = ir_student_term_sport.term_code'
+        relationship: zero_to_many
+
+    dimensions:
+    -   name: softball
+        sql: softball
+        type: string
+
+    -   name: soccer
+        sql: soccer
+        type: string
+
+    -   name: rowing
+        sql: rowing
+        type: string
+
+    -   name: lacrosse
+        sql: lacrosse
+        type: string
+
+    -   name: gymnastics
+        sql: gymnastics
+        type: string
+
+    -   name: golf
+        sql: golf
+        type: string
+
+    -   name: football
+        sql: football
+        type: string
+
+    -   name: fencing
+        sql: fencing
+        type: string
+
+    -   name: bowling
+        sql: bowling
+        type: string
+
+    -   name: basketball
+        sql: basketball
+        type: string
+
+    -   name: baseball
+        sql: baseball
+        type: string
+
+    -   name: badminton
+        sql: badminton
+        type: string
+
+    -   name: archery
+        sql: archery
+        type: string
+
+    -   name: water_polo
+        sql: water_polo
+        type: string
+
+    -   name: outdoor_track_and_field
+        sql: outdoor_track_and_field
+        type: string
+
+    -   name: indoor_track_and_field
+        sql: indoor_track_and_field
+        type: string
+
+    -   name: synchronized_swimming
+        sql: synchronized_swimming
+        type: string
+
+    -   name: swimming_and_diving
+        sql: swimming_and_diving
+        type: string
+
+    -   name: field_hockey
+        sql: field_hockey
+        type: string
+
+    -   name: cross_country
+        sql: cross_country
+        type: string
+
+    -   name: activity_date
+        sql: activity_date
+        type: time
+
+    -   name: wrestling
+        sql: wrestling
+        type: string
+
+    -   name: volleyball
+        sql: volleyball
+        type: string
+
+    -   name: tennis
+        sql: tennis
+        type: string
+
+    -   name: term_code
+        sql: term_code
+        type: string
+        primary_key: true
+
+    -   name: person_uid
+        sql: person_uid
+        type: string
+        primary_key: true
+
+    measures: []
+
+    pre_aggregations: []

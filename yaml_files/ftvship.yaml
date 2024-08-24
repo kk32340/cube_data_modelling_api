@@ -1,0 +1,167 @@
+cubes:
+    name: ftvship
+
+    sql_table: fimsmgr.ftvship
+
+    joins: []
+
+    dimensions:
+    -   name: ftvship_addr_line4
+        sql: ftvship_addr_line4
+        type: string
+
+    -   name: ftvship_house_number
+        sql: ftvship_house_number
+        type: string
+
+    -   name: ftvship_ctry_code_phone
+        sql: ftvship_ctry_code_phone
+        type: string
+
+    -   name: ftvship_natn_code
+        sql: ftvship_natn_code
+        type: string
+
+    -   name: ftvship_addr_line3
+        sql: ftvship_addr_line3
+        type: string
+
+    -   name: ftvship_prog_code_ware
+        sql: ftvship_prog_code_ware
+        type: string
+
+    -   name: ftvship_carrier_route
+        sql: ftvship_carrier_route
+        type: string
+
+    -   name: ftvship_correction_digit
+        sql: ftvship_correction_digit
+        type: string
+
+    -   name: ftvship_delivery_point
+        sql: ftvship_delivery_point
+        type: string
+
+    -   name: ftvship_locn_type_code
+        sql: ftvship_locn_type_code
+        type: string
+
+    -   name: ftvship_profit_center_ind
+        sql: ftvship_profit_center_ind
+        type: string
+
+    -   name: ftvship_orgn_code_ware
+        sql: ftvship_orgn_code_ware
+        type: string
+
+    -   name: ftvship_acct_code_invtry
+        sql: ftvship_acct_code_invtry
+        type: string
+
+    -   name: ftvship_fund_code_invtry
+        sql: ftvship_fund_code_invtry
+        type: string
+
+    -   name: ftvship_tgrp_code
+        sql: ftvship_tgrp_code
+        type: string
+
+    -   name: ftvship_route_code
+        sql: ftvship_route_code
+        type: string
+
+    -   name: ftvship_orgn_code
+        sql: ftvship_orgn_code
+        type: string
+
+    -   name: ftvship_coas_code
+        sql: ftvship_coas_code
+        type: string
+
+    -   name: ftvship_phone_ext
+        sql: ftvship_phone_ext
+        type: string
+
+    -   name: ftvship_phone_num
+        sql: ftvship_phone_num
+        type: string
+
+    -   name: ftvship_phone_area
+        sql: ftvship_phone_area
+        type: string
+
+    -   name: ftvship_contact
+        sql: ftvship_contact
+        type: string
+
+    -   name: ftvship_zip_code
+        sql: ftvship_zip_code
+        type: string
+
+    -   name: ftvship_state
+        sql: ftvship_state
+        type: string
+
+    -   name: ftvship_city
+        sql: ftvship_city
+        type: string
+
+    -   name: ftvship_floor
+        sql: ftvship_floor
+        type: string
+
+    -   name: ftvship_building
+        sql: ftvship_building
+        type: string
+
+    -   name: ftvship_addr_line2
+        sql: ftvship_addr_line2
+        type: string
+
+    -   name: ftvship_addr_line1
+        sql: ftvship_addr_line1
+        type: string
+
+    -   name: ftvship_term_date
+        sql: ftvship_term_date
+        type: time
+
+    -   name: ftvship_nchg_date
+        sql: ftvship_nchg_date
+        type: time
+
+    -   name: ftvship_user_id
+        sql: ftvship_user_id
+        type: string
+
+    -   name: ftvship_activity_date
+        sql: ftvship_activity_date
+        type: time
+
+    -   name: ftvship_eff_date
+        sql: ftvship_eff_date
+        type: time
+
+    -   name: ftvship_code
+        sql: ftvship_code
+        type: string
+
+    -   name: ftvship_surrogate_id
+        sql: ftvship_surrogate_id
+        type: string
+
+    -   name: ftvship_version
+        sql: ftvship_version
+        type: string
+
+    -   name: ftvship_data_origin
+        sql: ftvship_data_origin
+        type: string
+
+    -   name: ftvship_vpdi_code
+        sql: ftvship_vpdi_code
+        type: string
+
+    measures: []
+
+    pre_aggregations: []

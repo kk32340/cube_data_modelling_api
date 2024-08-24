@@ -1,0 +1,51 @@
+cubes:
+    name: cust_tops_cipe
+
+    sql_table: odsmgr_cust.cust_tops_cipe
+
+    joins: []
+
+    dimensions:
+    -   name: top4_title
+        sql: top4_title
+        type: string
+
+    -   name: top4_code
+        sql: top4_code
+        type: string
+
+    -   name: top2_title
+        sql: top2_title
+        type: string
+
+    -   name: top2_code
+        sql: top2_code
+        type: string
+
+    -   name: program_desc
+        sql: program_desc
+        type: string
+
+    -   name: program
+        sql: program
+        type: string
+
+    -   name: org
+        sql: org
+        type: string
+
+    -   name: department_desc
+        sql: department_desc
+        type: string
+
+    -   name: department
+        sql: department
+        type: string
+
+    -   name: dean_lu
+        sql: dean_lu
+        type: string
+
+    measures: []
+
+    pre_aggregations: []

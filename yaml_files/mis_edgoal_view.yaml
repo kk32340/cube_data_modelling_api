@@ -1,0 +1,71 @@
+cubes:
+    name: mis_edgoal_view
+
+    sql_table: odsmgr_cust.mis_edgoal_view
+
+    joins: []
+
+    dimensions:
+    -   name: education_goal
+        sql: education_goal
+        type: string
+
+    -   name: high_school_code_desc
+        sql: high_school_code_desc
+        type: string
+
+    -   name: cell_phone
+        sql: cell_phone
+        type: string
+
+    -   name: day_phone
+        sql: day_phone
+        type: string
+
+    -   name: email_address
+        sql: email_address
+        type: string
+
+    -   name: middle_name
+        sql: middle_name
+        type: string
+
+    -   name: first_name
+        sql: first_name
+        type: string
+
+    -   name: last_name
+        sql: last_name
+        type: string
+
+    -   name: id
+        sql: id
+        type: string
+
+    -   name: college
+        sql: college
+        type: string
+
+    -   name: svredgl_goal_code
+        sql: svredgl_goal_code
+        type: string
+
+    -   name: svredgl_pidm
+        sql: svredgl_pidm
+        type: string
+
+    -   name: term
+        sql: term
+        type: string
+
+    -   name: college_code
+        sql: college_code
+        type: string
+
+    -   name: svredgl_user_id
+        sql: svredgl_user_id
+        type: string
+
+    measures: []
+
+    pre_aggregations: []

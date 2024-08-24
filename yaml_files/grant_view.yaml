@@ -1,0 +1,623 @@
+cubes:
+    name: grant_view
+
+    sql_table: odsmgr.grant_view
+
+    joins: []
+
+    dimensions:
+    -   name: termination_date
+        sql: termination_date
+        type: time
+
+    -   name: type_of_research
+        sql: type_of_research
+        type: string
+
+    -   name: subcategory_desc
+        sql: subcategory_desc
+        type: string
+
+    -   name: subcategory
+        sql: subcategory
+        type: string
+
+    -   name: responsible_orgn_status
+        sql: responsible_orgn_status
+        type: string
+
+    -   name: responsible_organization_desc
+        sql: responsible_organization_desc
+        type: string
+
+    -   name: chart_of_accounts_status
+        sql: chart_of_accounts_status
+        type: string
+
+    -   name: responsible_organization_code
+        sql: responsible_organization_code
+        type: string
+
+    -   name: research_purpose
+        sql: research_purpose
+        type: string
+
+    -   name: federal_identification_status
+        sql: federal_identification_status
+        type: string
+
+    -   name: federal_agency_name
+        sql: federal_agency_name
+        type: string
+
+    -   name: sponsor_number
+        sql: sponsor_number
+        type: string
+
+    -   name: reporting_quarter4
+        sql: reporting_quarter4
+        type: string
+
+    -   name: reporting_quarter3
+        sql: reporting_quarter3
+        type: string
+
+    -   name: reporting_quarter2
+        sql: reporting_quarter2
+        type: string
+
+    -   name: reporting_quarter1
+        sql: reporting_quarter1
+        type: string
+
+    -   name: reporting_date
+        sql: reporting_date
+        type: time
+
+    -   name: renewal_report_date
+        sql: renewal_report_date
+        type: time
+
+    -   name: related_grant
+        sql: related_grant
+        type: string
+
+    -   name: short_title
+        sql: short_title
+        type: string
+
+    -   name: proposal_short_title
+        sql: proposal_short_title
+        type: string
+
+    -   name: proposal_long_title
+        sql: proposal_long_title
+        type: string
+
+    -   name: proposal
+        sql: proposal
+        type: string
+
+    -   name: project_start_date
+        sql: project_start_date
+        type: time
+
+    -   name: project_end_date
+        sql: project_end_date
+        type: time
+
+    -   name: status_fiscal_year
+        sql: status_fiscal_year
+        type: string
+
+    -   name: status_fiscal_period
+        sql: status_fiscal_period
+        type: string
+
+    -   name: status_desc
+        sql: status_desc
+        type: string
+
+    -   name: status_date
+        sql: status_date
+        type: time
+
+    -   name: status
+        sql: status
+        type: string
+
+    -   name: process_group
+        sql: process_group
+        type: string
+
+    -   name: payment_management_sys_desc
+        sql: payment_management_sys_desc
+        type: string
+
+    -   name: payment_management_sys_code
+        sql: payment_management_sys_code
+        type: string
+
+    -   name: effort_certification_req_ind
+        sql: effort_certification_req_ind
+        type: string
+
+    -   name: principal_investigator_uid
+        sql: principal_investigator_uid
+        type: string
+
+    -   name: principal_investigator_title
+        sql: principal_investigator_title
+        type: string
+
+    -   name: principal_investigator_name
+        sql: principal_investigator_name
+        type: string
+
+    -   name: principal_investigator_mname
+        sql: principal_investigator_mname
+        type: string
+
+    -   name: principal_investigator_lname
+        sql: principal_investigator_lname
+        type: string
+
+    -   name: principal_investigator_id
+        sql: principal_investigator_id
+        type: string
+
+    -   name: principal_investigator_fname
+        sql: principal_investigator_fname
+        type: string
+
+    -   name: orgn_fmgr_street_line4
+        sql: orgn_fmgr_street_line4
+        type: string
+
+    -   name: orgn_fmgr_street_line3
+        sql: orgn_fmgr_street_line3
+        type: string
+
+    -   name: orgn_fmgr_street_line2
+        sql: orgn_fmgr_street_line2
+        type: string
+
+    -   name: orgn_fmgr_street_line1
+        sql: orgn_fmgr_street_line1
+        type: string
+
+    -   name: orgn_fmgr_state_province_desc
+        sql: orgn_fmgr_state_province_desc
+        type: string
+
+    -   name: orgn_fmgr_state_province
+        sql: orgn_fmgr_state_province
+        type: string
+
+    -   name: orgn_fmgr_postal_code
+        sql: orgn_fmgr_postal_code
+        type: string
+
+    -   name: orgn_fmgr_nation_desc
+        sql: orgn_fmgr_nation_desc
+        type: string
+
+    -   name: orgn_fmgr_nation
+        sql: orgn_fmgr_nation
+        type: string
+
+    -   name: orgn_fmgr_middle_name
+        sql: orgn_fmgr_middle_name
+        type: string
+
+    -   name: orgn_fmgr_last_name
+        sql: orgn_fmgr_last_name
+        type: string
+
+    -   name: orgn_fmgr_first_name
+        sql: orgn_fmgr_first_name
+        type: string
+
+    -   name: orgn_fmgr_county_desc
+        sql: orgn_fmgr_county_desc
+        type: string
+
+    -   name: orgn_fmgr_county
+        sql: orgn_fmgr_county
+        type: string
+
+    -   name: orgn_fmgr_city
+        sql: orgn_fmgr_city
+        type: string
+
+    -   name: orgn_financial_manager_uid
+        sql: orgn_financial_manager_uid
+        type: string
+
+    -   name: orgn_financial_manager_name
+        sql: orgn_financial_manager_name
+        type: string
+
+    -   name: orgn_financial_manager_id
+        sql: orgn_financial_manager_id
+        type: string
+
+    -   name: organization_status_8
+        sql: organization_status_8
+        type: string
+
+    -   name: organization_status_7
+        sql: organization_status_7
+        type: string
+
+    -   name: organization_status_6
+        sql: organization_status_6
+        type: string
+
+    -   name: organization_status_5
+        sql: organization_status_5
+        type: string
+
+    -   name: organization_status_4
+        sql: organization_status_4
+        type: string
+
+    -   name: organization_status_3
+        sql: organization_status_3
+        type: string
+
+    -   name: organization_status_2
+        sql: organization_status_2
+        type: string
+
+    -   name: organization_status_1
+        sql: organization_status_1
+        type: string
+
+    -   name: location_status
+        sql: location_status
+        type: string
+
+    -   name: on_off_campus
+        sql: on_off_campus
+        type: string
+
+    -   name: long_title
+        sql: long_title
+        type: string
+
+    -   name: location_desc
+        sql: location_desc
+        type: string
+
+    -   name: location
+        sql: location
+        type: string
+
+    -   name: multi_source_desc
+        sql: multi_source_desc
+        type: string
+
+    -   name: letter_of_credit_number
+        sql: letter_of_credit_number
+        type: string
+
+    -   name: grant_activity_date
+        sql: grant_activity_date
+        type: time
+
+    -   name: grant_user_id
+        sql: grant_user_id
+        type: string
+
+    -   name: multi_source
+        sql: multi_source
+        type: string
+
+    -   name: organization_level_8
+        sql: organization_level_8
+        type: string
+
+    -   name: organization_level_7
+        sql: organization_level_7
+        type: string
+
+    -   name: organization_level_6
+        sql: organization_level_6
+        type: string
+
+    -   name: organization_level_5
+        sql: organization_level_5
+        type: string
+
+    -   name: organization_level_4
+        sql: organization_level_4
+        type: string
+
+    -   name: organization_level_3
+        sql: organization_level_3
+        type: string
+
+    -   name: organization_level_2
+        sql: organization_level_2
+        type: string
+
+    -   name: organization_level_1
+        sql: organization_level_1
+        type: string
+
+    -   name: organization_desc_8
+        sql: organization_desc_8
+        type: string
+
+    -   name: organization_desc_7
+        sql: organization_desc_7
+        type: string
+
+    -   name: organization_desc_6
+        sql: organization_desc_6
+        type: string
+
+    -   name: organization_desc_5
+        sql: organization_desc_5
+        type: string
+
+    -   name: organization_desc_4
+        sql: organization_desc_4
+        type: string
+
+    -   name: organization_desc_3
+        sql: organization_desc_3
+        type: string
+
+    -   name: organization_desc_2
+        sql: organization_desc_2
+        type: string
+
+    -   name: organization_desc_1
+        sql: organization_desc_1
+        type: string
+
+    -   name: indirect_cost_rate_desc
+        sql: indirect_cost_rate_desc
+        type: string
+
+    -   name: indirect_cost_rate
+        sql: indirect_cost_rate
+        type: string
+
+    -   name: indirect_cost_distrib_desc
+        sql: indirect_cost_distrib_desc
+        type: string
+
+    -   name: indirect_cost_distribution
+        sql: indirect_cost_distribution
+        type: string
+
+    -   name: indirect_cost_charge_desc
+        sql: indirect_cost_charge_desc
+        type: string
+
+    -   name: indirect_cost_charge
+        sql: indirect_cost_charge
+        type: string
+
+    -   name: indirect_cost_base_desc
+        sql: indirect_cost_base_desc
+        type: string
+
+    -   name: chart_of_accounts_cost_status
+        sql: chart_of_accounts_cost_status
+        type: string
+
+    -   name: indirect_cost_base
+        sql: indirect_cost_base
+        type: string
+
+    -   name: grant_type_desc
+        sql: grant_type_desc
+        type: string
+
+    -   name: grant_type
+        sql: grant_type
+        type: string
+
+    -   name: fiscal_reporting_date
+        sql: fiscal_reporting_date
+        type: time
+
+    -   name: field_of_science
+        sql: field_of_science
+        type: string
+
+    -   name: expenditure_end_date
+        sql: expenditure_end_date
+        type: time
+
+    -   name: current_year_amount
+        sql: current_year_amount
+        type: string
+
+    -   name: cumulative_amount
+        sql: cumulative_amount
+        type: string
+
+    -   name: prin_investigator_email_addr
+        sql: prin_investigator_email_addr
+        type: string
+
+    -   name: federal_identification_uid
+        sql: federal_identification_uid
+        type: string
+
+    -   name: federal_identification_desc
+        sql: federal_identification_desc
+        type: string
+
+    -   name: federal_identification
+        sql: federal_identification
+        type: string
+
+    -   name: chart_of_accounts_desc
+        sql: chart_of_accounts_desc
+        type: string
+
+    -   name: chart_of_accounts_cost_desc
+        sql: chart_of_accounts_cost_desc
+        type: string
+
+    -   name: chart_of_accounts_cost
+        sql: chart_of_accounts_cost
+        type: string
+
+    -   name: total_recipient_share_amount
+        sql: total_recipient_share_amount
+        type: string
+
+    -   name: chart_of_accounts
+        sql: chart_of_accounts
+        type: string
+
+    -   name: category_desc
+        sql: category_desc
+        type: string
+
+    -   name: category
+        sql: category
+        type: string
+
+    -   name: cost_share_rate_desc
+        sql: cost_share_rate_desc
+        type: string
+
+    -   name: cost_share_rate
+        sql: cost_share_rate
+        type: string
+
+    -   name: cost_share_distribution_desc
+        sql: cost_share_distribution_desc
+        type: string
+
+    -   name: cost_share_distribution
+        sql: cost_share_distribution
+        type: string
+
+    -   name: cost_share_charge_desc
+        sql: cost_share_charge_desc
+        type: string
+
+    -   name: cost_share_charge
+        sql: cost_share_charge
+        type: string
+
+    -   name: cost_share_base_desc
+        sql: cost_share_base_desc
+        type: string
+
+    -   name: cost_share_base
+        sql: cost_share_base
+        type: string
+
+    -   name: alternate_status_desc
+        sql: alternate_status_desc
+        type: string
+
+    -   name: agency_name_level_2
+        sql: agency_name_level_2
+        type: string
+
+    -   name: agency_name_level_1
+        sql: agency_name_level_1
+        type: string
+
+    -   name: agency_name
+        sql: agency_name
+        type: string
+
+    -   name: agency_id_level_4
+        sql: agency_id_level_4
+        type: string
+
+    -   name: agency_id_level_3
+        sql: agency_id_level_3
+        type: string
+
+    -   name: agency_id_level_2
+        sql: agency_id_level_2
+        type: string
+
+    -   name: agency_id_level_1
+        sql: agency_id_level_1
+        type: string
+
+    -   name: agency_id
+        sql: agency_id
+        type: string
+
+    -   name: agency_email
+        sql: agency_email
+        type: string
+
+    -   name: agency_contact
+        sql: agency_contact
+        type: string
+
+    -   name: agency_commitment_amount
+        sql: agency_commitment_amount
+        type: string
+
+    -   name: agency_address_sequence_number
+        sql: agency_address_sequence_number
+        type: string
+
+    -   name: agency_address
+        sql: agency_address
+        type: string
+
+    -   name: agency_uid_level_4
+        sql: agency_uid_level_4
+        type: string
+
+    -   name: agency_uid_level_3
+        sql: agency_uid_level_3
+        type: string
+
+    -   name: agency_uid_level_2
+        sql: agency_uid_level_2
+        type: string
+
+    -   name: agency_uid_level_1
+        sql: agency_uid_level_1
+        type: string
+
+    -   name: agency_uid
+        sql: agency_uid
+        type: string
+
+    -   name: agency_telephone_seq_number
+        sql: agency_telephone_seq_number
+        type: string
+
+    -   name: agency_phone_type
+        sql: agency_phone_type
+        type: string
+
+    -   name: agency_name_level_4
+        sql: agency_name_level_4
+        type: string
+
+    -   name: agency_name_level_3
+        sql: agency_name_level_3
+        type: string
+
+    -   name: administrative_group
+        sql: administrative_group
+        type: string
+
+    -   name: grant_id
+        sql: grant_id
+        type: string
+
+    measures: []
+
+    pre_aggregations: []

@@ -1,0 +1,127 @@
+cubes:
+    name: enrollment_in_term1_not_term2
+
+    sql_table: odsmgr_cust.enrollment_in_term1_not_term2
+
+    joins: []
+
+    dimensions:
+    -   name: gpa
+        sql: gpa
+        type: string
+
+    -   name: number_counseling_sessions
+        sql: number_counseling_sessions
+        type: string
+
+    -   name: number_probation_appointments
+        sql: number_probation_appointments
+        type: string
+
+    -   name: number_probation_workshops
+        sql: number_probation_workshops
+        type: string
+
+    -   name: academic_standing_desc
+        sql: academic_standing_desc
+        type: string
+
+    -   name: dsps
+        sql: dsps
+        type: string
+
+    -   name: home_college
+        sql: home_college
+        type: string
+
+    -   name: academic_period
+        sql: academic_period
+        type: string
+
+    -   name: academic_standing
+        sql: academic_standing
+        type: string
+
+    -   name: major
+        sql: major
+        type: string
+
+    -   name: postal_code
+        sql: postal_code
+        type: string
+
+    -   name: state
+        sql: state
+        type: string
+
+    -   name: city
+        sql: city
+        type: string
+
+    -   name: street
+        sql: street
+        type: string
+
+    -   name: email_address
+        sql: email_address
+        type: string
+
+    -   name: cell_phone
+        sql: cell_phone
+        type: string
+
+    -   name: day_phone
+        sql: day_phone
+        type: string
+
+    -   name: birth_date
+        sql: birth_date
+        type: time
+
+    -   name: gender
+        sql: gender
+        type: string
+
+    -   name: middle_name
+        sql: middle_name
+        type: string
+
+    -   name: first_name
+        sql: first_name
+        type: string
+
+    -   name: last_name
+        sql: last_name
+        type: string
+
+    -   name: id
+        sql: id
+        type: string
+
+    -   name: person_uid
+        sql: person_uid
+        type: string
+
+    -   name: registration appt. date
+        sql: registration appt. date
+        type: time
+
+    -   name: degree awarded
+        sql: degree awarded
+        type: string
+
+    -   name: degree and date awarded
+        sql: degree and date awarded
+        type: string
+
+    -   name: cum_attempted_units
+        sql: cum_attempted_units
+        type: string
+
+    -   name: cum_earned_units
+        sql: cum_earned_units
+        type: string
+
+    measures: []
+
+    pre_aggregations: []

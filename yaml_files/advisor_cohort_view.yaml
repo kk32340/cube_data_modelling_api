@@ -1,0 +1,303 @@
+cubes:
+    name: advisor_cohort_view
+
+    sql_table: ''
+
+    joins: []
+
+    dimensions:
+    -   name: ever_recd_counseling
+        sql: ever_recd_counseling
+        type: string
+
+    -   name: disqualification meeting
+        sql: disqualification meeting
+        type: string
+
+    -   name: ever_recd_edplan
+        sql: ever_recd_edplan
+        type: string
+
+    -   name: ever_recd_orientation
+        sql: ever_recd_orientation
+        type: string
+
+    -   name: ever_recd_assessment
+        sql: ever_recd_assessment
+        type: string
+
+    -   name: student_pidm
+        sql: student_pidm
+        type: string
+
+    -   name: degree works audits run
+        sql: degree works audits run
+        type: string
+
+    -   name: applied for bog
+        sql: applied for bog
+        type: string
+
+    -   name: '# mathb70 attempts'
+        sql: '# mathb70 attempts'
+        type: string
+
+    -   name: enrolled in selected term
+        sql: enrolled in selected term
+        type: string
+
+    -   name: attended lib workshop
+        sql: attended lib workshop
+        type: string
+
+    -   name: '# englb1a attempts'
+        sql: '# englb1a attempts'
+        type: string
+
+    -   name: mathb70
+        sql: mathb70
+        type: string
+
+    -   name: englb1a
+        sql: englb1a
+        type: string
+
+    -   name: math placement level
+        sql: math placement level
+        type: string
+
+    -   name: drop for non-payment
+        sql: drop for non-payment
+        type: string
+
+    -   name: secondary email
+        sql: secondary email
+        type: string
+
+    -   name: update for next term
+        sql: update for next term
+        type: string
+
+    -   name: registered next term
+        sql: registered next term
+        type: string
+
+    -   name: course
+        sql: course
+        type: string
+
+    -   name: probation_counseling_visits
+        sql: probation_counseling_visits
+        type: string
+
+    -   name: career_interest_visits
+        sql: career_interest_visits
+        type: string
+
+    -   name: total_advisors
+        sql: total_advisors
+        type: string
+
+    -   name: units_earned
+        sql: units_earned
+        type: string
+
+    -   name: major
+        sql: major
+        type: string
+
+    -   name: registered
+        sql: registered
+        type: string
+
+    -   name: student_name
+        sql: student_name
+        type: string
+
+    -   name: student_id
+        sql: student_id
+        type: string
+
+    -   name: advisor_name
+        sql: advisor_name
+        type: string
+
+    -   name: advisor_id
+        sql: advisor_id
+        type: string
+
+    -   name: student loan received
+        sql: student loan received
+        type: string
+
+    -   name: cum_gpa
+        sql: cum_gpa
+        type: string
+
+    -   name: follow-up advising
+        sql: follow-up advising
+        type: string
+
+    -   name: personal counseling
+        sql: personal counseling
+        type: string
+
+    -   name: employee
+        sql: employee
+        type: string
+
+    -   name: payment contract
+        sql: payment contract
+        type: string
+
+    -   name: emls listening placement
+        sql: emls listening placement
+        type: string
+
+    -   name: reading placement - esl
+        sql: reading placement - esl
+        type: string
+
+    -   name: eff_term
+        sql: eff_term
+        type: string
+
+    -   name: advr_pidm
+        sql: advr_pidm
+        type: string
+
+    -   name: reading placement
+        sql: reading placement
+        type: string
+
+    -   name: student_term
+        sql: student_term
+        type: string
+
+    -   name: summer bridge
+        sql: summer bridge
+        type: string
+
+    -   name: ethnicity
+        sql: ethnicity
+        type: string
+
+    -   name: writing placement - esl
+        sql: writing placement - esl
+        type: string
+
+    -   name: mail_res_postal_code
+        sql: mail_res_postal_code
+        type: string
+
+    -   name: mail_res_state
+        sql: mail_res_state
+        type: string
+
+    -   name: mail_res_city
+        sql: mail_res_city
+        type: string
+
+    -   name: mail_res_street2
+        sql: mail_res_street2
+        type: string
+
+    -   name: writing placement - english
+        sql: writing placement - english
+        type: string
+
+    -   name: college_email
+        sql: college_email
+        type: string
+
+    -   name: cell_phone
+        sql: cell_phone
+        type: string
+
+    -   name: gender
+        sql: gender
+        type: string
+
+    -   name: term_gpa
+        sql: term_gpa
+        type: string
+
+    -   name: academic_period
+        sql: academic_period
+        type: string
+
+    -   name: prior_term_gpa
+        sql: prior_term_gpa
+        type: string
+
+    -   name: mail_res_street1
+        sql: mail_res_street1
+        type: string
+
+    -   name: probation workshop
+        sql: probation workshop
+        type: string
+
+    -   name: career interest
+        sql: career interest
+        type: string
+
+    -   name: early alert
+        sql: early alert
+        type: string
+
+    -   name: transfer visit
+        sql: transfer visit
+        type: string
+
+    -   name: application_on_file
+        sql: application_on_file
+        type: string
+
+    -   name: academic_standing
+        sql: academic_standing
+        type: string
+
+    -   name: matric_counseling
+        sql: matric_counseling
+        type: string
+
+    -   name: matric_orientation
+        sql: matric_orientation
+        type: string
+
+    -   name: matric_edplan
+        sql: matric_edplan
+        type: string
+
+    -   name: matric_assessment
+        sql: matric_assessment
+        type: string
+
+    -   name: csep
+        sql: csep
+        type: string
+
+    -   name: asep
+        sql: asep
+        type: string
+
+    -   name: home_college
+        sql: home_college
+        type: string
+
+    -   name: student loan applied for
+        sql: student loan applied for
+        type: string
+
+    -   name: finaid application on file
+        sql: finaid application on file
+        type: string
+
+    -   name: bog
+        sql: bog
+        type: string
+
+    measures: []
+
+    pre_aggregations: []

@@ -1,0 +1,139 @@
+cubes:
+    name: admissions_requirement
+
+    sql_table: odsmgr.admissions_requirement
+
+    joins: []
+
+    dimensions:
+    -   name: requirement_activity_date
+        sql: requirement_activity_date
+        type: time
+
+    -   name: requirement_status_desc
+        sql: requirement_status_desc
+        type: string
+
+    -   name: requirement_status
+        sql: requirement_status
+        type: string
+
+    -   name: requirement_origin_desc
+        sql: requirement_origin_desc
+        type: string
+
+    -   name: requirement_origin
+        sql: requirement_origin
+        type: string
+
+    -   name: requirement_source_desc
+        sql: requirement_source_desc
+        type: string
+
+    -   name: waived_ind
+        sql: waived_ind
+        type: string
+
+    -   name: sub_academic_period_desc
+        sql: sub_academic_period_desc
+        type: string
+
+    -   name: sub_academic_period
+        sql: sub_academic_period
+        type: string
+
+    -   name: requirement_source
+        sql: requirement_source
+        type: string
+
+    -   name: requirement_required_by_inst
+        sql: requirement_required_by_inst
+        type: string
+
+    -   name: requirement_requested_count
+        sql: requirement_requested_count
+        type: string
+
+    -   name: requirement_received_date
+        sql: requirement_received_date
+        type: time
+
+    -   name: requirement_mandatory_ind
+        sql: requirement_mandatory_ind
+        type: string
+
+    -   name: requirement_letter_print_ind
+        sql: requirement_letter_print_ind
+        type: string
+
+    -   name: requirement_desc
+        sql: requirement_desc
+        type: string
+
+    -   name: requirement_deadline_date
+        sql: requirement_deadline_date
+        type: time
+
+    -   name: requirement_comment
+        sql: requirement_comment
+        type: string
+
+    -   name: requirement
+        sql: requirement
+        type: string
+
+    -   name: person_uid
+        sql: person_uid
+        type: string
+
+    -   name: process_group
+        sql: process_group
+        type: string
+
+    -   name: multi_source_desc
+        sql: multi_source_desc
+        type: string
+
+    -   name: multi_source
+        sql: multi_source
+        type: string
+
+    -   name: most_recent_request_date
+        sql: most_recent_request_date
+        type: time
+
+    -   name: first_request_date
+        sql: first_request_date
+        type: time
+
+    -   name: completed_ind
+        sql: completed_ind
+        type: string
+
+    -   name: application_number
+        sql: application_number
+        type: string
+
+    -   name: administrative_group
+        sql: administrative_group
+        type: string
+
+    -   name: academic_year_desc
+        sql: academic_year_desc
+        type: string
+
+    -   name: academic_year
+        sql: academic_year
+        type: string
+
+    -   name: academic_period
+        sql: academic_period
+        type: string
+
+    -   name: academic_period_desc
+        sql: academic_period_desc
+        type: string
+
+    measures: []
+
+    pre_aggregations: []

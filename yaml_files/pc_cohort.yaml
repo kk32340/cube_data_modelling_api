@@ -1,0 +1,27 @@
+cubes:
+    name: pc_cohort
+
+    sql_table: odsmgr_cust.pc_cohort
+
+    joins:
+    -   name: student_course
+        sql: '{CUBE}.person_uid = student_course.person_uid'
+        relationship: one_to_one
+
+    dimensions:
+    -   name: person_uid
+        sql: person_uid
+        type: string
+        primary_key: true
+
+    -   name: cohort_value
+        sql: cohort_value
+        type: string
+
+    -   name: academic_period
+        sql: academic_period
+        type: string
+
+    measures: []
+
+    pre_aggregations: []

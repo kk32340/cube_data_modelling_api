@@ -1,0 +1,55 @@
+cubes:
+    name: active_veterans_view_1
+
+    sql_table: odsmgr_cust.active_veterans_view_1
+
+    joins: []
+
+    dimensions:
+    -   name: athlete
+        sql: athlete
+        type: string
+
+    -   name: course_identification
+        sql: course_identification
+        type: string
+
+    -   name: name
+        sql: name
+        type: string
+
+    -   name: id
+        sql: id
+        type: string
+
+    -   name: person_uid
+        sql: person_uid
+        type: string
+
+    -   name: acdvb281c
+        sql: acdvb281c
+        type: string
+
+    -   name: acdvb281b
+        sql: acdvb281b
+        type: string
+
+    -   name: acdvb281a
+        sql: acdvb281a
+        type: string
+
+    -   name: acdvb280
+        sql: acdvb280
+        type: string
+
+    -   name: academic_period
+        sql: academic_period
+        type: string
+
+    -   name: college
+        sql: college
+        type: string
+
+    measures: []
+
+    pre_aggregations: []

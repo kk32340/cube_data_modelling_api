@@ -1,0 +1,53 @@
+cubes:
+    name: schedule_attribute
+
+    sql_table: odsmgr.schedule_attribute
+
+    joins:
+    -   name: schedule_offering_stusta
+        sql: '{CUBE}.academic_period = schedule_offering_stusta.academic_period AND
+            {CUBE}.course_reference_number = schedule_offering_stusta.course_reference_number'
+        relationship: zero_to_many
+
+    dimensions:
+    -   name: administrative_group
+        sql: administrative_group
+        type: string
+
+    -   name: process_group
+        sql: process_group
+        type: string
+
+    -   name: multi_source_desc
+        sql: multi_source_desc
+        type: string
+
+    -   name: multi_source
+        sql: multi_source
+        type: string
+
+    -   name: schedule_attribute_desc
+        sql: schedule_attribute_desc
+        type: string
+
+    -   name: schedule_attribute
+        sql: schedule_attribute
+        type: string
+
+    -   name: course_reference_number
+        sql: course_reference_number
+        type: string
+        primary_key: true
+
+    -   name: academic_period_desc
+        sql: academic_period_desc
+        type: string
+
+    -   name: academic_period
+        sql: academic_period
+        type: string
+        primary_key: true
+
+    measures: []
+
+    pre_aggregations: []

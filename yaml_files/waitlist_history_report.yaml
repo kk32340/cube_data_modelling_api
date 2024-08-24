@@ -1,0 +1,78 @@
+cubes:
+    name: waitlist_history_report
+
+    sql_table: odsmgr_cust.waitlist_history_report
+
+    joins:
+    -   name: ir_session
+        sql: '{CUBE}.academic_period = ir_session.academic_period AND {CUBE}.crn =
+            ir_session.crn'
+        relationship: one_to_many
+
+    -   name: ir_session_ir_section
+        sql: '{CUBE}.academic_period = ir_session_ir_section.academic_period AND {CUBE}.crn
+            = ir_session_ir_section.crn'
+        relationship: one_to_many
+
+    dimensions:
+    -   name: wait_count
+        sql: wait_count
+        type: string
+
+    -   name: wait_capacity
+        sql: wait_capacity
+        type: string
+
+    -   name: wait_avail
+        sql: wait_avail
+        type: string
+
+    -   name: status
+        sql: status
+        type: string
+
+    -   name: seats_avail
+        sql: seats_avail
+        type: string
+
+    -   name: max_enrl
+        sql: max_enrl
+        type: string
+
+    -   name: freeze_date
+        sql: freeze_date
+        type: time
+
+    -   name: event_desc
+        sql: event_desc
+        type: string
+
+    -   name: event_date
+        sql: event_date
+        type: time
+
+    -   name: event
+        sql: event
+        type: string
+
+    -   name: census_enrl
+        sql: census_enrl
+        type: string
+
+    -   name: campus
+        sql: campus
+        type: string
+
+    -   name: crn
+        sql: crn
+        type: string
+        primary_key: true
+
+    -   name: academic_period
+        sql: academic_period
+        type: string
+        primary_key: true
+
+    measures: []
+
+    pre_aggregations: []

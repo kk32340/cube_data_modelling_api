@@ -1,0 +1,47 @@
+cubes:
+    name: npsas_student_otheraid_disb
+
+    sql_table: odsmgr_cust.npsas_student_otheraid_disb
+
+    joins: []
+
+    dimensions:
+    -   name: bog_amount_spring
+        sql: bog_amount_spring
+        type: string
+
+    -   name: bog_amount_summer
+        sql: bog_amount_summer
+        type: string
+
+    -   name: bog_amount_fall
+        sql: bog_amount_fall
+        type: string
+
+    -   name: person_uid
+        sql: person_uid
+        type: string
+
+    -   name: full name
+        sql: full name
+        type: string
+
+    -   name: id
+        sql: id
+        type: string
+
+    -   name: study_id
+        sql: study_id
+        type: string
+
+    -   name: college
+        sql: college
+        type: string
+
+    -   name: acyr
+        sql: acyr
+        type: string
+
+    measures: []
+
+    pre_aggregations: []

@@ -1,0 +1,129 @@
+cubes:
+    name: event_invitee
+
+    sql_table: odsmgr.event_invitee
+
+    joins:
+    -   name: event
+        sql: '{CUBE}.event_identification = event.event_id AND {CUBE}.function_code
+            = event.function_code'
+        relationship: zero_to_many
+
+    dimensions:
+    -   name: number_of_tickets_requested
+        sql: number_of_tickets_requested
+        type: string
+
+    -   name: place_card_name
+        sql: place_card_name
+        type: string
+
+    -   name: name_tag_name
+        sql: name_tag_name
+        type: string
+
+    -   name: address_type_desc
+        sql: address_type_desc
+        type: string
+
+    -   name: address_type
+        sql: address_type
+        type: string
+
+    -   name: fee_paid_ind
+        sql: fee_paid_ind
+        type: string
+
+    -   name: fee_status_date
+        sql: fee_status_date
+        type: time
+
+    -   name: fee_status_desc
+        sql: fee_status_desc
+        type: string
+
+    -   name: fee_status
+        sql: fee_status
+        type: string
+
+    -   name: plan_to_attend_ind
+        sql: plan_to_attend_ind
+        type: string
+
+    -   name: rsvp_date
+        sql: rsvp_date
+        type: time
+
+    -   name: rsvp_desc
+        sql: rsvp_desc
+        type: string
+
+    -   name: rsvp
+        sql: rsvp
+        type: string
+
+    -   name: invitee_uid
+        sql: invitee_uid
+        type: string
+
+    -   name: function_desc
+        sql: function_desc
+        type: string
+
+    -   name: function_code
+        sql: function_code
+        type: string
+        primary_key: true
+
+    -   name: default_event_type_desc
+        sql: default_event_type_desc
+        type: string
+
+    -   name: default_event_type
+        sql: default_event_type
+        type: string
+
+    -   name: event_identification
+        sql: event_identification
+        type: string
+        primary_key: true
+
+    -   name: administrative_group
+        sql: administrative_group
+        type: string
+
+    -   name: process_group
+        sql: process_group
+        type: string
+
+    -   name: multi_source_desc
+        sql: multi_source_desc
+        type: string
+
+    -   name: multi_source
+        sql: multi_source
+        type: string
+
+    -   name: invitee_comment
+        sql: invitee_comment
+        type: string
+
+    -   name: involved_ind
+        sql: involved_ind
+        type: string
+
+    -   name: attendance_ind
+        sql: attendance_ind
+        type: string
+
+    -   name: menu_desc
+        sql: menu_desc
+        type: string
+
+    -   name: menu
+        sql: menu
+        type: string
+
+    measures: []
+
+    pre_aggregations: []

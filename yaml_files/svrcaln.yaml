@@ -1,0 +1,211 @@
+cubes:
+    name: svrcaln
+
+    sql_table: saturn.svrcaln
+
+    joins: []
+
+    dimensions:
+    -   name: svrcaln_vpdi_code
+        sql: svrcaln_vpdi_code
+        type: string
+
+    -   name: svrcaln_version
+        sql: svrcaln_version
+        type: string
+
+    -   name: svrcaln_surrogate_id
+        sql: svrcaln_surrogate_id
+        type: string
+
+    -   name: svrcaln_acad_cut_off_date
+        sql: svrcaln_acad_cut_off_date
+        type: time
+
+    -   name: svrcaln_user_id
+        sql: svrcaln_user_id
+        type: string
+
+    -   name: svrcaln_title
+        sql: svrcaln_title
+        type: string
+
+    -   name: svrcaln_term_len_mult
+        sql: svrcaln_term_len_mult
+        type: string
+
+    -   name: svrcaln_term_code
+        sql: svrcaln_term_code
+        type: string
+
+    -   name: svrcaln_tcat_cde
+        sql: svrcaln_tcat_cde
+        type: string
+
+    -   name: svrcaln_subj_code
+        sql: svrcaln_subj_code
+        type: string
+
+    -   name: svrcaln_start_date
+        sql: svrcaln_start_date
+        type: time
+
+    -   name: svrcaln_split_ind
+        sql: svrcaln_split_ind
+        type: string
+
+    -   name: svrcaln_phys_ed_ind
+        sql: svrcaln_phys_ed_ind
+        type: string
+
+    -   name: svrcaln_period_range_cde
+        sql: svrcaln_period_range_cde
+        type: string
+
+    -   name: svrcaln_period_cde
+        sql: svrcaln_period_cde
+        type: string
+
+    -   name: svrcaln_occs_code
+        sql: svrcaln_occs_code
+        type: string
+
+    -   name: svrcaln_meet_no_lab
+        sql: svrcaln_meet_no_lab
+        type: string
+
+    -   name: svrcaln_meet_no
+        sql: svrcaln_meet_no
+        type: string
+
+    -   name: svrcaln_in_service_ind
+        sql: svrcaln_in_service_ind
+        type: string
+
+    -   name: svrcaln_insm_code
+        sql: svrcaln_insm_code
+        type: string
+
+    -   name: svrcaln_inmate_attr_code
+        sql: svrcaln_inmate_attr_code
+        type: string
+
+    -   name: svrcaln_hrs_week_lab
+        sql: svrcaln_hrs_week_lab
+        type: string
+
+    -   name: svrcaln_hrs_week
+        sql: svrcaln_hrs_week
+        type: string
+
+    -   name: svrcaln_hrs_total
+        sql: svrcaln_hrs_total
+        type: string
+
+    -   name: svrcaln_hrs_day_lab
+        sql: svrcaln_hrs_day_lab
+        type: string
+
+    -   name: svrcaln_hrs_day
+        sql: svrcaln_hrs_day
+        type: string
+
+    -   name: svrcaln_flex_days_no
+        sql: svrcaln_flex_days_no
+        type: string
+
+    -   name: svrcaln_ext_day_ind
+        sql: svrcaln_ext_day_ind
+        type: string
+
+    -   name: svrcaln_exception_cde
+        sql: svrcaln_exception_cde
+        type: string
+
+    -   name: svrcaln_enhc_fund_nocr_ind
+        sql: svrcaln_enhc_fund_nocr_ind
+        type: string
+
+    -   name: svrcaln_end_date
+        sql: svrcaln_end_date
+        type: time
+
+    -   name: svrcaln_edp_census_2
+        sql: svrcaln_edp_census_2
+        type: string
+
+    -   name: svrcaln_edp_census_1
+        sql: svrcaln_edp_census_1
+        type: string
+
+    -   name: svrcaln_dicd_code
+        sql: svrcaln_dicd_code
+        type: string
+
+    -   name: svrcaln_data_origin
+        sql: svrcaln_data_origin
+        type: string
+
+    -   name: svrcaln_crse_numb
+        sql: svrcaln_crse_numb
+        type: string
+
+    -   name: svrcaln_crn_seq_numb
+        sql: svrcaln_crn_seq_numb
+        type: string
+
+    -   name: svrcaln_crn
+        sql: svrcaln_crn
+        type: string
+
+    -   name: svrcaln_credit_hrs
+        sql: svrcaln_credit_hrs
+        type: string
+
+    -   name: svrcaln_credit_course_ind
+        sql: svrcaln_credit_course_ind
+        type: string
+
+    -   name: svrcaln_census_enrl_date
+        sql: svrcaln_census_enrl_date
+        type: time
+
+    -   name: svrcaln_census_2_date
+        sql: svrcaln_census_2_date
+        type: time
+
+    -   name: svrcaln_camp_code
+        sql: svrcaln_camp_code
+        type: string
+
+    -   name: svrcaln_bldg_leased_ind
+        sql: svrcaln_bldg_leased_ind
+        type: string
+
+    -   name: svrcaln_bldg_cent_code
+        sql: svrcaln_bldg_cent_code
+        type: string
+
+    -   name: svrcaln_basic_skill_cde
+        sql: svrcaln_basic_skill_cde
+        type: string
+
+    -   name: svrcaln_attend_cde
+        sql: svrcaln_attend_cde
+        type: string
+
+    -   name: svrcaln_acyr_code
+        sql: svrcaln_acyr_code
+        type: string
+
+    -   name: svrcaln_activity_date
+        sql: svrcaln_activity_date
+        type: time
+
+    -   name: svrcaln_acct_code
+        sql: svrcaln_acct_code
+        type: string
+
+    measures: []
+
+    pre_aggregations: []

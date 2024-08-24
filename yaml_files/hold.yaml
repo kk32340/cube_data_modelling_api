@@ -1,0 +1,127 @@
+cubes:
+    name: hold
+
+    sql_table: odsmgr.hold
+
+    joins:
+    -   name: enrollment
+        sql: '{CUBE}.person_uid = enrollment.person_uid'
+        relationship: zero_to_many
+
+    -   name: person_stusta
+        sql: '{CUBE}.person_uid = person_stusta.person_uid'
+        relationship: zero_to_many
+
+    -   name: person_detail_stusta
+        sql: '{CUBE}.person_uid = person_detail_stusta.person_uid'
+        relationship: zero_to_many
+
+    dimensions:
+    -   name: active_hold_ind
+        sql: active_hold_ind
+        type: string
+
+    -   name: transcript_hold_ind
+        sql: transcript_hold_ind
+        type: string
+
+    -   name: registration_hold_ind
+        sql: registration_hold_ind
+        type: string
+
+    -   name: person_uid
+        sql: person_uid
+        type: string
+        primary_key: true
+
+    -   name: process_group
+        sql: process_group
+        type: string
+
+    -   name: name
+        sql: name
+        type: string
+
+    -   name: multi_source_desc
+        sql: multi_source_desc
+        type: string
+
+    -   name: multi_source
+        sql: multi_source
+        type: string
+
+    -   name: id
+        sql: id
+        type: string
+
+    -   name: hold_user_creator
+        sql: hold_user_creator
+        type: string
+
+    -   name: hold_to_date
+        sql: hold_to_date
+        type: time
+
+    -   name: hold_release_ind
+        sql: hold_release_ind
+        type: string
+
+    -   name: hold_originating_office_desc
+        sql: hold_originating_office_desc
+        type: string
+
+    -   name: hold_originating_office
+        sql: hold_originating_office
+        type: string
+
+    -   name: hold_from_date
+        sql: hold_from_date
+        type: time
+
+    -   name: hold_explanation
+        sql: hold_explanation
+        type: string
+
+    -   name: hold_desc
+        sql: hold_desc
+        type: string
+
+    -   name: hold_amount
+        sql: hold_amount
+        type: string
+
+    -   name: hold
+        sql: hold
+        type: string
+
+    -   name: graduation_hold_ind
+        sql: graduation_hold_ind
+        type: string
+
+    -   name: grade_report_hold_ind
+        sql: grade_report_hold_ind
+        type: string
+
+    -   name: enrl_verification_hold_ind
+        sql: enrl_verification_hold_ind
+        type: string
+
+    -   name: compliance_hold_ind
+        sql: compliance_hold_ind
+        type: string
+
+    -   name: ar_hold_ind
+        sql: ar_hold_ind
+        type: string
+
+    -   name: application_hold_ind
+        sql: application_hold_ind
+        type: string
+
+    -   name: administrative_group
+        sql: administrative_group
+        type: string
+
+    measures: []
+
+    pre_aggregations: []

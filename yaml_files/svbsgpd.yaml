@@ -1,0 +1,59 @@
+cubes:
+    name: svbsgpd
+
+    sql_table: saturn.svbsgpd
+
+    joins:
+    -   name: ir_student_term
+        sql: '{CUBE}.svbsgpd_pidm = ir_student_term.person_uid'
+        relationship: zero_to_many
+
+    dimensions:
+    -   name: svbsgpd_vpdi_code
+        sql: svbsgpd_vpdi_code
+        type: string
+
+    -   name: svbsgpd_version
+        sql: svbsgpd_version
+        type: string
+
+    -   name: svbsgpd_surrogate_id
+        sql: svbsgpd_surrogate_id
+        type: string
+
+    -   name: svbsgpd_data_origin
+        sql: svbsgpd_data_origin
+        type: string
+
+    -   name: svbsgpd_user_id
+        sql: svbsgpd_user_id
+        type: string
+
+    -   name: svbsgpd_activity_date
+        sql: svbsgpd_activity_date
+        type: time
+
+    -   name: svbsgpd_guard_2_gedl_code
+        sql: svbsgpd_guard_2_gedl_code
+        type: string
+
+    -   name: svbsgpd_guard_1_gedl_code
+        sql: svbsgpd_guard_1_gedl_code
+        type: string
+
+    -   name: svbsgpd_pidm
+        sql: svbsgpd_pidm
+        type: string
+        primary_key: true
+
+    -   name: svbsgpd_dicd_code
+        sql: svbsgpd_dicd_code
+        type: string
+
+    -   name: svbsgpd_eff_term
+        sql: svbsgpd_eff_term
+        type: string
+
+    measures: []
+
+    pre_aggregations: []

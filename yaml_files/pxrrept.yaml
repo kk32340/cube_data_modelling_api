@@ -1,0 +1,59 @@
+cubes:
+    name: pxrrept
+
+    sql_table: odsmgr.pxrrept
+
+    joins:
+    -   name: person
+        sql: '{CUBE}.pxrrept_pidm = person.person_uid'
+        relationship: one_to_many
+
+    -   name: person_alias
+        sql: '{CUBE}.pxrrept_pidm'
+        relationship: one_to_many
+
+    dimensions:
+    -   name: pxrrept_year
+        sql: pxrrept_year
+        type: string
+
+    -   name: pxrrept_start_month
+        sql: pxrrept_start_month
+        type: string
+
+    -   name: pxrrept_session_id
+        sql: pxrrept_session_id
+        type: string
+
+    -   name: pxrrept_rept_code
+        sql: pxrrept_rept_code
+        type: string
+
+    -   name: pxrrept_rbox_code
+        sql: pxrrept_rbox_code
+        type: string
+
+    -   name: pxrrept_pidm
+        sql: pxrrept_pidm
+        type: string
+        primary_key: true
+
+    -   name: pxrrept_end_month
+        sql: pxrrept_end_month
+        type: string
+
+    -   name: pxrrept_empr_code
+        sql: pxrrept_empr_code
+        type: string
+
+    -   name: pxrrept_amount
+        sql: pxrrept_amount
+        type: string
+
+    -   name: pxrrept_activity_date
+        sql: pxrrept_activity_date
+        type: time
+
+    measures: []
+
+    pre_aggregations: []

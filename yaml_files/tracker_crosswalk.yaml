@@ -1,0 +1,27 @@
+cubes:
+    name: tracker_crosswalk
+
+    sql_table: odsmgr_cust.tracker_crosswalk
+
+    joins: []
+
+    dimensions:
+    -   name: activity_date
+        sql: activity_date
+        type: time
+
+    -   name: tracker_id
+        sql: tracker_id
+        type: string
+
+    -   name: person_uid
+        sql: person_uid
+        type: string
+
+    -   name: id
+        sql: id
+        type: string
+
+    measures: []
+
+    pre_aggregations: []

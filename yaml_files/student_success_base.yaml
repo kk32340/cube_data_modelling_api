@@ -1,0 +1,123 @@
+cubes:
+    name: student_success_base
+
+    sql_table: odsmgr_cust.student_success_base
+
+    joins:
+    -   name: ir_student_person
+        sql: '{CUBE}.person_uid = ir_student_person.person_uid'
+        relationship: one_to_one
+
+    dimensions:
+    -   name: load_date
+        sql: load_date
+        type: time
+
+    -   name: atd_ind
+        sql: atd_ind
+        type: string
+
+    -   name: transfer_reg
+        sql: transfer_reg
+        type: string
+
+    -   name: transfer_gpa
+        sql: transfer_gpa
+        type: string
+
+    -   name: id
+        sql: id
+        type: string
+
+    -   name: currently_enrolled
+        sql: currently_enrolled
+        type: string
+
+    -   name: ar_ind
+        sql: ar_ind
+        type: string
+
+    -   name: shrdgmr_ind
+        sql: shrdgmr_ind
+        type: string
+
+    -   name: sgrsatt_ind
+        sql: sgrsatt_ind
+        type: string
+
+    -   name: shrttrm_ind
+        sql: shrttrm_ind
+        type: string
+
+    -   name: sgbstdn_ind
+        sql: sgbstdn_ind
+        type: string
+
+    -   name: enrolled_on_census
+        sql: enrolled_on_census
+        type: string
+
+    -   name: first_time_elig_repeat
+        sql: first_time_elig_repeat
+        type: string
+
+    -   name: base_acyr_sfs
+        sql: base_acyr_sfs
+        type: string
+
+    -   name: base_term
+        sql: base_term
+        type: string
+
+    -   name: drop_betw_start_and_census
+        sql: drop_betw_start_and_census
+        type: string
+
+    -   name: drop_before_start
+        sql: drop_before_start
+        type: string
+
+    -   name: enrollment_exists_ind
+        sql: enrollment_exists_ind
+        type: string
+
+    -   name: applicant_id
+        sql: applicant_id
+        type: string
+
+    -   name: sport_count
+        sql: sport_count
+        type: string
+
+    -   name: fin_aid_applicant_ind
+        sql: fin_aid_applicant_ind
+        type: string
+
+    -   name: name
+        sql: name
+        type: string
+
+    -   name: college
+        sql: college
+        type: string
+
+    -   name: ss_cohort_ind
+        sql: ss_cohort_ind
+        type: string
+
+    -   name: first_time_ind
+        sql: first_time_ind
+        type: string
+
+    -   name: degree_seeking_ind
+        sql: degree_seeking_ind
+        type: string
+
+    -   name: person_uid
+        sql: person_uid
+        type: string
+        primary_key: true
+
+    measures: []
+
+    pre_aggregations: []

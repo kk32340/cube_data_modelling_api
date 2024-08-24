@@ -1,0 +1,99 @@
+cubes:
+    name: stvcoll
+
+    sql_table: saturn.stvcoll
+
+    joins:
+    -   name: svbmesa_stusta
+        sql: '{CUBE}.stvcoll_dicd_code = svbmesa_stusta.svbmesa_dicd_code'
+        relationship: one_to_many
+
+    dimensions:
+    -   name: stvcoll_vpdi_code
+        sql: stvcoll_vpdi_code
+        type: string
+
+    -   name: stvcoll_data_origin
+        sql: stvcoll_data_origin
+        type: string
+
+    -   name: stvcoll_user_id
+        sql: stvcoll_user_id
+        type: string
+
+    -   name: stvcoll_version
+        sql: stvcoll_version
+        type: string
+
+    -   name: stvcoll_surrogate_id
+        sql: stvcoll_surrogate_id
+        type: string
+
+    -   name: stvcoll_addr_street_line4
+        sql: stvcoll_addr_street_line4
+        type: string
+
+    -   name: stvcoll_house_number
+        sql: stvcoll_house_number
+        type: string
+
+    -   name: stvcoll_vr_msg_no
+        sql: stvcoll_vr_msg_no
+        type: string
+
+    -   name: stvcoll_system_req_ind
+        sql: stvcoll_system_req_ind
+        type: string
+
+    -   name: stvcoll_statscan_cde3
+        sql: stvcoll_statscan_cde3
+        type: string
+
+    -   name: stvcoll_desc
+        sql: stvcoll_desc
+        type: string
+
+    -   name: stvcoll_code
+        sql: stvcoll_code
+        type: string
+
+    -   name: stvcoll_addr_zip_code
+        sql: stvcoll_addr_zip_code
+        type: string
+
+    -   name: stvcoll_addr_street_line3
+        sql: stvcoll_addr_street_line3
+        type: string
+
+    -   name: stvcoll_addr_street_line2
+        sql: stvcoll_addr_street_line2
+        type: string
+
+    -   name: stvcoll_addr_street_line1
+        sql: stvcoll_addr_street_line1
+        type: string
+
+    -   name: stvcoll_addr_state
+        sql: stvcoll_addr_state
+        type: string
+
+    -   name: stvcoll_addr_country
+        sql: stvcoll_addr_country
+        type: string
+
+    -   name: stvcoll_addr_city
+        sql: stvcoll_addr_city
+        type: string
+
+    -   name: stvcoll_activity_date
+        sql: stvcoll_activity_date
+        type: time
+
+    -   name: stvcoll_dicd_code
+        sql: stvcoll_dicd_code
+        type: string
+        primary_key: true
+
+    measures: []
+
+    pre_aggregations: []

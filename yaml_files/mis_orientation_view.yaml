@@ -1,0 +1,67 @@
+cubes:
+    name: mis_orientation_view
+
+    sql_table: odsmgr_cust.mis_orientation_view
+
+    joins: []
+
+    dimensions:
+    -   name: college_code
+        sql: college_code
+        type: string
+
+    -   name: svrornt_user_id
+        sql: svrornt_user_id
+        type: string
+
+    -   name: orientation
+        sql: orientation
+        type: string
+
+    -   name: high_school_code_desc
+        sql: high_school_code_desc
+        type: string
+
+    -   name: cell_phone
+        sql: cell_phone
+        type: string
+
+    -   name: day_phone
+        sql: day_phone
+        type: string
+
+    -   name: email_address
+        sql: email_address
+        type: string
+
+    -   name: middle_name
+        sql: middle_name
+        type: string
+
+    -   name: first_name
+        sql: first_name
+        type: string
+
+    -   name: last_name
+        sql: last_name
+        type: string
+
+    -   name: id
+        sql: id
+        type: string
+
+    -   name: college
+        sql: college
+        type: string
+
+    -   name: svrornt_pidm
+        sql: svrornt_pidm
+        type: string
+
+    -   name: term
+        sql: term
+        type: string
+
+    measures: []
+
+    pre_aggregations: []

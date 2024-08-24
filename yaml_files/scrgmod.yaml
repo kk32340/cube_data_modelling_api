@@ -1,0 +1,55 @@
+cubes:
+    name: scrgmod
+
+    sql_table: saturn.scrgmod
+
+    joins: []
+
+    dimensions:
+    -   name: scrgmod_vpdi_code
+        sql: scrgmod_vpdi_code
+        type: string
+
+    -   name: scrgmod_data_origin
+        sql: scrgmod_data_origin
+        type: string
+
+    -   name: scrgmod_user_id
+        sql: scrgmod_user_id
+        type: string
+
+    -   name: scrgmod_version
+        sql: scrgmod_version
+        type: string
+
+    -   name: scrgmod_surrogate_id
+        sql: scrgmod_surrogate_id
+        type: string
+
+    -   name: scrgmod_default_ind
+        sql: scrgmod_default_ind
+        type: string
+
+    -   name: scrgmod_activity_date
+        sql: scrgmod_activity_date
+        type: time
+
+    -   name: scrgmod_gmod_code
+        sql: scrgmod_gmod_code
+        type: string
+
+    -   name: scrgmod_eff_term
+        sql: scrgmod_eff_term
+        type: string
+
+    -   name: scrgmod_crse_numb
+        sql: scrgmod_crse_numb
+        type: string
+
+    -   name: scrgmod_subj_code
+        sql: scrgmod_subj_code
+        type: string
+
+    measures: []
+
+    pre_aggregations: []
