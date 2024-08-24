@@ -6,6 +6,7 @@ const yaml = require('js-yaml');
 const fs1 = require('fs');
 const fs2 = require('fs').promises;
 const moment = require('moment');
+const lockfile = require('proper-lockfile');
 
 async function readFilesFromDirectory(directoryPath){
   try {
@@ -494,7 +495,25 @@ async function writeAsync_file(filepath , doc) {
 
   return_status={}
   try{
-    await fs.writeFile(filepath, yaml.dump(doc));    
+
+    let triesCounter = 0;
+    while(triesCounter < 2){
+      const checkFile = await lockfile.check(filepath);
+      if (checkFile){
+        await lockingUtility.sleep(1000);
+        console.log('File is locked. Retrying in 1 second...');
+        if (triesCounter==1){
+          return_status= {'status_code':500,'error':'file is locked'}
+        }
+      }
+      else{
+        await lockfile.lock(filepath);      
+        await fs.writeFile(filepath, yaml.dump(doc));    
+        await lockfile.unlock(filepath);
+      }
+      triesCounter ++;
+    }
+    
     return_status={'status_code':200}
   }
   catch (err) {    
@@ -507,7 +526,8 @@ async function update_edges(data){
   const directoryPath = get_directory_path();
   let error=''
   let model_file=data.edge.source + '.yaml'
-  let edgeCount=0    
+  let edgeCount=0 
+  let is_join_removed=false;   
   
     try {
       const doc = yaml.load(fs1.readFileSync(path.join(directoryPath, model_file), 'utf8'));
@@ -524,11 +544,23 @@ async function update_edges(data){
           sql += ' AND {CUBE}.' + item.sourcehandle + '=' + item.target + '.' + item.targethandle
         }        
       })
-      //sql= "'" + sql + "'"
-
+      
       if (indexOfTarget !=-1)
       {
-        doc.cubes.joins[indexOfTarget].sql=sql
+
+        if (data.items.legth==undefined || data.items.legth==0)
+        {
+          is_join_removed=true;
+          doc.cubes.joins.splice(indexOfTarget, 1);          
+        }
+        else{
+          if (sql===''){
+            doc.cubes.joins.splice(indexOfTarget, 1);            
+          }
+          else{
+            doc.cubes.joins[indexOfTarget].sql=sql
+          }          
+        }        
       }
       else if (indexOfTarget==-1) {
         doc.cubes.joins.push({'name':data.edge.target,'sql':sql,'relationship': 'one_to_many'})
@@ -557,10 +589,13 @@ async function update_edges(data){
     }
 
     if (error==''){
-      return {'status_code':200,'edgeCount':edgeCount}
+      if (is_join_removed){
+        return {'status_code':200,'msg':`deleted 1 join, modal file name: ${model_file}` }
+      }      
+      return {'status_code':200,'msg':`Updated ${edgeCount} field(s) mapping, modal file name: ${model_file}`}
     }
     else{
-      return {'status_code':500,'error':error}
+      return {'status_code':500,'msg':error}
     }
   }
 

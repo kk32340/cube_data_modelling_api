@@ -4,7 +4,8 @@ const cors = require('cors')
 const config = require('../config');
 
 const app = express();
-const port = config.httpPORT;
+const PORT = config.httpPORT;
+const HOSTNAME = config.HOSTNAME;
 
 app.use(express.json());
 
@@ -89,6 +90,6 @@ app.delete('/items/:id', (req, res) => {
   res.json(item);
 });
 
-app.listen(port, () => {
-  console.log(`Server is running on http://localhost:${port}`);
+app.listen(PORT, HOSTNAME, () => {
+  console.log(`Server is running on http://${HOSTNAME}:${PORT}`);
 });
