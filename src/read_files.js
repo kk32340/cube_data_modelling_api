@@ -544,11 +544,11 @@ async function update_edges(data){
           sql += ' AND {CUBE}.' + item.sourcehandle + '=' + item.target + '.' + item.targethandle
         }        
       })
-      
+
       if (indexOfTarget !=-1)
       {
 
-        if (data.items.legth==undefined || data.items.legth==0)
+        if (edgeCount <=0)
         {
           is_join_removed=true;
           doc.cubes.joins.splice(indexOfTarget, 1);          
