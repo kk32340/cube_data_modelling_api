@@ -4,12 +4,12 @@ var environments = {};
 // Dev environment
 environments.dev = {
   'httpPORT': 3000,
-  'HOSTNAME': 'localhost',
-  'envName': 'development'
+  'HOSTNAME': '0.0.0.0',
+  'envName': 'production'
 };
 
 environments.production = {
-  'httpPORT': 5000,
+  'httpPORT': 3000,
   'HOSTNAME': '0.0.0.0',
   'envName': 'production'
 };

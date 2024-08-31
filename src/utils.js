@@ -1,6 +1,6 @@
 
-get_position=({legth, numRows, startCol, startRow,colStartPos})=>{    
-    let nodes=new Array(legth).fill(undefined);
+const get_position=({length, numRows, startCol, startRow,colStartPos})=>{    
+    let nodes=new Array(length).fill(undefined);
      nodes.forEach((node, index) => {        
         const row = index % numRows;
         const col = Math.floor(index / numRows);

@@ -24,26 +24,26 @@ app.get('/allnodes', async (req, res) => {
 });
 
 app.post('/specificnodes', async (req, res) => {
-  nodelist=req.body;
+  const nodelist=req.body;
   let obj_return = await read_file.get_specific_nodes(nodelist)
   res.json(obj_return);
 });
 
 
 app.post('/nodeOptions', async (req, res) => {
-  nodelist=req.body;
+  const nodelist=req.body;
   let obj_return = await read_file.get_node_options(nodelist)
   res.json(obj_return);
 });
 
 app.post('/update_edge', async (req, res) => {
-  data=req.body;
+  const data=req.body;
   let return_status = await read_file.update_edges(data)  
   res.json(return_status);
 });
 
 app.post('/addnode', async (req, res) => {
-  node=req.body;
+  const node=req.body;
   let obj_return = await read_file.get_node(node)
   res.json(obj_return);
 });

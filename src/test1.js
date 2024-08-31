@@ -1,10 +1,10 @@
-const publicIp = require('public-ip');
+const utils = require('./utils');
 
-(async () => {
-  try {
-    const ipv4 = await publicIp.v4();
-    console.log('Public IPv4 address:', ipv4);
-  } catch (err) {
-    console.error('Error getting public IP address:', err);
-  }
-})();
+const numRows =3; 
+  const startCol=300
+  const startRow=300  
+  const colStartPos=0
+  const legth=13
+  const param={legth, numRows,startCol,startRow, colStartPos}
+  const arrXY=utils.get_position(param)  
+  console.log(arrXY)

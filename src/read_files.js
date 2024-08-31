@@ -1,7 +1,7 @@
 const fs = require('fs').promises;
 const path = require('path');
 const YAML = require('yaml')
-const utils = require('./utils');
+const {get_position} = require('./utils');
 const yaml = require('js-yaml');
 const fs1 = require('fs');
 const fs2 = require('fs').promises;
@@ -58,8 +58,8 @@ async function readFilesFromDirectory1(directoryPath) {
     
     let x=1
     let y=0
-    arr_nodes=[]
-    arr_edges=[]
+    let arr_nodes=[]
+    let arr_edges=[]
     return_obj={}
     contents.forEach((content, index) => {
     y++
@@ -70,7 +70,7 @@ async function readFilesFromDirectory1(directoryPath) {
 
     //node object
     let yaml_obj= YAML.parse(content);
-    file_obj={}
+    let file_obj={}
 
     file_obj.id=yaml_obj['cubes'].name
     file_obj.type='tableNode'
@@ -108,9 +108,9 @@ async function readFilesFromDirectory_multi_handlers(directoryPath) {
     
     let x=1
     let y=0
-    arr_nodes=[]
-    arr_edges=[]
-    return_obj={}
+    let arr_nodes=[]
+    let arr_edges=[]
+    let return_obj={}
     contents.forEach((content, index) => {
     y++
     if(y==10){  
@@ -120,7 +120,7 @@ async function readFilesFromDirectory_multi_handlers(directoryPath) {
 
     //node object
     let yaml_obj= YAML.parse(content);
-    file_obj={}
+    let file_obj={}
 
     file_obj.id=yaml_obj['cubes'].name
     file_obj.type='tableNode'
@@ -185,9 +185,9 @@ async function readFilesFromDirectory_All(directoryPath) {
   
   let x=1
   let y=0
-  arr_nodes=[]
-  arr_edges=[]
-  return_obj={}
+  let arr_nodes=[]
+  let arr_edges=[]
+  let return_obj={}
   contents.forEach((content, index) => {
   y++
   if(y==17){  
@@ -197,7 +197,7 @@ async function readFilesFromDirectory_All(directoryPath) {
 
   //node object
   let yaml_obj= YAML.parse(content);
-  file_obj={}
+  let file_obj={}
 
   file_obj.id=yaml_obj['cubes'].name
   file_obj.type='CustomNodeAll'
@@ -246,11 +246,11 @@ async function readFilesFromDirectory_node_list(directoryPath) {
 async function get_join_nodes(contents)
 {
   try{
-        arr_nodes1=[]
+        let arr_nodes1=[]
         contents.forEach((content, index) => {
         //node object
         let yaml_obj= YAML.parse(content);
-        file_obj={}
+        let file_obj={}
       
         file_obj.id=yaml_obj['cubes'].name
         file_obj.type='specificNodes'
@@ -272,9 +272,9 @@ async function readFilesFromDirectory_specific_nodes(directoryPath, nodelist) {
   
   let x=1
   let y=0
-  arr_nodes=[]
-  arr_edges=[]
-  return_obj={}
+  let arr_nodes=[]
+  let arr_edges=[]
+  let return_obj={}
   contents.forEach((content, index) => {
   y++
   if(y==10){  
@@ -284,7 +284,7 @@ async function readFilesFromDirectory_specific_nodes(directoryPath, nodelist) {
 
   //node object
   let yaml_obj= YAML.parse(content);
-  file_obj={}
+  let file_obj={}
 
   file_obj.id=yaml_obj['cubes'].name
   file_obj.type='specificNodes'
@@ -338,15 +338,15 @@ async function readFilesFromDirectory_specific_nodes(directoryPath, nodelist) {
     node.position.y=500
   })
   
-const legth=join_nodes_obj.length
-if (legth > 0)
+const length=join_nodes_obj.length
+if (length > 0)
 {
   const numRows =3; 
   const startCol=300
   const startRow=300  
   const colStartPos=0
-  const param={legth, numRows,startCol,startRow, colStartPos}
-  const arrXY=utils.get_position(param)  
+  const param={length, numRows,startCol,startRow, colStartPos}
+  const arrXY=get_position(param)  
 
   arrXY.forEach((item,index)=>{
     join_nodes_obj[index].position.x=item.x
@@ -368,16 +368,18 @@ let nodes = [...arr_nodes,...join_nodes_obj]
 
 
 
-async function readFilesFromDirectory_get_node(directoryPath, nodelist) {
+async function readFilesFromDirectory_get_node(directoryPath, data) {
   try {
   
+  let nodelist=data.nodes
+  let currnodescount=data.nodecount
   const contents = await readFilesFromDirectory_Filter(directoryPath, nodelist)  
   
   let x=1
   let y=0
-  arr_nodes=[]
-  arr_edges=[]
-  return_obj={}
+  let arr_nodes=[]
+  let arr_edges=[]
+  let return_obj={}
   contents.forEach((content, index) => {
   y++
   if(y==10){  
@@ -387,7 +389,7 @@ async function readFilesFromDirectory_get_node(directoryPath, nodelist) {
 
   //node object
   let yaml_obj= YAML.parse(content);
-  file_obj={}
+  let file_obj={}
 
   file_obj.id=yaml_obj['cubes'].name
   file_obj.type='specificNodes'
@@ -396,20 +398,19 @@ async function readFilesFromDirectory_get_node(directoryPath, nodelist) {
   arr_nodes.push(file_obj)  
 })
   
-const legth=arr_nodes.length
-if (legth > 0)
+
+const nodes_legth=arr_nodes.length
+if (nodes_legth==1)
 {
   const numRows =3; 
   const startCol=300
   const startRow=300  
-  const colStartPos=4
-  const param={legth, numRows,startCol,startRow, colStartPos}
-  const arrXY=utils.get_position(param)  
-
-  arrXY.forEach((item,index)=>{
-    arr_nodes[index].position.x=item.x
-    arr_nodes[index].position.y=item.y
-  })
+  const colStartPos=0
+  let length=currnodescount
+  const param={length, numRows,startCol,startRow, colStartPos}
+  const arrXY=get_position(param)  
+  arr_nodes[nodes_legth-1].position.x=arrXY[length-1].x
+  arr_nodes[nodes_legth-1].position.y=arrXY[length-1].y
 }
 
 return arr_nodes;
@@ -493,7 +494,7 @@ function model_file_backup(directoryPath, source){
 
 async function writeAsync_file(filepath , doc) {
 
-  return_status={}
+  let return_status={}
   try{
 
     let triesCounter = 0;
