@@ -72,16 +72,16 @@ async function readFilesFromDirectory1(directoryPath) {
     let yaml_obj= YAML.parse(content);
     let file_obj={}
 
-    file_obj.id=yaml_obj['cubes'].name
+    file_obj.id=yaml_obj['cubes'][0].name
     file_obj.type='tableNode'
     file_obj.position={ x: x, y: y*70  }
-    file_obj.data={'name':yaml_obj['cubes'].name,'dimensions':yaml_obj['cubes'].dimensions.map(({ name, type }) => ({ name, type }))}
+    file_obj.data={'name':yaml_obj['cubes'][0].name,'dimensions':yaml_obj['cubes'][0].dimensions.map(({ name, type }) => ({ name, type }))}
     arr_nodes.push(file_obj)      
 
     //edge object
-    yaml_obj['cubes'].joins.forEach(element => {
+    yaml_obj['cubes'][0].joins.forEach(element => {
         
-        let source=yaml_obj['cubes'].name
+        let source=yaml_obj['cubes'][0].name
         let edge_obj={}
         edge_obj.id=source +'_'+element.name
         edge_obj.source=source
@@ -122,16 +122,16 @@ async function readFilesFromDirectory_multi_handlers(directoryPath) {
     let yaml_obj= YAML.parse(content);
     let file_obj={}
 
-    file_obj.id=yaml_obj['cubes'].name
+    file_obj.id=yaml_obj['cubes'][0].name
     file_obj.type='tableNode'
     file_obj.position={ x: x, y: y*70  }
-    file_obj.data={'name':yaml_obj['cubes'].name,'dimensions':yaml_obj['cubes'].dimensions.map(({ name, type }) => ({ name, type }))}
+    file_obj.data={'name':yaml_obj['cubes'][0].name,'dimensions':yaml_obj['cubes'][0].dimensions.map(({ name, type }) => ({ name, type }))}
     arr_nodes.push(file_obj)      
 
     //edge object
-    yaml_obj['cubes'].joins.forEach(element => {
+    yaml_obj['cubes'][0].joins.forEach(element => {
         
-        let source=yaml_obj['cubes'].name
+        let source=yaml_obj['cubes'][0].name
         let sql = element.sql.replace(/ AND /g, '@AND@')
         sql = sql.replace(/{CUBE}/g, source)
         let arr_sql = sql.split(/[=,@AND@]/).filter(item => item.trim() !== '')
@@ -199,16 +199,16 @@ async function readFilesFromDirectory_All(directoryPath) {
   let yaml_obj= YAML.parse(content);
   let file_obj={}
 
-  file_obj.id=yaml_obj['cubes'].name
+  file_obj.id=yaml_obj['cubes'][0].name
   file_obj.type='CustomNodeAll'
   file_obj.position={ x: x, y: y*40  }
-  file_obj.data={'name':yaml_obj['cubes'].name}
+  file_obj.data={'name':yaml_obj['cubes'][0].name}
   arr_nodes.push(file_obj)      
 
   //edge object
-  yaml_obj['cubes'].joins.forEach(element => {
+  yaml_obj['cubes'][0].joins.forEach(element => {
       
-      let source=yaml_obj['cubes'].name
+      let source=yaml_obj['cubes'][0].name
       let edge_obj={}
       edge_obj.id=source +'_'+element.name
       edge_obj.source=source
@@ -234,7 +234,7 @@ async function readFilesFromDirectory_node_list(directoryPath) {
     let arr_nodes=[]
     contents.forEach((content, index) => {  
       let yaml_obj= YAML.parse(content);
-      arr_nodes.push(yaml_obj['cubes'].name)  
+      arr_nodes.push(yaml_obj['cubes'][0].name)  
     });
     return arr_nodes
   } catch (err) {
@@ -252,10 +252,10 @@ async function get_join_nodes(contents)
         let yaml_obj= YAML.parse(content);
         let file_obj={}
       
-        file_obj.id=yaml_obj['cubes'].name
+        file_obj.id=yaml_obj['cubes'][0].name
         file_obj.type='specificNodes'
         file_obj.position={ x: 1, y: 1  }
-        file_obj.data={'name':yaml_obj['cubes'].name,'dimensions':yaml_obj['cubes'].dimensions.map(({ name, type }) => ({ name, type }))}
+        file_obj.data={'name':yaml_obj['cubes'][0].name,'dimensions':yaml_obj['cubes'][0].dimensions.map(({ name, type }) => ({ name, type }))}
         arr_nodes1.push(file_obj) 
     })
     return arr_nodes1;
@@ -286,16 +286,16 @@ async function readFilesFromDirectory_specific_nodes(directoryPath, nodelist) {
   let yaml_obj= YAML.parse(content);
   let file_obj={}
 
-  file_obj.id=yaml_obj['cubes'].name
+  file_obj.id=yaml_obj['cubes'][0].name
   file_obj.type='specificNodes'
   file_obj.position={ x: x, y: y*70  }
-  file_obj.data={'name':yaml_obj['cubes'].name,'dimensions':yaml_obj['cubes'].dimensions.map(({ name, type }) => ({ name, type }))}
+  file_obj.data={'name':yaml_obj['cubes'][0].name,'dimensions':yaml_obj['cubes'][0].dimensions.map(({ name, type }) => ({ name, type }))}
   arr_nodes.push(file_obj)      
 
   //edge object
-  yaml_obj['cubes'].joins.forEach(element => {
+  yaml_obj['cubes'][0].joins.forEach(element => {
       
-      let source=yaml_obj['cubes'].name
+      let source=yaml_obj['cubes'][0].name
       let sql = element.sql.replace(/ AND /g, '@AND@')
       sql = sql.replace(/{CUBE}/g, source)
       let arr_sql = sql.split(/[=,@AND@]/).filter(item => item.trim() !== '')
@@ -391,10 +391,10 @@ async function readFilesFromDirectory_get_node(directoryPath, data) {
   let yaml_obj= YAML.parse(content);
   let file_obj={}
 
-  file_obj.id=yaml_obj['cubes'].name
+  file_obj.id=yaml_obj['cubes'][0].name
   file_obj.type='specificNodes'
   file_obj.position={ x: x, y: y*70  }
-  file_obj.data={'name':yaml_obj['cubes'].name,'dimensions':yaml_obj['cubes'].dimensions.map(({ name, type }) => ({ name, type }))}
+  file_obj.data={'name':yaml_obj['cubes'][0].name,'dimensions':yaml_obj['cubes'][0].dimensions.map(({ name, type }) => ({ name, type }))}
   arr_nodes.push(file_obj)  
 })
   
@@ -421,11 +421,9 @@ return arr_nodes;
     console.error('Error reading files:', err);
   } 
 }
-
 const get_directory_path=()=>{
-    return './yaml_files';
+    return '/app/nodejs/cgeditdemo/model/cubes';
   } 
-
   
 const get_backup_directory_path=()=>{
   return './backup';
@@ -532,7 +530,7 @@ async function update_edges(data){
   
     try {
       const doc = yaml.load(fs1.readFileSync(path.join(directoryPath, model_file), 'utf8'));
-      let indexOfTarget=doc.cubes.joins.findIndex(f=>f.name===data.edge.target)      
+      let indexOfTarget=doc.cubes[0].joins.findIndex(f=>f.name===data.edge.target)      
       let sql=''
      
       data.items.forEach(item=>{
@@ -552,19 +550,19 @@ async function update_edges(data){
         if (edgeCount <=0)
         {
           is_join_removed=true;
-          doc.cubes.joins.splice(indexOfTarget, 1);          
+          doc.cubes[0].joins.splice(indexOfTarget, 1);          
         }
         else{
           if (sql===''){
-            doc.cubes.joins.splice(indexOfTarget, 1);            
+            doc.cubes[0].joins.splice(indexOfTarget, 1);            
           }
           else{
-            doc.cubes.joins[indexOfTarget].sql=sql
+            doc.cubes[0].joins[indexOfTarget].sql=sql
           }          
         }        
       }
       else if (indexOfTarget==-1) {
-        doc.cubes.joins.push({'name':data.edge.target,'sql':sql,'relationship': 'one_to_many'})
+        doc.cubes[0].joins.push({'name':data.edge.target,'sql':sql,'relationship': 'one_to_many'})
       }
       else{
         error='invalid yaml file'
