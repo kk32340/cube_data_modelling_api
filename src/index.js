@@ -1,6 +1,9 @@
 const express = require('express');
 const read_file = require('./read_files');
+const cube_file = require('./cube_files');
 const cors = require('cors')
+const { spawn } = require('child_process');
+const { CognitoJwtVerifier } = require('aws-jwt-verify');
 const config = require('../config');
 
 const app = express();
@@ -12,11 +15,37 @@ app.use(express.json());
 app.use(cors())
 
 
+const verifier = CognitoJwtVerifier.create({
+  userPoolId: "us-east-1_koFA1ckBa",
+  tokenUse: "access",
+  clientId: "46a24s5i84rogfpop4ok6kcr8e",
+});
+
+// Middleware to verify the token
+const verifyToken = async (req, res, next) => {
+  try {
+    const token = req.headers.authorization.split(' ')[1]; 
+    const payload = await verifier.verify(token);
+    req.user = payload;
+    next();
+  } catch (err) {
+    res.status(401).send('Unauthorized');
+  }
+};
+
+app.use(verifyToken);
+
+
 let items = [
   { id: 1, name: 'Item 1' },
   { id: 2, name: 'Item 2' }
 ];
 
+
+app.get('/cubefile', async (req, res) => {
+  let obj_return = await cube_file.get_cube_file()
+  res.json(obj_return);
+});
 
 app.get('/allnodes', async (req, res) => {
   let obj_return = await read_file.read_all_nodes_edges()
@@ -90,6 +119,7 @@ app.delete('/items/:id', (req, res) => {
   res.json(item);
 });
 
-app.listen(PORT, HOSTNAME, () => {
+
+const server = app.listen(PORT, HOSTNAME, () => {
   console.log(`Server is running on http://${HOSTNAME}:${PORT}`);
 });

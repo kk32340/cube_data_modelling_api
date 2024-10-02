@@ -7,6 +7,17 @@ const fs1 = require('fs');
 const fs2 = require('fs').promises;
 const moment = require('moment');
 const lockfile = require('proper-lockfile');
+const config = require('../config');
+
+const get_directory_path=()=>{
+  //return '/app/nodejs/cgeditdemo/model/cubes/';
+  return config.yaml_dir;
+} 
+
+const get_backup_directory_path=()=>{
+//return '/app/nodejs/cube_api/backup/';
+return config.backup_path;
+} 
 
 async function readFilesFromDirectory(directoryPath){
   try {
@@ -421,13 +432,6 @@ return arr_nodes;
     console.error('Error reading files:', err);
   } 
 }
-const get_directory_path=()=>{
-    return '/app/nodejs/cgeditdemo/model/cubes';
-  } 
-  
-const get_backup_directory_path=()=>{
-  return './backup';
-} 
 
 async function call_read_files(){
   const directoryPath = get_directory_path();
